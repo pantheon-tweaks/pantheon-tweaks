@@ -1,0 +1,32 @@
+Source: elementary-tweaks
+Section: x11
+Priority: optional
+Maintainer: Michael Langfermann <versable@gmail.com>
+Build-Depends: cmake (>= 2.6),
+               debhelper (>= 7.0.50~),
+               libgranite-dev,
+               libpantheon-dev,
+               valac-0.16 | valac (>= 0.16)
+Standards-Version: 3.9.2
+Homepage: https://launchpad.net/pantheon-plugs
+
+Package: elementary-tweaks
+Architecture: any
+Depends: gala, plank, slingshot-launcher, elementary-plank-extra, ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends: dpkg (>= 1.15.6)
+Recommends: plank
+Enhances: switchboard
+Description: Change hidden desktop settings
+ Switchboard plug for controlling hidden options.
+
+Package: elementary-tweaks-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: elementary-tweaks (= ${binary:Version}), ${misc:Depends}
+Pre-Depends: dpkg (>= 1.15.6)
+Enhances: elementary-tweaks
+Description: Change hidden desktop settings (debugging symbols)
+ Switchboard plug for controlling hidden options.
+ .
+ This package contains debugging symbols for switchboard-plug-template.
