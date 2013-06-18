@@ -221,7 +221,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         /* Add to Grid */
 
 		app_grid.attach (new LLabel.right (_("Window Decoration Theme:")), 0, 1, 2, 1);
-		app_grid.attach (themes_box, 2, 1, 1, 1);
+		app_grid.attach (themes_box, 2, 1, 2, 1);
 
 		app_grid.attach (new LLabel.right (_("Interface Theme:")), 0, 2, 2, 1);
 		app_grid.attach (ui_box, 2, 2, 2, 1);
@@ -233,7 +233,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		app_grid.attach (cursor_theme_box, 2, 4, 2, 1);
 
 		app_grid.attach (new LLabel.right (_("Button Layout:")), 0, 5, 2, 1);
-		app_grid.attach (button_layout_box, 2, 5, 1, 1);
+		app_grid.attach (button_layout_box, 2, 5, 2, 1);
 
 		notebook.append_page (app_grid, new Gtk.Label (_("Appearance")));
 
