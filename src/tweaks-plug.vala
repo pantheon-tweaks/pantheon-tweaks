@@ -592,7 +592,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
                 if (FileUtils.test (dir + "/plank/themes", FileTest.EXISTS)) {
                     var d = Dir.open(dir + "/plank/themes");
                     while ((name = d.read_name()) != null) {
-                        theme.append(theme_index.to_string (), _(name));
+                        theme.append(theme_index.to_string (), (name));
                         if (PlankSettings.get_default ().theme.to_string () == name)
                             theme.active = theme_index;
                         if (name == "Pantheon")
