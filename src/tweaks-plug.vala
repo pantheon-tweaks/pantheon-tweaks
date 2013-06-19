@@ -399,7 +399,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 			work_dur_label.sensitive = enable_anim.active;
 
 		enable_anim.halign = Gtk.Align.START;
-        var anim_spacer = new LLabel.right (_(""));
+        var anim_spacer = new LLabel.right ((""));
         anim_spacer.width_request = 235;
 		anim_spacer.halign = Gtk.Align.START;
 
@@ -738,7 +738,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		single_click.notify["active"].connect (() => click_scheme.set_boolean ("single-click", single_click.active) );
         single_click.halign = Gtk.Align.START;
 
-        var click_spacer = new LLabel.right (_(""));
+        var click_spacer = new LLabel.right ((""));
         click_spacer.width_request = 125;
 		click_spacer.halign = Gtk.Align.START;
 
