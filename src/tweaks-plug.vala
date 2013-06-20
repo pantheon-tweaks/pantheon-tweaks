@@ -227,7 +227,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         button_layout.append ("close,minimize:maximize", _("Minimize Left"));
         button_layout.append ("close:minimize,maximize", _("Minimize Right"));
         button_layout.append (":minimize,maximize,close", _("Windows"));
-        button_layout.append ("close,maximize,minimize:", _("Mac"));
+        button_layout.append ("close,maximize,minimize:", _("OS X"));
 
 		button_layout.active_id = AppearanceSettings.get_default ().button_layout;
 		button_layout.changed.connect (() => AppearanceSettings.get_default ().button_layout = button_layout.active_id );
@@ -477,21 +477,66 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		icon_size_box.pack_start (icon_size_range, false);
 		icon_size_box.pack_start (icon_size, false);
 
-
         /* Position */
+        var label_top = _("Top");
+        var label_bottom = _("Bottom");
+        var label_left = _("Left");
+        var label_right = _("Right");
+        var label_center = _("Center");
+        var label_panel = _("Panel");
+
+
 		var dock_position_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var dock_position = new Gtk.ComboBoxText ();
-        dock_position.append ("3", _("Bottom"));
-        dock_position.append ("0", _("Left"));
-        dock_position.append ("1", _("Right"));
-        
+        dock_position.append ("3", label_bottom);
+        dock_position.append ("0", label_left);
+        dock_position.append ("1", label_right);
+
+
+        var dock_items_v = new Gtk.ComboBoxText ();
+        dock_items_v.append ("3", label_center);
+        dock_items_v.append ("1", label_bottom);
+        dock_items_v.append ("2", label_top);
+
+        var dock_items_h = new Gtk.ComboBoxText ();
+        dock_items_h.append ("3", label_center);
+        dock_items_h.append ("1", label_left);
+        dock_items_h.append ("2", label_right);
+
+        var dock_alignment_v = new Gtk.ComboBoxText ();
+        dock_alignment_v.append ("3", label_center);
+        dock_alignment_v.append ("1", label_bottom);
+        dock_alignment_v.append ("2", label_top);
+        dock_alignment_v.append ("0", label_panel);
+
+        var dock_alignment_h = new Gtk.ComboBoxText ();
+        dock_alignment_h.append ("3", label_center);
+        dock_alignment_h.append ("1", label_left);
+        dock_alignment_h.append ("2", label_right);
+        dock_alignment_h.append ("0", label_panel);
+
+        var dock_items = new Gtk.ComboBoxText ();
+        var dock_alignment = new Gtk.ComboBoxText ();
+
+       
         var position = PlankSettings.get_default ().dock_position;
         
         if ( position != 3 && position != 0 && position != 1 )
             position = 3;
         
         dock_position.active_id = position.to_string ();
-        dock_position.changed.connect (() => PlankSettings.get_default ().dock_position = int.parse (dock_position.active_id));
+        dock_position.changed.connect (() => {
+            PlankSettings.get_default ().dock_position = int.parse (dock_position.active_id);
+            if ( PlankSettings.get_default ().dock_position != 0 && PlankSettings.get_default ().dock_position != 1) {
+                 dock_items.model = dock_items_h.model;
+                 dock_alignment.model = dock_alignment_h.model;
+            } else {
+                 dock_items.model = dock_items_v.model;
+                 dock_alignment.model = dock_alignment_v.model;
+            }
+            dock_alignment.active_id = PlankSettings.get_default ().dock_alignment.to_string ();
+            dock_items.active_id = PlankSettings.get_default ().dock_items.to_string ();
+            });
         dock_position.halign = Gtk.Align.START;
         dock_position.width_request = 140;
 
@@ -508,17 +553,15 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 
         /* Alignment */
 		var dock_items_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        var dock_items = new Gtk.ComboBoxText ();
-        dock_items.append ("3", _("Center"));
-        dock_items.append ("1", _("Left/Bottom"));
-        dock_items.append ("2", _("Right/Top"));
-
 		var dock_alignment_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        var dock_alignment = new Gtk.ComboBoxText ();
-        dock_alignment.append ("3", _("Center"));
-        dock_alignment.append ("1", _("Left/Bottom"));
-        dock_alignment.append ("2", _("Right/Top"));
-        dock_alignment.append ("0", _("Panel"));
+
+        if ( PlankSettings.get_default ().dock_position != 0 && PlankSettings.get_default ().dock_position != 1) {
+             dock_items.model = dock_items_h.model;
+             dock_alignment.model = dock_alignment_h.model;
+        } else {
+             dock_items.model = dock_items_v.model;
+             dock_alignment.model = dock_alignment_v.model;
+        }
 
         var label_items = new LLabel.right (_("Item Alignment:"));
 
