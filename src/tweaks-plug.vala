@@ -79,6 +79,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		var ui_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 		var themes = new Gtk.ComboBoxText ();
 		var ui = new Gtk.ComboBoxText ();
+        var duplicate_themes = ":";
 		
 		try {
 			var enumerator = File.new_for_path ("/usr/share/themes/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
@@ -86,7 +87,20 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 			while ((file_info = enumerator.next_file ()) != null) {
 				var name = file_info.get_name ();
                 var checktheme = File.new_for_path ("/usr/share/themes/" + name + "/gtk-3.0");
-                if (checktheme.query_exists() && name != "Emacs" && name != "Default")
+                if (checktheme.query_exists() && name != "Emacs" && name != "Default") {
+				    themes.append (file_info.get_name (), name);
+                    duplicate_themes += name + ":";
+                }
+			}
+		} catch (Error e) { warning (e.message); }
+
+		try {
+			var enumerator = File.new_for_path ("/home/" + Environment.get_user_name () + "/.themes/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
+			FileInfo file_info;
+			while ((file_info = enumerator.next_file ()) != null) {
+				var name = file_info.get_name ();
+                var checktheme = File.new_for_path ("/home/" + Environment.get_user_name () + "/.themes/" + name + "/gtk-3.0");
+                if (checktheme.query_exists() && name != "Emacs" && name != "Default" && duplicate_themes.contains(name) == false)
 				    themes.append (file_info.get_name (), name);
 			}
 		} catch (Error e) { warning (e.message); }
@@ -132,17 +146,30 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         /* Icon Themes */
 		var icon_theme_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 		var icon_theme = new Gtk.ComboBoxText ();
+        var duplicate_icons = ":";
 		try {
 			var enumerator = File.new_for_path ("/usr/share/icons/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
 			FileInfo file_info;
 			while ((file_info = enumerator.next_file ()) != null) {
-				var name = file_info.get_name ();
-                var checktheme = File.new_for_path ("/usr/share/icons/" + name + "/apps");
-                if (checktheme.query_exists() && name != "Emacs" && name != "Default")
+			var name = file_info.get_name ();
+               var checktheme = File.new_for_path ("/usr/share/icons/" + name + "/apps");
+                if (checktheme.query_exists() && name != "Emacs" && name != "Default") {
+                    duplicate_icons += name + ":";
 				    icon_theme.append (file_info.get_name (), name);
+                }
 			}
 		} catch (Error e) { warning (e.message); }
 
+		try {
+			var enumerator = File.new_for_path ("/home/" + Environment.get_user_name () + "/.icons/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
+			FileInfo file_info;
+			while ((file_info = enumerator.next_file ()) != null) {
+				var name = file_info.get_name ();
+                var checktheme = File.new_for_path ("/home/" + Environment.get_user_name () + "/.icons/" + name + "/apps");
+                if (checktheme.query_exists() && name != "Emacs" && name != "Default" && duplicate_icons.contains(name) == false)
+				    icon_theme.append (file_info.get_name (), name);
+			}
+		} catch (Error e) { warning (e.message); }
 		
 		var icon_scheme = new Settings ("org.gnome.desktop.interface");
 		icon_theme.halign = Gtk.Align.START;
