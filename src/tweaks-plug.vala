@@ -693,23 +693,23 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 
         if (theme_index > 1) {
             dock_grid.attach (new LLabel.right (_("Theme:")), 0, 2, 2, 1);
-            dock_grid.attach (theme_box, 2, 2, 1, 1);
+            dock_grid.attach (theme_box, 2, 2, 2, 1);
         }
 
 
         if (i > 1) {
             dock_grid.attach (new LLabel.right (_("Monitor:")), 0, 3, 2, 1);
-            dock_grid.attach (monitor_box, 2, 3, 1, 1);
+            dock_grid.attach (monitor_box, 2, 3, 2, 1);
         }
 
         dock_grid.attach (new LLabel.right (_("Position:")), 0, 4, 2, 1);
-        dock_grid.attach (dock_position_box, 2, 4, 1, 1);
+        dock_grid.attach (dock_position_box, 2, 4, 2, 1);
 
         dock_grid.attach (new LLabel.right (_("Alignment:")), 0, 5, 2, 1);
-        dock_grid.attach (dock_alignment_box, 2, 5, 1, 1); 
+        dock_grid.attach (dock_alignment_box, 2, 5, 2, 1); 
 
         dock_grid.attach (label_items, 0, 6, 2, 1);
-        dock_grid.attach (dock_items_box, 2, 6, 1, 1);
+        dock_grid.attach (dock_items_box, 2, 6, 2, 1);
 
         dock_grid.attach (new LLabel.right (_("Workspace Overview Icon:")), 0, 7, 2, 1);
         dock_grid.attach (overview_icon, 2, 7, 1, 1);
