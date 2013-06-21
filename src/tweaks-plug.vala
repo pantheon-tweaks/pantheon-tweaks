@@ -212,7 +212,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		var cursor_theme_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
 		cursor_theme_default.clicked.connect (() => {
-            cursor_scheme.set_string ("cursor-theme", "elementary");
+            cursor_scheme.set_string ("cursor-theme", "DMZ-Black");
             icon_theme.active_id = icon_scheme.get_string ("cursor-theme");
         });
 		cursor_theme_default.halign = Gtk.Align.START;
@@ -869,7 +869,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         /* Slingshot Rows */
 		var slingshot_scheme = new Settings ("org.pantheon.desktop.slingshot");
 		var slingshot_rows_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-		var slingshot_rows = new Gtk.SpinButton.with_range (2, 5, 1);
+		var slingshot_rows = new Gtk.SpinButton.with_range (2, 10, 1);
 
 		slingshot_rows.set_value (slingshot_scheme.get_int ("rows"));
 		slingshot_rows.value_changed.connect (() => slingshot_scheme.set_int ("rows", slingshot_rows.get_value_as_int()) );
@@ -890,7 +890,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 
         /* Slingshot Columns */
 		var slingshot_columns_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-		var slingshot_columns = new Gtk.SpinButton.with_range (4, 9, 1);
+		var slingshot_columns = new Gtk.SpinButton.with_range (4, 15, 1);
 
 		slingshot_columns.set_value (slingshot_scheme.get_int ("columns"));
 		slingshot_columns.value_changed.connect (() => slingshot_scheme.set_int ("columns", slingshot_columns.get_value_as_int()) );
