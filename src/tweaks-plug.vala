@@ -213,7 +213,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 
 		cursor_theme_default.clicked.connect (() => {
             cursor_scheme.set_string ("cursor-theme", "DMZ-Black");
-            icon_theme.active_id = icon_scheme.get_string ("cursor-theme");
+            cursor_theme.active_id = cursor_scheme.get_string ("cursor-theme");
         });
 		cursor_theme_default.halign = Gtk.Align.START;
 
