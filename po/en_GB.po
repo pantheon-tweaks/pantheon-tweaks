@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-06-21 06:09+0000\n"
+"X-Launchpad-Export-Date: 2013-06-22 06:26+0000\n"
 "X-Generator: Launchpad (build 16677)\n"
 
 #: ../src/tweaks-plug.vala:227
@@ -249,12 +249,3 @@ msgstr "Sidebar Icon Size:"
 #: ../src/tweaks-plug.vala:931
 msgid "Miscellaneous"
 msgstr "Miscellaneous"
-
-#~ msgid "Left/Bottom"
-#~ msgstr "Left/Bottom"
-
-#~ msgid "Right/Top"
-#~ msgstr "Right/Top"
-
-#~ msgid "Mac"
-#~ msgstr "Mac"
