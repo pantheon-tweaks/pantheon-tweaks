@@ -43,6 +43,17 @@ class LLabel : Gtk.Label
         this.use_markup = true;
         this.label = label;
     }
+    public LLabel.left (string label) 
+    {
+        this.set_halign (Gtk.Align.START);
+        this.label = label;
+    }
+    public LLabel.left_with_markup (string label)
+    {
+        this.set_halign (Gtk.Align.START);
+        this.use_markup = true;
+        this.label = label;
+    }
     public LLabel.center (string label) 
     {
         this.set_halign (Gtk.Align.CENTER);
@@ -429,7 +440,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		enable_anim.halign = Gtk.Align.START;
 
         /* Attach to grid */
-		anim_grid.attach (new LLabel.right_with_markup (("<span size=\"large\" weight=\"bold\">"+_("Animations:")+"</span>")), 0, 0, 1, 1);
+		anim_grid.attach (new LLabel.right_with_markup (("<span weight=\"bold\">"+_("Animations:")+"</span>")), 0, 0, 1, 1);
 		anim_grid.attach (enable_anim, 1, 0, 1, 1);
 		anim_grid.attach (open_dur_label, 0, 1, 1, 1);
 		anim_grid.attach (open_dur_box, 1, 1, 1, 1);
@@ -678,7 +689,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		enable_shadows.active = true;
 
         /* Attach to grid */
-		sha_grid.attach (new LLabel.right_with_markup (("<span size=\"large\" weight=\"bold\">"+_("Shadows:")+"</span>")), 0, 0, 1, 1);
+		sha_grid.attach (new LLabel.right_with_markup (("<span weight=\"bold\">"+_("Shadows:")+"</span>")), 0, 0, 1, 1);
 		sha_grid.attach (enable_shadows, 1, 0, 1, 1);
 
 		sha_grid.attach (shadow_focused_label, 0, 1, 1, 1);
@@ -1161,33 +1172,37 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		overlay_scrollbar.notify["active"].connect (() => ui_scheme.set_boolean ("ubuntu-overlay-scrollbars", overlay_scrollbar.active) );
         overlay_scrollbar.halign = Gtk.Align.START;
 
+        var spacer = new LLabel.right ((""));
+        spacer.width_request = 140;
 
-		misc_grid.attach (new LLabel.right_with_markup (("<span size=\"large\" weight=\"bold\">"+_("Slingshot:")+"</span>")), 0, 0, 1, 1);
 
-		misc_grid.attach (new LLabel.right (_("Rows:")), 0, 1, 1, 1);
-		misc_grid.attach (slingshot_rows_box, 2, 1, 1, 1);
+		misc_grid.attach (new LLabel.left_with_markup (("<span weight=\"bold\">"+_("Slingshot:")+"</span>")), 1, 0, 1, 1);
+		misc_grid.attach (spacer, 0, 0, 1, 1);
 
-		misc_grid.attach (new LLabel.right (_("Columns:")), 0, 2, 1, 1);
-		misc_grid.attach (slingshot_columns_box, 2, 2, 1, 1);
+		misc_grid.attach (new LLabel.right (_("Rows:")), 1, 1, 1, 1);
+		misc_grid.attach (slingshot_rows_box, 2, 1, 2, 1);
 
-		misc_grid.attach (new LLabel.right_with_markup (("<span size=\"large\" weight=\"bold\">"+_("Files:")+"</span>")), 0, 3, 1, 1);
+		misc_grid.attach (new LLabel.right (_("Columns:")), 1, 2, 1, 1);
+		misc_grid.attach (slingshot_columns_box, 2, 2, 2, 1);
 
-        misc_grid.attach (new LLabel.right (_("Single Click:")), 0, 4, 1, 1);
-        misc_grid.attach (single_click, 2, 4, 1, 1);
+		misc_grid.attach (new LLabel.left_with_markup (("<span weight=\"bold\">"+_("Files:")+"</span>")), 1, 3, 1, 1);
 
-        misc_grid.attach (new LLabel.right (_("Date Format:")), 0, 5, 1, 1);
-        misc_grid.attach (date_format_box, 2, 5, 1, 1);
+        misc_grid.attach (new LLabel.right (_("Single Click:")), 1, 4, 1, 1);
+        misc_grid.attach (single_click, 2, 4, 2, 1);
 
-        misc_grid.attach (new LLabel.right (_("Sidebar Icon Size:")), 0, 6, 1, 1);
-        misc_grid.attach (sidebar_zoom_box, 2, 6, 1, 1);
+        misc_grid.attach (new LLabel.right (_("Date Format:")), 1, 5, 1, 1);
+        misc_grid.attach (date_format_box, 2, 5, 2, 1);
 
-		misc_grid.attach (new LLabel.right_with_markup (("<span size=\"large\" weight=\"bold\">"+_("Other Settings:")+"</span>")), 0, 7, 1, 1);
+        misc_grid.attach (new LLabel.right (_("Sidebar Icon Size:")), 1, 6, 1, 1);
+        misc_grid.attach (sidebar_zoom_box, 2, 6, 2, 1);
 
-        misc_grid.attach (new LLabel.right (_("Audible Bell:")), 0, 8, 1, 1);
-        misc_grid.attach (audible_bell, 2, 8, 1, 1);
+		misc_grid.attach (new LLabel.left_with_markup (("<span weight=\"bold\">"+_("Other Settings:")+"</span>")), 1, 7, 1, 1);
 
-        misc_grid.attach (new LLabel.right (_("Overlay Scrollbars:")), 0, 9, 1, 1);
-        misc_grid.attach (overlay_scrollbar, 2, 9, 1, 1);
+        misc_grid.attach (new LLabel.right (_("Audible Bell:")), 1, 8, 1, 1);
+        misc_grid.attach (audible_bell, 2, 8, 2, 1);
+
+        misc_grid.attach (new LLabel.right (_("Overlay Scrollbars:")), 1, 9, 1, 1);
+        misc_grid.attach (overlay_scrollbar, 2, 9, 2, 1);
        
         notebook.append_page (misc_grid, new Gtk.Label (_("Miscellaneous")));
 
