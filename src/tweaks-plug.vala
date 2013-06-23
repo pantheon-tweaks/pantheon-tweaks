@@ -76,101 +76,101 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         var notebook = new Granite.Widgets.StaticNotebook (false);
         notebook.set_margin_top (12);        
 
-		/* Appearances Tab */
-		var app_grid = new Gtk.Grid ();
-		
-		app_grid.row_spacing = 6;
-		app_grid.column_spacing = 12;
-		app_grid.margin = 24;
+        /* Appearances Tab */
+        var app_grid = new Gtk.Grid ();
+
+        app_grid.row_spacing = 6;
+        app_grid.column_spacing = 12;
+        app_grid.margin = 24;
         app_grid.column_homogeneous = true;
 
         /* Window Decoration and Interface Themes */
-		var themes_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-		var ui_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-		var themes = new Gtk.ComboBoxText ();
-		var ui = new Gtk.ComboBoxText ();
+        var themes_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        var ui_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        var themes = new Gtk.ComboBoxText ();
+        var ui = new Gtk.ComboBoxText ();
         var duplicate_themes = ":";
-		
-		try {
-			var enumerator = File.new_for_path ("/usr/share/themes/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
-			FileInfo file_info;
-			while ((file_info = enumerator.next_file ()) != null) {
-				var name = file_info.get_name ();
+
+        try {
+            var enumerator = File.new_for_path ("/usr/share/themes/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
+            FileInfo file_info;
+            while ((file_info = enumerator.next_file ()) != null) {
+            var name = file_info.get_name ();
                 var checktheme = File.new_for_path ("/usr/share/themes/" + name + "/gtk-3.0");
                 if (checktheme.query_exists() && name != "Emacs" && name != "Default") {
-				    themes.append (file_info.get_name (), name);
+                    themes.append (file_info.get_name (), name);
                     duplicate_themes += name + ":";
                 }
-			}
-		} catch (Error e) { warning (e.message); }
+            }
+        } catch (Error e) { warning (e.message); }
 
-		try {
-			var enumerator = File.new_for_path ("/home/" + Environment.get_user_name () + "/.themes/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
-			FileInfo file_info;
-			while ((file_info = enumerator.next_file ()) != null) {
-				var name = file_info.get_name ();
+        try {
+        var enumerator = File.new_for_path ("/home/" + Environment.get_user_name () + "/.themes/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
+        FileInfo file_info;
+        while ((file_info = enumerator.next_file ()) != null) {
+            var name = file_info.get_name ();
                 var checktheme = File.new_for_path ("/home/" + Environment.get_user_name () + "/.themes/" + name + "/gtk-3.0");
                 if (checktheme.query_exists() && name != "Emacs" && name != "Default" && duplicate_themes.contains(name) == false)
-				    themes.append (file_info.get_name (), name);
-			}
-		} catch (Error e) { warning (e.message); }
+                    themes.append (file_info.get_name (), name);
+            }
+        } catch (Error e) { warning (e.message); }
 
-		themes.active_id = WindowSettings.get_default ().theme;
-		themes.changed.connect (() => WindowSettings.get_default ().theme = themes.active_id );
-		themes.halign = Gtk.Align.START;
+        themes.active_id = WindowSettings.get_default ().theme;
+        themes.changed.connect (() => WindowSettings.get_default ().theme = themes.active_id );
+        themes.halign = Gtk.Align.START;
         themes.width_request = 160;
 
-		var themes_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
+        var themes_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
-		themes_default.clicked.connect (() => {
+        themes_default.clicked.connect (() => {
             WindowSettings.get_default ().theme = "elementary";
             themes.active_id = WindowSettings.get_default ().theme;
         });
 
-		themes_default.halign = Gtk.Align.START;
+        themes_default.halign = Gtk.Align.START;
 
-		themes_box.pack_start (themes, false);
-		themes_box.pack_start (themes_default, false);
-		
-		ui.model = themes.model;
-		ui.halign = Gtk.Align.START;
-		ui.active_id = InterfaceSettings.get_default ().gtk_theme;
-		ui.changed.connect (() => InterfaceSettings.get_default ().gtk_theme = ui.active_id );
+        themes_box.pack_start (themes, false);
+        themes_box.pack_start (themes_default, false);
+
+        ui.model = themes.model;
+        ui.halign = Gtk.Align.START;
+        ui.active_id = InterfaceSettings.get_default ().gtk_theme;
+        ui.changed.connect (() => InterfaceSettings.get_default ().gtk_theme = ui.active_id );
         ui.width_request = 160;
 
-		var ui_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
+        var ui_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
-		ui_default.clicked.connect (() => {
+        ui_default.clicked.connect (() => {
             InterfaceSettings.get_default ().gtk_theme = "elementary";
             ui.active_id = InterfaceSettings.get_default ().gtk_theme;
         });
-		ui_default.halign = Gtk.Align.START;
+        ui_default.halign = Gtk.Align.START;
 
-		ui_box.pack_start (ui, false);
-		ui_box.pack_start (ui_default, false);
+        ui_box.pack_start (ui, false);
+        ui_box.pack_start (ui_default, false);
 
         /* Icon Themes */
-		var icon_theme_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-		var icon_theme = new Gtk.ComboBoxText ();
+        var icon_theme_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        var icon_theme = new Gtk.ComboBoxText ();
         var duplicate_icons = ":";
-		try {
-			var enumerator = File.new_for_path ("/usr/share/icons/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
-			FileInfo file_info;
-			while ((file_info = enumerator.next_file ()) != null) {
-			var name = file_info.get_name ();
+        try {
+        var enumerator = File.new_for_path ("/usr/share/icons/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
+            FileInfo file_info;
+            while ((file_info = enumerator.next_file ()) != null) {
+            var name = file_info.get_name ();
                var checktheme = File.new_for_path ("/usr/share/icons/" + name + "/apps");
                 if (checktheme.query_exists() && name != "Emacs" && name != "Default") {
                     duplicate_icons += name + ":";
-				    icon_theme.append (file_info.get_name (), name);
+                    icon_theme.append (file_info.get_name (), name);
                 }
-			}
-		} catch (Error e) { warning (e.message); }
+            }
+        } catch (Error e) { warning (e.message); }
 
-		try {
-			var enumerator = File.new_for_path ("/home/" + Environment.get_user_name () + "/.icons/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
-			FileInfo file_info;
-			while ((file_info = enumerator.next_file ()) != null) {
-				var name = file_info.get_name ();
+        try {
+            var enumerator = File.new_for_path ("/home/" + Environment.get_user_name () + "/.icons/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
+            FileInfo file_info;
+            while ((file_info = enumerator.next_file ()) != null) {
+                var name = file_info.get_name ();
                 var checktheme = File.new_for_path ("/home/" + Environment.get_user_name () + "/.icons/" + name + "/apps");
                 if (checktheme.query_exists() && name != "Emacs" && name != "Default" && duplicate_icons.contains(name) == false)
 				    icon_theme.append (file_info.get_name (), name);
@@ -368,16 +368,16 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		window_font_box.pack_start (window_font, false);
 		window_font_box.pack_start (window_font_default, false);
 
-		font_grid.attach (new LLabel.right (_("Default font:")), 1, 0, 1, 1);
+		font_grid.attach (new LLabel.right (_("Default Font:")), 1, 0, 1, 1);
 		font_grid.attach (default_font_box, 2, 0, 1, 1);
 
-		font_grid.attach (new LLabel.right (_("Document font:")), 1, 1, 1, 1);
+		font_grid.attach (new LLabel.right (_("Document Font:")), 1, 1, 1, 1);
 		font_grid.attach (document_font_box, 2, 1, 1, 1);
 
-		font_grid.attach (new LLabel.right (_("Monospace font:")), 1, 2, 1, 1);
+		font_grid.attach (new LLabel.right (_("Monospace Font:")), 1, 2, 1, 1);
 		font_grid.attach (mono_font_box, 2, 2, 1, 1);
 
-		font_grid.attach (new LLabel.right (_("Window title font:")), 1, 3, 1, 1);
+		font_grid.attach (new LLabel.right (_("Window Title Font:")), 1, 3, 1, 1);
 		font_grid.attach (window_font_box, 2, 3, 1, 1);
 
        
