@@ -15,6 +15,7 @@ include (ValaPrecompile)
 # Add all your vala files and requires packages to the List below to include them in the build
 vala_precompile (VALA_C
     tweaks-plug.vala
+    FilesSettings.vala
     GalaSettings.vala
     PlankSettings.vala
     SlingshotSettings.vala
