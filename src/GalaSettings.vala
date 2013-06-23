@@ -102,6 +102,7 @@ public class InterfaceSettings : Granite.Services.Settings
 	public string font_name { get; set; }
 	public string gtk_theme { get; set; }
 	public string icon_theme { get; set; }
+	public string monospace_font_name { get; set; }
 	public bool ubuntu_overlay_scrollbars { get; set; }
 	
 	static InterfaceSettings? instance = null;

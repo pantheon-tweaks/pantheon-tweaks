@@ -118,7 +118,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		themes.active_id = WindowSettings.get_default ().theme;
 		themes.changed.connect (() => WindowSettings.get_default ().theme = themes.active_id );
 		themes.halign = Gtk.Align.START;
-        themes.width_request = 140;
+        themes.width_request = 160;
 
 		var themes_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
@@ -136,7 +136,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		ui.halign = Gtk.Align.START;
 		ui.active_id = InterfaceSettings.get_default ().gtk_theme;
 		ui.changed.connect (() => InterfaceSettings.get_default ().gtk_theme = ui.active_id );
-        ui.width_request = 140;
+        ui.width_request = 160;
 
 		var ui_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
@@ -180,7 +180,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		icon_theme.halign = Gtk.Align.START;
 		icon_theme.active_id = InterfaceSettings.get_default ().icon_theme;
 		icon_theme.changed.connect (() => InterfaceSettings.get_default ().icon_theme = icon_theme.active_id );
-        icon_theme.width_request = 140;
+        icon_theme.width_request = 160;
 
 		var icon_theme_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
@@ -211,7 +211,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		cursor_theme.halign = Gtk.Align.START;
 		cursor_theme.active_id = InterfaceSettings.get_default ().cursor_theme;
 		cursor_theme.changed.connect (() => InterfaceSettings.get_default ().cursor_theme = cursor_theme.active_id );
-        cursor_theme.width_request = 140;
+        cursor_theme.width_request = 160;
 
 		var cursor_theme_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
@@ -236,7 +236,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		button_layout.active_id = AppearanceSettings.get_default ().button_layout;
 		button_layout.changed.connect (() => AppearanceSettings.get_default ().button_layout = button_layout.active_id );
 		button_layout.halign = Gtk.Align.START;
-        button_layout.width_request = 140;
+        button_layout.width_request = 160;
 
 		var button_layout_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
@@ -297,6 +297,94 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		notebook.append_page (app_grid, new Gtk.Label (_("Appearance")));
 
 
+        /* Font Tab*/
+        var font_grid = new Gtk.Grid ();
+        font_grid.column_spacing = 12;
+        font_grid.row_spacing = 6;
+        font_grid.margin = 24;
+        font_grid.column_homogeneous = true;
+
+        /* Default Font */
+		var default_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        var default_font = new Gtk.FontButton.with_font (InterfaceSettings.get_default ().font_name);
+        default_font.font_set.connect (() => InterfaceSettings.get_default ().font_name = default_font.get_font_name ());
+        default_font.width_request = 160;
+
+		var default_font_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
+
+		default_font_default.clicked.connect (() => {
+            InterfaceSettings.get_default ().schema.reset ("font-name");
+            default_font.font_name = InterfaceSettings.get_default ().font_name;
+        });
+
+		default_font_box.pack_start (default_font, false);
+		default_font_box.pack_start (default_font_default, false);
+
+        /* Document Font */
+		var document_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        var document_font = new Gtk.FontButton.with_font (InterfaceSettings.get_default ().document_font_name);
+        document_font.font_set.connect (() => InterfaceSettings.get_default ().document_font_name = document_font.get_font_name ());
+        document_font.width_request = 160;
+
+		var document_font_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
+
+		document_font_default.clicked.connect (() => {
+            InterfaceSettings.get_default ().schema.reset ("document-font-name");
+            document_font.font_name = InterfaceSettings.get_default ().document_font_name;
+        });
+
+		document_font_box.pack_start (document_font, false);
+		document_font_box.pack_start (document_font_default, false);
+
+        /* Monospace Font */
+		var mono_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        var mono_font = new Gtk.FontButton.with_font (InterfaceSettings.get_default ().monospace_font_name);
+        mono_font.font_set.connect (() => InterfaceSettings.get_default ().monospace_font_name = mono_font.get_font_name ());
+        mono_font.width_request = 160;
+
+		var mono_font_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
+
+		mono_font_default.clicked.connect (() => {
+            InterfaceSettings.get_default ().schema.reset ("monospace-font-name");
+            mono_font.font_name = InterfaceSettings.get_default ().monospace_font_name;
+        });
+
+		mono_font_box.pack_start (mono_font, false);
+		mono_font_box.pack_start (mono_font_default, false);
+
+        /* Window Font */
+		var window_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        var window_font = new Gtk.FontButton.with_font (WindowSettings.get_default ().titlebar_font);
+        window_font.font_set.connect (() => WindowSettings.get_default ().titlebar_font = window_font.get_font_name ());
+        window_font.width_request = 160;
+
+		var window_font_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
+
+		window_font_default.clicked.connect (() => {
+            WindowSettings.get_default ().schema.reset ("titlebar-font");
+            window_font.font_name = WindowSettings.get_default ().titlebar_font;
+        });
+
+		window_font_box.pack_start (window_font, false);
+		window_font_box.pack_start (window_font_default, false);
+
+		font_grid.attach (new LLabel.right (_("Default font:")), 1, 0, 1, 1);
+		font_grid.attach (default_font_box, 2, 0, 1, 1);
+
+		font_grid.attach (new LLabel.right (_("Document font:")), 1, 1, 1, 1);
+		font_grid.attach (document_font_box, 2, 1, 1, 1);
+
+		font_grid.attach (new LLabel.right (_("Monospace font:")), 1, 2, 1, 1);
+		font_grid.attach (mono_font_box, 2, 2, 1, 1);
+
+		font_grid.attach (new LLabel.right (_("Window title font:")), 1, 3, 1, 1);
+		font_grid.attach (window_font_box, 2, 3, 1, 1);
+
+       
+        notebook.append_page (font_grid, new Gtk.Label (_("Fonts")));
+
+
+
 		/* Animations Tab */
 		var anim_grid = new Gtk.Grid ();
 		anim_grid.column_homogeneous = true;
@@ -310,27 +398,29 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		var mini_dur_label = new LLabel.right (_("Minimize Duration:"));
 		var work_dur_label = new LLabel.right (_("Workspace Switch Duration:"));
 
-		var anim_scheme = new Settings ("org.pantheon.desktop.gala.animations");
-
 		var open_dur_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 		var open_dur = new Gtk.Scale.with_range (Gtk.Orientation.HORIZONTAL, 1,2000, 10);
 		var open_dur_spin = new Gtk.SpinButton.with_range (1, 2000, 1);
+
 		open_dur.set_value (AnimationSettings.get_default ().open_duration);
 		open_dur.value_changed.connect (() => {
             AnimationSettings.get_default ().open_duration = (int)open_dur.get_value ();
             open_dur_spin.set_value (open_dur.get_value ());
         });
+
         open_dur.width_request = 150;
-		open_dur_spin.set_value (AnimationSettings.get_default ().open_duration);
-		open_dur_spin.value_changed.connect (() => {
+        open_dur_spin.set_value (AnimationSettings.get_default ().open_duration);
+        open_dur_spin.value_changed.connect (() => {
             AnimationSettings.get_default ().open_duration = (int)open_dur_spin.get_value ();
             open_dur.set_value (open_dur_spin.get_value ());
         });
-		var open_dur_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
-		open_dur_default.clicked.connect (() => {
-            anim_scheme.reset ("open-duration");
-            open_dur.set_value (anim_scheme.get_int ("open-duration"));
+
+        var open_dur_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
+        open_dur_default.clicked.connect (() => {
+            AnimationSettings.get_default ().schema.reset ("open-duration");
+            open_dur.set_value (AnimationSettings.get_default ().open_duration);
         });
+
 		open_dur_box.pack_start (open_dur, false);
 		open_dur_box.pack_start (open_dur_spin, false);
 		open_dur_box.pack_start (open_dur_default, false);
@@ -352,8 +442,8 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         });
 		var close_dur_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 		close_dur_default.clicked.connect (() => {
-            anim_scheme.reset ("close-duration");
-            close_dur.set_value (anim_scheme.get_int ("close-duration"));
+            AnimationSettings.get_default ().schema.reset ("close-duration");
+            close_dur.set_value (AnimationSettings.get_default ().close_duration);
         });
 		close_dur_box.pack_start (close_dur, false);
 		close_dur_box.pack_start (close_dur_spin, false);
@@ -375,8 +465,8 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         });
 		var snap_dur_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 		snap_dur_default.clicked.connect (() => {
-            anim_scheme.reset ("snap-duration");
-            snap_dur.set_value (anim_scheme.get_int ("snap-duration"));
+            AnimationSettings.get_default ().schema.reset ("snap-duration");
+            snap_dur.set_value (AnimationSettings.get_default ().snap_duration);
         });
 		snap_dur_box.pack_start (snap_dur, false);
 		snap_dur_box.pack_start (snap_dur_spin, false);
@@ -398,8 +488,8 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         });
 		var mini_dur_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 		mini_dur_default.clicked.connect (() => {
-            anim_scheme.reset ("minimize-duration");
-            mini_dur.set_value (anim_scheme.get_int ("minimize-duration"));
+            AnimationSettings.get_default ().schema.reset ("minimize-duration");
+            mini_dur.set_value (AnimationSettings.get_default ().minimize_duration);
         });
 		mini_dur_box.pack_start (mini_dur, false);
 		mini_dur_box.pack_start (mini_dur_spin, false);
@@ -421,8 +511,8 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         });
 		var work_dur_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 		work_dur_default.clicked.connect (() => {
-            anim_scheme.reset ("workspace-switch-duration");
-            work_dur.set_value (anim_scheme.get_int ("workspace-switch-duration"));
+            AnimationSettings.get_default ().schema.reset ("workspace-switch-duration");
+            work_dur.set_value (AnimationSettings.get_default ().workspace_switch_duration);
         });
 		work_dur_box.pack_start (work_dur, false);
 		work_dur_box.pack_start (work_dur_spin, false);
@@ -820,7 +910,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
             dock_items.active_id = PlankSettings.get_default ().dock_items.to_string ();
             });
         dock_position.halign = Gtk.Align.START;
-        dock_position.width_request = 140;
+        dock_position.width_request = 160;
 
 		var dock_position_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
@@ -864,7 +954,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
             }
         });
         dock_alignment.halign = Gtk.Align.START;
-        dock_alignment.width_request = 140;
+        dock_alignment.width_request = 160;
 
 		var dock_alignment_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
@@ -891,7 +981,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         dock_items.active_id = items.to_string ();
         dock_items.changed.connect (() => PlankSettings.get_default ().dock_items = int.parse (dock_items.active_id));
         dock_items.halign = Gtk.Align.START;
-        dock_items.width_request = 140;
+        dock_items.width_request = 160;
 
 
 		var dock_items_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
@@ -915,7 +1005,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         hide_mode.active_id = PlankSettings.get_default ().hide_mode.to_string ();
         hide_mode.changed.connect (() => PlankSettings.get_default ().hide_mode = int.parse (hide_mode.active_id));
         hide_mode.halign = Gtk.Align.START;
-        hide_mode.width_request = 140;
+        hide_mode.width_request = 160;
 
 		var hide_mode_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
@@ -959,7 +1049,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 
         theme.changed.connect (() => PlankSettings.get_default ().theme = theme.get_active_text ());
         theme.halign = Gtk.Align.START;
-        theme.width_request = 140;
+        theme.width_request = 160;
 
 		var theme_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
@@ -1008,7 +1098,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         monitor.active_id = PlankSettings.get_default ().monitor.to_string ();
         monitor.changed.connect (() => PlankSettings.get_default ().monitor = int.parse (monitor.active_id));
         monitor.halign = Gtk.Align.START;
-        monitor.width_request = 140;
+        monitor.width_request = 160;
 
 		var monitor_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
@@ -1087,7 +1177,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		date_format.active_id = FilesSettings.get_default ().date_format;
 		date_format.changed.connect (() => FilesSettings.get_default ().date_format = date_format.active_id );
 		date_format.halign = Gtk.Align.START;
-        date_format.width_request = 140;
+        date_format.width_request = 160;
 
 		var date_format_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
@@ -1114,7 +1204,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		sidebar_zoom.active_id = FilesSettings.get_default ().sidebar_zoom_level;
 		sidebar_zoom.changed.connect (() => FilesSettings.get_default ().sidebar_zoom_level = sidebar_zoom.active_id );
 		sidebar_zoom.halign = Gtk.Align.START;
-        sidebar_zoom.width_request = 140;
+        sidebar_zoom.width_request = 160;
 
 		var sidebar_zoom_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
@@ -1133,7 +1223,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 
 		slingshot_rows.set_value (SlingshotSettings.get_default ().rows);
 		slingshot_rows.value_changed.connect (() => SlingshotSettings.get_default ().rows = slingshot_rows.get_value_as_int() );
-        slingshot_rows.width_request = 140;
+        slingshot_rows.width_request = 160;
 		slingshot_rows.halign = Gtk.Align.START;
 
 		var slingshot_rows_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
@@ -1154,7 +1244,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 
 		slingshot_columns.set_value (SlingshotSettings.get_default ().columns);
 		slingshot_columns.value_changed.connect (() => SlingshotSettings.get_default ().columns = slingshot_columns.get_value_as_int() );
-        slingshot_columns.width_request = 140;
+        slingshot_columns.width_request = 160;
 		slingshot_columns.halign = Gtk.Align.START;
 
 		var slingshot_columns_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
@@ -1180,7 +1270,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         overlay_scrollbar.halign = Gtk.Align.START;
 
         var spacer = new LLabel.right ((""));
-        spacer.width_request = 140;
+        spacer.width_request = 10;
 
 
 		misc_grid.attach (new LLabel.left_with_markup (("<span weight=\"bold\">"+_("Slingshot:")+"</span>")), 1, 0, 1, 1);
