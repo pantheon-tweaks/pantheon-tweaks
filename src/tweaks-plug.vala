@@ -74,8 +74,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
     {
         
         var notebook = new Granite.Widgets.StaticNotebook (false);
-        notebook.set_margin_top (12);
-        
+        notebook.set_margin_top (12);        
 
 		/* Appearances Tab */
 		var app_grid = new Gtk.Grid ();
@@ -116,38 +115,34 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 			}
 		} catch (Error e) { warning (e.message); }
 
-		var ui_theme = new Settings ("org.gnome.desktop.wm.preferences");
-
-		themes.active_id = ui_theme.get_string ("theme");
-		themes.changed.connect (() => ui_theme.set_string ("theme", themes.active_id) );
+		themes.active_id = WindowSettings.get_default ().theme;
+		themes.changed.connect (() => WindowSettings.get_default ().theme = themes.active_id );
 		themes.halign = Gtk.Align.START;
         themes.width_request = 140;
-
 
 		var themes_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
 		themes_default.clicked.connect (() => {
-            ui_theme.set_string ("theme", "elementary");
-            themes.active_id = ui_theme.get_string ("theme");
+            WindowSettings.get_default ().theme = "elementary";
+            themes.active_id = WindowSettings.get_default ().theme;
         });
+
 		themes_default.halign = Gtk.Align.START;
 
 		themes_box.pack_start (themes, false);
 		themes_box.pack_start (themes_default, false);
 		
-		var ui_scheme = new Settings ("org.gnome.desktop.interface");
-		
 		ui.model = themes.model;
 		ui.halign = Gtk.Align.START;
-		ui.active_id = ui_scheme.get_string ("gtk-theme");
-		ui.changed.connect (() => ui_scheme.set_string ("gtk-theme", ui.active_id) );
+		ui.active_id = InterfaceSettings.get_default ().gtk_theme;
+		ui.changed.connect (() => InterfaceSettings.get_default ().gtk_theme = ui.active_id );
         ui.width_request = 140;
 
 		var ui_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
 		ui_default.clicked.connect (() => {
-            ui_scheme.set_string ("gtk-theme", "elementary");
-            ui.active_id = ui_scheme.get_string ("gtk-theme");
+            InterfaceSettings.get_default ().gtk_theme = "elementary";
+            ui.active_id = InterfaceSettings.get_default ().gtk_theme;
         });
 		ui_default.halign = Gtk.Align.START;
 
@@ -182,17 +177,16 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 			}
 		} catch (Error e) { warning (e.message); }
 		
-		var icon_scheme = new Settings ("org.gnome.desktop.interface");
 		icon_theme.halign = Gtk.Align.START;
-		icon_theme.active_id = icon_scheme.get_string ("icon-theme");
-		icon_theme.changed.connect (() => icon_scheme.set_string ("icon-theme", icon_theme.active_id) );
+		icon_theme.active_id = InterfaceSettings.get_default ().icon_theme;
+		icon_theme.changed.connect (() => InterfaceSettings.get_default ().icon_theme = icon_theme.active_id );
         icon_theme.width_request = 140;
 
 		var icon_theme_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
 		icon_theme_default.clicked.connect (() => {
-            icon_scheme.set_string ("icon-theme", "elementary");
-            icon_theme.active_id = icon_scheme.get_string ("icon-theme");
+            InterfaceSettings.get_default ().icon_theme = "elementary";
+            icon_theme.active_id = InterfaceSettings.get_default ().icon_theme;
         });
 		icon_theme_default.halign = Gtk.Align.START;
 
@@ -214,17 +208,16 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		} catch (Error e) { warning (e.message); }
 
 		
-		var cursor_scheme = new Settings ("org.gnome.desktop.interface");
 		cursor_theme.halign = Gtk.Align.START;
-		cursor_theme.active_id = cursor_scheme.get_string ("cursor-theme");
-		cursor_theme.changed.connect (() => cursor_scheme.set_string ("cursor-theme", cursor_theme.active_id) );
+		cursor_theme.active_id = InterfaceSettings.get_default ().cursor_theme;
+		cursor_theme.changed.connect (() => InterfaceSettings.get_default ().cursor_theme = cursor_theme.active_id );
         cursor_theme.width_request = 140;
 
 		var cursor_theme_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
 		cursor_theme_default.clicked.connect (() => {
-            cursor_scheme.set_string ("cursor-theme", "DMZ-Black");
-            cursor_theme.active_id = cursor_scheme.get_string ("cursor-theme");
+            InterfaceSettings.get_default ().cursor_theme = "DMZ-Black";
+            cursor_theme.active_id = InterfaceSettings.get_default ().cursor_theme;
         });
 		cursor_theme_default.halign = Gtk.Align.START;
 
@@ -261,7 +254,6 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         var wingpanel = new Gtk.Switch ();
         var wingpanel_slim = CerbereSettings.get_default ().monitored_processes;
         var checkslim = File.new_for_path ("/usr/bin/wingpanel-slim");
-
 
 		if (checkslim.query_exists() && (wingpanel_slim[0] == "wingpanel" || wingpanel_slim[0] == "wingpanel-slim")){
 
@@ -785,8 +777,8 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 
         var dock_items_v = new Gtk.ComboBoxText ();
         dock_items_v.append ("3", label_center);
-        dock_items_v.append ("1", label_bottom);
-        dock_items_v.append ("2", label_top);
+        dock_items_v.append ("1", label_top);
+        dock_items_v.append ("2", label_bottom);
 
         var dock_items_h = new Gtk.ComboBoxText ();
         dock_items_h.append ("3", label_center);
@@ -984,13 +976,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         var overview_icon = new Gtk.Switch ();
         try {            
             var file_dest = File.new_for_path (Environment.get_user_config_dir () + "/plank/dock1/launchers/gala-workspace.dockitem");
-            var file_src = File.new_for_path ("/usr/lib/plugs/pantheon/tweaks/gala-workspace.dockitem");
-
-            if (file_dest.query_exists ()) {
-                overview_icon.set_active(true);
-            } else {
-                overview_icon.set_active(false);
-            }
+            overview_icon.set_active(file_dest.query_exists ());
         } catch (GLib.FileError e){
             warning (e.message);
         }
@@ -1003,13 +989,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 
         try {            
             var file_dest = File.new_for_path (Environment.get_user_config_dir () + "/plank/dock1/launchers/show-desktop.dockitem");
-            var file_src = File.new_for_path ("/usr/lib/plugs/pantheon/tweaks/show-desktop.dockitem");
-
-            if (file_dest.query_exists ()) {
-                desktop_icon.set_active(true);
-            } else {
-                desktop_icon.set_active(false);
-            }
+            desktop_icon.set_active(file_dest.query_exists ());
         } catch (GLib.FileError e){
             warning (e.message);
         }
@@ -1090,11 +1070,10 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 
 
         /* Single Click */
-		var click_scheme = new Settings ("org.pantheon.files.preferences");
         var single_click = new Gtk.Switch ();
 
-		single_click.set_active(click_scheme.get_boolean ("single-click"));
-		single_click.notify["active"].connect (() => click_scheme.set_boolean ("single-click", single_click.active) );
+		single_click.set_active(FilesSettings.get_default ().single_click);
+		single_click.notify["active"].connect (() => FilesSettings.get_default ().single_click = single_click.active );
         single_click.halign = Gtk.Align.START;
 
 
@@ -1105,16 +1084,16 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         date_format.append ("iso", _("ISO"));
         date_format.append ("informal", _("Informal"));
 
-		date_format.active_id = click_scheme.get_string ("date-format");
-		date_format.changed.connect (() => click_scheme.set_string ("date-format", date_format.active_id) );
+		date_format.active_id = FilesSettings.get_default ().date_format;
+		date_format.changed.connect (() => FilesSettings.get_default ().date_format = date_format.active_id );
 		date_format.halign = Gtk.Align.START;
         date_format.width_request = 140;
 
 		var date_format_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
 		date_format_default.clicked.connect (() => {
-            click_scheme.reset ("date-format");
-            date_format.active_id = click_scheme.get_string ("date-format");
+            FilesSettings.get_default ().schema.reset("date-format");
+            date_format.active_id = FilesSettings.get_default ().date_format;
         });
 		date_format_default.halign = Gtk.Align.START;
 
@@ -1132,16 +1111,16 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         sidebar_zoom.append ("larger", _("Larger"));
         sidebar_zoom.append ("largest", _("Largest"));
 
-		sidebar_zoom.active_id = click_scheme.get_string ("sidebar-zoom-level");
-		sidebar_zoom.changed.connect (() => click_scheme.set_string ("sidebar-zoom-level", sidebar_zoom.active_id) );
+		sidebar_zoom.active_id = FilesSettings.get_default ().sidebar_zoom_level;
+		sidebar_zoom.changed.connect (() => FilesSettings.get_default ().sidebar_zoom_level = sidebar_zoom.active_id );
 		sidebar_zoom.halign = Gtk.Align.START;
         sidebar_zoom.width_request = 140;
 
 		var sidebar_zoom_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
 		sidebar_zoom_default.clicked.connect (() => {
-            click_scheme.reset ("sidebar-zoom-level");
-            sidebar_zoom.active_id = click_scheme.get_string ("sidebar-zoom-level");
+            FilesSettings.get_default ().schema.reset("sidebar-zoom-level");
+            FilesSettings.get_default ().sidebar_zoom_level;
         });
 		sidebar_zoom_default.halign = Gtk.Align.START;
 
@@ -1149,20 +1128,19 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		sidebar_zoom_box.pack_start (sidebar_zoom_default, false);
 
         /* Slingshot Rows */
-		var slingshot_scheme = new Settings ("org.pantheon.desktop.slingshot");
 		var slingshot_rows_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 		var slingshot_rows = new Gtk.SpinButton.with_range (2, 10, 1);
 
-		slingshot_rows.set_value (slingshot_scheme.get_int ("rows"));
-		slingshot_rows.value_changed.connect (() => slingshot_scheme.set_int ("rows", slingshot_rows.get_value_as_int()) );
+		slingshot_rows.set_value (SlingshotSettings.get_default ().rows);
+		slingshot_rows.value_changed.connect (() => SlingshotSettings.get_default ().rows = slingshot_rows.get_value_as_int() );
         slingshot_rows.width_request = 140;
 		slingshot_rows.halign = Gtk.Align.START;
 
 		var slingshot_rows_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
 		slingshot_rows_default.clicked.connect (() => {
-            slingshot_scheme.reset ("rows");
-            slingshot_rows.set_value (slingshot_scheme.get_int ("rows"));
+            SlingshotSettings.get_default ().schema.reset("rows");
+            slingshot_rows.set_value (SlingshotSettings.get_default ().rows);
         });
 		slingshot_rows_default.halign = Gtk.Align.START;
 
@@ -1174,16 +1152,16 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		var slingshot_columns_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 		var slingshot_columns = new Gtk.SpinButton.with_range (4, 15, 1);
 
-		slingshot_columns.set_value (slingshot_scheme.get_int ("columns"));
-		slingshot_columns.value_changed.connect (() => slingshot_scheme.set_int ("columns", slingshot_columns.get_value_as_int()) );
+		slingshot_columns.set_value (SlingshotSettings.get_default ().columns);
+		slingshot_columns.value_changed.connect (() => SlingshotSettings.get_default ().columns = slingshot_columns.get_value_as_int() );
         slingshot_columns.width_request = 140;
 		slingshot_columns.halign = Gtk.Align.START;
 
 		var slingshot_columns_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
 		slingshot_columns_default.clicked.connect (() => {
-            slingshot_scheme.reset ("columns");
-            slingshot_columns.set_value (slingshot_scheme.get_int ("columns"));
+            SlingshotSettings.get_default ().schema.reset("columns");
+            slingshot_columns.set_value (SlingshotSettings.get_default ().columns);
         });
 		slingshot_columns_default.halign = Gtk.Align.START;
 		slingshot_columns_box.pack_start (slingshot_columns, false);
@@ -1191,14 +1169,14 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 
         /* Audible Bell */
         var audible_bell = new Gtk.Switch ();
-		audible_bell.set_active(ui_theme.get_boolean ("audible-bell"));
-		audible_bell.notify["active"].connect (() => ui_theme.set_boolean ("audible-bell", audible_bell.active) );
+		audible_bell.set_active(WindowSettings.get_default ().audible_bell);
+		audible_bell.notify["active"].connect (() => WindowSettings.get_default ().audible_bell = audible_bell.active );
         audible_bell.halign = Gtk.Align.START;
 
         /* Overlay Scrollbar */
         var overlay_scrollbar = new Gtk.Switch ();
-		overlay_scrollbar.set_active(ui_scheme.get_boolean ("ubuntu-overlay-scrollbars"));
-		overlay_scrollbar.notify["active"].connect (() => ui_scheme.set_boolean ("ubuntu-overlay-scrollbars", overlay_scrollbar.active) );
+		overlay_scrollbar.set_active(InterfaceSettings.get_default ().ubuntu_overlay_scrollbars);
+		overlay_scrollbar.notify["active"].connect (() => InterfaceSettings.get_default ().ubuntu_overlay_scrollbars = overlay_scrollbar.active );
         overlay_scrollbar.halign = Gtk.Align.START;
 
         var spacer = new LLabel.right ((""));
@@ -1245,16 +1223,10 @@ public class GalaPlug : Pantheon.Switchboard.Plug
  
     void overview_switch () {
             try {
-                
                 var file_dest = File.new_for_path (Environment.get_user_config_dir () + "/plank/dock1/launchers/gala-workspace.dockitem");
                 var file_src = File.new_for_path ("/usr/lib/plugs/pantheon/tweaks/gala-workspace.dockitem");
 
-                if (file_dest.query_exists ()) {
-                    file_dest.delete ();
-                } else {
-                    file_src.copy (file_dest, FileCopyFlags.NONE);
-                }
-
+                file_dest.query_exists ()?file_dest.delete ():file_src.copy (file_dest, FileCopyFlags.NONE);
             } catch (GLib.FileError e){
                 warning (e.message);
             }
@@ -1263,16 +1235,10 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 
     void desktop_switch () {
             try {
-                
                 var file_dest = File.new_for_path (Environment.get_user_config_dir () + "/plank/dock1/launchers/show-desktop.dockitem");
                 var file_src = File.new_for_path ("/usr/lib/plugs/pantheon/tweaks/show-desktop.dockitem");
 
-                if (file_dest.query_exists ()) {
-                    file_dest.delete ();
-                } else {
-                    file_src.copy (file_dest, FileCopyFlags.NONE);
-                }
-
+                file_dest.query_exists ()?file_dest.delete ():file_src.copy (file_dest, FileCopyFlags.NONE);
             } catch (GLib.FileError e){
                 warning (e.message);
             }

@@ -6,7 +6,6 @@ public class SlingshotSettings : Granite.Services.Settings
 	public int icon_size { get; set; }
 	public int rows { get; set; }
 	public int columns { get; set; }
-//	public bool open_on_mouse { get; set; }
 	
 	static SlingshotSettings? instance = null;
 	
