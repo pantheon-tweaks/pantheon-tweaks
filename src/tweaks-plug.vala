@@ -256,6 +256,35 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 		button_layout_box.pack_start (button_layout, false);
 		button_layout_box.pack_start (button_layout_default, false);
 
+
+        /* Wingpanel Slim */
+        var wingpanel = new Gtk.Switch ();
+        var wingpanel_slim = CerbereSettings.get_default ().monitored_processes;
+        var checkslim = File.new_for_path ("/usr/bin/wingpanel-slim");
+
+
+		if (checkslim.query_exists() && (wingpanel_slim[0] == "wingpanel" || wingpanel_slim[0] == "wingpanel-slim")){
+
+            if ( wingpanel_slim[0] == "wingpanel-slim" )
+                wingpanel.set_active(true);
+
+        
+    		wingpanel.notify["active"].connect (() => {
+                if ( wingpanel_slim[0] == "wingpanel-slim" ) {
+                    wingpanel_slim[0] = "wingpanel";
+                    CerbereSettings.get_default ().monitored_processes = wingpanel_slim;
+                } else {
+                    wingpanel_slim[0] = "wingpanel-slim";
+                    CerbereSettings.get_default ().monitored_processes = wingpanel_slim;
+                }
+            });
+            wingpanel.halign = Gtk.Align.START;
+            app_grid.attach (new LLabel.right (_("Slim Wingpanel:")), 0, 6, 2, 1);
+            app_grid.attach (wingpanel, 2, 6, 2, 1);
+		    app_grid.attach (new LLabel.left_with_markup (("<span size=\"small\">"+_("Wingpanel changes take effect next time you log in")+"</span>")), 2, 7, 2, 1);
+            
+        }
+
         /* Add to Grid */
 
 		app_grid.attach (new LLabel.right (_("Window Decoration Theme:")), 0, 1, 2, 1);

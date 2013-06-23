@@ -50,10 +50,31 @@ public class BehaviorSettings : Granite.Services.Settings
 	}
 }
 
+public class CerbereSettings : Granite.Services.Settings
+{
+	public int crash_time_interval { get; set; }
+	public int max_crashes { get; set; }
+	public string[] monitored_processes { get; set; }
+	
+	static CerbereSettings? instance = null;
+	
+	private CerbereSettings ()
+	{
+		base ("org.pantheon.cerbere");
+	}
+	
+	public static CerbereSettings get_default ()
+	{
+		if (instance == null)
+			instance = new CerbereSettings ();
+		
+		return instance;
+	}
+}
+
 public class AppearanceSettings : Granite.Services.Settings
 {
 	public string button_layout { get; set; }
-//	public string theme { get; set; }
 	public bool attach_modal_dialogs { get; set; }
 	public bool dim_parents { get; set; }
 	
