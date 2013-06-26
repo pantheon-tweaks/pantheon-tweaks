@@ -1348,7 +1348,6 @@ public class GalaPlug : Pantheon.Switchboard.Plug
     }
 
     bool icon_exists (string dockitem) {
-        bool iconexists;
         try {            
             var file_dest = File.new_for_path (Environment.get_user_config_dir () + "/plank/dock1/launchers/" + dockitem + ".dockitem");
             return file_dest.query_exists ();
