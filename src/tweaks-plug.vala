@@ -254,27 +254,36 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         var wingpanel = new Gtk.Switch ();
         var wingpanel_slim = CerbereSettings.get_default ().monitored_processes;
         var checkslim = File.new_for_path ("/usr/bin/wingpanel-slim");
+        int pos = -1;
 
-        if (checkslim.query_exists() && (wingpanel_slim[0] == "wingpanel" || wingpanel_slim[0] == "wingpanel-slim")){
+        for (int i = 0; i < wingpanel_slim.length ; i++) {
+            if ( wingpanel_slim[i] == "wingpanel" || wingpanel_slim[i] == "wingpanel-slim" )
+            pos = i; 
+        }
 
-            if ( wingpanel_slim[0] == "wingpanel-slim" )
+        if (checkslim.query_exists() && pos != -1){
+
+            if ( wingpanel_slim[pos] == "wingpanel-slim" )
                 wingpanel.set_active(true);
 
-        
             wingpanel.notify["active"].connect (() => {
-                if ( wingpanel_slim[0] == "wingpanel-slim" ) {
-                    wingpanel_slim[0] = "wingpanel";
-                    CerbereSettings.get_default ().monitored_processes = wingpanel_slim;
-                } else {
-                    wingpanel_slim[0] = "wingpanel-slim";
-                    CerbereSettings.get_default ().monitored_processes = wingpanel_slim;
-                }
+                wingpanel_slim[pos] = "killall wingpanel";
+                CerbereSettings.get_default ().monitored_processes = wingpanel_slim;
+                (wingpanel.active)?wingpanel_slim[pos] = "wingpanel-slim":wingpanel_slim[pos] = "wingpanel";
+                CerbereSettings.get_default ().monitored_processes = wingpanel_slim;
             });
+
             wingpanel.halign = Gtk.Align.START;
             app_grid.attach (new LLabel.right (_("Slim Wingpanel:")), 0, 6, 2, 1);
             app_grid.attach (wingpanel, 2, 6, 2, 1);
-            app_grid.attach (new LLabel.left_with_markup (("<span size=\"small\">"+_("Wingpanel changes take effect next time you log in")+"</span>")), 2, 7, 2, 1);
-            
+           
+        } else if (!checkslim.query_exists() && wingpanel_slim[pos] == "wingpanel-slim") {
+            wingpanel_slim[pos] = "killall wingpanel";
+            CerbereSettings.get_default ().monitored_processes = wingpanel_slim;
+            wingpanel_slim[pos] = "wingpanel";
+            CerbereSettings.get_default ().monitored_processes = wingpanel_slim;
+            app_grid.attach (new LLabel.right (_("Slim Wingpanel:")), 0, 6, 2, 1);
+            app_grid.attach (new LLabel.left_with_markup (("<span color=\"#FF0000\">"+_("Wingpanel Slim not found. Settings have been reset!")+"</span>")), 2, 6, 2, 1);
         }
 
         /* Add to Grid */
@@ -521,7 +530,6 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         work_dur_box.pack_start (work_dur_default, false);
         
         /* Animation Switch */
-        var enable_anim_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var enable_anim = new Gtk.Switch ();
         enable_anim.notify["active"].connect (() => {
             open_dur_box.sensitive = enable_anim.active;
@@ -1089,6 +1097,26 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         desktop_icon.notify["active"].connect (desktop_switch);
         desktop_icon.halign = Gtk.Align.START;
 
+        /* Monitor Icons */
+        /*
+        try {
+            File file = File.new_for_path (Environment.get_user_config_dir () + "/plank/dock1/launchers");
+            FileMonitor monitor = file.monitor_directory (FileMonitorFlags.NONE, null);
+            stdout.printf ("Monitoring: %s\n", file.get_path ());
+
+            monitor.changed.connect ((src, dest, event) => {
+                if (dest != null) {
+                    stdout.printf ("%s: %s, %s\n", event.to_string (), src.get_path (), dest.get_path ());
+                } else {
+                    stdout.printf ("%s: %s\n", event.to_string (), src.get_path ());
+                }
+            });
+
+        } catch (Error err) {
+            stdout.printf ("Error: %s\n", err.message);
+        } 
+        */
+
         /* Monitor */ 
         var monitor_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);       
         var monitor = new Gtk.ComboBoxText ();
@@ -1271,6 +1299,35 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         overlay_scrollbar.notify["active"].connect (() => InterfaceSettings.get_default ().ubuntu_overlay_scrollbars = overlay_scrollbar.active );
         overlay_scrollbar.halign = Gtk.Align.START;
 
+        /* Search Indicator */
+        var checksearch = File.new_for_path ("/usr/lib/indicators3/7/libsynapse.so");
+
+        if (checksearch.query_exists()){
+
+            var search_entry_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+            var search_entry = new Gtk.Entry();
+            search_entry.text = SynapseSettings.get_default ().shortcut;
+            search_entry.changed.connect (() => SynapseSettings.get_default ().shortcut = search_entry.text);
+            search_entry.width_request = 160;
+            search_entry.halign = Gtk.Align.START;
+
+            var search_entry_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
+
+            search_entry_default.clicked.connect (() => {
+                SynapseSettings.get_default ().schema.reset("shortcut");
+                search_entry.text = SynapseSettings.get_default ().shortcut;
+            });
+
+            search_entry_box.pack_start (search_entry, false);
+            search_entry_box.pack_start (search_entry_default, false);
+
+
+            misc_grid.attach (new LLabel.right (_("Search Indicator Shortcut:")), 1, 10, 1, 1);
+            misc_grid.attach (search_entry_box, 2, 10, 2, 1);
+        }
+
+
+        /* Spacer */
         var spacer = new LLabel.right ((""));
         spacer.width_request = 10;
 
@@ -1302,7 +1359,7 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 
         misc_grid.attach (new LLabel.right (_("Overlay Scrollbars:")), 1, 9, 1, 1);
         misc_grid.attach (overlay_scrollbar, 2, 9, 2, 1);
-       
+
         notebook.append_page (misc_grid, new Gtk.Label (_("Miscellaneous")));
 
 
@@ -1353,6 +1410,3 @@ public static int main (string[] args) {
     return 0;
 }
 
-public static void translations () {
-    string desktop_name = ("Tweaks");
-}
