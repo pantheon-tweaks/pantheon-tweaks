@@ -1267,9 +1267,10 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         overlay_scrollbar.halign = Gtk.Align.START;
 
         /* Search Indicator */
-        var checksearch = File.new_for_path ("/usr/lib/indicators3/7/libsynapse.so");
+        var checkschema = File.new_for_path ("/usr/lib/indicators3/7/libsynapse.so");
+        var checksearch = File.new_for_path ("/usr/share/glib-2.0/schemas/net.launchpad.synapse-project.gschema.xml");
 
-        if (checksearch.query_exists()){
+        if (checksearch.query_exists() && checkschema.query_exists()){
 
             var search_entry_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
             var search_entry = new Gtk.Entry();
