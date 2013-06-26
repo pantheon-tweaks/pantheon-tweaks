@@ -1074,48 +1074,15 @@ public class GalaPlug : Pantheon.Switchboard.Plug
 
        /* Workspace Overview Icon */
         var overview_icon = new Gtk.Switch ();
-        try {            
-            var file_dest = File.new_for_path (Environment.get_user_config_dir () + "/plank/dock1/launchers/gala-workspace.dockitem");
-            overview_icon.set_active(file_dest.query_exists ());
-        } catch (GLib.FileError e){
-            warning (e.message);
-        }
-
-        overview_icon.notify["active"].connect (overview_switch);
+        overview_icon.set_active(icon_exists("gala-workspace"));
+        overview_icon.notify["active"].connect (() => icon_switch("gala-workspace"));
         overview_icon.halign = Gtk.Align.START;
 
        /* Show Desktop Icon */
         var desktop_icon = new Gtk.Switch ();
-
-        try {            
-            var file_dest = File.new_for_path (Environment.get_user_config_dir () + "/plank/dock1/launchers/show-desktop.dockitem");
-            desktop_icon.set_active(file_dest.query_exists ());
-        } catch (GLib.FileError e){
-            warning (e.message);
-        }
-
-        desktop_icon.notify["active"].connect (desktop_switch);
+        desktop_icon.set_active(icon_exists("show-desktop"));
+        desktop_icon.notify["active"].connect (() => icon_switch("show-desktop"));
         desktop_icon.halign = Gtk.Align.START;
-
-        /* Monitor Icons */
-        /*
-        try {
-            File file = File.new_for_path (Environment.get_user_config_dir () + "/plank/dock1/launchers");
-            FileMonitor monitor = file.monitor_directory (FileMonitorFlags.NONE, null);
-            stdout.printf ("Monitoring: %s\n", file.get_path ());
-
-            monitor.changed.connect ((src, dest, event) => {
-                if (dest != null) {
-                    stdout.printf ("%s: %s, %s\n", event.to_string (), src.get_path (), dest.get_path ());
-                } else {
-                    stdout.printf ("%s: %s\n", event.to_string (), src.get_path ());
-                }
-            });
-
-        } catch (Error err) {
-            stdout.printf ("Error: %s\n", err.message);
-        } 
-        */
 
         /* Monitor */ 
         var monitor_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);       
@@ -1368,32 +1335,27 @@ public class GalaPlug : Pantheon.Switchboard.Plug
         
 
     }
-    
- 
-    void overview_switch () {
+
+    void icon_switch (string dockitem) {
             try {
-                var file_dest = File.new_for_path (Environment.get_user_config_dir () + "/plank/dock1/launchers/gala-workspace.dockitem");
-                var file_src = File.new_for_path ("/usr/lib/plugs/pantheon/tweaks/gala-workspace.dockitem");
+                var file_dest = File.new_for_path (Environment.get_user_config_dir () + "/plank/dock1/launchers/" + dockitem + ".dockitem");
+                var file_src = File.new_for_path ("/usr/lib/plugs/pantheon/tweaks/" + dockitem + ".dockitem");
 
                 file_dest.query_exists ()?file_dest.delete ():file_src.copy (file_dest, FileCopyFlags.NONE);
             } catch (GLib.FileError e){
                 warning (e.message);
             }
-
     }
 
-    void desktop_switch () {
-            try {
-                var file_dest = File.new_for_path (Environment.get_user_config_dir () + "/plank/dock1/launchers/show-desktop.dockitem");
-                var file_src = File.new_for_path ("/usr/lib/plugs/pantheon/tweaks/show-desktop.dockitem");
-
-                file_dest.query_exists ()?file_dest.delete ():file_src.copy (file_dest, FileCopyFlags.NONE);
-            } catch (GLib.FileError e){
-                warning (e.message);
-            }
-
+    bool icon_exists (string dockitem) {
+        bool iconexists;
+        try {            
+            var file_dest = File.new_for_path (Environment.get_user_config_dir () + "/plank/dock1/launchers/" + dockitem + ".dockitem");
+            return file_dest.query_exists ();
+        } catch (GLib.FileError e){
+            warning (e.message);
+        }
     }
-
 
 
 }

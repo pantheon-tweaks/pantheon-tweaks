@@ -21,7 +21,6 @@ public class PlankSettings : Object
 		}
 	}
 
-   /* versable changes */
 
 	public int dock_position {
 		get {
@@ -61,8 +60,6 @@ public class PlankSettings : Object
 			save ();
 		}
 	}
-
-    /* end */
 	
 	public int hide_mode {
 		get {
