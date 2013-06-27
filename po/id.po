@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-06-24 01:41+0100\n"
+"POT-Creation-Date: 2013-06-26 10:36+0100\n"
 "PO-Revision-Date: 2013-06-19 22:32+0000\n"
 "Last-Translator: Ficky Ichsan Hendrawan <fickyichsan@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-06-25 06:03+0000\n"
-"X-Generator: Launchpad (build 16677)\n"
+"X-Launchpad-Export-Date: 2013-06-27 16:16+0000\n"
+"X-Generator: Launchpad (build 16681)\n"
 
 #: ../src/tweaks-plug.vala:231
 msgid "Minimize Left"
@@ -33,287 +33,292 @@ msgstr "Jendela"
 msgid "OS X"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:274
+#: ../src/tweaks-plug.vala:277
+#: ../src/tweaks-plug.vala:285
 msgid "Slim Wingpanel:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:276
-msgid "Wingpanel changes take effect next time you log in"
+#: ../src/tweaks-plug.vala:286
+msgid "Wingpanel Slim not found. Settings have been reset!"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:282
+#: ../src/tweaks-plug.vala:290
 msgid "Window Decoration Theme:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:285
+#: ../src/tweaks-plug.vala:293
 msgid "Interface Theme:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:288
+#: ../src/tweaks-plug.vala:296
 msgid "Icon Theme:"
 msgstr "Tema Ikon:"
 
-#: ../src/tweaks-plug.vala:291
+#: ../src/tweaks-plug.vala:299
 msgid "Cursor Theme:"
 msgstr "Tema Kursor:"
 
-#: ../src/tweaks-plug.vala:294
+#: ../src/tweaks-plug.vala:302
 msgid "Button Layout:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:297
+#: ../src/tweaks-plug.vala:305
 msgid "Appearance"
 msgstr "Tampilan"
 
-#: ../src/tweaks-plug.vala:371
+#: ../src/tweaks-plug.vala:383
 msgid "Default Font:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:374
+#: ../src/tweaks-plug.vala:386
 msgid "Document Font:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:377
+#: ../src/tweaks-plug.vala:389
 msgid "Monospace Font:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:380
+#: ../src/tweaks-plug.vala:392
 msgid "Window Title Font:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:384
+#: ../src/tweaks-plug.vala:395
 msgid "Fonts"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:395
+#: ../src/tweaks-plug.vala:406
 msgid "Open Duration:"
 msgstr "Durasi Membuka:"
 
-#: ../src/tweaks-plug.vala:396
+#: ../src/tweaks-plug.vala:407
 msgid "Close Duration:"
 msgstr "Durasi Menutup:"
 
-#: ../src/tweaks-plug.vala:397
+#: ../src/tweaks-plug.vala:408
 msgid "Snap Duration:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:398
+#: ../src/tweaks-plug.vala:409
 msgid "Minimize Duration:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:399
+#: ../src/tweaks-plug.vala:410
 msgid "Workspace Switch Duration:"
 msgstr "Durasi Mengganti Layar Kerja"
 
-#: ../src/tweaks-plug.vala:554
+#: ../src/tweaks-plug.vala:564
 msgid "Animations:"
 msgstr "Animasi:"
 
-#: ../src/tweaks-plug.vala:567
+#: ../src/tweaks-plug.vala:577
 msgid "Animations"
 msgstr "Animasi"
 
-#: ../src/tweaks-plug.vala:577
+#: ../src/tweaks-plug.vala:587
 msgid "Focused Windows:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:578
+#: ../src/tweaks-plug.vala:588
 msgid "Unfocused Windows:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:579
+#: ../src/tweaks-plug.vala:589
 msgid "Focused Dialogs:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:580
+#: ../src/tweaks-plug.vala:590
 msgid "Unfocused Dialogs:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:581
+#: ../src/tweaks-plug.vala:591
 msgid "Menu:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:803
+#: ../src/tweaks-plug.vala:813
 msgid "Shadows:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:821
+#: ../src/tweaks-plug.vala:831
 msgid "Shadows"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:853
+#: ../src/tweaks-plug.vala:863
 msgid "Top"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:854
+#: ../src/tweaks-plug.vala:864
 msgid "Bottom"
 msgstr "Bawah"
 
-#: ../src/tweaks-plug.vala:855
+#: ../src/tweaks-plug.vala:865
 msgid "Left"
 msgstr "Kiri"
 
-#: ../src/tweaks-plug.vala:856
+#: ../src/tweaks-plug.vala:866
 msgid "Right"
 msgstr "Kanan"
 
-#: ../src/tweaks-plug.vala:857
+#: ../src/tweaks-plug.vala:867
 msgid "Center"
 msgstr "Tengah"
 
-#: ../src/tweaks-plug.vala:858
+#: ../src/tweaks-plug.vala:868
 msgid "Panel"
 msgstr "Panel"
 
-#: ../src/tweaks-plug.vala:938
+#: ../src/tweaks-plug.vala:948
 msgid "Item Alignment:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:979
+#: ../src/tweaks-plug.vala:989
 msgid "Unknown Value"
 msgstr "Nilai Tidak Diketahui"
 
-#: ../src/tweaks-plug.vala:1001
+#: ../src/tweaks-plug.vala:1011
 msgid "Don't hide"
 msgstr "Jangan sembunyikan"
 
-#: ../src/tweaks-plug.vala:1002
+#: ../src/tweaks-plug.vala:1012
 msgid "Intelligent hide"
 msgstr "Sembunyi secara pintar"
 
-#: ../src/tweaks-plug.vala:1003
+#: ../src/tweaks-plug.vala:1013
 msgid "Auto hide"
 msgstr "Sembunyikan otomatis"
 
-#: ../src/tweaks-plug.vala:1004
+#: ../src/tweaks-plug.vala:1014
 msgid "Hide on maximize"
 msgstr "Sembunyi ketika maksimal"
 
-#: ../src/tweaks-plug.vala:1093
+#: ../src/tweaks-plug.vala:1123
 msgid "Primary Monitor"
 msgstr "Layar Utama"
 
-#: ../src/tweaks-plug.vala:1096
+#: ../src/tweaks-plug.vala:1126
 #, c-format
 msgid "Monitor %d"
 msgstr "Layar %d"
 
-#: ../src/tweaks-plug.vala:1116
+#: ../src/tweaks-plug.vala:1146
 msgid "Icon Size:"
 msgstr "Ukuran Ikon:"
 
-#: ../src/tweaks-plug.vala:1120
+#: ../src/tweaks-plug.vala:1150
 msgid "Hide Mode:"
 msgstr "Perilaku Penyembunyian:"
 
-#: ../src/tweaks-plug.vala:1125
+#: ../src/tweaks-plug.vala:1155
 msgid "Theme:"
 msgstr "Tema:"
 
-#: ../src/tweaks-plug.vala:1131
+#: ../src/tweaks-plug.vala:1161
 msgid "Monitor:"
 msgstr "Layar:"
 
-#: ../src/tweaks-plug.vala:1135
+#: ../src/tweaks-plug.vala:1165
 msgid "Position:"
 msgstr "Posisi:"
 
-#: ../src/tweaks-plug.vala:1138
+#: ../src/tweaks-plug.vala:1168
 msgid "Alignment:"
 msgstr "Perataan:"
 
-#: ../src/tweaks-plug.vala:1144
+#: ../src/tweaks-plug.vala:1174
 msgid "Workspace Overview Icon:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1147
+#: ../src/tweaks-plug.vala:1177
 msgid "Show Desktop Icon:"
 msgstr "Tunjukkan Ikon Desktop:"
 
-#: ../src/tweaks-plug.vala:1150
+#: ../src/tweaks-plug.vala:1180
 msgid "Dock"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1173
+#: ../src/tweaks-plug.vala:1203
 msgid "Locale"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1174
+#: ../src/tweaks-plug.vala:1204
 msgid "ISO"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1175
+#: ../src/tweaks-plug.vala:1205
 msgid "Informal"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1196
+#: ../src/tweaks-plug.vala:1226
 msgid "Smallest"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1197
+#: ../src/tweaks-plug.vala:1227
 msgid "Smaller"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1198
+#: ../src/tweaks-plug.vala:1228
 msgid "Small"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1199
+#: ../src/tweaks-plug.vala:1229
 msgid "Normal"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1200
+#: ../src/tweaks-plug.vala:1230
 msgid "Large"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1201
+#: ../src/tweaks-plug.vala:1231
 msgid "Larger"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1202
+#: ../src/tweaks-plug.vala:1232
 msgid "Largest"
 msgstr "Paling Besar"
 
-#: ../src/tweaks-plug.vala:1276
+#: ../src/tweaks-plug.vala:1325
+msgid "Search Indicator Shortcut:"
+msgstr ""
+
+#: ../src/tweaks-plug.vala:1335
 msgid "Slingshot:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1279
+#: ../src/tweaks-plug.vala:1338
 msgid "Rows:"
 msgstr "Baris:"
 
-#: ../src/tweaks-plug.vala:1282
+#: ../src/tweaks-plug.vala:1341
 msgid "Columns:"
 msgstr "Kolom:"
 
-#: ../src/tweaks-plug.vala:1285
+#: ../src/tweaks-plug.vala:1344
 msgid "Files:"
 msgstr "Berkas:"
 
-#: ../src/tweaks-plug.vala:1287
+#: ../src/tweaks-plug.vala:1346
 msgid "Single Click:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1290
+#: ../src/tweaks-plug.vala:1349
 msgid "Date Format:"
 msgstr "Format Tanggal:"
 
-#: ../src/tweaks-plug.vala:1293
+#: ../src/tweaks-plug.vala:1352
 msgid "Sidebar Icon Size:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1296
+#: ../src/tweaks-plug.vala:1355
 msgid "Other Settings:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1298
+#: ../src/tweaks-plug.vala:1357
 msgid "Audible Bell:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1301
+#: ../src/tweaks-plug.vala:1360
 msgid "Overlay Scrollbars:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1304
+#: ../src/tweaks-plug.vala:1363
 msgid "Miscellaneous"
 msgstr ""
