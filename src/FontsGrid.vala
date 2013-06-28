@@ -60,6 +60,9 @@ public class FontsGrid : Gtk.Grid
         /* Monospace Font */
         var mono_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var mono_font = new Gtk.FontButton.with_font (InterfaceSettings.get_default ().monospace_font_name);
+        mono_font.set_filter_func((family, face) => {
+            return family.is_monospace();
+        });
         mono_font.font_set.connect (() => InterfaceSettings.get_default ().monospace_font_name = mono_font.get_font_name ());
         mono_font.width_request = 160;
         mono_font.use_font = true;
