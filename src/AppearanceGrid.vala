@@ -62,7 +62,7 @@ public class AppearanceGrid : Gtk.Grid
         var themes_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
         themes_default.clicked.connect (() => {
-            WindowSettings.get_default ().theme = "elementary";
+            WindowSettings.get_default ().schema.reset ("theme");
             themes.active_id = WindowSettings.get_default ().theme;
         });
 
@@ -80,7 +80,7 @@ public class AppearanceGrid : Gtk.Grid
         var ui_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
         ui_default.clicked.connect (() => {
-            InterfaceSettings.get_default ().gtk_theme = "elementary";
+            InterfaceSettings.get_default ().schema.reset ("gtk-theme");
             ui.active_id = InterfaceSettings.get_default ().gtk_theme;
         });
         ui_default.halign = Gtk.Align.START;
@@ -124,7 +124,7 @@ public class AppearanceGrid : Gtk.Grid
         var icon_theme_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
         icon_theme_default.clicked.connect (() => {
-            InterfaceSettings.get_default ().icon_theme = "elementary";
+            InterfaceSettings.get_default ().schema.reset ("icon-theme");
             icon_theme.active_id = InterfaceSettings.get_default ().icon_theme;
         });
         icon_theme_default.halign = Gtk.Align.START;
@@ -155,7 +155,7 @@ public class AppearanceGrid : Gtk.Grid
         var cursor_theme_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
         cursor_theme_default.clicked.connect (() => {
-            InterfaceSettings.get_default ().cursor_theme = "DMZ-Black";
+            InterfaceSettings.get_default ().schema.reset ("cursor-theme");
             cursor_theme.active_id = InterfaceSettings.get_default ().cursor_theme;
         });
         cursor_theme_default.halign = Gtk.Align.START;
@@ -180,7 +180,7 @@ public class AppearanceGrid : Gtk.Grid
         var button_layout_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
         button_layout_default.clicked.connect (() => {
-            AppearanceSettings.get_default ().button_layout = "close:maximize";
+            AppearanceSettings.get_default ().schema.reset ("button-layout");
             button_layout.active_id = AppearanceSettings.get_default ().button_layout;
         });
         button_layout_default.halign = Gtk.Align.START;

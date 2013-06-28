@@ -18,46 +18,33 @@
 
 public class TweaksPlug : Pantheon.Switchboard.Plug
 {
-    
     public TweaksPlug ()
     {
-        
+        /* Notebook */
         var notebook = new Granite.Widgets.StaticNotebook (false);
-        notebook.set_margin_top (12);        
+        notebook.set_margin_top (12);
 
         /* Appearances Tab */
-        var app_grid = new AppearanceGrid ();
-        notebook.append_page (app_grid, new Gtk.Label (_("Appearance")));
+        notebook.append_page (new AppearanceGrid (), new Gtk.Label (_("Appearance")));
 
         /* Font Tab*/
-        var font_grid = new FontsGrid ();
-        notebook.append_page (font_grid, new Gtk.Label (_("Fonts")));
+        notebook.append_page (new FontsGrid (), new Gtk.Label (_("Fonts")));
 
         /* Animations Tab */
-        var anim_grid = new AnimationsGrid ();
-        notebook.append_page (anim_grid, new Gtk.Label (_("Animations")));
+        notebook.append_page (new AnimationsGrid (), new Gtk.Label (_("Animations")));
 
+        /* Shadows Tab*/
+        notebook.append_page (new ShadowsGrid (), new Gtk.Label (_("Shadows")));
 
-        /* Shadows*/
-        var sha_grid = new ShadowsGrid ();
-        notebook.append_page (sha_grid, new Gtk.Label (_("Shadows")));
-
-        
         /* Dock Tab*/
-        var dock_grid = new DockGrid ();
-        notebook.append_page (dock_grid, new Gtk.Label (_("Dock")));
-
-
+        notebook.append_page (new DockGrid (), new Gtk.Label (_("Dock")));
 
         /* Misc Tab*/
-        var misc_grid = new MiscGrid ();
-        notebook.append_page (misc_grid, new Gtk.Label (_("Miscellaneous")));
+        notebook.append_page (new MiscGrid (), new Gtk.Label (_("Miscellaneous")));
 
-
-        /* Add Tabs */
+        /* Add Tabs to Notebook*/
         add (notebook);
     }
-
 }
 
 
@@ -65,11 +52,11 @@ public class TweaksPlug : Pantheon.Switchboard.Plug
 public static int main (string[] args) {
 
     Gtk.init (ref args);
-    
+
     var plug = new TweaksPlug ();
     plug.register ("Tweaks");
     plug.show_all ();
-    
+
     Gtk.main ();
     return 0;
 }
