@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-26 10:36+0100\n"
-"PO-Revision-Date: 2013-06-24 01:04+0000\n"
-"Last-Translator: Jorge Toledo <Unknown>\n"
+"PO-Revision-Date: 2013-06-27 20:48+0000\n"
+"Last-Translator: Alfredo Hernández <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-06-27 16:17+0000\n"
+"X-Launchpad-Export-Date: 2013-06-28 06:56+0000\n"
 "X-Generator: Launchpad (build 16681)\n"
 
 #: ../src/tweaks-plug.vala:231
@@ -36,11 +36,11 @@ msgstr "OS X"
 #: ../src/tweaks-plug.vala:277
 #: ../src/tweaks-plug.vala:285
 msgid "Slim Wingpanel:"
-msgstr ""
+msgstr "Wingpanel delgado:"
 
 #: ../src/tweaks-plug.vala:286
 msgid "Wingpanel Slim not found. Settings have been reset!"
-msgstr ""
+msgstr "No se encontró Wingpanel delgado. Los ajustes se han restablecido."
 
 #: ../src/tweaks-plug.vala:290
 msgid "Window Decoration Theme:"
@@ -80,7 +80,7 @@ msgstr "Tipografía monoespacio:"
 
 #: ../src/tweaks-plug.vala:392
 msgid "Window Title Font:"
-msgstr "Tipografía de título de ventana"
+msgstr "Tipografía del título de ventana:"
 
 #: ../src/tweaks-plug.vala:395
 msgid "Fonts"
@@ -277,7 +277,7 @@ msgstr "Muy grandes"
 
 #: ../src/tweaks-plug.vala:1325
 msgid "Search Indicator Shortcut:"
-msgstr ""
+msgstr "Atajo del indicador de búsqueda:"
 
 #: ../src/tweaks-plug.vala:1335
 msgid "Slingshot:"
@@ -313,11 +313,11 @@ msgstr "Otros ajustes:"
 
 #: ../src/tweaks-plug.vala:1357
 msgid "Audible Bell:"
-msgstr ""
+msgstr "Sonidos de teclado:"
 
 #: ../src/tweaks-plug.vala:1360
 msgid "Overlay Scrollbars:"
-msgstr ""
+msgstr "Barras de desplazamiento superpuestas:"
 
 #: ../src/tweaks-plug.vala:1363
 msgid "Miscellaneous"

@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-26 10:36+0100\n"
-"PO-Revision-Date: 2013-06-21 01:33+0000\n"
+"PO-Revision-Date: 2013-06-27 20:48+0000\n"
 "Last-Translator: Alfredo Hernández <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-06-27 16:16+0000\n"
+"X-Launchpad-Export-Date: 2013-06-28 06:56+0000\n"
 "X-Generator: Launchpad (build 16681)\n"
 
 #: ../src/tweaks-plug.vala:231
@@ -36,11 +36,11 @@ msgstr "OS X"
 #: ../src/tweaks-plug.vala:277
 #: ../src/tweaks-plug.vala:285
 msgid "Slim Wingpanel:"
-msgstr ""
+msgstr "Wingpanel prim:"
 
 #: ../src/tweaks-plug.vala:286
 msgid "Wingpanel Slim not found. Settings have been reset!"
-msgstr ""
+msgstr "No s'ha trobat el Wingpanel prim. Els paràmetres s'han restablert."
 
 #: ../src/tweaks-plug.vala:290
 msgid "Window Decoration Theme:"
@@ -68,23 +68,23 @@ msgstr "Aparença"
 
 #: ../src/tweaks-plug.vala:383
 msgid "Default Font:"
-msgstr ""
+msgstr "Tipus de lletra predeterminada:"
 
 #: ../src/tweaks-plug.vala:386
 msgid "Document Font:"
-msgstr ""
+msgstr "Tipus de lletra de document:"
 
 #: ../src/tweaks-plug.vala:389
 msgid "Monospace Font:"
-msgstr ""
+msgstr "Tipus de lletra monoespai:"
 
 #: ../src/tweaks-plug.vala:392
 msgid "Window Title Font:"
-msgstr ""
+msgstr "Tipus de lletra del títol de finestra:"
 
 #: ../src/tweaks-plug.vala:395
 msgid "Fonts"
-msgstr ""
+msgstr "Tipus de lletra"
 
 #: ../src/tweaks-plug.vala:406
 msgid "Open Duration:"
@@ -116,31 +116,31 @@ msgstr "Animacions"
 
 #: ../src/tweaks-plug.vala:587
 msgid "Focused Windows:"
-msgstr ""
+msgstr "Finestres actives:"
 
 #: ../src/tweaks-plug.vala:588
 msgid "Unfocused Windows:"
-msgstr ""
+msgstr "Finestres inactives:"
 
 #: ../src/tweaks-plug.vala:589
 msgid "Focused Dialogs:"
-msgstr ""
+msgstr "Quadres de diàleg actius:"
 
 #: ../src/tweaks-plug.vala:590
 msgid "Unfocused Dialogs:"
-msgstr ""
+msgstr "Quadres de diàleg inactius:"
 
 #: ../src/tweaks-plug.vala:591
 msgid "Menu:"
-msgstr ""
+msgstr "Menú:"
 
 #: ../src/tweaks-plug.vala:813
 msgid "Shadows:"
-msgstr ""
+msgstr "Ombres:"
 
 #: ../src/tweaks-plug.vala:831
 msgid "Shadows"
-msgstr ""
+msgstr "Ombres"
 
 #: ../src/tweaks-plug.vala:863
 msgid "Top"
@@ -277,7 +277,7 @@ msgstr "El més gran"
 
 #: ../src/tweaks-plug.vala:1325
 msgid "Search Indicator Shortcut:"
-msgstr ""
+msgstr "Drecera de l'indicador de cerca:"
 
 #: ../src/tweaks-plug.vala:1335
 msgid "Slingshot:"
@@ -309,15 +309,15 @@ msgstr "Mida de les icones de la barra lateral:"
 
 #: ../src/tweaks-plug.vala:1355
 msgid "Other Settings:"
-msgstr ""
+msgstr "Altres paràmetres:"
 
 #: ../src/tweaks-plug.vala:1357
 msgid "Audible Bell:"
-msgstr ""
+msgstr "Sons del teclat:"
 
 #: ../src/tweaks-plug.vala:1360
 msgid "Overlay Scrollbars:"
-msgstr ""
+msgstr "Barres de desplaçament superposades:"
 
 #: ../src/tweaks-plug.vala:1363
 msgid "Miscellaneous"
