@@ -24,18 +24,32 @@ const TerminalTheme[] DEFAULT_THEMES = {
                 "#303030:#e1321a:#6ab017:#ffc005:#004f9e:#ec0048:#2aa7e7:#f2f2f2:#5d5d5d:#ff361e:#7bc91f:#ffd00a:#0071ff:#ff1d62:#4bb8fd:#a020f0"
         },
         {
-                "Solarized Light",
-                "#586e75",
-                "#586e75",
-                "#fdf6e3",
-                "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+                "Chalk",
+                "#d0d0d0",
+                "#d0d0d0",
+                "#151515",
+                "#151515:#fb9fb1:#acc267:#ddb26f:#6fc2ef:#e1a3ee:#12cfc0:#d0d0d0:#505050:#eda987:#202020:#303030:#b0b0b0:#e0e0e0:#deaf8f:#f5f5f5"
         },
         {
-                "Solarized Dark",
+                "Monokai",
+                "#f8f8f2",
+                "#f8f8f2",
+                "#272822",
+                "#272822:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#a1efe4:#f8f8f2:#75715e:#fd971f:#383830:#49483e:#a59f85:#f5f4f1:#cc6633:#f9f8f5"
+        },
+        {
+                "Solarized",
                 "#93a1a1",
                 "#93a1a1",
                 "#002b36",
                 "#002b36:#dc322f:#859900:#b58900:#268bd2:#6c71c4:#2aa198:#93a1a1:#657b83:#cb4b16:#073642:#586e75:#839496:#eee8d5:#d33682:#fdf6e3"
+        },
+        {
+                "Zenburn",
+                "#8f8faf",
+                "#dcdcdc",
+                "#1f1f1f",
+                "#3f3f3f:#e8e893:#9e9ece:#f0f0df:#8c8cd0:#c0c0be:#dfdfaf:#efefef:#3f3f3f:#e8e893:#9e9ece:#f0f0df:#8c8cd0:#c0c0be:#dfdfaf:#efefef"
         }
 };
  
