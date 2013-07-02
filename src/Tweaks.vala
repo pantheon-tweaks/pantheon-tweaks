@@ -35,7 +35,7 @@ public class TweaksPlug : Pantheon.Switchboard.Plug
                 var paned = new Granite.Widgets.ThinPaned ();
  
                 sidebar = new Granite.Widgets.SourceList ();
-                sidebar.width_request = 200;
+                sidebar.width_request = 100;
                 sidebar.item_selected.connect (selected);
                 sidebar.get_style_context ().add_class ("sidebar");
 
@@ -83,8 +83,11 @@ public class TweaksPlug : Pantheon.Switchboard.Plug
  
         /* Slingshot Tab*/
         add_page (new SlingshotGrid (), _("Slingshot"), "preferences-desktop-default-applications", cat_applications);
+
+        /* Terminal Tab*/
+        add_page (new TerminalGrid (), _("Terminal"), "utilities-terminal", cat_applications);
  
-        /* Search Indicator Tab*/
+        /* Wingpanel Tab*/
         if (checkslim.query_exists() && checkslim_schema.query_exists())
             add_page (new WingpanelslimGrid (), _("Wingpanel Slim"), "wingpanel", cat_applications);
  
