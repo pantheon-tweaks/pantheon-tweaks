@@ -206,7 +206,7 @@ public class AppearanceGrid : Gtk.Grid
                 wingpanel.set_active(true);
 
             wingpanel.notify["active"].connect (() => {
-                wingpanel_slim[pos] = "killall wingpanel";
+                (wingpanel.active)?wingpanel_slim[pos] = "killall wingpanel":wingpanel_slim[pos] = "killall wingpanel-slim";
                 CerbereSettings.get_default ().monitored_processes = wingpanel_slim;
                 (wingpanel.active)?wingpanel_slim[pos] = "wingpanel-slim":wingpanel_slim[pos] = "wingpanel";
                 CerbereSettings.get_default ().monitored_processes = wingpanel_slim;
