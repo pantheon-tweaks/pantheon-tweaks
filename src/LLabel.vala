@@ -25,7 +25,8 @@ class LLabel : Gtk.Label
     public LLabel.indent (string label) 
     {
         this (label);
-        this.margin_left = 10;
+        this.use_markup = true;
+        this.margin_left = 12;
     }
     public LLabel.markup (string label) 
     {

@@ -15,17 +15,25 @@ include (ValaPrecompile)
 # Add all your vala files and requires packages to the List below to include them in the build
 vala_precompile (VALA_C
     Tweaks.vala
-    FilesSettings.vala
-    GalaSettings.vala
-    PlankSettings.vala
-    SlingshotSettings.vala
-    AppearanceGrid.vala
-    FontsGrid.vala
-    AnimationsGrid.vala
-    ShadowsGrid.vala
-    DockGrid.vala
-    MiscGrid.vala
     LLabel.vala
+    Settings/FilesSettings.vala
+    Settings/GalaSettings.vala
+    Settings/PlankSettings.vala
+    Settings/SlingshotSettings.vala
+    Settings/CerbereSettings.vala
+    Settings/GnomeSettings.vala
+    Settings/SynapseSettings.vala
+    Settings/WingpanelslimSettings.vala
+    Grids/AppearanceGrid.vala
+    Grids/FontsGrid.vala
+    Grids/FilesGrid.vala
+    Grids/AnimationsGrid.vala
+    Grids/ShadowsGrid.vala
+    Grids/DockGrid.vala
+    Grids/MiscGrid.vala
+    Grids/SlingshotGrid.vala
+    Grids/SynapseGrid.vala
+    Grids/WingpanelslimGrid.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     pantheon

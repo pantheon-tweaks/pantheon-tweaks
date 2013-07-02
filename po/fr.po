@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-26 10:36+0100\n"
-"PO-Revision-Date: 2013-07-01 23:04+0000\n"
-"Last-Translator: Rémi Patrizio <remi.patrizio@me.com>\n"
+"PO-Revision-Date: 2013-06-23 12:06+0000\n"
+"Last-Translator: Nikos <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-02 07:03+0000\n"
-"X-Generator: Launchpad (build 16692)\n"
+"X-Launchpad-Export-Date: 2013-06-27 16:16+0000\n"
+"X-Generator: Launchpad (build 16681)\n"
 
 #: ../src/tweaks-plug.vala:231
 msgid "Minimize Left"
@@ -68,23 +68,23 @@ msgstr "Apparence"
 
 #: ../src/tweaks-plug.vala:383
 msgid "Default Font:"
-msgstr "Police par défaut :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:386
 msgid "Document Font:"
-msgstr "Police des documents :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:389
 msgid "Monospace Font:"
-msgstr "Police à taille fixe :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:392
 msgid "Window Title Font:"
-msgstr "Police du titre des fenêtres :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:395
 msgid "Fonts"
-msgstr "Polices"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:406
 msgid "Open Duration:"
@@ -132,11 +132,11 @@ msgstr "Dialogues inactifs"
 
 #: ../src/tweaks-plug.vala:591
 msgid "Menu:"
-msgstr "Menu :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:813
 msgid "Shadows:"
-msgstr "Ombres :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:831
 msgid "Shadows"

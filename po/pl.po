@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-26 10:36+0100\n"
-"PO-Revision-Date: 2013-07-01 11:22+0000\n"
+"PO-Revision-Date: 2013-06-20 07:54+0000\n"
 "Last-Translator: Adrian Widerski <Unknown>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-02 07:03+0000\n"
-"X-Generator: Launchpad (build 16692)\n"
+"X-Launchpad-Export-Date: 2013-06-27 16:16+0000\n"
+"X-Generator: Launchpad (build 16681)\n"
 
 #: ../src/tweaks-plug.vala:231
 msgid "Minimize Left"
@@ -31,17 +31,16 @@ msgstr "Windows"
 
 #: ../src/tweaks-plug.vala:234
 msgid "OS X"
-msgstr "OS X"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:277
 #: ../src/tweaks-plug.vala:285
 msgid "Slim Wingpanel:"
-msgstr "Smukły Wingpanel:"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:286
 msgid "Wingpanel Slim not found. Settings have been reset!"
 msgstr ""
-"Szczupły Wingpanel nie został odnaleziony. Ustawienia zostały zresetowane!"
 
 #: ../src/tweaks-plug.vala:290
 msgid "Window Decoration Theme:"
@@ -69,23 +68,23 @@ msgstr "Wygląd"
 
 #: ../src/tweaks-plug.vala:383
 msgid "Default Font:"
-msgstr "Domyślna czcionka:"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:386
 msgid "Document Font:"
-msgstr "Czcionka dla dokumentów:"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:389
 msgid "Monospace Font:"
-msgstr "Czcionka o stałęj szerokości:"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:392
 msgid "Window Title Font:"
-msgstr "Czcionka w tytule okna:"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:395
 msgid "Fonts"
-msgstr "Czcionki"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:406
 msgid "Open Duration:"
@@ -117,35 +116,35 @@ msgstr "Animacje"
 
 #: ../src/tweaks-plug.vala:587
 msgid "Focused Windows:"
-msgstr "Aktywne okno:"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:588
 msgid "Unfocused Windows:"
-msgstr "Nieaktywne okno:"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:589
 msgid "Focused Dialogs:"
-msgstr "Aktywne okno dialogowe:"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:590
 msgid "Unfocused Dialogs:"
-msgstr "Nieaktywne okno dialogowe:"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:591
 msgid "Menu:"
-msgstr "Menu:"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:813
 msgid "Shadows:"
-msgstr "Cienie:"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:831
 msgid "Shadows"
-msgstr "Cienie"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:863
 msgid "Top"
-msgstr "Góra"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:864
 msgid "Bottom"
@@ -278,7 +277,7 @@ msgstr "Największy"
 
 #: ../src/tweaks-plug.vala:1325
 msgid "Search Indicator Shortcut:"
-msgstr "Skrót dla wskaźnika wyszukiwania:"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1335
 msgid "Slingshot:"
@@ -310,15 +309,15 @@ msgstr "Rozmiar ikon w panelach bocznych:"
 
 #: ../src/tweaks-plug.vala:1355
 msgid "Other Settings:"
-msgstr "Inne ustawienia:"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1357
 msgid "Audible Bell:"
-msgstr "Alarm dźwiękowy:"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1360
 msgid "Overlay Scrollbars:"
-msgstr "Paski przewijania w stylu Ubuntu:"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1363
 msgid "Miscellaneous"
