@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Elementary Tweaks\n"
+"Project-Id-Version: elementary Tweaks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-26 10:36+0100\n"
-"PO-Revision-Date: 2013-06-26 10:36+0100\n"
+"POT-Creation-Date: 2013-07-02 23:54+0100\n"
+"PO-Revision-Date: 2013-07-02 23:55+0100\n"
 "Last-Translator: Michael Langfermann <versable@gmail.com>\n"
 "Language-Team: elementary\n"
 "Language: \n"
@@ -13,310 +13,362 @@ msgstr ""
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ../src\n"
+"X-Poedit-SearchPath-1: ../src/Grids\n"
+"X-Poedit-SearchPath-2: ../src/Settings\n"
 
-#: ../src/tweaks-plug.vala:231
-msgid "Minimize Left"
+#: ../src/Tweaks.vala:54
+msgid "General"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:232
-msgid "Minimize Right"
+#: ../src/Tweaks.vala:55
+msgid "Applications"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:233
-msgid "Windows"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:234
-msgid "OS X"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:277
-#: ../src/tweaks-plug.vala:285
-msgid "Slim Wingpanel:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:286
-msgid "Wingpanel Slim not found. Settings have been reset!"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:290
-msgid "Window Decoration Theme:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:293
-msgid "Interface Theme:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:296
-msgid "Icon Theme:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:299
-msgid "Cursor Theme:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:302
-msgid "Button Layout:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:305
+#: ../src/Tweaks.vala:60
 msgid "Appearance"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:383
-msgid "Default Font:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:386
-msgid "Document Font:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:389
-msgid "Monospace Font:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:392
-msgid "Window Title Font:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:395
+#: ../src/Tweaks.vala:63
 msgid "Fonts"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:406
-msgid "Open Duration:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:407
-msgid "Close Duration:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:408
-msgid "Snap Duration:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:409
-msgid "Minimize Duration:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:410
-msgid "Workspace Switch Duration:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:564
-msgid "Animations:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:577
+#: ../src/Tweaks.vala:66
 msgid "Animations"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:587
-msgid "Focused Windows:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:588
-msgid "Unfocused Windows:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:589
-msgid "Focused Dialogs:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:590
-msgid "Unfocused Dialogs:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:591
-msgid "Menu:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:813
-msgid "Shadows:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:831
+#: ../src/Tweaks.vala:69
 msgid "Shadows"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:863
+#: ../src/Tweaks.vala:72
+msgid "Miscellaneous"
+msgstr ""
+
+#: ../src/Tweaks.vala:75
+msgid "Plank"
+msgstr ""
+
+#: ../src/Tweaks.vala:78
+msgid "Files"
+msgstr ""
+
+#: ../src/Tweaks.vala:82
+msgid "Search Indicator"
+msgstr ""
+
+#: ../src/Tweaks.vala:85
+msgid "Slingshot"
+msgstr ""
+
+#: ../src/Tweaks.vala:88
+msgid "Terminal"
+msgstr ""
+
+#: ../src/Tweaks.vala:92
+msgid "Wingpanel Slim"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:38
+msgid "Locale"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:39
+msgid "ISO"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:40
+msgid "Informal"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:61
+#: ../src/Grids/SlingshotGrid.vala:29
+msgid "Smallest"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:62
+#: ../src/Grids/SlingshotGrid.vala:30
+msgid "Smaller"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:63
+#: ../src/Grids/SlingshotGrid.vala:31
+msgid "Small"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:64
+#: ../src/Grids/SlingshotGrid.vala:32
+msgid "Normal"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:65
+#: ../src/Grids/SlingshotGrid.vala:33
+msgid "Large"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:66
+#: ../src/Grids/SlingshotGrid.vala:34
+msgid "Larger"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:67
+#: ../src/Grids/SlingshotGrid.vala:35
+msgid "Largest"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:85
+msgid "Single Click:"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:88
+msgid "Date Format:"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:91
+msgid "Sidebar Icon Size:"
+msgstr ""
+
+#: ../src/Grids/ShadowsGrid.vala:27
+msgid "Focused Windows:"
+msgstr ""
+
+#: ../src/Grids/ShadowsGrid.vala:28
+msgid "Unfocused Windows:"
+msgstr ""
+
+#: ../src/Grids/ShadowsGrid.vala:29
+msgid "Focused Dialogs:"
+msgstr ""
+
+#: ../src/Grids/ShadowsGrid.vala:30
+msgid "Unfocused Dialogs:"
+msgstr ""
+
+#: ../src/Grids/ShadowsGrid.vala:31
+msgid "Menu:"
+msgstr ""
+
+#: ../src/Grids/ShadowsGrid.vala:194
+msgid "Shadows:"
+msgstr ""
+
+#: ../src/Grids/SynapseGrid.vala:50
+msgid "Search Indicator Shortcut:"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:40
+msgid "Audible Bell:"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:43
+msgid "Overlay Scrollbars:"
+msgstr ""
+
+#: ../src/Grids/DockGrid.vala:49
 msgid "Top"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:864
+#: ../src/Grids/DockGrid.vala:50
 msgid "Bottom"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:865
+#: ../src/Grids/DockGrid.vala:51
+#: ../src/Grids/WingpanelslimGrid.vala:46
 msgid "Left"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:866
+#: ../src/Grids/DockGrid.vala:52
+#: ../src/Grids/WingpanelslimGrid.vala:44
 msgid "Right"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:867
+#: ../src/Grids/DockGrid.vala:53
 msgid "Center"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:868
+#: ../src/Grids/DockGrid.vala:54
 msgid "Panel"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:948
+#: ../src/Grids/DockGrid.vala:135
 msgid "Item Alignment:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:989
+#: ../src/Grids/DockGrid.vala:173
 msgid "Unknown Value"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1011
+#: ../src/Grids/DockGrid.vala:195
 msgid "Don't hide"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1012
+#: ../src/Grids/DockGrid.vala:196
 msgid "Intelligent hide"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1013
+#: ../src/Grids/DockGrid.vala:197
 msgid "Auto hide"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1014
+#: ../src/Grids/DockGrid.vala:198
 msgid "Hide on maximize"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1123
+#: ../src/Grids/DockGrid.vala:274
 msgid "Primary Monitor"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1126
+#: ../src/Grids/DockGrid.vala:277
 #, c-format
 msgid "Monitor %d"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1146
+#: ../src/Grids/DockGrid.vala:297
 msgid "Icon Size:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1150
+#: ../src/Grids/DockGrid.vala:301
 msgid "Hide Mode:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1155
+#: ../src/Grids/DockGrid.vala:306
+#: ../src/Grids/TerminalGrid.vala:210
 msgid "Theme:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1161
+#: ../src/Grids/DockGrid.vala:312
 msgid "Monitor:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1165
+#: ../src/Grids/DockGrid.vala:316
 msgid "Position:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1168
+#: ../src/Grids/DockGrid.vala:319
 msgid "Alignment:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1174
+#: ../src/Grids/DockGrid.vala:325
 msgid "Workspace Overview Icon:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1177
+#: ../src/Grids/DockGrid.vala:328
 msgid "Show Desktop Icon:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1180
-msgid "Dock"
+#: ../src/Grids/WingpanelslimGrid.vala:43
+msgid "Slim Wingpanel Position:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1203
-msgid "Locale"
+#: ../src/Grids/WingpanelslimGrid.vala:45
+msgid "Middle"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1204
-msgid "ISO"
+#: ../src/Grids/WingpanelslimGrid.vala:80
+#: ../src/Grids/WingpanelslimGrid.vala:88
+msgid "Slim Wingpanel:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1205
-msgid "Informal"
+#: ../src/Grids/WingpanelslimGrid.vala:89
+msgid "Wingpanel Slim not found. Settings have been reset!"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1226
-msgid "Smallest"
+#: ../src/Grids/AnimationsGrid.vala:27
+msgid "Open Duration:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1227
-msgid "Smaller"
+#: ../src/Grids/AnimationsGrid.vala:28
+msgid "Close Duration:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1228
-msgid "Small"
+#: ../src/Grids/AnimationsGrid.vala:29
+msgid "Snap Duration:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1229
-msgid "Normal"
+#: ../src/Grids/AnimationsGrid.vala:30
+msgid "Minimize Duration:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1230
-msgid "Large"
+#: ../src/Grids/AnimationsGrid.vala:31
+msgid "Workspace Switch Duration:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1231
-msgid "Larger"
+#: ../src/Grids/AnimationsGrid.vala:148
+msgid "Animations:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1232
-msgid "Largest"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:1325
-msgid "Search Indicator Shortcut:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:1335
-msgid "Slingshot:"
-msgstr ""
-
-#: ../src/tweaks-plug.vala:1338
+#: ../src/Grids/SlingshotGrid.vala:93
 msgid "Rows:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1341
+#: ../src/Grids/SlingshotGrid.vala:96
 msgid "Columns:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1344
-msgid "Files:"
+#: ../src/Grids/AppearanceGrid.vala:169
+msgid "Minimize Left"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1346
-msgid "Single Click:"
+#: ../src/Grids/AppearanceGrid.vala:170
+msgid "Minimize Right"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1349
-msgid "Date Format:"
+#: ../src/Grids/AppearanceGrid.vala:171
+msgid "Windows"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1352
-msgid "Sidebar Icon Size:"
+#: ../src/Grids/AppearanceGrid.vala:172
+msgid "OS X"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1355
-msgid "Other Settings:"
+#: ../src/Grids/AppearanceGrid.vala:192
+msgid "Window Decoration Theme:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1357
-msgid "Audible Bell:"
+#: ../src/Grids/AppearanceGrid.vala:195
+msgid "Interface Theme:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1360
-msgid "Overlay Scrollbars:"
+#: ../src/Grids/AppearanceGrid.vala:198
+msgid "Icon Theme:"
 msgstr ""
 
-#: ../src/tweaks-plug.vala:1363
-msgid "Miscellaneous"
+#: ../src/Grids/AppearanceGrid.vala:201
+msgid "Cursor Theme:"
+msgstr ""
+
+#: ../src/Grids/AppearanceGrid.vala:204
+msgid "Button Layout:"
+msgstr ""
+
+#: ../src/Grids/FontsGrid.vala:98
+msgid "Default Font:"
+msgstr ""
+
+#: ../src/Grids/FontsGrid.vala:101
+msgid "Document Font:"
+msgstr ""
+
+#: ../src/Grids/FontsGrid.vala:104
+msgid "Monospace Font:"
+msgstr ""
+
+#: ../src/Grids/FontsGrid.vala:107
+msgid "Window Title Font:"
+msgstr ""
+
+#: ../src/Grids/TerminalGrid.vala:180
+msgid "Custom"
+msgstr ""
+
+#: ../src/Grids/TerminalGrid.vala:199
+msgid "Limit Scrollback Lines:"
+msgstr ""
+
+#: ../src/Grids/TerminalGrid.vala:203
+msgid "Custom Font:"
+msgstr ""
+
+#: ../src/Grids/TerminalGrid.vala:207
+msgid "Opacity:"
 msgstr ""
 
