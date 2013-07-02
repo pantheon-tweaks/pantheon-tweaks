@@ -1,4 +1,4 @@
-# French translation for elementary-community
+# Korean translation for elementary-community
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the elementary-community package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-06-26 10:36+0100\n"
-"PO-Revision-Date: 2013-07-01 23:04+0000\n"
-"Last-Translator: Rémi Patrizio <remi.patrizio@me.com>\n"
-"Language-Team: French <fr@li.org>\n"
+"PO-Revision-Date: 2013-07-01 22:55+0000\n"
+"Last-Translator: MinSik CHO <Unknown>\n"
+"Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,15 +19,15 @@ msgstr ""
 
 #: ../src/tweaks-plug.vala:231
 msgid "Minimize Left"
-msgstr "Réduire et à gauche"
+msgstr "왼쪽으로 최소화"
 
 #: ../src/tweaks-plug.vala:232
 msgid "Minimize Right"
-msgstr "Réduire et à droite"
+msgstr "오른쪽으로 최소화"
 
 #: ../src/tweaks-plug.vala:233
 msgid "Windows"
-msgstr "Windows"
+msgstr "창"
 
 #: ../src/tweaks-plug.vala:234
 msgid "OS X"
@@ -44,55 +44,55 @@ msgstr ""
 
 #: ../src/tweaks-plug.vala:290
 msgid "Window Decoration Theme:"
-msgstr "Theme des fenêtres :"
+msgstr "창 꾸미기 테마:"
 
 #: ../src/tweaks-plug.vala:293
 msgid "Interface Theme:"
-msgstr "Thème de l'interface :"
+msgstr "인터페이스 테마:"
 
 #: ../src/tweaks-plug.vala:296
 msgid "Icon Theme:"
-msgstr "Thème des icônes :"
+msgstr "아이콘 테마:"
 
 #: ../src/tweaks-plug.vala:299
 msgid "Cursor Theme:"
-msgstr "Thème du curseur :"
+msgstr "커서 테마:"
 
 #: ../src/tweaks-plug.vala:302
 msgid "Button Layout:"
-msgstr "Position des boutons de fenêtres :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:305
 msgid "Appearance"
-msgstr "Apparence"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:383
 msgid "Default Font:"
-msgstr "Police par défaut :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:386
 msgid "Document Font:"
-msgstr "Police des documents :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:389
 msgid "Monospace Font:"
-msgstr "Police à taille fixe :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:392
 msgid "Window Title Font:"
-msgstr "Police du titre des fenêtres :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:395
 msgid "Fonts"
-msgstr "Polices"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:406
 msgid "Open Duration:"
-msgstr "Durée d'ouverture"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:407
 msgid "Close Duration:"
-msgstr "Durée de fermeture"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:408
 msgid "Snap Duration:"
@@ -100,43 +100,43 @@ msgstr ""
 
 #: ../src/tweaks-plug.vala:409
 msgid "Minimize Duration:"
-msgstr "Durée de réduction"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:410
 msgid "Workspace Switch Duration:"
-msgstr "Durée de changement de bureau"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:564
 msgid "Animations:"
-msgstr "Animations :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:577
 msgid "Animations"
-msgstr "Animations"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:587
 msgid "Focused Windows:"
-msgstr "Fenêtres actives"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:588
 msgid "Unfocused Windows:"
-msgstr "Fenêtres inactives"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:589
 msgid "Focused Dialogs:"
-msgstr "Dialogues actifs"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:590
 msgid "Unfocused Dialogs:"
-msgstr "Dialogues inactifs"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:591
 msgid "Menu:"
-msgstr "Menu :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:813
 msgid "Shadows:"
-msgstr "Ombres :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:831
 msgid "Shadows"
@@ -144,136 +144,136 @@ msgstr ""
 
 #: ../src/tweaks-plug.vala:863
 msgid "Top"
-msgstr "En haut"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:864
 msgid "Bottom"
-msgstr "En bas"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:865
 msgid "Left"
-msgstr "À gauche"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:866
 msgid "Right"
-msgstr "À droite"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:867
 msgid "Center"
-msgstr "Centré"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:868
 msgid "Panel"
-msgstr "Barre de menu"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:948
 msgid "Item Alignment:"
-msgstr "Alignement des éléments"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:989
 msgid "Unknown Value"
-msgstr "Valeur inconnue"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1011
 msgid "Don't hide"
-msgstr "Ne pas masquer"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1012
 msgid "Intelligent hide"
-msgstr "Masquer intelligemment"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1013
 msgid "Auto hide"
-msgstr "Masquer automatiquement"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1014
 msgid "Hide on maximize"
-msgstr "Masquer si maximisé"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1123
 msgid "Primary Monitor"
-msgstr "Écran principal"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1126
 #, c-format
 msgid "Monitor %d"
-msgstr "Écran %d"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1146
 msgid "Icon Size:"
-msgstr "Taille d'icône:"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1150
 msgid "Hide Mode:"
-msgstr "Comportement :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1155
 msgid "Theme:"
-msgstr "Thème :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1161
 msgid "Monitor:"
-msgstr "Écran :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1165
 msgid "Position:"
-msgstr "Position :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1168
 msgid "Alignment:"
-msgstr "Alignement :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1174
 msgid "Workspace Overview Icon:"
-msgstr "Icône de vue des bureaux"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1177
 msgid "Show Desktop Icon:"
-msgstr "Icône d'affichage du bureau"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1180
 msgid "Dock"
-msgstr "Dock"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1203
 msgid "Locale"
-msgstr "Local"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1204
 msgid "ISO"
-msgstr "International"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1205
 msgid "Informal"
-msgstr "Informel"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1226
 msgid "Smallest"
-msgstr "La plus petite"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1227
 msgid "Smaller"
-msgstr "Plus petite"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1228
 msgid "Small"
-msgstr "Petite"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1229
 msgid "Normal"
-msgstr "Standard"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1230
 msgid "Large"
-msgstr "Grande"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1231
 msgid "Larger"
-msgstr "Plus grande"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1232
 msgid "Largest"
-msgstr "La plus grande"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1325
 msgid "Search Indicator Shortcut:"
@@ -281,31 +281,31 @@ msgstr ""
 
 #: ../src/tweaks-plug.vala:1335
 msgid "Slingshot:"
-msgstr "Slingshot:"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1338
 msgid "Rows:"
-msgstr "Lignes :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1341
 msgid "Columns:"
-msgstr "Colonnes :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1344
 msgid "Files:"
-msgstr "Fichiers :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1346
 msgid "Single Click:"
-msgstr "Simple clic :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1349
 msgid "Date Format:"
-msgstr "Format de date :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1352
 msgid "Sidebar Icon Size:"
-msgstr "Taille des icônes de la barre latérale :"
+msgstr ""
 
 #: ../src/tweaks-plug.vala:1355
 msgid "Other Settings:"
@@ -321,4 +321,4 @@ msgstr ""
 
 #: ../src/tweaks-plug.vala:1363
 msgid "Miscellaneous"
-msgstr "Divers"
+msgstr ""
