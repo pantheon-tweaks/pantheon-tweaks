@@ -104,7 +104,7 @@ public class PlankSettings : Object
 	
 	PlankSettings ()
 	{
-//		configs_path = File.new_for_path (Environment.get_user_config_dir () + "/plank/dock1/settings");
+		configs_path = File.new_for_path (Environment.get_user_config_dir () + "/plank/dock1/settings");
 //		if (!configs_path.query_exists ())
 //			error ("Plank config file could not be found!");
 		
