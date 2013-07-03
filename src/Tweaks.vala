@@ -73,7 +73,7 @@ public class TweaksPlug : Pantheon.Switchboard.Plug
         add_page (new MiscGrid (), _("Miscellaneous"), "preferences-desktop-default-applications", cat_general);
  
         /* Dock Tab*/
-        if (!checkplank.query_exists ())
+        if (checkplank.query_exists ())
             add_page (new DockGrid (), _("Plank"), "plank", cat_applications);
  
         /* Files Tab*/
