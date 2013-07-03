@@ -40,6 +40,7 @@ public class TweaksPlug : Pantheon.Switchboard.Plug
                 sidebar.get_style_context ().add_class ("sidebar");
 
                 var checksearch = File.new_for_path ("/usr/lib/indicators3/7/libsynapse.so");
+                var checkplank = File.new_for_path (Environment.get_user_config_dir () + "/plank/dock1/settings");
                 //FIXME: Use GLib.list_schemas
                 var checksearch_schema = File.new_for_path ("/usr/share/glib-2.0/schemas/net.launchpad.synapse-project.gschema.xml");
                 var checkslim = File.new_for_path ("/usr/bin/wingpanel-slim");
@@ -72,7 +73,8 @@ public class TweaksPlug : Pantheon.Switchboard.Plug
         add_page (new MiscGrid (), _("Miscellaneous"), "preferences-desktop-default-applications", cat_general);
  
         /* Dock Tab*/
-        add_page (new DockGrid (), _("Plank"), "plank", cat_applications);
+        if (!checkplank.query_exists ())
+            add_page (new DockGrid (), _("Plank"), "plank", cat_applications);
  
         /* Files Tab*/
         add_page (new FilesGrid (), _("Files"), "system-file-manager", cat_applications);
