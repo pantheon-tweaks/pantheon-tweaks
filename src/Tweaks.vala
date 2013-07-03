@@ -35,7 +35,7 @@ public class TweaksPlug : Pantheon.Switchboard.Plug
                 var paned = new Granite.Widgets.ThinPaned ();
  
                 sidebar = new Granite.Widgets.SourceList ();
-                sidebar.width_request = 100;
+                sidebar.width_request = 120;
                 sidebar.item_selected.connect (selected);
                 sidebar.get_style_context ().add_class ("sidebar");
 
