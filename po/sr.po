@@ -8,22 +8,22 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-02 23:54+0100\n"
-"PO-Revision-Date: 2013-06-29 08:57+0000\n"
+"PO-Revision-Date: 2013-07-04 17:56+0000\n"
 "Last-Translator: IvanBlago <ivan_blagojevic@mail.com>\n"
 "Language-Team: Serbian <sr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-03 06:22+0000\n"
-"X-Generator: Launchpad (build 16692)\n"
+"X-Launchpad-Export-Date: 2013-07-05 06:37+0000\n"
+"X-Generator: Launchpad (build 16696)\n"
 
 #: ../src/Tweaks.vala:54
 msgid "General"
-msgstr ""
+msgstr "Опште"
 
 #: ../src/Tweaks.vala:55
 msgid "Applications"
-msgstr ""
+msgstr "Апликације"
 
 #: ../src/Tweaks.vala:60
 msgid "Appearance"
@@ -47,27 +47,27 @@ msgstr "Разно"
 
 #: ../src/Tweaks.vala:75
 msgid "Plank"
-msgstr ""
+msgstr "Планк"
 
 #: ../src/Tweaks.vala:78
 msgid "Files"
-msgstr ""
+msgstr "Датотеке"
 
 #: ../src/Tweaks.vala:82
 msgid "Search Indicator"
-msgstr ""
+msgstr "Индикатор претраге"
 
 #: ../src/Tweaks.vala:85
 msgid "Slingshot"
-msgstr ""
+msgstr "Слингшот"
 
 #: ../src/Tweaks.vala:88
 msgid "Terminal"
-msgstr ""
+msgstr "Терминал"
 
 #: ../src/Tweaks.vala:92
 msgid "Wingpanel Slim"
-msgstr ""
+msgstr "Вингпанел Слим"
 
 #: ../src/Grids/FilesGrid.vala:38
 msgid "Locale"
@@ -258,11 +258,11 @@ msgstr "Икона Прикажи радну површ"
 
 #: ../src/Grids/WingpanelslimGrid.vala:43
 msgid "Slim Wingpanel Position:"
-msgstr ""
+msgstr "Позиција Вингпанел Слима"
 
 #: ../src/Grids/WingpanelslimGrid.vala:45
 msgid "Middle"
-msgstr ""
+msgstr "Средина"
 
 #: ../src/Grids/WingpanelslimGrid.vala:80
 #: ../src/Grids/WingpanelslimGrid.vala:88
@@ -359,7 +359,7 @@ msgstr "Слова за наслов прозора:"
 
 #: ../src/Grids/TerminalGrid.vala:180
 msgid "Custom"
-msgstr ""
+msgstr "Произвољно"
 
 #: ../src/Grids/TerminalGrid.vala:199
 msgid "Limit Scrollback Lines:"
@@ -367,8 +367,8 @@ msgstr ""
 
 #: ../src/Grids/TerminalGrid.vala:203
 msgid "Custom Font:"
-msgstr ""
+msgstr "Произвољно слово:"
 
 #: ../src/Grids/TerminalGrid.vala:207
 msgid "Opacity:"
-msgstr ""
+msgstr "Непрозирност:"
