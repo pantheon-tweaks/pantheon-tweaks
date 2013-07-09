@@ -1,4 +1,4 @@
-# Catalan translation for elementary-community
+# Chinese (Simplified) translation for elementary-community
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the elementary-community package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-02 23:54+0100\n"
-"PO-Revision-Date: 2013-07-08 21:35+0000\n"
-"Last-Translator: Alfredo Hernández <Unknown>\n"
-"Language-Team: Catalan <ca@li.org>\n"
+"PO-Revision-Date: 2013-07-08 06:32+0000\n"
+"Last-Translator: Wang Dianjin <Unknown>\n"
+"Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,31 +19,31 @@ msgstr ""
 
 #: ../src/Tweaks.vala:54
 msgid "General"
-msgstr "General"
+msgstr "常规"
 
 #: ../src/Tweaks.vala:55
 msgid "Applications"
-msgstr "Aplicacions"
+msgstr "应用程序"
 
 #: ../src/Tweaks.vala:60
 msgid "Appearance"
-msgstr "Aparença"
+msgstr "外观"
 
 #: ../src/Tweaks.vala:63
 msgid "Fonts"
-msgstr "Tipus de lletra"
+msgstr "字体"
 
 #: ../src/Tweaks.vala:66
 msgid "Animations"
-msgstr "Animacions"
+msgstr "动画"
 
 #: ../src/Tweaks.vala:69
 msgid "Shadows"
-msgstr "Ombres"
+msgstr "阴影"
 
 #: ../src/Tweaks.vala:72
 msgid "Miscellaneous"
-msgstr "Miscel·lània"
+msgstr "杂项"
 
 #: ../src/Tweaks.vala:75
 msgid "Plank"
@@ -51,11 +51,11 @@ msgstr "Plank"
 
 #: ../src/Tweaks.vala:78
 msgid "Files"
-msgstr "Fitxers"
+msgstr "文件"
 
 #: ../src/Tweaks.vala:82
 msgid "Search Indicator"
-msgstr "Indicador de cerca"
+msgstr "搜索指示器"
 
 #: ../src/Tweaks.vala:85
 msgid "Slingshot"
@@ -63,15 +63,15 @@ msgstr "Slingshot"
 
 #: ../src/Tweaks.vala:88
 msgid "Terminal"
-msgstr "Terminal"
+msgstr "终端"
 
 #: ../src/Tweaks.vala:92
 msgid "Wingpanel Slim"
-msgstr ""
+msgstr "Wingpanel Slim"
 
 #: ../src/Grids/FilesGrid.vala:38
 msgid "Locale"
-msgstr "Configuració local"
+msgstr "区域"
 
 #: ../src/Grids/FilesGrid.vala:39
 msgid "ISO"
@@ -79,243 +79,243 @@ msgstr "ISO"
 
 #: ../src/Grids/FilesGrid.vala:40
 msgid "Informal"
-msgstr "Informal"
+msgstr "非正式"
 
 #: ../src/Grids/FilesGrid.vala:61
 #: ../src/Grids/SlingshotGrid.vala:29
 msgid "Smallest"
-msgstr "El més petit"
+msgstr "最小"
 
 #: ../src/Grids/FilesGrid.vala:62
 #: ../src/Grids/SlingshotGrid.vala:30
 msgid "Smaller"
-msgstr "Més petit"
+msgstr "较小"
 
 #: ../src/Grids/FilesGrid.vala:63
 #: ../src/Grids/SlingshotGrid.vala:31
 msgid "Small"
-msgstr "Petit"
+msgstr "小"
 
 #: ../src/Grids/FilesGrid.vala:64
 #: ../src/Grids/SlingshotGrid.vala:32
 msgid "Normal"
-msgstr "Normal"
+msgstr "一般"
 
 #: ../src/Grids/FilesGrid.vala:65
 #: ../src/Grids/SlingshotGrid.vala:33
 msgid "Large"
-msgstr "Gran"
+msgstr "大"
 
 #: ../src/Grids/FilesGrid.vala:66
 #: ../src/Grids/SlingshotGrid.vala:34
 msgid "Larger"
-msgstr "Més gran"
+msgstr "更大"
 
 #: ../src/Grids/FilesGrid.vala:67
 #: ../src/Grids/SlingshotGrid.vala:35
 msgid "Largest"
-msgstr "El més gran"
+msgstr "最大"
 
 #: ../src/Grids/FilesGrid.vala:85
 msgid "Single Click:"
-msgstr "Un sol clic:"
+msgstr "单击："
 
 #: ../src/Grids/FilesGrid.vala:88
 msgid "Date Format:"
-msgstr "Format de la data:"
+msgstr "日期格式："
 
 #: ../src/Grids/FilesGrid.vala:91
 msgid "Sidebar Icon Size:"
-msgstr "Mida de les icones de la barra lateral:"
+msgstr "侧边栏图标大小："
 
 #: ../src/Grids/ShadowsGrid.vala:27
 msgid "Focused Windows:"
-msgstr "Finestres actives:"
+msgstr "焦点窗口："
 
 #: ../src/Grids/ShadowsGrid.vala:28
 msgid "Unfocused Windows:"
-msgstr "Finestres inactives:"
+msgstr "非焦点窗口："
 
 #: ../src/Grids/ShadowsGrid.vala:29
 msgid "Focused Dialogs:"
-msgstr "Quadres de diàleg actius:"
+msgstr "焦点对话框："
 
 #: ../src/Grids/ShadowsGrid.vala:30
 msgid "Unfocused Dialogs:"
-msgstr "Quadres de diàleg inactius:"
+msgstr "非焦点对话框："
 
 #: ../src/Grids/ShadowsGrid.vala:31
 msgid "Menu:"
-msgstr "Menú:"
+msgstr "菜单："
 
 #: ../src/Grids/ShadowsGrid.vala:194
 msgid "Shadows:"
-msgstr "Ombres:"
+msgstr "阴影："
 
 #: ../src/Grids/SynapseGrid.vala:50
 msgid "Search Indicator Shortcut:"
-msgstr "Drecera de l'indicador de cerca:"
+msgstr "搜索指示器快捷键："
 
 #: ../src/Grids/MiscGrid.vala:40
 msgid "Audible Bell:"
-msgstr "Sons del teclat:"
+msgstr "响铃："
 
 #: ../src/Grids/MiscGrid.vala:43
 msgid "Overlay Scrollbars:"
-msgstr "Barres de desplaçament superposades:"
+msgstr "覆盖式滚动条："
 
 #: ../src/Grids/DockGrid.vala:49
 msgid "Top"
-msgstr "Dalt"
+msgstr "顶部"
 
 #: ../src/Grids/DockGrid.vala:50
 msgid "Bottom"
-msgstr "Baix"
+msgstr "底部"
 
 #: ../src/Grids/DockGrid.vala:51
 #: ../src/Grids/WingpanelslimGrid.vala:46
 msgid "Left"
-msgstr "Esquerra"
+msgstr "左侧"
 
 #: ../src/Grids/DockGrid.vala:52
 #: ../src/Grids/WingpanelslimGrid.vala:44
 msgid "Right"
-msgstr "Dreta"
+msgstr "右侧"
 
 #: ../src/Grids/DockGrid.vala:53
 msgid "Center"
-msgstr "Centre"
+msgstr "中部"
 
 #: ../src/Grids/DockGrid.vala:54
 msgid "Panel"
-msgstr "Tauler"
+msgstr "面板"
 
 #: ../src/Grids/DockGrid.vala:135
 msgid "Item Alignment:"
-msgstr "Alineació dels elements:"
+msgstr "条目对齐："
 
 #: ../src/Grids/DockGrid.vala:173
 msgid "Unknown Value"
-msgstr "Valor desconegut"
+msgstr "未知值"
 
 #: ../src/Grids/DockGrid.vala:195
 msgid "Don't hide"
-msgstr "No l'amagis"
+msgstr "不隐藏"
 
 #: ../src/Grids/DockGrid.vala:196
 msgid "Intelligent hide"
-msgstr "Ocultació intel·ligent"
+msgstr "智能隐藏"
 
 #: ../src/Grids/DockGrid.vala:197
 msgid "Auto hide"
-msgstr "Ocultació automàtica"
+msgstr "自动隐藏"
 
 #: ../src/Grids/DockGrid.vala:198
 msgid "Hide on maximize"
-msgstr "Oculta en maximitzar"
+msgstr "最大化时隐藏"
 
 #: ../src/Grids/DockGrid.vala:274
 msgid "Primary Monitor"
-msgstr "Monitor principal"
+msgstr "主显示屏"
 
 #: ../src/Grids/DockGrid.vala:277
 #, c-format
 msgid "Monitor %d"
-msgstr "Monitor %d"
+msgstr "显示器 %d"
 
 #: ../src/Grids/DockGrid.vala:297
 msgid "Icon Size:"
-msgstr "Mida de les icones:"
+msgstr "图标大小："
 
 #: ../src/Grids/DockGrid.vala:301
 msgid "Hide Mode:"
-msgstr "Mode d'ocultació:"
+msgstr "隐藏模式："
 
 #: ../src/Grids/DockGrid.vala:306
 #: ../src/Grids/TerminalGrid.vala:210
 msgid "Theme:"
-msgstr "Tema:"
+msgstr "主题："
 
 #: ../src/Grids/DockGrid.vala:312
 msgid "Monitor:"
-msgstr "Monitor:"
+msgstr "显示器："
 
 #: ../src/Grids/DockGrid.vala:316
 msgid "Position:"
-msgstr "Posició:"
+msgstr "位置："
 
 #: ../src/Grids/DockGrid.vala:319
 msgid "Alignment:"
-msgstr "Alineació:"
+msgstr "对齐："
 
 #: ../src/Grids/DockGrid.vala:325
 msgid "Workspace Overview Icon:"
-msgstr "Icona de vista d'àrees de treball:"
+msgstr "工作区概览图标："
 
 #: ../src/Grids/DockGrid.vala:328
 msgid "Show Desktop Icon:"
-msgstr "Icona de «Mostra l'escriptori»:"
+msgstr "显示桌面图标："
 
 #: ../src/Grids/WingpanelslimGrid.vala:43
 msgid "Slim Wingpanel Position:"
-msgstr ""
+msgstr "Slim Wingpanel 位置："
 
 #: ../src/Grids/WingpanelslimGrid.vala:45
 msgid "Middle"
-msgstr "Central"
+msgstr "中间"
 
 #: ../src/Grids/WingpanelslimGrid.vala:80
 #: ../src/Grids/WingpanelslimGrid.vala:88
 msgid "Slim Wingpanel:"
-msgstr "Wingpanel prim:"
+msgstr "Slim Wingpanel："
 
 #: ../src/Grids/WingpanelslimGrid.vala:89
 msgid "Wingpanel Slim not found. Settings have been reset!"
-msgstr "No s'ha trobat el Wingpanel prim. Els paràmetres s'han restablert."
+msgstr "未找到 Wingpanel Slim。设置已经被重置！"
 
 #: ../src/Grids/AnimationsGrid.vala:27
 msgid "Open Duration:"
-msgstr "Durada de l'obertura:"
+msgstr "打开时长："
 
 #: ../src/Grids/AnimationsGrid.vala:28
 msgid "Close Duration:"
-msgstr "Durada del tancament:"
+msgstr "关闭时长："
 
 #: ../src/Grids/AnimationsGrid.vala:29
 msgid "Snap Duration:"
-msgstr "Durada de l'ajust:"
+msgstr "Snap 时长："
 
 #: ../src/Grids/AnimationsGrid.vala:30
 msgid "Minimize Duration:"
-msgstr "Durada de la minimització:"
+msgstr "最小化时长："
 
 #: ../src/Grids/AnimationsGrid.vala:31
 msgid "Workspace Switch Duration:"
-msgstr "Durada del canvi d'àrees de treball:"
+msgstr "工作区切换时长："
 
 #: ../src/Grids/AnimationsGrid.vala:148
 msgid "Animations:"
-msgstr "Animacions:"
+msgstr "动画："
 
 #: ../src/Grids/SlingshotGrid.vala:93
 msgid "Rows:"
-msgstr "Files:"
+msgstr "行："
 
 #: ../src/Grids/SlingshotGrid.vala:96
 msgid "Columns:"
-msgstr "Columnes:"
+msgstr "列："
 
 #: ../src/Grids/AppearanceGrid.vala:169
 msgid "Minimize Left"
-msgstr "Minimitza a l'esquerra"
+msgstr "左侧最小化"
 
 #: ../src/Grids/AppearanceGrid.vala:170
 msgid "Minimize Right"
-msgstr "Minimitza a la dreta"
+msgstr "右侧最小化"
 
 #: ../src/Grids/AppearanceGrid.vala:171
 msgid "Windows"
-msgstr "Windows"
+msgstr "窗口"
 
 #: ../src/Grids/AppearanceGrid.vala:172
 msgid "OS X"
@@ -323,52 +323,52 @@ msgstr "OS X"
 
 #: ../src/Grids/AppearanceGrid.vala:192
 msgid "Window Decoration Theme:"
-msgstr "Tema de decoració de finestres:"
+msgstr "窗口装饰主题："
 
 #: ../src/Grids/AppearanceGrid.vala:195
 msgid "Interface Theme:"
-msgstr "Tema de la interfície:"
+msgstr "界面主题："
 
 #: ../src/Grids/AppearanceGrid.vala:198
 msgid "Icon Theme:"
-msgstr "Tema d'icones:"
+msgstr "图标主题："
 
 #: ../src/Grids/AppearanceGrid.vala:201
 msgid "Cursor Theme:"
-msgstr "Tema del cursor:"
+msgstr "光标主题："
 
 #: ../src/Grids/AppearanceGrid.vala:204
 msgid "Button Layout:"
-msgstr "Disposició dels botons:"
+msgstr "按钮布局："
 
 #: ../src/Grids/FontsGrid.vala:98
 msgid "Default Font:"
-msgstr "Tipus de lletra predeterminada:"
+msgstr "默认字体："
 
 #: ../src/Grids/FontsGrid.vala:101
 msgid "Document Font:"
-msgstr "Tipus de lletra de document:"
+msgstr "文档字体："
 
 #: ../src/Grids/FontsGrid.vala:104
 msgid "Monospace Font:"
-msgstr "Tipus de lletra monoespai:"
+msgstr "等宽字体："
 
 #: ../src/Grids/FontsGrid.vala:107
 msgid "Window Title Font:"
-msgstr "Tipus de lletra del títol de finestra:"
+msgstr "窗口标题字体："
 
 #: ../src/Grids/TerminalGrid.vala:180
 msgid "Custom"
-msgstr "Personalitzat"
+msgstr "自定义"
 
 #: ../src/Grids/TerminalGrid.vala:199
 msgid "Limit Scrollback Lines:"
-msgstr ""
+msgstr "限制回滚行数："
 
 #: ../src/Grids/TerminalGrid.vala:203
 msgid "Custom Font:"
-msgstr "Tipus de lletra personalitzat:"
+msgstr "自定义字体："
 
 #: ../src/Grids/TerminalGrid.vala:207
 msgid "Opacity:"
-msgstr "Opacitat:"
+msgstr "透明度："
