@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-02 23:54+0100\n"
-"PO-Revision-Date: 2013-07-03 22:46+0000\n"
+"PO-Revision-Date: 2013-07-11 23:49+0000\n"
 "Last-Translator: MinSik CHO <Unknown>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-04 06:10+0000\n"
-"X-Generator: Launchpad (build 16692)\n"
+"X-Launchpad-Export-Date: 2013-07-12 06:58+0000\n"
+"X-Generator: Launchpad (build 16696)\n"
 
 #: ../src/Tweaks.vala:54
 msgid "General"
@@ -184,102 +184,102 @@ msgstr "오른쪽"
 
 #: ../src/Grids/DockGrid.vala:53
 msgid "Center"
-msgstr ""
+msgstr "가운데"
 
 #: ../src/Grids/DockGrid.vala:54
 msgid "Panel"
-msgstr ""
+msgstr "패널"
 
 #: ../src/Grids/DockGrid.vala:135
 msgid "Item Alignment:"
-msgstr ""
+msgstr "항목 정렬:"
 
 #: ../src/Grids/DockGrid.vala:173
 msgid "Unknown Value"
-msgstr ""
+msgstr "알 수 없는 값"
 
 #: ../src/Grids/DockGrid.vala:195
 msgid "Don't hide"
-msgstr ""
+msgstr "숨기지 않기"
 
 #: ../src/Grids/DockGrid.vala:196
 msgid "Intelligent hide"
-msgstr ""
+msgstr "지능적으로 숨기기"
 
 #: ../src/Grids/DockGrid.vala:197
 msgid "Auto hide"
-msgstr ""
+msgstr "자동으로 숨기기"
 
 #: ../src/Grids/DockGrid.vala:198
 msgid "Hide on maximize"
-msgstr ""
+msgstr "최대화 때 숨기기"
 
 #: ../src/Grids/DockGrid.vala:274
 msgid "Primary Monitor"
-msgstr ""
+msgstr "주 모니터"
 
 #: ../src/Grids/DockGrid.vala:277
 #, c-format
 msgid "Monitor %d"
-msgstr ""
+msgstr "모니터 %d"
 
 #: ../src/Grids/DockGrid.vala:297
 msgid "Icon Size:"
-msgstr ""
+msgstr "아이콘 크기:"
 
 #: ../src/Grids/DockGrid.vala:301
 msgid "Hide Mode:"
-msgstr ""
+msgstr "숨기기 모드:"
 
 #: ../src/Grids/DockGrid.vala:306
 #: ../src/Grids/TerminalGrid.vala:210
 msgid "Theme:"
-msgstr ""
+msgstr "테마:"
 
 #: ../src/Grids/DockGrid.vala:312
 msgid "Monitor:"
-msgstr ""
+msgstr "모니터:"
 
 #: ../src/Grids/DockGrid.vala:316
 msgid "Position:"
-msgstr ""
+msgstr "위치:"
 
 #: ../src/Grids/DockGrid.vala:319
 msgid "Alignment:"
-msgstr ""
+msgstr "정렬:"
 
 #: ../src/Grids/DockGrid.vala:325
 msgid "Workspace Overview Icon:"
-msgstr ""
+msgstr "작업공간 보기 아이콘:"
 
 #: ../src/Grids/DockGrid.vala:328
 msgid "Show Desktop Icon:"
-msgstr ""
+msgstr "바탕화면 보기 아이콘:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:43
 msgid "Slim Wingpanel Position:"
-msgstr ""
+msgstr "Wingpanel 위치:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:45
 msgid "Middle"
-msgstr ""
+msgstr "중간"
 
 #: ../src/Grids/WingpanelslimGrid.vala:80
 #: ../src/Grids/WingpanelslimGrid.vala:88
 msgid "Slim Wingpanel:"
-msgstr ""
+msgstr "Wingpanel:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:89
 msgid "Wingpanel Slim not found. Settings have been reset!"
-msgstr ""
+msgstr "Wingpanel을 찾을 수 없습니다. 설정이 초기화되었습니다!"
 
 #: ../src/Grids/AnimationsGrid.vala:27
 msgid "Open Duration:"
-msgstr ""
+msgstr "열 시간:"
 
 #: ../src/Grids/AnimationsGrid.vala:28
 msgid "Close Duration:"
-msgstr ""
+msgstr "닫을 시간:"
 
 #: ../src/Grids/AnimationsGrid.vala:29
 msgid "Snap Duration:"
@@ -287,23 +287,23 @@ msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:30
 msgid "Minimize Duration:"
-msgstr ""
+msgstr "최소화 시간:"
 
 #: ../src/Grids/AnimationsGrid.vala:31
 msgid "Workspace Switch Duration:"
-msgstr ""
+msgstr "작업 공간 전환 시간:"
 
 #: ../src/Grids/AnimationsGrid.vala:148
 msgid "Animations:"
-msgstr ""
+msgstr "애니메이션:"
 
 #: ../src/Grids/SlingshotGrid.vala:93
 msgid "Rows:"
-msgstr ""
+msgstr "열:"
 
 #: ../src/Grids/SlingshotGrid.vala:96
 msgid "Columns:"
-msgstr ""
+msgstr "행:"
 
 #: ../src/Grids/AppearanceGrid.vala:169
 msgid "Minimize Left"
@@ -339,36 +339,36 @@ msgstr "커서 테마:"
 
 #: ../src/Grids/AppearanceGrid.vala:204
 msgid "Button Layout:"
-msgstr ""
+msgstr "버튼 레이아웃:"
 
 #: ../src/Grids/FontsGrid.vala:98
 msgid "Default Font:"
-msgstr ""
+msgstr "기본 글꼴:"
 
 #: ../src/Grids/FontsGrid.vala:101
 msgid "Document Font:"
-msgstr ""
+msgstr "문서 글꼴:"
 
 #: ../src/Grids/FontsGrid.vala:104
 msgid "Monospace Font:"
-msgstr ""
+msgstr "모노스페이스 글꼴:"
 
 #: ../src/Grids/FontsGrid.vala:107
 msgid "Window Title Font:"
-msgstr ""
+msgstr "창 제목 글꼴:"
 
 #: ../src/Grids/TerminalGrid.vala:180
 msgid "Custom"
-msgstr ""
+msgstr "사용자 지정"
 
 #: ../src/Grids/TerminalGrid.vala:199
 msgid "Limit Scrollback Lines:"
-msgstr ""
+msgstr "스크롤백 줄수 제한:"
 
 #: ../src/Grids/TerminalGrid.vala:203
 msgid "Custom Font:"
-msgstr ""
+msgstr "사용자 지정 글꼴:"
 
 #: ../src/Grids/TerminalGrid.vala:207
 msgid "Opacity:"
-msgstr ""
+msgstr "불투명도:"
