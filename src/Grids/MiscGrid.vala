@@ -40,6 +40,7 @@ public class MiscGrid : Gtk.Grid
         var scroll = new Gtk.Switch ();
         scroll.set_active(scroll_exists ());
         scroll.notify["active"].connect (() => {
+            string current_mapping = "";
             var command = new Granite.Services.SimpleCommand("/usr/bin","xinput list --short");
             string[] output = { };
             command.run ();
@@ -53,14 +54,14 @@ public class MiscGrid : Gtk.Grid
                         var command_map = new Granite.Services.SimpleCommand("/usr/bin","xinput get-button-map " + pointer_id.to_string());
                         command_map.run ();
                         command_map.done.connect (() => { 
-                            string current_mapping = command_map.output_str.replace("\n","");
+                            current_mapping = command_map.output_str.replace("\n","");
                             if (current_mapping.contains("4 5 6 7"))
                                 current_mapping = current_mapping.replace("4 5 6 7","5 4 7 6");
                             else
                                 current_mapping = current_mapping.replace("5 4 7 6","4 5 6 7");
                             var command_change = new Granite.Services.SimpleCommand("/usr/bin","xinput set-button-map " + pointer_id.to_string() + " " + current_mapping);
                             command_change.run ();
-                            command_change.done.connect (() => scroll_switch (current_mapping));
+                            command_change.done.connect (() => scroll_switch (current_mapping, scroll.get_active()));
                         });
                     }
                 }
@@ -80,15 +81,18 @@ public class MiscGrid : Gtk.Grid
     }
 }
 
-public void scroll_switch (string mapping) {
+public void scroll_switch (string mapping, bool active) {
     try {
         var file = File.new_for_path ("/home/" + Environment.get_user_name () + "/.Xmodmap");
-        if (!file.query_exists ()) {
+        if (active) {
+            if (file.query_exists ())
+                file.delete ();
             var file_stream = file.create (FileCreateFlags.NONE);
             var data_stream = new DataOutputStream (file_stream);
             data_stream.put_string ("pointer = " + mapping);
         } else {
-            file.delete ();
+            if (file.query_exists ())
+                file.delete ();
         }
     } catch (GLib.FileError e){
                 warning (e.message);
