@@ -1,4 +1,4 @@
-# Estonian translation for elementary-community
+# Finnish translation for elementary-community
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the elementary-community package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-02 23:54+0100\n"
-"PO-Revision-Date: 2013-07-23 18:04+0000\n"
-"Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
-"Language-Team: Estonian <et@li.org>\n"
+"PO-Revision-Date: 2013-07-25 05:24+0000\n"
+"Last-Translator: Jiri Grönroos <Unknown>\n"
+"Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,217 +19,217 @@ msgstr ""
 
 #: ../src/Tweaks.vala:54
 msgid "General"
-msgstr "Üldine:"
+msgstr "Yleiset"
 
 #: ../src/Tweaks.vala:55
 msgid "Applications"
-msgstr "Rakendused:"
+msgstr "Sovellukset"
 
 #: ../src/Tweaks.vala:60
 msgid "Appearance"
-msgstr "Välimus"
+msgstr "Ulkoasu"
 
 #: ../src/Tweaks.vala:63
 msgid "Fonts"
-msgstr "Kirjatüübid"
+msgstr "Kirjasimet"
 
 #: ../src/Tweaks.vala:66
 msgid "Animations"
-msgstr "Animatsioonid"
+msgstr "Animaatiot"
 
 #: ../src/Tweaks.vala:69
 msgid "Shadows"
-msgstr "Varjud"
+msgstr "Varjot"
 
 #: ../src/Tweaks.vala:72
 msgid "Miscellaneous"
-msgstr "Mitmesugust"
+msgstr "Sekalaiset"
 
 #: ../src/Tweaks.vala:75
 msgid "Plank"
-msgstr "Dokk"
+msgstr ""
 
 #: ../src/Tweaks.vala:78
 msgid "Files"
-msgstr "Failid"
+msgstr ""
 
 #: ../src/Tweaks.vala:82
 msgid "Search Indicator"
-msgstr "Otsingu indikaator"
+msgstr ""
 
 #: ../src/Tweaks.vala:85
 msgid "Slingshot"
-msgstr "Rakenduste menüü"
+msgstr ""
 
 #: ../src/Tweaks.vala:88
 msgid "Terminal"
-msgstr "Terminal"
+msgstr "Pääte"
 
 #: ../src/Tweaks.vala:92
 msgid "Wingpanel Slim"
-msgstr "Kompaktne Wingpanel"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:38
 msgid "Locale"
-msgstr "Kohalik"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:39
 msgid "ISO"
-msgstr "Ülemaailmne"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:40
 msgid "Informal"
-msgstr "Ametlik"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:61
 #: ../src/Grids/SlingshotGrid.vala:29
 msgid "Smallest"
-msgstr "Väikseim"
+msgstr "Pienin"
 
 #: ../src/Grids/FilesGrid.vala:62
 #: ../src/Grids/SlingshotGrid.vala:30
 msgid "Smaller"
-msgstr "Väiksem"
+msgstr "Pienempi"
 
 #: ../src/Grids/FilesGrid.vala:63
 #: ../src/Grids/SlingshotGrid.vala:31
 msgid "Small"
-msgstr "Väike"
+msgstr "Pieni"
 
 #: ../src/Grids/FilesGrid.vala:64
 #: ../src/Grids/SlingshotGrid.vala:32
 msgid "Normal"
-msgstr "Tavaline"
+msgstr "Normaali"
 
 #: ../src/Grids/FilesGrid.vala:65
 #: ../src/Grids/SlingshotGrid.vala:33
 msgid "Large"
-msgstr "Suur"
+msgstr "Suuri"
 
 #: ../src/Grids/FilesGrid.vala:66
 #: ../src/Grids/SlingshotGrid.vala:34
 msgid "Larger"
-msgstr "Suurem"
+msgstr "Suurempi"
 
 #: ../src/Grids/FilesGrid.vala:67
 #: ../src/Grids/SlingshotGrid.vala:35
 msgid "Largest"
-msgstr "Suurim"
+msgstr "Suurin"
 
 #: ../src/Grids/FilesGrid.vala:85
 msgid "Single Click:"
-msgstr "Ühe klõpsuga avamine:"
+msgstr "Kertanapsautus:"
 
 #: ../src/Grids/FilesGrid.vala:88
 msgid "Date Format:"
-msgstr "Kuupäeva formaat:"
+msgstr "Päiväyksen muoto:"
 
 #: ../src/Grids/FilesGrid.vala:91
 msgid "Sidebar Icon Size:"
-msgstr "Külgpaneeli ikooni suurus:"
+msgstr "Sivupalkin kuvakekoko:"
 
 #: ../src/Grids/ShadowsGrid.vala:27
 msgid "Focused Windows:"
-msgstr "Aktiivsed aknad:"
+msgstr "Kohdistetut ikkunat:"
 
 #: ../src/Grids/ShadowsGrid.vala:28
 msgid "Unfocused Windows:"
-msgstr "Tagaplaani aknad:"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:29
 msgid "Focused Dialogs:"
-msgstr "Aktiivsed Dialoogid:"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:30
 msgid "Unfocused Dialogs:"
-msgstr "Tagaplaani dialoogid:"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:31
 msgid "Menu:"
-msgstr "Menüüd:"
+msgstr "Valikko:"
 
 #: ../src/Grids/ShadowsGrid.vala:194
 msgid "Shadows:"
-msgstr "Akende varjud:"
+msgstr "Varjot:"
 
 #: ../src/Grids/SynapseGrid.vala:50
 msgid "Search Indicator Shortcut:"
-msgstr "Otsingu indikaatori otsetee:"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:40
 msgid "Audible Bell:"
-msgstr "Helid:"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:43
 msgid "Overlay Scrollbars:"
-msgstr "Kompaktsed kerimisribad:"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:49
 msgid "Top"
-msgstr "Üleval"
+msgstr "Ylhäällä"
 
 #: ../src/Grids/DockGrid.vala:50
 msgid "Bottom"
-msgstr "All"
+msgstr "Alhaalla"
 
 #: ../src/Grids/DockGrid.vala:51
 #: ../src/Grids/WingpanelslimGrid.vala:46
 msgid "Left"
-msgstr "Vasakul"
+msgstr "Vasemmalla"
 
 #: ../src/Grids/DockGrid.vala:52
 #: ../src/Grids/WingpanelslimGrid.vala:44
 msgid "Right"
-msgstr "Paremal"
+msgstr "Oikealla"
 
 #: ../src/Grids/DockGrid.vala:53
 msgid "Center"
-msgstr "Keskel"
+msgstr "Keskellä"
 
 #: ../src/Grids/DockGrid.vala:54
 msgid "Panel"
-msgstr "Paneel"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:135
 msgid "Item Alignment:"
-msgstr "Ikoonide joondus:"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:173
 msgid "Unknown Value"
-msgstr "Tundmatu väärtus"
+msgstr "Tuntematon arvo"
 
 #: ../src/Grids/DockGrid.vala:195
 msgid "Don't hide"
-msgstr "Mitte kunagi"
+msgstr "Älä piilota"
 
 #: ../src/Grids/DockGrid.vala:196
 msgid "Intelligent hide"
-msgstr "Akna ettejäämisel"
+msgstr "Älykäs piilotus"
 
 #: ../src/Grids/DockGrid.vala:197
 msgid "Auto hide"
-msgstr "Automaatselt"
+msgstr "Piilota automaattisesti"
 
 #: ../src/Grids/DockGrid.vala:198
 msgid "Hide on maximize"
-msgstr "Akna maksimeerimisel"
+msgstr "Piilota suurennettaessa"
 
 #: ../src/Grids/DockGrid.vala:274
 msgid "Primary Monitor"
-msgstr "Primaarne monitor"
+msgstr "Ensisijainen näyttö"
 
 #: ../src/Grids/DockGrid.vala:277
 #, c-format
 msgid "Monitor %d"
-msgstr "Kuvar %d"
+msgstr "Näyttö %d"
 
 #: ../src/Grids/DockGrid.vala:297
 msgid "Icon Size:"
-msgstr "Ikoonide suurus:"
+msgstr "Kuvakekoko:"
 
 #: ../src/Grids/DockGrid.vala:301
 msgid "Hide Mode:"
-msgstr "Dokk peidetakse:"
+msgstr "Piilotustila:"
 
 #: ../src/Grids/DockGrid.vala:306
 #: ../src/Grids/TerminalGrid.vala:210
@@ -238,137 +238,137 @@ msgstr "Teema:"
 
 #: ../src/Grids/DockGrid.vala:312
 msgid "Monitor:"
-msgstr "Monitor:"
+msgstr "Näyttö:"
 
 #: ../src/Grids/DockGrid.vala:316
 msgid "Position:"
-msgstr "Asukoht:"
+msgstr "Sijainti:"
 
 #: ../src/Grids/DockGrid.vala:319
 msgid "Alignment:"
-msgstr "Joondus:"
+msgstr "Tasaus:"
 
 #: ../src/Grids/DockGrid.vala:325
 msgid "Workspace Overview Icon:"
-msgstr "Tööalade ülevaate ikooni:"
+msgstr "Työpöydän yleisnäkymä -kuvake:"
 
 #: ../src/Grids/DockGrid.vala:328
 msgid "Show Desktop Icon:"
-msgstr "Töölaua näitamise ikooni:"
+msgstr "Näytä työpöytä -kuvake:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:43
 msgid "Slim Wingpanel Position:"
-msgstr "Kompaktse Wingpanel'i asukoht:"
+msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:45
 msgid "Middle"
-msgstr "Keskel"
+msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:80
 #: ../src/Grids/WingpanelslimGrid.vala:88
 msgid "Slim Wingpanel:"
-msgstr "Kompaktne Wingpanel"
+msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:89
 msgid "Wingpanel Slim not found. Settings have been reset!"
-msgstr "Kompaktse Wingpanel'i laiendit ei leitud. Eelistused algtaastati."
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:27
 msgid "Open Duration:"
-msgstr "Avamise kestvus:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:28
 msgid "Close Duration:"
-msgstr "Sulgemise kestvus:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:29
 msgid "Snap Duration:"
-msgstr "Suurendamise / Vähendamise kestvus:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:30
 msgid "Minimize Duration:"
-msgstr "Minimeerimise kestvus:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:31
 msgid "Workspace Switch Duration:"
-msgstr "Tööalade vahetamise kestvus:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:148
 msgid "Animations:"
-msgstr "Akende animatsioonid:"
+msgstr "Animaatiot:"
 
 #: ../src/Grids/SlingshotGrid.vala:93
 msgid "Rows:"
-msgstr "Ridu:"
+msgstr ""
 
 #: ../src/Grids/SlingshotGrid.vala:96
 msgid "Columns:"
-msgstr "Veerge:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:169
 msgid "Minimize Left"
-msgstr "Minimeerimine vasakul"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:170
 msgid "Minimize Right"
-msgstr "Minimeerimine paremal"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:171
 msgid "Windows"
-msgstr "Windows"
+msgstr "Ikkunat"
 
 #: ../src/Grids/AppearanceGrid.vala:172
 msgid "OS X"
-msgstr "Mac OS X"
+msgstr "OS X"
 
 #: ../src/Grids/AppearanceGrid.vala:192
 msgid "Window Decoration Theme:"
-msgstr "Akna dekoratsioonid:"
+msgstr "Ikkunareunuksen teema:"
 
 #: ../src/Grids/AppearanceGrid.vala:195
 msgid "Interface Theme:"
-msgstr "Kasutajaliidesed:"
+msgstr "Käyttöliittymän teema:"
 
 #: ../src/Grids/AppearanceGrid.vala:198
 msgid "Icon Theme:"
-msgstr "Ikoonid:"
+msgstr "Kuvaketeema:"
 
 #: ../src/Grids/AppearanceGrid.vala:201
 msgid "Cursor Theme:"
-msgstr "Kursor:"
+msgstr "Osoittimen teema:"
 
 #: ../src/Grids/AppearanceGrid.vala:204
 msgid "Button Layout:"
-msgstr "Akna nuppude asetus:"
+msgstr "Painikeasettelu:"
 
 #: ../src/Grids/FontsGrid.vala:98
 msgid "Default Font:"
-msgstr "Tavaline:"
+msgstr "Oletuskirjasin:"
 
 #: ../src/Grids/FontsGrid.vala:101
 msgid "Document Font:"
-msgstr "Dokumendid:"
+msgstr "Asiakirjan kirjasin:"
 
 #: ../src/Grids/FontsGrid.vala:104
 msgid "Monospace Font:"
-msgstr "Monospace:"
+msgstr "Tasavälinen kirjasin:"
 
 #: ../src/Grids/FontsGrid.vala:107
 msgid "Window Title Font:"
-msgstr "Akna pealkirjad:"
+msgstr "Ikkunan otsikon kirjasin:"
 
 #: ../src/Grids/TerminalGrid.vala:180
 msgid "Custom"
-msgstr "Kohandatud"
+msgstr "Omavalintainen"
 
 #: ../src/Grids/TerminalGrid.vala:199
 msgid "Limit Scrollback Lines:"
-msgstr "Piira tagasikeritavaid ridu:"
+msgstr ""
 
 #: ../src/Grids/TerminalGrid.vala:203
 msgid "Custom Font:"
-msgstr "Kohandatud kirjatüüp:"
+msgstr "Omavalintainen kirjasin:"
 
 #: ../src/Grids/TerminalGrid.vala:207
 msgid "Opacity:"
-msgstr "Läbipaistvus:"
+msgstr "Läpinäkyvyys:"
