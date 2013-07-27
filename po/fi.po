@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-02 23:54+0100\n"
-"PO-Revision-Date: 2013-07-25 05:24+0000\n"
+"PO-Revision-Date: 2013-07-26 06:43+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-26 06:14+0000\n"
+"X-Launchpad-Export-Date: 2013-07-27 05:44+0000\n"
 "X-Generator: Launchpad (build 16700)\n"
 
 #: ../src/Tweaks.vala:54
@@ -275,11 +275,11 @@ msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:27
 msgid "Open Duration:"
-msgstr ""
+msgstr "Avaamisen kesto:"
 
 #: ../src/Grids/AnimationsGrid.vala:28
 msgid "Close Duration:"
-msgstr ""
+msgstr "Sulkemisen kesto:"
 
 #: ../src/Grids/AnimationsGrid.vala:29
 msgid "Snap Duration:"
@@ -287,11 +287,11 @@ msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:30
 msgid "Minimize Duration:"
-msgstr ""
+msgstr "Pienennyksen kesto:"
 
 #: ../src/Grids/AnimationsGrid.vala:31
 msgid "Workspace Switch Duration:"
-msgstr ""
+msgstr "Työtilan vaihtamisen kesto:"
 
 #: ../src/Grids/AnimationsGrid.vala:148
 msgid "Animations:"
