@@ -69,15 +69,103 @@ public class MiscGrid : Gtk.Grid
         });
         scroll.halign = Gtk.Align.START;
 
+        /* Double Click Titlebar Action */
+        var dbl_click_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        var dbl_click = new Gtk.ComboBoxText ();
+        dbl_click.append ("toggle-maximize", _("Maximize"));
+        dbl_click.append ("toggle-maximize-horizontally", _("Maximize Horizontally"));
+        dbl_click.append ("toggle-maximize-vertically", _("Maximize Vertically"));
+        dbl_click.append ("minimize", _("Minimize"));
+        dbl_click.append ("toggle-shade", _("Shade"));
+        dbl_click.append ("lower", _("Lower Window"));
 
-        this.attach (new LLabel.right (_("Audible Bell:")), 0, 0, 1, 1);
-        this.attach (audible_bell, 1, 0, 1, 1);
+        dbl_click.active_id = WindowSettings.get_default ().action_double_click_titlebar;
+        dbl_click.changed.connect (() => WindowSettings.get_default ().action_double_click_titlebar = dbl_click.active_id );
+        dbl_click.halign = Gtk.Align.START;
+        dbl_click.width_request = 160;
 
-        this.attach (new LLabel.right (_("Overlay Scrollbars:")), 0, 1, 1, 1);
-        this.attach (overlay_scrollbar, 1, 1, 1, 1);
+        var dbl_click_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
-        this.attach (new LLabel.right (_("Natural Scrolling:")), 0, 2, 1, 1);
-        this.attach (scroll, 1, 2, 1, 1);
+        dbl_click_default.clicked.connect (() => {
+            WindowSettings.get_default ().schema.reset ("action-double-click-titlebar");
+            dbl_click.active_id = WindowSettings.get_default ().action_double_click_titlebar;
+        });
+        dbl_click_default.halign = Gtk.Align.START;
+
+        dbl_click_box.pack_start (dbl_click, false);
+        dbl_click_box.pack_start (dbl_click_default, false);
+
+        /* Middle Click Titlebar Action */
+        var mdl_click_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        var mdl_click = new Gtk.ComboBoxText ();
+        mdl_click.append ("toggle-maximize", _("Maximize"));
+        mdl_click.append ("toggle-maximize-horizontally", _("Maximize Horizontally"));
+        mdl_click.append ("toggle-maximize-vertically", _("Maximize Vertically"));
+        mdl_click.append ("minimize", _("Minimize"));
+        mdl_click.append ("toggle-shade", _("Shade"));
+        mdl_click.append ("lower", _("Lower Window"));
+
+        mdl_click.active_id = WindowSettings.get_default ().action_middle_click_titlebar;
+        mdl_click.changed.connect (() => WindowSettings.get_default ().action_middle_click_titlebar = mdl_click.active_id );
+        mdl_click.halign = Gtk.Align.START;
+        mdl_click.width_request = 160;
+
+        var mdl_click_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
+
+        mdl_click_default.clicked.connect (() => {
+            WindowSettings.get_default ().schema.reset ("action-middle-click-titlebar");
+            mdl_click.active_id = WindowSettings.get_default ().action_middle_click_titlebar;
+        });
+        mdl_click_default.halign = Gtk.Align.START;
+
+        mdl_click_box.pack_start (mdl_click, false);
+        mdl_click_box.pack_start (mdl_click_default, false);
+
+        /* Right Click Titlebar Action */
+        var rgt_click_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        var rgt_click = new Gtk.ComboBoxText ();
+        rgt_click.append ("menu", _("Menu"));
+        rgt_click.append ("toggle-maximize", _("Maximize"));
+        rgt_click.append ("toggle-maximize-horizontally", _("Maximize Horizontally"));
+        rgt_click.append ("toggle-maximize-vertically", _("Maximize Vertically"));
+        rgt_click.append ("minimize", _("Minimize"));
+        rgt_click.append ("toggle-shade", _("Shade"));
+        rgt_click.append ("lower", _("Lower Window"));
+
+        rgt_click.active_id = WindowSettings.get_default ().action_right_click_titlebar;
+        rgt_click.changed.connect (() => WindowSettings.get_default ().action_right_click_titlebar = rgt_click.active_id );
+        rgt_click.halign = Gtk.Align.START;
+        rgt_click.width_request = 160;
+
+        var rgt_click_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
+
+        rgt_click_default.clicked.connect (() => {
+            WindowSettings.get_default ().schema.reset ("action-right-click-titlebar");
+            rgt_click.active_id = WindowSettings.get_default ().action_right_click_titlebar;
+        });
+        rgt_click_default.halign = Gtk.Align.START;
+
+        rgt_click_box.pack_start (rgt_click, false);
+        rgt_click_box.pack_start (rgt_click_default, false);
+
+        this.attach (new LLabel.right (_("Double Click Titlebar Action:")), 0, 0, 1, 1);
+        this.attach (dbl_click_box, 1, 0, 1, 1);
+
+        this.attach (new LLabel.right (_("Middle Click Titlebar Action:")), 0, 1, 1, 1);
+        this.attach (mdl_click_box, 1, 1, 1, 1);
+
+        this.attach (new LLabel.right (_("Right Click Titlebar Action:")), 0, 2, 1, 1);
+        this.attach (rgt_click_box, 1, 2, 1, 1);
+
+        this.attach (new LLabel.right (_("Audible Bell:")), 0, 3, 1, 1);
+        this.attach (audible_bell, 1, 3, 1, 1);
+
+        this.attach (new LLabel.right (_("Overlay Scrollbars:")), 0, 4, 1, 1);
+        this.attach (overlay_scrollbar, 1, 4, 1, 1);
+
+        this.attach (new LLabel.right (_("Natural Scrolling:")), 0, 5, 1, 1);
+        this.attach (scroll, 1, 5, 1, 1);
+
     }
 }
 

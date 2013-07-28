@@ -40,7 +40,7 @@ public class WingpanelslimGrid : Gtk.Grid
             /* Wingpanel Position */
             var slim_pos_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
             var slim_pos = new Gtk.ComboBoxText ();
-            var slim_label = new LLabel.right (_("Slim Wingpanel Position:"));
+            var slim_label = new LLabel.right (_("Position:"));
             slim_pos.append ("Right", _("Right"));
             slim_pos.append ("Middle", _("Middle"));
             slim_pos.append ("Left", _("Left"));

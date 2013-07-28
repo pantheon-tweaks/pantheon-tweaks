@@ -166,6 +166,7 @@ public class AppearanceGrid : Gtk.Grid
         var button_layout_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var button_layout = new Gtk.ComboBoxText ();
         button_layout.append ("close:maximize", ("elementary"));
+        button_layout.append (":close", _("Close Only"));
         button_layout.append ("close,minimize:maximize", _("Minimize Left"));
         button_layout.append ("close:minimize,maximize", _("Minimize Right"));
         button_layout.append (":minimize,maximize,close", _("Windows"));
@@ -203,5 +204,6 @@ public class AppearanceGrid : Gtk.Grid
 
         this.attach (new LLabel.right (_("Button Layout:")), 0, 5, 2, 1);
         this.attach (button_layout_box, 2, 5, 2, 1);
+
     }
 }

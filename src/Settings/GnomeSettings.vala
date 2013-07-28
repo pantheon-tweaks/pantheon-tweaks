@@ -4,6 +4,9 @@ public class WindowSettings : Granite.Services.Settings
 	public string button_layout { get; set; }
 	public string theme { get; set; }
 	public string titlebar_font { get; set; }
+	public string action_double_click_titlebar { get; set; }
+	public string action_middle_click_titlebar { get; set; }
+	public string action_right_click_titlebar { get; set; }
 	
 	static WindowSettings? instance = null;
 	
