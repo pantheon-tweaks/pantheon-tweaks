@@ -165,6 +165,7 @@ public class AppearanceGrid : Gtk.Grid
         /* Button Layout */
         var button_layout_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var button_layout = new Gtk.ComboBoxText ();
+        var custom_layout_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var custom_layout = new Gtk.Entry();
         var custom_text = new LLabel.right (_("Custom Layout:"));
 
@@ -189,19 +190,19 @@ public class AppearanceGrid : Gtk.Grid
         custom_layout.text = AppearanceSettings.get_default ().button_layout;
 
         if ( button_layout.active_id == "custom" ) {
-            custom_layout.set_sensitive(true);
+            custom_layout_box.set_sensitive(true);
             custom_text.set_sensitive(true);
         } else {
-            custom_layout.set_sensitive(false);
+            custom_layout_box.set_sensitive(false);
             custom_text.set_sensitive(false);
         }
 
         button_layout.changed.connect (() => {
             if ( button_layout.active_id == "custom" ) {
-                custom_layout.set_sensitive(true);
+                custom_layout_box.set_sensitive(true);
                 custom_text.set_sensitive(true);
             } else {
-                custom_layout.set_sensitive(false);
+                custom_layout_box.set_sensitive(false);
                 custom_text.set_sensitive(false);
                 AppearanceSettings.get_default ().button_layout = button_layout.active_id;
                 custom_layout.text = AppearanceSettings.get_default ().button_layout;
@@ -210,7 +211,7 @@ public class AppearanceGrid : Gtk.Grid
         button_layout.halign = Gtk.Align.START;
         button_layout.width_request = 160;
 
-        custom_layout.changed.connect (() => AppearanceSettings.get_default ().button_layout = custom_layout.text);
+        custom_layout.activate.connect (() => AppearanceSettings.get_default ().button_layout = custom_layout.text);
         custom_layout.halign = Gtk.Align.START;
         custom_layout.width_request = 160;
 
@@ -225,6 +226,11 @@ public class AppearanceGrid : Gtk.Grid
         button_layout_box.pack_start (button_layout, false);
         button_layout_box.pack_start (button_layout_default, false);
 
+        var custom_layout_apply = new Gtk.ToolButton.from_stock (Gtk.Stock.APPLY);
+        custom_layout_apply.clicked.connect (() => AppearanceSettings.get_default ().button_layout = custom_layout.text);
+
+        custom_layout_box.pack_start (custom_layout, false);
+        custom_layout_box.pack_start (custom_layout_apply, false);
 
 
         /* Add to Grid */
@@ -244,7 +250,7 @@ public class AppearanceGrid : Gtk.Grid
         this.attach (button_layout_box, 2, 5, 2, 1);
 
         this.attach (custom_text, 0, 6, 2, 1);
-        this.attach (custom_layout, 2, 6, 2, 1);
+        this.attach (custom_layout_box, 2, 6, 2, 1);
 
     }
 }
