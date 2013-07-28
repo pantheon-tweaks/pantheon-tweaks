@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-02 23:54+0100\n"
-"PO-Revision-Date: 2013-07-26 06:43+0000\n"
+"PO-Revision-Date: 2013-07-27 06:08+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-27 05:44+0000\n"
+"X-Launchpad-Export-Date: 2013-07-28 06:57+0000\n"
 "X-Generator: Launchpad (build 16700)\n"
 
 #: ../src/Tweaks.vala:54
@@ -47,19 +47,19 @@ msgstr "Sekalaiset"
 
 #: ../src/Tweaks.vala:75
 msgid "Plank"
-msgstr ""
+msgstr "Plank-telakka"
 
 #: ../src/Tweaks.vala:78
 msgid "Files"
-msgstr ""
+msgstr "Files-tiedostonhallinta"
 
 #: ../src/Tweaks.vala:82
 msgid "Search Indicator"
-msgstr ""
+msgstr "Hakuilmaisin"
 
 #: ../src/Tweaks.vala:85
 msgid "Slingshot"
-msgstr ""
+msgstr "Slingshot-valikko"
 
 #: ../src/Tweaks.vala:88
 msgid "Terminal"
@@ -154,7 +154,7 @@ msgstr "Varjot:"
 
 #: ../src/Grids/SynapseGrid.vala:50
 msgid "Search Indicator Shortcut:"
-msgstr ""
+msgstr "Hakuilmaisimen pikanäppäin:"
 
 #: ../src/Grids/MiscGrid.vala:40
 msgid "Audible Bell:"
@@ -363,7 +363,7 @@ msgstr "Omavalintainen"
 
 #: ../src/Grids/TerminalGrid.vala:199
 msgid "Limit Scrollback Lines:"
-msgstr ""
+msgstr "Rajoita takaisinvierityksen rivejä:"
 
 #: ../src/Grids/TerminalGrid.vala:203
 msgid "Custom Font:"
