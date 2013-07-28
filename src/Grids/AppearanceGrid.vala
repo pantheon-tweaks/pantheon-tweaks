@@ -165,17 +165,54 @@ public class AppearanceGrid : Gtk.Grid
         /* Button Layout */
         var button_layout_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var button_layout = new Gtk.ComboBoxText ();
+        var custom_layout = new Gtk.Entry();
+        var custom_text = new LLabel.right (_("Custom Layout:"));
+
         button_layout.append ("close:maximize", ("elementary"));
         button_layout.append (":close", _("Close Only"));
         button_layout.append ("close,minimize:maximize", _("Minimize Left"));
         button_layout.append ("close:minimize,maximize", _("Minimize Right"));
         button_layout.append (":minimize,maximize,close", _("Windows"));
         button_layout.append ("close,minimize,maximize:", _("OS X"));
+        button_layout.append ("custom", _("Custom"));
 
-        button_layout.active_id = AppearanceSettings.get_default ().button_layout;
-        button_layout.changed.connect (() => AppearanceSettings.get_default ().button_layout = button_layout.active_id );
+        if ( AppearanceSettings.get_default ().button_layout == "close:maximize" ||
+             AppearanceSettings.get_default ().button_layout == ":close" ||
+             AppearanceSettings.get_default ().button_layout == "close,minimize:maximize" ||
+             AppearanceSettings.get_default ().button_layout == "close:minimize,maximize" ||
+             AppearanceSettings.get_default ().button_layout == ":minimize,maximize,close" ||
+             AppearanceSettings.get_default ().button_layout == "close,minimize,maximize:")
+                button_layout.active_id = AppearanceSettings.get_default ().button_layout;
+        else
+                button_layout.active_id = "custom";
+
+        custom_layout.text = AppearanceSettings.get_default ().button_layout;
+
+        if ( button_layout.active_id == "custom" ) {
+            custom_layout.set_sensitive(true);
+            custom_text.set_sensitive(true);
+        } else {
+            custom_layout.set_sensitive(false);
+            custom_text.set_sensitive(false);
+        }
+
+        button_layout.changed.connect (() => {
+            if ( button_layout.active_id == "custom" ) {
+                custom_layout.set_sensitive(true);
+                custom_text.set_sensitive(true);
+            } else {
+                custom_layout.set_sensitive(false);
+                custom_text.set_sensitive(false);
+                AppearanceSettings.get_default ().button_layout = button_layout.active_id;
+                custom_layout.text = AppearanceSettings.get_default ().button_layout;
+            }
+        });
         button_layout.halign = Gtk.Align.START;
         button_layout.width_request = 160;
+
+        custom_layout.changed.connect (() => AppearanceSettings.get_default ().button_layout = custom_layout.text);
+        custom_layout.halign = Gtk.Align.START;
+        custom_layout.width_request = 160;
 
         var button_layout_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
@@ -187,6 +224,7 @@ public class AppearanceGrid : Gtk.Grid
 
         button_layout_box.pack_start (button_layout, false);
         button_layout_box.pack_start (button_layout_default, false);
+
 
 
         /* Add to Grid */
@@ -204,6 +242,9 @@ public class AppearanceGrid : Gtk.Grid
 
         this.attach (new LLabel.right (_("Button Layout:")), 0, 5, 2, 1);
         this.attach (button_layout_box, 2, 5, 2, 1);
+
+        this.attach (custom_text, 0, 6, 2, 1);
+        this.attach (custom_layout, 2, 6, 2, 1);
 
     }
 }
