@@ -170,7 +170,7 @@ public class AppearanceGrid : Gtk.Grid
         button_layout.append ("close,minimize:maximize", _("Minimize Left"));
         button_layout.append ("close:minimize,maximize", _("Minimize Right"));
         button_layout.append (":minimize,maximize,close", _("Windows"));
-        button_layout.append ("close,maximize,minimize:", _("OS X"));
+        button_layout.append ("close,minimize,maximize:", _("OS X"));
 
         button_layout.active_id = AppearanceSettings.get_default ().button_layout;
         button_layout.changed.connect (() => AppearanceSettings.get_default ().button_layout = button_layout.active_id );
