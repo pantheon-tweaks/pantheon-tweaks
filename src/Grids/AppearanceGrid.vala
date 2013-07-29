@@ -23,21 +23,20 @@ public class AppearanceGrid : Gtk.Grid
         this.margin_top = 24;
         this.column_homogeneous = true;
 
-        /* Window Decoration and Interface Themes */
+        /* Window Decoration */
         var themes_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        var ui_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var themes = new Gtk.ComboBoxText ();
-        var ui = new Gtk.ComboBoxText ();
         var duplicate_themes = ":"; // FIXME: Use StringBuilder
+
         try {
-            var enumerator = File.new_for_path ("/usr/share/themes/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
+        var enumerator = File.new_for_path ("/usr/share/themes/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
             FileInfo file_info;
             while ((file_info = enumerator.next_file ()) != null) {
             var name = file_info.get_name ();
-                var checktheme = File.new_for_path ("/usr/share/themes/" + name + "/gtk-3.0");
+               var checktheme = File.new_for_path ("/usr/share/themes/" + name + "/metacity-1");
                 if (checktheme.query_exists() && name != "Emacs" && name != "Default") {
-                    themes.append (file_info.get_name (), name);
                     duplicate_themes += name + ":";
+                    themes.append (file_info.get_name (), name);
                 }
             }
         } catch (Error e) { warning (e.message); }
@@ -47,7 +46,7 @@ public class AppearanceGrid : Gtk.Grid
         FileInfo file_info;
         while ((file_info = enumerator.next_file ()) != null) {
             var name = file_info.get_name ();
-                var checktheme = File.new_for_path ("/home/" + Environment.get_user_name () + "/.themes/" + name + "/gtk-3.0");
+                var checktheme = File.new_for_path ("/home/" + Environment.get_user_name () + "/.themes/" + name + "/metacity-1");
                 if (checktheme.query_exists() && name != "Emacs" && name != "Default" && duplicate_themes.contains(name) == false)
                     themes.append (file_info.get_name (), name);
             }
@@ -70,7 +69,35 @@ public class AppearanceGrid : Gtk.Grid
         themes_box.pack_start (themes, false);
         themes_box.pack_start (themes_default, false);
 
-        ui.model = themes.model;
+        /* Interface Themes */
+        var ui_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        var ui = new Gtk.ComboBoxText ();
+        var duplicate_ui = ":"; // FIXME: Use StringBuilder
+
+        try {
+        var enumerator = File.new_for_path ("/usr/share/themes/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
+            FileInfo file_info;
+            while ((file_info = enumerator.next_file ()) != null) {
+            var name = file_info.get_name ();
+               var checktheme = File.new_for_path ("/usr/share/themes/" + name + "/gtk-3.0");
+                if (checktheme.query_exists() && name != "Emacs" && name != "Default") {
+                    duplicate_ui += name + ":";
+                    ui.append (file_info.get_name (), name);
+                }
+            }
+        } catch (Error e) { warning (e.message); }
+
+        try {
+        var enumerator = File.new_for_path ("/home/" + Environment.get_user_name () + "/.themes/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
+        FileInfo file_info;
+        while ((file_info = enumerator.next_file ()) != null) {
+            var name = file_info.get_name ();
+                var checktheme = File.new_for_path ("/home/" + Environment.get_user_name () + "/.themes/" + name + "/gtk-3.0");
+                if (checktheme.query_exists() && name != "Emacs" && name != "Default" && duplicate_ui.contains(name) == false)
+                    ui.append (file_info.get_name (), name);
+            }
+        } catch (Error e) { warning (e.message); }
+
         ui.halign = Gtk.Align.START;
         ui.active_id = InterfaceSettings.get_default ().gtk_theme;
         ui.changed.connect (() => InterfaceSettings.get_default ().gtk_theme = ui.active_id );
@@ -91,6 +118,7 @@ public class AppearanceGrid : Gtk.Grid
         var icon_theme_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var icon_theme = new Gtk.ComboBoxText ();
         var duplicate_icons = ":"; // FIXME: Use StringBuilder
+
         try {
         var enumerator = File.new_for_path ("/usr/share/icons/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
             FileInfo file_info;
