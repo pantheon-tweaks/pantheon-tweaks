@@ -81,7 +81,7 @@ public class TweaksPlug : Pantheon.Switchboard.Plug
 
         /* Dock Tab*/
         if (checkplank.query_exists ())
-            add_page (new DockGrid (), _("Plank"), "plank", cat_applications);
+            add_page (new PlankGrid (), _("Plank"), "plank", cat_applications);
 
         /* Files Tab*/
         add_page (new FilesGrid (), _("Files"), "system-file-manager", cat_applications);

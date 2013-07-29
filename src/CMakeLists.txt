@@ -30,7 +30,7 @@ vala_precompile (VALA_C
     Grids/FilesGrid.vala
     Grids/AnimationsGrid.vala
     Grids/ShadowsGrid.vala
-    Grids/DockGrid.vala
+    Grids/PlankGrid.vala
     Grids/MiscGrid.vala
     Grids/SlingshotGrid.vala
     Grids/SynapseGrid.vala

@@ -15,9 +15,9 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // 
 
-public class DockGrid : Gtk.Grid
+public class PlankGrid : Gtk.Grid
 {
-    public DockGrid () {
+    public PlankGrid () {
         this.row_spacing = 6;
         this.column_spacing = 12;
         this.margin_top = 24;
@@ -25,8 +25,6 @@ public class DockGrid : Gtk.Grid
 
         /* Icon Size */
         var icon_size_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        
-        Gtk.Scale icon_size_range = null;
         var icon_size = new Gtk.SpinButton.with_range (32, 96, 1);
         icon_size.set_value (PlankSettings.get_default ().icon_size);
         icon_size.value_changed.connect (() => {

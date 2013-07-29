@@ -7,19 +7,19 @@ public class WindowSettings : Granite.Services.Settings
     public string action_double_click_titlebar { get; set; }
     public string action_middle_click_titlebar { get; set; }
     public string action_right_click_titlebar { get; set; }
-    
+
     static WindowSettings? instance = null;
-    
+
     private WindowSettings ()
     {
         base ("org.gnome.desktop.wm.preferences");
     }
-    
+
     public static WindowSettings get_default ()
     {
         if (instance == null)
             instance = new WindowSettings ();
-        
+
         return instance;
     }
 }
@@ -35,24 +35,24 @@ public class InterfaceSettings : Granite.Services.Settings
     public bool ubuntu_overlay_scrollbars { get; set; }
     
     static InterfaceSettings? instance = null;
-    
+
     private InterfaceSettings ()
     {
         base ("org.gnome.desktop.interface");
     }
-    
+
     public static InterfaceSettings get_default ()
     {
         if (instance == null)
             instance = new InterfaceSettings ();
-        
+
         return instance;
     }
 }
 
 public Gtk.ComboBoxText combo_box_themes ( string path, string condition ) {
     var return_box = new Gtk.ComboBoxText ();
-    var themes = ""; // FIXME: Use StringBuilder
+    var themes = ""; // FIXME: Use StringBuilder or HashSets
 
     try {
         var enumerator = File.new_for_path ("/usr/share/" + path + "/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
