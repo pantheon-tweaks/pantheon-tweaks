@@ -26,31 +26,7 @@ public class AppearanceGrid : Gtk.Grid
         /* Window Decoration */
         var themes_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var themes = new Gtk.ComboBoxText ();
-        var duplicate_themes = ":"; // FIXME: Use StringBuilder
-
-        try {
-        var enumerator = File.new_for_path ("/usr/share/themes/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
-            FileInfo file_info;
-            while ((file_info = enumerator.next_file ()) != null) {
-            var name = file_info.get_name ();
-               var checktheme = File.new_for_path ("/usr/share/themes/" + name + "/metacity-1");
-                if (checktheme.query_exists() && name != "Emacs" && name != "Default") {
-                    duplicate_themes += name + ":";
-                    themes.append (file_info.get_name (), name);
-                }
-            }
-        } catch (Error e) { warning (e.message); }
-
-        try {
-        var enumerator = File.new_for_path ("/home/" + Environment.get_user_name () + "/.themes/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
-        FileInfo file_info;
-        while ((file_info = enumerator.next_file ()) != null) {
-            var name = file_info.get_name ();
-                var checktheme = File.new_for_path ("/home/" + Environment.get_user_name () + "/.themes/" + name + "/metacity-1");
-                if (checktheme.query_exists() && name != "Emacs" && name != "Default" && duplicate_themes.contains(name) == false)
-                    themes.append (file_info.get_name (), name);
-            }
-        } catch (Error e) { warning (e.message); }
+        themes = combo_box_themes ( "themes", "metacity-1");
 
         themes.active_id = WindowSettings.get_default ().theme;
         themes.changed.connect (() => WindowSettings.get_default ().theme = themes.active_id );
@@ -72,35 +48,11 @@ public class AppearanceGrid : Gtk.Grid
         /* Interface Themes */
         var ui_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var ui = new Gtk.ComboBoxText ();
-        var duplicate_ui = ":"; // FIXME: Use StringBuilder
+        ui = combo_box_themes ( "themes", "gtk-3.0");
 
-        try {
-        var enumerator = File.new_for_path ("/usr/share/themes/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
-            FileInfo file_info;
-            while ((file_info = enumerator.next_file ()) != null) {
-            var name = file_info.get_name ();
-               var checktheme = File.new_for_path ("/usr/share/themes/" + name + "/gtk-3.0");
-                if (checktheme.query_exists() && name != "Emacs" && name != "Default") {
-                    duplicate_ui += name + ":";
-                    ui.append (file_info.get_name (), name);
-                }
-            }
-        } catch (Error e) { warning (e.message); }
-
-        try {
-        var enumerator = File.new_for_path ("/home/" + Environment.get_user_name () + "/.themes/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
-        FileInfo file_info;
-        while ((file_info = enumerator.next_file ()) != null) {
-            var name = file_info.get_name ();
-                var checktheme = File.new_for_path ("/home/" + Environment.get_user_name () + "/.themes/" + name + "/gtk-3.0");
-                if (checktheme.query_exists() && name != "Emacs" && name != "Default" && duplicate_ui.contains(name) == false)
-                    ui.append (file_info.get_name (), name);
-            }
-        } catch (Error e) { warning (e.message); }
-
-        ui.halign = Gtk.Align.START;
         ui.active_id = InterfaceSettings.get_default ().gtk_theme;
         ui.changed.connect (() => InterfaceSettings.get_default ().gtk_theme = ui.active_id );
+        ui.halign = Gtk.Align.START;
         ui.width_request = 160;
 
         var ui_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
@@ -117,35 +69,11 @@ public class AppearanceGrid : Gtk.Grid
         /* Icon Themes */
         var icon_theme_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var icon_theme = new Gtk.ComboBoxText ();
-        var duplicate_icons = ":"; // FIXME: Use StringBuilder
+        icon_theme = combo_box_themes ( "icons", "apps");
 
-        try {
-        var enumerator = File.new_for_path ("/usr/share/icons/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
-            FileInfo file_info;
-            while ((file_info = enumerator.next_file ()) != null) {
-            var name = file_info.get_name ();
-               var checktheme = File.new_for_path ("/usr/share/icons/" + name + "/apps");
-                if (checktheme.query_exists() && name != "Emacs" && name != "Default") {
-                    duplicate_icons += name + ":";
-                    icon_theme.append (file_info.get_name (), name);
-                }
-            }
-        } catch (Error e) { warning (e.message); }
-
-        try {
-            var enumerator = File.new_for_path ("/home/" + Environment.get_user_name () + "/.icons/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
-            FileInfo file_info;
-            while ((file_info = enumerator.next_file ()) != null) {
-                var name = file_info.get_name ();
-                var checktheme = File.new_for_path ("/home/" + Environment.get_user_name () + "/.icons/" + name + "/apps");
-                if (checktheme.query_exists() && name != "Emacs" && name != "Default" && duplicate_icons.contains(name) == false)
-                    icon_theme.append (file_info.get_name (), name);
-            }
-        } catch (Error e) { warning (e.message); }
-
-        icon_theme.halign = Gtk.Align.START;
         icon_theme.active_id = InterfaceSettings.get_default ().icon_theme;
         icon_theme.changed.connect (() => InterfaceSettings.get_default ().icon_theme = icon_theme.active_id );
+        icon_theme.halign = Gtk.Align.START;
         icon_theme.width_request = 160;
 
         var icon_theme_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
@@ -162,21 +90,11 @@ public class AppearanceGrid : Gtk.Grid
         /* Cursor Themes */
         var cursor_theme_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var cursor_theme = new Gtk.ComboBoxText ();
-        try {
-            var enumerator = File.new_for_path ("/usr/share/icons/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
-            FileInfo file_info;
-            while ((file_info = enumerator.next_file ()) != null) {
-                var name = file_info.get_name ();
-                var checktheme = File.new_for_path ("/usr/share/icons/" + name + "/cursors");
-                if (checktheme.query_exists())
-                    cursor_theme.append (file_info.get_name (), name);
-            }
-        } catch (Error e) { warning (e.message); }
+        cursor_theme = combo_box_themes ( "icons", "cursors");
 
-
-        cursor_theme.halign = Gtk.Align.START;
         cursor_theme.active_id = InterfaceSettings.get_default ().cursor_theme;
         cursor_theme.changed.connect (() => InterfaceSettings.get_default ().cursor_theme = cursor_theme.active_id );
+        cursor_theme.halign = Gtk.Align.START;
         cursor_theme.width_request = 160;
 
         var cursor_theme_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
