@@ -7,65 +7,65 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-07-02 23:54+0100\n"
-"PO-Revision-Date: 2013-07-13 13:24+0000\n"
+"POT-Creation-Date: 2013-07-28 23:18+0100\n"
+"PO-Revision-Date: 2013-07-28 22:06+0000\n"
 "Last-Translator: Versable <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-14 06:22+0000\n"
-"X-Generator: Launchpad (build 16696)\n"
+"X-Launchpad-Export-Date: 2013-07-29 06:01+0000\n"
+"X-Generator: Launchpad (build 16700)\n"
 
-#: ../src/Tweaks.vala:54
+#: ../src/Tweaks.vala:56
 msgid "General"
 msgstr "Allgemein"
 
-#: ../src/Tweaks.vala:55
+#: ../src/Tweaks.vala:57
 msgid "Applications"
 msgstr "Anwendungen"
 
-#: ../src/Tweaks.vala:60
+#: ../src/Tweaks.vala:65
 msgid "Appearance"
 msgstr "Darstellung"
 
-#: ../src/Tweaks.vala:63
+#: ../src/Tweaks.vala:68
 msgid "Fonts"
 msgstr "Schriftarten"
 
-#: ../src/Tweaks.vala:66
+#: ../src/Tweaks.vala:71
 msgid "Animations"
 msgstr "Animationen"
 
-#: ../src/Tweaks.vala:69
+#: ../src/Tweaks.vala:74
 msgid "Shadows"
 msgstr "Schatten"
 
-#: ../src/Tweaks.vala:72
+#: ../src/Tweaks.vala:77
 msgid "Miscellaneous"
 msgstr "Sonstiges"
 
-#: ../src/Tweaks.vala:75
+#: ../src/Tweaks.vala:84
 msgid "Plank"
 msgstr "Plank"
 
-#: ../src/Tweaks.vala:78
+#: ../src/Tweaks.vala:87
 msgid "Files"
 msgstr "Dateien"
 
-#: ../src/Tweaks.vala:82
+#: ../src/Tweaks.vala:91
 msgid "Search Indicator"
 msgstr ""
 
-#: ../src/Tweaks.vala:85
+#: ../src/Tweaks.vala:94
 msgid "Slingshot"
 msgstr "Slingshot"
 
-#: ../src/Tweaks.vala:88
+#: ../src/Tweaks.vala:97
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../src/Tweaks.vala:92
+#: ../src/Tweaks.vala:101
 msgid "Wingpanel Slim"
 msgstr "Schmales Wingpanel"
 
@@ -156,13 +156,69 @@ msgstr "Schatten:"
 msgid "Search Indicator Shortcut:"
 msgstr ""
 
-#: ../src/Grids/MiscGrid.vala:40
+#: ../src/Grids/MiscGrid.vala:75
+#: ../src/Grids/MiscGrid.vala:101
+#: ../src/Grids/MiscGrid.vala:128
+msgid "Maximize"
+msgstr "Maximieren"
+
+#: ../src/Grids/MiscGrid.vala:76
+#: ../src/Grids/MiscGrid.vala:102
+#: ../src/Grids/MiscGrid.vala:129
+msgid "Maximize Horizontally"
+msgstr "Horizontal maximieren"
+
+#: ../src/Grids/MiscGrid.vala:77
+#: ../src/Grids/MiscGrid.vala:103
+#: ../src/Grids/MiscGrid.vala:130
+msgid "Maximize Vertically"
+msgstr "Vertikal maximieren"
+
+#: ../src/Grids/MiscGrid.vala:78
+#: ../src/Grids/MiscGrid.vala:104
+#: ../src/Grids/MiscGrid.vala:131
+msgid "Minimize"
+msgstr "Minimieren"
+
+#: ../src/Grids/MiscGrid.vala:79
+#: ../src/Grids/MiscGrid.vala:105
+#: ../src/Grids/MiscGrid.vala:132
+msgid "Shade"
+msgstr "Einklappen"
+
+#: ../src/Grids/MiscGrid.vala:80
+#: ../src/Grids/MiscGrid.vala:106
+#: ../src/Grids/MiscGrid.vala:133
+msgid "Lower Window"
+msgstr "Fenster nach hinten"
+
+#: ../src/Grids/MiscGrid.vala:127
+msgid "Menu"
+msgstr "Menü"
+
+#: ../src/Grids/MiscGrid.vala:151
+msgid "Double Click Titlebar Action:"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:154
+msgid "Middle Click Titlebar Action:"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:157
+msgid "Right Click Titlebar Action:"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:160
 msgid "Audible Bell:"
 msgstr "Akustische Warnungen:"
 
-#: ../src/Grids/MiscGrid.vala:43
+#: ../src/Grids/MiscGrid.vala:163
 msgid "Overlay Scrollbars:"
 msgstr "Eingeblendete Scrollbalken:"
+
+#: ../src/Grids/MiscGrid.vala:166
+msgid "Natural Scrolling:"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:49
 msgid "Top"
@@ -241,6 +297,7 @@ msgid "Monitor:"
 msgstr "Monitor:"
 
 #: ../src/Grids/DockGrid.vala:316
+#: ../src/Grids/WingpanelslimGrid.vala:43
 msgid "Position:"
 msgstr "Position:"
 
@@ -255,10 +312,6 @@ msgstr "Arbeitsflächenübersicht Symbol:"
 #: ../src/Grids/DockGrid.vala:328
 msgid "Show Desktop Icon:"
 msgstr "Zeige-Desktop Symbol:"
-
-#: ../src/Grids/WingpanelslimGrid.vala:43
-msgid "Slim Wingpanel Position:"
-msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:45
 msgid "Middle"
@@ -305,39 +358,52 @@ msgstr "Reihen:"
 msgid "Columns:"
 msgstr "Spalten:"
 
-#: ../src/Grids/AppearanceGrid.vala:169
+#: ../src/Grids/AppearanceGrid.vala:170
+msgid "Custom Layout:"
+msgstr ""
+
+#: ../src/Grids/AppearanceGrid.vala:173
+msgid "Close Only"
+msgstr ""
+
+#: ../src/Grids/AppearanceGrid.vala:174
 msgid "Minimize Left"
 msgstr "Minimiere Links"
 
-#: ../src/Grids/AppearanceGrid.vala:170
+#: ../src/Grids/AppearanceGrid.vala:175
 msgid "Minimize Right"
 msgstr "Minimiere Rechts"
 
-#: ../src/Grids/AppearanceGrid.vala:171
+#: ../src/Grids/AppearanceGrid.vala:176
 msgid "Windows"
 msgstr "Windows"
 
-#: ../src/Grids/AppearanceGrid.vala:172
+#: ../src/Grids/AppearanceGrid.vala:177
 msgid "OS X"
 msgstr "OS X"
 
-#: ../src/Grids/AppearanceGrid.vala:192
+#: ../src/Grids/AppearanceGrid.vala:178
+#: ../src/Grids/TerminalGrid.vala:180
+msgid "Custom"
+msgstr "Benutzerdefiniert"
+
+#: ../src/Grids/AppearanceGrid.vala:237
 msgid "Window Decoration Theme:"
 msgstr "Fenster Dekoration:"
 
-#: ../src/Grids/AppearanceGrid.vala:195
+#: ../src/Grids/AppearanceGrid.vala:240
 msgid "Interface Theme:"
 msgstr "Oberflächenthema:"
 
-#: ../src/Grids/AppearanceGrid.vala:198
+#: ../src/Grids/AppearanceGrid.vala:243
 msgid "Icon Theme:"
 msgstr "Symbolthema:"
 
-#: ../src/Grids/AppearanceGrid.vala:201
+#: ../src/Grids/AppearanceGrid.vala:246
 msgid "Cursor Theme:"
 msgstr "Mauszeigerthema:"
 
-#: ../src/Grids/AppearanceGrid.vala:204
+#: ../src/Grids/AppearanceGrid.vala:249
 msgid "Button Layout:"
 msgstr "Fensterbuttons:"
 
@@ -356,10 +422,6 @@ msgstr "Nichtproportionale Schrift:"
 #: ../src/Grids/FontsGrid.vala:107
 msgid "Window Title Font:"
 msgstr "Fenstertitel-Schrift:"
-
-#: ../src/Grids/TerminalGrid.vala:180
-msgid "Custom"
-msgstr "Benutzerdefiniert"
 
 #: ../src/Grids/TerminalGrid.vala:199
 msgid "Limit Scrollback Lines:"
