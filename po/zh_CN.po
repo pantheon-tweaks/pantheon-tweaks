@@ -7,65 +7,65 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-07-02 23:54+0100\n"
+"POT-Creation-Date: 2013-07-28 23:18+0100\n"
 "PO-Revision-Date: 2013-07-08 06:32+0000\n"
 "Last-Translator: Wang Dianjin <Unknown>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-09 06:13+0000\n"
-"X-Generator: Launchpad (build 16696)\n"
+"X-Launchpad-Export-Date: 2013-07-29 06:01+0000\n"
+"X-Generator: Launchpad (build 16700)\n"
 
-#: ../src/Tweaks.vala:54
+#: ../src/Tweaks.vala:56
 msgid "General"
 msgstr "常规"
 
-#: ../src/Tweaks.vala:55
+#: ../src/Tweaks.vala:57
 msgid "Applications"
 msgstr "应用程序"
 
-#: ../src/Tweaks.vala:60
+#: ../src/Tweaks.vala:65
 msgid "Appearance"
 msgstr "外观"
 
-#: ../src/Tweaks.vala:63
+#: ../src/Tweaks.vala:68
 msgid "Fonts"
 msgstr "字体"
 
-#: ../src/Tweaks.vala:66
+#: ../src/Tweaks.vala:71
 msgid "Animations"
 msgstr "动画"
 
-#: ../src/Tweaks.vala:69
+#: ../src/Tweaks.vala:74
 msgid "Shadows"
 msgstr "阴影"
 
-#: ../src/Tweaks.vala:72
+#: ../src/Tweaks.vala:77
 msgid "Miscellaneous"
 msgstr "杂项"
 
-#: ../src/Tweaks.vala:75
+#: ../src/Tweaks.vala:84
 msgid "Plank"
 msgstr "Plank"
 
-#: ../src/Tweaks.vala:78
+#: ../src/Tweaks.vala:87
 msgid "Files"
 msgstr "文件"
 
-#: ../src/Tweaks.vala:82
+#: ../src/Tweaks.vala:91
 msgid "Search Indicator"
 msgstr "搜索指示器"
 
-#: ../src/Tweaks.vala:85
+#: ../src/Tweaks.vala:94
 msgid "Slingshot"
 msgstr "Slingshot"
 
-#: ../src/Tweaks.vala:88
+#: ../src/Tweaks.vala:97
 msgid "Terminal"
 msgstr "终端"
 
-#: ../src/Tweaks.vala:92
+#: ../src/Tweaks.vala:101
 msgid "Wingpanel Slim"
 msgstr "Wingpanel Slim"
 
@@ -156,13 +156,69 @@ msgstr "阴影："
 msgid "Search Indicator Shortcut:"
 msgstr "搜索指示器快捷键："
 
-#: ../src/Grids/MiscGrid.vala:40
+#: ../src/Grids/MiscGrid.vala:75
+#: ../src/Grids/MiscGrid.vala:101
+#: ../src/Grids/MiscGrid.vala:128
+msgid "Maximize"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:76
+#: ../src/Grids/MiscGrid.vala:102
+#: ../src/Grids/MiscGrid.vala:129
+msgid "Maximize Horizontally"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:77
+#: ../src/Grids/MiscGrid.vala:103
+#: ../src/Grids/MiscGrid.vala:130
+msgid "Maximize Vertically"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:78
+#: ../src/Grids/MiscGrid.vala:104
+#: ../src/Grids/MiscGrid.vala:131
+msgid "Minimize"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:79
+#: ../src/Grids/MiscGrid.vala:105
+#: ../src/Grids/MiscGrid.vala:132
+msgid "Shade"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:80
+#: ../src/Grids/MiscGrid.vala:106
+#: ../src/Grids/MiscGrid.vala:133
+msgid "Lower Window"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:127
+msgid "Menu"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:151
+msgid "Double Click Titlebar Action:"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:154
+msgid "Middle Click Titlebar Action:"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:157
+msgid "Right Click Titlebar Action:"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:160
 msgid "Audible Bell:"
 msgstr "响铃："
 
-#: ../src/Grids/MiscGrid.vala:43
+#: ../src/Grids/MiscGrid.vala:163
 msgid "Overlay Scrollbars:"
 msgstr "覆盖式滚动条："
+
+#: ../src/Grids/MiscGrid.vala:166
+msgid "Natural Scrolling:"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:49
 msgid "Top"
@@ -241,6 +297,7 @@ msgid "Monitor:"
 msgstr "显示器："
 
 #: ../src/Grids/DockGrid.vala:316
+#: ../src/Grids/WingpanelslimGrid.vala:43
 msgid "Position:"
 msgstr "位置："
 
@@ -255,10 +312,6 @@ msgstr "工作区概览图标："
 #: ../src/Grids/DockGrid.vala:328
 msgid "Show Desktop Icon:"
 msgstr "显示桌面图标："
-
-#: ../src/Grids/WingpanelslimGrid.vala:43
-msgid "Slim Wingpanel Position:"
-msgstr "Slim Wingpanel 位置："
 
 #: ../src/Grids/WingpanelslimGrid.vala:45
 msgid "Middle"
@@ -305,39 +358,52 @@ msgstr "行："
 msgid "Columns:"
 msgstr "列："
 
-#: ../src/Grids/AppearanceGrid.vala:169
+#: ../src/Grids/AppearanceGrid.vala:170
+msgid "Custom Layout:"
+msgstr ""
+
+#: ../src/Grids/AppearanceGrid.vala:173
+msgid "Close Only"
+msgstr ""
+
+#: ../src/Grids/AppearanceGrid.vala:174
 msgid "Minimize Left"
 msgstr "左侧最小化"
 
-#: ../src/Grids/AppearanceGrid.vala:170
+#: ../src/Grids/AppearanceGrid.vala:175
 msgid "Minimize Right"
 msgstr "右侧最小化"
 
-#: ../src/Grids/AppearanceGrid.vala:171
+#: ../src/Grids/AppearanceGrid.vala:176
 msgid "Windows"
 msgstr "窗口"
 
-#: ../src/Grids/AppearanceGrid.vala:172
+#: ../src/Grids/AppearanceGrid.vala:177
 msgid "OS X"
 msgstr "OS X"
 
-#: ../src/Grids/AppearanceGrid.vala:192
+#: ../src/Grids/AppearanceGrid.vala:178
+#: ../src/Grids/TerminalGrid.vala:180
+msgid "Custom"
+msgstr "自定义"
+
+#: ../src/Grids/AppearanceGrid.vala:237
 msgid "Window Decoration Theme:"
 msgstr "窗口装饰主题："
 
-#: ../src/Grids/AppearanceGrid.vala:195
+#: ../src/Grids/AppearanceGrid.vala:240
 msgid "Interface Theme:"
 msgstr "界面主题："
 
-#: ../src/Grids/AppearanceGrid.vala:198
+#: ../src/Grids/AppearanceGrid.vala:243
 msgid "Icon Theme:"
 msgstr "图标主题："
 
-#: ../src/Grids/AppearanceGrid.vala:201
+#: ../src/Grids/AppearanceGrid.vala:246
 msgid "Cursor Theme:"
 msgstr "光标主题："
 
-#: ../src/Grids/AppearanceGrid.vala:204
+#: ../src/Grids/AppearanceGrid.vala:249
 msgid "Button Layout:"
 msgstr "按钮布局："
 
@@ -356,10 +422,6 @@ msgstr "等宽字体："
 #: ../src/Grids/FontsGrid.vala:107
 msgid "Window Title Font:"
 msgstr "窗口标题字体："
-
-#: ../src/Grids/TerminalGrid.vala:180
-msgid "Custom"
-msgstr "自定义"
 
 #: ../src/Grids/TerminalGrid.vala:199
 msgid "Limit Scrollback Lines:"
