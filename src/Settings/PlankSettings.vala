@@ -133,7 +133,7 @@ public void icon_switch (string dockitem) {
         var file_src = File.new_for_path ("/usr/lib/plugs/pantheon/tweaks/" + dockitem + ".dockitem");
 
         file_dest.query_exists ()?file_dest.delete ():file_src.copy (file_dest, FileCopyFlags.NONE);
-    } catch (GLib.FileError e){
+    } catch (Error e){
         warning (e.message);
     }
 }
@@ -142,7 +142,7 @@ public bool icon_exists (string dockitem) {
     try {
         var file_dest = File.new_for_path (Environment.get_user_config_dir () + "/plank/dock1/launchers/" + dockitem + ".dockitem");
         return file_dest.query_exists ();
-    } catch (GLib.FileError e){
+    } catch (Error e){
         warning (e.message);
     }
 }

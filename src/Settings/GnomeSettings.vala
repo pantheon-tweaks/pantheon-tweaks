@@ -52,34 +52,25 @@ public class InterfaceSettings : Granite.Services.Settings
 
 public Gtk.ComboBoxText combo_box_themes ( string path, string condition ) {
     var return_box = new Gtk.ComboBoxText ();
-    var themes = ""; // FIXME: Use StringBuilder or HashSets
+    var themes = new Gee.HashSet<string> ();
 
-    try {
-        var enumerator = File.new_for_path ("/usr/share/" + path + "/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
-        FileInfo file_info;
-        while ((file_info = enumerator.next_file ()) != null) {
-            var name = file_info.get_name ();
-            var checktheme = File.new_for_path ("/usr/share/" + path + "/" + name + "/" + condition);
-            if (checktheme.query_exists() && name != "Emacs" && name != "Default")
-                themes += name + ":";
-        }
-    } catch (Error e) { warning (e.message); }
+    string[] dirs = { "/usr/share/" + path + "/", "/home/" + Environment.get_user_name () + "/." + path + "/" };
 
-    try {
-        var enumerator = File.new_for_path ("/home/" + Environment.get_user_name () + "/." + path + "/").enumerate_children (FileAttribute.STANDARD_NAME, 0);
-        FileInfo file_info;
-        while ((file_info = enumerator.next_file ()) != null) {
-            var name = file_info.get_name ();
-            var checktheme = File.new_for_path ("/home/" + Environment.get_user_name () + "/." + path + "/" + name + "/" + condition);
-            if (checktheme.query_exists() && name != "Emacs" && name != "Default" && themes.contains(name) == false)
-                themes += name + ":";
-        }
-    } catch (Error e) { warning (e.message); }
-
-    foreach (string theme in themes.split (":")) {
-        if ( theme != "" )
-            return_box.append (theme, theme);
+    foreach (string dir in dirs) {
+        try {
+            var enumerator = File.new_for_path (dir).enumerate_children (FileAttribute.STANDARD_NAME, 0);
+            FileInfo file_info;
+            while ((file_info = enumerator.next_file ()) != null) {
+                var name = file_info.get_name ();
+                var checktheme = File.new_for_path (dir + name + "/" + condition);
+                if (checktheme.query_exists() && name != "Emacs" && name != "Default")
+                    themes.add(name);
+            }
+        } catch (Error e) { warning (e.message); }
     }
+
+    foreach (string theme in themes) 
+            return_box.append (theme, theme);
 
     return return_box;
 }

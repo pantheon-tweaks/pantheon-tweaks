@@ -182,7 +182,7 @@ public void scroll_switch (string mapping, bool active) {
             if (file.query_exists ())
                 file.delete ();
         }
-    } catch (GLib.FileError e){
+    } catch (Error e){
                 warning (e.message);
     }
 }
@@ -191,7 +191,7 @@ public bool scroll_exists () {
         try {
             var file = File.new_for_path ("/home/" + Environment.get_user_name () + "/.Xmodmap");
             return (file.query_exists ());
-        } catch (GLib.FileError e){
+        } catch (Error e){
             warning (e.message);
         }
     }
