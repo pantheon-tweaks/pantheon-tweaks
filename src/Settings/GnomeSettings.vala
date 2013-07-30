@@ -63,7 +63,8 @@ public Gtk.ComboBoxText combo_box_themes ( string path, string condition ) {
             while ((file_info = enumerator.next_file ()) != null) {
                 var name = file_info.get_name ();
                 var checktheme = File.new_for_path (dir + name + "/" + condition);
-                if (checktheme.query_exists() && name != "Emacs" && name != "Default")
+                var checkicons = File.new_for_path (dir + name + "/48x48/" + condition);
+                if ( ( checktheme.query_exists() || checkicons.query_exists() ) && name != "Emacs" && name != "Default")
                     themes.add(name);
             }
         } catch (Error e) { warning (e.message); }
