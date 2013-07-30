@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-28 23:18+0100\n"
-"PO-Revision-Date: 2013-07-21 20:07+0000\n"
-"Last-Translator: Alfredo Hernández <Unknown>\n"
+"PO-Revision-Date: 2013-07-29 15:52+0000\n"
+"Last-Translator: kprkpr <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-29 06:01+0000\n"
+"X-Launchpad-Export-Date: 2013-07-30 05:31+0000\n"
 "X-Generator: Launchpad (build 16700)\n"
 
 #: ../src/Tweaks.vala:56
@@ -160,25 +160,25 @@ msgstr "Atajo del indicador de búsqueda:"
 #: ../src/Grids/MiscGrid.vala:101
 #: ../src/Grids/MiscGrid.vala:128
 msgid "Maximize"
-msgstr ""
+msgstr "Maximizar"
 
 #: ../src/Grids/MiscGrid.vala:76
 #: ../src/Grids/MiscGrid.vala:102
 #: ../src/Grids/MiscGrid.vala:129
 msgid "Maximize Horizontally"
-msgstr ""
+msgstr "Maximizar horizontalmente"
 
 #: ../src/Grids/MiscGrid.vala:77
 #: ../src/Grids/MiscGrid.vala:103
 #: ../src/Grids/MiscGrid.vala:130
 msgid "Maximize Vertically"
-msgstr ""
+msgstr "Maximizar verticalmente"
 
 #: ../src/Grids/MiscGrid.vala:78
 #: ../src/Grids/MiscGrid.vala:104
 #: ../src/Grids/MiscGrid.vala:131
 msgid "Minimize"
-msgstr ""
+msgstr "Minimizar"
 
 #: ../src/Grids/MiscGrid.vala:79
 #: ../src/Grids/MiscGrid.vala:105
@@ -190,23 +190,25 @@ msgstr ""
 #: ../src/Grids/MiscGrid.vala:106
 #: ../src/Grids/MiscGrid.vala:133
 msgid "Lower Window"
-msgstr ""
+msgstr "Bajar ventana"
 
 #: ../src/Grids/MiscGrid.vala:127
 msgid "Menu"
-msgstr ""
+msgstr "Menú"
 
 #: ../src/Grids/MiscGrid.vala:151
 msgid "Double Click Titlebar Action:"
-msgstr ""
+msgstr "Acción al hacer doble click en la barra de acción"
 
 #: ../src/Grids/MiscGrid.vala:154
 msgid "Middle Click Titlebar Action:"
 msgstr ""
+"Acción al hacer click con el botón del centro del ratón en la barra de título"
 
 #: ../src/Grids/MiscGrid.vala:157
 msgid "Right Click Titlebar Action:"
 msgstr ""
+"Acción a hacer al hacer click en la barra de título con el botón derecho"
 
 #: ../src/Grids/MiscGrid.vala:160
 msgid "Audible Bell:"
@@ -218,7 +220,7 @@ msgstr "Barras de desplazamiento superpuestas:"
 
 #: ../src/Grids/MiscGrid.vala:166
 msgid "Natural Scrolling:"
-msgstr ""
+msgstr "Desplazamiento natural"
 
 #: ../src/Grids/DockGrid.vala:49
 msgid "Top"
