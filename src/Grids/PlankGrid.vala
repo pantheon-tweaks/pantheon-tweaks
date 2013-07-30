@@ -213,33 +213,10 @@ public class PlankGrid : Gtk.Grid
         /* Themes */
         var theme_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var theme = new Gtk.ComboBoxText ();
+        theme = combo_box_themes ( "plank/themes", "dock.theme");
 
-        int default_theme = 0;
-        int theme_index = 0;
-        try {
-            
-            string name;
-            var dirs = Environment.get_system_data_dirs ();
-            dirs += Environment.get_user_data_dir ();
-
-            foreach (string dir in dirs) {
-                if (FileUtils.test (dir + "/plank/themes", FileTest.EXISTS)) {
-                    var d = Dir.open(dir + "/plank/themes");
-                    while ((name = d.read_name()) != null) {
-                        theme.append(theme_index.to_string (), (name));
-                        if (PlankSettings.get_default ().theme.to_string () == name)
-                            theme.active = theme_index;
-                        if (name == "Pantheon")
-                            default_theme = theme_index;
-                        theme_index++;
-                    }
-                }
-            }
-        } catch (GLib.FileError e){
-            warning (e.message);
-        }
-
-        theme.changed.connect (() => PlankSettings.get_default ().theme = theme.get_active_text ());
+        theme.active_id = PlankSettings.get_default ().theme;
+        theme.changed.connect (() => PlankSettings.get_default ().theme = theme.active_id );
         theme.halign = Gtk.Align.START;
         theme.width_request = 160;
 
@@ -247,7 +224,7 @@ public class PlankGrid : Gtk.Grid
 
         theme_default.clicked.connect (() => {
             PlankSettings.get_default ().theme = "Pantheon";
-            theme.active = default_theme;
+            theme.active_id = PlankSettings.get_default ().theme;
         });
         theme_default.halign = Gtk.Align.START;
 
@@ -267,7 +244,7 @@ public class PlankGrid : Gtk.Grid
         desktop_icon.halign = Gtk.Align.START;
 
         /* Monitor */ 
-        var monitor_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);       
+        var monitor_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var monitor = new Gtk.ComboBoxText ();
         monitor.append ("-1", _("Primary Monitor"));
         int i = 0;
@@ -300,10 +277,8 @@ public class PlankGrid : Gtk.Grid
         this.attach (hide_mode_box, 1, 1, 1, 1);
 
 
-        if (theme_index > 1) {
-            this.attach (new LLabel.right (_("Theme:")), 0, 2, 1, 1);
-            this.attach (theme_box, 1, 2, 1, 1);
-        }
+        this.attach (new LLabel.right (_("Theme:")), 0, 2, 1, 1);
+        this.attach (theme_box, 1, 2, 1, 1);
 
 
         if (i > 1) {
