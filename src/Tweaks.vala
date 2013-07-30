@@ -39,13 +39,6 @@ public class TweaksPlug : Pantheon.Switchboard.Plug
         sidebar.item_selected.connect (selected);
         sidebar.get_style_context ().add_class ("sidebar");
 
-        //FIXME: Use GLib.list_schemas, create method
-        var checksearch = File.new_for_path ("/usr/lib/indicators3/7/libsynapse.so");
-        var checkplank = File.new_for_path (Environment.get_user_config_dir () + "/plank/dock1/settings");
-        var checksearch_schema = File.new_for_path ("/usr/share/glib-2.0/schemas/net.launchpad.synapse-project.gschema.xml");
-        var checkslim = File.new_for_path ("/usr/bin/wingpanel-slim");
-        var checkslim_schema = File.new_for_path ("/usr/share/glib-2.0/schemas/org.pantheon.desktop.wingpanel-slim.gschema.xml");
-
         /* Notebook */
         notebook = new Gtk.Notebook ();
         notebook.set_margin_top (0);
@@ -80,14 +73,13 @@ public class TweaksPlug : Pantheon.Switchboard.Plug
         /**** Applications Category ****/
 
         /* Dock Tab*/
-        if (checkplank.query_exists ())
-            add_page (new PlankGrid (), _("Plank"), "plank", cat_applications);
+        add_page (new PlankGrid (), _("Plank"), "plank", cat_applications);
 
         /* Files Tab*/
         add_page (new FilesGrid (), _("Files"), "system-file-manager", cat_applications);
 
         /* Search Indicator Tab*/
-        if (checksearch.query_exists() && checksearch_schema.query_exists())
+        if (schema_exists("net.launchpad.synapse-project.indicator"))
             add_page (new SynapseGrid (), _("Search Indicator"), "system-search", cat_applications);
 
         /* Slingshot Tab*/
@@ -97,7 +89,7 @@ public class TweaksPlug : Pantheon.Switchboard.Plug
         add_page (new TerminalGrid (), _("Terminal"), "utilities-terminal", cat_applications);
 
         /* Wingpanel Tab*/
-        if (checkslim.query_exists() && checkslim_schema.query_exists())
+        if (schema_exists("org.pantheon.desktop.wingpanel-slim"))
             add_page (new WingpanelslimGrid (), _("Wingpanel Slim"), "wingpanel", cat_applications);
 
         paned.pack1 (sidebar, false, false);
@@ -116,6 +108,10 @@ public class TweaksPlug : Pantheon.Switchboard.Plug
         void selected (Granite.Widgets.SourceList.Item? item) {
             if (item != null)
                 notebook.page = (item as SidebarItem).index;
+        }
+
+        bool schema_exists(string schema) {
+            return schema in Settings.list_schemas ();
         }
 }
  
