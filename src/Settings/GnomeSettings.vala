@@ -54,7 +54,9 @@ public Gtk.ComboBoxText combo_box_themes ( string path, string condition ) {
     var return_box = new Gtk.ComboBoxText ();
     var themes = new Gee.HashSet<string> ();
 
-    string[] dirs = { "/usr/share/" + path + "/", "/home/" + Environment.get_user_name () + "/." + path + "/" };
+    string[] dirs = { 
+        "/usr/share/" + path + "/",
+        Environment.get_home_dir () + "/." + path + "/" };
 
     foreach (string dir in dirs) {
         try {
