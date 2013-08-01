@@ -8,22 +8,22 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-28 23:18+0100\n"
-"PO-Revision-Date: 2013-06-20 15:03+0000\n"
-"Last-Translator: Mako' <Unknown>\n"
+"PO-Revision-Date: 2013-07-31 10:37+0000\n"
+"Last-Translator: Olorin <ruroka_musou@hotmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-30 05:31+0000\n"
-"X-Generator: Launchpad (build 16700)\n"
+"X-Launchpad-Export-Date: 2013-08-01 06:05+0000\n"
+"X-Generator: Launchpad (build 16718)\n"
 
 #: ../src/Tweaks.vala:56
 msgid "General"
-msgstr ""
+msgstr "Impostazioni generali"
 
 #: ../src/Tweaks.vala:57
 msgid "Applications"
-msgstr ""
+msgstr "Applicazioni"
 
 #: ../src/Tweaks.vala:65
 msgid "Appearance"
@@ -31,7 +31,7 @@ msgstr "Aspetto"
 
 #: ../src/Tweaks.vala:68
 msgid "Fonts"
-msgstr ""
+msgstr "Tipi di carattere"
 
 #: ../src/Tweaks.vala:71
 msgid "Animations"
@@ -39,7 +39,7 @@ msgstr "Animazioni"
 
 #: ../src/Tweaks.vala:74
 msgid "Shadows"
-msgstr ""
+msgstr "Ombreggiatura"
 
 #: ../src/Tweaks.vala:77
 msgid "Miscellaneous"
@@ -47,7 +47,7 @@ msgstr "Varie"
 
 #: ../src/Tweaks.vala:84
 msgid "Plank"
-msgstr ""
+msgstr "Plank"
 
 #: ../src/Tweaks.vala:87
 msgid "Files"
@@ -59,11 +59,11 @@ msgstr ""
 
 #: ../src/Tweaks.vala:94
 msgid "Slingshot"
-msgstr ""
+msgstr "Slingshot"
 
 #: ../src/Tweaks.vala:97
 msgid "Terminal"
-msgstr ""
+msgstr "Terminale"
 
 #: ../src/Tweaks.vala:101
 msgid "Wingpanel Slim"
@@ -130,27 +130,27 @@ msgstr "Dimensione icone della sidebar"
 
 #: ../src/Grids/ShadowsGrid.vala:27
 msgid "Focused Windows:"
-msgstr ""
+msgstr "Finestra attiva"
 
 #: ../src/Grids/ShadowsGrid.vala:28
 msgid "Unfocused Windows:"
-msgstr ""
+msgstr "Finestra inattiva"
 
 #: ../src/Grids/ShadowsGrid.vala:29
 msgid "Focused Dialogs:"
-msgstr ""
+msgstr "Finestra di dialogo attiva"
 
 #: ../src/Grids/ShadowsGrid.vala:30
 msgid "Unfocused Dialogs:"
-msgstr ""
+msgstr "Finestra di dialogo inattiva"
 
 #: ../src/Grids/ShadowsGrid.vala:31
 msgid "Menu:"
-msgstr ""
+msgstr "Menù:"
 
 #: ../src/Grids/ShadowsGrid.vala:194
 msgid "Shadows:"
-msgstr ""
+msgstr "Ombreggiature"
 
 #: ../src/Grids/SynapseGrid.vala:50
 msgid "Search Indicator Shortcut:"
@@ -160,37 +160,37 @@ msgstr ""
 #: ../src/Grids/MiscGrid.vala:101
 #: ../src/Grids/MiscGrid.vala:128
 msgid "Maximize"
-msgstr ""
+msgstr "Massimizza"
 
 #: ../src/Grids/MiscGrid.vala:76
 #: ../src/Grids/MiscGrid.vala:102
 #: ../src/Grids/MiscGrid.vala:129
 msgid "Maximize Horizontally"
-msgstr ""
+msgstr "Massimizza orizzontalmente"
 
 #: ../src/Grids/MiscGrid.vala:77
 #: ../src/Grids/MiscGrid.vala:103
 #: ../src/Grids/MiscGrid.vala:130
 msgid "Maximize Vertically"
-msgstr ""
+msgstr "Massimizza verticalmente"
 
 #: ../src/Grids/MiscGrid.vala:78
 #: ../src/Grids/MiscGrid.vala:104
 #: ../src/Grids/MiscGrid.vala:131
 msgid "Minimize"
-msgstr ""
+msgstr "Minimizza"
 
 #: ../src/Grids/MiscGrid.vala:79
 #: ../src/Grids/MiscGrid.vala:105
 #: ../src/Grids/MiscGrid.vala:132
 msgid "Shade"
-msgstr ""
+msgstr "Arrotola"
 
 #: ../src/Grids/MiscGrid.vala:80
 #: ../src/Grids/MiscGrid.vala:106
 #: ../src/Grids/MiscGrid.vala:133
 msgid "Lower Window"
-msgstr ""
+msgstr "Abbassa la finestra"
 
 #: ../src/Grids/MiscGrid.vala:127
 msgid "Menu"
@@ -202,15 +202,15 @@ msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:154
 msgid "Middle Click Titlebar Action:"
-msgstr ""
+msgstr "Azione del clic centrale sulla barra del titolo"
 
 #: ../src/Grids/MiscGrid.vala:157
 msgid "Right Click Titlebar Action:"
-msgstr ""
+msgstr "Azione del clic destro sulla barra del titolo"
 
 #: ../src/Grids/MiscGrid.vala:160
 msgid "Audible Bell:"
-msgstr ""
+msgstr "Avviso sonoro"
 
 #: ../src/Grids/MiscGrid.vala:163
 msgid "Overlay Scrollbars:"
