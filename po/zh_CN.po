@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-28 23:18+0100\n"
-"PO-Revision-Date: 2013-07-08 06:32+0000\n"
+"PO-Revision-Date: 2013-08-03 09:24+0000\n"
 "Last-Translator: Wang Dianjin <Unknown>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-07-30 05:31+0000\n"
-"X-Generator: Launchpad (build 16700)\n"
+"X-Launchpad-Export-Date: 2013-08-04 05:57+0000\n"
+"X-Generator: Launchpad (build 16718)\n"
 
 #: ../src/Tweaks.vala:56
 msgid "General"
@@ -160,53 +160,53 @@ msgstr "搜索指示器快捷键："
 #: ../src/Grids/MiscGrid.vala:101
 #: ../src/Grids/MiscGrid.vala:128
 msgid "Maximize"
-msgstr ""
+msgstr "最大化"
 
 #: ../src/Grids/MiscGrid.vala:76
 #: ../src/Grids/MiscGrid.vala:102
 #: ../src/Grids/MiscGrid.vala:129
 msgid "Maximize Horizontally"
-msgstr ""
+msgstr "水平方向最大化"
 
 #: ../src/Grids/MiscGrid.vala:77
 #: ../src/Grids/MiscGrid.vala:103
 #: ../src/Grids/MiscGrid.vala:130
 msgid "Maximize Vertically"
-msgstr ""
+msgstr "垂直方向最大化"
 
 #: ../src/Grids/MiscGrid.vala:78
 #: ../src/Grids/MiscGrid.vala:104
 #: ../src/Grids/MiscGrid.vala:131
 msgid "Minimize"
-msgstr ""
+msgstr "最小化"
 
 #: ../src/Grids/MiscGrid.vala:79
 #: ../src/Grids/MiscGrid.vala:105
 #: ../src/Grids/MiscGrid.vala:132
 msgid "Shade"
-msgstr ""
+msgstr "阴影"
 
 #: ../src/Grids/MiscGrid.vala:80
 #: ../src/Grids/MiscGrid.vala:106
 #: ../src/Grids/MiscGrid.vala:133
 msgid "Lower Window"
-msgstr ""
+msgstr "降低窗口"
 
 #: ../src/Grids/MiscGrid.vala:127
 msgid "Menu"
-msgstr ""
+msgstr "菜单"
 
 #: ../src/Grids/MiscGrid.vala:151
 msgid "Double Click Titlebar Action:"
-msgstr ""
+msgstr "双击标题栏动作："
 
 #: ../src/Grids/MiscGrid.vala:154
 msgid "Middle Click Titlebar Action:"
-msgstr ""
+msgstr "中键点击标题栏动作："
 
 #: ../src/Grids/MiscGrid.vala:157
 msgid "Right Click Titlebar Action:"
-msgstr ""
+msgstr "右击标题栏动作："
 
 #: ../src/Grids/MiscGrid.vala:160
 msgid "Audible Bell:"
@@ -218,7 +218,7 @@ msgstr "覆盖式滚动条："
 
 #: ../src/Grids/MiscGrid.vala:166
 msgid "Natural Scrolling:"
-msgstr ""
+msgstr "自然滚动："
 
 #: ../src/Grids/DockGrid.vala:49
 msgid "Top"
@@ -360,11 +360,11 @@ msgstr "列："
 
 #: ../src/Grids/AppearanceGrid.vala:170
 msgid "Custom Layout:"
-msgstr ""
+msgstr "自定义布局："
 
 #: ../src/Grids/AppearanceGrid.vala:173
 msgid "Close Only"
-msgstr ""
+msgstr "仅关闭按钮"
 
 #: ../src/Grids/AppearanceGrid.vala:174
 msgid "Minimize Left"
