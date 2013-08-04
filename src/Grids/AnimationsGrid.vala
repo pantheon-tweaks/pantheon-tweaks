@@ -31,7 +31,7 @@ public class AnimationsGrid : Gtk.Grid
         var work_dur_label = new LLabel.right (_("Workspace Switch Duration:"));
 
         var open_dur_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        var open_dur_spin = new Gtk.SpinButton.with_range (1, 2000, 1);
+        var open_dur_spin = new Gtk.SpinButton.with_range (0, 10000, 1);
 
         open_dur_spin.width_request = 160;
         open_dur_spin.set_value (AnimationSettings.get_default ().open_duration);
@@ -48,7 +48,7 @@ public class AnimationsGrid : Gtk.Grid
 
 
         var close_dur_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        var close_dur_spin = new Gtk.SpinButton.with_range (1, 2000, 1);
+        var close_dur_spin = new Gtk.SpinButton.with_range (0, 10000, 1);
 
         close_dur_spin.width_request = 160;
         close_dur_spin.set_value (AnimationSettings.get_default ().close_duration);
@@ -65,7 +65,7 @@ public class AnimationsGrid : Gtk.Grid
 
 
         var snap_dur_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        var snap_dur_spin = new Gtk.SpinButton.with_range (1, 2000, 1);
+        var snap_dur_spin = new Gtk.SpinButton.with_range (0, 10000, 1);
 
         snap_dur_spin.width_request = 160;
         snap_dur_spin.set_value (AnimationSettings.get_default ().snap_duration);
@@ -82,7 +82,7 @@ public class AnimationsGrid : Gtk.Grid
 
 
         var mini_dur_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        var mini_dur_spin = new Gtk.SpinButton.with_range (1, 2000, 1);
+        var mini_dur_spin = new Gtk.SpinButton.with_range (0, 10000, 1);
 
         mini_dur_spin.width_request = 160;
         mini_dur_spin.set_value (AnimationSettings.get_default ().minimize_duration);
@@ -98,7 +98,7 @@ public class AnimationsGrid : Gtk.Grid
 
 
         var work_dur_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        var work_dur_spin = new Gtk.SpinButton.with_range (1, 2000, 1);
+        var work_dur_spin = new Gtk.SpinButton.with_range (0, 10000, 1);
 
         work_dur_spin.width_request = 160;
         work_dur_spin.set_value (AnimationSettings.get_default ().workspace_switch_duration);
