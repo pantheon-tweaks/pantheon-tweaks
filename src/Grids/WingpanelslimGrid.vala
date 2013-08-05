@@ -62,8 +62,17 @@ public class WingpanelslimGrid : Gtk.Grid
 
         if ( wingpanel_slim[pos] == "wingpanel-slim" )
             wingpanel.set_active(true);
+        else {
+            slim_label.set_sensitive(false);
+            slim_pos_box.set_sensitive(false);
+        }
 
         wingpanel.notify["active"].connect (() => {
+            wingpanel_slim = CerbereSettings.get_default ().monitored_processes;
+            for (int i = 0; i < wingpanel_slim.length ; i++) {
+                if ( wingpanel_slim[i] == "wingpanel" || wingpanel_slim[i] == "wingpanel-slim" )
+                pos = i; 
+            }
             slim_label.set_sensitive(wingpanel.active);
             slim_pos_box.set_sensitive(wingpanel.active);
             (wingpanel.active)?wingpanel_slim[pos] = "killall wingpanel":wingpanel_slim[pos] = "killall wingpanel-slim";

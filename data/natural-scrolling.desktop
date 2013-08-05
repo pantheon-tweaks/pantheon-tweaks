@@ -1,0 +1,11 @@
+
+[Desktop Entry]
+Type=Application
+Exec=/usr/lib/plugs/pantheon/tweaks/natural_scrolling.sh true
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en]=Natural Scrolling
+Name=Natural Scrolling
+Comment[en]=Activates Natural Scrolling
+Comment=Activates Natural Scrolling

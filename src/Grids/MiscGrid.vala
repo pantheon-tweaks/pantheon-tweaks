@@ -39,34 +39,7 @@ public class MiscGrid : Gtk.Grid
         /* Natural Scrolling */
         var scroll = new Gtk.Switch ();
         scroll.set_active(scroll_exists ());
-        scroll.notify["active"].connect (() => {
-            string current_mapping = "";
-            var command = new Granite.Services.SimpleCommand("/usr/bin","xinput list --short");
-            string[] output = { };
-            command.run ();
-            command.done.connect (() => { 
-                output = command.output_str.split ("\n");
-                foreach (string str in output) {
-                    if (str.contains("id=") && str.contains("pointer") && str.contains ("slave") && !str.contains ("XTEST")) {
-                        int index = str.index_of ("id=") + 3;
-                        int pointer_id = int.parse(str.substring (index, str.index_of ("\t", index) - index));
-
-                        var command_map = new Granite.Services.SimpleCommand("/usr/bin","xinput get-button-map " + pointer_id.to_string());
-                        command_map.run ();
-                        command_map.done.connect (() => { 
-                            current_mapping = command_map.output_str.replace("\n","");
-                            if (current_mapping.contains("4 5 6 7"))
-                                current_mapping = current_mapping.replace("4 5 6 7","5 4 7 6");
-                            else
-                                current_mapping = current_mapping.replace("5 4 7 6","4 5 6 7");
-                            var command_change = new Granite.Services.SimpleCommand("/usr/bin","xinput set-button-map " + pointer_id.to_string() + " " + current_mapping);
-                            command_change.run ();
-                            command_change.done.connect (() => scroll_switch (current_mapping, scroll.get_active()));
-                        });
-                    }
-                }
-            });
-        });
+        scroll.notify["active"].connect (() => scroll_switch());
         scroll.halign = Gtk.Align.START;
 
         /* Double Click Titlebar Action */
@@ -169,29 +142,26 @@ public class MiscGrid : Gtk.Grid
     }
 }
 
-public void scroll_switch (string mapping, bool active) {
-    try {
-        var file = File.new_for_path ("/home/" + Environment.get_user_name () + "/.Xmodmap");
-        if (active) {
-            if (file.query_exists ())
-                file.delete ();
-            var file_stream = file.create (FileCreateFlags.NONE);
-            var data_stream = new DataOutputStream (file_stream);
-            data_stream.put_string ("pointer = " + mapping);
-        } else {
-            if (file.query_exists ())
-                file.delete ();
-        }
-    } catch (Error e){
-                warning (e.message);
-    }
-}
-
-public bool scroll_exists () {
+public void scroll_switch () {
         try {
-            var file = File.new_for_path ("/home/" + Environment.get_user_name () + "/.Xmodmap");
-            return (file.query_exists ());
+            var file_dest = File.new_for_path (Environment.get_user_config_dir () + "/autostart/natural-scrolling.desktop");
+            var file_src = File.new_for_path ("/usr/lib/plugs/pantheon/tweaks/natural-scrolling.desktop");
+            if ( scroll_exists() ) {
+                Process.spawn_command_line_async ("/usr/lib/plugs/pantheon/tweaks/natural_scrolling.sh false");
+                if (file_dest.query_exists ())
+                    file_dest.delete ();
+            } else {
+                Process.spawn_command_line_async ("/usr/lib/plugs/pantheon/tweaks/natural_scrolling.sh true");
+                if (!file_dest.query_exists ())
+                    file_src.copy (file_dest, FileCopyFlags.NONE);
+            }
         } catch (Error e){
             warning (e.message);
         }
-    }
+}
+
+public bool scroll_exists () {
+    string scrolling_state;
+    Process.spawn_command_line_sync ("/usr/lib/plugs/pantheon/tweaks/natural_scrolling.sh", out scrolling_state);
+    return scrolling_state.contains("true");
+}

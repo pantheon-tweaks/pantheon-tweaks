@@ -52,7 +52,7 @@ public class InterfaceSettings : Granite.Services.Settings
 
 public Gtk.ComboBoxText combo_box_themes ( string path, string condition ) {
     var return_box = new Gtk.ComboBoxText ();
-    var themes = new Gee.HashSet<string> ();
+    var themes = new Gee.ArrayList<string> ();
 
     string[] dirs = { 
         "/usr/share/" + path + "/",
@@ -66,14 +66,18 @@ public Gtk.ComboBoxText combo_box_themes ( string path, string condition ) {
                 var name = file_info.get_name ();
                 var checktheme = File.new_for_path (dir + name + "/" + condition);
                 var checkicons = File.new_for_path (dir + name + "/48x48/" + condition);
-                if ( ( checktheme.query_exists() || checkicons.query_exists() ) && name != "Emacs" && name != "Default")
+                if ( ( checktheme.query_exists() || checkicons.query_exists() ) &&
+                        name != "Emacs" && name != "Default" && !themes.contains(name))
                     themes.add(name);
             }
         } catch (Error e) { warning (e.message); }
     }
+
+    themes.sort(GLib.strcmp);
 
     foreach (string theme in themes) 
             return_box.append (theme, theme);
 
     return return_box;
 }
+

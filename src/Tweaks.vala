@@ -85,6 +85,9 @@ public class TweaksPlug : Pantheon.Switchboard.Plug
         /* Slingshot Tab*/
         add_page (new SlingshotGrid (), _("Slingshot"), "preferences-tweaks-slingshot", cat_applications);
 
+        /* Cerbere Tab*/
+        add_page (new CerbereGrid (), _("Cerbere"), "preferences-desktop-default-applications", cat_applications);
+
         /* Terminal Tab*/
         add_page (new TerminalGrid (), _("Terminal"), "utilities-terminal", cat_applications);
 

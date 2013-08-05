@@ -26,6 +26,7 @@ vala_precompile (VALA_C
     Settings/TerminalSettings.vala
     Settings/WingpanelslimSettings.vala
     Grids/AppearanceGrid.vala
+    Grids/CerbereGrid.vala
     Grids/FontsGrid.vala
     Grids/FilesGrid.vala
     Grids/AnimationsGrid.vala

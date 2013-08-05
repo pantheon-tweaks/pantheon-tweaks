@@ -1,0 +1,5 @@
+#!/bin/sh
+
+chmod +x /usr/lib/plugs/pantheon/tweaks/natural_scrolling.sh
+
+exit 0
