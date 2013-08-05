@@ -1,4 +1,4 @@
-# German translation for elementary-community
+# Greek translation for elementary-community
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the elementary-community package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-28 23:18+0100\n"
-"PO-Revision-Date: 2013-08-04 14:50+0000\n"
-"Last-Translator: Versable <Unknown>\n"
-"Language-Team: German <de@li.org>\n"
+"PO-Revision-Date: 2013-08-04 10:10+0000\n"
+"Last-Translator: Stathis Iosifidis <Unknown>\n"
+"Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,59 +19,59 @@ msgstr ""
 
 #: ../src/Tweaks.vala:56
 msgid "General"
-msgstr "Allgemein"
+msgstr "Γενικά"
 
 #: ../src/Tweaks.vala:57
 msgid "Applications"
-msgstr "Anwendungen"
+msgstr "Εφαρμογές"
 
 #: ../src/Tweaks.vala:65
 msgid "Appearance"
-msgstr "Darstellung"
+msgstr "Εμφάνιση"
 
 #: ../src/Tweaks.vala:68
 msgid "Fonts"
-msgstr "Schriftarten"
+msgstr "Γραμματοσειρές"
 
 #: ../src/Tweaks.vala:71
 msgid "Animations"
-msgstr "Animationen"
+msgstr "Εφέ κίνησης"
 
 #: ../src/Tweaks.vala:74
 msgid "Shadows"
-msgstr "Schatten"
+msgstr "Σκιές"
 
 #: ../src/Tweaks.vala:77
 msgid "Miscellaneous"
-msgstr "Sonstiges"
+msgstr "Διάφορα"
 
 #: ../src/Tweaks.vala:84
 msgid "Plank"
-msgstr "Plank"
+msgstr ""
 
 #: ../src/Tweaks.vala:87
 msgid "Files"
-msgstr "Dateien"
+msgstr "Αρχεία"
 
 #: ../src/Tweaks.vala:91
 msgid "Search Indicator"
-msgstr "Suche"
+msgstr "Ένδειξη Αναζήτησης"
 
 #: ../src/Tweaks.vala:94
 msgid "Slingshot"
-msgstr "Slingshot"
+msgstr ""
 
 #: ../src/Tweaks.vala:97
 msgid "Terminal"
-msgstr "Terminal"
+msgstr "Τερματικό"
 
 #: ../src/Tweaks.vala:101
 msgid "Wingpanel Slim"
-msgstr "Schmales Wingpanel"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:38
 msgid "Locale"
-msgstr "Gebietsschema"
+msgstr "Γλώσσα"
 
 #: ../src/Grids/FilesGrid.vala:39
 msgid "ISO"
@@ -79,305 +79,304 @@ msgstr "ISO"
 
 #: ../src/Grids/FilesGrid.vala:40
 msgid "Informal"
-msgstr "Informell"
+msgstr "Ανεπίσημος"
 
 #: ../src/Grids/FilesGrid.vala:61
 #: ../src/Grids/SlingshotGrid.vala:29
 msgid "Smallest"
-msgstr "Minimal"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:62
 #: ../src/Grids/SlingshotGrid.vala:30
 msgid "Smaller"
-msgstr "Kleiner"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:63
 #: ../src/Grids/SlingshotGrid.vala:31
 msgid "Small"
-msgstr "Klein"
+msgstr "Μικρό"
 
 #: ../src/Grids/FilesGrid.vala:64
 #: ../src/Grids/SlingshotGrid.vala:32
 msgid "Normal"
-msgstr "Normal"
+msgstr "Κανονικό"
 
 #: ../src/Grids/FilesGrid.vala:65
 #: ../src/Grids/SlingshotGrid.vala:33
 msgid "Large"
-msgstr "Groß"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:66
 #: ../src/Grids/SlingshotGrid.vala:34
 msgid "Larger"
-msgstr "Größer"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:67
 #: ../src/Grids/SlingshotGrid.vala:35
 msgid "Largest"
-msgstr "Maximal"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:85
 msgid "Single Click:"
-msgstr "Einzel-Klick:"
+msgstr "Μονό Κλικ:"
 
 #: ../src/Grids/FilesGrid.vala:88
 msgid "Date Format:"
-msgstr "Datumsformat:"
+msgstr "Μορφή Ημερομηνίας:"
 
 #: ../src/Grids/FilesGrid.vala:91
 msgid "Sidebar Icon Size:"
-msgstr "Seitenleiste Symbolgröße:"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:27
 msgid "Focused Windows:"
-msgstr "Fokussierte Fenster:"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:28
 msgid "Unfocused Windows:"
-msgstr "Nicht fokussierte Fenster:"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:29
 msgid "Focused Dialogs:"
-msgstr "Fokussierte Dialoge:"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:30
 msgid "Unfocused Dialogs:"
-msgstr "Nicht fokussierte Dialoge:"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:31
 msgid "Menu:"
-msgstr "Menü:"
+msgstr "Μενού:"
 
 #: ../src/Grids/ShadowsGrid.vala:194
 msgid "Shadows:"
-msgstr "Schatten:"
+msgstr "Σκιές:"
 
 #: ../src/Grids/SynapseGrid.vala:50
 msgid "Search Indicator Shortcut:"
-msgstr "Such-Tastaturbefehl"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:75
 #: ../src/Grids/MiscGrid.vala:101
 #: ../src/Grids/MiscGrid.vala:128
 msgid "Maximize"
-msgstr "Maximieren"
+msgstr "Μεγιστοποίηση"
 
 #: ../src/Grids/MiscGrid.vala:76
 #: ../src/Grids/MiscGrid.vala:102
 #: ../src/Grids/MiscGrid.vala:129
 msgid "Maximize Horizontally"
-msgstr "Horizontal maximieren"
+msgstr "Οριζόντια μεγιστοποίηση"
 
 #: ../src/Grids/MiscGrid.vala:77
 #: ../src/Grids/MiscGrid.vala:103
 #: ../src/Grids/MiscGrid.vala:130
 msgid "Maximize Vertically"
-msgstr "Vertikal maximieren"
+msgstr "Κατακόρυφη μεγιστοποίηση"
 
 #: ../src/Grids/MiscGrid.vala:78
 #: ../src/Grids/MiscGrid.vala:104
 #: ../src/Grids/MiscGrid.vala:131
 msgid "Minimize"
-msgstr "Minimieren"
+msgstr "Ελαχιστοποίηση"
 
 #: ../src/Grids/MiscGrid.vala:79
 #: ../src/Grids/MiscGrid.vala:105
 #: ../src/Grids/MiscGrid.vala:132
 msgid "Shade"
-msgstr "Einklappen"
+msgstr "Σκίαση"
 
 #: ../src/Grids/MiscGrid.vala:80
 #: ../src/Grids/MiscGrid.vala:106
 #: ../src/Grids/MiscGrid.vala:133
 msgid "Lower Window"
-msgstr "Fenster nach hinten"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:127
 msgid "Menu"
-msgstr "Menü"
+msgstr "Μενού"
 
 #: ../src/Grids/MiscGrid.vala:151
 msgid "Double Click Titlebar Action:"
-msgstr "Aktion bei Doppelklick auf der Titelleiste:"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:154
 msgid "Middle Click Titlebar Action:"
-msgstr "Aktion bei Klick der mittleren Maustaste auf der Titelleiste:"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:157
 msgid "Right Click Titlebar Action:"
-msgstr "Aktion bei Rechtsklick auf der Titelleiste:"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:160
 msgid "Audible Bell:"
-msgstr "Akustische Warnungen:"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:163
 msgid "Overlay Scrollbars:"
-msgstr "Eingeblendete Scrollbalken:"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:166
 msgid "Natural Scrolling:"
-msgstr "Natürlicher Bildlauf:"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:49
 msgid "Top"
-msgstr "Oben"
+msgstr "Πάνω"
 
 #: ../src/Grids/DockGrid.vala:50
 msgid "Bottom"
-msgstr "Unten"
+msgstr "Κάτω"
 
 #: ../src/Grids/DockGrid.vala:51
 #: ../src/Grids/WingpanelslimGrid.vala:46
 msgid "Left"
-msgstr "Links"
+msgstr "Αριστερά"
 
 #: ../src/Grids/DockGrid.vala:52
 #: ../src/Grids/WingpanelslimGrid.vala:44
 msgid "Right"
-msgstr "Rechts"
+msgstr "Δεξιά"
 
 #: ../src/Grids/DockGrid.vala:53
 msgid "Center"
-msgstr "Zentriert"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:54
 msgid "Panel"
-msgstr "Menüleiste"
+msgstr "Πίνακας"
 
 #: ../src/Grids/DockGrid.vala:135
 msgid "Item Alignment:"
-msgstr "Symbolanordnung:"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:173
 msgid "Unknown Value"
-msgstr "Unbekannter Wert"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:195
 msgid "Don't hide"
-msgstr "Nicht Ausblenden"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:196
 msgid "Intelligent hide"
-msgstr "Intelligent Ausblenden"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:197
 msgid "Auto hide"
-msgstr "Automatisch Ausblenden"
+msgstr "Αυτόματη απόκρυψη"
 
 #: ../src/Grids/DockGrid.vala:198
 msgid "Hide on maximize"
-msgstr "Bei maximierten Fenstern ausblenden"
+msgstr "Απόκρυψη στη μεγιστοποίηση"
 
 #: ../src/Grids/DockGrid.vala:274
 msgid "Primary Monitor"
-msgstr "Hauptbildschirm"
+msgstr "Κύρια Οθόνη"
 
 #: ../src/Grids/DockGrid.vala:277
 #, c-format
 msgid "Monitor %d"
-msgstr "Monitor %d"
+msgstr "Οθόνη %d"
 
 #: ../src/Grids/DockGrid.vala:297
 msgid "Icon Size:"
-msgstr "Symbolgröße:"
+msgstr "Μέγεθος εικονιδίου:"
 
 #: ../src/Grids/DockGrid.vala:301
 msgid "Hide Mode:"
-msgstr "Verhalten:"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:306
 #: ../src/Grids/TerminalGrid.vala:210
 msgid "Theme:"
-msgstr "Design:"
+msgstr "Θέμα:"
 
 #: ../src/Grids/DockGrid.vala:312
 msgid "Monitor:"
-msgstr "Monitor:"
+msgstr "Οθόνη:"
 
 #: ../src/Grids/DockGrid.vala:316
 #: ../src/Grids/WingpanelslimGrid.vala:43
 msgid "Position:"
-msgstr "Position:"
+msgstr "Θέση:"
 
 #: ../src/Grids/DockGrid.vala:319
 msgid "Alignment:"
-msgstr "Ausrichtung:"
+msgstr "Στοίχιση:"
 
 #: ../src/Grids/DockGrid.vala:325
 msgid "Workspace Overview Icon:"
-msgstr "Arbeitsflächenübersicht Symbol:"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:328
 msgid "Show Desktop Icon:"
-msgstr "Zeige-Desktop Symbol:"
+msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:45
 msgid "Middle"
-msgstr "Zentriert"
+msgstr "Μέση"
 
 #: ../src/Grids/WingpanelslimGrid.vala:80
 #: ../src/Grids/WingpanelslimGrid.vala:88
 msgid "Slim Wingpanel:"
-msgstr "Schmales Wingpanel:"
+msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:89
 msgid "Wingpanel Slim not found. Settings have been reset!"
 msgstr ""
-"Schmales Wingpanel nicht gefunden. Einstellungen wurden zurückgesetzt!"
 
 #: ../src/Grids/AnimationsGrid.vala:27
 msgid "Open Duration:"
-msgstr "Dauer zum Öffnen:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:28
 msgid "Close Duration:"
-msgstr "Dauer zum Schließen:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:29
 msgid "Snap Duration:"
-msgstr "Dauer zum Einrasten:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:30
 msgid "Minimize Duration:"
-msgstr "Dauer zum Minimieren:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:31
 msgid "Workspace Switch Duration:"
-msgstr "Dauer zum Arbeitsflächenwechsel:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:148
 msgid "Animations:"
-msgstr "Animationen:"
+msgstr "Εφέ κίνησης:"
 
 #: ../src/Grids/SlingshotGrid.vala:93
 msgid "Rows:"
-msgstr "Reihen:"
+msgstr "Γραμμές:"
 
 #: ../src/Grids/SlingshotGrid.vala:96
 msgid "Columns:"
-msgstr "Spalten:"
+msgstr "Στήλες:"
 
 #: ../src/Grids/AppearanceGrid.vala:170
 msgid "Custom Layout:"
-msgstr "Benutzerdefiniertes Layout:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:173
 msgid "Close Only"
-msgstr "Nur Schließen"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:174
 msgid "Minimize Left"
-msgstr "Minimiere Links"
+msgstr "Ελαχιστοποίηση Αριστερά"
 
 #: ../src/Grids/AppearanceGrid.vala:175
 msgid "Minimize Right"
-msgstr "Minimiere Rechts"
+msgstr "Ελαχιστοποίηση Δεξιά"
 
 #: ../src/Grids/AppearanceGrid.vala:176
 msgid "Windows"
-msgstr "Windows"
+msgstr "Παράθυρα"
 
 #: ../src/Grids/AppearanceGrid.vala:177
 msgid "OS X"
@@ -386,52 +385,52 @@ msgstr "OS X"
 #: ../src/Grids/AppearanceGrid.vala:178
 #: ../src/Grids/TerminalGrid.vala:180
 msgid "Custom"
-msgstr "Benutzerdefiniert"
+msgstr "Προσαρμοσμένο"
 
 #: ../src/Grids/AppearanceGrid.vala:237
 msgid "Window Decoration Theme:"
-msgstr "Fenster Dekoration:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:240
 msgid "Interface Theme:"
-msgstr "Oberflächenthema:"
+msgstr "Θέμα Διεπαφής:"
 
 #: ../src/Grids/AppearanceGrid.vala:243
 msgid "Icon Theme:"
-msgstr "Symbolthema:"
+msgstr "Θέμα Εικονιδίων:"
 
 #: ../src/Grids/AppearanceGrid.vala:246
 msgid "Cursor Theme:"
-msgstr "Mauszeigerthema:"
+msgstr "Θέμα Δείκτη:"
 
 #: ../src/Grids/AppearanceGrid.vala:249
 msgid "Button Layout:"
-msgstr "Fensterbuttons:"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:98
 msgid "Default Font:"
-msgstr "Standard-Schrift:"
+msgstr "Προεπιλεγμένη γραμματοσειρά:"
 
 #: ../src/Grids/FontsGrid.vala:101
 msgid "Document Font:"
-msgstr "Dokumenten-Schrift:"
+msgstr "Γραμματοσειρά Εγγράφων:"
 
 #: ../src/Grids/FontsGrid.vala:104
 msgid "Monospace Font:"
-msgstr "Nichtproportionale Schrift:"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:107
 msgid "Window Title Font:"
-msgstr "Fenstertitel-Schrift:"
+msgstr ""
 
 #: ../src/Grids/TerminalGrid.vala:199
 msgid "Limit Scrollback Lines:"
-msgstr "Begrenze Bildrücklaufzeilen:"
+msgstr ""
 
 #: ../src/Grids/TerminalGrid.vala:203
 msgid "Custom Font:"
-msgstr "Benutzerdefinierte Schrift:"
+msgstr "Προσαρμοσμένη Γραμματοσειρά:"
 
 #: ../src/Grids/TerminalGrid.vala:207
 msgid "Opacity:"
-msgstr "Transparenz:"
+msgstr ""
