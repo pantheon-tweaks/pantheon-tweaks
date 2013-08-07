@@ -138,11 +138,13 @@ public class CerbereGrid : Gtk.Grid
         Gtk.TreePath path;
 
         list.get_cursor (out path, null);
-        list_store.get_iter (out iter, path);
-        list_store.get_value (iter, 0, out name);
+        if (path != null) {
+            list_store.get_iter (out iter, path);
+            list_store.get_value (iter, 0, out name);
 
-        watched.remove (name.get_string ());
-        CerbereSettings.get_default ().monitored_processes = watched.to_array();
+            watched.remove (name.get_string ());
+            CerbereSettings.get_default ().monitored_processes = watched.to_array();
+        }
     }
 
     void list_edit ( string path, string new_text) {
