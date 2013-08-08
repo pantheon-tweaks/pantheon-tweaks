@@ -1,4 +1,4 @@
-# Dutch translation for elementary-community
+# Latvian translation for elementary-community
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the elementary-community package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-07-28 23:18+0100\n"
-"PO-Revision-Date: 2013-08-07 11:52+0000\n"
-"Last-Translator: Vistaus <vistausss@gmail.com>\n"
-"Language-Team: Dutch <nl@li.org>\n"
+"PO-Revision-Date: 2013-08-07 11:47+0000\n"
+"Last-Translator: marhis <Unknown>\n"
+"Language-Team: Latvian <lv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,59 +19,59 @@ msgstr ""
 
 #: ../src/Tweaks.vala:56
 msgid "General"
-msgstr "Algemeen"
+msgstr "Vispārīgi"
 
 #: ../src/Tweaks.vala:57
 msgid "Applications"
-msgstr "Toepassingen"
+msgstr "Aplikācijas"
 
 #: ../src/Tweaks.vala:65
 msgid "Appearance"
-msgstr "Uiterlijk"
+msgstr "Izskats"
 
 #: ../src/Tweaks.vala:68
 msgid "Fonts"
-msgstr "Lettertypes"
+msgstr "Fonti"
 
 #: ../src/Tweaks.vala:71
 msgid "Animations"
-msgstr "Animaties"
+msgstr "Animācijas"
 
 #: ../src/Tweaks.vala:74
 msgid "Shadows"
-msgstr "Schaduwen"
+msgstr "Ēnas"
 
 #: ../src/Tweaks.vala:77
 msgid "Miscellaneous"
-msgstr "Diversen"
+msgstr "Dažādi"
 
 #: ../src/Tweaks.vala:84
 msgid "Plank"
-msgstr "Plank"
+msgstr ""
 
 #: ../src/Tweaks.vala:87
 msgid "Files"
-msgstr "Bestanden"
+msgstr "Faili"
 
 #: ../src/Tweaks.vala:91
 msgid "Search Indicator"
-msgstr "Zoek-indicator"
+msgstr "Meklēšanas indikators"
 
 #: ../src/Tweaks.vala:94
 msgid "Slingshot"
-msgstr "Slingshot"
+msgstr ""
 
 #: ../src/Tweaks.vala:97
 msgid "Terminal"
-msgstr "Terminal"
+msgstr "Terminālis"
 
 #: ../src/Tweaks.vala:101
 msgid "Wingpanel Slim"
-msgstr "Wingpanel Slim"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:38
 msgid "Locale"
-msgstr "Taal"
+msgstr "Lokālie"
 
 #: ../src/Grids/FilesGrid.vala:39
 msgid "ISO"
@@ -79,358 +79,358 @@ msgstr "ISO"
 
 #: ../src/Grids/FilesGrid.vala:40
 msgid "Informal"
-msgstr "Informeel"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:61
 #: ../src/Grids/SlingshotGrid.vala:29
 msgid "Smallest"
-msgstr "Kleinste"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:62
 #: ../src/Grids/SlingshotGrid.vala:30
 msgid "Smaller"
-msgstr "Kleiner"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:63
 #: ../src/Grids/SlingshotGrid.vala:31
 msgid "Small"
-msgstr "Klein"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:64
 #: ../src/Grids/SlingshotGrid.vala:32
 msgid "Normal"
-msgstr "Normaal"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:65
 #: ../src/Grids/SlingshotGrid.vala:33
 msgid "Large"
-msgstr "Groot"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:66
 #: ../src/Grids/SlingshotGrid.vala:34
 msgid "Larger"
-msgstr "Groter"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:67
 #: ../src/Grids/SlingshotGrid.vala:35
 msgid "Largest"
-msgstr "Grootst"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:85
 msgid "Single Click:"
-msgstr "Enkele klik:"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:88
 msgid "Date Format:"
-msgstr "Datum-opmaak:"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:91
 msgid "Sidebar Icon Size:"
-msgstr "Pictogramgrootte zijbalk:"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:27
 msgid "Focused Windows:"
-msgstr "Vensters op voorgrond:"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:28
 msgid "Unfocused Windows:"
-msgstr "Vensters op achtergrond:"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:29
 msgid "Focused Dialogs:"
-msgstr "Dialoogvensters op voorgrond:"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:30
 msgid "Unfocused Dialogs:"
-msgstr "Dialoogvensters op achtergrond:"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:31
 msgid "Menu:"
-msgstr "Menu:"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:194
 msgid "Shadows:"
-msgstr "Schaduwen:"
+msgstr ""
 
 #: ../src/Grids/SynapseGrid.vala:50
 msgid "Search Indicator Shortcut:"
-msgstr "Sneltoets Zoek-indicator:"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:75
 #: ../src/Grids/MiscGrid.vala:101
 #: ../src/Grids/MiscGrid.vala:128
 msgid "Maximize"
-msgstr "Maximaliseer"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:76
 #: ../src/Grids/MiscGrid.vala:102
 #: ../src/Grids/MiscGrid.vala:129
 msgid "Maximize Horizontally"
-msgstr "Maximaliseer horizontaal"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:77
 #: ../src/Grids/MiscGrid.vala:103
 #: ../src/Grids/MiscGrid.vala:130
 msgid "Maximize Vertically"
-msgstr "Maximaliseer verticaal"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:78
 #: ../src/Grids/MiscGrid.vala:104
 #: ../src/Grids/MiscGrid.vala:131
 msgid "Minimize"
-msgstr "Minimaliseer"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:79
 #: ../src/Grids/MiscGrid.vala:105
 #: ../src/Grids/MiscGrid.vala:132
 msgid "Shade"
-msgstr "Rol op"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:80
 #: ../src/Grids/MiscGrid.vala:106
 #: ../src/Grids/MiscGrid.vala:133
 msgid "Lower Window"
-msgstr "Venster naar achtergrond"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:127
 msgid "Menu"
-msgstr "Menu"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:151
 msgid "Double Click Titlebar Action:"
-msgstr "Actie bij dubbelklikken op titelbalk:"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:154
 msgid "Middle Click Titlebar Action:"
-msgstr "Actie bij middelklikken op titelbalk:"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:157
 msgid "Right Click Titlebar Action:"
-msgstr "Actie bij rechtsklikken op titelbalk:"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:160
 msgid "Audible Bell:"
-msgstr "Hoorbare bel:"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:163
 msgid "Overlay Scrollbars:"
-msgstr "Overlappende scrollbalken:"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:166
 msgid "Natural Scrolling:"
-msgstr "Natuurlijk scrollen"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:49
 msgid "Top"
-msgstr "Boven"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:50
 msgid "Bottom"
-msgstr "Onder"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:51
 #: ../src/Grids/WingpanelslimGrid.vala:46
 msgid "Left"
-msgstr "Links"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:52
 #: ../src/Grids/WingpanelslimGrid.vala:44
 msgid "Right"
-msgstr "Rechts"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:53
 msgid "Center"
-msgstr "Midden"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:54
 msgid "Panel"
-msgstr "Paneel"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:135
 msgid "Item Alignment:"
-msgstr "Item-uitlijning:"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:173
 msgid "Unknown Value"
-msgstr "Onbekende waarde"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:195
 msgid "Don't hide"
-msgstr "Niet verbergen"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:196
 msgid "Intelligent hide"
-msgstr "Intelligent verbergen"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:197
 msgid "Auto hide"
-msgstr "Automatisch verbergen"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:198
 msgid "Hide on maximize"
-msgstr "Verbergen bij maximaliseren"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:274
 msgid "Primary Monitor"
-msgstr "Primaire monitor"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:277
 #, c-format
 msgid "Monitor %d"
-msgstr "Beeldscherm %d"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:297
 msgid "Icon Size:"
-msgstr "Pictogramgrootte:"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:301
 msgid "Hide Mode:"
-msgstr "Verbergmodus:"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:306
 #: ../src/Grids/TerminalGrid.vala:210
 msgid "Theme:"
-msgstr "Thema:"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:312
 msgid "Monitor:"
-msgstr "Beeldscherm:"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:316
 #: ../src/Grids/WingpanelslimGrid.vala:43
 msgid "Position:"
-msgstr "Positie:"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:319
 msgid "Alignment:"
-msgstr "Uitlijning:"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:325
 msgid "Workspace Overview Icon:"
-msgstr "Werkbladoverzicht-pictogram"
+msgstr ""
 
 #: ../src/Grids/DockGrid.vala:328
 msgid "Show Desktop Icon:"
-msgstr "Toon bureaublad-pictogram"
+msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:45
 msgid "Middle"
-msgstr "Midden"
+msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:80
 #: ../src/Grids/WingpanelslimGrid.vala:88
 msgid "Slim Wingpanel:"
-msgstr "Slim Wingpanel:"
+msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:89
 msgid "Wingpanel Slim not found. Settings have been reset!"
-msgstr "Wingpanel Slim niet gevonden. Voorkeuren zijn teruggedraaid!"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:27
 msgid "Open Duration:"
-msgstr "Open-duur:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:28
 msgid "Close Duration:"
-msgstr "Sluit-duur:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:29
 msgid "Snap Duration:"
-msgstr "Snap-duur:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:30
 msgid "Minimize Duration:"
-msgstr "Minimaliseer-duur:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:31
 msgid "Workspace Switch Duration:"
-msgstr "Werkbladwissel-duur:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:148
 msgid "Animations:"
-msgstr "Animaties:"
+msgstr ""
 
 #: ../src/Grids/SlingshotGrid.vala:93
 msgid "Rows:"
-msgstr "Rijen:"
+msgstr ""
 
 #: ../src/Grids/SlingshotGrid.vala:96
 msgid "Columns:"
-msgstr "Kolommen:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:170
 msgid "Custom Layout:"
-msgstr "Aangepaste layout:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:173
 msgid "Close Only"
-msgstr "Alleen sluiten"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:174
 msgid "Minimize Left"
-msgstr "Minimaliseer links"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:175
 msgid "Minimize Right"
-msgstr "Minimaliseer rechts"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:176
 msgid "Windows"
-msgstr "Vensters"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:177
 msgid "OS X"
-msgstr "OS X"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:178
 #: ../src/Grids/TerminalGrid.vala:180
 msgid "Custom"
-msgstr "Aangepast"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:237
 msgid "Window Decoration Theme:"
-msgstr "Vensterdecoratie-thema:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:240
 msgid "Interface Theme:"
-msgstr "Applicatiethema:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:243
 msgid "Icon Theme:"
-msgstr "Pictogramthema:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:246
 msgid "Cursor Theme:"
-msgstr "Cursorthema:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:249
 msgid "Button Layout:"
-msgstr "Knopvolgorde:"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:98
 msgid "Default Font:"
-msgstr "Standaardlettertype:"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:101
 msgid "Document Font:"
-msgstr "Documentlettertype:"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:104
 msgid "Monospace Font:"
-msgstr "Monospace-lettertype:"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:107
 msgid "Window Title Font:"
-msgstr "Venstertitel-lettertype:"
+msgstr ""
 
 #: ../src/Grids/TerminalGrid.vala:199
 msgid "Limit Scrollback Lines:"
-msgstr "Limiteer terugscrollregels:"
+msgstr ""
 
 #: ../src/Grids/TerminalGrid.vala:203
 msgid "Custom Font:"
-msgstr "Aangepast lettertype:"
+msgstr ""
 
 #: ../src/Grids/TerminalGrid.vala:207
 msgid "Opacity:"
-msgstr "Ondoorzichtigheid:"
+msgstr ""
