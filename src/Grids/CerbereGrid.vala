@@ -47,7 +47,7 @@ public class CerbereGrid : Gtk.Grid
         tbar.get_style_context().add_class(Gtk.STYLE_CLASS_INLINE_TOOLBAR);
         tbar.get_style_context().set_junction_sides(Gtk.JunctionSides.TOP);
 
-        var add_button = new Gtk.ToolButton (null, _("Add…"));
+        var add_button = new Gtk.ToolButton (null, _("Add..."));
         var remove_button = new Gtk.ToolButton (null, _("Remove"));
         var spacer = new Gtk.ToolItem ();
         var reset_button = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
@@ -57,7 +57,7 @@ public class CerbereGrid : Gtk.Grid
         add_button.set_icon_name ("list-add-symbolic");
         remove_button.set_icon_name ("list-remove-symbolic");
 
-        add_button.set_tooltip_text (_("Add…"));
+        add_button.set_tooltip_text (_("Add..."));
         remove_button.set_tooltip_text (_("Remove"));
         reset_button.set_tooltip_text (_("Revert to Default"));
 
