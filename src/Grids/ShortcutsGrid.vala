@@ -184,7 +184,10 @@ public class ShortcutsGrid : Gtk.Grid
     }
 
     void change_shortcut (string path, Shortcut? shortcut) {
-        list_edit( path, null, shortcut.to_gsettings(), null );
+        if ( shortcut == null ) 
+            list_edit( path, null, new Shortcut(0, (Gdk.ModifierType)0).to_gsettings(), null );
+        else
+            list_edit( path, null, shortcut.to_gsettings(), null );
     }
 
     void list_add( string name, string shortcut, string command ) {
