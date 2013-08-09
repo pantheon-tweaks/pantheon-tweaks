@@ -57,17 +57,9 @@ public class ShortcutsGrid : Gtk.Grid
         cell_command.editable = true;
         cell_command.alignment = Pango.Alignment.RIGHT;
 
-        cell_shortcut.accel_edited.connect ((path, key, mods) => {
-        var shortcut = new Shortcut (key, mods);
-            GLib.Value name;
-            Gtk.TreeIter iter;
+        cell_shortcut.accel_edited.connect ((path, key, mods) => change_shortcut(path, new Shortcut (key, mods)));
 
-            store.get_iter (out iter, new Gtk.TreePath.from_string (path));
-            store.get_value (iter, 0, out name);
-
-            name.set_string (shortcut.to_gsettings());
-            store.set_value (iter, 1, shortcut.to_gsettings());
-        } );
+        cell_shortcut.accel_cleared.connect ((path) => change_shortcut (path, (Shortcut) null));
 
         cell_name.edited.connect ((path, new_text) => list_edit( path, new_text, null, null ));
         cell_command.edited.connect ((path, new_text) => list_edit( path, null, null, new_text ));
@@ -189,6 +181,10 @@ public class ShortcutsGrid : Gtk.Grid
             store.set (iter, 2, s.command);
             store.set (iter, 3, s.index);
         }
+    }
+
+    void change_shortcut (string path, Shortcut? shortcut) {
+        list_edit( path, null, shortcut.to_gsettings(), null );
     }
 
     void list_add( string name, string shortcut, string command ) {
