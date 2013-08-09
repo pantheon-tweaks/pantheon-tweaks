@@ -67,6 +67,9 @@ public class TweaksPlug : Pantheon.Switchboard.Plug
         add_page (new ShadowsGrid (), _("Shadows"), "preferences-tweaks-shadows", cat_general);
 
         /* Misc Tab*/
+        add_page (new ShortcutsGrid (), _("Shortcuts"), "preferences-desktop-keyboard", cat_general);
+
+        /* Misc Tab*/
         add_page (new MiscGrid (), _("Miscellaneous"), "preferences-system-session", cat_general);
 
 

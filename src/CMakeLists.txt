@@ -1,7 +1,7 @@
 find_package (PkgConfig)
 
 # Add all your dependencies to the list below
-pkg_check_modules (DEPS REQUIRED pantheon granite)
+pkg_check_modules (DEPS REQUIRED pantheon granite gconf-2.0)
 
 add_definitions (${DEPS_CFLAGS} -I/usr/include/polkit-1)
 link_libraries (${DEPS_LIBRARIES})
@@ -19,6 +19,7 @@ vala_precompile (VALA_C
     Settings/FilesSettings.vala
     Settings/GalaSettings.vala
     Settings/PlankSettings.vala
+    Settings/KeyboardSettings.vala
     Settings/SlingshotSettings.vala
     Settings/CerbereSettings.vala
     Settings/GnomeSettings.vala
@@ -29,6 +30,7 @@ vala_precompile (VALA_C
     Grids/CerbereGrid.vala
     Grids/FontsGrid.vala
     Grids/FilesGrid.vala
+    Grids/ShortcutsGrid.vala
     Grids/AnimationsGrid.vala
     Grids/ShadowsGrid.vala
     Grids/PlankGrid.vala
@@ -37,10 +39,13 @@ vala_precompile (VALA_C
     Grids/SynapseGrid.vala
     Grids/TerminalGrid.vala
     Grids/WingpanelslimGrid.vala
+    Objects/ShortcutObject.vala
+    Widgets/AcceleratorInputWidget.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     pantheon
     granite
+    gconf-2.0
 OPTIONS
 )
 

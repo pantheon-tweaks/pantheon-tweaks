@@ -6,6 +6,7 @@ Build-Depends: cmake (>= 2.6),
                debhelper (>= 7.0.50~),
                libgranite-dev,
                libpantheon-dev,
+               libgconf2-dev,
                valac-0.16 | valac (>= 0.16)
 Standards-Version: 3.9.2
 Homepage: https://launchpad.net/pantheon-plugs

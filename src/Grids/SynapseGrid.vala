@@ -17,30 +17,33 @@
 
 public class SynapseGrid : Gtk.Grid
 {
+
     public SynapseGrid () {
         this.row_spacing = 6;
         this.column_spacing = 12;
         this.margin_top = 24;
         this.column_homogeneous = true;
 
-        var search_entry_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        var search_entry = new Gtk.Entry();
-        search_entry.text = SynapseSettings.get_default ().shortcut;
-        search_entry.changed.connect (() => SynapseSettings.get_default ().shortcut = search_entry.text);
-        search_entry.width_request = 160;
-        search_entry.halign = Gtk.Align.START;
+        var key = new AcceleratorInput ();
+        var key_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        key.set_accelerator_from_string(SynapseSettings.get_default ().shortcut);
+        key.width_request = 160;
 
-        var search_entry_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
+        key.accelerator_set.connect (() => SynapseSettings.get_default ().shortcut = key.get_accelerator_from_string());
 
-        search_entry_default.clicked.connect (() => {
+        var key_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
+
+        key_default.clicked.connect (() => {
             SynapseSettings.get_default ().schema.reset("shortcut");
-            search_entry.text = SynapseSettings.get_default ().shortcut;
+            key.set_accelerator_from_string(SynapseSettings.get_default ().shortcut);
         });
 
-        search_entry_box.pack_start (search_entry, false);
-        search_entry_box.pack_start (search_entry_default, false);
+        key_box.pack_start (key, false);
+        key_box.pack_start (key_default, false);
+
+
 
         this.attach (new LLabel.right (_("Search Indicator Shortcut:")), 0, 0, 1, 1);
-        this.attach (search_entry_box, 1, 0, 1, 1);
+        this.attach (key_box, 1, 0, 1, 1);
     }
 }

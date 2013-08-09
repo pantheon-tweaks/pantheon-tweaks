@@ -161,7 +161,12 @@ public void scroll_switch () {
 }
 
 public bool scroll_exists () {
-    string scrolling_state;
-    Process.spawn_command_line_sync ("/usr/lib/plugs/pantheon/tweaks/natural_scrolling.sh", out scrolling_state);
-    return scrolling_state.contains("true");
+    try {
+        string scrolling_state;
+        Process.spawn_command_line_sync ("/usr/lib/plugs/pantheon/tweaks/natural_scrolling.sh", out scrolling_state);
+        return scrolling_state.contains("true");
+    } catch (Error e) {
+        warning (e.message);
+    }
+    return false;
 }

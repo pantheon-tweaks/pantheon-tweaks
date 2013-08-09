@@ -17,3 +17,4 @@ public class SynapseSettings : Granite.Services.Settings
         return instance;
     }
 }
+
