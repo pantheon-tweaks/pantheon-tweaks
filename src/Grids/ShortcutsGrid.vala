@@ -26,11 +26,23 @@ public class ShortcutsGrid : Gtk.Grid
         this.margin_top = 0;
         this.column_homogeneous = true;
 
-        store = new Gtk.ListStore (4, typeof (string), typeof (string), typeof (string), typeof (int));
+        store = new Gtk.ListStore (4, 
+                typeof (string), // Name
+                typeof (string), // Shortcut
+                typeof (string), // Command
+                typeof (int)     // Index
+                );
         list_update();
+
+        var css = new Gtk.CssProvider ();
+        css.load_from_data ("""
+        GtkTreeView { background-color: @fff; }
+        GtkTreeView:selected { background-color: @selected_bg_color; }
+        """, -1);
 
         key = new Gtk.TreeView.with_model (store);
         key.expand = true;
+        key.get_style_context ().add_provider (css, 9999999);
 
         var cell_name = new Gtk.CellRendererText ();
         cell_name.editable = true;
@@ -83,7 +95,7 @@ public class ShortcutsGrid : Gtk.Grid
         tbar.get_style_context().add_class(Gtk.STYLE_CLASS_INLINE_TOOLBAR);
         tbar.get_style_context().set_junction_sides(Gtk.JunctionSides.TOP);
 
-        var add_button = new Gtk.ToolButton (null, _("Add…"));
+        var add_button = new Gtk.ToolButton (null, _("Add..."));
         var remove_button = new Gtk.ToolButton (null, _("Remove"));
         var spacer = new Gtk.ToolItem ();
         var reset_button = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
@@ -150,7 +162,7 @@ public class ShortcutsGrid : Gtk.Grid
         add_button.set_icon_name ("list-add-symbolic");
         remove_button.set_icon_name ("list-remove-symbolic");
 
-        add_button.set_tooltip_text (_("Add…"));
+        add_button.set_tooltip_text (_("Add..."));
         remove_button.set_tooltip_text (_("Remove"));
         reset_button.set_tooltip_text (_("Revert to Default"));
 
