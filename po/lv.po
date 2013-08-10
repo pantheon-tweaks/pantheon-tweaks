@@ -1,4 +1,4 @@
-# Danish translation for elementary-community
+# Latvian translation for elementary-community
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the elementary-community package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-09 23:05+0100\n"
-"PO-Revision-Date: 2013-06-20 13:12+0000\n"
-"Last-Translator: Casper Christiansen <casperc1337@gmail.com>\n"
-"Language-Team: Danish <da@li.org>\n"
+"PO-Revision-Date: 2013-08-07 11:47+0000\n"
+"Last-Translator: marhis <Unknown>\n"
+"Language-Team: Latvian <lv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,27 +19,27 @@ msgstr ""
 
 #: ../src/Tweaks.vala:49
 msgid "General"
-msgstr ""
+msgstr "Vispārīgi"
 
 #: ../src/Tweaks.vala:50
 msgid "Applications"
-msgstr ""
+msgstr "Aplikācijas"
 
 #: ../src/Tweaks.vala:58
 msgid "Appearance"
-msgstr "Udseende"
+msgstr "Izskats"
 
 #: ../src/Tweaks.vala:61
 msgid "Fonts"
-msgstr ""
+msgstr "Fonti"
 
 #: ../src/Tweaks.vala:64
 msgid "Animations"
-msgstr "Animationer"
+msgstr "Animācijas"
 
 #: ../src/Tweaks.vala:67
 msgid "Shadows"
-msgstr ""
+msgstr "Ēnas"
 
 #: ../src/Tweaks.vala:70
 msgid "Shortcuts"
@@ -47,7 +47,7 @@ msgstr ""
 
 #: ../src/Tweaks.vala:73
 msgid "Miscellaneous"
-msgstr "Diverse"
+msgstr "Dažādi"
 
 #: ../src/Tweaks.vala:79
 msgid "Plank"
@@ -55,11 +55,11 @@ msgstr ""
 
 #: ../src/Tweaks.vala:82
 msgid "Files"
-msgstr ""
+msgstr "Faili"
 
 #: ../src/Tweaks.vala:86
 msgid "Search Indicator"
-msgstr ""
+msgstr "Meklēšanas indikators"
 
 #: ../src/Tweaks.vala:89
 msgid "Slingshot"
@@ -71,7 +71,7 @@ msgstr ""
 
 #: ../src/Tweaks.vala:95
 msgid "Terminal"
-msgstr ""
+msgstr "Terminālis"
 
 #: ../src/Tweaks.vala:99
 msgid "Wingpanel Slim"
@@ -79,7 +79,7 @@ msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:38
 msgid "Locale"
-msgstr ""
+msgstr "Lokālie"
 
 #: ../src/Grids/FilesGrid.vala:39
 msgid "ISO"
@@ -87,54 +87,54 @@ msgstr "ISO"
 
 #: ../src/Grids/FilesGrid.vala:40
 msgid "Informal"
-msgstr "Uformel"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:61
 #: ../src/Grids/SlingshotGrid.vala:29
 msgid "Smallest"
-msgstr "Mindst"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:62
 #: ../src/Grids/SlingshotGrid.vala:30
 msgid "Smaller"
-msgstr "Mindre"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:63
 #: ../src/Grids/SlingshotGrid.vala:31
 msgid "Small"
-msgstr "Lille"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:64
 #: ../src/Grids/SlingshotGrid.vala:32
 msgid "Normal"
-msgstr "Normal"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:65
 #: ../src/Grids/SlingshotGrid.vala:33
 msgid "Large"
-msgstr "Stor"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:66
 #: ../src/Grids/SlingshotGrid.vala:34
 msgid "Larger"
-msgstr "Større"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:67
 #: ../src/Grids/SlingshotGrid.vala:35
 msgid "Largest"
-msgstr "Størst"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:85
 msgid "Single Click:"
-msgstr "Enkeltklik:"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:88
 msgid "Date Format:"
-msgstr "Datoformat:"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:91
 msgid "Sidebar Icon Size:"
-msgstr "Sidebjælke Ikon Størrelse:"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:27
 msgid "Focused Windows:"
@@ -189,88 +189,88 @@ msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:47
 msgid "Top"
-msgstr "Top"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:48
 msgid "Bottom"
-msgstr "Bund"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:49
 #: ../src/Grids/WingpanelslimGrid.vala:42
 msgid "Left"
-msgstr "Venstre"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:50
 #: ../src/Grids/WingpanelslimGrid.vala:40
 msgid "Right"
-msgstr "Højre"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:51
 msgid "Center"
-msgstr "Midte"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:52
 msgid "Panel"
-msgstr "Panel"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:133
 msgid "Item Alignment:"
-msgstr "Objekt Opstilling:"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:171
 msgid "Unknown Value"
-msgstr "Ukendt Værdi"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:193
 msgid "Don't hide"
-msgstr "Skjul ikke"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:194
 msgid "Intelligent hide"
-msgstr "Intelligent skjulning"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:195
 msgid "Auto hide"
-msgstr "Skjul automatisk"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:196
 msgid "Hide on maximize"
-msgstr "Skjul ved maximering"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:249
 msgid "Primary Monitor"
-msgstr "Primære Skærm"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:252
 #, c-format
 msgid "Monitor %d"
-msgstr "Skærm %d"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:272
 msgid "Icon Size:"
-msgstr "Ikonstørrelse:"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:276
 msgid "Hide Mode:"
-msgstr "Skjulningstilstand:"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:280
 #: ../src/Grids/TerminalGrid.vala:210
 msgid "Theme:"
-msgstr "Tema:"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:285
 msgid "Monitor:"
-msgstr "Skærm:"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:289
 #: ../src/Grids/WingpanelslimGrid.vala:39
 msgid "Position:"
-msgstr "Placering:"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:292
 msgid "Alignment:"
-msgstr "Opstilling:"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:298
 msgid "Workspace Overview Icon:"
@@ -278,7 +278,7 @@ msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:301
 msgid "Show Desktop Icon:"
-msgstr "Vis Skrivebord Ikon"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:48
 #: ../src/Grids/MiscGrid.vala:74
@@ -354,19 +354,19 @@ msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:27
 msgid "Open Duration:"
-msgstr "Åbningstid:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:28
 msgid "Close Duration:"
-msgstr "Lukningstid:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:29
 msgid "Snap Duration:"
-msgstr "Snapningstid:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:30
 msgid "Minimize Duration:"
-msgstr "Minimeringstid:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:31
 msgid "Workspace Switch Duration:"
@@ -374,15 +374,15 @@ msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:148
 msgid "Animations:"
-msgstr "Animationer:"
+msgstr ""
 
 #: ../src/Grids/SlingshotGrid.vala:93
 msgid "Rows:"
-msgstr "Rækker:"
+msgstr ""
 
 #: ../src/Grids/SlingshotGrid.vala:96
 msgid "Columns:"
-msgstr "Kolonner:"
+msgstr ""
 
 #: ../src/Grids/ShortcutsGrid.vala:63
 msgid "Name"
@@ -422,19 +422,19 @@ msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:120
 msgid "Minimize Left"
-msgstr "Minimér Venstre"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:121
 msgid "Minimize Right"
-msgstr "Minimér Højre"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:122
 msgid "Windows"
-msgstr "Vinduer"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:123
 msgid "OS X"
-msgstr "OS X"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:124
 #: ../src/Grids/TerminalGrid.vala:180
@@ -443,23 +443,23 @@ msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:183
 msgid "Window Decoration Theme:"
-msgstr "Vinduesdekoration Tema:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:186
 msgid "Interface Theme:"
-msgstr "Grænseflade Tema:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:189
 msgid "Icon Theme:"
-msgstr "Ikon Tema:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:192
 msgid "Cursor Theme:"
-msgstr "Markør Tema:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:195
 msgid "Button Layout:"
-msgstr "Knappe Layout:"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:98
 msgid "Default Font:"
