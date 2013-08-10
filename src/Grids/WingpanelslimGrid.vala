@@ -41,7 +41,7 @@ public class WingpanelslimGrid : Gtk.Grid
         slim_pos.append ("Middle", _("Middle"));
         slim_pos.append ("Elementary Left", _("Left"));
         slim_pos.append ("Flush Left", _("Flush Left"));
-        slim_pos.append ("Flush Rright", _("Flush Right"));
+        slim_pos.append ("Flush Right", _("Flush Right"));
 
         slim_pos.active_id = WingpanelslimSettings.get_default ().panel_position;
         slim_pos.changed.connect (() => WingpanelslimSettings.get_default ().panel_position = slim_pos.active_id );
