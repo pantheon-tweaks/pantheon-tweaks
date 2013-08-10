@@ -1,6 +1,7 @@
 public class WingpanelslimSettings : Granite.Services.Settings
 {
     public string panel_position { get; set; }
+    public string panel_edge { get; set; }
 
     static WingpanelslimSettings? instance = null;
 
