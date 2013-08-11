@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-08-09 23:05+0100\n"
+"POT-Creation-Date: 2013-08-10 22:20+0100\n"
 "PO-Revision-Date: 2013-07-04 17:56+0000\n"
 "Last-Translator: Иван Благојевић <ivan_blagojevic@mail.com>\n"
 "Language-Team: Serbian <sr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-10 06:05+0000\n"
+"X-Launchpad-Export-Date: 2013-08-11 05:21+0000\n"
 "X-Generator: Launchpad (build 16723)\n"
 
 #: ../src/Tweaks.vala:49
@@ -166,20 +166,20 @@ msgstr ""
 
 #: ../src/Grids/CerbereGrid.vala:50
 #: ../src/Grids/CerbereGrid.vala:60
-#: ../src/Grids/ShortcutsGrid.vala:86
-#: ../src/Grids/ShortcutsGrid.vala:153
+#: ../src/Grids/ShortcutsGrid.vala:90
+#: ../src/Grids/ShortcutsGrid.vala:157
 msgid "Add..."
 msgstr ""
 
 #: ../src/Grids/CerbereGrid.vala:51
 #: ../src/Grids/CerbereGrid.vala:61
-#: ../src/Grids/ShortcutsGrid.vala:87
-#: ../src/Grids/ShortcutsGrid.vala:154
+#: ../src/Grids/ShortcutsGrid.vala:91
+#: ../src/Grids/ShortcutsGrid.vala:158
 msgid "Remove"
 msgstr ""
 
 #: ../src/Grids/CerbereGrid.vala:62
-#: ../src/Grids/ShortcutsGrid.vala:155
+#: ../src/Grids/ShortcutsGrid.vala:159
 msgid "Revert to Default"
 msgstr ""
 
@@ -348,7 +348,39 @@ msgstr ""
 msgid "Middle"
 msgstr "Средина"
 
-#: ../src/Grids/WingpanelslimGrid.vala:85
+#: ../src/Grids/WingpanelslimGrid.vala:43
+msgid "Flush Left"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:44
+msgid "Flush Right"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:68
+msgid "Edge:"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:69
+msgid "Slanted"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:70
+msgid "Squared"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:71
+msgid "Curved 1"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:72
+msgid "Curved 2"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:73
+msgid "Curved 3"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:120
 msgid "Slim Wingpanel:"
 msgstr "Слим Вингпанел"
 
@@ -384,31 +416,31 @@ msgstr "Редови:"
 msgid "Columns:"
 msgstr "Колоне:"
 
-#: ../src/Grids/ShortcutsGrid.vala:63
+#: ../src/Grids/ShortcutsGrid.vala:67
 msgid "Name"
 msgstr ""
 
-#: ../src/Grids/ShortcutsGrid.vala:64
+#: ../src/Grids/ShortcutsGrid.vala:68
 msgid "Shortcut"
 msgstr ""
 
-#: ../src/Grids/ShortcutsGrid.vala:65
+#: ../src/Grids/ShortcutsGrid.vala:69
 msgid "Command"
 msgstr ""
 
-#: ../src/Grids/ShortcutsGrid.vala:112
+#: ../src/Grids/ShortcutsGrid.vala:116
 msgid "Every field must be filled!"
 msgstr ""
 
-#: ../src/Grids/ShortcutsGrid.vala:121
+#: ../src/Grids/ShortcutsGrid.vala:125
 msgid "Name:"
 msgstr ""
 
-#: ../src/Grids/ShortcutsGrid.vala:124
+#: ../src/Grids/ShortcutsGrid.vala:128
 msgid "Shortcut:"
 msgstr ""
 
-#: ../src/Grids/ShortcutsGrid.vala:127
+#: ../src/Grids/ShortcutsGrid.vala:131
 msgid "Command:"
 msgstr ""
 
