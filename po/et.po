@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-10 22:20+0100\n"
-"PO-Revision-Date: 2013-07-23 18:04+0000\n"
+"PO-Revision-Date: 2013-08-11 16:15+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-11 05:21+0000\n"
+"X-Launchpad-Export-Date: 2013-08-12 05:08+0000\n"
 "X-Generator: Launchpad (build 16723)\n"
 
 #: ../src/Tweaks.vala:49
@@ -43,7 +43,7 @@ msgstr "Varjud"
 
 #: ../src/Tweaks.vala:70
 msgid "Shortcuts"
-msgstr ""
+msgstr "Kiirklahvid"
 
 #: ../src/Tweaks.vala:73
 msgid "Miscellaneous"
@@ -67,7 +67,7 @@ msgstr "Rakenduste menüü"
 
 #: ../src/Tweaks.vala:92
 msgid "Cerbere"
-msgstr ""
+msgstr "Cerbere"
 
 #: ../src/Tweaks.vala:95
 msgid "Terminal"
@@ -162,26 +162,26 @@ msgstr "Akende varjud:"
 
 #: ../src/Grids/CerbereGrid.vala:39
 msgid "Watched Processes"
-msgstr ""
+msgstr "Jälgitavad protsessid, mida hoitakse tööl"
 
 #: ../src/Grids/CerbereGrid.vala:50
 #: ../src/Grids/CerbereGrid.vala:60
 #: ../src/Grids/ShortcutsGrid.vala:90
 #: ../src/Grids/ShortcutsGrid.vala:157
 msgid "Add..."
-msgstr ""
+msgstr "Lisa..."
 
 #: ../src/Grids/CerbereGrid.vala:51
 #: ../src/Grids/CerbereGrid.vala:61
 #: ../src/Grids/ShortcutsGrid.vala:91
 #: ../src/Grids/ShortcutsGrid.vala:158
 msgid "Remove"
-msgstr ""
+msgstr "Eemalda"
 
 #: ../src/Grids/CerbereGrid.vala:62
 #: ../src/Grids/ShortcutsGrid.vala:159
 msgid "Revert to Default"
-msgstr ""
+msgstr "Taasta vaikimisi väärtused"
 
 #: ../src/Grids/SynapseGrid.vala:46
 msgid "Search Indicator Shortcut:"
@@ -284,53 +284,53 @@ msgstr "Töölaua näitamise ikooni:"
 #: ../src/Grids/MiscGrid.vala:74
 #: ../src/Grids/MiscGrid.vala:101
 msgid "Maximize"
-msgstr ""
+msgstr "Maksimeeri"
 
 #: ../src/Grids/MiscGrid.vala:49
 #: ../src/Grids/MiscGrid.vala:75
 #: ../src/Grids/MiscGrid.vala:102
 msgid "Maximize Horizontally"
-msgstr ""
+msgstr "Maksimeeri horisontaalselt"
 
 #: ../src/Grids/MiscGrid.vala:50
 #: ../src/Grids/MiscGrid.vala:76
 #: ../src/Grids/MiscGrid.vala:103
 msgid "Maximize Vertically"
-msgstr ""
+msgstr "Maksimeeri vertikaalselt"
 
 #: ../src/Grids/MiscGrid.vala:51
 #: ../src/Grids/MiscGrid.vala:77
 #: ../src/Grids/MiscGrid.vala:104
 msgid "Minimize"
-msgstr ""
+msgstr "Minimeeri"
 
 #: ../src/Grids/MiscGrid.vala:52
 #: ../src/Grids/MiscGrid.vala:78
 #: ../src/Grids/MiscGrid.vala:105
 msgid "Shade"
-msgstr ""
+msgstr "Keri kokku"
 
 #: ../src/Grids/MiscGrid.vala:53
 #: ../src/Grids/MiscGrid.vala:79
 #: ../src/Grids/MiscGrid.vala:106
 msgid "Lower Window"
-msgstr ""
+msgstr "Aken tagaplaanile"
 
 #: ../src/Grids/MiscGrid.vala:100
 msgid "Menu"
-msgstr ""
+msgstr "Menüü"
 
 #: ../src/Grids/MiscGrid.vala:124
 msgid "Double Click Titlebar Action:"
-msgstr ""
+msgstr "Kahekordse klõpsu toiming akna tiitliribal:"
 
 #: ../src/Grids/MiscGrid.vala:127
 msgid "Middle Click Titlebar Action:"
-msgstr ""
+msgstr "Keskmise klõpsu toiming akna tiitliribal:"
 
 #: ../src/Grids/MiscGrid.vala:130
 msgid "Right Click Titlebar Action:"
-msgstr ""
+msgstr "Parema klõpsu toiming akna tiitliribal:"
 
 #: ../src/Grids/MiscGrid.vala:133
 msgid "Audible Bell:"
@@ -358,7 +358,7 @@ msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:68
 msgid "Edge:"
-msgstr ""
+msgstr "Serv:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:69
 msgid "Slanted"
@@ -418,39 +418,39 @@ msgstr "Veerge:"
 
 #: ../src/Grids/ShortcutsGrid.vala:67
 msgid "Name"
-msgstr ""
+msgstr "Nimi"
 
 #: ../src/Grids/ShortcutsGrid.vala:68
 msgid "Shortcut"
-msgstr ""
+msgstr "Kiirklahv"
 
 #: ../src/Grids/ShortcutsGrid.vala:69
 msgid "Command"
-msgstr ""
+msgstr "Käsk"
 
 #: ../src/Grids/ShortcutsGrid.vala:116
 msgid "Every field must be filled!"
-msgstr ""
+msgstr "Täita tuleb kõik väljad."
 
 #: ../src/Grids/ShortcutsGrid.vala:125
 msgid "Name:"
-msgstr ""
+msgstr "Nimi:"
 
 #: ../src/Grids/ShortcutsGrid.vala:128
 msgid "Shortcut:"
-msgstr ""
+msgstr "Kiirklahv:"
 
 #: ../src/Grids/ShortcutsGrid.vala:131
 msgid "Command:"
-msgstr ""
+msgstr "Käsk:"
 
 #: ../src/Grids/AppearanceGrid.vala:116
 msgid "Custom Layout:"
-msgstr ""
+msgstr "Kohandatud nuppude asetus:"
 
 #: ../src/Grids/AppearanceGrid.vala:119
 msgid "Close Only"
-msgstr ""
+msgstr "Ainult sulgemise nupp"
 
 #: ../src/Grids/AppearanceGrid.vala:120
 msgid "Minimize Left"
@@ -525,4 +525,4 @@ msgstr "Läbipaistvus:"
 #: ../src/Widgets/AcceleratorInputWidget.vala:85
 #: ../src/Objects/ShortcutObject.vala:38
 msgid "Disabled"
-msgstr ""
+msgstr "Keelatud"

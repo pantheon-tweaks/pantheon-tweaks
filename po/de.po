@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-10 22:20+0100\n"
-"PO-Revision-Date: 2013-08-09 21:40+0000\n"
+"PO-Revision-Date: 2013-08-11 14:02+0000\n"
 "Last-Translator: Versable <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-11 05:21+0000\n"
+"X-Launchpad-Export-Date: 2013-08-12 05:08+0000\n"
 "X-Generator: Launchpad (build 16723)\n"
 
 #: ../src/Tweaks.vala:49
@@ -350,35 +350,35 @@ msgstr "Zentriert"
 
 #: ../src/Grids/WingpanelslimGrid.vala:43
 msgid "Flush Left"
-msgstr ""
+msgstr "Links Anliegend"
 
 #: ../src/Grids/WingpanelslimGrid.vala:44
 msgid "Flush Right"
-msgstr ""
+msgstr "Rechts Anliegend"
 
 #: ../src/Grids/WingpanelslimGrid.vala:68
 msgid "Edge:"
-msgstr ""
+msgstr "Ecke:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:69
 msgid "Slanted"
-msgstr ""
+msgstr "Geneigt"
 
 #: ../src/Grids/WingpanelslimGrid.vala:70
 msgid "Squared"
-msgstr ""
+msgstr "Gerade"
 
 #: ../src/Grids/WingpanelslimGrid.vala:71
 msgid "Curved 1"
-msgstr ""
+msgstr "Kurve 1"
 
 #: ../src/Grids/WingpanelslimGrid.vala:72
 msgid "Curved 2"
-msgstr ""
+msgstr "Kurve 2"
 
 #: ../src/Grids/WingpanelslimGrid.vala:73
 msgid "Curved 3"
-msgstr ""
+msgstr "Kurve 3"
 
 #: ../src/Grids/WingpanelslimGrid.vala:120
 msgid "Slim Wingpanel:"
