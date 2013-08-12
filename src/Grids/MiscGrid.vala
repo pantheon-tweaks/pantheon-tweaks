@@ -1,19 +1,19 @@
-//  
+//
 //  Copyright (C) 2013 Michael Langfermann
-// 
+//
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
 //  the Free Software Foundation, either version 3 of the License, or
 //  (at your option) any later version.
-// 
+//
 //  This program is distributed in the hope that it will be useful,
 //  but WITHOUT ANY WARRANTY; without even the implied warranty of
 //  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 //  GNU General Public License for more details.
-// 
+//
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-// 
+//
 
 public class MiscGrid : Gtk.Grid
 {
@@ -45,6 +45,7 @@ public class MiscGrid : Gtk.Grid
         /* Double Click Titlebar Action */
         var dbl_click_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var dbl_click = new Gtk.ComboBoxText ();
+        dbl_click.append ("menu", _("Menu"));
         dbl_click.append ("toggle-maximize", _("Maximize"));
         dbl_click.append ("toggle-maximize-horizontally", _("Maximize Horizontally"));
         dbl_click.append ("toggle-maximize-vertically", _("Maximize Vertically"));
@@ -71,6 +72,7 @@ public class MiscGrid : Gtk.Grid
         /* Middle Click Titlebar Action */
         var mdl_click_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var mdl_click = new Gtk.ComboBoxText ();
+        mdl_click.append ("menu", _("Menu"));
         mdl_click.append ("toggle-maximize", _("Maximize"));
         mdl_click.append ("toggle-maximize-horizontally", _("Maximize Horizontally"));
         mdl_click.append ("toggle-maximize-vertically", _("Maximize Vertically"));

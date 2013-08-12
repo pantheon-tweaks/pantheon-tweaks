@@ -7,23 +7,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-08-09 23:05+0100\n"
-"PO-Revision-Date: 2013-06-20 09:04+0000\n"
-"Last-Translator: Veselin Trakiyski <Unknown>\n"
+"POT-Creation-Date: 2013-08-10 22:20+0100\n"
+"PO-Revision-Date: 2013-08-10 09:41+0000\n"
+"Last-Translator: Radoslav Petrov <rrpetrov@gmail.com>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-10 06:05+0000\n"
+"X-Launchpad-Export-Date: 2013-08-11 05:21+0000\n"
 "X-Generator: Launchpad (build 16723)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
-msgstr ""
+msgstr "Основни"
 
 #: ../src/Tweaks.vala:50
 msgid "Applications"
-msgstr ""
+msgstr "Приложения"
 
 #: ../src/Tweaks.vala:58
 msgid "Appearance"
@@ -31,7 +31,7 @@ msgstr "Външен вид"
 
 #: ../src/Tweaks.vala:61
 msgid "Fonts"
-msgstr ""
+msgstr "Шрифтове"
 
 #: ../src/Tweaks.vala:64
 msgid "Animations"
@@ -39,11 +39,11 @@ msgstr "Анимации"
 
 #: ../src/Tweaks.vala:67
 msgid "Shadows"
-msgstr ""
+msgstr "Сенки"
 
 #: ../src/Tweaks.vala:70
 msgid "Shortcuts"
-msgstr ""
+msgstr "Бързи клавиши"
 
 #: ../src/Tweaks.vala:73
 msgid "Miscellaneous"
@@ -55,7 +55,7 @@ msgstr ""
 
 #: ../src/Tweaks.vala:82
 msgid "Files"
-msgstr ""
+msgstr "Файлове"
 
 #: ../src/Tweaks.vala:86
 msgid "Search Indicator"
@@ -71,7 +71,7 @@ msgstr ""
 
 #: ../src/Tweaks.vala:95
 msgid "Terminal"
-msgstr ""
+msgstr "Терминал"
 
 #: ../src/Tweaks.vala:99
 msgid "Wingpanel Slim"
@@ -154,11 +154,11 @@ msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:31
 msgid "Menu:"
-msgstr ""
+msgstr "Меню:"
 
 #: ../src/Grids/ShadowsGrid.vala:194
 msgid "Shadows:"
-msgstr ""
+msgstr "Сенки:"
 
 #: ../src/Grids/CerbereGrid.vala:39
 msgid "Watched Processes"
@@ -166,20 +166,20 @@ msgstr ""
 
 #: ../src/Grids/CerbereGrid.vala:50
 #: ../src/Grids/CerbereGrid.vala:60
-#: ../src/Grids/ShortcutsGrid.vala:86
-#: ../src/Grids/ShortcutsGrid.vala:153
+#: ../src/Grids/ShortcutsGrid.vala:90
+#: ../src/Grids/ShortcutsGrid.vala:157
 msgid "Add..."
-msgstr ""
+msgstr "Добавяне..."
 
 #: ../src/Grids/CerbereGrid.vala:51
 #: ../src/Grids/CerbereGrid.vala:61
-#: ../src/Grids/ShortcutsGrid.vala:87
-#: ../src/Grids/ShortcutsGrid.vala:154
+#: ../src/Grids/ShortcutsGrid.vala:91
+#: ../src/Grids/ShortcutsGrid.vala:158
 msgid "Remove"
-msgstr ""
+msgstr "Премахване"
 
 #: ../src/Grids/CerbereGrid.vala:62
-#: ../src/Grids/ShortcutsGrid.vala:155
+#: ../src/Grids/ShortcutsGrid.vala:159
 msgid "Revert to Default"
 msgstr ""
 
@@ -189,7 +189,7 @@ msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:47
 msgid "Top"
-msgstr ""
+msgstr "Отгоре"
 
 #: ../src/Grids/PlankGrid.vala:48
 msgid "Bottom"
@@ -284,25 +284,25 @@ msgstr "Икона за показване на десктоп:"
 #: ../src/Grids/MiscGrid.vala:74
 #: ../src/Grids/MiscGrid.vala:101
 msgid "Maximize"
-msgstr ""
+msgstr "Максимизиране"
 
 #: ../src/Grids/MiscGrid.vala:49
 #: ../src/Grids/MiscGrid.vala:75
 #: ../src/Grids/MiscGrid.vala:102
 msgid "Maximize Horizontally"
-msgstr ""
+msgstr "Хоризонтално максимизиране"
 
 #: ../src/Grids/MiscGrid.vala:50
 #: ../src/Grids/MiscGrid.vala:76
 #: ../src/Grids/MiscGrid.vala:103
 msgid "Maximize Vertically"
-msgstr ""
+msgstr "Вертикално максимизиране"
 
 #: ../src/Grids/MiscGrid.vala:51
 #: ../src/Grids/MiscGrid.vala:77
 #: ../src/Grids/MiscGrid.vala:104
 msgid "Minimize"
-msgstr ""
+msgstr "Минимизиране"
 
 #: ../src/Grids/MiscGrid.vala:52
 #: ../src/Grids/MiscGrid.vala:78
@@ -318,19 +318,19 @@ msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:100
 msgid "Menu"
-msgstr ""
+msgstr "Меню"
 
 #: ../src/Grids/MiscGrid.vala:124
 msgid "Double Click Titlebar Action:"
-msgstr ""
+msgstr "Действие при двоен клик в заглавната лента"
 
 #: ../src/Grids/MiscGrid.vala:127
 msgid "Middle Click Titlebar Action:"
-msgstr ""
+msgstr "Действие при клик със средния бутон в заглавната лента"
 
 #: ../src/Grids/MiscGrid.vala:130
 msgid "Right Click Titlebar Action:"
-msgstr ""
+msgstr "Действие при цъкане с десния бутон в заглавната лента"
 
 #: ../src/Grids/MiscGrid.vala:133
 msgid "Audible Bell:"
@@ -348,7 +348,39 @@ msgstr ""
 msgid "Middle"
 msgstr ""
 
-#: ../src/Grids/WingpanelslimGrid.vala:85
+#: ../src/Grids/WingpanelslimGrid.vala:43
+msgid "Flush Left"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:44
+msgid "Flush Right"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:68
+msgid "Edge:"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:69
+msgid "Slanted"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:70
+msgid "Squared"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:71
+msgid "Curved 1"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:72
+msgid "Curved 2"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:73
+msgid "Curved 3"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:120
 msgid "Slim Wingpanel:"
 msgstr ""
 
@@ -384,37 +416,37 @@ msgstr "Брой редове:"
 msgid "Columns:"
 msgstr "Брой колони:"
 
-#: ../src/Grids/ShortcutsGrid.vala:63
+#: ../src/Grids/ShortcutsGrid.vala:67
 msgid "Name"
-msgstr ""
+msgstr "Име"
 
-#: ../src/Grids/ShortcutsGrid.vala:64
+#: ../src/Grids/ShortcutsGrid.vala:68
 msgid "Shortcut"
-msgstr ""
+msgstr "Бърз клавиш"
 
-#: ../src/Grids/ShortcutsGrid.vala:65
+#: ../src/Grids/ShortcutsGrid.vala:69
 msgid "Command"
-msgstr ""
+msgstr "Команда"
 
-#: ../src/Grids/ShortcutsGrid.vala:112
+#: ../src/Grids/ShortcutsGrid.vala:116
 msgid "Every field must be filled!"
-msgstr ""
+msgstr "Всички полета трябва да са попълнени!"
 
-#: ../src/Grids/ShortcutsGrid.vala:121
+#: ../src/Grids/ShortcutsGrid.vala:125
 msgid "Name:"
-msgstr ""
+msgstr "Име:"
 
-#: ../src/Grids/ShortcutsGrid.vala:124
+#: ../src/Grids/ShortcutsGrid.vala:128
 msgid "Shortcut:"
-msgstr ""
+msgstr "Бърз клавиш:"
 
-#: ../src/Grids/ShortcutsGrid.vala:127
+#: ../src/Grids/ShortcutsGrid.vala:131
 msgid "Command:"
-msgstr ""
+msgstr "Команда:"
 
 #: ../src/Grids/AppearanceGrid.vala:116
 msgid "Custom Layout:"
-msgstr ""
+msgstr "Персонализирано разполагане"
 
 #: ../src/Grids/AppearanceGrid.vala:119
 msgid "Close Only"
@@ -434,12 +466,12 @@ msgstr "Windows"
 
 #: ../src/Grids/AppearanceGrid.vala:123
 msgid "OS X"
-msgstr ""
+msgstr "ОС Х"
 
 #: ../src/Grids/AppearanceGrid.vala:124
 #: ../src/Grids/TerminalGrid.vala:180
 msgid "Custom"
-msgstr ""
+msgstr "Персонализиран"
 
 #: ../src/Grids/AppearanceGrid.vala:183
 msgid "Window Decoration Theme:"
@@ -463,34 +495,34 @@ msgstr "Разположение на бутоните:"
 
 #: ../src/Grids/FontsGrid.vala:98
 msgid "Default Font:"
-msgstr ""
+msgstr "Шрифт по подразбиране"
 
 #: ../src/Grids/FontsGrid.vala:101
 msgid "Document Font:"
-msgstr ""
+msgstr "Шрифт за документи"
 
 #: ../src/Grids/FontsGrid.vala:104
 msgid "Monospace Font:"
-msgstr ""
+msgstr "Шрифт с фиксирана ширина на буквите"
 
 #: ../src/Grids/FontsGrid.vala:107
 msgid "Window Title Font:"
-msgstr ""
+msgstr "Шрифт за заглавията на прозорците"
 
 #: ../src/Grids/TerminalGrid.vala:199
 msgid "Limit Scrollback Lines:"
-msgstr ""
+msgstr "Ограничаване на броя изведени редове:"
 
 #: ../src/Grids/TerminalGrid.vala:203
 msgid "Custom Font:"
-msgstr ""
+msgstr "Персонализиран шрифт"
 
 #: ../src/Grids/TerminalGrid.vala:207
 msgid "Opacity:"
-msgstr ""
+msgstr "Прозрачност"
 
 #: ../src/Widgets/AcceleratorInputWidget.vala:67
 #: ../src/Widgets/AcceleratorInputWidget.vala:85
 #: ../src/Objects/ShortcutObject.vala:38
 msgid "Disabled"
-msgstr ""
+msgstr "Изключен"
