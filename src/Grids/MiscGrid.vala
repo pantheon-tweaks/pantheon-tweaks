@@ -148,14 +148,15 @@ public void scroll_switch () {
         try {
             var file_dest = File.new_for_path (Environment.get_user_config_dir () + "/autostart/natural-scrolling.desktop");
             var file_src = File.new_for_path ("/usr/lib/plugs/pantheon/tweaks/natural-scrolling.desktop");
+
+            if (file_dest.query_exists ())
+                file_dest.delete ();
+
             if ( scroll_exists() ) {
                 Process.spawn_command_line_async ("/usr/lib/plugs/pantheon/tweaks/natural_scrolling.sh false");
-                if (file_dest.query_exists ())
-                    file_dest.delete ();
             } else {
                 Process.spawn_command_line_async ("/usr/lib/plugs/pantheon/tweaks/natural_scrolling.sh true");
-                if (!file_dest.query_exists ())
-                    file_src.copy (file_dest, FileCopyFlags.NONE);
+                file_src.copy (file_dest, FileCopyFlags.NONE);
             }
         } catch (Error e){
             warning (e.message);
