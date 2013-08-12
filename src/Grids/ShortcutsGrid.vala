@@ -26,9 +26,10 @@ public class ShortcutsGrid : Gtk.Grid
         this.margin_top = 0;
         this.column_homogeneous = true;
 
-        store = new Gtk.ListStore (4, 
+        store = new Gtk.ListStore (5, 
                 typeof (string), // Name
                 typeof (string), // Shortcut
+                typeof (string), // Shortcut Display
                 typeof (string), // Command
                 typeof (int)     // Index
                 );
@@ -65,8 +66,8 @@ public class ShortcutsGrid : Gtk.Grid
         cell_command.edited.connect ((path, new_text) => list_edit( path, null, null, new_text ));
 
         key.insert_column_with_attributes (-1, " " + _("Name"), cell_name, "text", 0);
-        key.insert_column_with_attributes (-1, " " + _("Shortcut"), cell_shortcut, "text", 1);
-        key.insert_column_with_attributes (-1, " " + _("Command"), cell_command, "text", 2);
+        key.insert_column_with_attributes (-1, " " + _("Shortcut"), cell_shortcut, "text", 2);
+        key.insert_column_with_attributes (-1, " " + _("Command"), cell_command, "text", 3);
 
 //        Debbuging:
 //        var cell_int = new Gtk.CellRendererText ();
@@ -174,12 +175,14 @@ public class ShortcutsGrid : Gtk.Grid
 
         foreach (var s in keyboard_settings) {
             Gtk.TreeIter iter;
+            var short_obj = new Shortcut.parse (s.shortcut);
 
             store.append (out iter);
             store.set (iter, 0, s.name);
             store.set (iter, 1, s.shortcut);
-            store.set (iter, 2, s.command);
-            store.set (iter, 3, s.index);
+            store.set (iter, 2, short_obj.to_readable());
+            store.set (iter, 3, s.command);
+            store.set (iter, 4, s.index);
         }
     }
 
@@ -192,14 +195,16 @@ public class ShortcutsGrid : Gtk.Grid
 
     void list_add( string name, string shortcut, string command ) {
         Gtk.TreeIter iter;
+        var short_obj = new Shortcut.parse (shortcut);
 
         int index = KeyboardSettings.add_custom_shortcut (name, shortcut, command);
 
         store.append (out iter);
         store.set (iter, 0, name);
         store.set (iter, 1, shortcut);
-        store.set (iter, 2, command);
-        store.set (iter, 3, index);
+        store.set (iter, 2, short_obj.to_readable());
+        store.set (iter, 3, command);
+        store.set (iter, 4, index);
     }
 
     void list_remove() {
@@ -210,7 +215,7 @@ public class ShortcutsGrid : Gtk.Grid
         key.get_cursor (out path, null);
         if (path != null) {
             store.get_iter (out iter, path);
-            store.get_value (iter, 3, out index);
+            store.get_value (iter, 4, out index);
             if (index.get_int() == 0)
                 return;
             store.remove (iter);
@@ -230,15 +235,18 @@ public class ShortcutsGrid : Gtk.Grid
 
         if ( new_name != null )
             store.set (iter, 0, new_name);
-        if ( new_shortcut != null )
+        if ( new_shortcut != null ) {
+            var short_obj = new Shortcut.parse (new_shortcut);
             store.set (iter, 1, new_shortcut);
+            store.set (iter, 2, short_obj.to_readable());
+        }
         if ( new_command != null )
-            store.set (iter, 2, new_command);
+            store.set (iter, 3, new_command);
 
         store.get_value (iter, 0, out name);
         store.get_value (iter, 1, out shortcut);
-        store.get_value (iter, 2, out command);
-        store.get_value (iter, 3, out index);
+        store.get_value (iter, 3, out command);
+        store.get_value (iter, 4, out index);
 
         KeyboardSettings.edit_custom_shortcuts (name.get_string(), shortcut.get_string(), command.get_string(), index.get_int());
     }
