@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-10 22:20+0100\n"
-"PO-Revision-Date: 2013-07-11 23:49+0000\n"
+"PO-Revision-Date: 2013-08-12 15:41+0000\n"
 "Last-Translator: MinSik CHO <Unknown>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-11 05:21+0000\n"
+"X-Launchpad-Export-Date: 2013-08-13 06:08+0000\n"
 "X-Generator: Launchpad (build 16723)\n"
 
 #: ../src/Tweaks.vala:49
@@ -43,7 +43,7 @@ msgstr "그림자"
 
 #: ../src/Tweaks.vala:70
 msgid "Shortcuts"
-msgstr ""
+msgstr "바로 가기"
 
 #: ../src/Tweaks.vala:73
 msgid "Miscellaneous"
