@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-10 22:20+0100\n"
-"PO-Revision-Date: 2013-08-11 03:17+0000\n"
+"PO-Revision-Date: 2013-08-14 02:25+0000\n"
 "Last-Translator: Ewerton Wandalen <ewandalen@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-13 06:08+0000\n"
+"X-Launchpad-Export-Date: 2013-08-14 06:25+0000\n"
 "X-Generator: Launchpad (build 16723)\n"
 
 #: ../src/Tweaks.vala:49
@@ -162,7 +162,7 @@ msgstr "Sombras:"
 
 #: ../src/Grids/CerbereGrid.vala:39
 msgid "Watched Processes"
-msgstr ""
+msgstr "Processos Observados"
 
 #: ../src/Grids/CerbereGrid.vala:50
 #: ../src/Grids/CerbereGrid.vala:60
@@ -314,7 +314,7 @@ msgstr "Sombra"
 #: ../src/Grids/MiscGrid.vala:79
 #: ../src/Grids/MiscGrid.vala:106
 msgid "Lower Window"
-msgstr ""
+msgstr "Diminuir Janela"
 
 #: ../src/Grids/MiscGrid.vala:100
 msgid "Menu"
@@ -322,15 +322,15 @@ msgstr "Menu"
 
 #: ../src/Grids/MiscGrid.vala:124
 msgid "Double Click Titlebar Action:"
-msgstr ""
+msgstr "Ação do Clique Duplo na Barra de Título"
 
 #: ../src/Grids/MiscGrid.vala:127
 msgid "Middle Click Titlebar Action:"
-msgstr ""
+msgstr "Ação do Clique do Botão do Meio na Barra de Título"
 
 #: ../src/Grids/MiscGrid.vala:130
 msgid "Right Click Titlebar Action:"
-msgstr ""
+msgstr "Ação do Clique com Botão Direito na Barra de Título"
 
 #: ../src/Grids/MiscGrid.vala:133
 msgid "Audible Bell:"
@@ -342,7 +342,7 @@ msgstr "Barra de Rolagem Sobreposta"
 
 #: ../src/Grids/MiscGrid.vala:139
 msgid "Natural Scrolling:"
-msgstr ""
+msgstr "Scroll Natural"
 
 #: ../src/Grids/WingpanelslimGrid.vala:41
 msgid "Middle"
@@ -350,35 +350,35 @@ msgstr "Meio"
 
 #: ../src/Grids/WingpanelslimGrid.vala:43
 msgid "Flush Left"
-msgstr ""
+msgstr "Alinhado à esquerda"
 
 #: ../src/Grids/WingpanelslimGrid.vala:44
 msgid "Flush Right"
-msgstr ""
+msgstr "Alinhado à direita"
 
 #: ../src/Grids/WingpanelslimGrid.vala:68
 msgid "Edge:"
-msgstr ""
+msgstr "Borda:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:69
 msgid "Slanted"
-msgstr ""
+msgstr "Inclinada"
 
 #: ../src/Grids/WingpanelslimGrid.vala:70
 msgid "Squared"
-msgstr ""
+msgstr "Quadrada"
 
 #: ../src/Grids/WingpanelslimGrid.vala:71
 msgid "Curved 1"
-msgstr ""
+msgstr "Curvada 1"
 
 #: ../src/Grids/WingpanelslimGrid.vala:72
 msgid "Curved 2"
-msgstr ""
+msgstr "Curvada 2"
 
 #: ../src/Grids/WingpanelslimGrid.vala:73
 msgid "Curved 3"
-msgstr ""
+msgstr "Curvada 3"
 
 #: ../src/Grids/WingpanelslimGrid.vala:120
 msgid "Slim Wingpanel:"
@@ -418,39 +418,39 @@ msgstr "Colunas:"
 
 #: ../src/Grids/ShortcutsGrid.vala:67
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #: ../src/Grids/ShortcutsGrid.vala:68
 msgid "Shortcut"
-msgstr ""
+msgstr "Atalho"
 
 #: ../src/Grids/ShortcutsGrid.vala:69
 msgid "Command"
-msgstr ""
+msgstr "Comando"
 
 #: ../src/Grids/ShortcutsGrid.vala:116
 msgid "Every field must be filled!"
-msgstr ""
+msgstr "Todos os campos devem ser preenchidos!"
 
 #: ../src/Grids/ShortcutsGrid.vala:125
 msgid "Name:"
-msgstr ""
+msgstr "Nome:"
 
 #: ../src/Grids/ShortcutsGrid.vala:128
 msgid "Shortcut:"
-msgstr ""
+msgstr "Atalho:"
 
 #: ../src/Grids/ShortcutsGrid.vala:131
 msgid "Command:"
-msgstr ""
+msgstr "Comando:"
 
 #: ../src/Grids/AppearanceGrid.vala:116
 msgid "Custom Layout:"
-msgstr ""
+msgstr "Layout personalizado:"
 
 #: ../src/Grids/AppearanceGrid.vala:119
 msgid "Close Only"
-msgstr ""
+msgstr "Apenas fechar"
 
 #: ../src/Grids/AppearanceGrid.vala:120
 msgid "Minimize Left"
@@ -511,7 +511,7 @@ msgstr "Fonte de título da janela:"
 
 #: ../src/Grids/TerminalGrid.vala:199
 msgid "Limit Scrollback Lines:"
-msgstr ""
+msgstr "Limite de linhas de rolagem:"
 
 #: ../src/Grids/TerminalGrid.vala:203
 msgid "Custom Font:"
@@ -525,4 +525,4 @@ msgstr "Opacidade:"
 #: ../src/Widgets/AcceleratorInputWidget.vala:85
 #: ../src/Objects/ShortcutObject.vala:38
 msgid "Disabled"
-msgstr ""
+msgstr "Desativado"
