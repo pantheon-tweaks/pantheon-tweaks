@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-10 22:20+0100\n"
-"PO-Revision-Date: 2013-07-07 07:37+0000\n"
+"PO-Revision-Date: 2013-08-14 22:00+0000\n"
 "Last-Translator: Alfredo Hernández <Unknown>\n"
 "Language-Team: English (United Kingdom) <en_GB@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-13 06:08+0000\n"
+"X-Launchpad-Export-Date: 2013-08-15 06:04+0000\n"
 "X-Generator: Launchpad (build 16723)\n"
 
 #: ../src/Tweaks.vala:49
@@ -43,7 +43,7 @@ msgstr "Shadows"
 
 #: ../src/Tweaks.vala:70
 msgid "Shortcuts"
-msgstr ""
+msgstr "Shortcuts"
 
 #: ../src/Tweaks.vala:73
 msgid "Miscellaneous"
@@ -67,7 +67,7 @@ msgstr "Slingshot"
 
 #: ../src/Tweaks.vala:92
 msgid "Cerbere"
-msgstr ""
+msgstr "Cerbere"
 
 #: ../src/Tweaks.vala:95
 msgid "Terminal"
@@ -162,26 +162,26 @@ msgstr "Shadows:"
 
 #: ../src/Grids/CerbereGrid.vala:39
 msgid "Watched Processes"
-msgstr ""
+msgstr "Watched Processes"
 
 #: ../src/Grids/CerbereGrid.vala:50
 #: ../src/Grids/CerbereGrid.vala:60
 #: ../src/Grids/ShortcutsGrid.vala:90
 #: ../src/Grids/ShortcutsGrid.vala:157
 msgid "Add..."
-msgstr ""
+msgstr "Add…"
 
 #: ../src/Grids/CerbereGrid.vala:51
 #: ../src/Grids/CerbereGrid.vala:61
 #: ../src/Grids/ShortcutsGrid.vala:91
 #: ../src/Grids/ShortcutsGrid.vala:158
 msgid "Remove"
-msgstr ""
+msgstr "Remove"
 
 #: ../src/Grids/CerbereGrid.vala:62
 #: ../src/Grids/ShortcutsGrid.vala:159
 msgid "Revert to Default"
-msgstr ""
+msgstr "Revert to Default"
 
 #: ../src/Grids/SynapseGrid.vala:46
 msgid "Search Indicator Shortcut:"
@@ -284,53 +284,53 @@ msgstr "Show Desktop Icon:"
 #: ../src/Grids/MiscGrid.vala:74
 #: ../src/Grids/MiscGrid.vala:101
 msgid "Maximize"
-msgstr ""
+msgstr "Maximise"
 
 #: ../src/Grids/MiscGrid.vala:49
 #: ../src/Grids/MiscGrid.vala:75
 #: ../src/Grids/MiscGrid.vala:102
 msgid "Maximize Horizontally"
-msgstr ""
+msgstr "Maximise Horizontally"
 
 #: ../src/Grids/MiscGrid.vala:50
 #: ../src/Grids/MiscGrid.vala:76
 #: ../src/Grids/MiscGrid.vala:103
 msgid "Maximize Vertically"
-msgstr ""
+msgstr "Maximise Vertically"
 
 #: ../src/Grids/MiscGrid.vala:51
 #: ../src/Grids/MiscGrid.vala:77
 #: ../src/Grids/MiscGrid.vala:104
 msgid "Minimize"
-msgstr ""
+msgstr "Minimize"
 
 #: ../src/Grids/MiscGrid.vala:52
 #: ../src/Grids/MiscGrid.vala:78
 #: ../src/Grids/MiscGrid.vala:105
 msgid "Shade"
-msgstr ""
+msgstr "Shade"
 
 #: ../src/Grids/MiscGrid.vala:53
 #: ../src/Grids/MiscGrid.vala:79
 #: ../src/Grids/MiscGrid.vala:106
 msgid "Lower Window"
-msgstr ""
+msgstr "Lower Window"
 
 #: ../src/Grids/MiscGrid.vala:100
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: ../src/Grids/MiscGrid.vala:124
 msgid "Double Click Titlebar Action:"
-msgstr ""
+msgstr "Double Click Titlebar Action"
 
 #: ../src/Grids/MiscGrid.vala:127
 msgid "Middle Click Titlebar Action:"
-msgstr ""
+msgstr "Middle Click Titlebar Action:"
 
 #: ../src/Grids/MiscGrid.vala:130
 msgid "Right Click Titlebar Action:"
-msgstr ""
+msgstr "Right Click Titlebar Action:"
 
 #: ../src/Grids/MiscGrid.vala:133
 msgid "Audible Bell:"
@@ -342,7 +342,7 @@ msgstr "Overlay Scrollbars:"
 
 #: ../src/Grids/MiscGrid.vala:139
 msgid "Natural Scrolling:"
-msgstr ""
+msgstr "Natural Scrolling:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:41
 msgid "Middle"
@@ -350,35 +350,35 @@ msgstr "Middle"
 
 #: ../src/Grids/WingpanelslimGrid.vala:43
 msgid "Flush Left"
-msgstr ""
+msgstr "Flush Left"
 
 #: ../src/Grids/WingpanelslimGrid.vala:44
 msgid "Flush Right"
-msgstr ""
+msgstr "Flush Right"
 
 #: ../src/Grids/WingpanelslimGrid.vala:68
 msgid "Edge:"
-msgstr ""
+msgstr "Edge:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:69
 msgid "Slanted"
-msgstr ""
+msgstr "Slanted"
 
 #: ../src/Grids/WingpanelslimGrid.vala:70
 msgid "Squared"
-msgstr ""
+msgstr "Squared"
 
 #: ../src/Grids/WingpanelslimGrid.vala:71
 msgid "Curved 1"
-msgstr ""
+msgstr "Curved 1"
 
 #: ../src/Grids/WingpanelslimGrid.vala:72
 msgid "Curved 2"
-msgstr ""
+msgstr "Curved 2"
 
 #: ../src/Grids/WingpanelslimGrid.vala:73
 msgid "Curved 3"
-msgstr ""
+msgstr "Curved 3"
 
 #: ../src/Grids/WingpanelslimGrid.vala:120
 msgid "Slim Wingpanel:"
@@ -418,39 +418,39 @@ msgstr "Columns:"
 
 #: ../src/Grids/ShortcutsGrid.vala:67
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #: ../src/Grids/ShortcutsGrid.vala:68
 msgid "Shortcut"
-msgstr ""
+msgstr "Shortcut"
 
 #: ../src/Grids/ShortcutsGrid.vala:69
 msgid "Command"
-msgstr ""
+msgstr "Command"
 
 #: ../src/Grids/ShortcutsGrid.vala:116
 msgid "Every field must be filled!"
-msgstr ""
+msgstr "Every field must be filled."
 
 #: ../src/Grids/ShortcutsGrid.vala:125
 msgid "Name:"
-msgstr ""
+msgstr "Name:"
 
 #: ../src/Grids/ShortcutsGrid.vala:128
 msgid "Shortcut:"
-msgstr ""
+msgstr "Shortcut:"
 
 #: ../src/Grids/ShortcutsGrid.vala:131
 msgid "Command:"
-msgstr ""
+msgstr "Command:"
 
 #: ../src/Grids/AppearanceGrid.vala:116
 msgid "Custom Layout:"
-msgstr ""
+msgstr "Custom Layout:"
 
 #: ../src/Grids/AppearanceGrid.vala:119
 msgid "Close Only"
-msgstr ""
+msgstr "Close Only"
 
 #: ../src/Grids/AppearanceGrid.vala:120
 msgid "Minimize Left"
@@ -525,4 +525,4 @@ msgstr "Opacity:"
 #: ../src/Widgets/AcceleratorInputWidget.vala:85
 #: ../src/Objects/ShortcutObject.vala:38
 msgid "Disabled"
-msgstr ""
+msgstr "Disabled"
