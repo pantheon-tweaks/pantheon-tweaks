@@ -59,9 +59,6 @@ public class WingpanelslimGrid : Gtk.Grid
         slim_pos_box.pack_start (slim_pos, false);
         slim_pos_box.pack_start (slim_pos_default, false);
 
-        this.attach (slim_label, 0, 7, 2, 1);
-        this.attach (slim_pos_box, 2, 7, 2, 1);
-
         /* Wingpanel Edge */
         var slim_edge_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var slim_edge = new Gtk.ComboBoxText ();
@@ -88,8 +85,42 @@ public class WingpanelslimGrid : Gtk.Grid
         slim_edge_box.pack_start (slim_edge, false);
         slim_edge_box.pack_start (slim_edge_default, false);
 
-        this.attach (slim_label_edge, 0, 8, 2, 1);
-        this.attach (slim_edge_box, 2, 8, 2, 1);
+        /* Auto Hide */
+        var auto_hide = new Gtk.Switch ();
+        var auto_label = new LLabel.right (_("Auto Hide:"));
+
+        auto_hide.set_active(WingpanelslimSettings.get_default ().auto_hide);
+        auto_hide.notify["active"].connect (() => WingpanelslimSettings.get_default ().auto_hide = auto_hide.active );
+        auto_hide.halign = Gtk.Align.START;
+
+        /* Show Launcher */
+        var show_launcher = new Gtk.Switch ();
+        var show_label = new LLabel.right (_("Show Launcher:"));
+
+        show_launcher.set_active(WingpanelslimSettings.get_default ().show_launcher);
+        show_launcher.notify["active"].connect (() => WingpanelslimSettings.get_default ().show_launcher = show_launcher.active );
+        show_launcher.halign = Gtk.Align.START;
+
+        /* Default Launcher */
+        var default_launcher_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        var default_launcher = new Gtk.Entry();
+        var launcher_label = new LLabel.right (_("Launcher:"));
+        default_launcher.text = WingpanelslimSettings.get_default ().default_launcher;
+        default_launcher.changed.connect (() => WingpanelslimSettings.get_default ().default_launcher = default_launcher.text);
+        default_launcher.width_request = 160;
+        default_launcher.halign = Gtk.Align.START;
+
+        var default_launcher_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
+
+        default_launcher_default.clicked.connect (() => {
+
+            WingpanelslimSettings.get_default ().schema.reset ("default-launcher");
+            slim_pos.active_id = WingpanelslimSettings.get_default ().panel_position;
+        });
+        default_launcher_default.halign = Gtk.Align.START;
+
+        default_launcher_box.pack_start (default_launcher, false);
+        default_launcher_box.pack_start (default_launcher_default, false);
 
         if ( wingpanel_slim[pos] == "wingpanel-slim" )
             wingpanel.set_active(true);
@@ -117,8 +148,22 @@ public class WingpanelslimGrid : Gtk.Grid
         });
         wingpanel.halign = Gtk.Align.START;
 
-        this.attach (new LLabel.right (_("Slim Wingpanel:")), 0, 6, 2, 1);
-        this.attach (wingpanel, 2, 6, 2, 1);
+        this.attach (new LLabel.right (_("Slim Wingpanel:")), 0, 0, 1, 1);
+        this.attach (wingpanel, 1, 0, 1, 1);
 
+        this.attach (slim_label, 0, 1, 1, 1);
+        this.attach (slim_pos_box, 1, 1, 1, 1);
+
+        this.attach (slim_label_edge, 0, 2, 1, 1);
+        this.attach (slim_edge_box, 1, 2, 1, 1);
+
+        this.attach (auto_label, 0, 3, 1, 1);
+        this.attach (auto_hide, 1, 3, 1, 1);
+
+        this.attach (show_label, 0, 4, 1, 1);
+        this.attach (show_launcher, 1, 4, 1, 1);
+
+        this.attach (launcher_label, 0, 5, 1, 1);
+        this.attach (default_launcher_box, 1, 5, 1, 1);
     }
 }
