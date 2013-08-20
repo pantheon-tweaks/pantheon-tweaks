@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-10 22:20+0100\n"
-"PO-Revision-Date: 2013-08-13 14:32+0000\n"
-"Last-Translator: Марко М. Костић <Unknown>\n"
+"PO-Revision-Date: 2013-08-19 09:34+0000\n"
+"Last-Translator: Иван Благојевић <ivan_blagojevic@mail.com>\n"
 "Language-Team: Serbian <sr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-14 06:25+0000\n"
+"X-Launchpad-Export-Date: 2013-08-20 05:23+0000\n"
 "X-Generator: Launchpad (build 16723)\n"
 
 #: ../src/Tweaks.vala:49
@@ -322,15 +322,15 @@ msgstr "Изборник"
 
 #: ../src/Grids/MiscGrid.vala:124
 msgid "Double Click Titlebar Action:"
-msgstr ""
+msgstr "Радња за дупли клик на насловну траку"
 
 #: ../src/Grids/MiscGrid.vala:127
 msgid "Middle Click Titlebar Action:"
-msgstr ""
+msgstr "Радња за средњи клик на насловну траку"
 
 #: ../src/Grids/MiscGrid.vala:130
 msgid "Right Click Titlebar Action:"
-msgstr ""
+msgstr "Радња за десни клик на насловну траку"
 
 #: ../src/Grids/MiscGrid.vala:133
 msgid "Audible Bell:"
@@ -342,7 +342,7 @@ msgstr "Преклапајући клизачи:"
 
 #: ../src/Grids/MiscGrid.vala:139
 msgid "Natural Scrolling:"
-msgstr ""
+msgstr "Природно скроловање"
 
 #: ../src/Grids/WingpanelslimGrid.vala:41
 msgid "Middle"
@@ -350,35 +350,35 @@ msgstr "Средина"
 
 #: ../src/Grids/WingpanelslimGrid.vala:43
 msgid "Flush Left"
-msgstr ""
+msgstr "Прилепи лево"
 
 #: ../src/Grids/WingpanelslimGrid.vala:44
 msgid "Flush Right"
-msgstr ""
+msgstr "Прилепи десно"
 
 #: ../src/Grids/WingpanelslimGrid.vala:68
 msgid "Edge:"
-msgstr ""
+msgstr "Ивица:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:69
 msgid "Slanted"
-msgstr ""
+msgstr "Наклоњен"
 
 #: ../src/Grids/WingpanelslimGrid.vala:70
 msgid "Squared"
-msgstr ""
+msgstr "Скоцкан"
 
 #: ../src/Grids/WingpanelslimGrid.vala:71
 msgid "Curved 1"
-msgstr ""
+msgstr "Закривљен 1"
 
 #: ../src/Grids/WingpanelslimGrid.vala:72
 msgid "Curved 2"
-msgstr ""
+msgstr "Закривљен 2"
 
 #: ../src/Grids/WingpanelslimGrid.vala:73
 msgid "Curved 3"
-msgstr ""
+msgstr "Закривљен 3"
 
 #: ../src/Grids/WingpanelslimGrid.vala:120
 msgid "Slim Wingpanel:"
@@ -418,39 +418,39 @@ msgstr "Колоне:"
 
 #: ../src/Grids/ShortcutsGrid.vala:67
 msgid "Name"
-msgstr ""
+msgstr "Назив"
 
 #: ../src/Grids/ShortcutsGrid.vala:68
 msgid "Shortcut"
-msgstr ""
+msgstr "Пречица"
 
 #: ../src/Grids/ShortcutsGrid.vala:69
 msgid "Command"
-msgstr ""
+msgstr "Наредба"
 
 #: ../src/Grids/ShortcutsGrid.vala:116
 msgid "Every field must be filled!"
-msgstr ""
+msgstr "Свако поље мора бити попуњено!"
 
 #: ../src/Grids/ShortcutsGrid.vala:125
 msgid "Name:"
-msgstr ""
+msgstr "Назив:"
 
 #: ../src/Grids/ShortcutsGrid.vala:128
 msgid "Shortcut:"
-msgstr ""
+msgstr "Пречица:"
 
 #: ../src/Grids/ShortcutsGrid.vala:131
 msgid "Command:"
-msgstr ""
+msgstr "Наредба:"
 
 #: ../src/Grids/AppearanceGrid.vala:116
 msgid "Custom Layout:"
-msgstr ""
+msgstr "Обичан распоред:"
 
 #: ../src/Grids/AppearanceGrid.vala:119
 msgid "Close Only"
-msgstr ""
+msgstr "Само затварање"
 
 #: ../src/Grids/AppearanceGrid.vala:120
 msgid "Minimize Left"
@@ -511,7 +511,7 @@ msgstr "Слова за наслов прозора:"
 
 #: ../src/Grids/TerminalGrid.vala:199
 msgid "Limit Scrollback Lines:"
-msgstr ""
+msgstr "Ограничите скролбек линије"
 
 #: ../src/Grids/TerminalGrid.vala:203
 msgid "Custom Font:"
@@ -525,4 +525,4 @@ msgstr "Непрозирност:"
 #: ../src/Widgets/AcceleratorInputWidget.vala:85
 #: ../src/Objects/ShortcutObject.vala:38
 msgid "Disabled"
-msgstr ""
+msgstr "Онемогућено"
