@@ -60,10 +60,12 @@ public class TweaksPlug : Pantheon.Switchboard.Plug
         add_page (new FontsGrid (), _("Fonts"), "font-x-generic", cat_general);
 
         /* Animations Tab */
-        add_page (new AnimationsGrid (), _("Animations"), "preferences-tweaks-anim", cat_general);
+        if (schema_exists("org.pantheon.desktop.gala.animations"))
+            add_page (new AnimationsGrid (), _("Animations"), "preferences-tweaks-anim", cat_general);
 
         /* Shadows Tab*/
-        add_page (new ShadowsGrid (), _("Shadows"), "preferences-tweaks-shadows", cat_general);
+        if (schema_exists("org.pantheon.desktop.gala.shadows"))
+            add_page (new ShadowsGrid (), _("Shadows"), "preferences-tweaks-shadows", cat_general);
 
         /* Shortcuts Tab*/
         add_page (new ShortcutsGrid (), _("Shortcuts"), "preferences-desktop-keyboard", cat_general);
