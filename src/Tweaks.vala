@@ -51,7 +51,6 @@ public class TweaksPlug : Pantheon.Switchboard.Plug
         sidebar.root.add (cat_general);
         sidebar.root.add (cat_applications);
 
-
         /**** General Category ****/
 
         /* Appearances Tab */
@@ -76,23 +75,28 @@ public class TweaksPlug : Pantheon.Switchboard.Plug
         /**** Applications Category ****/
 
         /* Dock Tab*/
-        add_page (new PlankGrid (), _("Plank"), "plank", cat_applications);
+        if (file_exists("/plank/dock1/settings"))
+            add_page (new PlankGrid (), _("Plank"), "plank", cat_applications);
 
         /* Files Tab*/
-        add_page (new FilesGrid (), _("Files"), "system-file-manager", cat_applications);
+        if (schema_exists("org.pantheon.files.preferences"))
+            add_page (new FilesGrid (), _("Files"), "system-file-manager", cat_applications);
 
         /* Search Indicator Tab*/
         if (schema_exists("net.launchpad.synapse-project.indicator"))
             add_page (new SynapseGrid (), _("Search Indicator"), "system-search", cat_applications);
 
         /* Slingshot Tab*/
-        add_page (new SlingshotGrid (), _("Slingshot"), "preferences-tweaks-slingshot", cat_applications);
+        if (schema_exists("org.pantheon.desktop.slingshot"))
+            add_page (new SlingshotGrid (), _("Slingshot"), "preferences-tweaks-slingshot", cat_applications);
 
         /* Cerbere Tab*/
-        add_page (new CerbereGrid (), _("Cerbere"), "preferences-tweaks-cerbere", cat_applications);
+        if (schema_exists("org.pantheon.cerbere"))
+            add_page (new CerbereGrid (), _("Cerbere"), "preferences-tweaks-cerbere", cat_applications);
 
         /* Terminal Tab*/
-        add_page (new TerminalGrid (), _("Terminal"), "utilities-terminal", cat_applications);
+        if (schema_exists("org.pantheon.terminal.settings"))
+            add_page (new TerminalGrid (), _("Terminal"), "utilities-terminal", cat_applications);
 
         /* Wingpanel Tab*/
         if (schema_exists("org.pantheon.desktop.wingpanel-slim"))
@@ -119,6 +123,12 @@ public class TweaksPlug : Pantheon.Switchboard.Plug
         bool schema_exists(string schema) {
             return schema in Settings.list_schemas ();
         }
+
+        bool file_exists(string dir) {
+            var checkfile = File.new_for_path (Environment.get_user_config_dir () + dir);
+            return checkfile.query_exists ();
+        }
+
 }
  
 public static int main (string[] args) {
