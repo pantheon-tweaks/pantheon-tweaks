@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-08-10 22:20+0100\n"
+"POT-Creation-Date: 2013-08-20 21:04+0100\n"
 "PO-Revision-Date: 2013-08-03 09:24+0000\n"
 "Last-Translator: Wang Dianjin <Unknown>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-13 06:08+0000\n"
-"X-Generator: Launchpad (build 16723)\n"
+"X-Launchpad-Export-Date: 2013-08-21 06:11+0000\n"
+"X-Generator: Launchpad (build 16731)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
@@ -25,11 +25,11 @@ msgstr "常规"
 msgid "Applications"
 msgstr "应用程序"
 
-#: ../src/Tweaks.vala:58
+#: ../src/Tweaks.vala:57
 msgid "Appearance"
 msgstr "外观"
 
-#: ../src/Tweaks.vala:61
+#: ../src/Tweaks.vala:60
 msgid "Fonts"
 msgstr "字体"
 
@@ -37,43 +37,43 @@ msgstr "字体"
 msgid "Animations"
 msgstr "动画"
 
-#: ../src/Tweaks.vala:67
+#: ../src/Tweaks.vala:68
 msgid "Shadows"
 msgstr "阴影"
 
-#: ../src/Tweaks.vala:70
+#: ../src/Tweaks.vala:71
 msgid "Shortcuts"
 msgstr ""
 
-#: ../src/Tweaks.vala:73
+#: ../src/Tweaks.vala:74
 msgid "Miscellaneous"
 msgstr "杂项"
 
-#: ../src/Tweaks.vala:79
+#: ../src/Tweaks.vala:81
 msgid "Plank"
 msgstr "Plank"
 
-#: ../src/Tweaks.vala:82
+#: ../src/Tweaks.vala:85
 msgid "Files"
 msgstr "文件"
 
-#: ../src/Tweaks.vala:86
+#: ../src/Tweaks.vala:89
 msgid "Search Indicator"
 msgstr "搜索指示器"
 
-#: ../src/Tweaks.vala:89
+#: ../src/Tweaks.vala:93
 msgid "Slingshot"
 msgstr "Slingshot"
 
-#: ../src/Tweaks.vala:92
+#: ../src/Tweaks.vala:97
 msgid "Cerbere"
 msgstr ""
 
-#: ../src/Tweaks.vala:95
+#: ../src/Tweaks.vala:101
 msgid "Terminal"
 msgstr "终端"
 
-#: ../src/Tweaks.vala:99
+#: ../src/Tweaks.vala:105
 msgid "Wingpanel Slim"
 msgstr "Wingpanel Slim"
 
@@ -166,20 +166,20 @@ msgstr ""
 
 #: ../src/Grids/CerbereGrid.vala:50
 #: ../src/Grids/CerbereGrid.vala:60
-#: ../src/Grids/ShortcutsGrid.vala:90
-#: ../src/Grids/ShortcutsGrid.vala:157
+#: ../src/Grids/ShortcutsGrid.vala:91
+#: ../src/Grids/ShortcutsGrid.vala:158
 msgid "Add..."
 msgstr ""
 
 #: ../src/Grids/CerbereGrid.vala:51
 #: ../src/Grids/CerbereGrid.vala:61
-#: ../src/Grids/ShortcutsGrid.vala:91
-#: ../src/Grids/ShortcutsGrid.vala:158
+#: ../src/Grids/ShortcutsGrid.vala:92
+#: ../src/Grids/ShortcutsGrid.vala:159
 msgid "Remove"
 msgstr ""
 
 #: ../src/Grids/CerbereGrid.vala:62
-#: ../src/Grids/ShortcutsGrid.vala:159
+#: ../src/Grids/ShortcutsGrid.vala:160
 msgid "Revert to Default"
 msgstr ""
 
@@ -281,66 +281,68 @@ msgid "Show Desktop Icon:"
 msgstr "显示桌面图标："
 
 #: ../src/Grids/MiscGrid.vala:48
-#: ../src/Grids/MiscGrid.vala:74
-#: ../src/Grids/MiscGrid.vala:101
-msgid "Maximize"
-msgstr "最大化"
-
-#: ../src/Grids/MiscGrid.vala:49
 #: ../src/Grids/MiscGrid.vala:75
 #: ../src/Grids/MiscGrid.vala:102
-msgid "Maximize Horizontally"
-msgstr "水平方向最大化"
-
-#: ../src/Grids/MiscGrid.vala:50
-#: ../src/Grids/MiscGrid.vala:76
-#: ../src/Grids/MiscGrid.vala:103
-msgid "Maximize Vertically"
-msgstr "垂直方向最大化"
-
-#: ../src/Grids/MiscGrid.vala:51
-#: ../src/Grids/MiscGrid.vala:77
-#: ../src/Grids/MiscGrid.vala:104
-msgid "Minimize"
-msgstr "最小化"
-
-#: ../src/Grids/MiscGrid.vala:52
-#: ../src/Grids/MiscGrid.vala:78
-#: ../src/Grids/MiscGrid.vala:105
-msgid "Shade"
-msgstr "阴影"
-
-#: ../src/Grids/MiscGrid.vala:53
-#: ../src/Grids/MiscGrid.vala:79
-#: ../src/Grids/MiscGrid.vala:106
-msgid "Lower Window"
-msgstr "降低窗口"
-
-#: ../src/Grids/MiscGrid.vala:100
 msgid "Menu"
 msgstr "菜单"
 
-#: ../src/Grids/MiscGrid.vala:124
+#: ../src/Grids/MiscGrid.vala:49
+#: ../src/Grids/MiscGrid.vala:76
+#: ../src/Grids/MiscGrid.vala:103
+msgid "Maximize"
+msgstr "最大化"
+
+#: ../src/Grids/MiscGrid.vala:50
+#: ../src/Grids/MiscGrid.vala:77
+#: ../src/Grids/MiscGrid.vala:104
+msgid "Maximize Horizontally"
+msgstr "水平方向最大化"
+
+#: ../src/Grids/MiscGrid.vala:51
+#: ../src/Grids/MiscGrid.vala:78
+#: ../src/Grids/MiscGrid.vala:105
+msgid "Maximize Vertically"
+msgstr "垂直方向最大化"
+
+#: ../src/Grids/MiscGrid.vala:52
+#: ../src/Grids/MiscGrid.vala:79
+#: ../src/Grids/MiscGrid.vala:106
+msgid "Minimize"
+msgstr "最小化"
+
+#: ../src/Grids/MiscGrid.vala:53
+#: ../src/Grids/MiscGrid.vala:80
+#: ../src/Grids/MiscGrid.vala:107
+msgid "Shade"
+msgstr "阴影"
+
+#: ../src/Grids/MiscGrid.vala:54
+#: ../src/Grids/MiscGrid.vala:81
+#: ../src/Grids/MiscGrid.vala:108
+msgid "Lower Window"
+msgstr "降低窗口"
+
+#: ../src/Grids/MiscGrid.vala:126
 msgid "Double Click Titlebar Action:"
 msgstr "双击标题栏动作："
 
-#: ../src/Grids/MiscGrid.vala:127
+#: ../src/Grids/MiscGrid.vala:129
 msgid "Middle Click Titlebar Action:"
 msgstr "中键点击标题栏动作："
 
-#: ../src/Grids/MiscGrid.vala:130
+#: ../src/Grids/MiscGrid.vala:132
 msgid "Right Click Titlebar Action:"
 msgstr "右击标题栏动作："
 
-#: ../src/Grids/MiscGrid.vala:133
+#: ../src/Grids/MiscGrid.vala:135
 msgid "Audible Bell:"
 msgstr "响铃："
 
-#: ../src/Grids/MiscGrid.vala:136
+#: ../src/Grids/MiscGrid.vala:138
 msgid "Overlay Scrollbars:"
 msgstr "覆盖式滚动条："
 
-#: ../src/Grids/MiscGrid.vala:139
+#: ../src/Grids/MiscGrid.vala:141
 msgid "Natural Scrolling:"
 msgstr "自然滚动："
 
@@ -356,31 +358,43 @@ msgstr ""
 msgid "Flush Right"
 msgstr ""
 
-#: ../src/Grids/WingpanelslimGrid.vala:68
+#: ../src/Grids/WingpanelslimGrid.vala:65
 msgid "Edge:"
 msgstr ""
 
-#: ../src/Grids/WingpanelslimGrid.vala:69
+#: ../src/Grids/WingpanelslimGrid.vala:66
 msgid "Slanted"
 msgstr ""
 
-#: ../src/Grids/WingpanelslimGrid.vala:70
+#: ../src/Grids/WingpanelslimGrid.vala:67
 msgid "Squared"
 msgstr ""
 
-#: ../src/Grids/WingpanelslimGrid.vala:71
+#: ../src/Grids/WingpanelslimGrid.vala:68
 msgid "Curved 1"
 msgstr ""
 
-#: ../src/Grids/WingpanelslimGrid.vala:72
+#: ../src/Grids/WingpanelslimGrid.vala:69
 msgid "Curved 2"
 msgstr ""
 
-#: ../src/Grids/WingpanelslimGrid.vala:73
+#: ../src/Grids/WingpanelslimGrid.vala:70
 msgid "Curved 3"
 msgstr ""
 
-#: ../src/Grids/WingpanelslimGrid.vala:120
+#: ../src/Grids/WingpanelslimGrid.vala:90
+msgid "Auto Hide:"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:98
+msgid "Show Launcher:"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:107
+msgid "Launcher:"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:151
 msgid "Slim Wingpanel:"
 msgstr "Slim Wingpanel："
 
@@ -416,31 +430,31 @@ msgstr "行："
 msgid "Columns:"
 msgstr "列："
 
-#: ../src/Grids/ShortcutsGrid.vala:67
+#: ../src/Grids/ShortcutsGrid.vala:68
 msgid "Name"
 msgstr ""
 
-#: ../src/Grids/ShortcutsGrid.vala:68
+#: ../src/Grids/ShortcutsGrid.vala:69
 msgid "Shortcut"
 msgstr ""
 
-#: ../src/Grids/ShortcutsGrid.vala:69
+#: ../src/Grids/ShortcutsGrid.vala:70
 msgid "Command"
 msgstr ""
 
-#: ../src/Grids/ShortcutsGrid.vala:116
+#: ../src/Grids/ShortcutsGrid.vala:117
 msgid "Every field must be filled!"
 msgstr ""
 
-#: ../src/Grids/ShortcutsGrid.vala:125
+#: ../src/Grids/ShortcutsGrid.vala:126
 msgid "Name:"
 msgstr ""
 
-#: ../src/Grids/ShortcutsGrid.vala:128
+#: ../src/Grids/ShortcutsGrid.vala:129
 msgid "Shortcut:"
 msgstr ""
 
-#: ../src/Grids/ShortcutsGrid.vala:131
+#: ../src/Grids/ShortcutsGrid.vala:132
 msgid "Command:"
 msgstr ""
 

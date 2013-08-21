@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-08-10 22:20+0100\n"
-"PO-Revision-Date: 2013-08-15 06:09+0000\n"
+"POT-Creation-Date: 2013-08-20 21:04+0100\n"
+"PO-Revision-Date: 2013-08-20 22:50+0000\n"
 "Last-Translator: MinSik CHO <Unknown>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-16 06:15+0000\n"
-"X-Generator: Launchpad (build 16723)\n"
+"X-Launchpad-Export-Date: 2013-08-21 06:11+0000\n"
+"X-Generator: Launchpad (build 16731)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
@@ -25,11 +25,11 @@ msgstr "일반"
 msgid "Applications"
 msgstr "프로그램"
 
-#: ../src/Tweaks.vala:58
+#: ../src/Tweaks.vala:57
 msgid "Appearance"
 msgstr "모양"
 
-#: ../src/Tweaks.vala:61
+#: ../src/Tweaks.vala:60
 msgid "Fonts"
 msgstr "글꼴"
 
@@ -37,43 +37,43 @@ msgstr "글꼴"
 msgid "Animations"
 msgstr "애니메이션"
 
-#: ../src/Tweaks.vala:67
+#: ../src/Tweaks.vala:68
 msgid "Shadows"
 msgstr "그림자"
 
-#: ../src/Tweaks.vala:70
+#: ../src/Tweaks.vala:71
 msgid "Shortcuts"
 msgstr "바로 가기"
 
-#: ../src/Tweaks.vala:73
+#: ../src/Tweaks.vala:74
 msgid "Miscellaneous"
 msgstr "기타"
 
-#: ../src/Tweaks.vala:79
+#: ../src/Tweaks.vala:81
 msgid "Plank"
 msgstr "플랑크 독"
 
-#: ../src/Tweaks.vala:82
+#: ../src/Tweaks.vala:85
 msgid "Files"
 msgstr "파일"
 
-#: ../src/Tweaks.vala:86
+#: ../src/Tweaks.vala:89
 msgid "Search Indicator"
 msgstr "표시줄 검색"
 
-#: ../src/Tweaks.vala:89
+#: ../src/Tweaks.vala:93
 msgid "Slingshot"
 msgstr "Slingshot"
 
-#: ../src/Tweaks.vala:92
+#: ../src/Tweaks.vala:97
 msgid "Cerbere"
 msgstr ""
 
-#: ../src/Tweaks.vala:95
+#: ../src/Tweaks.vala:101
 msgid "Terminal"
 msgstr "터미널"
 
-#: ../src/Tweaks.vala:99
+#: ../src/Tweaks.vala:105
 msgid "Wingpanel Slim"
 msgstr "Wingpanel Slim"
 
@@ -166,20 +166,20 @@ msgstr "감시 중인 프로세스"
 
 #: ../src/Grids/CerbereGrid.vala:50
 #: ../src/Grids/CerbereGrid.vala:60
-#: ../src/Grids/ShortcutsGrid.vala:90
-#: ../src/Grids/ShortcutsGrid.vala:157
+#: ../src/Grids/ShortcutsGrid.vala:91
+#: ../src/Grids/ShortcutsGrid.vala:158
 msgid "Add..."
 msgstr "추가...."
 
 #: ../src/Grids/CerbereGrid.vala:51
 #: ../src/Grids/CerbereGrid.vala:61
-#: ../src/Grids/ShortcutsGrid.vala:91
-#: ../src/Grids/ShortcutsGrid.vala:158
+#: ../src/Grids/ShortcutsGrid.vala:92
+#: ../src/Grids/ShortcutsGrid.vala:159
 msgid "Remove"
 msgstr "제거"
 
 #: ../src/Grids/CerbereGrid.vala:62
-#: ../src/Grids/ShortcutsGrid.vala:159
+#: ../src/Grids/ShortcutsGrid.vala:160
 msgid "Revert to Default"
 msgstr "기본값으로 설정"
 
@@ -281,68 +281,70 @@ msgid "Show Desktop Icon:"
 msgstr "바탕화면 보기 아이콘:"
 
 #: ../src/Grids/MiscGrid.vala:48
-#: ../src/Grids/MiscGrid.vala:74
-#: ../src/Grids/MiscGrid.vala:101
+#: ../src/Grids/MiscGrid.vala:75
+#: ../src/Grids/MiscGrid.vala:102
+msgid "Menu"
+msgstr "메뉴"
+
+#: ../src/Grids/MiscGrid.vala:49
+#: ../src/Grids/MiscGrid.vala:76
+#: ../src/Grids/MiscGrid.vala:103
 msgid "Maximize"
 msgstr "최대화"
 
-#: ../src/Grids/MiscGrid.vala:49
-#: ../src/Grids/MiscGrid.vala:75
-#: ../src/Grids/MiscGrid.vala:102
+#: ../src/Grids/MiscGrid.vala:50
+#: ../src/Grids/MiscGrid.vala:77
+#: ../src/Grids/MiscGrid.vala:104
 msgid "Maximize Horizontally"
 msgstr "가로로 최대화"
 
-#: ../src/Grids/MiscGrid.vala:50
-#: ../src/Grids/MiscGrid.vala:76
-#: ../src/Grids/MiscGrid.vala:103
+#: ../src/Grids/MiscGrid.vala:51
+#: ../src/Grids/MiscGrid.vala:78
+#: ../src/Grids/MiscGrid.vala:105
 msgid "Maximize Vertically"
 msgstr "세로로 최대화"
 
-#: ../src/Grids/MiscGrid.vala:51
-#: ../src/Grids/MiscGrid.vala:77
-#: ../src/Grids/MiscGrid.vala:104
+#: ../src/Grids/MiscGrid.vala:52
+#: ../src/Grids/MiscGrid.vala:79
+#: ../src/Grids/MiscGrid.vala:106
 msgid "Minimize"
 msgstr "최소화"
 
-#: ../src/Grids/MiscGrid.vala:52
-#: ../src/Grids/MiscGrid.vala:78
-#: ../src/Grids/MiscGrid.vala:105
-msgid "Shade"
-msgstr ""
-
 #: ../src/Grids/MiscGrid.vala:53
-#: ../src/Grids/MiscGrid.vala:79
-#: ../src/Grids/MiscGrid.vala:106
+#: ../src/Grids/MiscGrid.vala:80
+#: ../src/Grids/MiscGrid.vala:107
+msgid "Shade"
+msgstr "그림자"
+
+#: ../src/Grids/MiscGrid.vala:54
+#: ../src/Grids/MiscGrid.vala:81
+#: ../src/Grids/MiscGrid.vala:108
 msgid "Lower Window"
-msgstr ""
+msgstr "창 내리기"
 
-#: ../src/Grids/MiscGrid.vala:100
-msgid "Menu"
-msgstr ""
-
-#: ../src/Grids/MiscGrid.vala:124
+#: ../src/Grids/MiscGrid.vala:126
 msgid "Double Click Titlebar Action:"
-msgstr ""
+msgstr "제목 표시줄을 연속을 클릭했을 때 실행할 동작:"
 
-#: ../src/Grids/MiscGrid.vala:127
+#: ../src/Grids/MiscGrid.vala:129
 msgid "Middle Click Titlebar Action:"
-msgstr ""
+msgstr "제목 표시줄을 마우스 가운데 버튼으로 클릭했을 때 실행할 동작:"
 
-#: ../src/Grids/MiscGrid.vala:130
+#: ../src/Grids/MiscGrid.vala:132
 msgid "Right Click Titlebar Action:"
-msgstr ""
+msgstr "제목 표시줄을 마우스 오른쪽 버튼으로 클릭했을 때 실행할 동작:"
 
-#: ../src/Grids/MiscGrid.vala:133
+#: ../src/Grids/MiscGrid.vala:135
 msgid "Audible Bell:"
 msgstr "시스템 알림음:"
 
-#: ../src/Grids/MiscGrid.vala:136
+#: ../src/Grids/MiscGrid.vala:138
 msgid "Overlay Scrollbars:"
 msgstr "스크롤 바:"
 
-#: ../src/Grids/MiscGrid.vala:139
+#: ../src/Grids/MiscGrid.vala:141
 msgid "Natural Scrolling:"
-msgstr ""
+msgstr "자연스러운 스크롤링:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:41
 msgid "Middle"
@@ -350,37 +352,49 @@ msgstr "중간"
 
 #: ../src/Grids/WingpanelslimGrid.vala:43
 msgid "Flush Left"
-msgstr ""
+msgstr "왼쪽으로 끌기"
 
 #: ../src/Grids/WingpanelslimGrid.vala:44
 msgid "Flush Right"
-msgstr ""
+msgstr "오른쪽으로 끌기"
+
+#: ../src/Grids/WingpanelslimGrid.vala:65
+msgid "Edge:"
+msgstr "가장자리"
+
+#: ../src/Grids/WingpanelslimGrid.vala:66
+msgid "Slanted"
+msgstr "기울어짐"
+
+#: ../src/Grids/WingpanelslimGrid.vala:67
+msgid "Squared"
+msgstr "정사각형"
 
 #: ../src/Grids/WingpanelslimGrid.vala:68
-msgid "Edge:"
-msgstr ""
+msgid "Curved 1"
+msgstr "휘어짐 1"
 
 #: ../src/Grids/WingpanelslimGrid.vala:69
-msgid "Slanted"
-msgstr ""
+msgid "Curved 2"
+msgstr "휘어짐 2"
 
 #: ../src/Grids/WingpanelslimGrid.vala:70
-msgid "Squared"
-msgstr ""
-
-#: ../src/Grids/WingpanelslimGrid.vala:71
-msgid "Curved 1"
-msgstr ""
-
-#: ../src/Grids/WingpanelslimGrid.vala:72
-msgid "Curved 2"
-msgstr ""
-
-#: ../src/Grids/WingpanelslimGrid.vala:73
 msgid "Curved 3"
-msgstr ""
+msgstr "휘어짐 3"
 
-#: ../src/Grids/WingpanelslimGrid.vala:120
+#: ../src/Grids/WingpanelslimGrid.vala:90
+msgid "Auto Hide:"
+msgstr "자동으로 숨기기"
+
+#: ../src/Grids/WingpanelslimGrid.vala:98
+msgid "Show Launcher:"
+msgstr "런처 보이기:"
+
+#: ../src/Grids/WingpanelslimGrid.vala:107
+msgid "Launcher:"
+msgstr "런처:"
+
+#: ../src/Grids/WingpanelslimGrid.vala:151
 msgid "Slim Wingpanel:"
 msgstr "Wingpanel:"
 
@@ -416,31 +430,31 @@ msgstr "열:"
 msgid "Columns:"
 msgstr "행:"
 
-#: ../src/Grids/ShortcutsGrid.vala:67
+#: ../src/Grids/ShortcutsGrid.vala:68
 msgid "Name"
 msgstr ""
 
-#: ../src/Grids/ShortcutsGrid.vala:68
+#: ../src/Grids/ShortcutsGrid.vala:69
 msgid "Shortcut"
 msgstr ""
 
-#: ../src/Grids/ShortcutsGrid.vala:69
+#: ../src/Grids/ShortcutsGrid.vala:70
 msgid "Command"
 msgstr ""
 
-#: ../src/Grids/ShortcutsGrid.vala:116
+#: ../src/Grids/ShortcutsGrid.vala:117
 msgid "Every field must be filled!"
 msgstr ""
 
-#: ../src/Grids/ShortcutsGrid.vala:125
+#: ../src/Grids/ShortcutsGrid.vala:126
 msgid "Name:"
 msgstr ""
 
-#: ../src/Grids/ShortcutsGrid.vala:128
+#: ../src/Grids/ShortcutsGrid.vala:129
 msgid "Shortcut:"
 msgstr ""
 
-#: ../src/Grids/ShortcutsGrid.vala:131
+#: ../src/Grids/ShortcutsGrid.vala:132
 msgid "Command:"
 msgstr ""
 
