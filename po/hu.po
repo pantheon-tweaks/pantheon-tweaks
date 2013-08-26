@@ -1,0 +1,542 @@
+# Hungarian translation for elementary-community
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the elementary-community package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: elementary-community\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-08-20 21:04+0100\n"
+"PO-Revision-Date: 2013-08-25 12:15+0000\n"
+"Last-Translator: moonwatcher <moonwatcher2k1@gmail.com>\n"
+"Language-Team: Hungarian <hu@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2013-08-26 05:26+0000\n"
+"X-Generator: Launchpad (build 16738)\n"
+
+#: ../src/Tweaks.vala:49
+msgid "General"
+msgstr "Általános"
+
+#: ../src/Tweaks.vala:50
+msgid "Applications"
+msgstr "Alkalmazások"
+
+#: ../src/Tweaks.vala:57
+msgid "Appearance"
+msgstr "Megjelenés"
+
+#: ../src/Tweaks.vala:60
+msgid "Fonts"
+msgstr "Betűk"
+
+#: ../src/Tweaks.vala:64
+msgid "Animations"
+msgstr "Animációk"
+
+#: ../src/Tweaks.vala:68
+msgid "Shadows"
+msgstr "Árnyékok"
+
+#: ../src/Tweaks.vala:71
+msgid "Shortcuts"
+msgstr "Gyorsbillentyűk"
+
+#: ../src/Tweaks.vala:74
+msgid "Miscellaneous"
+msgstr "Egyéb"
+
+#: ../src/Tweaks.vala:81
+msgid "Plank"
+msgstr ""
+
+#: ../src/Tweaks.vala:85
+msgid "Files"
+msgstr "Fájlkezelő"
+
+#: ../src/Tweaks.vala:89
+msgid "Search Indicator"
+msgstr "Kereső indikátor"
+
+#: ../src/Tweaks.vala:93
+msgid "Slingshot"
+msgstr ""
+
+#: ../src/Tweaks.vala:97
+msgid "Cerbere"
+msgstr ""
+
+#: ../src/Tweaks.vala:101
+msgid "Terminal"
+msgstr "Terminál"
+
+#: ../src/Tweaks.vala:105
+msgid "Wingpanel Slim"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:38
+msgid "Locale"
+msgstr "Területi beállítások"
+
+#: ../src/Grids/FilesGrid.vala:39
+msgid "ISO"
+msgstr "ISO"
+
+#: ../src/Grids/FilesGrid.vala:40
+msgid "Informal"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:61
+#: ../src/Grids/SlingshotGrid.vala:29
+msgid "Smallest"
+msgstr "Legkisebb"
+
+#: ../src/Grids/FilesGrid.vala:62
+#: ../src/Grids/SlingshotGrid.vala:30
+msgid "Smaller"
+msgstr "Kisebb"
+
+#: ../src/Grids/FilesGrid.vala:63
+#: ../src/Grids/SlingshotGrid.vala:31
+msgid "Small"
+msgstr "Kicsi"
+
+#: ../src/Grids/FilesGrid.vala:64
+#: ../src/Grids/SlingshotGrid.vala:32
+msgid "Normal"
+msgstr "Normál"
+
+#: ../src/Grids/FilesGrid.vala:65
+#: ../src/Grids/SlingshotGrid.vala:33
+msgid "Large"
+msgstr "Nagy"
+
+#: ../src/Grids/FilesGrid.vala:66
+#: ../src/Grids/SlingshotGrid.vala:34
+msgid "Larger"
+msgstr "Nagyobb"
+
+#: ../src/Grids/FilesGrid.vala:67
+#: ../src/Grids/SlingshotGrid.vala:35
+msgid "Largest"
+msgstr "Legnagyobb"
+
+#: ../src/Grids/FilesGrid.vala:85
+msgid "Single Click:"
+msgstr "Szimpla klikk:"
+
+#: ../src/Grids/FilesGrid.vala:88
+msgid "Date Format:"
+msgstr "Dátumformátum:"
+
+#: ../src/Grids/FilesGrid.vala:91
+msgid "Sidebar Icon Size:"
+msgstr "Oldalsáv ikon mérete:"
+
+#: ../src/Grids/ShadowsGrid.vala:27
+msgid "Focused Windows:"
+msgstr "Előtérben lévő ablakok:"
+
+#: ../src/Grids/ShadowsGrid.vala:28
+msgid "Unfocused Windows:"
+msgstr "Háttérben lévő ablakok:"
+
+#: ../src/Grids/ShadowsGrid.vala:29
+msgid "Focused Dialogs:"
+msgstr ""
+
+#: ../src/Grids/ShadowsGrid.vala:30
+msgid "Unfocused Dialogs:"
+msgstr ""
+
+#: ../src/Grids/ShadowsGrid.vala:31
+msgid "Menu:"
+msgstr "Menü:"
+
+#: ../src/Grids/ShadowsGrid.vala:194
+msgid "Shadows:"
+msgstr "Árnyékok:"
+
+#: ../src/Grids/CerbereGrid.vala:39
+msgid "Watched Processes"
+msgstr "Megfigyelt folyamatok"
+
+#: ../src/Grids/CerbereGrid.vala:50
+#: ../src/Grids/CerbereGrid.vala:60
+#: ../src/Grids/ShortcutsGrid.vala:91
+#: ../src/Grids/ShortcutsGrid.vala:158
+msgid "Add..."
+msgstr "Hozzáadás…"
+
+#: ../src/Grids/CerbereGrid.vala:51
+#: ../src/Grids/CerbereGrid.vala:61
+#: ../src/Grids/ShortcutsGrid.vala:92
+#: ../src/Grids/ShortcutsGrid.vala:159
+msgid "Remove"
+msgstr "Törlés"
+
+#: ../src/Grids/CerbereGrid.vala:62
+#: ../src/Grids/ShortcutsGrid.vala:160
+msgid "Revert to Default"
+msgstr "Visszaállítás alapértelmezettre"
+
+#: ../src/Grids/SynapseGrid.vala:46
+msgid "Search Indicator Shortcut:"
+msgstr "Kereső indikátor gyorsbillentyű:"
+
+#: ../src/Grids/PlankGrid.vala:47
+msgid "Top"
+msgstr "Fent"
+
+#: ../src/Grids/PlankGrid.vala:48
+msgid "Bottom"
+msgstr "Lent"
+
+#: ../src/Grids/PlankGrid.vala:49
+#: ../src/Grids/WingpanelslimGrid.vala:42
+msgid "Left"
+msgstr "Bal"
+
+#: ../src/Grids/PlankGrid.vala:50
+#: ../src/Grids/WingpanelslimGrid.vala:40
+msgid "Right"
+msgstr "Jobb"
+
+#: ../src/Grids/PlankGrid.vala:51
+msgid "Center"
+msgstr "Középen"
+
+#: ../src/Grids/PlankGrid.vala:52
+msgid "Panel"
+msgstr "Panel"
+
+#: ../src/Grids/PlankGrid.vala:133
+msgid "Item Alignment:"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:171
+msgid "Unknown Value"
+msgstr "Ismeretlen érték"
+
+#: ../src/Grids/PlankGrid.vala:193
+msgid "Don't hide"
+msgstr "Ne rejtse el"
+
+#: ../src/Grids/PlankGrid.vala:194
+msgid "Intelligent hide"
+msgstr "Intelligens elrejtés"
+
+#: ../src/Grids/PlankGrid.vala:195
+msgid "Auto hide"
+msgstr "Automatikus elrejtés"
+
+#: ../src/Grids/PlankGrid.vala:196
+msgid "Hide on maximize"
+msgstr "Elrejtés teljes méret esetén"
+
+#: ../src/Grids/PlankGrid.vala:249
+msgid "Primary Monitor"
+msgstr "Elsődleges monitor"
+
+#: ../src/Grids/PlankGrid.vala:252
+#, c-format
+msgid "Monitor %d"
+msgstr "%d. monitor"
+
+#: ../src/Grids/PlankGrid.vala:272
+msgid "Icon Size:"
+msgstr "Ikonméret:"
+
+#: ../src/Grids/PlankGrid.vala:276
+msgid "Hide Mode:"
+msgstr "Elrejtési mód:"
+
+#: ../src/Grids/PlankGrid.vala:280
+#: ../src/Grids/TerminalGrid.vala:210
+msgid "Theme:"
+msgstr "Téma:"
+
+#: ../src/Grids/PlankGrid.vala:285
+msgid "Monitor:"
+msgstr "Monitor:"
+
+#: ../src/Grids/PlankGrid.vala:289
+#: ../src/Grids/WingpanelslimGrid.vala:39
+msgid "Position:"
+msgstr "Pozíció:"
+
+#: ../src/Grids/PlankGrid.vala:292
+msgid "Alignment:"
+msgstr "Igazítás:"
+
+#: ../src/Grids/PlankGrid.vala:298
+msgid "Workspace Overview Icon:"
+msgstr "Munkaterület áttekintő ikon:"
+
+#: ../src/Grids/PlankGrid.vala:301
+msgid "Show Desktop Icon:"
+msgstr "Asztalmutató ikon"
+
+#: ../src/Grids/MiscGrid.vala:48
+#: ../src/Grids/MiscGrid.vala:75
+#: ../src/Grids/MiscGrid.vala:102
+msgid "Menu"
+msgstr "Menü"
+
+#: ../src/Grids/MiscGrid.vala:49
+#: ../src/Grids/MiscGrid.vala:76
+#: ../src/Grids/MiscGrid.vala:103
+msgid "Maximize"
+msgstr "Teljes méret"
+
+#: ../src/Grids/MiscGrid.vala:50
+#: ../src/Grids/MiscGrid.vala:77
+#: ../src/Grids/MiscGrid.vala:104
+msgid "Maximize Horizontally"
+msgstr "Maximalizálás vízszintesen"
+
+#: ../src/Grids/MiscGrid.vala:51
+#: ../src/Grids/MiscGrid.vala:78
+#: ../src/Grids/MiscGrid.vala:105
+msgid "Maximize Vertically"
+msgstr "Maximalizálás függőlegesen"
+
+#: ../src/Grids/MiscGrid.vala:52
+#: ../src/Grids/MiscGrid.vala:79
+#: ../src/Grids/MiscGrid.vala:106
+msgid "Minimize"
+msgstr "Kicsinyítés"
+
+#: ../src/Grids/MiscGrid.vala:53
+#: ../src/Grids/MiscGrid.vala:80
+#: ../src/Grids/MiscGrid.vala:107
+msgid "Shade"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:54
+#: ../src/Grids/MiscGrid.vala:81
+#: ../src/Grids/MiscGrid.vala:108
+msgid "Lower Window"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:126
+msgid "Double Click Titlebar Action:"
+msgstr "Dupla klikk az ablak címsorán:"
+
+#: ../src/Grids/MiscGrid.vala:129
+msgid "Middle Click Titlebar Action:"
+msgstr "Középső gomb klikk az ablak címsorán:"
+
+#: ../src/Grids/MiscGrid.vala:132
+msgid "Right Click Titlebar Action:"
+msgstr "Jobb klikk az ablak címsorán:"
+
+#: ../src/Grids/MiscGrid.vala:135
+msgid "Audible Bell:"
+msgstr "Hangjelzés:"
+
+#: ../src/Grids/MiscGrid.vala:138
+msgid "Overlay Scrollbars:"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:141
+msgid "Natural Scrolling:"
+msgstr "Naturál görgetés:"
+
+#: ../src/Grids/WingpanelslimGrid.vala:41
+msgid "Middle"
+msgstr "Középen"
+
+#: ../src/Grids/WingpanelslimGrid.vala:43
+msgid "Flush Left"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:44
+msgid "Flush Right"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:65
+msgid "Edge:"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:66
+msgid "Slanted"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:67
+msgid "Squared"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:68
+msgid "Curved 1"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:69
+msgid "Curved 2"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:70
+msgid "Curved 3"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:90
+msgid "Auto Hide:"
+msgstr "Automatikus elrejtés:"
+
+#: ../src/Grids/WingpanelslimGrid.vala:98
+msgid "Show Launcher:"
+msgstr "Gyorsindító mutatása:"
+
+#: ../src/Grids/WingpanelslimGrid.vala:107
+msgid "Launcher:"
+msgstr "Gyorsindító:"
+
+#: ../src/Grids/WingpanelslimGrid.vala:151
+msgid "Slim Wingpanel:"
+msgstr ""
+
+#: ../src/Grids/AnimationsGrid.vala:27
+msgid "Open Duration:"
+msgstr "Megnyitás időtartama:"
+
+#: ../src/Grids/AnimationsGrid.vala:28
+msgid "Close Duration:"
+msgstr "Bezárás időtartama:"
+
+#: ../src/Grids/AnimationsGrid.vala:29
+msgid "Snap Duration:"
+msgstr ""
+
+#: ../src/Grids/AnimationsGrid.vala:30
+msgid "Minimize Duration:"
+msgstr "Lekicsinyítés időtartama:"
+
+#: ../src/Grids/AnimationsGrid.vala:31
+msgid "Workspace Switch Duration:"
+msgstr "Munkaterület váltás időtartama:"
+
+#: ../src/Grids/AnimationsGrid.vala:148
+msgid "Animations:"
+msgstr "Animációk:"
+
+#: ../src/Grids/SlingshotGrid.vala:93
+msgid "Rows:"
+msgstr "Sorok:"
+
+#: ../src/Grids/SlingshotGrid.vala:96
+msgid "Columns:"
+msgstr "Oszlopok:"
+
+#: ../src/Grids/ShortcutsGrid.vala:68
+msgid "Name"
+msgstr "Név"
+
+#: ../src/Grids/ShortcutsGrid.vala:69
+msgid "Shortcut"
+msgstr "Gyorsbillentyű"
+
+#: ../src/Grids/ShortcutsGrid.vala:70
+msgid "Command"
+msgstr "Parancs"
+
+#: ../src/Grids/ShortcutsGrid.vala:117
+msgid "Every field must be filled!"
+msgstr "Minden mezőt ki kell tölteni!"
+
+#: ../src/Grids/ShortcutsGrid.vala:126
+msgid "Name:"
+msgstr "Név:"
+
+#: ../src/Grids/ShortcutsGrid.vala:129
+msgid "Shortcut:"
+msgstr "Gyorsbillentyű:"
+
+#: ../src/Grids/ShortcutsGrid.vala:132
+msgid "Command:"
+msgstr "Parancs:"
+
+#: ../src/Grids/AppearanceGrid.vala:116
+msgid "Custom Layout:"
+msgstr "Egyéni elrendezés:"
+
+#: ../src/Grids/AppearanceGrid.vala:119
+msgid "Close Only"
+msgstr "Csak a bezárás gomb"
+
+#: ../src/Grids/AppearanceGrid.vala:120
+msgid "Minimize Left"
+msgstr "Lekicsinyítő gomb bal oldalon"
+
+#: ../src/Grids/AppearanceGrid.vala:121
+msgid "Minimize Right"
+msgstr "Lekicsinyítő gomb jobb oldalon"
+
+#: ../src/Grids/AppearanceGrid.vala:122
+msgid "Windows"
+msgstr "Ablakok"
+
+#: ../src/Grids/AppearanceGrid.vala:123
+msgid "OS X"
+msgstr "OS X"
+
+#: ../src/Grids/AppearanceGrid.vala:124
+#: ../src/Grids/TerminalGrid.vala:180
+msgid "Custom"
+msgstr "Egyéni"
+
+#: ../src/Grids/AppearanceGrid.vala:183
+msgid "Window Decoration Theme:"
+msgstr "Ablakdekorációs téma:"
+
+#: ../src/Grids/AppearanceGrid.vala:186
+msgid "Interface Theme:"
+msgstr "Kezelőfelület téma:"
+
+#: ../src/Grids/AppearanceGrid.vala:189
+msgid "Icon Theme:"
+msgstr "Ikontéma:"
+
+#: ../src/Grids/AppearanceGrid.vala:192
+msgid "Cursor Theme:"
+msgstr "Kurzortéma:"
+
+#: ../src/Grids/AppearanceGrid.vala:195
+msgid "Button Layout:"
+msgstr "Gombok elrendezése:"
+
+#: ../src/Grids/FontsGrid.vala:98
+msgid "Default Font:"
+msgstr "Alapértelmezett betűkészlet:"
+
+#: ../src/Grids/FontsGrid.vala:101
+msgid "Document Font:"
+msgstr "Dokumentum betűkészlet:"
+
+#: ../src/Grids/FontsGrid.vala:104
+msgid "Monospace Font:"
+msgstr "Monospace betű:"
+
+#: ../src/Grids/FontsGrid.vala:107
+msgid "Window Title Font:"
+msgstr "Ablak címsorának betűtípusa:"
+
+#: ../src/Grids/TerminalGrid.vala:199
+msgid "Limit Scrollback Lines:"
+msgstr ""
+
+#: ../src/Grids/TerminalGrid.vala:203
+msgid "Custom Font:"
+msgstr "Egyéni betűkészlet:"
+
+#: ../src/Grids/TerminalGrid.vala:207
+msgid "Opacity:"
+msgstr "Átlátszatlanság:"
+
+#: ../src/Widgets/AcceleratorInputWidget.vala:67
+#: ../src/Widgets/AcceleratorInputWidget.vala:85
+#: ../src/Objects/ShortcutObject.vala:38
+msgid "Disabled"
+msgstr "Letiltva"
