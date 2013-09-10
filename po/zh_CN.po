@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-20 21:04+0100\n"
-"PO-Revision-Date: 2013-08-03 09:24+0000\n"
+"PO-Revision-Date: 2013-09-10 05:26+0000\n"
 "Last-Translator: Wang Dianjin <Unknown>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-21 06:11+0000\n"
-"X-Generator: Launchpad (build 16731)\n"
+"X-Launchpad-Export-Date: 2013-09-10 05:37+0000\n"
+"X-Generator: Launchpad (build 16761)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
@@ -43,7 +43,7 @@ msgstr "阴影"
 
 #: ../src/Tweaks.vala:71
 msgid "Shortcuts"
-msgstr ""
+msgstr "快捷键"
 
 #: ../src/Tweaks.vala:74
 msgid "Miscellaneous"
@@ -162,26 +162,26 @@ msgstr "阴影："
 
 #: ../src/Grids/CerbereGrid.vala:39
 msgid "Watched Processes"
-msgstr ""
+msgstr "监视进程"
 
 #: ../src/Grids/CerbereGrid.vala:50
 #: ../src/Grids/CerbereGrid.vala:60
 #: ../src/Grids/ShortcutsGrid.vala:91
 #: ../src/Grids/ShortcutsGrid.vala:158
 msgid "Add..."
-msgstr ""
+msgstr "添加..."
 
 #: ../src/Grids/CerbereGrid.vala:51
 #: ../src/Grids/CerbereGrid.vala:61
 #: ../src/Grids/ShortcutsGrid.vala:92
 #: ../src/Grids/ShortcutsGrid.vala:159
 msgid "Remove"
-msgstr ""
+msgstr "移除"
 
 #: ../src/Grids/CerbereGrid.vala:62
 #: ../src/Grids/ShortcutsGrid.vala:160
 msgid "Revert to Default"
-msgstr ""
+msgstr "恢复默认"
 
 #: ../src/Grids/SynapseGrid.vala:46
 msgid "Search Indicator Shortcut:"
@@ -360,7 +360,7 @@ msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:65
 msgid "Edge:"
-msgstr ""
+msgstr "边缘："
 
 #: ../src/Grids/WingpanelslimGrid.vala:66
 msgid "Slanted"
@@ -384,15 +384,15 @@ msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:90
 msgid "Auto Hide:"
-msgstr ""
+msgstr "自动隐藏："
 
 #: ../src/Grids/WingpanelslimGrid.vala:98
 msgid "Show Launcher:"
-msgstr ""
+msgstr "显示启动器："
 
 #: ../src/Grids/WingpanelslimGrid.vala:107
 msgid "Launcher:"
-msgstr ""
+msgstr "启动器："
 
 #: ../src/Grids/WingpanelslimGrid.vala:151
 msgid "Slim Wingpanel:"
@@ -432,15 +432,15 @@ msgstr "列："
 
 #: ../src/Grids/ShortcutsGrid.vala:68
 msgid "Name"
-msgstr ""
+msgstr "名称"
 
 #: ../src/Grids/ShortcutsGrid.vala:69
 msgid "Shortcut"
-msgstr ""
+msgstr "快捷键"
 
 #: ../src/Grids/ShortcutsGrid.vala:70
 msgid "Command"
-msgstr ""
+msgstr "命令"
 
 #: ../src/Grids/ShortcutsGrid.vala:117
 msgid "Every field must be filled!"
@@ -448,15 +448,15 @@ msgstr ""
 
 #: ../src/Grids/ShortcutsGrid.vala:126
 msgid "Name:"
-msgstr ""
+msgstr "名称："
 
 #: ../src/Grids/ShortcutsGrid.vala:129
 msgid "Shortcut:"
-msgstr ""
+msgstr "快捷键："
 
 #: ../src/Grids/ShortcutsGrid.vala:132
 msgid "Command:"
-msgstr ""
+msgstr "命令："
 
 #: ../src/Grids/AppearanceGrid.vala:116
 msgid "Custom Layout:"
@@ -539,4 +539,4 @@ msgstr "透明度："
 #: ../src/Widgets/AcceleratorInputWidget.vala:85
 #: ../src/Objects/ShortcutObject.vala:38
 msgid "Disabled"
-msgstr ""
+msgstr "禁用"
