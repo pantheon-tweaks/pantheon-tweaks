@@ -122,7 +122,7 @@ public class WingpanelslimGrid : Gtk.Grid
         default_launcher_box.pack_start (default_launcher, false);
         default_launcher_box.pack_start (default_launcher_default, false);
 
-        if ( wingpanel_slim[pos] == "wingpanel-slim" )
+        if ( pos != -1 && wingpanel_slim[pos] == "wingpanel-slim" )
             wingpanel.set_active(true);
         else {
             slim_label.set_sensitive(wingpanel.active);
@@ -135,16 +135,23 @@ public class WingpanelslimGrid : Gtk.Grid
             wingpanel_slim = CerbereSettings.get_default ().monitored_processes;
             for (int i = 0; i < wingpanel_slim.length ; i++) {
                 if ( wingpanel_slim[i] == "wingpanel" || wingpanel_slim[i] == "wingpanel-slim" )
-                pos = i; 
+                    pos = i; 
+                else
+                    pos = -1;
             }
             slim_label.set_sensitive(wingpanel.active);
             slim_label_edge.set_sensitive(wingpanel.active);
             slim_pos_box.set_sensitive(wingpanel.active);
             slim_edge_box.set_sensitive(wingpanel.active);
-            (wingpanel.active)?wingpanel_slim[pos] = "killall wingpanel":wingpanel_slim[pos] = "killall wingpanel-slim";
-            CerbereSettings.get_default ().monitored_processes = wingpanel_slim;
-            (wingpanel.active)?wingpanel_slim[pos] = "wingpanel-slim":wingpanel_slim[pos] = "wingpanel";
-            CerbereSettings.get_default ().monitored_processes = wingpanel_slim;
+            if (pos != -1) {
+                (wingpanel.active)?wingpanel_slim[pos] = "killall wingpanel":wingpanel_slim[pos] = "killall wingpanel-slim";
+                CerbereSettings.get_default ().monitored_processes = wingpanel_slim;
+                (wingpanel.active)?wingpanel_slim[pos] = "wingpanel-slim":wingpanel_slim[pos] = "wingpanel";
+                CerbereSettings.get_default ().monitored_processes = wingpanel_slim;
+            } else {
+                wingpanel_slim += "wingpanel-slim";
+                CerbereSettings.get_default ().monitored_processes = wingpanel_slim;
+            }
         });
         wingpanel.halign = Gtk.Align.START;
 
