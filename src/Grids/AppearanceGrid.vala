@@ -69,7 +69,7 @@ public class AppearanceGrid : Gtk.Grid
         /* Icon Themes */
         var icon_theme_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var icon_theme = new Gtk.ComboBoxText ();
-        icon_theme = combo_box_themes ( "icons", "apps");
+        icon_theme = combo_box_themes ( "icons", "index.theme");
 
         icon_theme.active_id = InterfaceSettings.get_default ().icon_theme;
         icon_theme.changed.connect (() => InterfaceSettings.get_default ().icon_theme = icon_theme.active_id );
