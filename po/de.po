@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-20 21:04+0100\n"
-"PO-Revision-Date: 2013-09-13 16:30+0000\n"
+"PO-Revision-Date: 2013-09-20 18:16+0000\n"
 "Last-Translator: Versable <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-09-14 06:16+0000\n"
-"X-Generator: Launchpad (build 16761)\n"
+"X-Launchpad-Export-Date: 2013-09-21 06:07+0000\n"
+"X-Generator: Launchpad (build 16765)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
@@ -384,11 +384,11 @@ msgstr "Kurve 3"
 
 #: ../src/Grids/WingpanelslimGrid.vala:90
 msgid "Auto Hide:"
-msgstr ""
+msgstr "Automatisch Ausblenden:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:98
 msgid "Show Launcher:"
-msgstr ""
+msgstr "Anwendungsmenü Anzeigen:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:107
 msgid "Launcher:"
