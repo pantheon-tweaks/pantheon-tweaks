@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-20 21:04+0100\n"
-"PO-Revision-Date: 2013-08-16 19:31+0000\n"
+"PO-Revision-Date: 2013-09-28 08:42+0000\n"
 "Last-Translator: EgorMatirov <ematirov@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-21 06:11+0000\n"
-"X-Generator: Launchpad (build 16731)\n"
+"X-Launchpad-Export-Date: 2013-09-29 06:18+0000\n"
+"X-Generator: Launchpad (build 16774)\n"
 "Language: ru\n"
 
 #: ../src/Tweaks.vala:49
@@ -64,11 +64,11 @@ msgstr "Индикатор поиска"
 
 #: ../src/Tweaks.vala:93
 msgid "Slingshot"
-msgstr ""
+msgstr "Меню приложений Slingshot"
 
 #: ../src/Tweaks.vala:97
 msgid "Cerbere"
-msgstr ""
+msgstr "Cerbere"
 
 #: ../src/Tweaks.vala:101
 msgid "Terminal"
@@ -76,19 +76,19 @@ msgstr "Терминал"
 
 #: ../src/Tweaks.vala:105
 msgid "Wingpanel Slim"
-msgstr ""
+msgstr "Маленькая верхняя панель"
 
 #: ../src/Grids/FilesGrid.vala:38
 msgid "Locale"
-msgstr ""
+msgstr "Местный"
 
 #: ../src/Grids/FilesGrid.vala:39
 msgid "ISO"
-msgstr ""
+msgstr "Стандарт ISO"
 
 #: ../src/Grids/FilesGrid.vala:40
 msgid "Informal"
-msgstr ""
+msgstr "Информативный"
 
 #: ../src/Grids/FilesGrid.vala:61
 #: ../src/Grids/SlingshotGrid.vala:29
@@ -163,7 +163,7 @@ msgstr "Тени:"
 
 #: ../src/Grids/CerbereGrid.vala:39
 msgid "Watched Processes"
-msgstr ""
+msgstr "Наблюдаемые процессы"
 
 #: ../src/Grids/CerbereGrid.vala:50
 #: ../src/Grids/CerbereGrid.vala:60
@@ -208,7 +208,7 @@ msgstr "Справа"
 
 #: ../src/Grids/PlankGrid.vala:51
 msgid "Center"
-msgstr "По-центру"
+msgstr "По центру"
 
 #: ../src/Grids/PlankGrid.vala:52
 msgid "Panel"
@@ -216,7 +216,7 @@ msgstr "Панель"
 
 #: ../src/Grids/PlankGrid.vala:133
 msgid "Item Alignment:"
-msgstr ""
+msgstr "Выравнивание элементов:"
 
 #: ../src/Grids/PlankGrid.vala:171
 msgid "Unknown Value"
@@ -275,11 +275,11 @@ msgstr "Выравнивание:"
 
 #: ../src/Grids/PlankGrid.vala:298
 msgid "Workspace Overview Icon:"
-msgstr "Кнопка \"Показать все рабочие столы\""
+msgstr "Кнопка \"Показать все рабочие столы\":"
 
 #: ../src/Grids/PlankGrid.vala:301
 msgid "Show Desktop Icon:"
-msgstr "Кнопка \"Показать Рабочий стол\""
+msgstr "Кнопка \"Показать Рабочий стол\":"
 
 #: ../src/Grids/MiscGrid.vala:48
 #: ../src/Grids/MiscGrid.vala:75
@@ -341,11 +341,11 @@ msgstr "Звуковой сигнал:"
 
 #: ../src/Grids/MiscGrid.vala:138
 msgid "Overlay Scrollbars:"
-msgstr ""
+msgstr "Полосы прокрутки с наложением:"
 
 #: ../src/Grids/MiscGrid.vala:141
 msgid "Natural Scrolling:"
-msgstr ""
+msgstr "Обычные полосы прокрутки:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:41
 msgid "Middle"
@@ -385,43 +385,43 @@ msgstr "Скруглённые 3"
 
 #: ../src/Grids/WingpanelslimGrid.vala:90
 msgid "Auto Hide:"
-msgstr ""
+msgstr "Автоматически скрывать:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:98
 msgid "Show Launcher:"
-msgstr ""
+msgstr "Показывать меню приложений:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:107
 msgid "Launcher:"
-msgstr ""
+msgstr "Меню приложений:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:151
 msgid "Slim Wingpanel:"
-msgstr ""
+msgstr "Маленькая верхняя панель:"
 
 #: ../src/Grids/AnimationsGrid.vala:27
 msgid "Open Duration:"
-msgstr "Скорость открытия:"
+msgstr "Длительность открытия:"
 
 #: ../src/Grids/AnimationsGrid.vala:28
 msgid "Close Duration:"
-msgstr "Скорость закрытия:"
+msgstr "Длительность закрытия:"
 
 #: ../src/Grids/AnimationsGrid.vala:29
 msgid "Snap Duration:"
-msgstr ""
+msgstr "Длительность максимизирования:"
 
 #: ../src/Grids/AnimationsGrid.vala:30
 msgid "Minimize Duration:"
-msgstr "Скорость уменьшения:"
+msgstr "Длительность уменьшения:"
 
 #: ../src/Grids/AnimationsGrid.vala:31
 msgid "Workspace Switch Duration:"
-msgstr "Скорость переключения рабочих столов:"
+msgstr "Длительность переключения рабочих столов:"
 
 #: ../src/Grids/AnimationsGrid.vala:148
 msgid "Animations:"
-msgstr "Анимация"
+msgstr "Анимации:"
 
 #: ../src/Grids/SlingshotGrid.vala:93
 msgid "Rows:"
@@ -490,23 +490,23 @@ msgstr "Настроить"
 
 #: ../src/Grids/AppearanceGrid.vala:183
 msgid "Window Decoration Theme:"
-msgstr "Тема оформления окон"
+msgstr "Тема оформления окон:"
 
 #: ../src/Grids/AppearanceGrid.vala:186
 msgid "Interface Theme:"
-msgstr "Тема интерфейса"
+msgstr "Тема интерфейса:"
 
 #: ../src/Grids/AppearanceGrid.vala:189
 msgid "Icon Theme:"
-msgstr "Тема иконок"
+msgstr "Тема иконок:"
 
 #: ../src/Grids/AppearanceGrid.vala:192
 msgid "Cursor Theme:"
-msgstr "Тема курсора"
+msgstr "Тема курсора:"
 
 #: ../src/Grids/AppearanceGrid.vala:195
 msgid "Button Layout:"
-msgstr "Расположение кнопок"
+msgstr "Расположение кнопок:"
 
 #: ../src/Grids/FontsGrid.vala:98
 msgid "Default Font:"
@@ -522,11 +522,11 @@ msgstr "Моноширийный шрифт:"
 
 #: ../src/Grids/FontsGrid.vala:107
 msgid "Window Title Font:"
-msgstr "Шрифт заголовка окна"
+msgstr "Шрифт заголовка окна:"
 
 #: ../src/Grids/TerminalGrid.vala:199
 msgid "Limit Scrollback Lines:"
-msgstr ""
+msgstr "Лимит прокрутки:"
 
 #: ../src/Grids/TerminalGrid.vala:203
 msgid "Custom Font:"
