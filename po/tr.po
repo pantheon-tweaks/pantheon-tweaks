@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-20 21:04+0100\n"
-"PO-Revision-Date: 2013-07-16 09:13+0000\n"
-"Last-Translator: Atbeyi <Unknown>\n"
+"PO-Revision-Date: 2013-10-01 09:37+0000\n"
+"Last-Translator: Burak G. <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-09-29 06:18+0000\n"
+"X-Launchpad-Export-Date: 2013-10-02 06:03+0000\n"
 "X-Generator: Launchpad (build 16774)\n"
 
 #: ../src/Tweaks.vala:49
@@ -43,7 +43,7 @@ msgstr "Gölgeler"
 
 #: ../src/Tweaks.vala:71
 msgid "Shortcuts"
-msgstr ""
+msgstr "Kısayollar"
 
 #: ../src/Tweaks.vala:74
 msgid "Miscellaneous"
@@ -59,484 +59,484 @@ msgstr "Dosyalar"
 
 #: ../src/Tweaks.vala:89
 msgid "Search Indicator"
-msgstr ""
+msgstr "Arama Göstergesi"
 
 #: ../src/Tweaks.vala:93
 msgid "Slingshot"
-msgstr ""
+msgstr "Slingshot"
 
 #: ../src/Tweaks.vala:97
 msgid "Cerbere"
-msgstr ""
+msgstr "Cerbere"
 
 #: ../src/Tweaks.vala:101
 msgid "Terminal"
-msgstr ""
+msgstr "Terminal"
 
 #: ../src/Tweaks.vala:105
 msgid "Wingpanel Slim"
-msgstr ""
+msgstr "Wingpanel Slim"
 
 #: ../src/Grids/FilesGrid.vala:38
 msgid "Locale"
-msgstr ""
+msgstr "Yerel"
 
 #: ../src/Grids/FilesGrid.vala:39
 msgid "ISO"
-msgstr ""
+msgstr "ISO"
 
 #: ../src/Grids/FilesGrid.vala:40
 msgid "Informal"
-msgstr ""
+msgstr "Gayri resmi"
 
 #: ../src/Grids/FilesGrid.vala:61
 #: ../src/Grids/SlingshotGrid.vala:29
 msgid "Smallest"
-msgstr ""
+msgstr "En küçük"
 
 #: ../src/Grids/FilesGrid.vala:62
 #: ../src/Grids/SlingshotGrid.vala:30
 msgid "Smaller"
-msgstr ""
+msgstr "Daha küçük"
 
 #: ../src/Grids/FilesGrid.vala:63
 #: ../src/Grids/SlingshotGrid.vala:31
 msgid "Small"
-msgstr ""
+msgstr "Küçük"
 
 #: ../src/Grids/FilesGrid.vala:64
 #: ../src/Grids/SlingshotGrid.vala:32
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: ../src/Grids/FilesGrid.vala:65
 #: ../src/Grids/SlingshotGrid.vala:33
 msgid "Large"
-msgstr ""
+msgstr "Büyük"
 
 #: ../src/Grids/FilesGrid.vala:66
 #: ../src/Grids/SlingshotGrid.vala:34
 msgid "Larger"
-msgstr ""
+msgstr "Daha büyük"
 
 #: ../src/Grids/FilesGrid.vala:67
 #: ../src/Grids/SlingshotGrid.vala:35
 msgid "Largest"
-msgstr ""
+msgstr "En büyük"
 
 #: ../src/Grids/FilesGrid.vala:85
 msgid "Single Click:"
-msgstr ""
+msgstr "Tek Tıkla Açma"
 
 #: ../src/Grids/FilesGrid.vala:88
 msgid "Date Format:"
-msgstr ""
+msgstr "Tarih Biçimi:"
 
 #: ../src/Grids/FilesGrid.vala:91
 msgid "Sidebar Icon Size:"
-msgstr ""
+msgstr "Kenar İkon Boyutu"
 
 #: ../src/Grids/ShadowsGrid.vala:27
 msgid "Focused Windows:"
-msgstr ""
+msgstr "Seçili Pencereler"
 
 #: ../src/Grids/ShadowsGrid.vala:28
 msgid "Unfocused Windows:"
-msgstr ""
+msgstr "Seçilmemiş Pencereler"
 
 #: ../src/Grids/ShadowsGrid.vala:29
 msgid "Focused Dialogs:"
-msgstr ""
+msgstr "Seçili Diyaloglar"
 
 #: ../src/Grids/ShadowsGrid.vala:30
 msgid "Unfocused Dialogs:"
-msgstr ""
+msgstr "Seçilmemiş Diyaloglar"
 
 #: ../src/Grids/ShadowsGrid.vala:31
 msgid "Menu:"
-msgstr ""
+msgstr "Menü:"
 
 #: ../src/Grids/ShadowsGrid.vala:194
 msgid "Shadows:"
-msgstr ""
+msgstr "Gölgeler:"
 
 #: ../src/Grids/CerbereGrid.vala:39
 msgid "Watched Processes"
-msgstr ""
+msgstr "İzlenen İşlemler"
 
 #: ../src/Grids/CerbereGrid.vala:50
 #: ../src/Grids/CerbereGrid.vala:60
 #: ../src/Grids/ShortcutsGrid.vala:91
 #: ../src/Grids/ShortcutsGrid.vala:158
 msgid "Add..."
-msgstr ""
+msgstr "Ekle..."
 
 #: ../src/Grids/CerbereGrid.vala:51
 #: ../src/Grids/CerbereGrid.vala:61
 #: ../src/Grids/ShortcutsGrid.vala:92
 #: ../src/Grids/ShortcutsGrid.vala:159
 msgid "Remove"
-msgstr ""
+msgstr "Kaldır"
 
 #: ../src/Grids/CerbereGrid.vala:62
 #: ../src/Grids/ShortcutsGrid.vala:160
 msgid "Revert to Default"
-msgstr ""
+msgstr "Varsayılana Dönder"
 
 #: ../src/Grids/SynapseGrid.vala:46
 msgid "Search Indicator Shortcut:"
-msgstr ""
+msgstr "Arama Göstergesi Kısayolu"
 
 #: ../src/Grids/PlankGrid.vala:47
 msgid "Top"
-msgstr ""
+msgstr "Üst"
 
 #: ../src/Grids/PlankGrid.vala:48
 msgid "Bottom"
-msgstr ""
+msgstr "Alt"
 
 #: ../src/Grids/PlankGrid.vala:49
 #: ../src/Grids/WingpanelslimGrid.vala:42
 msgid "Left"
-msgstr ""
+msgstr "Sol"
 
 #: ../src/Grids/PlankGrid.vala:50
 #: ../src/Grids/WingpanelslimGrid.vala:40
 msgid "Right"
-msgstr ""
+msgstr "Sağ"
 
 #: ../src/Grids/PlankGrid.vala:51
 msgid "Center"
-msgstr ""
+msgstr "Orta"
 
 #: ../src/Grids/PlankGrid.vala:52
 msgid "Panel"
-msgstr ""
+msgstr "Panel"
 
 #: ../src/Grids/PlankGrid.vala:133
 msgid "Item Alignment:"
-msgstr ""
+msgstr "İkon Hizalama"
 
 #: ../src/Grids/PlankGrid.vala:171
 msgid "Unknown Value"
-msgstr ""
+msgstr "Bilinmeyen Değer"
 
 #: ../src/Grids/PlankGrid.vala:193
 msgid "Don't hide"
-msgstr ""
+msgstr "Gizleme"
 
 #: ../src/Grids/PlankGrid.vala:194
 msgid "Intelligent hide"
-msgstr ""
+msgstr "Akıllı gizle"
 
 #: ../src/Grids/PlankGrid.vala:195
 msgid "Auto hide"
-msgstr ""
+msgstr "Otomatik gizle"
 
 #: ../src/Grids/PlankGrid.vala:196
 msgid "Hide on maximize"
-msgstr ""
+msgstr "Tam ekranda gizle"
 
 #: ../src/Grids/PlankGrid.vala:249
 msgid "Primary Monitor"
-msgstr ""
+msgstr "Birincil Ekran"
 
 #: ../src/Grids/PlankGrid.vala:252
 #, c-format
 msgid "Monitor %d"
-msgstr ""
+msgstr "%d ekran"
 
 #: ../src/Grids/PlankGrid.vala:272
 msgid "Icon Size:"
-msgstr ""
+msgstr "Simge Boyutu:"
 
 #: ../src/Grids/PlankGrid.vala:276
 msgid "Hide Mode:"
-msgstr ""
+msgstr "Gizleme Modu"
 
 #: ../src/Grids/PlankGrid.vala:280
 #: ../src/Grids/TerminalGrid.vala:210
 msgid "Theme:"
-msgstr ""
+msgstr "Tema:"
 
 #: ../src/Grids/PlankGrid.vala:285
 msgid "Monitor:"
-msgstr ""
+msgstr "Ekran:"
 
 #: ../src/Grids/PlankGrid.vala:289
 #: ../src/Grids/WingpanelslimGrid.vala:39
 msgid "Position:"
-msgstr ""
+msgstr "Pozisyon:"
 
 #: ../src/Grids/PlankGrid.vala:292
 msgid "Alignment:"
-msgstr ""
+msgstr "Hizalama:"
 
 #: ../src/Grids/PlankGrid.vala:298
 msgid "Workspace Overview Icon:"
-msgstr ""
+msgstr "Çalışma Alanı Simgesi"
 
 #: ../src/Grids/PlankGrid.vala:301
 msgid "Show Desktop Icon:"
-msgstr ""
+msgstr "Masaüstü Simgesi"
 
 #: ../src/Grids/MiscGrid.vala:48
 #: ../src/Grids/MiscGrid.vala:75
 #: ../src/Grids/MiscGrid.vala:102
 msgid "Menu"
-msgstr ""
+msgstr "Menü"
 
 #: ../src/Grids/MiscGrid.vala:49
 #: ../src/Grids/MiscGrid.vala:76
 #: ../src/Grids/MiscGrid.vala:103
 msgid "Maximize"
-msgstr ""
+msgstr "Büyüt"
 
 #: ../src/Grids/MiscGrid.vala:50
 #: ../src/Grids/MiscGrid.vala:77
 #: ../src/Grids/MiscGrid.vala:104
 msgid "Maximize Horizontally"
-msgstr ""
+msgstr "Yatay Büyüt"
 
 #: ../src/Grids/MiscGrid.vala:51
 #: ../src/Grids/MiscGrid.vala:78
 #: ../src/Grids/MiscGrid.vala:105
 msgid "Maximize Vertically"
-msgstr ""
+msgstr "Dikey Büyüt"
 
 #: ../src/Grids/MiscGrid.vala:52
 #: ../src/Grids/MiscGrid.vala:79
 #: ../src/Grids/MiscGrid.vala:106
 msgid "Minimize"
-msgstr ""
+msgstr "Küçült"
 
 #: ../src/Grids/MiscGrid.vala:53
 #: ../src/Grids/MiscGrid.vala:80
 #: ../src/Grids/MiscGrid.vala:107
 msgid "Shade"
-msgstr ""
+msgstr "Gölge"
 
 #: ../src/Grids/MiscGrid.vala:54
 #: ../src/Grids/MiscGrid.vala:81
 #: ../src/Grids/MiscGrid.vala:108
 msgid "Lower Window"
-msgstr ""
+msgstr "Pencereyi Alta Gönder"
 
 #: ../src/Grids/MiscGrid.vala:126
 msgid "Double Click Titlebar Action:"
-msgstr ""
+msgstr "Başlık Çubuğuna Çift Tıklama"
 
 #: ../src/Grids/MiscGrid.vala:129
 msgid "Middle Click Titlebar Action:"
-msgstr ""
+msgstr "Başlık Çubuğu Orta Tıklama"
 
 #: ../src/Grids/MiscGrid.vala:132
 msgid "Right Click Titlebar Action:"
-msgstr ""
+msgstr "Başlık Çubuğu Sağ Tıklama"
 
 #: ../src/Grids/MiscGrid.vala:135
 msgid "Audible Bell:"
-msgstr ""
+msgstr "Sesli Hatalar"
 
 #: ../src/Grids/MiscGrid.vala:138
 msgid "Overlay Scrollbars:"
-msgstr ""
+msgstr "Gizli Kaydırma Çubukları"
 
 #: ../src/Grids/MiscGrid.vala:141
 msgid "Natural Scrolling:"
-msgstr ""
+msgstr "Doğal Kaydırma"
 
 #: ../src/Grids/WingpanelslimGrid.vala:41
 msgid "Middle"
-msgstr ""
+msgstr "Orta"
 
 #: ../src/Grids/WingpanelslimGrid.vala:43
 msgid "Flush Left"
-msgstr ""
+msgstr "Sola Yapışık"
 
 #: ../src/Grids/WingpanelslimGrid.vala:44
 msgid "Flush Right"
-msgstr ""
+msgstr "Sağa Yapışık"
 
 #: ../src/Grids/WingpanelslimGrid.vala:65
 msgid "Edge:"
-msgstr ""
+msgstr "Kenarlık:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:66
 msgid "Slanted"
-msgstr ""
+msgstr "Eğimli"
 
 #: ../src/Grids/WingpanelslimGrid.vala:67
 msgid "Squared"
-msgstr ""
+msgstr "Köşeli"
 
 #: ../src/Grids/WingpanelslimGrid.vala:68
 msgid "Curved 1"
-msgstr ""
+msgstr "Kavisli - Radyus"
 
 #: ../src/Grids/WingpanelslimGrid.vala:69
 msgid "Curved 2"
-msgstr ""
+msgstr "Kavisli - Keskin"
 
 #: ../src/Grids/WingpanelslimGrid.vala:70
 msgid "Curved 3"
-msgstr ""
+msgstr "Kavisli - Yarı Oval"
 
 #: ../src/Grids/WingpanelslimGrid.vala:90
 msgid "Auto Hide:"
-msgstr ""
+msgstr "Otomatik Gizle"
 
 #: ../src/Grids/WingpanelslimGrid.vala:98
 msgid "Show Launcher:"
-msgstr ""
+msgstr "Başlatıcıyı Göster"
 
 #: ../src/Grids/WingpanelslimGrid.vala:107
 msgid "Launcher:"
-msgstr ""
+msgstr "Başlatıcı:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:151
 msgid "Slim Wingpanel:"
-msgstr ""
+msgstr "Slim Wingpanel:"
 
 #: ../src/Grids/AnimationsGrid.vala:27
 msgid "Open Duration:"
-msgstr ""
+msgstr "Açılma Süresi:"
 
 #: ../src/Grids/AnimationsGrid.vala:28
 msgid "Close Duration:"
-msgstr ""
+msgstr "Kapanma Süresi"
 
 #: ../src/Grids/AnimationsGrid.vala:29
 msgid "Snap Duration:"
-msgstr ""
+msgstr "Tam Ekrana Geçme Süresi"
 
 #: ../src/Grids/AnimationsGrid.vala:30
 msgid "Minimize Duration:"
-msgstr ""
+msgstr "Küçültme Süresi"
 
 #: ../src/Grids/AnimationsGrid.vala:31
 msgid "Workspace Switch Duration:"
-msgstr ""
+msgstr "Çalışma Alanı Geçiş Süresi"
 
 #: ../src/Grids/AnimationsGrid.vala:148
 msgid "Animations:"
-msgstr ""
+msgstr "Animasyonlar"
 
 #: ../src/Grids/SlingshotGrid.vala:93
 msgid "Rows:"
-msgstr ""
+msgstr "Satırlar:"
 
 #: ../src/Grids/SlingshotGrid.vala:96
 msgid "Columns:"
-msgstr ""
+msgstr "Sütunlar:"
 
 #: ../src/Grids/ShortcutsGrid.vala:68
 msgid "Name"
-msgstr ""
+msgstr "Adı"
 
 #: ../src/Grids/ShortcutsGrid.vala:69
 msgid "Shortcut"
-msgstr ""
+msgstr "Kısayol"
 
 #: ../src/Grids/ShortcutsGrid.vala:70
 msgid "Command"
-msgstr ""
+msgstr "Komut"
 
 #: ../src/Grids/ShortcutsGrid.vala:117
 msgid "Every field must be filled!"
-msgstr ""
+msgstr "Tüm alanlar doldurulmalıdır!"
 
 #: ../src/Grids/ShortcutsGrid.vala:126
 msgid "Name:"
-msgstr ""
+msgstr "Ad:"
 
 #: ../src/Grids/ShortcutsGrid.vala:129
 msgid "Shortcut:"
-msgstr ""
+msgstr "Kısayol:"
 
 #: ../src/Grids/ShortcutsGrid.vala:132
 msgid "Command:"
-msgstr ""
+msgstr "Komut:"
 
 #: ../src/Grids/AppearanceGrid.vala:116
 msgid "Custom Layout:"
-msgstr ""
+msgstr "Özel Yerleşim"
 
 #: ../src/Grids/AppearanceGrid.vala:119
 msgid "Close Only"
-msgstr ""
+msgstr "Sadece Kapatma"
 
 #: ../src/Grids/AppearanceGrid.vala:120
 msgid "Minimize Left"
-msgstr ""
+msgstr "Küçültme Solda"
 
 #: ../src/Grids/AppearanceGrid.vala:121
 msgid "Minimize Right"
-msgstr ""
+msgstr "Küçültme Sağda"
 
 #: ../src/Grids/AppearanceGrid.vala:122
 msgid "Windows"
-msgstr ""
+msgstr "Pencereler"
 
 #: ../src/Grids/AppearanceGrid.vala:123
 msgid "OS X"
-msgstr ""
+msgstr "OS X"
 
 #: ../src/Grids/AppearanceGrid.vala:124
 #: ../src/Grids/TerminalGrid.vala:180
 msgid "Custom"
-msgstr ""
+msgstr "Özel"
 
 #: ../src/Grids/AppearanceGrid.vala:183
 msgid "Window Decoration Theme:"
-msgstr ""
+msgstr "Pencere Dekorasyon Teması"
 
 #: ../src/Grids/AppearanceGrid.vala:186
 msgid "Interface Theme:"
-msgstr ""
+msgstr "Arayüz Teması"
 
 #: ../src/Grids/AppearanceGrid.vala:189
 msgid "Icon Theme:"
-msgstr ""
+msgstr "Simge Teması"
 
 #: ../src/Grids/AppearanceGrid.vala:192
 msgid "Cursor Theme:"
-msgstr ""
+msgstr "İmleç Teması"
 
 #: ../src/Grids/AppearanceGrid.vala:195
 msgid "Button Layout:"
-msgstr ""
+msgstr "Buton Yerleşimi"
 
 #: ../src/Grids/FontsGrid.vala:98
 msgid "Default Font:"
-msgstr ""
+msgstr "Varsayılan Yazı Tipi"
 
 #: ../src/Grids/FontsGrid.vala:101
 msgid "Document Font:"
-msgstr ""
+msgstr "Belge Yazı Tipi"
 
 #: ../src/Grids/FontsGrid.vala:104
 msgid "Monospace Font:"
-msgstr ""
+msgstr "Monospace Yazı Tipi"
 
 #: ../src/Grids/FontsGrid.vala:107
 msgid "Window Title Font:"
-msgstr ""
+msgstr "Pencere Başlığı Yazı Tipi"
 
 #: ../src/Grids/TerminalGrid.vala:199
 msgid "Limit Scrollback Lines:"
-msgstr ""
+msgstr "Geri Kaydırma Alanlarını Sınırla"
 
 #: ../src/Grids/TerminalGrid.vala:203
 msgid "Custom Font:"
-msgstr ""
+msgstr "Özel Yazı Tipi"
 
 #: ../src/Grids/TerminalGrid.vala:207
 msgid "Opacity:"
-msgstr ""
+msgstr "Opaklık:"
 
 #: ../src/Widgets/AcceleratorInputWidget.vala:67
 #: ../src/Widgets/AcceleratorInputWidget.vala:85
 #: ../src/Objects/ShortcutObject.vala:38
 msgid "Disabled"
-msgstr ""
+msgstr "Devre Dışı"

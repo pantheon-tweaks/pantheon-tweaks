@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-20 21:04+0100\n"
-"PO-Revision-Date: 2013-09-16 19:17+0000\n"
-"Last-Translator: Szymon Nieznański <s.nez@openmailbox.org>\n"
+"PO-Revision-Date: 2013-10-01 07:34+0000\n"
+"Last-Translator: Norbert Budzyński <Unknown>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-09-29 06:18+0000\n"
+"X-Launchpad-Export-Date: 2013-10-02 06:03+0000\n"
 "X-Generator: Launchpad (build 16774)\n"
 
 #: ../src/Tweaks.vala:49
@@ -388,11 +388,11 @@ msgstr "Autoukrywanie:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:98
 msgid "Show Launcher:"
-msgstr ""
+msgstr "Pokazuj aktywator:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:107
 msgid "Launcher:"
-msgstr ""
+msgstr "Aktywator:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:151
 msgid "Slim Wingpanel:"
