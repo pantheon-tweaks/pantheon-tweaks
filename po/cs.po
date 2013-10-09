@@ -1,4 +1,4 @@
-# Chinese (Simplified) translation for elementary-community
+# Czech translation for elementary-community
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the elementary-community package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-20 21:04+0100\n"
-"PO-Revision-Date: 2013-10-08 14:33+0000\n"
-"Last-Translator: Wang Dianjin <Unknown>\n"
-"Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
+"PO-Revision-Date: 2013-10-08 22:08+0000\n"
+"Last-Translator: Tomas Kral <kralutomas@gmail.com>\n"
+"Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,67 +19,67 @@ msgstr ""
 
 #: ../src/Tweaks.vala:49
 msgid "General"
-msgstr "常规"
+msgstr "Obecné"
 
 #: ../src/Tweaks.vala:50
 msgid "Applications"
-msgstr "应用程序"
+msgstr "Aplikace"
 
 #: ../src/Tweaks.vala:57
 msgid "Appearance"
-msgstr "外观"
+msgstr "Vzhled"
 
 #: ../src/Tweaks.vala:60
 msgid "Fonts"
-msgstr "字体"
+msgstr "Písma"
 
 #: ../src/Tweaks.vala:64
 msgid "Animations"
-msgstr "动画"
+msgstr "Animace"
 
 #: ../src/Tweaks.vala:68
 msgid "Shadows"
-msgstr "阴影"
+msgstr "Stíny"
 
 #: ../src/Tweaks.vala:71
 msgid "Shortcuts"
-msgstr "快捷键"
+msgstr "Klávesové zkratky"
 
 #: ../src/Tweaks.vala:74
 msgid "Miscellaneous"
-msgstr "杂项"
+msgstr "Různé"
 
 #: ../src/Tweaks.vala:81
 msgid "Plank"
-msgstr "Plank"
+msgstr ""
 
 #: ../src/Tweaks.vala:85
 msgid "Files"
-msgstr "文件"
+msgstr "Správce souborů"
 
 #: ../src/Tweaks.vala:89
 msgid "Search Indicator"
-msgstr "搜索指示器"
+msgstr "Vyhledávání"
 
 #: ../src/Tweaks.vala:93
 msgid "Slingshot"
-msgstr "Slingshot"
+msgstr ""
 
 #: ../src/Tweaks.vala:97
 msgid "Cerbere"
-msgstr "Cerbere"
+msgstr ""
 
 #: ../src/Tweaks.vala:101
 msgid "Terminal"
-msgstr "终端"
+msgstr "Příkazová řádka"
 
 #: ../src/Tweaks.vala:105
 msgid "Wingpanel Slim"
-msgstr "Wingpanel Slim"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:38
 msgid "Locale"
-msgstr "区域"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:39
 msgid "ISO"
@@ -87,284 +87,284 @@ msgstr "ISO"
 
 #: ../src/Grids/FilesGrid.vala:40
 msgid "Informal"
-msgstr "非正式"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:61
 #: ../src/Grids/SlingshotGrid.vala:29
 msgid "Smallest"
-msgstr "最小"
+msgstr "Nejmenší"
 
 #: ../src/Grids/FilesGrid.vala:62
 #: ../src/Grids/SlingshotGrid.vala:30
 msgid "Smaller"
-msgstr "较小"
+msgstr "Menší"
 
 #: ../src/Grids/FilesGrid.vala:63
 #: ../src/Grids/SlingshotGrid.vala:31
 msgid "Small"
-msgstr "小"
+msgstr "Malé"
 
 #: ../src/Grids/FilesGrid.vala:64
 #: ../src/Grids/SlingshotGrid.vala:32
 msgid "Normal"
-msgstr "一般"
+msgstr "Normální"
 
 #: ../src/Grids/FilesGrid.vala:65
 #: ../src/Grids/SlingshotGrid.vala:33
 msgid "Large"
-msgstr "大"
+msgstr "Velké"
 
 #: ../src/Grids/FilesGrid.vala:66
 #: ../src/Grids/SlingshotGrid.vala:34
 msgid "Larger"
-msgstr "更大"
+msgstr "Větší"
 
 #: ../src/Grids/FilesGrid.vala:67
 #: ../src/Grids/SlingshotGrid.vala:35
 msgid "Largest"
-msgstr "最大"
+msgstr "Největší"
 
 #: ../src/Grids/FilesGrid.vala:85
 msgid "Single Click:"
-msgstr "单击："
+msgstr "Jedno kliknutí:"
 
 #: ../src/Grids/FilesGrid.vala:88
 msgid "Date Format:"
-msgstr "日期格式："
+msgstr "Formát data:"
 
 #: ../src/Grids/FilesGrid.vala:91
 msgid "Sidebar Icon Size:"
-msgstr "侧边栏图标大小："
+msgstr "Velikost ikon postranní lišty:"
 
 #: ../src/Grids/ShadowsGrid.vala:27
 msgid "Focused Windows:"
-msgstr "焦点窗口："
+msgstr "Aktivní okna:"
 
 #: ../src/Grids/ShadowsGrid.vala:28
 msgid "Unfocused Windows:"
-msgstr "非焦点窗口："
+msgstr "Neaktivní okna:"
 
 #: ../src/Grids/ShadowsGrid.vala:29
 msgid "Focused Dialogs:"
-msgstr "焦点对话框："
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:30
 msgid "Unfocused Dialogs:"
-msgstr "非焦点对话框："
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:31
 msgid "Menu:"
-msgstr "菜单："
+msgstr "Menu:"
 
 #: ../src/Grids/ShadowsGrid.vala:194
 msgid "Shadows:"
-msgstr "阴影："
+msgstr "Stíny:"
 
 #: ../src/Grids/CerbereGrid.vala:39
 msgid "Watched Processes"
-msgstr "监视进程"
+msgstr "Sledované procesy"
 
 #: ../src/Grids/CerbereGrid.vala:50
 #: ../src/Grids/CerbereGrid.vala:60
 #: ../src/Grids/ShortcutsGrid.vala:91
 #: ../src/Grids/ShortcutsGrid.vala:158
 msgid "Add..."
-msgstr "添加..."
+msgstr "Přidat..."
 
 #: ../src/Grids/CerbereGrid.vala:51
 #: ../src/Grids/CerbereGrid.vala:61
 #: ../src/Grids/ShortcutsGrid.vala:92
 #: ../src/Grids/ShortcutsGrid.vala:159
 msgid "Remove"
-msgstr "移除"
+msgstr "Odebrat"
 
 #: ../src/Grids/CerbereGrid.vala:62
 #: ../src/Grids/ShortcutsGrid.vala:160
 msgid "Revert to Default"
-msgstr "恢复默认"
+msgstr ""
 
 #: ../src/Grids/SynapseGrid.vala:46
 msgid "Search Indicator Shortcut:"
-msgstr "搜索指示器快捷键："
+msgstr "Vyhledávání klávesová zkratka:"
 
 #: ../src/Grids/PlankGrid.vala:47
 msgid "Top"
-msgstr "顶部"
+msgstr "Nahoru"
 
 #: ../src/Grids/PlankGrid.vala:48
 msgid "Bottom"
-msgstr "底部"
+msgstr "Dolů"
 
 #: ../src/Grids/PlankGrid.vala:49
 #: ../src/Grids/WingpanelslimGrid.vala:42
 msgid "Left"
-msgstr "左侧"
+msgstr "Vlevo"
 
 #: ../src/Grids/PlankGrid.vala:50
 #: ../src/Grids/WingpanelslimGrid.vala:40
 msgid "Right"
-msgstr "右侧"
+msgstr "Vpravo"
 
 #: ../src/Grids/PlankGrid.vala:51
 msgid "Center"
-msgstr "中部"
+msgstr "Na střed"
 
 #: ../src/Grids/PlankGrid.vala:52
 msgid "Panel"
-msgstr "面板"
+msgstr "Panel"
 
 #: ../src/Grids/PlankGrid.vala:133
 msgid "Item Alignment:"
-msgstr "条目对齐："
+msgstr "Zarovnání položek:"
 
 #: ../src/Grids/PlankGrid.vala:171
 msgid "Unknown Value"
-msgstr "未知值"
+msgstr "Neznámá hodnota"
 
 #: ../src/Grids/PlankGrid.vala:193
 msgid "Don't hide"
-msgstr "不隐藏"
+msgstr "Neskrývat"
 
 #: ../src/Grids/PlankGrid.vala:194
 msgid "Intelligent hide"
-msgstr "智能隐藏"
+msgstr "Chytré skrývání"
 
 #: ../src/Grids/PlankGrid.vala:195
 msgid "Auto hide"
-msgstr "自动隐藏"
+msgstr "Automaticky skrývat"
 
 #: ../src/Grids/PlankGrid.vala:196
 msgid "Hide on maximize"
-msgstr "最大化时隐藏"
+msgstr "Skrýt při maximalizaci"
 
 #: ../src/Grids/PlankGrid.vala:249
 msgid "Primary Monitor"
-msgstr "主显示屏"
+msgstr "Hlavní monitor"
 
 #: ../src/Grids/PlankGrid.vala:252
 #, c-format
 msgid "Monitor %d"
-msgstr "显示器 %d"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:272
 msgid "Icon Size:"
-msgstr "图标大小："
+msgstr "Velikost ikon:"
 
 #: ../src/Grids/PlankGrid.vala:276
 msgid "Hide Mode:"
-msgstr "隐藏模式："
+msgstr "Režim skrývání:"
 
 #: ../src/Grids/PlankGrid.vala:280
 #: ../src/Grids/TerminalGrid.vala:210
 msgid "Theme:"
-msgstr "主题："
+msgstr "Motiv:"
 
 #: ../src/Grids/PlankGrid.vala:285
 msgid "Monitor:"
-msgstr "显示器："
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:289
 #: ../src/Grids/WingpanelslimGrid.vala:39
 msgid "Position:"
-msgstr "位置："
+msgstr "Pozice:"
 
 #: ../src/Grids/PlankGrid.vala:292
 msgid "Alignment:"
-msgstr "对齐："
+msgstr "Zarovnání:"
 
 #: ../src/Grids/PlankGrid.vala:298
 msgid "Workspace Overview Icon:"
-msgstr "工作区概览图标："
+msgstr "Ikona přehled pracovních ploch:"
 
 #: ../src/Grids/PlankGrid.vala:301
 msgid "Show Desktop Icon:"
-msgstr "显示桌面图标："
+msgstr "Ikona zobrazení plochy:"
 
 #: ../src/Grids/MiscGrid.vala:48
 #: ../src/Grids/MiscGrid.vala:75
 #: ../src/Grids/MiscGrid.vala:102
 msgid "Menu"
-msgstr "菜单"
+msgstr "Menu"
 
 #: ../src/Grids/MiscGrid.vala:49
 #: ../src/Grids/MiscGrid.vala:76
 #: ../src/Grids/MiscGrid.vala:103
 msgid "Maximize"
-msgstr "最大化"
+msgstr "Maximalizovat"
 
 #: ../src/Grids/MiscGrid.vala:50
 #: ../src/Grids/MiscGrid.vala:77
 #: ../src/Grids/MiscGrid.vala:104
 msgid "Maximize Horizontally"
-msgstr "水平方向最大化"
+msgstr "Maximalizovat vodorovně"
 
 #: ../src/Grids/MiscGrid.vala:51
 #: ../src/Grids/MiscGrid.vala:78
 #: ../src/Grids/MiscGrid.vala:105
 msgid "Maximize Vertically"
-msgstr "垂直方向最大化"
+msgstr "Maximalizovat svisle"
 
 #: ../src/Grids/MiscGrid.vala:52
 #: ../src/Grids/MiscGrid.vala:79
 #: ../src/Grids/MiscGrid.vala:106
 msgid "Minimize"
-msgstr "最小化"
+msgstr "Minimalizovat"
 
 #: ../src/Grids/MiscGrid.vala:53
 #: ../src/Grids/MiscGrid.vala:80
 #: ../src/Grids/MiscGrid.vala:107
 msgid "Shade"
-msgstr "阴影"
+msgstr "Zarolovat"
 
 #: ../src/Grids/MiscGrid.vala:54
 #: ../src/Grids/MiscGrid.vala:81
 #: ../src/Grids/MiscGrid.vala:108
 msgid "Lower Window"
-msgstr "降低窗口"
+msgstr "Dát okno do pozadí"
 
 #: ../src/Grids/MiscGrid.vala:126
 msgid "Double Click Titlebar Action:"
-msgstr "双击标题栏动作："
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:129
 msgid "Middle Click Titlebar Action:"
-msgstr "中键点击标题栏动作："
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:132
 msgid "Right Click Titlebar Action:"
-msgstr "右击标题栏动作："
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:135
 msgid "Audible Bell:"
-msgstr "响铃："
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:138
 msgid "Overlay Scrollbars:"
-msgstr "覆盖式滚动条："
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:141
 msgid "Natural Scrolling:"
-msgstr "自然滚动："
+msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:41
 msgid "Middle"
-msgstr "中间"
+msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:43
 msgid "Flush Left"
-msgstr "左对齐"
+msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:44
 msgid "Flush Right"
-msgstr "右对齐"
+msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:65
 msgid "Edge:"
-msgstr "边缘："
+msgstr "Okraj:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:66
 msgid "Slanted"
-msgstr "倾斜"
+msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:67
 msgid "Squared"
@@ -384,99 +384,99 @@ msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:90
 msgid "Auto Hide:"
-msgstr "自动隐藏："
+msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:98
 msgid "Show Launcher:"
-msgstr "显示启动器："
+msgstr ""
 
 #: ../src/Grids/WingpanelslimGrid.vala:107
 msgid "Launcher:"
-msgstr "启动器："
+msgstr "Spouštěč:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:151
 msgid "Slim Wingpanel:"
-msgstr "Slim Wingpanel："
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:27
 msgid "Open Duration:"
-msgstr "打开时长："
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:28
 msgid "Close Duration:"
-msgstr "关闭时长："
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:29
 msgid "Snap Duration:"
-msgstr "Snap 时长："
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:30
 msgid "Minimize Duration:"
-msgstr "最小化时长："
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:31
 msgid "Workspace Switch Duration:"
-msgstr "工作区切换时长："
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:148
 msgid "Animations:"
-msgstr "动画："
+msgstr "Animace:"
 
 #: ../src/Grids/SlingshotGrid.vala:93
 msgid "Rows:"
-msgstr "行："
+msgstr "Řádků:"
 
 #: ../src/Grids/SlingshotGrid.vala:96
 msgid "Columns:"
-msgstr "列："
+msgstr "Sloupců:"
 
 #: ../src/Grids/ShortcutsGrid.vala:68
 msgid "Name"
-msgstr "名称"
+msgstr ""
 
 #: ../src/Grids/ShortcutsGrid.vala:69
 msgid "Shortcut"
-msgstr "快捷键"
+msgstr "Zkratka"
 
 #: ../src/Grids/ShortcutsGrid.vala:70
 msgid "Command"
-msgstr "命令"
+msgstr "Příkaz"
 
 #: ../src/Grids/ShortcutsGrid.vala:117
 msgid "Every field must be filled!"
-msgstr "每个字段必须填写！"
+msgstr "Všechna pole musí být vyplněná"
 
 #: ../src/Grids/ShortcutsGrid.vala:126
 msgid "Name:"
-msgstr "名称："
+msgstr "Název:"
 
 #: ../src/Grids/ShortcutsGrid.vala:129
 msgid "Shortcut:"
-msgstr "快捷键："
+msgstr "Zkratka:"
 
 #: ../src/Grids/ShortcutsGrid.vala:132
 msgid "Command:"
-msgstr "命令："
+msgstr "Příkaz:"
 
 #: ../src/Grids/AppearanceGrid.vala:116
 msgid "Custom Layout:"
-msgstr "自定义布局："
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:119
 msgid "Close Only"
-msgstr "仅关闭按钮"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:120
 msgid "Minimize Left"
-msgstr "左侧最小化"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:121
 msgid "Minimize Right"
-msgstr "右侧最小化"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:122
 msgid "Windows"
-msgstr "窗口"
+msgstr "Windows"
 
 #: ../src/Grids/AppearanceGrid.vala:123
 msgid "OS X"
@@ -485,58 +485,58 @@ msgstr "OS X"
 #: ../src/Grids/AppearanceGrid.vala:124
 #: ../src/Grids/TerminalGrid.vala:180
 msgid "Custom"
-msgstr "自定义"
+msgstr "Vlastní"
 
 #: ../src/Grids/AppearanceGrid.vala:183
 msgid "Window Decoration Theme:"
-msgstr "窗口装饰主题："
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:186
 msgid "Interface Theme:"
-msgstr "界面主题："
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:189
 msgid "Icon Theme:"
-msgstr "图标主题："
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:192
 msgid "Cursor Theme:"
-msgstr "光标主题："
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:195
 msgid "Button Layout:"
-msgstr "按钮布局："
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:98
 msgid "Default Font:"
-msgstr "默认字体："
+msgstr "Výchozí písmo:"
 
 #: ../src/Grids/FontsGrid.vala:101
 msgid "Document Font:"
-msgstr "文档字体："
+msgstr "Písmo dokumentů:"
 
 #: ../src/Grids/FontsGrid.vala:104
 msgid "Monospace Font:"
-msgstr "等宽字体："
+msgstr "Monospace písmo:"
 
 #: ../src/Grids/FontsGrid.vala:107
 msgid "Window Title Font:"
-msgstr "窗口标题字体："
+msgstr "Písmo záhlaví okna:"
 
 #: ../src/Grids/TerminalGrid.vala:199
 msgid "Limit Scrollback Lines:"
-msgstr "限制回滚行数："
+msgstr ""
 
 #: ../src/Grids/TerminalGrid.vala:203
 msgid "Custom Font:"
-msgstr "自定义字体："
+msgstr ""
 
 #: ../src/Grids/TerminalGrid.vala:207
 msgid "Opacity:"
-msgstr "透明度："
+msgstr ""
 
 #: ../src/Widgets/AcceleratorInputWidget.vala:67
 #: ../src/Widgets/AcceleratorInputWidget.vala:85
 #: ../src/Objects/ShortcutObject.vala:38
 msgid "Disabled"
-msgstr "禁用"
+msgstr ""
