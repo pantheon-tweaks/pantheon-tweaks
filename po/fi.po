@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-20 21:04+0100\n"
-"PO-Revision-Date: 2013-08-30 11:15+0000\n"
+"PO-Revision-Date: 2013-10-18 06:35+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-09-29 06:18+0000\n"
-"X-Generator: Launchpad (build 16774)\n"
+"X-Launchpad-Export-Date: 2013-10-19 05:30+0000\n"
+"X-Generator: Launchpad (build 16807)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
@@ -79,7 +79,7 @@ msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:38
 msgid "Locale"
-msgstr ""
+msgstr "Maa-asetus"
 
 #: ../src/Grids/FilesGrid.vala:39
 msgid "ISO"
@@ -211,7 +211,7 @@ msgstr "Keskellä"
 
 #: ../src/Grids/PlankGrid.vala:52
 msgid "Panel"
-msgstr ""
+msgstr "Paneeli"
 
 #: ../src/Grids/PlankGrid.vala:133
 msgid "Item Alignment:"
@@ -424,11 +424,11 @@ msgstr "Animaatiot:"
 
 #: ../src/Grids/SlingshotGrid.vala:93
 msgid "Rows:"
-msgstr ""
+msgstr "Rivejä:"
 
 #: ../src/Grids/SlingshotGrid.vala:96
 msgid "Columns:"
-msgstr ""
+msgstr "Sarakkeita:"
 
 #: ../src/Grids/ShortcutsGrid.vala:68
 msgid "Name"
