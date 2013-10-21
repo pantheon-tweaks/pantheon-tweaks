@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-20 21:04+0100\n"
-"PO-Revision-Date: 2013-10-19 20:38+0000\n"
+"PO-Revision-Date: 2013-10-20 22:08+0000\n"
 "Last-Translator: Alfredo Hernández <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-10-20 05:20+0000\n"
+"X-Launchpad-Export-Date: 2013-10-21 05:04+0000\n"
 "X-Generator: Launchpad (build 16807)\n"
 
 #: ../src/Tweaks.vala:49
@@ -162,7 +162,7 @@ msgstr "Sombras:"
 
 #: ../src/Grids/CerbereGrid.vala:39
 msgid "Watched Processes"
-msgstr "Procesos Vigilados"
+msgstr "Procesos vigilados"
 
 #: ../src/Grids/CerbereGrid.vala:50
 #: ../src/Grids/CerbereGrid.vala:60
@@ -329,7 +329,7 @@ msgstr "Acción al hacer doble click en la barra de acción"
 #: ../src/Grids/MiscGrid.vala:129
 msgid "Middle Click Titlebar Action:"
 msgstr ""
-"Acción al hacer click con el botón del centro del ratón en la barra de título"
+"Acción al hacer click en la barra de título con el botón central del ratón"
 
 #: ../src/Grids/MiscGrid.vala:132
 msgid "Right Click Titlebar Action:"
@@ -442,11 +442,11 @@ msgstr "Acceso directo"
 
 #: ../src/Grids/ShortcutsGrid.vala:70
 msgid "Command"
-msgstr "Comando"
+msgstr "Orden"
 
 #: ../src/Grids/ShortcutsGrid.vala:117
 msgid "Every field must be filled!"
-msgstr "Todos lo campos deben ser llenados!"
+msgstr "Todos lo campos tienen que ser llenados"
 
 #: ../src/Grids/ShortcutsGrid.vala:126
 msgid "Name:"
@@ -462,11 +462,11 @@ msgstr "Comando:"
 
 #: ../src/Grids/AppearanceGrid.vala:116
 msgid "Custom Layout:"
-msgstr "Diseño personalizado:"
+msgstr "Distribución personalizada:"
 
 #: ../src/Grids/AppearanceGrid.vala:119
 msgid "Close Only"
-msgstr "Sólo \"Cerrar\""
+msgstr "Solo «Cerrar»"
 
 #: ../src/Grids/AppearanceGrid.vala:120
 msgid "Minimize Left"
@@ -541,4 +541,4 @@ msgstr "Opacidad:"
 #: ../src/Widgets/AcceleratorInputWidget.vala:85
 #: ../src/Objects/ShortcutObject.vala:38
 msgid "Disabled"
-msgstr "Deshabilitado"
+msgstr "Desactivado"

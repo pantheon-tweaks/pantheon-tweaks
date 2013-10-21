@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-20 21:04+0100\n"
-"PO-Revision-Date: 2013-07-21 20:08+0000\n"
+"PO-Revision-Date: 2013-10-20 22:07+0000\n"
 "Last-Translator: Alfredo Hernández <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-09-29 06:18+0000\n"
-"X-Generator: Launchpad (build 16774)\n"
+"X-Launchpad-Export-Date: 2013-10-21 05:04+0000\n"
+"X-Generator: Launchpad (build 16807)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
@@ -43,7 +43,7 @@ msgstr "Ombres"
 
 #: ../src/Tweaks.vala:71
 msgid "Shortcuts"
-msgstr ""
+msgstr "Dreceres"
 
 #: ../src/Tweaks.vala:74
 msgid "Miscellaneous"
@@ -67,7 +67,7 @@ msgstr "Slingshot"
 
 #: ../src/Tweaks.vala:97
 msgid "Cerbere"
-msgstr ""
+msgstr "Cerbere"
 
 #: ../src/Tweaks.vala:101
 msgid "Terminal"
@@ -162,26 +162,26 @@ msgstr "Ombres:"
 
 #: ../src/Grids/CerbereGrid.vala:39
 msgid "Watched Processes"
-msgstr ""
+msgstr "Processos vigilats"
 
 #: ../src/Grids/CerbereGrid.vala:50
 #: ../src/Grids/CerbereGrid.vala:60
 #: ../src/Grids/ShortcutsGrid.vala:91
 #: ../src/Grids/ShortcutsGrid.vala:158
 msgid "Add..."
-msgstr ""
+msgstr "Afegeix…"
 
 #: ../src/Grids/CerbereGrid.vala:51
 #: ../src/Grids/CerbereGrid.vala:61
 #: ../src/Grids/ShortcutsGrid.vala:92
 #: ../src/Grids/ShortcutsGrid.vala:159
 msgid "Remove"
-msgstr ""
+msgstr "Suprimeix"
 
 #: ../src/Grids/CerbereGrid.vala:62
 #: ../src/Grids/ShortcutsGrid.vala:160
 msgid "Revert to Default"
-msgstr ""
+msgstr "Restableix els predeterminats"
 
 #: ../src/Grids/SynapseGrid.vala:46
 msgid "Search Indicator Shortcut:"
@@ -284,55 +284,55 @@ msgstr "Icona de «Mostra l'escriptori»:"
 #: ../src/Grids/MiscGrid.vala:75
 #: ../src/Grids/MiscGrid.vala:102
 msgid "Menu"
-msgstr ""
+msgstr "Menú"
 
 #: ../src/Grids/MiscGrid.vala:49
 #: ../src/Grids/MiscGrid.vala:76
 #: ../src/Grids/MiscGrid.vala:103
 msgid "Maximize"
-msgstr ""
+msgstr "Maximitza"
 
 #: ../src/Grids/MiscGrid.vala:50
 #: ../src/Grids/MiscGrid.vala:77
 #: ../src/Grids/MiscGrid.vala:104
 msgid "Maximize Horizontally"
-msgstr ""
+msgstr "Maximitza horitzontalment"
 
 #: ../src/Grids/MiscGrid.vala:51
 #: ../src/Grids/MiscGrid.vala:78
 #: ../src/Grids/MiscGrid.vala:105
 msgid "Maximize Vertically"
-msgstr ""
+msgstr "Maximitza verticalment"
 
 #: ../src/Grids/MiscGrid.vala:52
 #: ../src/Grids/MiscGrid.vala:79
 #: ../src/Grids/MiscGrid.vala:106
 msgid "Minimize"
-msgstr ""
+msgstr "Minimitza"
 
 #: ../src/Grids/MiscGrid.vala:53
 #: ../src/Grids/MiscGrid.vala:80
 #: ../src/Grids/MiscGrid.vala:107
 msgid "Shade"
-msgstr ""
+msgstr "Enrotlla"
 
 #: ../src/Grids/MiscGrid.vala:54
 #: ../src/Grids/MiscGrid.vala:81
 #: ../src/Grids/MiscGrid.vala:108
 msgid "Lower Window"
-msgstr ""
+msgstr "Abaixa la finestra"
 
 #: ../src/Grids/MiscGrid.vala:126
 msgid "Double Click Titlebar Action:"
-msgstr ""
+msgstr "Acció en fer doble clic a la barra d'acció"
 
 #: ../src/Grids/MiscGrid.vala:129
 msgid "Middle Click Titlebar Action:"
-msgstr ""
+msgstr "Acció en clicar la barra de títol amb el botó central del ratolí"
 
 #: ../src/Grids/MiscGrid.vala:132
 msgid "Right Click Titlebar Action:"
-msgstr ""
+msgstr "Acció a realitzar en clicar la barra de títol amb el botó dret"
 
 #: ../src/Grids/MiscGrid.vala:135
 msgid "Audible Bell:"
@@ -344,7 +344,7 @@ msgstr "Barres de desplaçament superposades:"
 
 #: ../src/Grids/MiscGrid.vala:141
 msgid "Natural Scrolling:"
-msgstr ""
+msgstr "Desplaçament natural"
 
 #: ../src/Grids/WingpanelslimGrid.vala:41
 msgid "Middle"
@@ -352,47 +352,47 @@ msgstr "Central"
 
 #: ../src/Grids/WingpanelslimGrid.vala:43
 msgid "Flush Left"
-msgstr ""
+msgstr "Anivella a l'esquerra"
 
 #: ../src/Grids/WingpanelslimGrid.vala:44
 msgid "Flush Right"
-msgstr ""
+msgstr "Anivellar a la dreta"
 
 #: ../src/Grids/WingpanelslimGrid.vala:65
 msgid "Edge:"
-msgstr ""
+msgstr "Vora:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:66
 msgid "Slanted"
-msgstr ""
+msgstr "Inclinat"
 
 #: ../src/Grids/WingpanelslimGrid.vala:67
 msgid "Squared"
-msgstr ""
+msgstr "Quadrat"
 
 #: ../src/Grids/WingpanelslimGrid.vala:68
 msgid "Curved 1"
-msgstr ""
+msgstr "Corb 1"
 
 #: ../src/Grids/WingpanelslimGrid.vala:69
 msgid "Curved 2"
-msgstr ""
+msgstr "Corb 2"
 
 #: ../src/Grids/WingpanelslimGrid.vala:70
 msgid "Curved 3"
-msgstr ""
+msgstr "Corb 3"
 
 #: ../src/Grids/WingpanelslimGrid.vala:90
 msgid "Auto Hide:"
-msgstr ""
+msgstr "Ocultació automàtica:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:98
 msgid "Show Launcher:"
-msgstr ""
+msgstr "Mostra l'executor:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:107
 msgid "Launcher:"
-msgstr ""
+msgstr "Executor:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:151
 msgid "Slim Wingpanel:"
@@ -432,39 +432,39 @@ msgstr "Columnes:"
 
 #: ../src/Grids/ShortcutsGrid.vala:68
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #: ../src/Grids/ShortcutsGrid.vala:69
 msgid "Shortcut"
-msgstr ""
+msgstr "Drecera"
 
 #: ../src/Grids/ShortcutsGrid.vala:70
 msgid "Command"
-msgstr ""
+msgstr "Ordre"
 
 #: ../src/Grids/ShortcutsGrid.vala:117
 msgid "Every field must be filled!"
-msgstr ""
+msgstr "S'han d'omplir tots els camps"
 
 #: ../src/Grids/ShortcutsGrid.vala:126
 msgid "Name:"
-msgstr ""
+msgstr "Nom:"
 
 #: ../src/Grids/ShortcutsGrid.vala:129
 msgid "Shortcut:"
-msgstr ""
+msgstr "Drecera:"
 
 #: ../src/Grids/ShortcutsGrid.vala:132
 msgid "Command:"
-msgstr ""
+msgstr "Orde:"
 
 #: ../src/Grids/AppearanceGrid.vala:116
 msgid "Custom Layout:"
-msgstr ""
+msgstr "Distribució personalitzada:"
 
 #: ../src/Grids/AppearanceGrid.vala:119
 msgid "Close Only"
-msgstr ""
+msgstr "Només «Tanca»"
 
 #: ../src/Grids/AppearanceGrid.vala:120
 msgid "Minimize Left"
@@ -539,4 +539,4 @@ msgstr "Opacitat:"
 #: ../src/Widgets/AcceleratorInputWidget.vala:85
 #: ../src/Objects/ShortcutObject.vala:38
 msgid "Disabled"
-msgstr ""
+msgstr "Desactivat"
