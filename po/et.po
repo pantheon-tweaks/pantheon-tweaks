@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-20 21:04+0100\n"
-"PO-Revision-Date: 2013-08-24 12:12+0000\n"
+"PO-Revision-Date: 2013-10-23 16:28+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-09-29 06:18+0000\n"
-"X-Generator: Launchpad (build 16774)\n"
+"X-Launchpad-Export-Date: 2013-10-24 05:31+0000\n"
+"X-Generator: Launchpad (build 16810)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
@@ -59,7 +59,7 @@ msgstr "Failid"
 
 #: ../src/Tweaks.vala:89
 msgid "Search Indicator"
-msgstr "Otsingu indikaator"
+msgstr "Otsing"
 
 #: ../src/Tweaks.vala:93
 msgid "Slingshot"
@@ -185,7 +185,7 @@ msgstr "Taasta vaikimisi väärtused"
 
 #: ../src/Grids/SynapseGrid.vala:46
 msgid "Search Indicator Shortcut:"
-msgstr "Otsingu indikaatori otsetee:"
+msgstr "Kiirklahv otsingu avamiseks:"
 
 #: ../src/Grids/PlankGrid.vala:47
 msgid "Top"
