@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-20 21:04+0100\n"
-"PO-Revision-Date: 2013-09-20 18:16+0000\n"
-"Last-Translator: Versable <Unknown>\n"
+"PO-Revision-Date: 2013-10-28 14:24+0000\n"
+"Last-Translator: Tobias B. <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-09-29 06:18+0000\n"
-"X-Generator: Launchpad (build 16774)\n"
+"X-Launchpad-Export-Date: 2013-10-29 05:33+0000\n"
+"X-Generator: Launchpad (build 16818)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
@@ -533,7 +533,7 @@ msgstr "Benutzerdefinierte Schrift:"
 
 #: ../src/Grids/TerminalGrid.vala:207
 msgid "Opacity:"
-msgstr "Transparenz:"
+msgstr "Deckkraft:"
 
 #: ../src/Widgets/AcceleratorInputWidget.vala:67
 #: ../src/Widgets/AcceleratorInputWidget.vala:85
