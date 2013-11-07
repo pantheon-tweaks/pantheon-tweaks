@@ -1,0 +1,542 @@
+# Galician translation for elementary-community
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the elementary-community package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: elementary-community\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-08-20 21:04+0100\n"
+"PO-Revision-Date: 2013-11-06 21:14+0000\n"
+"Last-Translator: José Marinho <jmarinho@edu.xunta.es>\n"
+"Language-Team: Galician <gl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2013-11-07 05:55+0000\n"
+"X-Generator: Launchpad (build 16820)\n"
+
+#: ../src/Tweaks.vala:49
+msgid "General"
+msgstr "Xeral"
+
+#: ../src/Tweaks.vala:50
+msgid "Applications"
+msgstr "Aplicativos"
+
+#: ../src/Tweaks.vala:57
+msgid "Appearance"
+msgstr "Aparencia"
+
+#: ../src/Tweaks.vala:60
+msgid "Fonts"
+msgstr "Tipos de letra"
+
+#: ../src/Tweaks.vala:64
+msgid "Animations"
+msgstr "Animacións"
+
+#: ../src/Tweaks.vala:68
+msgid "Shadows"
+msgstr "Sombras"
+
+#: ../src/Tweaks.vala:71
+msgid "Shortcuts"
+msgstr "Atallos de teclado"
+
+#: ../src/Tweaks.vala:74
+msgid "Miscellaneous"
+msgstr "Varios"
+
+#: ../src/Tweaks.vala:81
+msgid "Plank"
+msgstr "Doca"
+
+#: ../src/Tweaks.vala:85
+msgid "Files"
+msgstr "Arquivos"
+
+#: ../src/Tweaks.vala:89
+msgid "Search Indicator"
+msgstr "Buscador Synapse"
+
+#: ../src/Tweaks.vala:93
+msgid "Slingshot"
+msgstr "Lanzador de Aplicativos"
+
+#: ../src/Tweaks.vala:97
+msgid "Cerbere"
+msgstr "Cerbere"
+
+#: ../src/Tweaks.vala:101
+msgid "Terminal"
+msgstr "Terminal"
+
+#: ../src/Tweaks.vala:105
+msgid "Wingpanel Slim"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:38
+msgid "Locale"
+msgstr "Local"
+
+#: ../src/Grids/FilesGrid.vala:39
+msgid "ISO"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:40
+msgid "Informal"
+msgstr "Informal"
+
+#: ../src/Grids/FilesGrid.vala:61
+#: ../src/Grids/SlingshotGrid.vala:29
+msgid "Smallest"
+msgstr "Mínimo"
+
+#: ../src/Grids/FilesGrid.vala:62
+#: ../src/Grids/SlingshotGrid.vala:30
+msgid "Smaller"
+msgstr "Máis pequeno"
+
+#: ../src/Grids/FilesGrid.vala:63
+#: ../src/Grids/SlingshotGrid.vala:31
+msgid "Small"
+msgstr "Pequeno"
+
+#: ../src/Grids/FilesGrid.vala:64
+#: ../src/Grids/SlingshotGrid.vala:32
+msgid "Normal"
+msgstr "Normal"
+
+#: ../src/Grids/FilesGrid.vala:65
+#: ../src/Grids/SlingshotGrid.vala:33
+msgid "Large"
+msgstr "Grande"
+
+#: ../src/Grids/FilesGrid.vala:66
+#: ../src/Grids/SlingshotGrid.vala:34
+msgid "Larger"
+msgstr "Máis grande"
+
+#: ../src/Grids/FilesGrid.vala:67
+#: ../src/Grids/SlingshotGrid.vala:35
+msgid "Largest"
+msgstr "Enorme"
+
+#: ../src/Grids/FilesGrid.vala:85
+msgid "Single Click:"
+msgstr "Un click"
+
+#: ../src/Grids/FilesGrid.vala:88
+msgid "Date Format:"
+msgstr "Formato da data:"
+
+#: ../src/Grids/FilesGrid.vala:91
+msgid "Sidebar Icon Size:"
+msgstr "Tamaño dos ícones laterais"
+
+#: ../src/Grids/ShadowsGrid.vala:27
+msgid "Focused Windows:"
+msgstr "Xanela activa"
+
+#: ../src/Grids/ShadowsGrid.vala:28
+msgid "Unfocused Windows:"
+msgstr "Xanela inactiva"
+
+#: ../src/Grids/ShadowsGrid.vala:29
+msgid "Focused Dialogs:"
+msgstr "Diálogos activos"
+
+#: ../src/Grids/ShadowsGrid.vala:30
+msgid "Unfocused Dialogs:"
+msgstr "Diálogos inactivos"
+
+#: ../src/Grids/ShadowsGrid.vala:31
+msgid "Menu:"
+msgstr "Menu:"
+
+#: ../src/Grids/ShadowsGrid.vala:194
+msgid "Shadows:"
+msgstr "Sombras:"
+
+#: ../src/Grids/CerbereGrid.vala:39
+msgid "Watched Processes"
+msgstr "Procesos vixiados"
+
+#: ../src/Grids/CerbereGrid.vala:50
+#: ../src/Grids/CerbereGrid.vala:60
+#: ../src/Grids/ShortcutsGrid.vala:91
+#: ../src/Grids/ShortcutsGrid.vala:158
+msgid "Add..."
+msgstr "Engadir..."
+
+#: ../src/Grids/CerbereGrid.vala:51
+#: ../src/Grids/CerbereGrid.vala:61
+#: ../src/Grids/ShortcutsGrid.vala:92
+#: ../src/Grids/ShortcutsGrid.vala:159
+msgid "Remove"
+msgstr "Retirar"
+
+#: ../src/Grids/CerbereGrid.vala:62
+#: ../src/Grids/ShortcutsGrid.vala:160
+msgid "Revert to Default"
+msgstr "Restablecer predefinidos"
+
+#: ../src/Grids/SynapseGrid.vala:46
+msgid "Search Indicator Shortcut:"
+msgstr "Atallo para o buscador Synapse"
+
+#: ../src/Grids/PlankGrid.vala:47
+msgid "Top"
+msgstr "Acima"
+
+#: ../src/Grids/PlankGrid.vala:48
+msgid "Bottom"
+msgstr "Abaixo"
+
+#: ../src/Grids/PlankGrid.vala:49
+#: ../src/Grids/WingpanelslimGrid.vala:42
+msgid "Left"
+msgstr "Esquerda"
+
+#: ../src/Grids/PlankGrid.vala:50
+#: ../src/Grids/WingpanelslimGrid.vala:40
+msgid "Right"
+msgstr "Dereita"
+
+#: ../src/Grids/PlankGrid.vala:51
+msgid "Center"
+msgstr "Centrado"
+
+#: ../src/Grids/PlankGrid.vala:52
+msgid "Panel"
+msgstr "Panel"
+
+#: ../src/Grids/PlankGrid.vala:133
+msgid "Item Alignment:"
+msgstr "Aliñamento dos ítems"
+
+#: ../src/Grids/PlankGrid.vala:171
+msgid "Unknown Value"
+msgstr "Valor descoñecido"
+
+#: ../src/Grids/PlankGrid.vala:193
+msgid "Don't hide"
+msgstr "Non agochar"
+
+#: ../src/Grids/PlankGrid.vala:194
+msgid "Intelligent hide"
+msgstr "Agóchase Intelixentemente"
+
+#: ../src/Grids/PlankGrid.vala:195
+msgid "Auto hide"
+msgstr "Agochar automaticamente"
+
+#: ../src/Grids/PlankGrid.vala:196
+msgid "Hide on maximize"
+msgstr "Agochar ao maximizar"
+
+#: ../src/Grids/PlankGrid.vala:249
+msgid "Primary Monitor"
+msgstr "Monitor primario"
+
+#: ../src/Grids/PlankGrid.vala:252
+#, c-format
+msgid "Monitor %d"
+msgstr "Monitor %d"
+
+#: ../src/Grids/PlankGrid.vala:272
+msgid "Icon Size:"
+msgstr "Tamaño do ícone"
+
+#: ../src/Grids/PlankGrid.vala:276
+msgid "Hide Mode:"
+msgstr "Modo de agochamento:"
+
+#: ../src/Grids/PlankGrid.vala:280
+#: ../src/Grids/TerminalGrid.vala:210
+msgid "Theme:"
+msgstr "Tema:"
+
+#: ../src/Grids/PlankGrid.vala:285
+msgid "Monitor:"
+msgstr "Monitor:"
+
+#: ../src/Grids/PlankGrid.vala:289
+#: ../src/Grids/WingpanelslimGrid.vala:39
+msgid "Position:"
+msgstr "Posición:"
+
+#: ../src/Grids/PlankGrid.vala:292
+msgid "Alignment:"
+msgstr "Aliñamento:"
+
+#: ../src/Grids/PlankGrid.vala:298
+msgid "Workspace Overview Icon:"
+msgstr "Ícone para mudar de escritorio"
+
+#: ../src/Grids/PlankGrid.vala:301
+msgid "Show Desktop Icon:"
+msgstr "Ícone para minimizar as xanelas"
+
+#: ../src/Grids/MiscGrid.vala:48
+#: ../src/Grids/MiscGrid.vala:75
+#: ../src/Grids/MiscGrid.vala:102
+msgid "Menu"
+msgstr "Menú"
+
+#: ../src/Grids/MiscGrid.vala:49
+#: ../src/Grids/MiscGrid.vala:76
+#: ../src/Grids/MiscGrid.vala:103
+msgid "Maximize"
+msgstr "Maximizar"
+
+#: ../src/Grids/MiscGrid.vala:50
+#: ../src/Grids/MiscGrid.vala:77
+#: ../src/Grids/MiscGrid.vala:104
+msgid "Maximize Horizontally"
+msgstr "Maximizar horizontalmente"
+
+#: ../src/Grids/MiscGrid.vala:51
+#: ../src/Grids/MiscGrid.vala:78
+#: ../src/Grids/MiscGrid.vala:105
+msgid "Maximize Vertically"
+msgstr "Maximizar verticalmente"
+
+#: ../src/Grids/MiscGrid.vala:52
+#: ../src/Grids/MiscGrid.vala:79
+#: ../src/Grids/MiscGrid.vala:106
+msgid "Minimize"
+msgstr "Minimizar"
+
+#: ../src/Grids/MiscGrid.vala:53
+#: ../src/Grids/MiscGrid.vala:80
+#: ../src/Grids/MiscGrid.vala:107
+msgid "Shade"
+msgstr "Contraer"
+
+#: ../src/Grids/MiscGrid.vala:54
+#: ../src/Grids/MiscGrid.vala:81
+#: ../src/Grids/MiscGrid.vala:108
+msgid "Lower Window"
+msgstr "Enviar a xanela para atrás"
+
+#: ../src/Grids/MiscGrid.vala:126
+msgid "Double Click Titlebar Action:"
+msgstr "Duplo-click na barra de título"
+
+#: ../src/Grids/MiscGrid.vala:129
+msgid "Middle Click Titlebar Action:"
+msgstr "Medio-click na barra de título"
+
+#: ../src/Grids/MiscGrid.vala:132
+msgid "Right Click Titlebar Action:"
+msgstr "Click-dereito na Barra de título"
+
+#: ../src/Grids/MiscGrid.vala:135
+msgid "Audible Bell:"
+msgstr "Campaíña audíbel"
+
+#: ../src/Grids/MiscGrid.vala:138
+msgid "Overlay Scrollbars:"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:141
+msgid "Natural Scrolling:"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:41
+msgid "Middle"
+msgstr "No medio"
+
+#: ../src/Grids/WingpanelslimGrid.vala:43
+msgid "Flush Left"
+msgstr "Totalmente á esquerda"
+
+#: ../src/Grids/WingpanelslimGrid.vala:44
+msgid "Flush Right"
+msgstr "Totalmente á dereita"
+
+#: ../src/Grids/WingpanelslimGrid.vala:65
+msgid "Edge:"
+msgstr "Bordo"
+
+#: ../src/Grids/WingpanelslimGrid.vala:66
+msgid "Slanted"
+msgstr "Perfilado"
+
+#: ../src/Grids/WingpanelslimGrid.vala:67
+msgid "Squared"
+msgstr "Cadrado"
+
+#: ../src/Grids/WingpanelslimGrid.vala:68
+msgid "Curved 1"
+msgstr "Curvado 1"
+
+#: ../src/Grids/WingpanelslimGrid.vala:69
+msgid "Curved 2"
+msgstr "Curvado 2"
+
+#: ../src/Grids/WingpanelslimGrid.vala:70
+msgid "Curved 3"
+msgstr "Curvado 3"
+
+#: ../src/Grids/WingpanelslimGrid.vala:90
+msgid "Auto Hide:"
+msgstr "Ocultase automáticamente"
+
+#: ../src/Grids/WingpanelslimGrid.vala:98
+msgid "Show Launcher:"
+msgstr "Mostrar iniciador"
+
+#: ../src/Grids/WingpanelslimGrid.vala:107
+msgid "Launcher:"
+msgstr "Iniciador:"
+
+#: ../src/Grids/WingpanelslimGrid.vala:151
+msgid "Slim Wingpanel:"
+msgstr ""
+
+#: ../src/Grids/AnimationsGrid.vala:27
+msgid "Open Duration:"
+msgstr "Duración da apertura"
+
+#: ../src/Grids/AnimationsGrid.vala:28
+msgid "Close Duration:"
+msgstr "Duración do peche"
+
+#: ../src/Grids/AnimationsGrid.vala:29
+msgid "Snap Duration:"
+msgstr "Duración do efecto \"Snap\""
+
+#: ../src/Grids/AnimationsGrid.vala:30
+msgid "Minimize Duration:"
+msgstr "Duración de \"minimizar\":"
+
+#: ../src/Grids/AnimationsGrid.vala:31
+msgid "Workspace Switch Duration:"
+msgstr "Duración da troca de escritorio:"
+
+#: ../src/Grids/AnimationsGrid.vala:148
+msgid "Animations:"
+msgstr ""
+
+#: ../src/Grids/SlingshotGrid.vala:93
+msgid "Rows:"
+msgstr "Ringleiras:"
+
+#: ../src/Grids/SlingshotGrid.vala:96
+msgid "Columns:"
+msgstr "Colunas:"
+
+#: ../src/Grids/ShortcutsGrid.vala:68
+msgid "Name"
+msgstr "Nome"
+
+#: ../src/Grids/ShortcutsGrid.vala:69
+msgid "Shortcut"
+msgstr "Atallo"
+
+#: ../src/Grids/ShortcutsGrid.vala:70
+msgid "Command"
+msgstr "Comando"
+
+#: ../src/Grids/ShortcutsGrid.vala:117
+msgid "Every field must be filled!"
+msgstr "Todos os campos deben ser enchidos!"
+
+#: ../src/Grids/ShortcutsGrid.vala:126
+msgid "Name:"
+msgstr "Nome:"
+
+#: ../src/Grids/ShortcutsGrid.vala:129
+msgid "Shortcut:"
+msgstr "Atallo:"
+
+#: ../src/Grids/ShortcutsGrid.vala:132
+msgid "Command:"
+msgstr "Comando:"
+
+#: ../src/Grids/AppearanceGrid.vala:116
+msgid "Custom Layout:"
+msgstr "Escoller os botóns da xanela:e"
+
+#: ../src/Grids/AppearanceGrid.vala:119
+msgid "Close Only"
+msgstr "So pechar"
+
+#: ../src/Grids/AppearanceGrid.vala:120
+msgid "Minimize Left"
+msgstr "Minimizar á esquerda"
+
+#: ../src/Grids/AppearanceGrid.vala:121
+msgid "Minimize Right"
+msgstr "Minimizar á dereita"
+
+#: ../src/Grids/AppearanceGrid.vala:122
+msgid "Windows"
+msgstr "Windows"
+
+#: ../src/Grids/AppearanceGrid.vala:123
+msgid "OS X"
+msgstr "OS X"
+
+#: ../src/Grids/AppearanceGrid.vala:124
+#: ../src/Grids/TerminalGrid.vala:180
+msgid "Custom"
+msgstr "Personalizado"
+
+#: ../src/Grids/AppearanceGrid.vala:183
+msgid "Window Decoration Theme:"
+msgstr "Tema da xanela"
+
+#: ../src/Grids/AppearanceGrid.vala:186
+msgid "Interface Theme:"
+msgstr "Tema da interfaz:"
+
+#: ../src/Grids/AppearanceGrid.vala:189
+msgid "Icon Theme:"
+msgstr "Tema dos ícones:"
+
+#: ../src/Grids/AppearanceGrid.vala:192
+msgid "Cursor Theme:"
+msgstr "Tema do cursor:"
+
+#: ../src/Grids/AppearanceGrid.vala:195
+msgid "Button Layout:"
+msgstr "Colocación dos botóns da xanela:"
+
+#: ../src/Grids/FontsGrid.vala:98
+msgid "Default Font:"
+msgstr "Tipo de letra predeterminado:"
+
+#: ../src/Grids/FontsGrid.vala:101
+msgid "Document Font:"
+msgstr "Fonte dos documentos"
+
+#: ../src/Grids/FontsGrid.vala:104
+msgid "Monospace Font:"
+msgstr ""
+
+#: ../src/Grids/FontsGrid.vala:107
+msgid "Window Title Font:"
+msgstr "Fonte do título das xanelas"
+
+#: ../src/Grids/TerminalGrid.vala:199
+msgid "Limit Scrollback Lines:"
+msgstr ""
+
+#: ../src/Grids/TerminalGrid.vala:203
+msgid "Custom Font:"
+msgstr "Fonte personalizada"
+
+#: ../src/Grids/TerminalGrid.vala:207
+msgid "Opacity:"
+msgstr "Opacidade:"
+
+#: ../src/Widgets/AcceleratorInputWidget.vala:67
+#: ../src/Widgets/AcceleratorInputWidget.vala:85
+#: ../src/Objects/ShortcutObject.vala:38
+msgid "Disabled"
+msgstr "Desactivado"
