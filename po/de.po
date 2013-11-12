@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-20 21:04+0100\n"
-"PO-Revision-Date: 2013-10-28 14:24+0000\n"
+"PO-Revision-Date: 2013-11-12 02:57+0000\n"
 "Last-Translator: Tobias B. <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-10-29 05:33+0000\n"
-"X-Generator: Launchpad (build 16818)\n"
+"X-Launchpad-Export-Date: 2013-11-12 06:38+0000\n"
+"X-Generator: Launchpad (build 16820)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
@@ -169,7 +169,7 @@ msgstr "Überwachte Prozesse"
 #: ../src/Grids/ShortcutsGrid.vala:91
 #: ../src/Grids/ShortcutsGrid.vala:158
 msgid "Add..."
-msgstr "Hinzufügen..."
+msgstr "Hinzufügen …"
 
 #: ../src/Grids/CerbereGrid.vala:51
 #: ../src/Grids/CerbereGrid.vala:61
