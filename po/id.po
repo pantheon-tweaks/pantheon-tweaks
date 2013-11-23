@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-20 21:04+0100\n"
-"PO-Revision-Date: 2013-07-28 08:03+0000\n"
-"Last-Translator: Viko Adi Rahmawan <Unknown>\n"
+"PO-Revision-Date: 2013-11-22 18:54+0000\n"
+"Last-Translator: Andi Ibensis Esbeer <ibnsiswanto@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-09-29 06:18+0000\n"
-"X-Generator: Launchpad (build 16774)\n"
+"X-Launchpad-Export-Date: 2013-11-23 06:28+0000\n"
+"X-Generator: Launchpad (build 16831)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
@@ -43,7 +43,7 @@ msgstr "Bayangan"
 
 #: ../src/Tweaks.vala:71
 msgid "Shortcuts"
-msgstr ""
+msgstr "Pintasan"
 
 #: ../src/Tweaks.vala:74
 msgid "Miscellaneous"
@@ -51,31 +51,31 @@ msgstr "Lain-lain"
 
 #: ../src/Tweaks.vala:81
 msgid "Plank"
-msgstr ""
+msgstr "Papan"
 
 #: ../src/Tweaks.vala:85
 msgid "Files"
-msgstr "Pengelola Berkas"
+msgstr "Berkas"
 
 #: ../src/Tweaks.vala:89
 msgid "Search Indicator"
-msgstr ""
+msgstr "Indikator pencarian"
 
 #: ../src/Tweaks.vala:93
 msgid "Slingshot"
-msgstr ""
+msgstr "Jepretan"
 
 #: ../src/Tweaks.vala:97
 msgid "Cerbere"
-msgstr ""
+msgstr "Pengawas Sistem"
 
 #: ../src/Tweaks.vala:101
 msgid "Terminal"
-msgstr ""
+msgstr "Terminal"
 
 #: ../src/Tweaks.vala:105
 msgid "Wingpanel Slim"
-msgstr ""
+msgstr "Panelsisi Tipis"
 
 #: ../src/Grids/FilesGrid.vala:38
 msgid "Locale"
@@ -83,16 +83,16 @@ msgstr "Lokal"
 
 #: ../src/Grids/FilesGrid.vala:39
 msgid "ISO"
-msgstr ""
+msgstr "ISO"
 
 #: ../src/Grids/FilesGrid.vala:40
 msgid "Informal"
-msgstr ""
+msgstr "Kasual"
 
 #: ../src/Grids/FilesGrid.vala:61
 #: ../src/Grids/SlingshotGrid.vala:29
 msgid "Smallest"
-msgstr "Paling kecil"
+msgstr "Terkecil"
 
 #: ../src/Grids/FilesGrid.vala:62
 #: ../src/Grids/SlingshotGrid.vala:30
@@ -122,11 +122,11 @@ msgstr "Lebih besar"
 #: ../src/Grids/FilesGrid.vala:67
 #: ../src/Grids/SlingshotGrid.vala:35
 msgid "Largest"
-msgstr "Paling Besar"
+msgstr "Terbesar"
 
 #: ../src/Grids/FilesGrid.vala:85
 msgid "Single Click:"
-msgstr "Buka dengan satu klik:"
+msgstr "Klik tunggal"
 
 #: ../src/Grids/FilesGrid.vala:88
 msgid "Date Format:"
@@ -138,19 +138,19 @@ msgstr "Ukuran ikon bilah samping"
 
 #: ../src/Grids/ShadowsGrid.vala:27
 msgid "Focused Windows:"
-msgstr "Jendela terfokus:"
+msgstr "Jendela Terpilih"
 
 #: ../src/Grids/ShadowsGrid.vala:28
 msgid "Unfocused Windows:"
-msgstr "Jendela tak terfokus:"
+msgstr "Jendela Tak Terpilih"
 
 #: ../src/Grids/ShadowsGrid.vala:29
 msgid "Focused Dialogs:"
-msgstr "Dialog terfokus:"
+msgstr "Dialog Terpilih"
 
 #: ../src/Grids/ShadowsGrid.vala:30
 msgid "Unfocused Dialogs:"
-msgstr "Dialog tak terfokus:"
+msgstr "Dialog Tak Terpilih"
 
 #: ../src/Grids/ShadowsGrid.vala:31
 msgid "Menu:"
@@ -162,30 +162,30 @@ msgstr "Bayangan:"
 
 #: ../src/Grids/CerbereGrid.vala:39
 msgid "Watched Processes"
-msgstr ""
+msgstr "Proses Terpantau"
 
 #: ../src/Grids/CerbereGrid.vala:50
 #: ../src/Grids/CerbereGrid.vala:60
 #: ../src/Grids/ShortcutsGrid.vala:91
 #: ../src/Grids/ShortcutsGrid.vala:158
 msgid "Add..."
-msgstr ""
+msgstr "Tambah..."
 
 #: ../src/Grids/CerbereGrid.vala:51
 #: ../src/Grids/CerbereGrid.vala:61
 #: ../src/Grids/ShortcutsGrid.vala:92
 #: ../src/Grids/ShortcutsGrid.vala:159
 msgid "Remove"
-msgstr ""
+msgstr "Hilangkan"
 
 #: ../src/Grids/CerbereGrid.vala:62
 #: ../src/Grids/ShortcutsGrid.vala:160
 msgid "Revert to Default"
-msgstr ""
+msgstr "Kembalikan ke Pengaturan Semula"
 
 #: ../src/Grids/SynapseGrid.vala:46
 msgid "Search Indicator Shortcut:"
-msgstr ""
+msgstr "Pintasan Indikator Pencarian"
 
 #: ../src/Grids/PlankGrid.vala:47
 msgid "Top"
@@ -215,11 +215,11 @@ msgstr "Panel"
 
 #: ../src/Grids/PlankGrid.vala:133
 msgid "Item Alignment:"
-msgstr ""
+msgstr "Penjajaran Hal"
 
 #: ../src/Grids/PlankGrid.vala:171
 msgid "Unknown Value"
-msgstr "Nilai Tidak Diketahui"
+msgstr "Nilai Tak Diketahui"
 
 #: ../src/Grids/PlankGrid.vala:193
 msgid "Don't hide"
@@ -227,15 +227,15 @@ msgstr "Jangan sembunyikan"
 
 #: ../src/Grids/PlankGrid.vala:194
 msgid "Intelligent hide"
-msgstr "Sembunyi secara pintar"
+msgstr "Sembunyikan secara pintar"
 
 #: ../src/Grids/PlankGrid.vala:195
 msgid "Auto hide"
-msgstr "Sembunyikan otomatis"
+msgstr "Sembunyi otomatis"
 
 #: ../src/Grids/PlankGrid.vala:196
 msgid "Hide on maximize"
-msgstr "Sembunyi ketika maksimal"
+msgstr "Sembunyikan ketika maksimal"
 
 #: ../src/Grids/PlankGrid.vala:249
 msgid "Primary Monitor"
@@ -274,7 +274,7 @@ msgstr "Perataan:"
 
 #: ../src/Grids/PlankGrid.vala:298
 msgid "Workspace Overview Icon:"
-msgstr ""
+msgstr "Ikon Tinjauan Area Kerja"
 
 #: ../src/Grids/PlankGrid.vala:301
 msgid "Show Desktop Icon:"
@@ -284,59 +284,59 @@ msgstr "Tunjukkan Ikon Desktop:"
 #: ../src/Grids/MiscGrid.vala:75
 #: ../src/Grids/MiscGrid.vala:102
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: ../src/Grids/MiscGrid.vala:49
 #: ../src/Grids/MiscGrid.vala:76
 #: ../src/Grids/MiscGrid.vala:103
 msgid "Maximize"
-msgstr ""
+msgstr "Perbesar"
 
 #: ../src/Grids/MiscGrid.vala:50
 #: ../src/Grids/MiscGrid.vala:77
 #: ../src/Grids/MiscGrid.vala:104
 msgid "Maximize Horizontally"
-msgstr ""
+msgstr "Besarkan secara Horisontal"
 
 #: ../src/Grids/MiscGrid.vala:51
 #: ../src/Grids/MiscGrid.vala:78
 #: ../src/Grids/MiscGrid.vala:105
 msgid "Maximize Vertically"
-msgstr ""
+msgstr "Besarkan secara vertikal"
 
 #: ../src/Grids/MiscGrid.vala:52
 #: ../src/Grids/MiscGrid.vala:79
 #: ../src/Grids/MiscGrid.vala:106
 msgid "Minimize"
-msgstr ""
+msgstr "Perkecil"
 
 #: ../src/Grids/MiscGrid.vala:53
 #: ../src/Grids/MiscGrid.vala:80
 #: ../src/Grids/MiscGrid.vala:107
 msgid "Shade"
-msgstr ""
+msgstr "Bayang"
 
 #: ../src/Grids/MiscGrid.vala:54
 #: ../src/Grids/MiscGrid.vala:81
 #: ../src/Grids/MiscGrid.vala:108
 msgid "Lower Window"
-msgstr ""
+msgstr "Jendela Bawah"
 
 #: ../src/Grids/MiscGrid.vala:126
 msgid "Double Click Titlebar Action:"
-msgstr ""
+msgstr "Perilaku Batangjudul saat Klik Ganda"
 
 #: ../src/Grids/MiscGrid.vala:129
 msgid "Middle Click Titlebar Action:"
-msgstr ""
+msgstr "Perilaku Batangjudul saat Klik Tengah"
 
 #: ../src/Grids/MiscGrid.vala:132
 msgid "Right Click Titlebar Action:"
-msgstr ""
+msgstr "Perilaku Batangjudul saat Klik Kanan"
 
 #: ../src/Grids/MiscGrid.vala:135
 msgid "Audible Bell:"
-msgstr "Pemberitahuan Suara:"
+msgstr "Bel Terdengar"
 
 #: ../src/Grids/MiscGrid.vala:138
 msgid "Overlay Scrollbars:"
@@ -344,7 +344,7 @@ msgstr "Scrollbar kecil:"
 
 #: ../src/Grids/MiscGrid.vala:141
 msgid "Natural Scrolling:"
-msgstr ""
+msgstr "Penggulungan Alami"
 
 #: ../src/Grids/WingpanelslimGrid.vala:41
 msgid "Middle"
@@ -352,67 +352,67 @@ msgstr "Tengah"
 
 #: ../src/Grids/WingpanelslimGrid.vala:43
 msgid "Flush Left"
-msgstr ""
+msgstr "Bilas Bagian Kiri"
 
 #: ../src/Grids/WingpanelslimGrid.vala:44
 msgid "Flush Right"
-msgstr ""
+msgstr "Bilas Bagian Kanan"
 
 #: ../src/Grids/WingpanelslimGrid.vala:65
 msgid "Edge:"
-msgstr ""
+msgstr "Tepi:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:66
 msgid "Slanted"
-msgstr ""
+msgstr "Condong"
 
 #: ../src/Grids/WingpanelslimGrid.vala:67
 msgid "Squared"
-msgstr ""
+msgstr "Kotak"
 
 #: ../src/Grids/WingpanelslimGrid.vala:68
 msgid "Curved 1"
-msgstr ""
+msgstr "Lengkung 1"
 
 #: ../src/Grids/WingpanelslimGrid.vala:69
 msgid "Curved 2"
-msgstr ""
+msgstr "Lengkung 2"
 
 #: ../src/Grids/WingpanelslimGrid.vala:70
 msgid "Curved 3"
-msgstr ""
+msgstr "Lengkung 3"
 
 #: ../src/Grids/WingpanelslimGrid.vala:90
 msgid "Auto Hide:"
-msgstr ""
+msgstr "Sembunyikan Otomatis:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:98
 msgid "Show Launcher:"
-msgstr ""
+msgstr "Tampilkan Peluncur:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:107
 msgid "Launcher:"
-msgstr ""
+msgstr "Peluncur:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:151
 msgid "Slim Wingpanel:"
-msgstr ""
+msgstr "Panelsisi Tipis"
 
 #: ../src/Grids/AnimationsGrid.vala:27
 msgid "Open Duration:"
-msgstr "Durasi Membuka:"
+msgstr "Durasi Buka:"
 
 #: ../src/Grids/AnimationsGrid.vala:28
 msgid "Close Duration:"
-msgstr "Durasi Menutup:"
+msgstr "Durasi Tutup"
 
 #: ../src/Grids/AnimationsGrid.vala:29
 msgid "Snap Duration:"
-msgstr "Durasi penempelan Jendela:"
+msgstr "Durasi Snap"
 
 #: ../src/Grids/AnimationsGrid.vala:30
 msgid "Minimize Duration:"
-msgstr "Durasi pengecilan Jendela:"
+msgstr "Durasi Pengecilan:"
 
 #: ../src/Grids/AnimationsGrid.vala:31
 msgid "Workspace Switch Duration:"
@@ -432,39 +432,39 @@ msgstr "Kolom:"
 
 #: ../src/Grids/ShortcutsGrid.vala:68
 msgid "Name"
-msgstr ""
+msgstr "Nama"
 
 #: ../src/Grids/ShortcutsGrid.vala:69
 msgid "Shortcut"
-msgstr ""
+msgstr "Pintasan"
 
 #: ../src/Grids/ShortcutsGrid.vala:70
 msgid "Command"
-msgstr ""
+msgstr "Perintah"
 
 #: ../src/Grids/ShortcutsGrid.vala:117
 msgid "Every field must be filled!"
-msgstr ""
+msgstr "Setiap isian harus di isi!"
 
 #: ../src/Grids/ShortcutsGrid.vala:126
 msgid "Name:"
-msgstr ""
+msgstr "Nama:"
 
 #: ../src/Grids/ShortcutsGrid.vala:129
 msgid "Shortcut:"
-msgstr ""
+msgstr "Pintasan:"
 
 #: ../src/Grids/ShortcutsGrid.vala:132
 msgid "Command:"
-msgstr ""
+msgstr "Perintah:"
 
 #: ../src/Grids/AppearanceGrid.vala:116
 msgid "Custom Layout:"
-msgstr ""
+msgstr "Tampilan Tersesuaikan:"
 
 #: ../src/Grids/AppearanceGrid.vala:119
 msgid "Close Only"
-msgstr ""
+msgstr "Tertutup Saja"
 
 #: ../src/Grids/AppearanceGrid.vala:120
 msgid "Minimize Left"
@@ -480,12 +480,12 @@ msgstr "Jendela"
 
 #: ../src/Grids/AppearanceGrid.vala:123
 msgid "OS X"
-msgstr ""
+msgstr "OS X"
 
 #: ../src/Grids/AppearanceGrid.vala:124
 #: ../src/Grids/TerminalGrid.vala:180
 msgid "Custom"
-msgstr ""
+msgstr "Penyesuaian"
 
 #: ../src/Grids/AppearanceGrid.vala:183
 msgid "Window Decoration Theme:"
@@ -525,18 +525,18 @@ msgstr "Huruf untuk Nama Jendela:"
 
 #: ../src/Grids/TerminalGrid.vala:199
 msgid "Limit Scrollback Lines:"
-msgstr ""
+msgstr "Batas Baris Geser Mundur"
 
 #: ../src/Grids/TerminalGrid.vala:203
 msgid "Custom Font:"
-msgstr ""
+msgstr "Huruf Pilihan"
 
 #: ../src/Grids/TerminalGrid.vala:207
 msgid "Opacity:"
-msgstr ""
+msgstr "Ketampakan:"
 
 #: ../src/Widgets/AcceleratorInputWidget.vala:67
 #: ../src/Widgets/AcceleratorInputWidget.vala:85
 #: ../src/Objects/ShortcutObject.vala:38
 msgid "Disabled"
-msgstr ""
+msgstr "Tidak aktif"
