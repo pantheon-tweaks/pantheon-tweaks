@@ -26,6 +26,7 @@ vala_precompile (VALA_C
     Settings/SynapseSettings.vala
     Settings/TerminalSettings.vala
     Settings/WingpanelslimSettings.vala
+    Settings/SuperwingpanelSettings.vala
     Grids/AppearanceGrid.vala
     Grids/CerbereGrid.vala
     Grids/FontsGrid.vala
@@ -39,6 +40,7 @@ vala_precompile (VALA_C
     Grids/SynapseGrid.vala
     Grids/TerminalGrid.vala
     Grids/WingpanelslimGrid.vala
+    Grids/SuperwingpanelGrid.vala
     Objects/ShortcutObject.vala
     Widgets/AcceleratorInputWidget.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
