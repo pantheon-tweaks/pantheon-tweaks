@@ -17,6 +17,8 @@
 
 public class WingpanelslimGrid : Gtk.Grid
 {
+    bool disable_switch_active_event = false;
+
     public WingpanelslimGrid () {
         this.row_spacing = 6;
         this.column_spacing = 12;
@@ -25,13 +27,21 @@ public class WingpanelslimGrid : Gtk.Grid
 
         /* Wingpanel Slim */
         var wingpanel = new Gtk.Switch ();
-        var wingpanel_slim = CerbereSettings.get_default ().monitored_processes;
 
-        int pos = -1;
-        for (int i = 0; i < wingpanel_slim.length ; i++) {
-            if ( wingpanel_slim[i] == "wingpanel" || wingpanel_slim[i] == "wingpanel-slim" )
-            pos = i; 
-        }
+        map.connect (() => {
+            var monitored_processes = CerbereSettings.get_default ().monitored_processes;
+
+            var enable = false;
+            for (int i = 0; i < monitored_processes.length ; i++) {
+                if (monitored_processes[i] == "wingpanel-slim")
+                    enable = true;
+            }
+
+            disable_switch_active_event = true;
+            wingpanel.set_active (enable);
+            disable_switch_active_event = false;
+        });
+
 
         /* Wingpanel Position */
         var slim_pos_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
@@ -122,36 +132,31 @@ public class WingpanelslimGrid : Gtk.Grid
         default_launcher_box.pack_start (default_launcher, false);
         default_launcher_box.pack_start (default_launcher_default, false);
 
-        if ( pos != -1 && wingpanel_slim[pos] == "wingpanel-slim" )
-            wingpanel.set_active(true);
-        else {
-            slim_label.set_sensitive(wingpanel.active);
-            slim_label_edge.set_sensitive(wingpanel.active);
-            slim_pos_box.set_sensitive(wingpanel.active);
-            slim_edge_box.set_sensitive(wingpanel.active);
-        }
+
 
         wingpanel.notify["active"].connect (() => {
-            wingpanel_slim = CerbereSettings.get_default ().monitored_processes;
-            for (int i = 0; i < wingpanel_slim.length ; i++) {
-                if ( wingpanel_slim[i] == "wingpanel" || wingpanel_slim[i] == "wingpanel-slim" )
-                    pos = i; 
-                else
-                    pos = -1;
+            var processes = CerbereSettings.get_default ().monitored_processes;
+            string[] new_processes = {};
+
+            // Killall wingpanel processes and copy the rest to a new list
+            for (int i = 0; i < processes.length ; i++) {
+                if (processes[i] == "wingpanel" || processes[i] == "wingpanel-slim" || processes[i] == "super-wingpanel") {
+                    processes[i] = "killall " + processes[i];
+                } else {
+                    new_processes += processes[i];
+                }
             }
+            CerbereSettings.get_default ().monitored_processes = processes;
+
+            // Add the appropriate wingpanel to the new processes list and save it
+            var active = wingpanel.active;
+            new_processes += (active) ? "wingpanel-slim" : "wingpanel";
+            CerbereSettings.get_default ().monitored_processes = new_processes;
+
             slim_label.set_sensitive(wingpanel.active);
             slim_label_edge.set_sensitive(wingpanel.active);
             slim_pos_box.set_sensitive(wingpanel.active);
             slim_edge_box.set_sensitive(wingpanel.active);
-            if (pos != -1) {
-                (wingpanel.active)?wingpanel_slim[pos] = "killall wingpanel":wingpanel_slim[pos] = "killall wingpanel-slim";
-                CerbereSettings.get_default ().monitored_processes = wingpanel_slim;
-                (wingpanel.active)?wingpanel_slim[pos] = "wingpanel-slim":wingpanel_slim[pos] = "wingpanel";
-                CerbereSettings.get_default ().monitored_processes = wingpanel_slim;
-            } else {
-                wingpanel_slim += "wingpanel-slim";
-                CerbereSettings.get_default ().monitored_processes = wingpanel_slim;
-            }
         });
         wingpanel.halign = Gtk.Align.START;
 

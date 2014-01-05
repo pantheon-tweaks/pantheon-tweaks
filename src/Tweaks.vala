@@ -100,14 +100,21 @@ public class TweaksPlug : Pantheon.Switchboard.Plug
         if (schema_exists("org.pantheon.terminal.settings"))
             add_page (new TerminalGrid (), _("Terminal"), "utilities-terminal", cat_applications);
 
-        /* Wingpanel Tab*/
+        /* Wingpanel-slim Tab*/
         if (schema_exists("org.pantheon.desktop.wingpanel-slim"))
             add_page (new WingpanelslimGrid (), _("Wingpanel Slim"), "wingpanel", cat_applications);
+
+        /* Super-wingpanel Tab*/
+        if (schema_exists("org.pantheon.desktop.super-wingpanel"))
+            add_page (new SuperwingpanelGrid (), _("Super Wingpanel"), "wingpanel", cat_applications);
 
         paned.pack1 (sidebar, false, false);
         paned.pack2 (notebook, false, true);
         sidebar.root.expand_all ();
         add (paned);
+
+        add_events (Gdk.EventMask.SUBSTRUCTURE_MASK);
+
     }
 
         SidebarItem add_page (Gtk.Widget page, string title, string icon, Granite.Widgets.SourceList.ExpandableItem parent) {
