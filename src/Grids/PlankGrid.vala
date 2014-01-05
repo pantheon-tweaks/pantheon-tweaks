@@ -232,6 +232,12 @@ public class PlankGrid : Gtk.Grid
         theme_box.pack_start (theme_default, false);
 
        /* Workspace Overview Icon */
+        var lock_items = new Gtk.Switch ();
+        lock_items.set_active(PlankSettings.get_default ().lock_items);
+        lock_items.notify["active"].connect (() => PlankSettings.get_default ().lock_items = lock_items.get_active());
+        lock_items.halign = Gtk.Align.START;
+
+       /* Workspace Overview Icon */
         var overview_icon = new Gtk.Switch ();
         overview_icon.set_active(icon_exists("gala-workspace"));
         overview_icon.notify["active"].connect (() => icon_switch("gala-workspace"));
@@ -295,10 +301,13 @@ public class PlankGrid : Gtk.Grid
         this.attach (label_items, 0, 6, 1, 1);
         this.attach (dock_items_box, 1, 6, 1, 1);
 
-        this.attach (new LLabel.right (_("Workspace Overview Icon:")), 0, 7, 1, 1);
-        this.attach (overview_icon, 1, 7, 1, 1);
+        this.attach (new LLabel.right (_("Lock Items:")), 0, 7, 1, 1);
+        this.attach (lock_items, 1, 7, 1, 1);
 
-        this.attach (new LLabel.right (_("Show Desktop Icon:")), 0, 8, 1, 1);
-        this.attach (desktop_icon, 1, 8, 1, 1);
+        this.attach (new LLabel.right (_("Workspace Overview Icon:")), 0, 8, 1, 1);
+        this.attach (overview_icon, 1, 8, 1, 1);
+
+        this.attach (new LLabel.right (_("Show Desktop Icon:")), 0, 9, 1, 1);
+        this.attach (desktop_icon, 1, 9, 1, 1);
     }
 }

@@ -58,6 +58,19 @@ public class PlankSettings : Object
         }
     }
 
+    public bool lock_items {
+        get {
+            try {
+                return configs.get_boolean ("PlankDockPreferences", "LockItems");
+            } catch (Error e) { warning (e.message); }
+            return false;
+        }
+        set {
+            configs.set_boolean ("PlankDockPreferences", "LockItems", value);
+            save ();
+        }
+    }
+
     public int hide_mode {
         get {
             try {
