@@ -45,6 +45,19 @@ public class PlankSettings : Object
         }
     }
 
+    public int dock_delay {
+        get {
+            try {
+                return configs.get_integer ("PlankDockPreferences", "UnhideDelay");
+            } catch (Error e) { warning (e.message); }
+            return 0;
+        }
+        set {
+            configs.set_integer ("PlankDockPreferences", "UnhideDelay", value);
+            save ();
+        }
+    }
+
     public int dock_items {
         get {
             try {

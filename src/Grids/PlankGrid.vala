@@ -41,7 +41,27 @@ public class PlankGrid : Gtk.Grid
         });
         
         icon_size_box.pack_start (icon_size, false);
-        icon_size_box.pack_start (icon_size_default, false); 
+        icon_size_box.pack_start (icon_size_default, false);
+
+        /* Unhide Delay */
+        var dock_delay_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        var dock_delay = new Gtk.SpinButton.with_range (0, 1000, 1);
+        dock_delay.set_value (PlankSettings.get_default ().dock_delay);
+        dock_delay.value_changed.connect (() => {
+            PlankSettings.get_default ().dock_delay = (int)dock_delay.get_value ();
+        });
+        dock_delay.halign = Gtk.Align.START;
+        dock_delay.width_request = 160;
+
+        var dock_delay_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
+
+        dock_delay_default.clicked.connect (() => {
+            PlankSettings.get_default ().dock_delay = int.parse ("0");
+            dock_delay.set_value (PlankSettings.get_default ().dock_delay);
+        });
+        
+        dock_delay_box.pack_start (dock_delay, false);
+        dock_delay_box.pack_start (dock_delay_default, false); 
 
         /* Position */
         var label_top = _("Top");
@@ -195,7 +215,6 @@ public class PlankGrid : Gtk.Grid
         dock_items.halign = Gtk.Align.START;
         dock_items.width_request = 160;
 
-
         var dock_items_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
 
         dock_items_default.clicked.connect (() => {
@@ -215,7 +234,11 @@ public class PlankGrid : Gtk.Grid
         hide_mode.append ("2", _("Auto hide"));
         hide_mode.append ("3", _("Hide on maximize"));
         hide_mode.active_id = PlankSettings.get_default ().hide_mode.to_string ();
-        hide_mode.changed.connect (() => PlankSettings.get_default ().hide_mode = int.parse (hide_mode.active_id));
+        dock_delay_box.set_sensitive(hide_mode.active_id == "2");
+        hide_mode.changed.connect (() => {
+            PlankSettings.get_default ().hide_mode = int.parse (hide_mode.active_id);
+            dock_delay_box.set_sensitive(hide_mode.active_id == "2");
+        });
         hide_mode.halign = Gtk.Align.START;
         hide_mode.width_request = 160;
 
@@ -292,45 +315,44 @@ public class PlankGrid : Gtk.Grid
 
         monitor_box.pack_start (monitor, false);
         monitor_box.pack_start (monitor_default, false);;
-        
 
         /* Add to Grid */
         this.attach (new LLabel.right (_("Icon Size:")), 0, 0, 1, 1);
         this.attach (icon_size_box, 1, 0, 1, 1);
 
-
         this.attach (new LLabel.right (_("Hide Mode:")), 0, 1, 1, 1);
         this.attach (hide_mode_box, 1, 1, 1, 1);
 
+        this.attach (new LLabel.right (_("Delay (in ms):")), 0, 2, 1, 1);
+        this.attach (dock_delay_box, 1, 2, 1, 1);
 
-        this.attach (new LLabel.right (_("Theme:")), 0, 2, 1, 1);
-        this.attach (theme_box, 1, 2, 1, 1);
-
+        this.attach (new LLabel.right (_("Theme:")), 0, 3, 1, 1);
+        this.attach (theme_box, 1, 3, 1, 1);
 
         if (i > 1) {
-            this.attach (new LLabel.right (_("Monitor:")), 0, 3, 1, 1);
-            this.attach (monitor_box, 1, 3, 1, 1);
+            this.attach (new LLabel.right (_("Monitor:")), 0, 4, 1, 1);
+            this.attach (monitor_box, 1, 4, 1, 1);
         }
 
-        this.attach (new LLabel.right (_("Position:")), 0, 4, 1, 1);
-        this.attach (dock_position_box, 1, 4, 1, 1);
+        this.attach (new LLabel.right (_("Position:")), 0, 5, 1, 1);
+        this.attach (dock_position_box, 1, 5, 1, 1);
 
-        this.attach (new LLabel.right (_("Offset:")), 0, 5, 1, 1);
-        this.attach (dock_offset_box, 1, 5, 1, 1);
+        this.attach (new LLabel.right (_("Offset:")), 0, 6, 1, 1);
+        this.attach (dock_offset_box, 1, 6, 1, 1);
 
-        this.attach (new LLabel.right (_("Alignment:")), 0, 6, 1, 1);
-        this.attach (dock_alignment_box, 1, 6, 1, 1); 
+        this.attach (new LLabel.right (_("Alignment:")), 0, 7, 1, 1);
+        this.attach (dock_alignment_box, 1, 7, 1, 1); 
 
-        this.attach (label_items, 0, 7, 1, 1);
-        this.attach (dock_items_box, 1, 7, 1, 1);
+        this.attach (label_items, 0, 8, 1, 1);
+        this.attach (dock_items_box, 1, 8, 1, 1);
 
-        this.attach (new LLabel.right (_("Lock Items:")), 0, 8, 1, 1);
-        this.attach (lock_items, 1, 8, 1, 1);
+        this.attach (new LLabel.right (_("Lock Items:")), 0, 9, 1, 1);
+        this.attach (lock_items, 1, 9, 1, 1);
 
-        this.attach (new LLabel.right (_("Workspace Overview Icon:")), 0, 9, 1, 1);
-        this.attach (overview_icon, 1, 9, 1, 1);
+        this.attach (new LLabel.right (_("Workspace Overview Icon:")), 0, 10, 1, 1);
+        this.attach (overview_icon, 1, 10, 1, 1);
 
-        this.attach (new LLabel.right (_("Show Desktop Icon:")), 0, 10, 1, 1);
-        this.attach (desktop_icon, 1, 10, 1, 1);
+        this.attach (new LLabel.right (_("Show Desktop Icon:")), 0, 11, 1, 1);
+        this.attach (desktop_icon, 1, 11, 1, 1);
     }
 }
