@@ -1,53 +1,53 @@
-# Spanish translation for elementary-community
-# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# Basque translation for elementary-community
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
 # This file is distributed under the same license as the elementary-community package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-01-05 04:04+0100\n"
-"PO-Revision-Date: 2013-10-20 22:08+0000\n"
-"Last-Translator: Alfredo Hernández <Unknown>\n"
-"Language-Team: Spanish <es@li.org>\n"
+"PO-Revision-Date: 2014-01-04 20:29+0000\n"
+"Last-Translator: Ibai Oihanguren Sala <Unknown>\n"
+"Language-Team: Basque <eu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-01-05 05:50+0000\n"
+"X-Launchpad-Export-Date: 2014-01-05 05:49+0000\n"
 "X-Generator: Launchpad (build 16877)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
-msgstr "General"
+msgstr "Orokorra"
 
 #: ../src/Tweaks.vala:50
 msgid "Applications"
-msgstr "Aplicaciones"
+msgstr "Aplikazioak"
 
 #: ../src/Tweaks.vala:57
 msgid "Appearance"
-msgstr "Apariencia"
+msgstr "Itxura"
 
 #: ../src/Tweaks.vala:60
 msgid "Fonts"
-msgstr "Tipografías"
+msgstr "Letra-tipoak"
 
 #: ../src/Tweaks.vala:64
 msgid "Animations"
-msgstr "Animaciones"
+msgstr "Animazioak"
 
 #: ../src/Tweaks.vala:68
 msgid "Shadows"
-msgstr "Sombras"
+msgstr "Itzalak"
 
 #: ../src/Tweaks.vala:71
 msgid "Shortcuts"
-msgstr "Atajos"
+msgstr "Laster-teklak"
 
 #: ../src/Tweaks.vala:74
 msgid "Miscellaneous"
-msgstr "Miscelánea"
+msgstr "Askotarikoak"
 
 #: ../src/Tweaks.vala:81
 msgid "Plank"
@@ -55,11 +55,11 @@ msgstr "Plank"
 
 #: ../src/Tweaks.vala:85
 msgid "Files"
-msgstr "Archivos"
+msgstr "Fitxategiak"
 
 #: ../src/Tweaks.vala:89
 msgid "Search Indicator"
-msgstr "Indicador de búsqueda"
+msgstr "Bilaketarako adierazlea"
 
 #: ../src/Tweaks.vala:93
 msgid "Slingshot"
@@ -71,11 +71,11 @@ msgstr "Cerbere"
 
 #: ../src/Tweaks.vala:101
 msgid "Terminal"
-msgstr "Terminal"
+msgstr "Terminala"
 
 #: ../src/Tweaks.vala:105
 msgid "Wingpanel Slim"
-msgstr "Wingpanel Ligero"
+msgstr "Wingpanel Slim"
 
 #: ../src/Tweaks.vala:109
 msgid "Super Wingpanel"
@@ -85,136 +85,136 @@ msgstr ""
 #: ../src/Widgets/AcceleratorInputWidget.vala:67
 #: ../src/Widgets/AcceleratorInputWidget.vala:85
 msgid "Disabled"
-msgstr "Desactivado"
+msgstr "Desgaituta"
 
 #: ../src/Grids/SlingshotGrid.vala:29
 msgid "Smallest"
-msgstr "Muy pequeños"
+msgstr "Txikiena"
 
 #: ../src/Grids/SlingshotGrid.vala:30
 msgid "Smaller"
-msgstr "Más pequeños"
+msgstr "Txikiagoa"
 
 #: ../src/Grids/SlingshotGrid.vala:31
 msgid "Small"
-msgstr "Pequeños"
+msgstr "Txikia"
 
 #: ../src/Grids/SlingshotGrid.vala:32
 msgid "Normal"
-msgstr "Normal"
+msgstr "Arrunta"
 
 #: ../src/Grids/SlingshotGrid.vala:33
 msgid "Large"
-msgstr "Grandes"
+msgstr "Handia"
 
 #: ../src/Grids/SlingshotGrid.vala:34
 msgid "Larger"
-msgstr "Más grandes"
+msgstr "Handiagoa"
 
 #: ../src/Grids/SlingshotGrid.vala:35
 msgid "Largest"
-msgstr "Muy grandes"
+msgstr "Handiena"
 
 #: ../src/Grids/SlingshotGrid.vala:93
 msgid "Rows:"
-msgstr "Filas:"
+msgstr "Lerroak:"
 
 #: ../src/Grids/SlingshotGrid.vala:96
 msgid "Columns:"
-msgstr "Columnas:"
+msgstr "Zutabeak:"
 
 #: ../src/Grids/CerbereGrid.vala:39
 msgid "Watched Processes"
-msgstr "Procesos vigilados"
+msgstr "Zaindutako prozesuak"
 
 #: ../src/Grids/CerbereGrid.vala:50
 #: ../src/Grids/CerbereGrid.vala:60
 #: ../src/Grids/ShortcutsGrid.vala:91
 #: ../src/Grids/ShortcutsGrid.vala:158
 msgid "Add..."
-msgstr "Añadir…"
+msgstr "Gehitu..."
 
 #: ../src/Grids/CerbereGrid.vala:51
 #: ../src/Grids/CerbereGrid.vala:61
 #: ../src/Grids/ShortcutsGrid.vala:92
 #: ../src/Grids/ShortcutsGrid.vala:159
 msgid "Remove"
-msgstr "Eliminar"
+msgstr "Kendu"
 
 #: ../src/Grids/CerbereGrid.vala:62
 #: ../src/Grids/ShortcutsGrid.vala:160
 msgid "Revert to Default"
-msgstr "Restablecer predefinidos"
+msgstr "Berrezarri lehenetsiak"
 
 #: ../src/Grids/PlankGrid.vala:67
 msgid "Top"
-msgstr "Superior"
+msgstr "Goian"
 
 #: ../src/Grids/PlankGrid.vala:68
 msgid "Bottom"
-msgstr "Inferior"
+msgstr "Behean"
 
 #: ../src/Grids/PlankGrid.vala:69
 #: ../src/Grids/WingpanelslimGrid.vala:52
 #: ../src/Grids/SuperwingpanelGrid.vala:181
 msgid "Left"
-msgstr "Izquierda"
+msgstr "Ezkerrean"
 
 #: ../src/Grids/PlankGrid.vala:70
 #: ../src/Grids/WingpanelslimGrid.vala:50
 #: ../src/Grids/SuperwingpanelGrid.vala:179
 msgid "Right"
-msgstr "Derecha"
+msgstr "Eskuinean"
 
 #: ../src/Grids/PlankGrid.vala:71
 msgid "Center"
-msgstr "Centro"
+msgstr "Erdian"
 
 #: ../src/Grids/PlankGrid.vala:72
 msgid "Panel"
-msgstr "Panel"
+msgstr "Panela"
 
 #: ../src/Grids/PlankGrid.vala:173
 msgid "Item Alignment:"
-msgstr "Alineación de los elementos:"
+msgstr "Elementuak lerrokatu:"
 
 #: ../src/Grids/PlankGrid.vala:211
 msgid "Unknown Value"
-msgstr "Valor desconocido"
+msgstr "Balio ezezaguna"
 
 #: ../src/Grids/PlankGrid.vala:232
 msgid "Don't hide"
-msgstr "No ocultar"
+msgstr "Ez ezkutatu"
 
 #: ../src/Grids/PlankGrid.vala:233
 msgid "Intelligent hide"
-msgstr "Ocultación inteligente"
+msgstr "Ezkutatze adimentsua"
 
 #: ../src/Grids/PlankGrid.vala:234
 msgid "Auto hide"
-msgstr "Ocultar automáticamente"
+msgstr "Ezkutatu automatikoki"
 
 #: ../src/Grids/PlankGrid.vala:235
 msgid "Hide on maximize"
-msgstr "Ocultar al maximizar"
+msgstr "Ezkutatu maximizatzean"
 
 #: ../src/Grids/PlankGrid.vala:298
 msgid "Primary Monitor"
-msgstr "Monitor principal"
+msgstr "Monitore nagusia"
 
 #: ../src/Grids/PlankGrid.vala:301
 #, c-format
 msgid "Monitor %d"
-msgstr "Monitor %d"
+msgstr "%d monitorea"
 
 #: ../src/Grids/PlankGrid.vala:320
 msgid "Icon Size:"
-msgstr "Tamaño de los iconos:"
+msgstr "Ikonoen tamaina:"
 
 #: ../src/Grids/PlankGrid.vala:323
 #: ../src/Grids/SuperwingpanelGrid.vala:50
 msgid "Hide Mode:"
-msgstr "Modo de ocultación:"
+msgstr "Ezkutatzeko modua:"
 
 #: ../src/Grids/PlankGrid.vala:326
 msgid "Delay (in ms):"
@@ -223,17 +223,17 @@ msgstr ""
 #: ../src/Grids/PlankGrid.vala:329
 #: ../src/Grids/TerminalGrid.vala:210
 msgid "Theme:"
-msgstr "Tema:"
+msgstr "Gaia:"
 
 #: ../src/Grids/PlankGrid.vala:333
 msgid "Monitor:"
-msgstr "Monitor:"
+msgstr "Monitorea:"
 
 #: ../src/Grids/PlankGrid.vala:337
 #: ../src/Grids/WingpanelslimGrid.vala:49
 #: ../src/Grids/SuperwingpanelGrid.vala:178
 msgid "Position:"
-msgstr "Posición:"
+msgstr "Posizioa:"
 
 #: ../src/Grids/PlankGrid.vala:340
 msgid "Offset:"
@@ -241,7 +241,7 @@ msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:343
 msgid "Alignment:"
-msgstr "Alineación:"
+msgstr "Lerrokatu:"
 
 #: ../src/Grids/PlankGrid.vala:349
 msgid "Lock Items:"
@@ -249,150 +249,150 @@ msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:352
 msgid "Workspace Overview Icon:"
-msgstr "Icono de vista de áreas de trabajo:"
+msgstr "Lan-eremuaren ikuspegi orokorrerako ikonoa"
 
 #: ../src/Grids/PlankGrid.vala:355
 msgid "Show Desktop Icon:"
-msgstr "Icono de «Mostrar escritorio»:"
+msgstr "Mahaigaina erakusteko ikonoa"
 
 #: ../src/Grids/ShadowsGrid.vala:27
 msgid "Focused Windows:"
-msgstr "Ventanas activas:"
+msgstr "Fokudun leihoak:"
 
 #: ../src/Grids/ShadowsGrid.vala:28
 msgid "Unfocused Windows:"
-msgstr "Ventanas inactivas:"
+msgstr "Foku gabeko leihoak:"
 
 #: ../src/Grids/ShadowsGrid.vala:29
 msgid "Focused Dialogs:"
-msgstr "Cuadros de diálogo activos:"
+msgstr "Fokudun elkarrizketa-leihoak:"
 
 #: ../src/Grids/ShadowsGrid.vala:30
 msgid "Unfocused Dialogs:"
-msgstr "Cuadros de diálogo inactivos:"
+msgstr "Foku gabeko elkarrizketa-leihoak:"
 
 #: ../src/Grids/ShadowsGrid.vala:31
 msgid "Menu:"
-msgstr "Menú:"
+msgstr "Menua:"
 
 #: ../src/Grids/ShadowsGrid.vala:194
 msgid "Shadows:"
-msgstr "Sombras:"
+msgstr "Itzalak:"
 
 #: ../src/Grids/AnimationsGrid.vala:27
 msgid "Open Duration:"
-msgstr "Duración de la apertura:"
+msgstr "Irekitzeko denbora:"
 
 #: ../src/Grids/AnimationsGrid.vala:28
 msgid "Close Duration:"
-msgstr "Duración del cierre:"
+msgstr "Ixteko denbora:"
 
 #: ../src/Grids/AnimationsGrid.vala:29
 msgid "Snap Duration:"
-msgstr "Duración del ajuste:"
+msgstr "Ertzera itsasteko denbora:"
 
 #: ../src/Grids/AnimationsGrid.vala:30
 msgid "Minimize Duration:"
-msgstr "Duración de la minimización:"
+msgstr "Ikonotzeko denbora:"
 
 #: ../src/Grids/AnimationsGrid.vala:31
 msgid "Workspace Switch Duration:"
-msgstr "Duración del cambio de área de trabajo:"
+msgstr "Lan-eremuz aldatzeko denbora:"
 
 #: ../src/Grids/AnimationsGrid.vala:148
 msgid "Animations:"
-msgstr "Animaciones:"
+msgstr "Animazioak:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:51
 #: ../src/Grids/SuperwingpanelGrid.vala:180
 msgid "Middle"
-msgstr "Central"
+msgstr "Erdian"
 
 #: ../src/Grids/WingpanelslimGrid.vala:53
 #: ../src/Grids/SuperwingpanelGrid.vala:182
 msgid "Flush Left"
-msgstr "Nivelar a la izquierda"
+msgstr "Ezkerrean ertzeraino"
 
 #: ../src/Grids/WingpanelslimGrid.vala:54
 #: ../src/Grids/SuperwingpanelGrid.vala:183
 msgid "Flush Right"
-msgstr "Nivelar a la derecha"
+msgstr "Eskuman ertzeraino"
 
 #: ../src/Grids/WingpanelslimGrid.vala:75
 #: ../src/Grids/SuperwingpanelGrid.vala:151
 msgid "Edge:"
-msgstr "Borde:"
+msgstr "Ertza:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:76
 #: ../src/Grids/SuperwingpanelGrid.vala:152
 msgid "Slanted"
-msgstr "Inclinado"
+msgstr "Ebaki diagonalekin"
 
 #: ../src/Grids/WingpanelslimGrid.vala:77
 #: ../src/Grids/SuperwingpanelGrid.vala:153
 msgid "Squared"
-msgstr "Cuadrado"
+msgstr "Lauki forman"
 
 #: ../src/Grids/WingpanelslimGrid.vala:78
 #: ../src/Grids/SuperwingpanelGrid.vala:154
 msgid "Curved 1"
-msgstr "Curvo 1"
+msgstr "Kurbatua 1"
 
 #: ../src/Grids/WingpanelslimGrid.vala:79
 #: ../src/Grids/SuperwingpanelGrid.vala:155
 msgid "Curved 2"
-msgstr "Curvo 2"
+msgstr "Kurbatua 2"
 
 #: ../src/Grids/WingpanelslimGrid.vala:80
 #: ../src/Grids/SuperwingpanelGrid.vala:156
 msgid "Curved 3"
-msgstr "Curvo 3"
+msgstr "Kurbatua 3"
 
 #: ../src/Grids/WingpanelslimGrid.vala:100
 msgid "Auto Hide:"
-msgstr "Ocultación automática:"
+msgstr "Automatikoki ezkutatu:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:108
 #: ../src/Grids/SuperwingpanelGrid.vala:84
 msgid "Show Launcher:"
-msgstr "Mostrar lanzador:"
+msgstr "Erakutsi abiarazlea:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:117
 #: ../src/Grids/SuperwingpanelGrid.vala:113
 msgid "Launcher:"
-msgstr "Lanzador:"
+msgstr "Abiarazlea:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:163
 msgid "Slim Wingpanel:"
-msgstr "Wingpanel delgado:"
+msgstr "Slim Wingpanel:"
 
 #: ../src/Grids/ShortcutsGrid.vala:68
 msgid "Name"
-msgstr "Nombre"
+msgstr "Izena"
 
 #: ../src/Grids/ShortcutsGrid.vala:69
 msgid "Shortcut"
-msgstr "Acceso directo"
+msgstr "Laster-tekla"
 
 #: ../src/Grids/ShortcutsGrid.vala:70
 msgid "Command"
-msgstr "Orden"
+msgstr "Agindua"
 
 #: ../src/Grids/ShortcutsGrid.vala:117
 msgid "Every field must be filled!"
-msgstr "Todos lo campos tienen que ser llenados"
+msgstr "Eremu guztiak bete behar dira!"
 
 #: ../src/Grids/ShortcutsGrid.vala:126
 msgid "Name:"
-msgstr "Nombre:"
+msgstr "Izena:"
 
 #: ../src/Grids/ShortcutsGrid.vala:129
 msgid "Shortcut:"
-msgstr "Acceso directo:"
+msgstr "Laster-tekla:"
 
 #: ../src/Grids/ShortcutsGrid.vala:132
 msgid "Command:"
-msgstr "Comando:"
+msgstr "Agindua:"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:30
 msgid "Super Wingpanel:"
@@ -436,7 +436,7 @@ msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:38
 msgid "Locale"
-msgstr "Configuración local"
+msgstr "Tokikoa"
 
 #: ../src/Grids/FilesGrid.vala:39
 msgid "ISO"
@@ -444,144 +444,142 @@ msgstr "ISO"
 
 #: ../src/Grids/FilesGrid.vala:40
 msgid "Informal"
-msgstr "Informal"
+msgstr "Informala"
 
 #: ../src/Grids/FilesGrid.vala:85
 msgid "Single Click:"
-msgstr "Una pulsación:"
+msgstr "Klik bakarra:"
 
 #: ../src/Grids/FilesGrid.vala:88
 msgid "Date Format:"
-msgstr "Formato de la fecha:"
+msgstr "Dataren formatua:"
 
 #: ../src/Grids/FilesGrid.vala:91
 msgid "Sidebar Icon Size:"
-msgstr "Tamaño de los iconos de la barra lateral:"
+msgstr "Albo-barrako ikonoen neurria:"
 
 #: ../src/Grids/TerminalGrid.vala:180
 #: ../src/Grids/AppearanceGrid.vala:124
 msgid "Custom"
-msgstr "Personalizado"
+msgstr "Pertsonalizatua"
 
 #: ../src/Grids/TerminalGrid.vala:199
 msgid "Limit Scrollback Lines:"
-msgstr "Limitar líneas de desplazamiento hacia atrás:"
+msgstr "Mugatu scrollback lerroak:"
 
 #: ../src/Grids/TerminalGrid.vala:203
 msgid "Custom Font:"
-msgstr "Tipografía personalizada:"
+msgstr "Letra-tipo lehenetsia:"
 
 #: ../src/Grids/TerminalGrid.vala:207
 msgid "Opacity:"
-msgstr "Opacidad:"
+msgstr "Opakutasuna:"
 
 #: ../src/Grids/MiscGrid.vala:48
 #: ../src/Grids/MiscGrid.vala:75
 #: ../src/Grids/MiscGrid.vala:102
 msgid "Menu"
-msgstr "Menú"
+msgstr "Menua"
 
 #: ../src/Grids/MiscGrid.vala:49
 #: ../src/Grids/MiscGrid.vala:76
 #: ../src/Grids/MiscGrid.vala:103
 msgid "Maximize"
-msgstr "Maximizar"
+msgstr "Maximizatu"
 
 #: ../src/Grids/MiscGrid.vala:50
 #: ../src/Grids/MiscGrid.vala:77
 #: ../src/Grids/MiscGrid.vala:104
 msgid "Maximize Horizontally"
-msgstr "Maximizar horizontalmente"
+msgstr "Maximizatu horizontalki"
 
 #: ../src/Grids/MiscGrid.vala:51
 #: ../src/Grids/MiscGrid.vala:78
 #: ../src/Grids/MiscGrid.vala:105
 msgid "Maximize Vertically"
-msgstr "Maximizar verticalmente"
+msgstr "Maximizatu bertikalki"
 
 #: ../src/Grids/MiscGrid.vala:52
 #: ../src/Grids/MiscGrid.vala:79
 #: ../src/Grids/MiscGrid.vala:106
 msgid "Minimize"
-msgstr "Minimizar"
+msgstr "Ikonotu"
 
 #: ../src/Grids/MiscGrid.vala:53
 #: ../src/Grids/MiscGrid.vala:80
 #: ../src/Grids/MiscGrid.vala:107
 msgid "Shade"
-msgstr "Sombreado"
+msgstr "Lausotu"
 
 #: ../src/Grids/MiscGrid.vala:54
 #: ../src/Grids/MiscGrid.vala:81
 #: ../src/Grids/MiscGrid.vala:108
 msgid "Lower Window"
-msgstr "Bajar ventana"
+msgstr "Beheratu leihoa"
 
 #: ../src/Grids/MiscGrid.vala:126
 msgid "Double Click Titlebar Action:"
-msgstr "Acción al hacer doble click en la barra de acción"
+msgstr "Titulu-barran klik bikoitza egitean:"
 
 #: ../src/Grids/MiscGrid.vala:129
 msgid "Middle Click Titlebar Action:"
-msgstr ""
-"Acción al hacer click en la barra de título con el botón central del ratón"
+msgstr "Titulu-barran erdikoarekin klik egitean:"
 
 #: ../src/Grids/MiscGrid.vala:132
 msgid "Right Click Titlebar Action:"
-msgstr ""
-"Acción a hacer al hacer click en la barra de título con el botón derecho"
+msgstr "Titulu-barran eskumakoarekin klik egitean:"
 
 #: ../src/Grids/MiscGrid.vala:135
 msgid "Audible Bell:"
-msgstr "Alerta audible:"
+msgstr "Kanpai-hotsa:"
 
 #: ../src/Grids/MiscGrid.vala:138
 msgid "Overlay Scrollbars:"
-msgstr "Barras de desplazamiento superpuestas:"
+msgstr "Gaineko korritze-barrak:"
 
 #: ../src/Grids/MiscGrid.vala:141
 msgid "Natural Scrolling:"
-msgstr "Desplazamiento natural"
+msgstr "Korritze naturala:"
 
 #: ../src/Grids/FontsGrid.vala:98
 msgid "Default Font:"
-msgstr "Tipografía predeterminada:"
+msgstr "Letra-tipo lehenetsia:"
 
 #: ../src/Grids/FontsGrid.vala:101
 msgid "Document Font:"
-msgstr "Tipografía de documento:"
+msgstr "Dokumentuetarako letra-tipoa:"
 
 #: ../src/Grids/FontsGrid.vala:104
 msgid "Monospace Font:"
-msgstr "Tipografía monoespacio:"
+msgstr "Monospace letra-tipoa:"
 
 #: ../src/Grids/FontsGrid.vala:107
 msgid "Window Title Font:"
-msgstr "Tipografía del título de ventana:"
+msgstr "Leihoen tituluetarako letra-tipoa:"
 
 #: ../src/Grids/SynapseGrid.vala:46
 msgid "Search Indicator Shortcut:"
-msgstr "Atajo del indicador de búsqueda:"
+msgstr "Bilaketarako adierazlearen laster-tekla:"
 
 #: ../src/Grids/AppearanceGrid.vala:116
 msgid "Custom Layout:"
-msgstr "Distribución personalizada:"
+msgstr "Diseinu pertsonalizatua:"
 
 #: ../src/Grids/AppearanceGrid.vala:119
 msgid "Close Only"
-msgstr "Solo «Cerrar»"
+msgstr "Ixtekoa soilik"
 
 #: ../src/Grids/AppearanceGrid.vala:120
 msgid "Minimize Left"
-msgstr "Minimizar a la izquierda"
+msgstr "Ikonotzekoa ezkerrean"
 
 #: ../src/Grids/AppearanceGrid.vala:121
 msgid "Minimize Right"
-msgstr "Minimizar a la derecha"
+msgstr "Ikonotzekoa eskuman"
 
 #: ../src/Grids/AppearanceGrid.vala:122
 msgid "Windows"
-msgstr "Ventanas"
+msgstr "Leihoak"
 
 #: ../src/Grids/AppearanceGrid.vala:123
 msgid "OS X"
@@ -589,20 +587,20 @@ msgstr "OS X"
 
 #: ../src/Grids/AppearanceGrid.vala:183
 msgid "Window Decoration Theme:"
-msgstr "Tema de decoración de ventanas:"
+msgstr "Leihoen dekoraziorako gaia:"
 
 #: ../src/Grids/AppearanceGrid.vala:186
 msgid "Interface Theme:"
-msgstr "Tema de la interfaz:"
+msgstr "Interfazearen gaia:"
 
 #: ../src/Grids/AppearanceGrid.vala:189
 msgid "Icon Theme:"
-msgstr "Tema de iconos:"
+msgstr "Ikonoen gaia:"
 
 #: ../src/Grids/AppearanceGrid.vala:192
 msgid "Cursor Theme:"
-msgstr "Tema del cursor:"
+msgstr "Kurtsorearen gaia:"
 
 #: ../src/Grids/AppearanceGrid.vala:195
 msgid "Button Layout:"
-msgstr "Disposición de los botones:"
+msgstr "Botoien diseinua:"

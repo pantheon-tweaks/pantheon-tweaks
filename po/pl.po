@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-08-20 21:04+0100\n"
+"POT-Creation-Date: 2014-01-05 04:04+0100\n"
 "PO-Revision-Date: 2013-10-01 07:34+0000\n"
 "Last-Translator: Norbert Budzyński <Unknown>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-10-02 06:03+0000\n"
-"X-Generator: Launchpad (build 16774)\n"
+"X-Launchpad-Export-Date: 2014-01-05 05:50+0000\n"
+"X-Generator: Launchpad (build 16877)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
@@ -77,64 +77,183 @@ msgstr "Terminal"
 msgid "Wingpanel Slim"
 msgstr "Cienki Wingpanel"
 
-#: ../src/Grids/FilesGrid.vala:38
-msgid "Locale"
-msgstr "Język"
+#: ../src/Tweaks.vala:109
+msgid "Super Wingpanel"
+msgstr ""
 
-#: ../src/Grids/FilesGrid.vala:39
-msgid "ISO"
-msgstr "ISO"
+#: ../src/Objects/ShortcutObject.vala:38
+#: ../src/Widgets/AcceleratorInputWidget.vala:67
+#: ../src/Widgets/AcceleratorInputWidget.vala:85
+msgid "Disabled"
+msgstr "Wyłączone"
 
-#: ../src/Grids/FilesGrid.vala:40
-msgid "Informal"
-msgstr "Nieformalny"
-
-#: ../src/Grids/FilesGrid.vala:61
 #: ../src/Grids/SlingshotGrid.vala:29
 msgid "Smallest"
 msgstr "Najmniejszy"
 
-#: ../src/Grids/FilesGrid.vala:62
 #: ../src/Grids/SlingshotGrid.vala:30
 msgid "Smaller"
 msgstr "Mniejszy"
 
-#: ../src/Grids/FilesGrid.vala:63
 #: ../src/Grids/SlingshotGrid.vala:31
 msgid "Small"
 msgstr "Mały"
 
-#: ../src/Grids/FilesGrid.vala:64
 #: ../src/Grids/SlingshotGrid.vala:32
 msgid "Normal"
 msgstr "Normalny"
 
-#: ../src/Grids/FilesGrid.vala:65
 #: ../src/Grids/SlingshotGrid.vala:33
 msgid "Large"
 msgstr "Duży"
 
-#: ../src/Grids/FilesGrid.vala:66
 #: ../src/Grids/SlingshotGrid.vala:34
 msgid "Larger"
 msgstr "Większy"
 
-#: ../src/Grids/FilesGrid.vala:67
 #: ../src/Grids/SlingshotGrid.vala:35
 msgid "Largest"
 msgstr "Największy"
 
-#: ../src/Grids/FilesGrid.vala:85
-msgid "Single Click:"
-msgstr "Pojedyncze kliknięcie:"
+#: ../src/Grids/SlingshotGrid.vala:93
+msgid "Rows:"
+msgstr "Wiersze:"
 
-#: ../src/Grids/FilesGrid.vala:88
-msgid "Date Format:"
-msgstr "Format daty:"
+#: ../src/Grids/SlingshotGrid.vala:96
+msgid "Columns:"
+msgstr "Kolumny:"
 
-#: ../src/Grids/FilesGrid.vala:91
-msgid "Sidebar Icon Size:"
-msgstr "Rozmiar ikon w panelach bocznych:"
+#: ../src/Grids/CerbereGrid.vala:39
+msgid "Watched Processes"
+msgstr "Obserwowane procesy"
+
+#: ../src/Grids/CerbereGrid.vala:50
+#: ../src/Grids/CerbereGrid.vala:60
+#: ../src/Grids/ShortcutsGrid.vala:91
+#: ../src/Grids/ShortcutsGrid.vala:158
+msgid "Add..."
+msgstr "Dodaj..."
+
+#: ../src/Grids/CerbereGrid.vala:51
+#: ../src/Grids/CerbereGrid.vala:61
+#: ../src/Grids/ShortcutsGrid.vala:92
+#: ../src/Grids/ShortcutsGrid.vala:159
+msgid "Remove"
+msgstr "Usuń"
+
+#: ../src/Grids/CerbereGrid.vala:62
+#: ../src/Grids/ShortcutsGrid.vala:160
+msgid "Revert to Default"
+msgstr "Przywróć domyślne"
+
+#: ../src/Grids/PlankGrid.vala:67
+msgid "Top"
+msgstr "Góra"
+
+#: ../src/Grids/PlankGrid.vala:68
+msgid "Bottom"
+msgstr "Na dole"
+
+#: ../src/Grids/PlankGrid.vala:69
+#: ../src/Grids/WingpanelslimGrid.vala:52
+#: ../src/Grids/SuperwingpanelGrid.vala:181
+msgid "Left"
+msgstr "Po lewej"
+
+#: ../src/Grids/PlankGrid.vala:70
+#: ../src/Grids/WingpanelslimGrid.vala:50
+#: ../src/Grids/SuperwingpanelGrid.vala:179
+msgid "Right"
+msgstr "Po prawej"
+
+#: ../src/Grids/PlankGrid.vala:71
+msgid "Center"
+msgstr "Na środku"
+
+#: ../src/Grids/PlankGrid.vala:72
+msgid "Panel"
+msgstr "Panel"
+
+#: ../src/Grids/PlankGrid.vala:173
+msgid "Item Alignment:"
+msgstr "Wyrównanie elementów:"
+
+#: ../src/Grids/PlankGrid.vala:211
+msgid "Unknown Value"
+msgstr "Nieznana wartość"
+
+#: ../src/Grids/PlankGrid.vala:232
+msgid "Don't hide"
+msgstr "Nie ukrywaj"
+
+#: ../src/Grids/PlankGrid.vala:233
+msgid "Intelligent hide"
+msgstr "Ukryj inteligentnie"
+
+#: ../src/Grids/PlankGrid.vala:234
+msgid "Auto hide"
+msgstr "Ukryj automatycznie"
+
+#: ../src/Grids/PlankGrid.vala:235
+msgid "Hide on maximize"
+msgstr "Ukryj, gdy okno zajmuje pełen ekran"
+
+#: ../src/Grids/PlankGrid.vala:298
+msgid "Primary Monitor"
+msgstr "Główny monitor"
+
+#: ../src/Grids/PlankGrid.vala:301
+#, c-format
+msgid "Monitor %d"
+msgstr "Monitor %d"
+
+#: ../src/Grids/PlankGrid.vala:320
+msgid "Icon Size:"
+msgstr "Rozmiar ikon:"
+
+#: ../src/Grids/PlankGrid.vala:323
+#: ../src/Grids/SuperwingpanelGrid.vala:50
+msgid "Hide Mode:"
+msgstr "Sposób ukrywania:"
+
+#: ../src/Grids/PlankGrid.vala:326
+msgid "Delay (in ms):"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:329
+#: ../src/Grids/TerminalGrid.vala:210
+msgid "Theme:"
+msgstr "Skórka:"
+
+#: ../src/Grids/PlankGrid.vala:333
+msgid "Monitor:"
+msgstr "Monitor:"
+
+#: ../src/Grids/PlankGrid.vala:337
+#: ../src/Grids/WingpanelslimGrid.vala:49
+#: ../src/Grids/SuperwingpanelGrid.vala:178
+msgid "Position:"
+msgstr "Pozycja:"
+
+#: ../src/Grids/PlankGrid.vala:340
+msgid "Offset:"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:343
+msgid "Alignment:"
+msgstr "Wyrównanie:"
+
+#: ../src/Grids/PlankGrid.vala:349
+msgid "Lock Items:"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:352
+msgid "Workspace Overview Icon:"
+msgstr "Ikonka zmiany obszaru roboczego:"
+
+#: ../src/Grids/PlankGrid.vala:355
+msgid "Show Desktop Icon:"
+msgstr "Pokaż ikonkę pulpitu:"
 
 #: ../src/Grids/ShadowsGrid.vala:27
 msgid "Focused Windows:"
@@ -160,125 +279,201 @@ msgstr "Menu:"
 msgid "Shadows:"
 msgstr "Cienie:"
 
-#: ../src/Grids/CerbereGrid.vala:39
-msgid "Watched Processes"
-msgstr "Obserwowane procesy"
+#: ../src/Grids/AnimationsGrid.vala:27
+msgid "Open Duration:"
+msgstr "Czas otwierania:"
 
-#: ../src/Grids/CerbereGrid.vala:50
-#: ../src/Grids/CerbereGrid.vala:60
-#: ../src/Grids/ShortcutsGrid.vala:91
-#: ../src/Grids/ShortcutsGrid.vala:158
-msgid "Add..."
-msgstr "Dodaj..."
+#: ../src/Grids/AnimationsGrid.vala:28
+msgid "Close Duration:"
+msgstr "Czas zamykania:"
 
-#: ../src/Grids/CerbereGrid.vala:51
-#: ../src/Grids/CerbereGrid.vala:61
-#: ../src/Grids/ShortcutsGrid.vala:92
-#: ../src/Grids/ShortcutsGrid.vala:159
-msgid "Remove"
-msgstr "Usuń"
+#: ../src/Grids/AnimationsGrid.vala:29
+msgid "Snap Duration:"
+msgstr "Czas pstryknięcia:"
 
-#: ../src/Grids/CerbereGrid.vala:62
-#: ../src/Grids/ShortcutsGrid.vala:160
-msgid "Revert to Default"
-msgstr "Przywróć domyślne"
+#: ../src/Grids/AnimationsGrid.vala:30
+msgid "Minimize Duration:"
+msgstr "Czas minimalizacji:"
 
-#: ../src/Grids/SynapseGrid.vala:46
-msgid "Search Indicator Shortcut:"
-msgstr "Skrót dla wskaźnika wyszukiwania:"
+#: ../src/Grids/AnimationsGrid.vala:31
+msgid "Workspace Switch Duration:"
+msgstr "Czas zmiany pulpitu:"
 
-#: ../src/Grids/PlankGrid.vala:47
-msgid "Top"
-msgstr "Góra"
+#: ../src/Grids/AnimationsGrid.vala:148
+msgid "Animations:"
+msgstr "Animacje:"
 
-#: ../src/Grids/PlankGrid.vala:48
-msgid "Bottom"
-msgstr "Na dole"
+#: ../src/Grids/WingpanelslimGrid.vala:51
+#: ../src/Grids/SuperwingpanelGrid.vala:180
+msgid "Middle"
+msgstr "Środek"
 
-#: ../src/Grids/PlankGrid.vala:49
-#: ../src/Grids/WingpanelslimGrid.vala:42
-msgid "Left"
-msgstr "Po lewej"
+#: ../src/Grids/WingpanelslimGrid.vala:53
+#: ../src/Grids/SuperwingpanelGrid.vala:182
+msgid "Flush Left"
+msgstr "Przesuń w lewo"
 
-#: ../src/Grids/PlankGrid.vala:50
-#: ../src/Grids/WingpanelslimGrid.vala:40
-msgid "Right"
-msgstr "Po prawej"
+#: ../src/Grids/WingpanelslimGrid.vala:54
+#: ../src/Grids/SuperwingpanelGrid.vala:183
+msgid "Flush Right"
+msgstr "Przesuń w prawo"
 
-#: ../src/Grids/PlankGrid.vala:51
-msgid "Center"
-msgstr "Na środku"
+#: ../src/Grids/WingpanelslimGrid.vala:75
+#: ../src/Grids/SuperwingpanelGrid.vala:151
+msgid "Edge:"
+msgstr "Krawędź:"
 
-#: ../src/Grids/PlankGrid.vala:52
-msgid "Panel"
-msgstr "Panel"
+#: ../src/Grids/WingpanelslimGrid.vala:76
+#: ../src/Grids/SuperwingpanelGrid.vala:152
+msgid "Slanted"
+msgstr "Pochyły"
 
-#: ../src/Grids/PlankGrid.vala:133
-msgid "Item Alignment:"
-msgstr "Wyrównanie elementów:"
+#: ../src/Grids/WingpanelslimGrid.vala:77
+#: ../src/Grids/SuperwingpanelGrid.vala:153
+msgid "Squared"
+msgstr "Kwadratowy"
 
-#: ../src/Grids/PlankGrid.vala:171
-msgid "Unknown Value"
-msgstr "Nieznana wartość"
+#: ../src/Grids/WingpanelslimGrid.vala:78
+#: ../src/Grids/SuperwingpanelGrid.vala:154
+msgid "Curved 1"
+msgstr "Zaokrąglony 1"
 
-#: ../src/Grids/PlankGrid.vala:193
-msgid "Don't hide"
-msgstr "Nie ukrywaj"
+#: ../src/Grids/WingpanelslimGrid.vala:79
+#: ../src/Grids/SuperwingpanelGrid.vala:155
+msgid "Curved 2"
+msgstr "Zaokrąglony 2"
 
-#: ../src/Grids/PlankGrid.vala:194
-msgid "Intelligent hide"
-msgstr "Ukryj inteligentnie"
+#: ../src/Grids/WingpanelslimGrid.vala:80
+#: ../src/Grids/SuperwingpanelGrid.vala:156
+msgid "Curved 3"
+msgstr "Zaokrąglony 3"
 
-#: ../src/Grids/PlankGrid.vala:195
-msgid "Auto hide"
-msgstr "Ukryj automatycznie"
+#: ../src/Grids/WingpanelslimGrid.vala:100
+msgid "Auto Hide:"
+msgstr "Autoukrywanie:"
 
-#: ../src/Grids/PlankGrid.vala:196
-msgid "Hide on maximize"
-msgstr "Ukryj, gdy okno zajmuje pełen ekran"
+#: ../src/Grids/WingpanelslimGrid.vala:108
+#: ../src/Grids/SuperwingpanelGrid.vala:84
+msgid "Show Launcher:"
+msgstr "Pokazuj aktywator:"
 
-#: ../src/Grids/PlankGrid.vala:249
-msgid "Primary Monitor"
-msgstr "Główny monitor"
+#: ../src/Grids/WingpanelslimGrid.vala:117
+#: ../src/Grids/SuperwingpanelGrid.vala:113
+msgid "Launcher:"
+msgstr "Aktywator:"
 
-#: ../src/Grids/PlankGrid.vala:252
-#, c-format
-msgid "Monitor %d"
-msgstr "Monitor %d"
+#: ../src/Grids/WingpanelslimGrid.vala:163
+msgid "Slim Wingpanel:"
+msgstr "Smukły Wingpanel:"
 
-#: ../src/Grids/PlankGrid.vala:272
-msgid "Icon Size:"
-msgstr "Rozmiar ikon:"
+#: ../src/Grids/ShortcutsGrid.vala:68
+msgid "Name"
+msgstr "Nazwa"
 
-#: ../src/Grids/PlankGrid.vala:276
-msgid "Hide Mode:"
-msgstr "Sposób ukrywania:"
+#: ../src/Grids/ShortcutsGrid.vala:69
+msgid "Shortcut"
+msgstr "Skrót klawiszowy"
 
-#: ../src/Grids/PlankGrid.vala:280
-#: ../src/Grids/TerminalGrid.vala:210
-msgid "Theme:"
-msgstr "Skórka:"
+#: ../src/Grids/ShortcutsGrid.vala:70
+msgid "Command"
+msgstr "Polecenie"
 
-#: ../src/Grids/PlankGrid.vala:285
-msgid "Monitor:"
-msgstr "Monitor:"
+#: ../src/Grids/ShortcutsGrid.vala:117
+msgid "Every field must be filled!"
+msgstr "Każde pole musi być wypełnione"
 
-#: ../src/Grids/PlankGrid.vala:289
-#: ../src/Grids/WingpanelslimGrid.vala:39
-msgid "Position:"
-msgstr "Pozycja:"
+#: ../src/Grids/ShortcutsGrid.vala:126
+msgid "Name:"
+msgstr "Nazwa:"
 
-#: ../src/Grids/PlankGrid.vala:292
-msgid "Alignment:"
-msgstr "Wyrównanie:"
+#: ../src/Grids/ShortcutsGrid.vala:129
+msgid "Shortcut:"
+msgstr "Skrót:"
 
-#: ../src/Grids/PlankGrid.vala:298
-msgid "Workspace Overview Icon:"
-msgstr "Ikonka zmiany obszaru roboczego:"
+#: ../src/Grids/ShortcutsGrid.vala:132
+msgid "Command:"
+msgstr "Polecenie :"
 
-#: ../src/Grids/PlankGrid.vala:301
-msgid "Show Desktop Icon:"
-msgstr "Pokaż ikonkę pulpitu:"
+#: ../src/Grids/SuperwingpanelGrid.vala:30
+msgid "Super Wingpanel:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:51
+msgid "Never Hide"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:52
+msgid "Intellihide"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:53
+msgid "Intellislim"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:54
+msgid "Auto Hide"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:75
+msgid "Show Window Controls:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:93
+msgid "Launcher Text Override:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:133
+msgid "Slim Mode:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:141
+msgid "Separate Launcher:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:205
+msgid "Margin:"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:38
+msgid "Locale"
+msgstr "Język"
+
+#: ../src/Grids/FilesGrid.vala:39
+msgid "ISO"
+msgstr "ISO"
+
+#: ../src/Grids/FilesGrid.vala:40
+msgid "Informal"
+msgstr "Nieformalny"
+
+#: ../src/Grids/FilesGrid.vala:85
+msgid "Single Click:"
+msgstr "Pojedyncze kliknięcie:"
+
+#: ../src/Grids/FilesGrid.vala:88
+msgid "Date Format:"
+msgstr "Format daty:"
+
+#: ../src/Grids/FilesGrid.vala:91
+msgid "Sidebar Icon Size:"
+msgstr "Rozmiar ikon w panelach bocznych:"
+
+#: ../src/Grids/TerminalGrid.vala:180
+#: ../src/Grids/AppearanceGrid.vala:124
+msgid "Custom"
+msgstr "Własny"
+
+#: ../src/Grids/TerminalGrid.vala:199
+msgid "Limit Scrollback Lines:"
+msgstr "Limit linii przewijania:"
+
+#: ../src/Grids/TerminalGrid.vala:203
+msgid "Custom Font:"
+msgstr "Własna czcionka:"
+
+#: ../src/Grids/TerminalGrid.vala:207
+msgid "Opacity:"
+msgstr "Przezroczystość:"
 
 #: ../src/Grids/MiscGrid.vala:48
 #: ../src/Grids/MiscGrid.vala:75
@@ -346,117 +541,25 @@ msgstr "Paski przewijania w stylu Ubuntu:"
 msgid "Natural Scrolling:"
 msgstr "Naturalne przewijanie:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:41
-msgid "Middle"
-msgstr "Środek"
+#: ../src/Grids/FontsGrid.vala:98
+msgid "Default Font:"
+msgstr "Domyślna czcionka:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:43
-msgid "Flush Left"
-msgstr "Przesuń w lewo"
+#: ../src/Grids/FontsGrid.vala:101
+msgid "Document Font:"
+msgstr "Czcionka dla dokumentów:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:44
-msgid "Flush Right"
-msgstr "Przesuń w prawo"
+#: ../src/Grids/FontsGrid.vala:104
+msgid "Monospace Font:"
+msgstr "Czcionka o stałęj szerokości:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:65
-msgid "Edge:"
-msgstr "Krawędź:"
+#: ../src/Grids/FontsGrid.vala:107
+msgid "Window Title Font:"
+msgstr "Czcionka w tytule okna:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:66
-msgid "Slanted"
-msgstr "Pochyły"
-
-#: ../src/Grids/WingpanelslimGrid.vala:67
-msgid "Squared"
-msgstr "Kwadratowy"
-
-#: ../src/Grids/WingpanelslimGrid.vala:68
-msgid "Curved 1"
-msgstr "Zaokrąglony 1"
-
-#: ../src/Grids/WingpanelslimGrid.vala:69
-msgid "Curved 2"
-msgstr "Zaokrąglony 2"
-
-#: ../src/Grids/WingpanelslimGrid.vala:70
-msgid "Curved 3"
-msgstr "Zaokrąglony 3"
-
-#: ../src/Grids/WingpanelslimGrid.vala:90
-msgid "Auto Hide:"
-msgstr "Autoukrywanie:"
-
-#: ../src/Grids/WingpanelslimGrid.vala:98
-msgid "Show Launcher:"
-msgstr "Pokazuj aktywator:"
-
-#: ../src/Grids/WingpanelslimGrid.vala:107
-msgid "Launcher:"
-msgstr "Aktywator:"
-
-#: ../src/Grids/WingpanelslimGrid.vala:151
-msgid "Slim Wingpanel:"
-msgstr "Smukły Wingpanel:"
-
-#: ../src/Grids/AnimationsGrid.vala:27
-msgid "Open Duration:"
-msgstr "Czas otwierania:"
-
-#: ../src/Grids/AnimationsGrid.vala:28
-msgid "Close Duration:"
-msgstr "Czas zamykania:"
-
-#: ../src/Grids/AnimationsGrid.vala:29
-msgid "Snap Duration:"
-msgstr "Czas pstryknięcia:"
-
-#: ../src/Grids/AnimationsGrid.vala:30
-msgid "Minimize Duration:"
-msgstr "Czas minimalizacji:"
-
-#: ../src/Grids/AnimationsGrid.vala:31
-msgid "Workspace Switch Duration:"
-msgstr "Czas zmiany pulpitu:"
-
-#: ../src/Grids/AnimationsGrid.vala:148
-msgid "Animations:"
-msgstr "Animacje:"
-
-#: ../src/Grids/SlingshotGrid.vala:93
-msgid "Rows:"
-msgstr "Wiersze:"
-
-#: ../src/Grids/SlingshotGrid.vala:96
-msgid "Columns:"
-msgstr "Kolumny:"
-
-#: ../src/Grids/ShortcutsGrid.vala:68
-msgid "Name"
-msgstr "Nazwa"
-
-#: ../src/Grids/ShortcutsGrid.vala:69
-msgid "Shortcut"
-msgstr "Skrót klawiszowy"
-
-#: ../src/Grids/ShortcutsGrid.vala:70
-msgid "Command"
-msgstr "Polecenie"
-
-#: ../src/Grids/ShortcutsGrid.vala:117
-msgid "Every field must be filled!"
-msgstr "Każde pole musi być wypełnione"
-
-#: ../src/Grids/ShortcutsGrid.vala:126
-msgid "Name:"
-msgstr "Nazwa:"
-
-#: ../src/Grids/ShortcutsGrid.vala:129
-msgid "Shortcut:"
-msgstr "Skrót:"
-
-#: ../src/Grids/ShortcutsGrid.vala:132
-msgid "Command:"
-msgstr "Polecenie :"
+#: ../src/Grids/SynapseGrid.vala:46
+msgid "Search Indicator Shortcut:"
+msgstr "Skrót dla wskaźnika wyszukiwania:"
 
 #: ../src/Grids/AppearanceGrid.vala:116
 msgid "Custom Layout:"
@@ -482,11 +585,6 @@ msgstr "Windows"
 msgid "OS X"
 msgstr "OS X"
 
-#: ../src/Grids/AppearanceGrid.vala:124
-#: ../src/Grids/TerminalGrid.vala:180
-msgid "Custom"
-msgstr "Własny"
-
 #: ../src/Grids/AppearanceGrid.vala:183
 msgid "Window Decoration Theme:"
 msgstr "Skórka dekoracji okien:"
@@ -506,37 +604,3 @@ msgstr "Schemat kursora myszy:"
 #: ../src/Grids/AppearanceGrid.vala:195
 msgid "Button Layout:"
 msgstr "Układ przycisków:"
-
-#: ../src/Grids/FontsGrid.vala:98
-msgid "Default Font:"
-msgstr "Domyślna czcionka:"
-
-#: ../src/Grids/FontsGrid.vala:101
-msgid "Document Font:"
-msgstr "Czcionka dla dokumentów:"
-
-#: ../src/Grids/FontsGrid.vala:104
-msgid "Monospace Font:"
-msgstr "Czcionka o stałęj szerokości:"
-
-#: ../src/Grids/FontsGrid.vala:107
-msgid "Window Title Font:"
-msgstr "Czcionka w tytule okna:"
-
-#: ../src/Grids/TerminalGrid.vala:199
-msgid "Limit Scrollback Lines:"
-msgstr "Limit linii przewijania:"
-
-#: ../src/Grids/TerminalGrid.vala:203
-msgid "Custom Font:"
-msgstr "Własna czcionka:"
-
-#: ../src/Grids/TerminalGrid.vala:207
-msgid "Opacity:"
-msgstr "Przezroczystość:"
-
-#: ../src/Widgets/AcceleratorInputWidget.vala:67
-#: ../src/Widgets/AcceleratorInputWidget.vala:85
-#: ../src/Objects/ShortcutObject.vala:38
-msgid "Disabled"
-msgstr "Wyłączone"

@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-08-20 21:04+0100\n"
+"POT-Creation-Date: 2014-01-05 04:04+0100\n"
 "PO-Revision-Date: 2014-01-03 03:00+0000\n"
 "Last-Translator: MinSik CHO <Unknown>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-01-04 06:22+0000\n"
+"X-Launchpad-Export-Date: 2014-01-05 05:50+0000\n"
 "X-Generator: Launchpad (build 16877)\n"
 
 #: ../src/Tweaks.vala:49
@@ -77,64 +77,183 @@ msgstr "터미널"
 msgid "Wingpanel Slim"
 msgstr "Wingpanel Slim"
 
-#: ../src/Grids/FilesGrid.vala:38
-msgid "Locale"
-msgstr "언어"
+#: ../src/Tweaks.vala:109
+msgid "Super Wingpanel"
+msgstr ""
 
-#: ../src/Grids/FilesGrid.vala:39
-msgid "ISO"
-msgstr "ISO"
+#: ../src/Objects/ShortcutObject.vala:38
+#: ../src/Widgets/AcceleratorInputWidget.vala:67
+#: ../src/Widgets/AcceleratorInputWidget.vala:85
+msgid "Disabled"
+msgstr "사용 중지됨"
 
-#: ../src/Grids/FilesGrid.vala:40
-msgid "Informal"
-msgstr "비공식"
-
-#: ../src/Grids/FilesGrid.vala:61
 #: ../src/Grids/SlingshotGrid.vala:29
 msgid "Smallest"
 msgstr "가장 작게"
 
-#: ../src/Grids/FilesGrid.vala:62
 #: ../src/Grids/SlingshotGrid.vala:30
 msgid "Smaller"
 msgstr "더 작게"
 
-#: ../src/Grids/FilesGrid.vala:63
 #: ../src/Grids/SlingshotGrid.vala:31
 msgid "Small"
 msgstr "작게"
 
-#: ../src/Grids/FilesGrid.vala:64
 #: ../src/Grids/SlingshotGrid.vala:32
 msgid "Normal"
 msgstr "보통"
 
-#: ../src/Grids/FilesGrid.vala:65
 #: ../src/Grids/SlingshotGrid.vala:33
 msgid "Large"
 msgstr "크게"
 
-#: ../src/Grids/FilesGrid.vala:66
 #: ../src/Grids/SlingshotGrid.vala:34
 msgid "Larger"
 msgstr "더 크게"
 
-#: ../src/Grids/FilesGrid.vala:67
 #: ../src/Grids/SlingshotGrid.vala:35
 msgid "Largest"
 msgstr "가장 크게"
 
-#: ../src/Grids/FilesGrid.vala:85
-msgid "Single Click:"
-msgstr "한 번 클릭:"
+#: ../src/Grids/SlingshotGrid.vala:93
+msgid "Rows:"
+msgstr "열:"
 
-#: ../src/Grids/FilesGrid.vala:88
-msgid "Date Format:"
-msgstr "날짜 형식:"
+#: ../src/Grids/SlingshotGrid.vala:96
+msgid "Columns:"
+msgstr "행:"
 
-#: ../src/Grids/FilesGrid.vala:91
-msgid "Sidebar Icon Size:"
-msgstr "사이드바 아이콘 크기:"
+#: ../src/Grids/CerbereGrid.vala:39
+msgid "Watched Processes"
+msgstr "감시 중인 프로세스"
+
+#: ../src/Grids/CerbereGrid.vala:50
+#: ../src/Grids/CerbereGrid.vala:60
+#: ../src/Grids/ShortcutsGrid.vala:91
+#: ../src/Grids/ShortcutsGrid.vala:158
+msgid "Add..."
+msgstr "추가...."
+
+#: ../src/Grids/CerbereGrid.vala:51
+#: ../src/Grids/CerbereGrid.vala:61
+#: ../src/Grids/ShortcutsGrid.vala:92
+#: ../src/Grids/ShortcutsGrid.vala:159
+msgid "Remove"
+msgstr "제거"
+
+#: ../src/Grids/CerbereGrid.vala:62
+#: ../src/Grids/ShortcutsGrid.vala:160
+msgid "Revert to Default"
+msgstr "기본값으로 설정"
+
+#: ../src/Grids/PlankGrid.vala:67
+msgid "Top"
+msgstr "상단"
+
+#: ../src/Grids/PlankGrid.vala:68
+msgid "Bottom"
+msgstr "하단"
+
+#: ../src/Grids/PlankGrid.vala:69
+#: ../src/Grids/WingpanelslimGrid.vala:52
+#: ../src/Grids/SuperwingpanelGrid.vala:181
+msgid "Left"
+msgstr "왼쪽"
+
+#: ../src/Grids/PlankGrid.vala:70
+#: ../src/Grids/WingpanelslimGrid.vala:50
+#: ../src/Grids/SuperwingpanelGrid.vala:179
+msgid "Right"
+msgstr "오른쪽"
+
+#: ../src/Grids/PlankGrid.vala:71
+msgid "Center"
+msgstr "가운데"
+
+#: ../src/Grids/PlankGrid.vala:72
+msgid "Panel"
+msgstr "패널"
+
+#: ../src/Grids/PlankGrid.vala:173
+msgid "Item Alignment:"
+msgstr "항목 정렬:"
+
+#: ../src/Grids/PlankGrid.vala:211
+msgid "Unknown Value"
+msgstr "알 수 없는 값"
+
+#: ../src/Grids/PlankGrid.vala:232
+msgid "Don't hide"
+msgstr "숨기지 않기"
+
+#: ../src/Grids/PlankGrid.vala:233
+msgid "Intelligent hide"
+msgstr "지능적으로 숨기기"
+
+#: ../src/Grids/PlankGrid.vala:234
+msgid "Auto hide"
+msgstr "자동으로 숨기기"
+
+#: ../src/Grids/PlankGrid.vala:235
+msgid "Hide on maximize"
+msgstr "최대화 때 숨기기"
+
+#: ../src/Grids/PlankGrid.vala:298
+msgid "Primary Monitor"
+msgstr "주 모니터"
+
+#: ../src/Grids/PlankGrid.vala:301
+#, c-format
+msgid "Monitor %d"
+msgstr "모니터 %d"
+
+#: ../src/Grids/PlankGrid.vala:320
+msgid "Icon Size:"
+msgstr "아이콘 크기:"
+
+#: ../src/Grids/PlankGrid.vala:323
+#: ../src/Grids/SuperwingpanelGrid.vala:50
+msgid "Hide Mode:"
+msgstr "숨기기 모드:"
+
+#: ../src/Grids/PlankGrid.vala:326
+msgid "Delay (in ms):"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:329
+#: ../src/Grids/TerminalGrid.vala:210
+msgid "Theme:"
+msgstr "테마:"
+
+#: ../src/Grids/PlankGrid.vala:333
+msgid "Monitor:"
+msgstr "모니터:"
+
+#: ../src/Grids/PlankGrid.vala:337
+#: ../src/Grids/WingpanelslimGrid.vala:49
+#: ../src/Grids/SuperwingpanelGrid.vala:178
+msgid "Position:"
+msgstr "위치:"
+
+#: ../src/Grids/PlankGrid.vala:340
+msgid "Offset:"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:343
+msgid "Alignment:"
+msgstr "정렬:"
+
+#: ../src/Grids/PlankGrid.vala:349
+msgid "Lock Items:"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:352
+msgid "Workspace Overview Icon:"
+msgstr "작업공간 보기 아이콘:"
+
+#: ../src/Grids/PlankGrid.vala:355
+msgid "Show Desktop Icon:"
+msgstr "바탕화면 보기 아이콘:"
 
 #: ../src/Grids/ShadowsGrid.vala:27
 msgid "Focused Windows:"
@@ -160,125 +279,201 @@ msgstr "메뉴:"
 msgid "Shadows:"
 msgstr "그림자:"
 
-#: ../src/Grids/CerbereGrid.vala:39
-msgid "Watched Processes"
-msgstr "감시 중인 프로세스"
+#: ../src/Grids/AnimationsGrid.vala:27
+msgid "Open Duration:"
+msgstr "열 시간:"
 
-#: ../src/Grids/CerbereGrid.vala:50
-#: ../src/Grids/CerbereGrid.vala:60
-#: ../src/Grids/ShortcutsGrid.vala:91
-#: ../src/Grids/ShortcutsGrid.vala:158
-msgid "Add..."
-msgstr "추가...."
+#: ../src/Grids/AnimationsGrid.vala:28
+msgid "Close Duration:"
+msgstr "닫을 시간:"
 
-#: ../src/Grids/CerbereGrid.vala:51
-#: ../src/Grids/CerbereGrid.vala:61
-#: ../src/Grids/ShortcutsGrid.vala:92
-#: ../src/Grids/ShortcutsGrid.vala:159
-msgid "Remove"
-msgstr "제거"
+#: ../src/Grids/AnimationsGrid.vala:29
+msgid "Snap Duration:"
+msgstr "스크린샷 지속 시간:"
 
-#: ../src/Grids/CerbereGrid.vala:62
-#: ../src/Grids/ShortcutsGrid.vala:160
-msgid "Revert to Default"
-msgstr "기본값으로 설정"
+#: ../src/Grids/AnimationsGrid.vala:30
+msgid "Minimize Duration:"
+msgstr "최소화 시간:"
 
-#: ../src/Grids/SynapseGrid.vala:46
-msgid "Search Indicator Shortcut:"
-msgstr "표시줄 검색 단축키:"
+#: ../src/Grids/AnimationsGrid.vala:31
+msgid "Workspace Switch Duration:"
+msgstr "작업 공간 전환 시간:"
 
-#: ../src/Grids/PlankGrid.vala:47
-msgid "Top"
-msgstr "상단"
+#: ../src/Grids/AnimationsGrid.vala:148
+msgid "Animations:"
+msgstr "애니메이션:"
 
-#: ../src/Grids/PlankGrid.vala:48
-msgid "Bottom"
-msgstr "하단"
+#: ../src/Grids/WingpanelslimGrid.vala:51
+#: ../src/Grids/SuperwingpanelGrid.vala:180
+msgid "Middle"
+msgstr "중간"
 
-#: ../src/Grids/PlankGrid.vala:49
-#: ../src/Grids/WingpanelslimGrid.vala:42
-msgid "Left"
-msgstr "왼쪽"
+#: ../src/Grids/WingpanelslimGrid.vala:53
+#: ../src/Grids/SuperwingpanelGrid.vala:182
+msgid "Flush Left"
+msgstr "왼쪽으로 끌기"
 
-#: ../src/Grids/PlankGrid.vala:50
-#: ../src/Grids/WingpanelslimGrid.vala:40
-msgid "Right"
-msgstr "오른쪽"
+#: ../src/Grids/WingpanelslimGrid.vala:54
+#: ../src/Grids/SuperwingpanelGrid.vala:183
+msgid "Flush Right"
+msgstr "오른쪽으로 끌기"
 
-#: ../src/Grids/PlankGrid.vala:51
-msgid "Center"
-msgstr "가운데"
+#: ../src/Grids/WingpanelslimGrid.vala:75
+#: ../src/Grids/SuperwingpanelGrid.vala:151
+msgid "Edge:"
+msgstr "가장자리"
 
-#: ../src/Grids/PlankGrid.vala:52
-msgid "Panel"
-msgstr "패널"
+#: ../src/Grids/WingpanelslimGrid.vala:76
+#: ../src/Grids/SuperwingpanelGrid.vala:152
+msgid "Slanted"
+msgstr "기울어짐"
 
-#: ../src/Grids/PlankGrid.vala:133
-msgid "Item Alignment:"
-msgstr "항목 정렬:"
+#: ../src/Grids/WingpanelslimGrid.vala:77
+#: ../src/Grids/SuperwingpanelGrid.vala:153
+msgid "Squared"
+msgstr "정사각형"
 
-#: ../src/Grids/PlankGrid.vala:171
-msgid "Unknown Value"
-msgstr "알 수 없는 값"
+#: ../src/Grids/WingpanelslimGrid.vala:78
+#: ../src/Grids/SuperwingpanelGrid.vala:154
+msgid "Curved 1"
+msgstr "휘어짐 1"
 
-#: ../src/Grids/PlankGrid.vala:193
-msgid "Don't hide"
-msgstr "숨기지 않기"
+#: ../src/Grids/WingpanelslimGrid.vala:79
+#: ../src/Grids/SuperwingpanelGrid.vala:155
+msgid "Curved 2"
+msgstr "휘어짐 2"
 
-#: ../src/Grids/PlankGrid.vala:194
-msgid "Intelligent hide"
-msgstr "지능적으로 숨기기"
+#: ../src/Grids/WingpanelslimGrid.vala:80
+#: ../src/Grids/SuperwingpanelGrid.vala:156
+msgid "Curved 3"
+msgstr "휘어짐 3"
 
-#: ../src/Grids/PlankGrid.vala:195
-msgid "Auto hide"
+#: ../src/Grids/WingpanelslimGrid.vala:100
+msgid "Auto Hide:"
 msgstr "자동으로 숨기기"
 
-#: ../src/Grids/PlankGrid.vala:196
-msgid "Hide on maximize"
-msgstr "최대화 때 숨기기"
+#: ../src/Grids/WingpanelslimGrid.vala:108
+#: ../src/Grids/SuperwingpanelGrid.vala:84
+msgid "Show Launcher:"
+msgstr "런처 보이기:"
 
-#: ../src/Grids/PlankGrid.vala:249
-msgid "Primary Monitor"
-msgstr "주 모니터"
+#: ../src/Grids/WingpanelslimGrid.vala:117
+#: ../src/Grids/SuperwingpanelGrid.vala:113
+msgid "Launcher:"
+msgstr "런처:"
 
-#: ../src/Grids/PlankGrid.vala:252
-#, c-format
-msgid "Monitor %d"
-msgstr "모니터 %d"
+#: ../src/Grids/WingpanelslimGrid.vala:163
+msgid "Slim Wingpanel:"
+msgstr "Wingpanel:"
 
-#: ../src/Grids/PlankGrid.vala:272
-msgid "Icon Size:"
-msgstr "아이콘 크기:"
+#: ../src/Grids/ShortcutsGrid.vala:68
+msgid "Name"
+msgstr "이름"
 
-#: ../src/Grids/PlankGrid.vala:276
-msgid "Hide Mode:"
-msgstr "숨기기 모드:"
+#: ../src/Grids/ShortcutsGrid.vala:69
+msgid "Shortcut"
+msgstr "단축키"
 
-#: ../src/Grids/PlankGrid.vala:280
-#: ../src/Grids/TerminalGrid.vala:210
-msgid "Theme:"
-msgstr "테마:"
+#: ../src/Grids/ShortcutsGrid.vala:70
+msgid "Command"
+msgstr "명령어"
 
-#: ../src/Grids/PlankGrid.vala:285
-msgid "Monitor:"
-msgstr "모니터:"
+#: ../src/Grids/ShortcutsGrid.vala:117
+msgid "Every field must be filled!"
+msgstr "모든 빈칸을 채워야 합니다."
 
-#: ../src/Grids/PlankGrid.vala:289
-#: ../src/Grids/WingpanelslimGrid.vala:39
-msgid "Position:"
-msgstr "위치:"
+#: ../src/Grids/ShortcutsGrid.vala:126
+msgid "Name:"
+msgstr "이름:"
 
-#: ../src/Grids/PlankGrid.vala:292
-msgid "Alignment:"
-msgstr "정렬:"
+#: ../src/Grids/ShortcutsGrid.vala:129
+msgid "Shortcut:"
+msgstr "단축키:"
 
-#: ../src/Grids/PlankGrid.vala:298
-msgid "Workspace Overview Icon:"
-msgstr "작업공간 보기 아이콘:"
+#: ../src/Grids/ShortcutsGrid.vala:132
+msgid "Command:"
+msgstr "명령:"
 
-#: ../src/Grids/PlankGrid.vala:301
-msgid "Show Desktop Icon:"
-msgstr "바탕화면 보기 아이콘:"
+#: ../src/Grids/SuperwingpanelGrid.vala:30
+msgid "Super Wingpanel:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:51
+msgid "Never Hide"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:52
+msgid "Intellihide"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:53
+msgid "Intellislim"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:54
+msgid "Auto Hide"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:75
+msgid "Show Window Controls:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:93
+msgid "Launcher Text Override:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:133
+msgid "Slim Mode:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:141
+msgid "Separate Launcher:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:205
+msgid "Margin:"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:38
+msgid "Locale"
+msgstr "언어"
+
+#: ../src/Grids/FilesGrid.vala:39
+msgid "ISO"
+msgstr "ISO"
+
+#: ../src/Grids/FilesGrid.vala:40
+msgid "Informal"
+msgstr "비공식"
+
+#: ../src/Grids/FilesGrid.vala:85
+msgid "Single Click:"
+msgstr "한 번 클릭:"
+
+#: ../src/Grids/FilesGrid.vala:88
+msgid "Date Format:"
+msgstr "날짜 형식:"
+
+#: ../src/Grids/FilesGrid.vala:91
+msgid "Sidebar Icon Size:"
+msgstr "사이드바 아이콘 크기:"
+
+#: ../src/Grids/TerminalGrid.vala:180
+#: ../src/Grids/AppearanceGrid.vala:124
+msgid "Custom"
+msgstr "사용자 지정"
+
+#: ../src/Grids/TerminalGrid.vala:199
+msgid "Limit Scrollback Lines:"
+msgstr "스크롤백 줄수 제한:"
+
+#: ../src/Grids/TerminalGrid.vala:203
+msgid "Custom Font:"
+msgstr "사용자 지정 글꼴:"
+
+#: ../src/Grids/TerminalGrid.vala:207
+msgid "Opacity:"
+msgstr "불투명도:"
 
 #: ../src/Grids/MiscGrid.vala:48
 #: ../src/Grids/MiscGrid.vala:75
@@ -346,117 +541,25 @@ msgstr "스크롤 바:"
 msgid "Natural Scrolling:"
 msgstr "자연스러운 스크롤링:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:41
-msgid "Middle"
-msgstr "중간"
+#: ../src/Grids/FontsGrid.vala:98
+msgid "Default Font:"
+msgstr "기본 글꼴:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:43
-msgid "Flush Left"
-msgstr "왼쪽으로 끌기"
+#: ../src/Grids/FontsGrid.vala:101
+msgid "Document Font:"
+msgstr "문서 글꼴:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:44
-msgid "Flush Right"
-msgstr "오른쪽으로 끌기"
+#: ../src/Grids/FontsGrid.vala:104
+msgid "Monospace Font:"
+msgstr "모노스페이스 글꼴:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:65
-msgid "Edge:"
-msgstr "가장자리"
+#: ../src/Grids/FontsGrid.vala:107
+msgid "Window Title Font:"
+msgstr "창 제목 글꼴:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:66
-msgid "Slanted"
-msgstr "기울어짐"
-
-#: ../src/Grids/WingpanelslimGrid.vala:67
-msgid "Squared"
-msgstr "정사각형"
-
-#: ../src/Grids/WingpanelslimGrid.vala:68
-msgid "Curved 1"
-msgstr "휘어짐 1"
-
-#: ../src/Grids/WingpanelslimGrid.vala:69
-msgid "Curved 2"
-msgstr "휘어짐 2"
-
-#: ../src/Grids/WingpanelslimGrid.vala:70
-msgid "Curved 3"
-msgstr "휘어짐 3"
-
-#: ../src/Grids/WingpanelslimGrid.vala:90
-msgid "Auto Hide:"
-msgstr "자동으로 숨기기"
-
-#: ../src/Grids/WingpanelslimGrid.vala:98
-msgid "Show Launcher:"
-msgstr "런처 보이기:"
-
-#: ../src/Grids/WingpanelslimGrid.vala:107
-msgid "Launcher:"
-msgstr "런처:"
-
-#: ../src/Grids/WingpanelslimGrid.vala:151
-msgid "Slim Wingpanel:"
-msgstr "Wingpanel:"
-
-#: ../src/Grids/AnimationsGrid.vala:27
-msgid "Open Duration:"
-msgstr "열 시간:"
-
-#: ../src/Grids/AnimationsGrid.vala:28
-msgid "Close Duration:"
-msgstr "닫을 시간:"
-
-#: ../src/Grids/AnimationsGrid.vala:29
-msgid "Snap Duration:"
-msgstr "스크린샷 지속 시간:"
-
-#: ../src/Grids/AnimationsGrid.vala:30
-msgid "Minimize Duration:"
-msgstr "최소화 시간:"
-
-#: ../src/Grids/AnimationsGrid.vala:31
-msgid "Workspace Switch Duration:"
-msgstr "작업 공간 전환 시간:"
-
-#: ../src/Grids/AnimationsGrid.vala:148
-msgid "Animations:"
-msgstr "애니메이션:"
-
-#: ../src/Grids/SlingshotGrid.vala:93
-msgid "Rows:"
-msgstr "열:"
-
-#: ../src/Grids/SlingshotGrid.vala:96
-msgid "Columns:"
-msgstr "행:"
-
-#: ../src/Grids/ShortcutsGrid.vala:68
-msgid "Name"
-msgstr "이름"
-
-#: ../src/Grids/ShortcutsGrid.vala:69
-msgid "Shortcut"
-msgstr "단축키"
-
-#: ../src/Grids/ShortcutsGrid.vala:70
-msgid "Command"
-msgstr "명령어"
-
-#: ../src/Grids/ShortcutsGrid.vala:117
-msgid "Every field must be filled!"
-msgstr "모든 빈칸을 채워야 합니다."
-
-#: ../src/Grids/ShortcutsGrid.vala:126
-msgid "Name:"
-msgstr "이름:"
-
-#: ../src/Grids/ShortcutsGrid.vala:129
-msgid "Shortcut:"
-msgstr "단축키:"
-
-#: ../src/Grids/ShortcutsGrid.vala:132
-msgid "Command:"
-msgstr "명령:"
+#: ../src/Grids/SynapseGrid.vala:46
+msgid "Search Indicator Shortcut:"
+msgstr "표시줄 검색 단축키:"
 
 #: ../src/Grids/AppearanceGrid.vala:116
 msgid "Custom Layout:"
@@ -482,11 +585,6 @@ msgstr "창"
 msgid "OS X"
 msgstr "OS X"
 
-#: ../src/Grids/AppearanceGrid.vala:124
-#: ../src/Grids/TerminalGrid.vala:180
-msgid "Custom"
-msgstr "사용자 지정"
-
 #: ../src/Grids/AppearanceGrid.vala:183
 msgid "Window Decoration Theme:"
 msgstr "창 꾸미기 테마:"
@@ -506,37 +604,3 @@ msgstr "커서 테마:"
 #: ../src/Grids/AppearanceGrid.vala:195
 msgid "Button Layout:"
 msgstr "버튼 레이아웃:"
-
-#: ../src/Grids/FontsGrid.vala:98
-msgid "Default Font:"
-msgstr "기본 글꼴:"
-
-#: ../src/Grids/FontsGrid.vala:101
-msgid "Document Font:"
-msgstr "문서 글꼴:"
-
-#: ../src/Grids/FontsGrid.vala:104
-msgid "Monospace Font:"
-msgstr "모노스페이스 글꼴:"
-
-#: ../src/Grids/FontsGrid.vala:107
-msgid "Window Title Font:"
-msgstr "창 제목 글꼴:"
-
-#: ../src/Grids/TerminalGrid.vala:199
-msgid "Limit Scrollback Lines:"
-msgstr "스크롤백 줄수 제한:"
-
-#: ../src/Grids/TerminalGrid.vala:203
-msgid "Custom Font:"
-msgstr "사용자 지정 글꼴:"
-
-#: ../src/Grids/TerminalGrid.vala:207
-msgid "Opacity:"
-msgstr "불투명도:"
-
-#: ../src/Widgets/AcceleratorInputWidget.vala:67
-#: ../src/Widgets/AcceleratorInputWidget.vala:85
-#: ../src/Objects/ShortcutObject.vala:38
-msgid "Disabled"
-msgstr "사용 중지됨"

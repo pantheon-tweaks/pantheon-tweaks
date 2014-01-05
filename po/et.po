@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-08-20 21:04+0100\n"
+"POT-Creation-Date: 2014-01-05 04:04+0100\n"
 "PO-Revision-Date: 2013-10-23 16:28+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-10-24 05:31+0000\n"
-"X-Generator: Launchpad (build 16810)\n"
+"X-Launchpad-Export-Date: 2014-01-05 05:49+0000\n"
+"X-Generator: Launchpad (build 16877)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
@@ -77,64 +77,183 @@ msgstr "Terminal"
 msgid "Wingpanel Slim"
 msgstr "Wingpanel"
 
-#: ../src/Grids/FilesGrid.vala:38
-msgid "Locale"
-msgstr "Kohalik"
+#: ../src/Tweaks.vala:109
+msgid "Super Wingpanel"
+msgstr ""
 
-#: ../src/Grids/FilesGrid.vala:39
-msgid "ISO"
-msgstr "Ülemaailmne"
+#: ../src/Objects/ShortcutObject.vala:38
+#: ../src/Widgets/AcceleratorInputWidget.vala:67
+#: ../src/Widgets/AcceleratorInputWidget.vala:85
+msgid "Disabled"
+msgstr "Keelatud"
 
-#: ../src/Grids/FilesGrid.vala:40
-msgid "Informal"
-msgstr "Ametlik"
-
-#: ../src/Grids/FilesGrid.vala:61
 #: ../src/Grids/SlingshotGrid.vala:29
 msgid "Smallest"
 msgstr "Väikseim"
 
-#: ../src/Grids/FilesGrid.vala:62
 #: ../src/Grids/SlingshotGrid.vala:30
 msgid "Smaller"
 msgstr "Väiksem"
 
-#: ../src/Grids/FilesGrid.vala:63
 #: ../src/Grids/SlingshotGrid.vala:31
 msgid "Small"
 msgstr "Väike"
 
-#: ../src/Grids/FilesGrid.vala:64
 #: ../src/Grids/SlingshotGrid.vala:32
 msgid "Normal"
 msgstr "Tavaline"
 
-#: ../src/Grids/FilesGrid.vala:65
 #: ../src/Grids/SlingshotGrid.vala:33
 msgid "Large"
 msgstr "Suur"
 
-#: ../src/Grids/FilesGrid.vala:66
 #: ../src/Grids/SlingshotGrid.vala:34
 msgid "Larger"
 msgstr "Suurem"
 
-#: ../src/Grids/FilesGrid.vala:67
 #: ../src/Grids/SlingshotGrid.vala:35
 msgid "Largest"
 msgstr "Suurim"
 
-#: ../src/Grids/FilesGrid.vala:85
-msgid "Single Click:"
-msgstr "Ühe klõpsuga avamine:"
+#: ../src/Grids/SlingshotGrid.vala:93
+msgid "Rows:"
+msgstr "Ridu:"
 
-#: ../src/Grids/FilesGrid.vala:88
-msgid "Date Format:"
-msgstr "Kuupäeva formaat:"
+#: ../src/Grids/SlingshotGrid.vala:96
+msgid "Columns:"
+msgstr "Veerge:"
 
-#: ../src/Grids/FilesGrid.vala:91
-msgid "Sidebar Icon Size:"
-msgstr "Külgpaneeli ikooni suurus:"
+#: ../src/Grids/CerbereGrid.vala:39
+msgid "Watched Processes"
+msgstr "Jälgitavad protsessid, mida hoitakse tööl"
+
+#: ../src/Grids/CerbereGrid.vala:50
+#: ../src/Grids/CerbereGrid.vala:60
+#: ../src/Grids/ShortcutsGrid.vala:91
+#: ../src/Grids/ShortcutsGrid.vala:158
+msgid "Add..."
+msgstr "Lisa..."
+
+#: ../src/Grids/CerbereGrid.vala:51
+#: ../src/Grids/CerbereGrid.vala:61
+#: ../src/Grids/ShortcutsGrid.vala:92
+#: ../src/Grids/ShortcutsGrid.vala:159
+msgid "Remove"
+msgstr "Eemalda"
+
+#: ../src/Grids/CerbereGrid.vala:62
+#: ../src/Grids/ShortcutsGrid.vala:160
+msgid "Revert to Default"
+msgstr "Taasta vaikimisi väärtused"
+
+#: ../src/Grids/PlankGrid.vala:67
+msgid "Top"
+msgstr "Üleval"
+
+#: ../src/Grids/PlankGrid.vala:68
+msgid "Bottom"
+msgstr "All"
+
+#: ../src/Grids/PlankGrid.vala:69
+#: ../src/Grids/WingpanelslimGrid.vala:52
+#: ../src/Grids/SuperwingpanelGrid.vala:181
+msgid "Left"
+msgstr "Vasakul"
+
+#: ../src/Grids/PlankGrid.vala:70
+#: ../src/Grids/WingpanelslimGrid.vala:50
+#: ../src/Grids/SuperwingpanelGrid.vala:179
+msgid "Right"
+msgstr "Paremal"
+
+#: ../src/Grids/PlankGrid.vala:71
+msgid "Center"
+msgstr "Keskel"
+
+#: ../src/Grids/PlankGrid.vala:72
+msgid "Panel"
+msgstr "Paneel"
+
+#: ../src/Grids/PlankGrid.vala:173
+msgid "Item Alignment:"
+msgstr "Ikoonide joondus:"
+
+#: ../src/Grids/PlankGrid.vala:211
+msgid "Unknown Value"
+msgstr "Tundmatu väärtus"
+
+#: ../src/Grids/PlankGrid.vala:232
+msgid "Don't hide"
+msgstr "Mitte kunagi"
+
+#: ../src/Grids/PlankGrid.vala:233
+msgid "Intelligent hide"
+msgstr "Akna ettejäämisel"
+
+#: ../src/Grids/PlankGrid.vala:234
+msgid "Auto hide"
+msgstr "Automaatselt"
+
+#: ../src/Grids/PlankGrid.vala:235
+msgid "Hide on maximize"
+msgstr "Akna maksimeerimisel"
+
+#: ../src/Grids/PlankGrid.vala:298
+msgid "Primary Monitor"
+msgstr "Primaarne monitor"
+
+#: ../src/Grids/PlankGrid.vala:301
+#, c-format
+msgid "Monitor %d"
+msgstr "Kuvar %d"
+
+#: ../src/Grids/PlankGrid.vala:320
+msgid "Icon Size:"
+msgstr "Ikoonide suurus:"
+
+#: ../src/Grids/PlankGrid.vala:323
+#: ../src/Grids/SuperwingpanelGrid.vala:50
+msgid "Hide Mode:"
+msgstr "Dokk peidetakse:"
+
+#: ../src/Grids/PlankGrid.vala:326
+msgid "Delay (in ms):"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:329
+#: ../src/Grids/TerminalGrid.vala:210
+msgid "Theme:"
+msgstr "Teema:"
+
+#: ../src/Grids/PlankGrid.vala:333
+msgid "Monitor:"
+msgstr "Monitor:"
+
+#: ../src/Grids/PlankGrid.vala:337
+#: ../src/Grids/WingpanelslimGrid.vala:49
+#: ../src/Grids/SuperwingpanelGrid.vala:178
+msgid "Position:"
+msgstr "Asukoht:"
+
+#: ../src/Grids/PlankGrid.vala:340
+msgid "Offset:"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:343
+msgid "Alignment:"
+msgstr "Joondus:"
+
+#: ../src/Grids/PlankGrid.vala:349
+msgid "Lock Items:"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:352
+msgid "Workspace Overview Icon:"
+msgstr "Tööalade ülevaate ikooni:"
+
+#: ../src/Grids/PlankGrid.vala:355
+msgid "Show Desktop Icon:"
+msgstr "Töölaua näitamise ikooni:"
 
 #: ../src/Grids/ShadowsGrid.vala:27
 msgid "Focused Windows:"
@@ -160,125 +279,201 @@ msgstr "Menüüd:"
 msgid "Shadows:"
 msgstr "Akende varjud:"
 
-#: ../src/Grids/CerbereGrid.vala:39
-msgid "Watched Processes"
-msgstr "Jälgitavad protsessid, mida hoitakse tööl"
+#: ../src/Grids/AnimationsGrid.vala:27
+msgid "Open Duration:"
+msgstr "Avamise kestvus:"
 
-#: ../src/Grids/CerbereGrid.vala:50
-#: ../src/Grids/CerbereGrid.vala:60
-#: ../src/Grids/ShortcutsGrid.vala:91
-#: ../src/Grids/ShortcutsGrid.vala:158
-msgid "Add..."
-msgstr "Lisa..."
+#: ../src/Grids/AnimationsGrid.vala:28
+msgid "Close Duration:"
+msgstr "Sulgemise kestvus:"
 
-#: ../src/Grids/CerbereGrid.vala:51
-#: ../src/Grids/CerbereGrid.vala:61
-#: ../src/Grids/ShortcutsGrid.vala:92
-#: ../src/Grids/ShortcutsGrid.vala:159
-msgid "Remove"
-msgstr "Eemalda"
+#: ../src/Grids/AnimationsGrid.vala:29
+msgid "Snap Duration:"
+msgstr "Suurendamise / Vähendamise kestvus:"
 
-#: ../src/Grids/CerbereGrid.vala:62
-#: ../src/Grids/ShortcutsGrid.vala:160
-msgid "Revert to Default"
-msgstr "Taasta vaikimisi väärtused"
+#: ../src/Grids/AnimationsGrid.vala:30
+msgid "Minimize Duration:"
+msgstr "Minimeerimise kestvus:"
 
-#: ../src/Grids/SynapseGrid.vala:46
-msgid "Search Indicator Shortcut:"
-msgstr "Kiirklahv otsingu avamiseks:"
+#: ../src/Grids/AnimationsGrid.vala:31
+msgid "Workspace Switch Duration:"
+msgstr "Tööalade vahetamise kestvus:"
 
-#: ../src/Grids/PlankGrid.vala:47
-msgid "Top"
-msgstr "Üleval"
+#: ../src/Grids/AnimationsGrid.vala:148
+msgid "Animations:"
+msgstr "Akende animatsioonid:"
 
-#: ../src/Grids/PlankGrid.vala:48
-msgid "Bottom"
-msgstr "All"
-
-#: ../src/Grids/PlankGrid.vala:49
-#: ../src/Grids/WingpanelslimGrid.vala:42
-msgid "Left"
-msgstr "Vasakul"
-
-#: ../src/Grids/PlankGrid.vala:50
-#: ../src/Grids/WingpanelslimGrid.vala:40
-msgid "Right"
-msgstr "Paremal"
-
-#: ../src/Grids/PlankGrid.vala:51
-msgid "Center"
+#: ../src/Grids/WingpanelslimGrid.vala:51
+#: ../src/Grids/SuperwingpanelGrid.vala:180
+msgid "Middle"
 msgstr "Keskel"
 
-#: ../src/Grids/PlankGrid.vala:52
-msgid "Panel"
-msgstr "Paneel"
+#: ../src/Grids/WingpanelslimGrid.vala:53
+#: ../src/Grids/SuperwingpanelGrid.vala:182
+msgid "Flush Left"
+msgstr "Vasakule surutud"
 
-#: ../src/Grids/PlankGrid.vala:133
-msgid "Item Alignment:"
-msgstr "Ikoonide joondus:"
+#: ../src/Grids/WingpanelslimGrid.vala:54
+#: ../src/Grids/SuperwingpanelGrid.vala:183
+msgid "Flush Right"
+msgstr "Paremale surutud"
 
-#: ../src/Grids/PlankGrid.vala:171
-msgid "Unknown Value"
-msgstr "Tundmatu väärtus"
+#: ../src/Grids/WingpanelslimGrid.vala:75
+#: ../src/Grids/SuperwingpanelGrid.vala:151
+msgid "Edge:"
+msgstr "Servad:"
 
-#: ../src/Grids/PlankGrid.vala:193
-msgid "Don't hide"
-msgstr "Mitte kunagi"
+#: ../src/Grids/WingpanelslimGrid.vala:76
+#: ../src/Grids/SuperwingpanelGrid.vala:152
+msgid "Slanted"
+msgstr "Kaldu"
 
-#: ../src/Grids/PlankGrid.vala:194
-msgid "Intelligent hide"
-msgstr "Akna ettejäämisel"
+#: ../src/Grids/WingpanelslimGrid.vala:77
+#: ../src/Grids/SuperwingpanelGrid.vala:153
+msgid "Squared"
+msgstr "Kandilised"
 
-#: ../src/Grids/PlankGrid.vala:195
-msgid "Auto hide"
-msgstr "Automaatselt"
+#: ../src/Grids/WingpanelslimGrid.vala:78
+#: ../src/Grids/SuperwingpanelGrid.vala:154
+msgid "Curved 1"
+msgstr "Kurvilised 1"
 
-#: ../src/Grids/PlankGrid.vala:196
-msgid "Hide on maximize"
-msgstr "Akna maksimeerimisel"
+#: ../src/Grids/WingpanelslimGrid.vala:79
+#: ../src/Grids/SuperwingpanelGrid.vala:155
+msgid "Curved 2"
+msgstr "Kurvilised 2"
 
-#: ../src/Grids/PlankGrid.vala:249
-msgid "Primary Monitor"
-msgstr "Primaarne monitor"
+#: ../src/Grids/WingpanelslimGrid.vala:80
+#: ../src/Grids/SuperwingpanelGrid.vala:156
+msgid "Curved 3"
+msgstr "Kurvilised 3"
 
-#: ../src/Grids/PlankGrid.vala:252
-#, c-format
-msgid "Monitor %d"
-msgstr "Kuvar %d"
+#: ../src/Grids/WingpanelslimGrid.vala:100
+msgid "Auto Hide:"
+msgstr "Automaatne peitmine:"
 
-#: ../src/Grids/PlankGrid.vala:272
-msgid "Icon Size:"
-msgstr "Ikoonide suurus:"
+#: ../src/Grids/WingpanelslimGrid.vala:108
+#: ../src/Grids/SuperwingpanelGrid.vala:84
+msgid "Show Launcher:"
+msgstr "Käivitaja näitamine:"
 
-#: ../src/Grids/PlankGrid.vala:276
-msgid "Hide Mode:"
-msgstr "Dokk peidetakse:"
+#: ../src/Grids/WingpanelslimGrid.vala:117
+#: ../src/Grids/SuperwingpanelGrid.vala:113
+msgid "Launcher:"
+msgstr "Käivitaja käsk:"
 
-#: ../src/Grids/PlankGrid.vala:280
-#: ../src/Grids/TerminalGrid.vala:210
-msgid "Theme:"
-msgstr "Teema:"
+#: ../src/Grids/WingpanelslimGrid.vala:163
+msgid "Slim Wingpanel:"
+msgstr "Wingpanel Slim:"
 
-#: ../src/Grids/PlankGrid.vala:285
-msgid "Monitor:"
-msgstr "Monitor:"
+#: ../src/Grids/ShortcutsGrid.vala:68
+msgid "Name"
+msgstr "Nimi"
 
-#: ../src/Grids/PlankGrid.vala:289
-#: ../src/Grids/WingpanelslimGrid.vala:39
-msgid "Position:"
-msgstr "Asukoht:"
+#: ../src/Grids/ShortcutsGrid.vala:69
+msgid "Shortcut"
+msgstr "Kiirklahv"
 
-#: ../src/Grids/PlankGrid.vala:292
-msgid "Alignment:"
-msgstr "Joondus:"
+#: ../src/Grids/ShortcutsGrid.vala:70
+msgid "Command"
+msgstr "Käsk"
 
-#: ../src/Grids/PlankGrid.vala:298
-msgid "Workspace Overview Icon:"
-msgstr "Tööalade ülevaate ikooni:"
+#: ../src/Grids/ShortcutsGrid.vala:117
+msgid "Every field must be filled!"
+msgstr "Täita tuleb kõik väljad."
 
-#: ../src/Grids/PlankGrid.vala:301
-msgid "Show Desktop Icon:"
-msgstr "Töölaua näitamise ikooni:"
+#: ../src/Grids/ShortcutsGrid.vala:126
+msgid "Name:"
+msgstr "Nimi:"
+
+#: ../src/Grids/ShortcutsGrid.vala:129
+msgid "Shortcut:"
+msgstr "Kiirklahv:"
+
+#: ../src/Grids/ShortcutsGrid.vala:132
+msgid "Command:"
+msgstr "Käsk:"
+
+#: ../src/Grids/SuperwingpanelGrid.vala:30
+msgid "Super Wingpanel:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:51
+msgid "Never Hide"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:52
+msgid "Intellihide"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:53
+msgid "Intellislim"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:54
+msgid "Auto Hide"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:75
+msgid "Show Window Controls:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:93
+msgid "Launcher Text Override:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:133
+msgid "Slim Mode:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:141
+msgid "Separate Launcher:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:205
+msgid "Margin:"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:38
+msgid "Locale"
+msgstr "Kohalik"
+
+#: ../src/Grids/FilesGrid.vala:39
+msgid "ISO"
+msgstr "Ülemaailmne"
+
+#: ../src/Grids/FilesGrid.vala:40
+msgid "Informal"
+msgstr "Ametlik"
+
+#: ../src/Grids/FilesGrid.vala:85
+msgid "Single Click:"
+msgstr "Ühe klõpsuga avamine:"
+
+#: ../src/Grids/FilesGrid.vala:88
+msgid "Date Format:"
+msgstr "Kuupäeva formaat:"
+
+#: ../src/Grids/FilesGrid.vala:91
+msgid "Sidebar Icon Size:"
+msgstr "Külgpaneeli ikooni suurus:"
+
+#: ../src/Grids/TerminalGrid.vala:180
+#: ../src/Grids/AppearanceGrid.vala:124
+msgid "Custom"
+msgstr "Kohandatud"
+
+#: ../src/Grids/TerminalGrid.vala:199
+msgid "Limit Scrollback Lines:"
+msgstr "Piira tagasikeritavaid ridu:"
+
+#: ../src/Grids/TerminalGrid.vala:203
+msgid "Custom Font:"
+msgstr "Kohandatud kirjatüüp:"
+
+#: ../src/Grids/TerminalGrid.vala:207
+msgid "Opacity:"
+msgstr "Läbipaistvus:"
 
 #: ../src/Grids/MiscGrid.vala:48
 #: ../src/Grids/MiscGrid.vala:75
@@ -346,117 +541,25 @@ msgstr "Kompaktsed kerimisribad:"
 msgid "Natural Scrolling:"
 msgstr "Vastupidine tuutepundlik kerimine:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:41
-msgid "Middle"
-msgstr "Keskel"
+#: ../src/Grids/FontsGrid.vala:98
+msgid "Default Font:"
+msgstr "Tavaline:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:43
-msgid "Flush Left"
-msgstr "Vasakule surutud"
+#: ../src/Grids/FontsGrid.vala:101
+msgid "Document Font:"
+msgstr "Dokumendid:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:44
-msgid "Flush Right"
-msgstr "Paremale surutud"
+#: ../src/Grids/FontsGrid.vala:104
+msgid "Monospace Font:"
+msgstr "Monospace:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:65
-msgid "Edge:"
-msgstr "Servad:"
+#: ../src/Grids/FontsGrid.vala:107
+msgid "Window Title Font:"
+msgstr "Akna pealkirjad:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:66
-msgid "Slanted"
-msgstr "Kaldu"
-
-#: ../src/Grids/WingpanelslimGrid.vala:67
-msgid "Squared"
-msgstr "Kandilised"
-
-#: ../src/Grids/WingpanelslimGrid.vala:68
-msgid "Curved 1"
-msgstr "Kurvilised 1"
-
-#: ../src/Grids/WingpanelslimGrid.vala:69
-msgid "Curved 2"
-msgstr "Kurvilised 2"
-
-#: ../src/Grids/WingpanelslimGrid.vala:70
-msgid "Curved 3"
-msgstr "Kurvilised 3"
-
-#: ../src/Grids/WingpanelslimGrid.vala:90
-msgid "Auto Hide:"
-msgstr "Automaatne peitmine:"
-
-#: ../src/Grids/WingpanelslimGrid.vala:98
-msgid "Show Launcher:"
-msgstr "Käivitaja näitamine:"
-
-#: ../src/Grids/WingpanelslimGrid.vala:107
-msgid "Launcher:"
-msgstr "Käivitaja käsk:"
-
-#: ../src/Grids/WingpanelslimGrid.vala:151
-msgid "Slim Wingpanel:"
-msgstr "Wingpanel Slim:"
-
-#: ../src/Grids/AnimationsGrid.vala:27
-msgid "Open Duration:"
-msgstr "Avamise kestvus:"
-
-#: ../src/Grids/AnimationsGrid.vala:28
-msgid "Close Duration:"
-msgstr "Sulgemise kestvus:"
-
-#: ../src/Grids/AnimationsGrid.vala:29
-msgid "Snap Duration:"
-msgstr "Suurendamise / Vähendamise kestvus:"
-
-#: ../src/Grids/AnimationsGrid.vala:30
-msgid "Minimize Duration:"
-msgstr "Minimeerimise kestvus:"
-
-#: ../src/Grids/AnimationsGrid.vala:31
-msgid "Workspace Switch Duration:"
-msgstr "Tööalade vahetamise kestvus:"
-
-#: ../src/Grids/AnimationsGrid.vala:148
-msgid "Animations:"
-msgstr "Akende animatsioonid:"
-
-#: ../src/Grids/SlingshotGrid.vala:93
-msgid "Rows:"
-msgstr "Ridu:"
-
-#: ../src/Grids/SlingshotGrid.vala:96
-msgid "Columns:"
-msgstr "Veerge:"
-
-#: ../src/Grids/ShortcutsGrid.vala:68
-msgid "Name"
-msgstr "Nimi"
-
-#: ../src/Grids/ShortcutsGrid.vala:69
-msgid "Shortcut"
-msgstr "Kiirklahv"
-
-#: ../src/Grids/ShortcutsGrid.vala:70
-msgid "Command"
-msgstr "Käsk"
-
-#: ../src/Grids/ShortcutsGrid.vala:117
-msgid "Every field must be filled!"
-msgstr "Täita tuleb kõik väljad."
-
-#: ../src/Grids/ShortcutsGrid.vala:126
-msgid "Name:"
-msgstr "Nimi:"
-
-#: ../src/Grids/ShortcutsGrid.vala:129
-msgid "Shortcut:"
-msgstr "Kiirklahv:"
-
-#: ../src/Grids/ShortcutsGrid.vala:132
-msgid "Command:"
-msgstr "Käsk:"
+#: ../src/Grids/SynapseGrid.vala:46
+msgid "Search Indicator Shortcut:"
+msgstr "Kiirklahv otsingu avamiseks:"
 
 #: ../src/Grids/AppearanceGrid.vala:116
 msgid "Custom Layout:"
@@ -482,11 +585,6 @@ msgstr "Windows"
 msgid "OS X"
 msgstr "Mac OS X"
 
-#: ../src/Grids/AppearanceGrid.vala:124
-#: ../src/Grids/TerminalGrid.vala:180
-msgid "Custom"
-msgstr "Kohandatud"
-
 #: ../src/Grids/AppearanceGrid.vala:183
 msgid "Window Decoration Theme:"
 msgstr "Akna dekoratsioonid:"
@@ -506,37 +604,3 @@ msgstr "Kursor:"
 #: ../src/Grids/AppearanceGrid.vala:195
 msgid "Button Layout:"
 msgstr "Akna nuppude asetus:"
-
-#: ../src/Grids/FontsGrid.vala:98
-msgid "Default Font:"
-msgstr "Tavaline:"
-
-#: ../src/Grids/FontsGrid.vala:101
-msgid "Document Font:"
-msgstr "Dokumendid:"
-
-#: ../src/Grids/FontsGrid.vala:104
-msgid "Monospace Font:"
-msgstr "Monospace:"
-
-#: ../src/Grids/FontsGrid.vala:107
-msgid "Window Title Font:"
-msgstr "Akna pealkirjad:"
-
-#: ../src/Grids/TerminalGrid.vala:199
-msgid "Limit Scrollback Lines:"
-msgstr "Piira tagasikeritavaid ridu:"
-
-#: ../src/Grids/TerminalGrid.vala:203
-msgid "Custom Font:"
-msgstr "Kohandatud kirjatüüp:"
-
-#: ../src/Grids/TerminalGrid.vala:207
-msgid "Opacity:"
-msgstr "Läbipaistvus:"
-
-#: ../src/Widgets/AcceleratorInputWidget.vala:67
-#: ../src/Widgets/AcceleratorInputWidget.vala:85
-#: ../src/Objects/ShortcutObject.vala:38
-msgid "Disabled"
-msgstr "Keelatud"

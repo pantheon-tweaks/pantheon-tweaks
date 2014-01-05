@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-08-20 21:04+0100\n"
+"POT-Creation-Date: 2014-01-05 04:04+0100\n"
 "PO-Revision-Date: 2013-10-29 14:58+0000\n"
 "Last-Translator: George Petsagourakis <Unknown>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-10-30 06:20+0000\n"
-"X-Generator: Launchpad (build 16820)\n"
+"X-Launchpad-Export-Date: 2014-01-05 05:50+0000\n"
+"X-Generator: Launchpad (build 16877)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
@@ -77,63 +77,182 @@ msgstr "Τερματικό"
 msgid "Wingpanel Slim"
 msgstr ""
 
-#: ../src/Grids/FilesGrid.vala:38
-msgid "Locale"
-msgstr "Γλώσσα"
+#: ../src/Tweaks.vala:109
+msgid "Super Wingpanel"
+msgstr ""
 
-#: ../src/Grids/FilesGrid.vala:39
-msgid "ISO"
-msgstr "ISO"
+#: ../src/Objects/ShortcutObject.vala:38
+#: ../src/Widgets/AcceleratorInputWidget.vala:67
+#: ../src/Widgets/AcceleratorInputWidget.vala:85
+msgid "Disabled"
+msgstr ""
 
-#: ../src/Grids/FilesGrid.vala:40
-msgid "Informal"
-msgstr "Ανεπίσημος"
-
-#: ../src/Grids/FilesGrid.vala:61
 #: ../src/Grids/SlingshotGrid.vala:29
 msgid "Smallest"
 msgstr ""
 
-#: ../src/Grids/FilesGrid.vala:62
 #: ../src/Grids/SlingshotGrid.vala:30
 msgid "Smaller"
 msgstr "Μικρότερο"
 
-#: ../src/Grids/FilesGrid.vala:63
 #: ../src/Grids/SlingshotGrid.vala:31
 msgid "Small"
 msgstr "Μικρό"
 
-#: ../src/Grids/FilesGrid.vala:64
 #: ../src/Grids/SlingshotGrid.vala:32
 msgid "Normal"
 msgstr "Κανονικό"
 
-#: ../src/Grids/FilesGrid.vala:65
 #: ../src/Grids/SlingshotGrid.vala:33
 msgid "Large"
 msgstr "Μεγάλο"
 
-#: ../src/Grids/FilesGrid.vala:66
 #: ../src/Grids/SlingshotGrid.vala:34
 msgid "Larger"
 msgstr "Μεγαλύτερο"
 
-#: ../src/Grids/FilesGrid.vala:67
 #: ../src/Grids/SlingshotGrid.vala:35
 msgid "Largest"
 msgstr ""
 
-#: ../src/Grids/FilesGrid.vala:85
-msgid "Single Click:"
-msgstr "Μονό Κλικ:"
+#: ../src/Grids/SlingshotGrid.vala:93
+msgid "Rows:"
+msgstr "Γραμμές:"
 
-#: ../src/Grids/FilesGrid.vala:88
-msgid "Date Format:"
-msgstr "Μορφή Ημερομηνίας:"
+#: ../src/Grids/SlingshotGrid.vala:96
+msgid "Columns:"
+msgstr "Στήλες:"
 
-#: ../src/Grids/FilesGrid.vala:91
-msgid "Sidebar Icon Size:"
+#: ../src/Grids/CerbereGrid.vala:39
+msgid "Watched Processes"
+msgstr ""
+
+#: ../src/Grids/CerbereGrid.vala:50
+#: ../src/Grids/CerbereGrid.vala:60
+#: ../src/Grids/ShortcutsGrid.vala:91
+#: ../src/Grids/ShortcutsGrid.vala:158
+msgid "Add..."
+msgstr ""
+
+#: ../src/Grids/CerbereGrid.vala:51
+#: ../src/Grids/CerbereGrid.vala:61
+#: ../src/Grids/ShortcutsGrid.vala:92
+#: ../src/Grids/ShortcutsGrid.vala:159
+msgid "Remove"
+msgstr ""
+
+#: ../src/Grids/CerbereGrid.vala:62
+#: ../src/Grids/ShortcutsGrid.vala:160
+msgid "Revert to Default"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:67
+msgid "Top"
+msgstr "Πάνω"
+
+#: ../src/Grids/PlankGrid.vala:68
+msgid "Bottom"
+msgstr "Κάτω"
+
+#: ../src/Grids/PlankGrid.vala:69
+#: ../src/Grids/WingpanelslimGrid.vala:52
+#: ../src/Grids/SuperwingpanelGrid.vala:181
+msgid "Left"
+msgstr "Αριστερά"
+
+#: ../src/Grids/PlankGrid.vala:70
+#: ../src/Grids/WingpanelslimGrid.vala:50
+#: ../src/Grids/SuperwingpanelGrid.vala:179
+msgid "Right"
+msgstr "Δεξιά"
+
+#: ../src/Grids/PlankGrid.vala:71
+msgid "Center"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:72
+msgid "Panel"
+msgstr "Πίνακας"
+
+#: ../src/Grids/PlankGrid.vala:173
+msgid "Item Alignment:"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:211
+msgid "Unknown Value"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:232
+msgid "Don't hide"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:233
+msgid "Intelligent hide"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:234
+msgid "Auto hide"
+msgstr "Αυτόματη απόκρυψη"
+
+#: ../src/Grids/PlankGrid.vala:235
+msgid "Hide on maximize"
+msgstr "Απόκρυψη στη μεγιστοποίηση"
+
+#: ../src/Grids/PlankGrid.vala:298
+msgid "Primary Monitor"
+msgstr "Κύρια Οθόνη"
+
+#: ../src/Grids/PlankGrid.vala:301
+#, c-format
+msgid "Monitor %d"
+msgstr "Οθόνη %d"
+
+#: ../src/Grids/PlankGrid.vala:320
+msgid "Icon Size:"
+msgstr "Μέγεθος εικονιδίου:"
+
+#: ../src/Grids/PlankGrid.vala:323
+#: ../src/Grids/SuperwingpanelGrid.vala:50
+msgid "Hide Mode:"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:326
+msgid "Delay (in ms):"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:329
+#: ../src/Grids/TerminalGrid.vala:210
+msgid "Theme:"
+msgstr "Θέμα:"
+
+#: ../src/Grids/PlankGrid.vala:333
+msgid "Monitor:"
+msgstr "Οθόνη:"
+
+#: ../src/Grids/PlankGrid.vala:337
+#: ../src/Grids/WingpanelslimGrid.vala:49
+#: ../src/Grids/SuperwingpanelGrid.vala:178
+msgid "Position:"
+msgstr "Θέση:"
+
+#: ../src/Grids/PlankGrid.vala:340
+msgid "Offset:"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:343
+msgid "Alignment:"
+msgstr "Στοίχιση:"
+
+#: ../src/Grids/PlankGrid.vala:349
+msgid "Lock Items:"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:352
+msgid "Workspace Overview Icon:"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:355
+msgid "Show Desktop Icon:"
 msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:27
@@ -160,124 +279,200 @@ msgstr "Μενού:"
 msgid "Shadows:"
 msgstr "Σκιές:"
 
-#: ../src/Grids/CerbereGrid.vala:39
-msgid "Watched Processes"
+#: ../src/Grids/AnimationsGrid.vala:27
+msgid "Open Duration:"
 msgstr ""
 
-#: ../src/Grids/CerbereGrid.vala:50
-#: ../src/Grids/CerbereGrid.vala:60
-#: ../src/Grids/ShortcutsGrid.vala:91
-#: ../src/Grids/ShortcutsGrid.vala:158
-msgid "Add..."
+#: ../src/Grids/AnimationsGrid.vala:28
+msgid "Close Duration:"
 msgstr ""
 
-#: ../src/Grids/CerbereGrid.vala:51
-#: ../src/Grids/CerbereGrid.vala:61
-#: ../src/Grids/ShortcutsGrid.vala:92
-#: ../src/Grids/ShortcutsGrid.vala:159
-msgid "Remove"
+#: ../src/Grids/AnimationsGrid.vala:29
+msgid "Snap Duration:"
 msgstr ""
 
-#: ../src/Grids/CerbereGrid.vala:62
-#: ../src/Grids/ShortcutsGrid.vala:160
-msgid "Revert to Default"
+#: ../src/Grids/AnimationsGrid.vala:30
+msgid "Minimize Duration:"
 msgstr ""
 
-#: ../src/Grids/SynapseGrid.vala:46
-msgid "Search Indicator Shortcut:"
+#: ../src/Grids/AnimationsGrid.vala:31
+msgid "Workspace Switch Duration:"
 msgstr ""
 
-#: ../src/Grids/PlankGrid.vala:47
-msgid "Top"
-msgstr "Πάνω"
+#: ../src/Grids/AnimationsGrid.vala:148
+msgid "Animations:"
+msgstr "Εφέ κίνησης:"
 
-#: ../src/Grids/PlankGrid.vala:48
-msgid "Bottom"
-msgstr "Κάτω"
+#: ../src/Grids/WingpanelslimGrid.vala:51
+#: ../src/Grids/SuperwingpanelGrid.vala:180
+msgid "Middle"
+msgstr "Μέση"
 
-#: ../src/Grids/PlankGrid.vala:49
-#: ../src/Grids/WingpanelslimGrid.vala:42
-msgid "Left"
-msgstr "Αριστερά"
-
-#: ../src/Grids/PlankGrid.vala:50
-#: ../src/Grids/WingpanelslimGrid.vala:40
-msgid "Right"
-msgstr "Δεξιά"
-
-#: ../src/Grids/PlankGrid.vala:51
-msgid "Center"
+#: ../src/Grids/WingpanelslimGrid.vala:53
+#: ../src/Grids/SuperwingpanelGrid.vala:182
+msgid "Flush Left"
 msgstr ""
 
-#: ../src/Grids/PlankGrid.vala:52
-msgid "Panel"
-msgstr "Πίνακας"
-
-#: ../src/Grids/PlankGrid.vala:133
-msgid "Item Alignment:"
+#: ../src/Grids/WingpanelslimGrid.vala:54
+#: ../src/Grids/SuperwingpanelGrid.vala:183
+msgid "Flush Right"
 msgstr ""
 
-#: ../src/Grids/PlankGrid.vala:171
-msgid "Unknown Value"
+#: ../src/Grids/WingpanelslimGrid.vala:75
+#: ../src/Grids/SuperwingpanelGrid.vala:151
+msgid "Edge:"
 msgstr ""
 
-#: ../src/Grids/PlankGrid.vala:193
-msgid "Don't hide"
+#: ../src/Grids/WingpanelslimGrid.vala:76
+#: ../src/Grids/SuperwingpanelGrid.vala:152
+msgid "Slanted"
 msgstr ""
 
-#: ../src/Grids/PlankGrid.vala:194
-msgid "Intelligent hide"
+#: ../src/Grids/WingpanelslimGrid.vala:77
+#: ../src/Grids/SuperwingpanelGrid.vala:153
+msgid "Squared"
 msgstr ""
 
-#: ../src/Grids/PlankGrid.vala:195
-msgid "Auto hide"
-msgstr "Αυτόματη απόκρυψη"
-
-#: ../src/Grids/PlankGrid.vala:196
-msgid "Hide on maximize"
-msgstr "Απόκρυψη στη μεγιστοποίηση"
-
-#: ../src/Grids/PlankGrid.vala:249
-msgid "Primary Monitor"
-msgstr "Κύρια Οθόνη"
-
-#: ../src/Grids/PlankGrid.vala:252
-#, c-format
-msgid "Monitor %d"
-msgstr "Οθόνη %d"
-
-#: ../src/Grids/PlankGrid.vala:272
-msgid "Icon Size:"
-msgstr "Μέγεθος εικονιδίου:"
-
-#: ../src/Grids/PlankGrid.vala:276
-msgid "Hide Mode:"
+#: ../src/Grids/WingpanelslimGrid.vala:78
+#: ../src/Grids/SuperwingpanelGrid.vala:154
+msgid "Curved 1"
 msgstr ""
 
-#: ../src/Grids/PlankGrid.vala:280
-#: ../src/Grids/TerminalGrid.vala:210
-msgid "Theme:"
-msgstr "Θέμα:"
-
-#: ../src/Grids/PlankGrid.vala:285
-msgid "Monitor:"
-msgstr "Οθόνη:"
-
-#: ../src/Grids/PlankGrid.vala:289
-#: ../src/Grids/WingpanelslimGrid.vala:39
-msgid "Position:"
-msgstr "Θέση:"
-
-#: ../src/Grids/PlankGrid.vala:292
-msgid "Alignment:"
-msgstr "Στοίχιση:"
-
-#: ../src/Grids/PlankGrid.vala:298
-msgid "Workspace Overview Icon:"
+#: ../src/Grids/WingpanelslimGrid.vala:79
+#: ../src/Grids/SuperwingpanelGrid.vala:155
+msgid "Curved 2"
 msgstr ""
 
-#: ../src/Grids/PlankGrid.vala:301
-msgid "Show Desktop Icon:"
+#: ../src/Grids/WingpanelslimGrid.vala:80
+#: ../src/Grids/SuperwingpanelGrid.vala:156
+msgid "Curved 3"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:100
+msgid "Auto Hide:"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:108
+#: ../src/Grids/SuperwingpanelGrid.vala:84
+msgid "Show Launcher:"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:117
+#: ../src/Grids/SuperwingpanelGrid.vala:113
+msgid "Launcher:"
+msgstr ""
+
+#: ../src/Grids/WingpanelslimGrid.vala:163
+msgid "Slim Wingpanel:"
+msgstr ""
+
+#: ../src/Grids/ShortcutsGrid.vala:68
+msgid "Name"
+msgstr ""
+
+#: ../src/Grids/ShortcutsGrid.vala:69
+msgid "Shortcut"
+msgstr ""
+
+#: ../src/Grids/ShortcutsGrid.vala:70
+msgid "Command"
+msgstr ""
+
+#: ../src/Grids/ShortcutsGrid.vala:117
+msgid "Every field must be filled!"
+msgstr ""
+
+#: ../src/Grids/ShortcutsGrid.vala:126
+msgid "Name:"
+msgstr ""
+
+#: ../src/Grids/ShortcutsGrid.vala:129
+msgid "Shortcut:"
+msgstr ""
+
+#: ../src/Grids/ShortcutsGrid.vala:132
+msgid "Command:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:30
+msgid "Super Wingpanel:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:51
+msgid "Never Hide"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:52
+msgid "Intellihide"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:53
+msgid "Intellislim"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:54
+msgid "Auto Hide"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:75
+msgid "Show Window Controls:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:93
+msgid "Launcher Text Override:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:133
+msgid "Slim Mode:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:141
+msgid "Separate Launcher:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:205
+msgid "Margin:"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:38
+msgid "Locale"
+msgstr "Γλώσσα"
+
+#: ../src/Grids/FilesGrid.vala:39
+msgid "ISO"
+msgstr "ISO"
+
+#: ../src/Grids/FilesGrid.vala:40
+msgid "Informal"
+msgstr "Ανεπίσημος"
+
+#: ../src/Grids/FilesGrid.vala:85
+msgid "Single Click:"
+msgstr "Μονό Κλικ:"
+
+#: ../src/Grids/FilesGrid.vala:88
+msgid "Date Format:"
+msgstr "Μορφή Ημερομηνίας:"
+
+#: ../src/Grids/FilesGrid.vala:91
+msgid "Sidebar Icon Size:"
+msgstr ""
+
+#: ../src/Grids/TerminalGrid.vala:180
+#: ../src/Grids/AppearanceGrid.vala:124
+msgid "Custom"
+msgstr "Προσαρμοσμένο"
+
+#: ../src/Grids/TerminalGrid.vala:199
+msgid "Limit Scrollback Lines:"
+msgstr ""
+
+#: ../src/Grids/TerminalGrid.vala:203
+msgid "Custom Font:"
+msgstr "Προσαρμοσμένη Γραμματοσειρά:"
+
+#: ../src/Grids/TerminalGrid.vala:207
+msgid "Opacity:"
 msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:48
@@ -346,116 +541,24 @@ msgstr ""
 msgid "Natural Scrolling:"
 msgstr ""
 
-#: ../src/Grids/WingpanelslimGrid.vala:41
-msgid "Middle"
-msgstr "Μέση"
+#: ../src/Grids/FontsGrid.vala:98
+msgid "Default Font:"
+msgstr "Προεπιλεγμένη γραμματοσειρά:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:43
-msgid "Flush Left"
+#: ../src/Grids/FontsGrid.vala:101
+msgid "Document Font:"
+msgstr "Γραμματοσειρά Εγγράφων:"
+
+#: ../src/Grids/FontsGrid.vala:104
+msgid "Monospace Font:"
 msgstr ""
 
-#: ../src/Grids/WingpanelslimGrid.vala:44
-msgid "Flush Right"
+#: ../src/Grids/FontsGrid.vala:107
+msgid "Window Title Font:"
 msgstr ""
 
-#: ../src/Grids/WingpanelslimGrid.vala:65
-msgid "Edge:"
-msgstr ""
-
-#: ../src/Grids/WingpanelslimGrid.vala:66
-msgid "Slanted"
-msgstr ""
-
-#: ../src/Grids/WingpanelslimGrid.vala:67
-msgid "Squared"
-msgstr ""
-
-#: ../src/Grids/WingpanelslimGrid.vala:68
-msgid "Curved 1"
-msgstr ""
-
-#: ../src/Grids/WingpanelslimGrid.vala:69
-msgid "Curved 2"
-msgstr ""
-
-#: ../src/Grids/WingpanelslimGrid.vala:70
-msgid "Curved 3"
-msgstr ""
-
-#: ../src/Grids/WingpanelslimGrid.vala:90
-msgid "Auto Hide:"
-msgstr ""
-
-#: ../src/Grids/WingpanelslimGrid.vala:98
-msgid "Show Launcher:"
-msgstr ""
-
-#: ../src/Grids/WingpanelslimGrid.vala:107
-msgid "Launcher:"
-msgstr ""
-
-#: ../src/Grids/WingpanelslimGrid.vala:151
-msgid "Slim Wingpanel:"
-msgstr ""
-
-#: ../src/Grids/AnimationsGrid.vala:27
-msgid "Open Duration:"
-msgstr ""
-
-#: ../src/Grids/AnimationsGrid.vala:28
-msgid "Close Duration:"
-msgstr ""
-
-#: ../src/Grids/AnimationsGrid.vala:29
-msgid "Snap Duration:"
-msgstr ""
-
-#: ../src/Grids/AnimationsGrid.vala:30
-msgid "Minimize Duration:"
-msgstr ""
-
-#: ../src/Grids/AnimationsGrid.vala:31
-msgid "Workspace Switch Duration:"
-msgstr ""
-
-#: ../src/Grids/AnimationsGrid.vala:148
-msgid "Animations:"
-msgstr "Εφέ κίνησης:"
-
-#: ../src/Grids/SlingshotGrid.vala:93
-msgid "Rows:"
-msgstr "Γραμμές:"
-
-#: ../src/Grids/SlingshotGrid.vala:96
-msgid "Columns:"
-msgstr "Στήλες:"
-
-#: ../src/Grids/ShortcutsGrid.vala:68
-msgid "Name"
-msgstr ""
-
-#: ../src/Grids/ShortcutsGrid.vala:69
-msgid "Shortcut"
-msgstr ""
-
-#: ../src/Grids/ShortcutsGrid.vala:70
-msgid "Command"
-msgstr ""
-
-#: ../src/Grids/ShortcutsGrid.vala:117
-msgid "Every field must be filled!"
-msgstr ""
-
-#: ../src/Grids/ShortcutsGrid.vala:126
-msgid "Name:"
-msgstr ""
-
-#: ../src/Grids/ShortcutsGrid.vala:129
-msgid "Shortcut:"
-msgstr ""
-
-#: ../src/Grids/ShortcutsGrid.vala:132
-msgid "Command:"
+#: ../src/Grids/SynapseGrid.vala:46
+msgid "Search Indicator Shortcut:"
 msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:116
@@ -482,11 +585,6 @@ msgstr "Παράθυρα"
 msgid "OS X"
 msgstr "OS X"
 
-#: ../src/Grids/AppearanceGrid.vala:124
-#: ../src/Grids/TerminalGrid.vala:180
-msgid "Custom"
-msgstr "Προσαρμοσμένο"
-
 #: ../src/Grids/AppearanceGrid.vala:183
 msgid "Window Decoration Theme:"
 msgstr ""
@@ -505,38 +603,4 @@ msgstr "Θέμα Δείκτη:"
 
 #: ../src/Grids/AppearanceGrid.vala:195
 msgid "Button Layout:"
-msgstr ""
-
-#: ../src/Grids/FontsGrid.vala:98
-msgid "Default Font:"
-msgstr "Προεπιλεγμένη γραμματοσειρά:"
-
-#: ../src/Grids/FontsGrid.vala:101
-msgid "Document Font:"
-msgstr "Γραμματοσειρά Εγγράφων:"
-
-#: ../src/Grids/FontsGrid.vala:104
-msgid "Monospace Font:"
-msgstr ""
-
-#: ../src/Grids/FontsGrid.vala:107
-msgid "Window Title Font:"
-msgstr ""
-
-#: ../src/Grids/TerminalGrid.vala:199
-msgid "Limit Scrollback Lines:"
-msgstr ""
-
-#: ../src/Grids/TerminalGrid.vala:203
-msgid "Custom Font:"
-msgstr "Προσαρμοσμένη Γραμματοσειρά:"
-
-#: ../src/Grids/TerminalGrid.vala:207
-msgid "Opacity:"
-msgstr ""
-
-#: ../src/Widgets/AcceleratorInputWidget.vala:67
-#: ../src/Widgets/AcceleratorInputWidget.vala:85
-#: ../src/Objects/ShortcutObject.vala:38
-msgid "Disabled"
 msgstr ""

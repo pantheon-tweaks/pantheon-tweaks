@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-08-20 21:04+0100\n"
+"POT-Creation-Date: 2014-01-05 04:04+0100\n"
 "PO-Revision-Date: 2013-09-01 09:14+0000\n"
 "Last-Translator: Иван Благојевић <ivan_blagojevic@mail.com>\n"
 "Language-Team: Serbian <sr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-09-29 06:18+0000\n"
-"X-Generator: Launchpad (build 16774)\n"
+"X-Launchpad-Export-Date: 2014-01-05 05:50+0000\n"
+"X-Generator: Launchpad (build 16877)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
@@ -77,64 +77,183 @@ msgstr "Терминал"
 msgid "Wingpanel Slim"
 msgstr "Вингпанел Слим"
 
-#: ../src/Grids/FilesGrid.vala:38
-msgid "Locale"
-msgstr "Локалитет"
+#: ../src/Tweaks.vala:109
+msgid "Super Wingpanel"
+msgstr ""
 
-#: ../src/Grids/FilesGrid.vala:39
-msgid "ISO"
-msgstr "ИСО"
+#: ../src/Objects/ShortcutObject.vala:38
+#: ../src/Widgets/AcceleratorInputWidget.vala:67
+#: ../src/Widgets/AcceleratorInputWidget.vala:85
+msgid "Disabled"
+msgstr "Онемогућено"
 
-#: ../src/Grids/FilesGrid.vala:40
-msgid "Informal"
-msgstr "Неформалан"
-
-#: ../src/Grids/FilesGrid.vala:61
 #: ../src/Grids/SlingshotGrid.vala:29
 msgid "Smallest"
 msgstr "Најмање"
 
-#: ../src/Grids/FilesGrid.vala:62
 #: ../src/Grids/SlingshotGrid.vala:30
 msgid "Smaller"
 msgstr "Мањи"
 
-#: ../src/Grids/FilesGrid.vala:63
 #: ../src/Grids/SlingshotGrid.vala:31
 msgid "Small"
 msgstr "Мало"
 
-#: ../src/Grids/FilesGrid.vala:64
 #: ../src/Grids/SlingshotGrid.vala:32
 msgid "Normal"
 msgstr "Обично"
 
-#: ../src/Grids/FilesGrid.vala:65
 #: ../src/Grids/SlingshotGrid.vala:33
 msgid "Large"
 msgstr "Велико"
 
-#: ../src/Grids/FilesGrid.vala:66
 #: ../src/Grids/SlingshotGrid.vala:34
 msgid "Larger"
 msgstr "Веће"
 
-#: ../src/Grids/FilesGrid.vala:67
 #: ../src/Grids/SlingshotGrid.vala:35
 msgid "Largest"
 msgstr "Највеће"
 
-#: ../src/Grids/FilesGrid.vala:85
-msgid "Single Click:"
-msgstr "Једноструки клик"
+#: ../src/Grids/SlingshotGrid.vala:93
+msgid "Rows:"
+msgstr "Редови:"
 
-#: ../src/Grids/FilesGrid.vala:88
-msgid "Date Format:"
-msgstr "Формат датума:"
+#: ../src/Grids/SlingshotGrid.vala:96
+msgid "Columns:"
+msgstr "Колоне:"
 
-#: ../src/Grids/FilesGrid.vala:91
-msgid "Sidebar Icon Size:"
-msgstr "Величина иконе у плочи"
+#: ../src/Grids/CerbereGrid.vala:39
+msgid "Watched Processes"
+msgstr "Надгледани процеси"
+
+#: ../src/Grids/CerbereGrid.vala:50
+#: ../src/Grids/CerbereGrid.vala:60
+#: ../src/Grids/ShortcutsGrid.vala:91
+#: ../src/Grids/ShortcutsGrid.vala:158
+msgid "Add..."
+msgstr "Додај..."
+
+#: ../src/Grids/CerbereGrid.vala:51
+#: ../src/Grids/CerbereGrid.vala:61
+#: ../src/Grids/ShortcutsGrid.vala:92
+#: ../src/Grids/ShortcutsGrid.vala:159
+msgid "Remove"
+msgstr "Уклони"
+
+#: ../src/Grids/CerbereGrid.vala:62
+#: ../src/Grids/ShortcutsGrid.vala:160
+msgid "Revert to Default"
+msgstr "Врати на подразумевано"
+
+#: ../src/Grids/PlankGrid.vala:67
+msgid "Top"
+msgstr "Врх"
+
+#: ../src/Grids/PlankGrid.vala:68
+msgid "Bottom"
+msgstr "Дно"
+
+#: ../src/Grids/PlankGrid.vala:69
+#: ../src/Grids/WingpanelslimGrid.vala:52
+#: ../src/Grids/SuperwingpanelGrid.vala:181
+msgid "Left"
+msgstr "Лево"
+
+#: ../src/Grids/PlankGrid.vala:70
+#: ../src/Grids/WingpanelslimGrid.vala:50
+#: ../src/Grids/SuperwingpanelGrid.vala:179
+msgid "Right"
+msgstr "Десно"
+
+#: ../src/Grids/PlankGrid.vala:71
+msgid "Center"
+msgstr "Центрирано"
+
+#: ../src/Grids/PlankGrid.vala:72
+msgid "Panel"
+msgstr "Полица"
+
+#: ../src/Grids/PlankGrid.vala:173
+msgid "Item Alignment:"
+msgstr "Поравнање ставки:"
+
+#: ../src/Grids/PlankGrid.vala:211
+msgid "Unknown Value"
+msgstr "Непозната вредност"
+
+#: ../src/Grids/PlankGrid.vala:232
+msgid "Don't hide"
+msgstr "Немој скривати"
+
+#: ../src/Grids/PlankGrid.vala:233
+msgid "Intelligent hide"
+msgstr "Интелигентно скривање"
+
+#: ../src/Grids/PlankGrid.vala:234
+msgid "Auto hide"
+msgstr "Сакриј аутоматски"
+
+#: ../src/Grids/PlankGrid.vala:235
+msgid "Hide on maximize"
+msgstr "Сакриј при увећавању"
+
+#: ../src/Grids/PlankGrid.vala:298
+msgid "Primary Monitor"
+msgstr "Примарни монитор"
+
+#: ../src/Grids/PlankGrid.vala:301
+#, c-format
+msgid "Monitor %d"
+msgstr "Монитор %d"
+
+#: ../src/Grids/PlankGrid.vala:320
+msgid "Icon Size:"
+msgstr "Величина иконе:"
+
+#: ../src/Grids/PlankGrid.vala:323
+#: ../src/Grids/SuperwingpanelGrid.vala:50
+msgid "Hide Mode:"
+msgstr "Начин скривања:"
+
+#: ../src/Grids/PlankGrid.vala:326
+msgid "Delay (in ms):"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:329
+#: ../src/Grids/TerminalGrid.vala:210
+msgid "Theme:"
+msgstr "Тема:"
+
+#: ../src/Grids/PlankGrid.vala:333
+msgid "Monitor:"
+msgstr "Монитор:"
+
+#: ../src/Grids/PlankGrid.vala:337
+#: ../src/Grids/WingpanelslimGrid.vala:49
+#: ../src/Grids/SuperwingpanelGrid.vala:178
+msgid "Position:"
+msgstr "Положај:"
+
+#: ../src/Grids/PlankGrid.vala:340
+msgid "Offset:"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:343
+msgid "Alignment:"
+msgstr "Поравнање:"
+
+#: ../src/Grids/PlankGrid.vala:349
+msgid "Lock Items:"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:352
+msgid "Workspace Overview Icon:"
+msgstr "Икона за преглед површина:"
+
+#: ../src/Grids/PlankGrid.vala:355
+msgid "Show Desktop Icon:"
+msgstr "Икона Прикажи радну површ"
 
 #: ../src/Grids/ShadowsGrid.vala:27
 msgid "Focused Windows:"
@@ -160,125 +279,201 @@ msgstr "Изборник:"
 msgid "Shadows:"
 msgstr "Сенке:"
 
-#: ../src/Grids/CerbereGrid.vala:39
-msgid "Watched Processes"
-msgstr "Надгледани процеси"
+#: ../src/Grids/AnimationsGrid.vala:27
+msgid "Open Duration:"
+msgstr "Трајање отварања"
 
-#: ../src/Grids/CerbereGrid.vala:50
-#: ../src/Grids/CerbereGrid.vala:60
-#: ../src/Grids/ShortcutsGrid.vala:91
-#: ../src/Grids/ShortcutsGrid.vala:158
-msgid "Add..."
-msgstr "Додај..."
+#: ../src/Grids/AnimationsGrid.vala:28
+msgid "Close Duration:"
+msgstr "Трајање затварања"
 
-#: ../src/Grids/CerbereGrid.vala:51
-#: ../src/Grids/CerbereGrid.vala:61
-#: ../src/Grids/ShortcutsGrid.vala:92
-#: ../src/Grids/ShortcutsGrid.vala:159
-msgid "Remove"
-msgstr "Уклони"
+#: ../src/Grids/AnimationsGrid.vala:29
+msgid "Snap Duration:"
+msgstr "Трајање пуцкања"
 
-#: ../src/Grids/CerbereGrid.vala:62
-#: ../src/Grids/ShortcutsGrid.vala:160
-msgid "Revert to Default"
-msgstr "Врати на подразумевано"
+#: ../src/Grids/AnimationsGrid.vala:30
+msgid "Minimize Duration:"
+msgstr "Трајање умањења:"
 
-#: ../src/Grids/SynapseGrid.vala:46
-msgid "Search Indicator Shortcut:"
-msgstr "Пречица индикатора претраге"
+#: ../src/Grids/AnimationsGrid.vala:31
+msgid "Workspace Switch Duration:"
+msgstr "Трајање пребацивања радних простора"
 
-#: ../src/Grids/PlankGrid.vala:47
-msgid "Top"
-msgstr "Врх"
+#: ../src/Grids/AnimationsGrid.vala:148
+msgid "Animations:"
+msgstr "Анимације:"
 
-#: ../src/Grids/PlankGrid.vala:48
-msgid "Bottom"
-msgstr "Дно"
+#: ../src/Grids/WingpanelslimGrid.vala:51
+#: ../src/Grids/SuperwingpanelGrid.vala:180
+msgid "Middle"
+msgstr "Средина"
 
-#: ../src/Grids/PlankGrid.vala:49
-#: ../src/Grids/WingpanelslimGrid.vala:42
-msgid "Left"
-msgstr "Лево"
+#: ../src/Grids/WingpanelslimGrid.vala:53
+#: ../src/Grids/SuperwingpanelGrid.vala:182
+msgid "Flush Left"
+msgstr "Прилепи лево"
 
-#: ../src/Grids/PlankGrid.vala:50
-#: ../src/Grids/WingpanelslimGrid.vala:40
-msgid "Right"
-msgstr "Десно"
+#: ../src/Grids/WingpanelslimGrid.vala:54
+#: ../src/Grids/SuperwingpanelGrid.vala:183
+msgid "Flush Right"
+msgstr "Прилепи десно"
 
-#: ../src/Grids/PlankGrid.vala:51
-msgid "Center"
-msgstr "Центрирано"
+#: ../src/Grids/WingpanelslimGrid.vala:75
+#: ../src/Grids/SuperwingpanelGrid.vala:151
+msgid "Edge:"
+msgstr "Ивица:"
 
-#: ../src/Grids/PlankGrid.vala:52
-msgid "Panel"
-msgstr "Полица"
+#: ../src/Grids/WingpanelslimGrid.vala:76
+#: ../src/Grids/SuperwingpanelGrid.vala:152
+msgid "Slanted"
+msgstr "Наклоњен"
 
-#: ../src/Grids/PlankGrid.vala:133
-msgid "Item Alignment:"
-msgstr "Поравнање ставки:"
+#: ../src/Grids/WingpanelslimGrid.vala:77
+#: ../src/Grids/SuperwingpanelGrid.vala:153
+msgid "Squared"
+msgstr "Скоцкан"
 
-#: ../src/Grids/PlankGrid.vala:171
-msgid "Unknown Value"
-msgstr "Непозната вредност"
+#: ../src/Grids/WingpanelslimGrid.vala:78
+#: ../src/Grids/SuperwingpanelGrid.vala:154
+msgid "Curved 1"
+msgstr "Закривљен 1"
 
-#: ../src/Grids/PlankGrid.vala:193
-msgid "Don't hide"
-msgstr "Немој скривати"
+#: ../src/Grids/WingpanelslimGrid.vala:79
+#: ../src/Grids/SuperwingpanelGrid.vala:155
+msgid "Curved 2"
+msgstr "Закривљен 2"
 
-#: ../src/Grids/PlankGrid.vala:194
-msgid "Intelligent hide"
-msgstr "Интелигентно скривање"
+#: ../src/Grids/WingpanelslimGrid.vala:80
+#: ../src/Grids/SuperwingpanelGrid.vala:156
+msgid "Curved 3"
+msgstr "Закривљен 3"
 
-#: ../src/Grids/PlankGrid.vala:195
-msgid "Auto hide"
-msgstr "Сакриј аутоматски"
+#: ../src/Grids/WingpanelslimGrid.vala:100
+msgid "Auto Hide:"
+msgstr "Аутоматско скривање:"
 
-#: ../src/Grids/PlankGrid.vala:196
-msgid "Hide on maximize"
-msgstr "Сакриј при увећавању"
+#: ../src/Grids/WingpanelslimGrid.vala:108
+#: ../src/Grids/SuperwingpanelGrid.vala:84
+msgid "Show Launcher:"
+msgstr "Прикажи покретач:"
 
-#: ../src/Grids/PlankGrid.vala:249
-msgid "Primary Monitor"
-msgstr "Примарни монитор"
+#: ../src/Grids/WingpanelslimGrid.vala:117
+#: ../src/Grids/SuperwingpanelGrid.vala:113
+msgid "Launcher:"
+msgstr "Покретач:"
 
-#: ../src/Grids/PlankGrid.vala:252
-#, c-format
-msgid "Monitor %d"
-msgstr "Монитор %d"
+#: ../src/Grids/WingpanelslimGrid.vala:163
+msgid "Slim Wingpanel:"
+msgstr "Слим Вингпанел"
 
-#: ../src/Grids/PlankGrid.vala:272
-msgid "Icon Size:"
-msgstr "Величина иконе:"
+#: ../src/Grids/ShortcutsGrid.vala:68
+msgid "Name"
+msgstr "Назив"
 
-#: ../src/Grids/PlankGrid.vala:276
-msgid "Hide Mode:"
-msgstr "Начин скривања:"
+#: ../src/Grids/ShortcutsGrid.vala:69
+msgid "Shortcut"
+msgstr "Пречица"
 
-#: ../src/Grids/PlankGrid.vala:280
-#: ../src/Grids/TerminalGrid.vala:210
-msgid "Theme:"
-msgstr "Тема:"
+#: ../src/Grids/ShortcutsGrid.vala:70
+msgid "Command"
+msgstr "Наредба"
 
-#: ../src/Grids/PlankGrid.vala:285
-msgid "Monitor:"
-msgstr "Монитор:"
+#: ../src/Grids/ShortcutsGrid.vala:117
+msgid "Every field must be filled!"
+msgstr "Свако поље мора бити попуњено!"
 
-#: ../src/Grids/PlankGrid.vala:289
-#: ../src/Grids/WingpanelslimGrid.vala:39
-msgid "Position:"
-msgstr "Положај:"
+#: ../src/Grids/ShortcutsGrid.vala:126
+msgid "Name:"
+msgstr "Назив:"
 
-#: ../src/Grids/PlankGrid.vala:292
-msgid "Alignment:"
-msgstr "Поравнање:"
+#: ../src/Grids/ShortcutsGrid.vala:129
+msgid "Shortcut:"
+msgstr "Пречица:"
 
-#: ../src/Grids/PlankGrid.vala:298
-msgid "Workspace Overview Icon:"
-msgstr "Икона за преглед површина:"
+#: ../src/Grids/ShortcutsGrid.vala:132
+msgid "Command:"
+msgstr "Наредба:"
 
-#: ../src/Grids/PlankGrid.vala:301
-msgid "Show Desktop Icon:"
-msgstr "Икона Прикажи радну површ"
+#: ../src/Grids/SuperwingpanelGrid.vala:30
+msgid "Super Wingpanel:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:51
+msgid "Never Hide"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:52
+msgid "Intellihide"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:53
+msgid "Intellislim"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:54
+msgid "Auto Hide"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:75
+msgid "Show Window Controls:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:93
+msgid "Launcher Text Override:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:133
+msgid "Slim Mode:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:141
+msgid "Separate Launcher:"
+msgstr ""
+
+#: ../src/Grids/SuperwingpanelGrid.vala:205
+msgid "Margin:"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:38
+msgid "Locale"
+msgstr "Локалитет"
+
+#: ../src/Grids/FilesGrid.vala:39
+msgid "ISO"
+msgstr "ИСО"
+
+#: ../src/Grids/FilesGrid.vala:40
+msgid "Informal"
+msgstr "Неформалан"
+
+#: ../src/Grids/FilesGrid.vala:85
+msgid "Single Click:"
+msgstr "Једноструки клик"
+
+#: ../src/Grids/FilesGrid.vala:88
+msgid "Date Format:"
+msgstr "Формат датума:"
+
+#: ../src/Grids/FilesGrid.vala:91
+msgid "Sidebar Icon Size:"
+msgstr "Величина иконе у плочи"
+
+#: ../src/Grids/TerminalGrid.vala:180
+#: ../src/Grids/AppearanceGrid.vala:124
+msgid "Custom"
+msgstr "Произвољно"
+
+#: ../src/Grids/TerminalGrid.vala:199
+msgid "Limit Scrollback Lines:"
+msgstr "Ограничите скролбек линије"
+
+#: ../src/Grids/TerminalGrid.vala:203
+msgid "Custom Font:"
+msgstr "Произвољно слово:"
+
+#: ../src/Grids/TerminalGrid.vala:207
+msgid "Opacity:"
+msgstr "Непрозирност:"
 
 #: ../src/Grids/MiscGrid.vala:48
 #: ../src/Grids/MiscGrid.vala:75
@@ -346,117 +541,25 @@ msgstr "Преклапајући клизачи:"
 msgid "Natural Scrolling:"
 msgstr "Природно скроловање"
 
-#: ../src/Grids/WingpanelslimGrid.vala:41
-msgid "Middle"
-msgstr "Средина"
+#: ../src/Grids/FontsGrid.vala:98
+msgid "Default Font:"
+msgstr "Подразумевана слова:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:43
-msgid "Flush Left"
-msgstr "Прилепи лево"
+#: ../src/Grids/FontsGrid.vala:101
+msgid "Document Font:"
+msgstr "Слова докумената:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:44
-msgid "Flush Right"
-msgstr "Прилепи десно"
+#: ../src/Grids/FontsGrid.vala:104
+msgid "Monospace Font:"
+msgstr "Моноспејс слова:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:65
-msgid "Edge:"
-msgstr "Ивица:"
+#: ../src/Grids/FontsGrid.vala:107
+msgid "Window Title Font:"
+msgstr "Слова за наслов прозора:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:66
-msgid "Slanted"
-msgstr "Наклоњен"
-
-#: ../src/Grids/WingpanelslimGrid.vala:67
-msgid "Squared"
-msgstr "Скоцкан"
-
-#: ../src/Grids/WingpanelslimGrid.vala:68
-msgid "Curved 1"
-msgstr "Закривљен 1"
-
-#: ../src/Grids/WingpanelslimGrid.vala:69
-msgid "Curved 2"
-msgstr "Закривљен 2"
-
-#: ../src/Grids/WingpanelslimGrid.vala:70
-msgid "Curved 3"
-msgstr "Закривљен 3"
-
-#: ../src/Grids/WingpanelslimGrid.vala:90
-msgid "Auto Hide:"
-msgstr "Аутоматско скривање:"
-
-#: ../src/Grids/WingpanelslimGrid.vala:98
-msgid "Show Launcher:"
-msgstr "Прикажи покретач:"
-
-#: ../src/Grids/WingpanelslimGrid.vala:107
-msgid "Launcher:"
-msgstr "Покретач:"
-
-#: ../src/Grids/WingpanelslimGrid.vala:151
-msgid "Slim Wingpanel:"
-msgstr "Слим Вингпанел"
-
-#: ../src/Grids/AnimationsGrid.vala:27
-msgid "Open Duration:"
-msgstr "Трајање отварања"
-
-#: ../src/Grids/AnimationsGrid.vala:28
-msgid "Close Duration:"
-msgstr "Трајање затварања"
-
-#: ../src/Grids/AnimationsGrid.vala:29
-msgid "Snap Duration:"
-msgstr "Трајање пуцкања"
-
-#: ../src/Grids/AnimationsGrid.vala:30
-msgid "Minimize Duration:"
-msgstr "Трајање умањења:"
-
-#: ../src/Grids/AnimationsGrid.vala:31
-msgid "Workspace Switch Duration:"
-msgstr "Трајање пребацивања радних простора"
-
-#: ../src/Grids/AnimationsGrid.vala:148
-msgid "Animations:"
-msgstr "Анимације:"
-
-#: ../src/Grids/SlingshotGrid.vala:93
-msgid "Rows:"
-msgstr "Редови:"
-
-#: ../src/Grids/SlingshotGrid.vala:96
-msgid "Columns:"
-msgstr "Колоне:"
-
-#: ../src/Grids/ShortcutsGrid.vala:68
-msgid "Name"
-msgstr "Назив"
-
-#: ../src/Grids/ShortcutsGrid.vala:69
-msgid "Shortcut"
-msgstr "Пречица"
-
-#: ../src/Grids/ShortcutsGrid.vala:70
-msgid "Command"
-msgstr "Наредба"
-
-#: ../src/Grids/ShortcutsGrid.vala:117
-msgid "Every field must be filled!"
-msgstr "Свако поље мора бити попуњено!"
-
-#: ../src/Grids/ShortcutsGrid.vala:126
-msgid "Name:"
-msgstr "Назив:"
-
-#: ../src/Grids/ShortcutsGrid.vala:129
-msgid "Shortcut:"
-msgstr "Пречица:"
-
-#: ../src/Grids/ShortcutsGrid.vala:132
-msgid "Command:"
-msgstr "Наредба:"
+#: ../src/Grids/SynapseGrid.vala:46
+msgid "Search Indicator Shortcut:"
+msgstr "Пречица индикатора претраге"
 
 #: ../src/Grids/AppearanceGrid.vala:116
 msgid "Custom Layout:"
@@ -482,11 +585,6 @@ msgstr "Виндоуз начин"
 msgid "OS X"
 msgstr "ОС Икс"
 
-#: ../src/Grids/AppearanceGrid.vala:124
-#: ../src/Grids/TerminalGrid.vala:180
-msgid "Custom"
-msgstr "Произвољно"
-
 #: ../src/Grids/AppearanceGrid.vala:183
 msgid "Window Decoration Theme:"
 msgstr "Декоративна тема прозора:"
@@ -506,37 +604,3 @@ msgstr "Тема показивача:"
 #: ../src/Grids/AppearanceGrid.vala:195
 msgid "Button Layout:"
 msgstr "Распоред дугмади:"
-
-#: ../src/Grids/FontsGrid.vala:98
-msgid "Default Font:"
-msgstr "Подразумевана слова:"
-
-#: ../src/Grids/FontsGrid.vala:101
-msgid "Document Font:"
-msgstr "Слова докумената:"
-
-#: ../src/Grids/FontsGrid.vala:104
-msgid "Monospace Font:"
-msgstr "Моноспејс слова:"
-
-#: ../src/Grids/FontsGrid.vala:107
-msgid "Window Title Font:"
-msgstr "Слова за наслов прозора:"
-
-#: ../src/Grids/TerminalGrid.vala:199
-msgid "Limit Scrollback Lines:"
-msgstr "Ограничите скролбек линије"
-
-#: ../src/Grids/TerminalGrid.vala:203
-msgid "Custom Font:"
-msgstr "Произвољно слово:"
-
-#: ../src/Grids/TerminalGrid.vala:207
-msgid "Opacity:"
-msgstr "Непрозирност:"
-
-#: ../src/Widgets/AcceleratorInputWidget.vala:67
-#: ../src/Widgets/AcceleratorInputWidget.vala:85
-#: ../src/Objects/ShortcutObject.vala:38
-msgid "Disabled"
-msgstr "Онемогућено"
