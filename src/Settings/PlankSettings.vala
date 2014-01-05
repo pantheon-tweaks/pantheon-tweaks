@@ -58,6 +58,19 @@ public class PlankSettings : Object
         }
     }
 
+    public int dock_offset {
+        get {
+            try {
+                return configs.get_integer ("PlankDockPreferences", "Offset");
+            } catch (Error e) { warning (e.message); }
+            return 0;
+        }
+        set {
+            configs.set_integer ("PlankDockPreferences", "Offset", value);
+            save ();
+        }
+    }
+
     public bool lock_items {
         get {
             try {

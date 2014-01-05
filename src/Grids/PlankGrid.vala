@@ -118,6 +118,26 @@ public class PlankGrid : Gtk.Grid
         dock_position_box.pack_start (dock_position, false);
         dock_position_box.pack_start (dock_position_default, false);
 
+        /* Offset */
+        var dock_offset_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        var dock_offset = new Gtk.SpinButton.with_range (-100, 100, 1);
+        dock_offset.set_value (PlankSettings.get_default ().dock_offset);
+        dock_offset.value_changed.connect (() => {
+            PlankSettings.get_default ().dock_offset = (int)dock_offset.get_value ();
+        });
+        dock_offset.halign = Gtk.Align.START;
+        dock_offset.width_request = 160;
+
+        var dock_offset_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
+
+        dock_offset_default.clicked.connect (() => {
+            PlankSettings.get_default ().dock_offset = int.parse ("0");
+            dock_offset.set_value (PlankSettings.get_default ().dock_offset);
+        });
+        
+        dock_offset_box.pack_start (dock_offset, false);
+        dock_offset_box.pack_start (dock_offset_default, false); 
+
         /* Alignment */
         var dock_items_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var dock_alignment_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
@@ -231,7 +251,7 @@ public class PlankGrid : Gtk.Grid
         theme_box.pack_start (theme, false);
         theme_box.pack_start (theme_default, false);
 
-       /* Workspace Overview Icon */
+       /* Lock Items */
         var lock_items = new Gtk.Switch ();
         lock_items.set_active(PlankSettings.get_default ().lock_items);
         lock_items.notify["active"].connect (() => PlankSettings.get_default ().lock_items = lock_items.get_active());
@@ -295,19 +315,22 @@ public class PlankGrid : Gtk.Grid
         this.attach (new LLabel.right (_("Position:")), 0, 4, 1, 1);
         this.attach (dock_position_box, 1, 4, 1, 1);
 
-        this.attach (new LLabel.right (_("Alignment:")), 0, 5, 1, 1);
-        this.attach (dock_alignment_box, 1, 5, 1, 1); 
+        this.attach (new LLabel.right (_("Offset:")), 0, 5, 1, 1);
+        this.attach (dock_offset_box, 1, 5, 1, 1);
 
-        this.attach (label_items, 0, 6, 1, 1);
-        this.attach (dock_items_box, 1, 6, 1, 1);
+        this.attach (new LLabel.right (_("Alignment:")), 0, 6, 1, 1);
+        this.attach (dock_alignment_box, 1, 6, 1, 1); 
 
-        this.attach (new LLabel.right (_("Lock Items:")), 0, 7, 1, 1);
-        this.attach (lock_items, 1, 7, 1, 1);
+        this.attach (label_items, 0, 7, 1, 1);
+        this.attach (dock_items_box, 1, 7, 1, 1);
 
-        this.attach (new LLabel.right (_("Workspace Overview Icon:")), 0, 8, 1, 1);
-        this.attach (overview_icon, 1, 8, 1, 1);
+        this.attach (new LLabel.right (_("Lock Items:")), 0, 8, 1, 1);
+        this.attach (lock_items, 1, 8, 1, 1);
 
-        this.attach (new LLabel.right (_("Show Desktop Icon:")), 0, 9, 1, 1);
-        this.attach (desktop_icon, 1, 9, 1, 1);
+        this.attach (new LLabel.right (_("Workspace Overview Icon:")), 0, 9, 1, 1);
+        this.attach (overview_icon, 1, 9, 1, 1);
+
+        this.attach (new LLabel.right (_("Show Desktop Icon:")), 0, 10, 1, 1);
+        this.attach (desktop_icon, 1, 10, 1, 1);
     }
 }
