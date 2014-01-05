@@ -162,7 +162,8 @@ public class PlankGrid : Gtk.Grid
         var dock_items_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var dock_alignment_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         //FIXME: Needs a look over
-        if ( PlankSettings.get_default ().dock_position != 0 && PlankSettings.get_default ().dock_position != 1) {
+        if (PlankSettings.get_default ().dock_position != 0 &&
+            PlankSettings.get_default ().dock_position != 1) {
              dock_items.model = dock_items_h.model;
              dock_alignment.model = dock_alignment_h.model;
         } else {
@@ -171,19 +172,16 @@ public class PlankGrid : Gtk.Grid
         }
 
         var label_items = new LLabel.right (_("Item Alignment:"));
-
         var alignment = PlankSettings.get_default ().dock_alignment;
-     
+
         dock_alignment.active_id = alignment.to_string ();
+        dock_offset.set_sensitive(PlankSettings.get_default ().dock_alignment == 3);
         dock_alignment.changed.connect (() => {
             PlankSettings.get_default ().dock_alignment = int.parse (dock_alignment.active_id);
-            if ( PlankSettings.get_default ().dock_alignment != 0 ) {
-                dock_items_box.set_sensitive(false);
-                label_items.set_sensitive(false);
-            } else {
-                dock_items_box.set_sensitive(true);
-                label_items.set_sensitive(true);
-            }
+            bool flip = ( PlankSettings.get_default ().dock_alignment == 0 );
+            dock_items_box.set_sensitive(flip);
+            label_items.set_sensitive(flip);
+            dock_offset.set_sensitive(PlankSettings.get_default ().dock_alignment == 3);
         });
         dock_alignment.halign = Gtk.Align.START;
         dock_alignment.width_request = 160;
@@ -193,6 +191,7 @@ public class PlankGrid : Gtk.Grid
         dock_alignment_default.clicked.connect (() => {
             PlankSettings.get_default ().dock_alignment = int.parse ("3");
             dock_alignment.active_id = PlankSettings.get_default ().dock_alignment.to_string ();
+            dock_offset.set_sensitive(PlankSettings.get_default ().dock_alignment == 3);
         });
         dock_position_default.halign = Gtk.Align.START;
 
@@ -234,10 +233,8 @@ public class PlankGrid : Gtk.Grid
         hide_mode.append ("2", _("Auto hide"));
         hide_mode.append ("3", _("Hide on maximize"));
         hide_mode.active_id = PlankSettings.get_default ().hide_mode.to_string ();
-        dock_delay_box.set_sensitive(hide_mode.active_id == "2");
         hide_mode.changed.connect (() => {
             PlankSettings.get_default ().hide_mode = int.parse (hide_mode.active_id);
-            dock_delay_box.set_sensitive(hide_mode.active_id == "2");
         });
         hide_mode.halign = Gtk.Align.START;
         hide_mode.width_request = 160;
@@ -337,11 +334,11 @@ public class PlankGrid : Gtk.Grid
         this.attach (new LLabel.right (_("Position:")), 0, 5, 1, 1);
         this.attach (dock_position_box, 1, 5, 1, 1);
 
-        this.attach (new LLabel.right (_("Offset:")), 0, 6, 1, 1);
-        this.attach (dock_offset_box, 1, 6, 1, 1);
+        this.attach (new LLabel.right (_("Alignment:")), 0, 6, 1, 1);
+        this.attach (dock_alignment_box, 1, 6, 1, 1); 
 
-        this.attach (new LLabel.right (_("Alignment:")), 0, 7, 1, 1);
-        this.attach (dock_alignment_box, 1, 7, 1, 1); 
+        this.attach (new LLabel.right (_("Offset:")), 0, 7, 1, 1);
+        this.attach (dock_offset_box, 1, 7, 1, 1);
 
         this.attach (label_items, 0, 8, 1, 1);
         this.attach (dock_items_box, 1, 8, 1, 1);
