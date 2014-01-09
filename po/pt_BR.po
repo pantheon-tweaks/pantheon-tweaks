@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-01-05 04:04+0100\n"
-"PO-Revision-Date: 2013-08-22 15:34+0000\n"
+"PO-Revision-Date: 2014-01-08 17:55+0000\n"
 "Last-Translator: Ewerton Wandalen <ewandalen@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-01-06 05:08+0000\n"
-"X-Generator: Launchpad (build 16877)\n"
+"X-Launchpad-Export-Date: 2014-01-09 05:41+0000\n"
+"X-Generator: Launchpad (build 16884)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
@@ -79,7 +79,7 @@ msgstr "Wingpanel Slim"
 
 #: ../src/Tweaks.vala:109
 msgid "Super Wingpanel"
-msgstr ""
+msgstr "Super Wingpanel"
 
 #: ../src/Objects/ShortcutObject.vala:38
 #: ../src/Widgets/AcceleratorInputWidget.vala:67
@@ -218,7 +218,7 @@ msgstr "Modo de ocultação:"
 
 #: ../src/Grids/PlankGrid.vala:326
 msgid "Delay (in ms):"
-msgstr ""
+msgstr "Atraso (em ms):"
 
 #: ../src/Grids/PlankGrid.vala:329
 #: ../src/Grids/TerminalGrid.vala:210
@@ -237,7 +237,7 @@ msgstr "Posição:"
 
 #: ../src/Grids/PlankGrid.vala:340
 msgid "Offset:"
-msgstr ""
+msgstr "Deslocamento:"
 
 #: ../src/Grids/PlankGrid.vala:343
 msgid "Alignment:"
@@ -245,7 +245,7 @@ msgstr "Alinhamento:"
 
 #: ../src/Grids/PlankGrid.vala:349
 msgid "Lock Items:"
-msgstr ""
+msgstr "Travar itens:"
 
 #: ../src/Grids/PlankGrid.vala:352
 msgid "Workspace Overview Icon:"
@@ -396,15 +396,15 @@ msgstr "Comando:"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:30
 msgid "Super Wingpanel:"
-msgstr ""
+msgstr "Super Wingpanel:"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:51
 msgid "Never Hide"
-msgstr ""
+msgstr "Nunca esconder"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:52
 msgid "Intellihide"
-msgstr ""
+msgstr "Ocultação inteligente"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:53
 msgid "Intellislim"
@@ -412,7 +412,7 @@ msgstr ""
 
 #: ../src/Grids/SuperwingpanelGrid.vala:54
 msgid "Auto Hide"
-msgstr ""
+msgstr "Ocultar automaticamente"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:75
 msgid "Show Window Controls:"
@@ -424,15 +424,15 @@ msgstr ""
 
 #: ../src/Grids/SuperwingpanelGrid.vala:133
 msgid "Slim Mode:"
-msgstr ""
+msgstr "Modo Slim:"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:141
 msgid "Separate Launcher:"
-msgstr ""
+msgstr "Lançador separado:"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:205
 msgid "Margin:"
-msgstr ""
+msgstr "Margem:"
 
 #: ../src/Grids/FilesGrid.vala:38
 msgid "Locale"
