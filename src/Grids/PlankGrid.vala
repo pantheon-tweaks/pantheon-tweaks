@@ -178,10 +178,10 @@ public class PlankGrid : Gtk.Grid
         dock_offset.set_sensitive(PlankSettings.get_default ().dock_alignment == 3);
         dock_alignment.changed.connect (() => {
             PlankSettings.get_default ().dock_alignment = int.parse (dock_alignment.active_id);
-            bool flip = ( PlankSettings.get_default ().dock_alignment == 0 );
-            dock_items_box.set_sensitive(flip);
-            label_items.set_sensitive(flip);
-            dock_offset.set_sensitive(PlankSettings.get_default ().dock_alignment == 3);
+            bool flip = (PlankSettings.get_default ().dock_alignment == 0);
+            dock_items_box.set_sensitive (flip);
+            label_items.set_sensitive (flip);
+            dock_offset.set_sensitive (PlankSettings.get_default ().dock_alignment == 3);
         });
         dock_alignment.halign = Gtk.Align.START;
         dock_alignment.width_request = 160;
@@ -191,7 +191,7 @@ public class PlankGrid : Gtk.Grid
         dock_alignment_default.clicked.connect (() => {
             PlankSettings.get_default ().dock_alignment = int.parse ("3");
             dock_alignment.active_id = PlankSettings.get_default ().dock_alignment.to_string ();
-            dock_offset.set_sensitive(PlankSettings.get_default ().dock_alignment == 3);
+            dock_offset.set_sensitive (PlankSettings.get_default ().dock_alignment == 3);
         });
         dock_position_default.halign = Gtk.Align.START;
 
@@ -202,8 +202,8 @@ public class PlankGrid : Gtk.Grid
         var items = PlankSettings.get_default ().dock_items;
 
         if ( PlankSettings.get_default ().dock_alignment != 0 ) {
-            dock_items_box.set_sensitive(false);
-            label_items.set_sensitive(false);
+            dock_items_box.set_sensitive (false);
+            label_items.set_sensitive (false);
         }
         
         if (alignment != 3 && alignment != 2 && alignment != 1 && alignment != 0 )
@@ -253,7 +253,7 @@ public class PlankGrid : Gtk.Grid
         /* Themes */
         var theme_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var theme = new Gtk.ComboBoxText ();
-        theme = combo_box_themes ( "plank/themes", "dock.theme");
+        theme = combo_box_themes ("plank/themes", "dock.theme");
 
         theme.active_id = PlankSettings.get_default ().theme;
         theme.changed.connect (() => PlankSettings.get_default ().theme = theme.active_id );
