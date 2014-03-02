@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-01-05 04:04+0100\n"
-"PO-Revision-Date: 2013-10-01 07:34+0000\n"
+"PO-Revision-Date: 2014-03-01 10:12+0000\n"
 "Last-Translator: Norbert Budzyński <Unknown>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-01-06 05:08+0000\n"
-"X-Generator: Launchpad (build 16877)\n"
+"X-Launchpad-Export-Date: 2014-03-02 05:30+0000\n"
+"X-Generator: Launchpad (build 16948)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
@@ -218,7 +218,7 @@ msgstr "Sposób ukrywania:"
 
 #: ../src/Grids/PlankGrid.vala:326
 msgid "Delay (in ms):"
-msgstr ""
+msgstr "Opóźnienie (ms):"
 
 #: ../src/Grids/PlankGrid.vala:329
 #: ../src/Grids/TerminalGrid.vala:210
@@ -237,7 +237,7 @@ msgstr "Pozycja:"
 
 #: ../src/Grids/PlankGrid.vala:340
 msgid "Offset:"
-msgstr ""
+msgstr "Przesunięcie:"
 
 #: ../src/Grids/PlankGrid.vala:343
 msgid "Alignment:"
@@ -245,7 +245,7 @@ msgstr "Wyrównanie:"
 
 #: ../src/Grids/PlankGrid.vala:349
 msgid "Lock Items:"
-msgstr ""
+msgstr "Blokuj elementy:"
 
 #: ../src/Grids/PlankGrid.vala:352
 msgid "Workspace Overview Icon:"
@@ -400,11 +400,11 @@ msgstr ""
 
 #: ../src/Grids/SuperwingpanelGrid.vala:51
 msgid "Never Hide"
-msgstr ""
+msgstr "Nigdy nie ukrywaj"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:52
 msgid "Intellihide"
-msgstr ""
+msgstr "Inteligentne ukrywanie"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:53
 msgid "Intellislim"
@@ -412,7 +412,7 @@ msgstr ""
 
 #: ../src/Grids/SuperwingpanelGrid.vala:54
 msgid "Auto Hide"
-msgstr ""
+msgstr "Automatyczne ukrywanie"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:75
 msgid "Show Window Controls:"
@@ -424,7 +424,7 @@ msgstr ""
 
 #: ../src/Grids/SuperwingpanelGrid.vala:133
 msgid "Slim Mode:"
-msgstr ""
+msgstr "Tryb Slim:"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:141
 msgid "Separate Launcher:"
@@ -432,7 +432,7 @@ msgstr ""
 
 #: ../src/Grids/SuperwingpanelGrid.vala:205
 msgid "Margin:"
-msgstr ""
+msgstr "Margines:"
 
 #: ../src/Grids/FilesGrid.vala:38
 msgid "Locale"
