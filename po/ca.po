@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-01-05 04:04+0100\n"
-"PO-Revision-Date: 2013-10-20 22:07+0000\n"
+"PO-Revision-Date: 2014-04-07 21:17+0000\n"
 "Last-Translator: Alfredo Hernández <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-01-06 05:07+0000\n"
-"X-Generator: Launchpad (build 16877)\n"
+"X-Launchpad-Export-Date: 2014-04-08 07:12+0000\n"
+"X-Generator: Launchpad (build 16976)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
@@ -218,7 +218,7 @@ msgstr "Mode d'ocultació:"
 
 #: ../src/Grids/PlankGrid.vala:326
 msgid "Delay (in ms):"
-msgstr ""
+msgstr "Retard (ms):"
 
 #: ../src/Grids/PlankGrid.vala:329
 #: ../src/Grids/TerminalGrid.vala:210
@@ -237,7 +237,7 @@ msgstr "Posició:"
 
 #: ../src/Grids/PlankGrid.vala:340
 msgid "Offset:"
-msgstr ""
+msgstr "Desplaçament:"
 
 #: ../src/Grids/PlankGrid.vala:343
 msgid "Alignment:"
@@ -400,11 +400,11 @@ msgstr ""
 
 #: ../src/Grids/SuperwingpanelGrid.vala:51
 msgid "Never Hide"
-msgstr ""
+msgstr "No ocultis mai"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:52
 msgid "Intellihide"
-msgstr ""
+msgstr "Ocultació Intel·ligent"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:53
 msgid "Intellislim"
@@ -412,11 +412,11 @@ msgstr ""
 
 #: ../src/Grids/SuperwingpanelGrid.vala:54
 msgid "Auto Hide"
-msgstr ""
+msgstr "Ocultació automàtica"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:75
 msgid "Show Window Controls:"
-msgstr ""
+msgstr "Mostra els controls de finestra:"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:93
 msgid "Launcher Text Override:"
@@ -432,7 +432,7 @@ msgstr ""
 
 #: ../src/Grids/SuperwingpanelGrid.vala:205
 msgid "Margin:"
-msgstr ""
+msgstr "Marge:"
 
 #: ../src/Grids/FilesGrid.vala:38
 msgid "Locale"
