@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-01-05 04:04+0100\n"
-"PO-Revision-Date: 2014-03-15 10:01+0000\n"
-"Last-Translator: Simeon <Unknown>\n"
+"PO-Revision-Date: 2014-04-11 20:05+0000\n"
+"Last-Translator: Tobias Bannert <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-03-16 06:13+0000\n"
-"X-Generator: Launchpad (build 16963)\n"
+"X-Launchpad-Export-Date: 2014-04-12 10:06+0000\n"
+"X-Generator: Launchpad (build 16976)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
@@ -196,7 +196,7 @@ msgstr "Automatisch Ausblenden"
 
 #: ../src/Grids/PlankGrid.vala:235
 msgid "Hide on maximize"
-msgstr "Bei maximierten Fenstern ausblenden"
+msgstr "Bei vergrößerten Fenstern ausblenden"
 
 #: ../src/Grids/PlankGrid.vala:298
 msgid "Primary Monitor"
@@ -293,7 +293,7 @@ msgstr "Dauer zum Einrasten:"
 
 #: ../src/Grids/AnimationsGrid.vala:30
 msgid "Minimize Duration:"
-msgstr "Dauer zum Minimieren:"
+msgstr "Verkleinerungsdauer:"
 
 #: ../src/Grids/AnimationsGrid.vala:31
 msgid "Workspace Switch Duration:"
@@ -485,25 +485,25 @@ msgstr "Menü"
 #: ../src/Grids/MiscGrid.vala:76
 #: ../src/Grids/MiscGrid.vala:103
 msgid "Maximize"
-msgstr "Maximieren"
+msgstr "Vergrößern"
 
 #: ../src/Grids/MiscGrid.vala:50
 #: ../src/Grids/MiscGrid.vala:77
 #: ../src/Grids/MiscGrid.vala:104
 msgid "Maximize Horizontally"
-msgstr "Horizontal maximieren"
+msgstr "Horizontal vergrößern"
 
 #: ../src/Grids/MiscGrid.vala:51
 #: ../src/Grids/MiscGrid.vala:78
 #: ../src/Grids/MiscGrid.vala:105
 msgid "Maximize Vertically"
-msgstr "Vertikal maximieren"
+msgstr "Vertikal vergrößern"
 
 #: ../src/Grids/MiscGrid.vala:52
 #: ../src/Grids/MiscGrid.vala:79
 #: ../src/Grids/MiscGrid.vala:106
 msgid "Minimize"
-msgstr "Minimieren"
+msgstr "Verkleinern"
 
 #: ../src/Grids/MiscGrid.vala:53
 #: ../src/Grids/MiscGrid.vala:80
@@ -571,11 +571,11 @@ msgstr "Nur Schließen"
 
 #: ../src/Grids/AppearanceGrid.vala:120
 msgid "Minimize Left"
-msgstr "Minimiere Links"
+msgstr "Links verkleinern"
 
 #: ../src/Grids/AppearanceGrid.vala:121
 msgid "Minimize Right"
-msgstr "Minimiere Rechts"
+msgstr "Rechts verkleinern"
 
 #: ../src/Grids/AppearanceGrid.vala:122
 msgid "Windows"
