@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-01-05 04:04+0100\n"
-"PO-Revision-Date: 2013-10-29 14:58+0000\n"
-"Last-Translator: George Petsagourakis <Unknown>\n"
+"PO-Revision-Date: 2014-06-22 06:51+0000\n"
+"Last-Translator: James Spentzos <Unknown>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-01-06 05:07+0000\n"
-"X-Generator: Launchpad (build 16877)\n"
+"X-Launchpad-Export-Date: 2014-06-23 06:09+0000\n"
+"X-Generator: Launchpad (build 17065)\n"
 
 #: ../src/Tweaks.vala:49
 msgid "General"
@@ -85,11 +85,11 @@ msgstr ""
 #: ../src/Widgets/AcceleratorInputWidget.vala:67
 #: ../src/Widgets/AcceleratorInputWidget.vala:85
 msgid "Disabled"
-msgstr ""
+msgstr "Απενεργοποιήθηκε"
 
 #: ../src/Grids/SlingshotGrid.vala:29
 msgid "Smallest"
-msgstr ""
+msgstr "Το μικρότερο"
 
 #: ../src/Grids/SlingshotGrid.vala:30
 msgid "Smaller"
@@ -113,7 +113,7 @@ msgstr "Μεγαλύτερο"
 
 #: ../src/Grids/SlingshotGrid.vala:35
 msgid "Largest"
-msgstr ""
+msgstr "Το μεγαλύτερο"
 
 #: ../src/Grids/SlingshotGrid.vala:93
 msgid "Rows:"
@@ -125,26 +125,26 @@ msgstr "Στήλες:"
 
 #: ../src/Grids/CerbereGrid.vala:39
 msgid "Watched Processes"
-msgstr ""
+msgstr "Παρακολουθούμενες Διεργασίες"
 
 #: ../src/Grids/CerbereGrid.vala:50
 #: ../src/Grids/CerbereGrid.vala:60
 #: ../src/Grids/ShortcutsGrid.vala:91
 #: ../src/Grids/ShortcutsGrid.vala:158
 msgid "Add..."
-msgstr ""
+msgstr "Προσθήκη..."
 
 #: ../src/Grids/CerbereGrid.vala:51
 #: ../src/Grids/CerbereGrid.vala:61
 #: ../src/Grids/ShortcutsGrid.vala:92
 #: ../src/Grids/ShortcutsGrid.vala:159
 msgid "Remove"
-msgstr ""
+msgstr "Αφαίρεση"
 
 #: ../src/Grids/CerbereGrid.vala:62
 #: ../src/Grids/ShortcutsGrid.vala:160
 msgid "Revert to Default"
-msgstr ""
+msgstr "Επαναφορά στην Προεπιλογή"
 
 #: ../src/Grids/PlankGrid.vala:67
 msgid "Top"
@@ -168,7 +168,7 @@ msgstr "Δεξιά"
 
 #: ../src/Grids/PlankGrid.vala:71
 msgid "Center"
-msgstr ""
+msgstr "Κέντρο"
 
 #: ../src/Grids/PlankGrid.vala:72
 msgid "Panel"
@@ -176,19 +176,19 @@ msgstr "Πίνακας"
 
 #: ../src/Grids/PlankGrid.vala:173
 msgid "Item Alignment:"
-msgstr ""
+msgstr "Στοίχιση Στοιχείων:"
 
 #: ../src/Grids/PlankGrid.vala:211
 msgid "Unknown Value"
-msgstr ""
+msgstr "Άγνωστη Τιμή"
 
 #: ../src/Grids/PlankGrid.vala:232
 msgid "Don't hide"
-msgstr ""
+msgstr "Να μη γίνει απόκρυψη"
 
 #: ../src/Grids/PlankGrid.vala:233
 msgid "Intelligent hide"
-msgstr ""
+msgstr "Έξυπνη απόκρυψη"
 
 #: ../src/Grids/PlankGrid.vala:234
 msgid "Auto hide"
@@ -214,11 +214,11 @@ msgstr "Μέγεθος εικονιδίου:"
 #: ../src/Grids/PlankGrid.vala:323
 #: ../src/Grids/SuperwingpanelGrid.vala:50
 msgid "Hide Mode:"
-msgstr ""
+msgstr "Λειτουργία Απόκρυψης:"
 
 #: ../src/Grids/PlankGrid.vala:326
 msgid "Delay (in ms):"
-msgstr ""
+msgstr "Καθυστέρηση (σε ms):"
 
 #: ../src/Grids/PlankGrid.vala:329
 #: ../src/Grids/TerminalGrid.vala:210
@@ -245,31 +245,31 @@ msgstr "Στοίχιση:"
 
 #: ../src/Grids/PlankGrid.vala:349
 msgid "Lock Items:"
-msgstr ""
+msgstr "Κλείδωμα Στοιχείων:"
 
 #: ../src/Grids/PlankGrid.vala:352
 msgid "Workspace Overview Icon:"
-msgstr ""
+msgstr "Εικονίδιο Επισκόπησης Χώρων Εργασίας:"
 
 #: ../src/Grids/PlankGrid.vala:355
 msgid "Show Desktop Icon:"
-msgstr ""
+msgstr "Εμφάνιση Εικονιδίου Επιφάνειας Εργασίας:"
 
 #: ../src/Grids/ShadowsGrid.vala:27
 msgid "Focused Windows:"
-msgstr ""
+msgstr "Εστιασμένα Παράθυρα:"
 
 #: ../src/Grids/ShadowsGrid.vala:28
 msgid "Unfocused Windows:"
-msgstr ""
+msgstr "Μη εστιασμένα Παράθυρα:"
 
 #: ../src/Grids/ShadowsGrid.vala:29
 msgid "Focused Dialogs:"
-msgstr ""
+msgstr "Εστιασμένοι Διάλογοι:"
 
 #: ../src/Grids/ShadowsGrid.vala:30
 msgid "Unfocused Dialogs:"
-msgstr ""
+msgstr "Μη εστιασμένοι Διάλογοι:"
 
 #: ../src/Grids/ShadowsGrid.vala:31
 msgid "Menu:"
@@ -281,23 +281,23 @@ msgstr "Σκιές:"
 
 #: ../src/Grids/AnimationsGrid.vala:27
 msgid "Open Duration:"
-msgstr ""
+msgstr "Διάρκεια Ανοίγματος:"
 
 #: ../src/Grids/AnimationsGrid.vala:28
 msgid "Close Duration:"
-msgstr ""
+msgstr "Διάρκεια Κλεισίματος:"
 
 #: ../src/Grids/AnimationsGrid.vala:29
 msgid "Snap Duration:"
-msgstr ""
+msgstr "Διάρκεια Προσκόλλησης:"
 
 #: ../src/Grids/AnimationsGrid.vala:30
 msgid "Minimize Duration:"
-msgstr ""
+msgstr "Διάρκεια Ελαχιστοποίησης:"
 
 #: ../src/Grids/AnimationsGrid.vala:31
 msgid "Workspace Switch Duration:"
-msgstr ""
+msgstr "Διάρκεια Εναλλαγής Χώρων Εργασίας:"
 
 #: ../src/Grids/AnimationsGrid.vala:148
 msgid "Animations:"
@@ -321,7 +321,7 @@ msgstr ""
 #: ../src/Grids/WingpanelslimGrid.vala:75
 #: ../src/Grids/SuperwingpanelGrid.vala:151
 msgid "Edge:"
-msgstr ""
+msgstr "Άκρη:"
 
 #: ../src/Grids/WingpanelslimGrid.vala:76
 #: ../src/Grids/SuperwingpanelGrid.vala:152
