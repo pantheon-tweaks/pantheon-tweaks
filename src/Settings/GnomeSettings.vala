@@ -72,7 +72,7 @@ public Gtk.ComboBoxText combo_box_themes ( string path, string condition ) {
         } catch (Error e) { warning (e.message); }
     }
 
-    themes.sort(GLib.strcmp);
+    themes.sort((GLib.CompareDataFunc<string>)GLib.strcmp);
 
     foreach (string theme in themes) 
             return_box.append (theme, theme);
