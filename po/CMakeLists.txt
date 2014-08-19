@@ -1,4 +1,4 @@
-include (Translations) # Replace plug-name with the correct name of your plug
+include (Translations)
 add_translations_directory("${GETTEXT_PACKAGE}")
 add_translations_catalog("${GETTEXT_PACKAGE}"
     ../src/
