@@ -30,12 +30,6 @@ public class MiscGrid : Gtk.Grid
         audible_bell.notify["active"].connect (() => WindowSettings.get_default ().audible_bell = audible_bell.active );
         audible_bell.halign = Gtk.Align.START;
 
-        /* Overlay Scrollbar */
-        var overlay_scrollbar = new Gtk.Switch ();
-        overlay_scrollbar.set_active(InterfaceSettings.get_default ().ubuntu_overlay_scrollbars);
-        overlay_scrollbar.notify["active"].connect (() => InterfaceSettings.get_default ().ubuntu_overlay_scrollbars = overlay_scrollbar.active );
-        overlay_scrollbar.halign = Gtk.Align.START;
-
         /* Natural Scrolling */
         var scroll = new Gtk.Switch ();
         scroll.set_active(scroll_exists ());
@@ -134,9 +128,6 @@ public class MiscGrid : Gtk.Grid
 
         this.attach (new LLabel.right (_("Audible Bell:")), 0, 3, 1, 1);
         this.attach (audible_bell, 1, 3, 1, 1);
-
-        this.attach (new LLabel.right (_("Overlay Scrollbars:")), 0, 4, 1, 1);
-        this.attach (overlay_scrollbar, 1, 4, 1, 1);
 
         this.attach (new LLabel.right (_("Natural Scrolling:")), 0, 5, 1, 1);
         this.attach (scroll, 1, 5, 1, 1);
