@@ -1,6 +1,6 @@
 /*
  * Copyright (C) Elementary Tweak Developers, 2014
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 
@@ -41,7 +41,7 @@ public class PlankGrid : Gtk.Grid
             PlankSettings.get_default ().icon_size = int.parse ("48");
             icon_size.set_value (PlankSettings.get_default ().icon_size);
         });
-        
+
         icon_size_box.pack_start (icon_size, false);
         icon_size_box.pack_start (icon_size_default, false);
 
@@ -61,9 +61,9 @@ public class PlankGrid : Gtk.Grid
             PlankSettings.get_default ().dock_delay = int.parse ("0");
             dock_delay.set_value (PlankSettings.get_default ().dock_delay);
         });
-        
+
         dock_delay_box.pack_start (dock_delay, false);
-        dock_delay_box.pack_start (dock_delay_default, false); 
+        dock_delay_box.pack_start (dock_delay_default, false);
 
         /* Position */
         var label_top = _("Top");
@@ -106,12 +106,12 @@ public class PlankGrid : Gtk.Grid
         var dock_items = new Gtk.ComboBoxText ();
         var dock_alignment = new Gtk.ComboBoxText ();
 
-       
+
         var position = PlankSettings.get_default ().dock_position;
-        
+
         if ( position != 3 && position != 0 && position != 1 )
             position = 3;
-        
+
         dock_position.active_id = position.to_string ();
         //FIXME: Needs a look over
         dock_position.changed.connect (() => {
@@ -156,9 +156,9 @@ public class PlankGrid : Gtk.Grid
             PlankSettings.get_default ().dock_offset = int.parse ("0");
             dock_offset.set_value (PlankSettings.get_default ().dock_offset);
         });
-        
+
         dock_offset_box.pack_start (dock_offset, false);
-        dock_offset_box.pack_start (dock_offset_default, false); 
+        dock_offset_box.pack_start (dock_offset_default, false);
 
         /* Alignment */
         var dock_items_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
@@ -207,10 +207,10 @@ public class PlankGrid : Gtk.Grid
             dock_items_box.set_sensitive (false);
             label_items.set_sensitive (false);
         }
-        
+
         if (alignment != 3 && alignment != 2 && alignment != 1 && alignment != 0 )
             dock_items.append (items.to_string (), _(@"Unknown Value" ));
-        
+
         dock_items.active_id = items.to_string ();
         dock_items.changed.connect (() => PlankSettings.get_default ().dock_items = int.parse (dock_items.active_id));
         dock_items.halign = Gtk.Align.START;
@@ -251,7 +251,7 @@ public class PlankGrid : Gtk.Grid
 
         hide_mode_box.pack_start (hide_mode, false);
         hide_mode_box.pack_start (hide_mode_default, false);
-        
+
         /* Themes */
         var theme_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var theme = new Gtk.ComboBoxText ();
@@ -291,7 +291,7 @@ public class PlankGrid : Gtk.Grid
         desktop_icon.notify["active"].connect (() => icon_switch("show-desktop"));
         desktop_icon.halign = Gtk.Align.START;
 
-        /* Monitor */ 
+        /* Monitor */
         var monitor_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var monitor = new Gtk.ComboBoxText ();
         monitor.append ("-1", _("Primary Monitor"));
@@ -337,7 +337,7 @@ public class PlankGrid : Gtk.Grid
         this.attach (dock_position_box, 1, 5, 1, 1);
 
         this.attach (new LLabel.right (_("Alignment:")), 0, 6, 1, 1);
-        this.attach (dock_alignment_box, 1, 6, 1, 1); 
+        this.attach (dock_alignment_box, 1, 6, 1, 1);
 
         this.attach (new LLabel.right (_("Offset:")), 0, 7, 1, 1);
         this.attach (dock_offset_box, 1, 7, 1, 1);

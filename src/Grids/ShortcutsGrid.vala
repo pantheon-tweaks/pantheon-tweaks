@@ -1,6 +1,6 @@
 /*
  * Copyright (C) Elementary Tweak Developers, 2014
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 
@@ -27,7 +27,7 @@ public class ShortcutsGrid : Gtk.Grid
         this.margin_top = 0;
         this.column_homogeneous = true;
 
-        store = new Gtk.ListStore (5, 
+        store = new Gtk.ListStore (5,
                 typeof (string), // Name
                 typeof (string), // Shortcut
                 typeof (string), // Shortcut Display
@@ -188,7 +188,7 @@ public class ShortcutsGrid : Gtk.Grid
     }
 
     void change_shortcut (string path, Shortcut? shortcut) {
-        if ( shortcut == null ) 
+        if ( shortcut == null )
             list_edit( path, null, "", null );
         else
             list_edit( path, null, shortcut.to_gsettings(), null );

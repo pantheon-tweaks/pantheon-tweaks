@@ -1,6 +1,6 @@
 /*
  * Copyright (C) Elementary Tweak Developers, 2014
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 
@@ -29,7 +29,7 @@ public class SuperwingpanelGrid : Gtk.Grid
         /* Enable Super Wingpanel */
         var wingpanel = new Gtk.Switch ();
         var wingpanel_label = new LLabel.right (_("Super Wingpanel:"));
-        
+
         map.connect (() => {
             var monitored_processes = CerbereSettings.get_default ().monitored_processes;
 
@@ -145,7 +145,7 @@ public class SuperwingpanelGrid : Gtk.Grid
         separate_launcher.notify["active"].connect (() => SuperwingpanelSettings.get_default ().slim_panel_separate_launcher = separate_launcher.active );
         separate_launcher.halign = Gtk.Align.START;
 
-        
+
         /* Wingpanel Edge */
         var slim_edge_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         var slim_edge = new Gtk.ComboBoxText ();
@@ -232,7 +232,7 @@ public class SuperwingpanelGrid : Gtk.Grid
 
         // Watch for changes
         wingpanel.notify["active"].connect (() => {
-            if (disable_switch_active_event) 
+            if (disable_switch_active_event)
                 return;
 
             var processes = CerbereSettings.get_default ().monitored_processes;

@@ -1,6 +1,6 @@
 /*
  * Copyright (C) Elementary Tweak Developers, 2014
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 
@@ -50,7 +50,7 @@ public class InterfaceSettings : Granite.Services.Settings
     public string gtk_theme { get; set; }
     public string icon_theme { get; set; }
     public string monospace_font_name { get; set; }
-    
+
     static InterfaceSettings? instance = null;
 
     private InterfaceSettings ()
@@ -71,7 +71,7 @@ public Gtk.ComboBoxText combo_box_themes ( string path, string condition ) {
     var return_box = new Gtk.ComboBoxText ();
     var themes = new Gee.ArrayList<string> ();
 
-    string[] dirs = { 
+    string[] dirs = {
         "/usr/share/" + path + "/",
         Environment.get_home_dir () + "/." + path + "/" };
 
@@ -92,7 +92,7 @@ public Gtk.ComboBoxText combo_box_themes ( string path, string condition ) {
 
     themes.sort((GLib.CompareDataFunc<string>)GLib.strcmp);
 
-    foreach (string theme in themes) 
+    foreach (string theme in themes)
             return_box.append (theme, theme);
 
     return return_box;

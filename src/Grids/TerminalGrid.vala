@@ -1,6 +1,6 @@
 /*
  * Copyright (C) Elemetnary Tweak Developers, 2014
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 
@@ -32,7 +32,7 @@ struct TerminalTheme
         string background;
         string palette;
 }
- 
+
 const TerminalTheme[] DEFAULT_THEMES = {
         {
                 "Default",
@@ -70,7 +70,7 @@ const TerminalTheme[] DEFAULT_THEMES = {
                 "#3f3f3f:#e8e893:#9e9ece:#f0f0df:#8c8cd0:#c0c0be:#dfdfaf:#efefef:#3f3f3f:#e8e893:#9e9ece:#f0f0df:#8c8cd0:#c0c0be:#dfdfaf:#efefef"
         }
 };
- 
+
 public class TerminalGrid : Gtk.Grid
 {
         public TerminalGrid ()
@@ -79,9 +79,9 @@ public class TerminalGrid : Gtk.Grid
                 row_spacing = 6;
                 margin_top = 24;
                 column_homogeneous = true;
- 
+
 //                var settings = new Settings ("org.pantheon.terminal.settings");
- 
+
                 // scrollback
                 var limit_scrollback = new Gtk.Switch ();
                 limit_scrollback.halign = Gtk.Align.START;
@@ -100,7 +100,7 @@ public class TerminalGrid : Gtk.Grid
                                 TerminalSettings.get_default ().scrollback_lines = (int)scrollback.value;
                 });
 
- 
+
                 // custom font
                 var custom_font = new Gtk.Switch ();
                 custom_font.halign = Gtk.Align.START;
@@ -119,7 +119,7 @@ public class TerminalGrid : Gtk.Grid
                         TerminalSettings.get_default ().font = custom_font.active ? font.get_font_desc ().to_string () : "";
                         font.sensitive = custom_font.active;
                 });
- 
+
                 var opacity = new Gtk.SpinButton.with_range ( 0, 100, 1);
                 var opacity_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
                 opacity.width_request = 160;
@@ -140,7 +140,7 @@ public class TerminalGrid : Gtk.Grid
 
               opacity_box.pack_start (opacity, false);
               opacity_box.pack_start (opacity_default, false);
- 
+
                 var themes = new Gtk.ComboBoxText ();
                 var themes_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
                 themes.width_request = 160;
@@ -194,7 +194,7 @@ public class TerminalGrid : Gtk.Grid
                                 }
                         } catch (Error e) { warning (e.message); }
                 }
- 
+
                 themes.append ("-1", _("Custom"));
                 themes.active_id = active.to_string ();
                 themes.changed.connect (() => {
@@ -202,18 +202,18 @@ public class TerminalGrid : Gtk.Grid
                         var index = int.parse (themes.active_id);
                         if (index == -1)
                                 return;
- 
+
                         if (index < DEFAULT_THEMES.length)
                                 theme = DEFAULT_THEMES[index];
                         else
                                 theme = custom_themes[index - DEFAULT_THEMES.length - 1];
- 
+
                         TerminalSettings.get_default ().cursor_color = theme.cursor;
                         TerminalSettings.get_default ().foreground = theme.foreground;
                         TerminalSettings.get_default ().background = theme.background;
                         TerminalSettings.get_default ().palette = theme.palette;
                 });
- 
+
                 attach (new LLabel.right (_("Limit Scrollback Lines:")), 0, 0, 1, 1);
                 attach (limit_scrollback, 1, 0, 1, 1);
                 attach (scrollback, 1, 1, 1, 1);

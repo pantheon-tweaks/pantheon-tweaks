@@ -1,6 +1,6 @@
 /*
  * Copyright (C) Elementary Tweak Developers, 2014
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 
@@ -21,7 +21,7 @@ public class SuperwingpanelSettings : Granite.Services.Settings
     public string hide_mode { get; set; }
     public bool   show_window_controls { get; set; }
 
-    public bool   show_launcher { get; set; }   
+    public bool   show_launcher { get; set; }
     public string launcher_text_override { get; set; }
     public string default_launcher { get; set; }
 

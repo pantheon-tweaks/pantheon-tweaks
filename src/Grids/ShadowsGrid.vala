@@ -1,6 +1,6 @@
 /*
  * Copyright (C) Elementary Tweak Developers, 2014
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 
@@ -33,11 +33,11 @@ public class ShadowsGrid : Gtk.Grid
 
         /* Focused Windows */
         var shadow_focused_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        var radius_focused_spin = new Gtk.SpinButton.with_range (0, 200, 1);        
+        var radius_focused_spin = new Gtk.SpinButton.with_range (0, 200, 1);
         var shadows_focused = ShadowSettings.get_default ().normal_focused;
         radius_focused_spin.width_request = 160;
 
-        radius_focused_spin.value = int.parse (shadows_focused[0]);        
+        radius_focused_spin.value = int.parse (shadows_focused[0]);
         radius_focused_spin.value_changed.connect (() => {
             shadows_focused[0] = ((int)radius_focused_spin.value).to_string ();
             shadows_focused[3] = Math.round( double.parse(shadows_focused[0]) * 0.75).to_string();

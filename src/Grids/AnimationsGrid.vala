@@ -1,6 +1,6 @@
 /*
  * Copyright (C) Elementary Tweak Developers, 2014
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -12,7 +12,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 
@@ -130,7 +130,7 @@ public class AnimationsGrid : Gtk.Grid
             work_dur_label.sensitive = enable_anim.active;
             AnimationSettings.get_default ().enable_animations = enable_anim.active;
         });
-        
+
         enable_anim.active = AnimationSettings.get_default ().enable_animations;
 
         open_dur_box.sensitive = enable_anim.active;
