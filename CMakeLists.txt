@@ -1,8 +1,8 @@
 # This a sample CMakeLists.txt for compiling plug for Switchboard
 # http://elementaryos.org/docs/developer-guide/cmake 
 
-cmake_minimum_required (VERSION 2.6)
-cmake_policy (VERSION 2.6)
+cmake_minimum_required (VERSION 2.8)
+cmake_policy (VERSION 2.8)
 
 # Set the Properties of your Plug
 
@@ -22,28 +22,36 @@ project (${PLUGNAME})
 # Only alter stuff below if you know what you are doing #
 #########################################################
 
-set (DATADIR "${CMAKE_INSTALL_PREFIX}/lib/plugs")
-set (PKGDATADIR "${DATADIR}/pantheon/${PLUGNAME}")
-set (GETTEXT_PACKAGE "${PLUGNAME}-plug")
+include (GNUInstallDirs)
+set (DATADIR "${CMAKE_INSTALL_FULL_LIBDIR}/switchboard")
+set (PKGDATADIR "${DATADIR}/${PLUGCATEGORY}/${CMAKE_PROJECT_NAME}")
+set (GETTEXT_PACKAGE "${CMAKE_PROJECT_NAME}-plug")
 
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
 # Configure file
-configure_file (plug.plug ${CMAKE_BINARY_DIR}/${PLUGNAME}.plug)
-install (FILES ${CMAKE_BINARY_DIR}/${PLUGNAME}.plug DESTINATION ${PKGDATADIR})
+configure_file (${CMAKE_SOURCE_DIR}/config.vala.cmake ${CMAKE_BINARY_DIR}/src/config.vala)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icon/preferences-desktop-tweaks.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/elementary/categories/32/)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icon/preferences-tweaks-anim.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/elementary/categories/24/)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icon/preferences-tweaks-cerbere.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/elementary/categories/24/)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icon/preferences-tweaks-shadows.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/elementary/categories/24/)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icon/preferences-tweaks-slingshot.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/elementary/categories/24/)
-configure_file (${CMAKE_SOURCE_DIR}/config.vala.cmake ${CMAKE_BINARY_DIR}/src/config.vala)
 add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\")
+
+# Add 'make dist' command for creating release tarball
+set (CPACK_PACKAGE_VERSION ${VERSION})
+set (CPACK_SOURCE_GENERATOR "TGZ")
+set (CPACK_SOURCE_PACKAGE_FILE_NAME "${CMAKE_PROJECT_NAME}-${CPACK_PACKAGE_VERSION}")
+set (CPACK_SOURCE_IGNORE_FILES "/build/;/.bzr/;/.bzrignore;~$;${CPACK_SOURCE_IGNORE_FILES}")
+include (CPack)
+add_custom_target (dist COMMAND ${CMAKE_MAKE_PROGRAM} package_source)
 
 # Files
 file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")
 
 # Traslation stuff
 add_subdirectory (po)
+
 # Info-plug
 install (FILES ${resources} DESTINATION ${PKGDATADIR})
 

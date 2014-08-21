@@ -16,23 +16,25 @@
  *
  */
 
-public class SynapseSettings : Granite.Services.Settings
-{
-    public string shortcut { get; set; }
+namespace ElementaryTweak {
 
-    static SynapseSettings? instance = null;
-
-    private SynapseSettings ()
+    public class SynapseSettings : Granite.Services.Settings
     {
-        base ("net.launchpad.synapse-project.indicator");
-    }
+        public string shortcut { get; set; }
 
-    public static SynapseSettings get_default ()
-    {
-        if (instance == null)
-            instance = new SynapseSettings ();
+        static SynapseSettings? instance = null;
 
-        return instance;
+        private SynapseSettings ()
+        {
+            base ("net.launchpad.synapse-project.indicator");
+        }
+
+        public static SynapseSettings get_default ()
+        {
+            if (instance == null)
+                instance = new SynapseSettings ();
+
+            return instance;
+        }
     }
 }
-

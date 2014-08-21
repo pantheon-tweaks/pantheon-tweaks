@@ -19,104 +19,107 @@
  *
  */
 
-const string SCHEMA = "org.pantheon.desktop.gala";
+namespace ElementaryTweak {
 
-public class BehaviorSettings : Granite.Services.Settings
-{
-    public bool edge_tiling { get; set; }
-    public string panel_main_menu_action { get; set; }
-    public string toggle_recording_action { get; set; }
+    const string SCHEMA = "org.pantheon.desktop.gala";
 
-    public int hotcorner_topleft { get; set; }
-    public int hotcorner_topright { get; set; }
-    public int hotcorner_bottomleft { get; set; }
-    public int hotcorner_bottomright { get; set; }
-
-    public string hotcorner_custom_command { get; set; }
-
-    static BehaviorSettings? instance = null;
-
-    private BehaviorSettings ()
+    public class BehaviorSettings : Granite.Services.Settings
     {
-        base (SCHEMA+".behavior");
+        public bool edge_tiling { get; set; }
+        public string panel_main_menu_action { get; set; }
+        public string toggle_recording_action { get; set; }
+
+        public int hotcorner_topleft { get; set; }
+        public int hotcorner_topright { get; set; }
+        public int hotcorner_bottomleft { get; set; }
+        public int hotcorner_bottomright { get; set; }
+
+        public string hotcorner_custom_command { get; set; }
+
+        static BehaviorSettings? instance = null;
+
+        private BehaviorSettings ()
+        {
+            base (SCHEMA+".behavior");
+        }
+
+        public static BehaviorSettings get_default ()
+        {
+            if (instance == null)
+                instance = new BehaviorSettings ();
+
+            return instance;
+        }
     }
 
-    public static BehaviorSettings get_default ()
+    public class AppearanceSettings : Granite.Services.Settings
     {
-        if (instance == null)
-            instance = new BehaviorSettings ();
+        public string button_layout { get; set; }
+        public bool attach_modal_dialogs { get; set; }
+        public bool dim_parents { get; set; }
 
-        return instance;
-    }
-}
+        static AppearanceSettings? instance = null;
 
-public class AppearanceSettings : Granite.Services.Settings
-{
-    public string button_layout { get; set; }
-    public bool attach_modal_dialogs { get; set; }
-    public bool dim_parents { get; set; }
+        private AppearanceSettings ()
+        {
+            base (SCHEMA+".appearance");
+        }
 
-    static AppearanceSettings? instance = null;
+        public static AppearanceSettings get_default ()
+        {
+            if (instance == null)
+                instance = new AppearanceSettings ();
 
-    private AppearanceSettings ()
-    {
-        base (SCHEMA+".appearance");
-    }
-
-    public static AppearanceSettings get_default ()
-    {
-        if (instance == null)
-            instance = new AppearanceSettings ();
-
-        return instance;
-    }
-}
-
-public class ShadowSettings : Granite.Services.Settings
-{
-    public string[] menu { get; set; }
-    public string[] normal_focused { get; set; }
-    public string[] normal_unfocused { get; set; }
-    public string[] dialog_focused { get; set; }
-    public string[] dialog_unfocused { get; set; }
-
-    static ShadowSettings? instance = null;
-
-    private ShadowSettings ()
-    {
-        base (SCHEMA+".shadows");
+            return instance;
+        }
     }
 
-    public static ShadowSettings get_default ()
+    public class ShadowSettings : Granite.Services.Settings
     {
-        if (instance == null)
-            instance = new ShadowSettings ();
+        public string[] menu { get; set; }
+        public string[] normal_focused { get; set; }
+        public string[] normal_unfocused { get; set; }
+        public string[] dialog_focused { get; set; }
+        public string[] dialog_unfocused { get; set; }
 
-        return instance;
+        static ShadowSettings? instance = null;
+
+        private ShadowSettings ()
+        {
+            base (SCHEMA+".shadows");
+        }
+
+        public static ShadowSettings get_default ()
+        {
+            if (instance == null)
+                instance = new ShadowSettings ();
+
+            return instance;
+        }
     }
-}
 
-public class AnimationSettings : Granite.Services.Settings
-{
-    public bool enable_animations { get; set; }
-    public int open_duration { get; set; }
-    public int snap_duration { get; set; }
-    public int minimize_duration { get; set; }
-    public int close_duration { get; set; }
-    public int workspace_switch_duration { get; set; }
-
-    static AnimationSettings? instance = null;
-
-    private AnimationSettings ()
+    public class AnimationSettings : Granite.Services.Settings
     {
-        base (SCHEMA+".animations");
-    }
+        public bool enable_animations { get; set; }
+        public int open_duration { get; set; }
+        public int snap_duration { get; set; }
+        public int minimize_duration { get; set; }
+        public int close_duration { get; set; }
+        public int workspace_switch_duration { get; set; }
 
-    public static AnimationSettings get_default ()
-    {
-        if (instance == null)
-            instance = new AnimationSettings ();
+        static AnimationSettings? instance = null;
 
-        return instance;
+        private AnimationSettings ()
+        {
+            base (SCHEMA+".animations");
+        }
+
+        public static AnimationSettings get_default ()
+        {
+            if (instance == null)
+                instance = new AnimationSettings ();
+
+            return instance;
+        }
     }
 }

@@ -16,24 +16,27 @@
  *
  */
 
-public class CerbereSettings : Granite.Services.Settings
-{
-    public int crash_time_interval { get; set; }
-    public int max_crashes { get; set; }
-    public string[] monitored_processes { get; set; }
+namespace ElementaryTweak {
 
-    static CerbereSettings? instance = null;
-
-    private CerbereSettings ()
+    public class CerbereSettings : Granite.Services.Settings
     {
-        base ("org.pantheon.cerbere");
-    }
+        public int crash_time_interval { get; set; }
+        public int max_crashes { get; set; }
+        public string[] monitored_processes { get; set; }
 
-    public static CerbereSettings get_default ()
-    {
-        if (instance == null)
-            instance = new CerbereSettings ();
+        static CerbereSettings? instance = null;
 
-        return instance;
+        private CerbereSettings ()
+        {
+            base ("org.pantheon.cerbere");
+        }
+
+        public static CerbereSettings get_default ()
+        {
+            if (instance == null)
+                instance = new CerbereSettings ();
+
+            return instance;
+        }
     }
 }

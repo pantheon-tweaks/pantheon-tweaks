@@ -16,24 +16,27 @@
  *
  */
 
-public class FilesSettings : Granite.Services.Settings
-{
-    public string date_format { get; set; }
-    public string sidebar_zoom_level { get; set; }
-    public bool single_click { get; set; }
+namespace ElementaryTweak {
 
-    static FilesSettings? instance = null;
-
-    private FilesSettings ()
+    public class FilesSettings : Granite.Services.Settings
     {
-        base ("org.pantheon.files.preferences");
-    }
+        public string date_format { get; set; }
+        public string sidebar_zoom_level { get; set; }
+        public bool single_click { get; set; }
 
-    public static FilesSettings get_default ()
-    {
-        if (instance == null)
-            instance = new FilesSettings ();
+        static FilesSettings? instance = null;
 
-        return instance;
+        private FilesSettings ()
+        {
+            base ("org.pantheon.files.preferences");
+        }
+
+        public static FilesSettings get_default ()
+        {
+            if (instance == null)
+                instance = new FilesSettings ();
+
+            return instance;
+        }
     }
 }
