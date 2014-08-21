@@ -1,153 +1,244 @@
-//  
-//  Copyright (C) 2013 Michael Langfermann, Tom Beckmann, Heath Paddock
-//
-//  This program is free software: you can redistribute it and/or modify
-//  it under the terms of the GNU General Public License as published by
-//  the Free Software Foundation, either version 3 of the License, or
-//  (at your option) any later version.
-//
-//  This program is distributed in the hope that it will be useful,
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//  GNU General Public License for more details.
-//
-//  You should have received a copy of the GNU General Public License
-//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-//
+/*
+ * Copyright (C) Elementary Tweak Developers, 2014
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
 
-class SidebarItem : Granite.Widgets.SourceList.Item
-{
-        public int index { get; set; }
- 
-        public SidebarItem (int index, string title, string icon)
-        {
-            Object (index : index, name : title, icon : new ThemedIcon (icon));
-        }
-}
- 
-public class TweaksPlug : Pantheon.Switchboard.Plug
-{
-    Gtk.Notebook notebook;
-    Granite.Widgets.SourceList sidebar;
+namespace ElementaryTweak {
 
-    public TweaksPlug ()
-    {
-        var paned = new Granite.Widgets.ThinPaned ();
+    /**
+     * A Switchboard plugin to tweak the Elementary OS system.
+     */
+    public class TweakPlug : Switchboard.Plug {
+        private Granite.Widgets.ThinPaned main_view;
+        private Granite.Widgets.SourceList sidebar;
+        private Gtk.Notebook tweak_content;
+        private Gee.HashMap<string, Granite.Widgets.SourceList.ExpandableItem> categories;
+        private Gee.HashMap<Granite.Widgets.SourceList.Item, int> page_lookup;
 
-        sidebar = new Granite.Widgets.SourceList ();
-        sidebar.width_request = 120;
-        sidebar.item_selected.connect (selected);
-        sidebar.get_style_context ().add_class ("sidebar");
+        /**
+         * Creates a new Tweak Plug
+         */
+        public TweakPlug () {
+            // init plugin stuff
+            Object (category: Category.PERSONAL,
+                    code_name: Build.PLUGCODENAME,
+                    display_name: _("Tweaks"),
+                    description: _("Tweak elementary OS settings"),
+                    icon: "applications-development");
 
-        /* Notebook */
-        notebook = new Gtk.Notebook ();
-        notebook.set_margin_top (0);
-        notebook.show_tabs = false;
-        notebook.get_style_context ().add_class ("content-view");
+            // make sure that UI is created.
+            // TODO: there might be a better way of doing this.
+            get_widget();
 
-        /* Sidebar Categories */
-        var cat_general = new Granite.Widgets.SourceList.ExpandableItem (_("General"));
-        var cat_applications = new Granite.Widgets.SourceList.ExpandableItem (_("Applications"));
-        sidebar.root.add (cat_general);
-        sidebar.root.add (cat_applications);
+            // add all the tweaks
 
-        /**** General Category ****/
+            // Appearance Tweaks; make sure to select as default page on open
+            sidebar.selected = add_tweak_page (new AppearanceGrid (), _("Appearance"), _("General"), "preferences-desktop-wallpaper");
 
-        /* Appearances Tab */
-        sidebar.selected = add_page (new AppearanceGrid (), _("Appearance"), "preferences-desktop-wallpaper", cat_general);
+            // Font Tweaks
+            add_tweak_page (new FontsGrid (), _("Fonts"), _("General"), "font-x-generic");
 
-        /* Font Tab*/
-        add_page (new FontsGrid (), _("Fonts"), "font-x-generic", cat_general);
+            // Animation Tweaks
+            if (schema_exists("org.pantheon.desktop.gala.animations"))
+                add_tweak_page (new AnimationsGrid (), _("Animations"), _("General"), "preferences-tweaks-anim");
 
-        /* Animations Tab */
-        if (schema_exists("org.pantheon.desktop.gala.animations"))
-            add_page (new AnimationsGrid (), _("Animations"), "preferences-tweaks-anim", cat_general);
+            // Shadow Tweaks
+            if (schema_exists("org.pantheon.desktop.gala.shadows"))
+                add_tweak_page (new ShadowsGrid (), _("Shadows"), _("General"), "preferences-tweaks-shadows");
 
-        /* Shadows Tab*/
-        if (schema_exists("org.pantheon.desktop.gala.shadows"))
-            add_page (new ShadowsGrid (), _("Shadows"), "preferences-tweaks-shadows", cat_general);
+            // Shortcut Tweaks
+            add_tweak_page (new ShortcutsGrid (), _("Shortcuts"), _("General"), "preferences-desktop-keyboard");
 
-        /* Shortcuts Tab*/
-        add_page (new ShortcutsGrid (), _("Shortcuts"), "preferences-desktop-keyboard", cat_general);
+            // Misc Tweaks
+            add_tweak_page (new MiscGrid (), _("Miscellaneous"), _("General"), "preferences-system-session");
 
-        /* Misc Tab*/
-        add_page (new MiscGrid (), _("Miscellaneous"), "preferences-system-session", cat_general);
+            // Plank Tweaks
+            if (file_exists("/plank/dock1/settings"))
+                add_tweak_page (new PlankGrid (), _("Plank"), _("Applications"), "plank");
 
+            // File browser Tweaks
+            if (schema_exists("org.pantheon.files.preferences"))
+                add_tweak_page (new FilesGrid (), _("Files"), _("Applications"), "system-file-manager");
 
-        /**** Applications Category ****/
+            // Synapse Tweaks
+            if (schema_exists("net.launchpad.synapse-project.indicator"))
+                add_tweak_page (new SynapseGrid (), _("Search Indicator"), _("Applications"), "system-search");
 
-        /* Dock Tab*/
-        if (file_exists("/plank/dock1/settings"))
-            add_page (new PlankGrid (), _("Plank"), "plank", cat_applications);
+            // Slingshot Tweaks
+            if (schema_exists("org.pantheon.desktop.slingshot"))
+                add_tweak_page (new SlingshotGrid (), _("Slingshot"), _("Applications"), "preferences-tweaks-slingshot");
 
-        /* Files Tab*/
-        if (schema_exists("org.pantheon.files.preferences"))
-            add_page (new FilesGrid (), _("Files"), "system-file-manager", cat_applications);
+            // Cerbere Tweaks
+            if (schema_exists("org.pantheon.cerbere"))
+                add_tweak_page (new CerbereGrid (), _("Cerbere"), _("Applications"), "preferences-tweaks-cerbere");
 
-        /* Search Indicator Tab*/
-        if (schema_exists("net.launchpad.synapse-project.indicator"))
-            add_page (new SynapseGrid (), _("Search Indicator"), "system-search", cat_applications);
+            /* Terminal Tab*/
+            if (schema_exists("org.pantheon.terminal.settings"))
+                add_tweak_page (new TerminalGrid (), _("Terminal"), _("Applications"), "utilities-terminal");
 
-        /* Slingshot Tab*/
-        if (schema_exists("org.pantheon.desktop.slingshot"))
-            add_page (new SlingshotGrid (), _("Slingshot"), "preferences-tweaks-slingshot", cat_applications);
+            /* Wingpanel-slim Tab*/
+            if (schema_exists("org.pantheon.desktop.wingpanel-slim"))
+                add_tweak_page (new WingpanelslimGrid (), _("Wingpanel Slim"), _("Applications"), "wingpanel");
 
-        /* Cerbere Tab*/
-        if (schema_exists("org.pantheon.cerbere"))
-            add_page (new CerbereGrid (), _("Cerbere"), "preferences-tweaks-cerbere", cat_applications);
+            /* Super-wingpanel Tab*/
+            if (schema_exists("org.pantheon.desktop.super-wingpanel"))
+                add_tweak_page (new SuperwingpanelGrid (), _("Super Wingpanel"), _("Applications"), "wingpanel");
 
-        /* Terminal Tab*/
-        if (schema_exists("org.pantheon.terminal.settings"))
-            add_page (new TerminalGrid (), _("Terminal"), "utilities-terminal", cat_applications);
-
-        /* Wingpanel-slim Tab*/
-        if (schema_exists("org.pantheon.desktop.wingpanel-slim"))
-            add_page (new WingpanelslimGrid (), _("Wingpanel Slim"), "wingpanel", cat_applications);
-
-        /* Super-wingpanel Tab*/
-        if (schema_exists("org.pantheon.desktop.super-wingpanel"))
-            add_page (new SuperwingpanelGrid (), _("Super Wingpanel"), "wingpanel", cat_applications);
-
-        paned.pack1 (sidebar, false, false);
-        paned.pack2 (notebook, false, true);
-        sidebar.root.expand_all ();
-        add (paned);
-
-        add_events (Gdk.EventMask.SUBSTRUCTURE_MASK);
-
-    }
-
-        SidebarItem add_page (Gtk.Widget page, string title, string icon, Granite.Widgets.SourceList.ExpandableItem parent) {
-            var index = notebook.append_page (page, new Gtk.Label (title));
-            var item = new SidebarItem (index, title, icon);
-            parent.add (item);
-            return item;
+            // expand all of the tabs
+            sidebar.root.expand_all ();
         }
 
-        void selected (Granite.Widgets.SourceList.Item? item) {
-            if (item != null)
-                notebook.page = (item as SidebarItem).index;
+        /**
+         * Returns the navigation sidebar, which will control which page that the
+         * content_area will render.
+         */
+        private Gtk.Widget get_sidebar () {
+            // create sidebar if not already created
+            if (sidebar == null) {
+                sidebar = new Granite.Widgets.SourceList ();
+                sidebar.width_request = 120;
+                sidebar.get_style_context ().add_class ("sidebar");
+                sidebar.item_selected.connect (selected);
+
+                categories = new Gee.HashMap<string, Granite.Widgets.SourceList.ExpandableItem> ();
+                page_lookup = new Gee.HashMap<Granite.Widgets.SourceList.Item, int> ();
+            }
+
+            return sidebar;
         }
 
+        /**
+         * Returns the content area that contains all of the UI for selections made
+         * in the sidebar.
+         */
+        private Gtk.Widget get_content_area () {
+            // create content area if not already created
+            if (tweak_content == null) {
+                tweak_content = new Gtk.Notebook ();
+                tweak_content.set_margin_top (0);
+                tweak_content.show_tabs = false;
+                tweak_content.get_style_context ().add_class ("content-view");
+                //tweak_content.width_request = 500;
+
+                // TODO: actually load something in here
+            }
+
+            return tweak_content;
+        }
+
+        /**
+         * Returns true if the schema exists.
+         */
         bool schema_exists(string schema) {
             return schema in Settings.list_schemas ();
         }
 
+        /**
+         * Returns true if the file exists.
+         */
         bool file_exists(string dir) {
             var checkfile = File.new_for_path (Environment.get_user_config_dir () + dir);
             return checkfile.query_exists ();
         }
 
+        /**
+         * Returns the main Gtk.Widget that contains all of our UI for Switchboard.
+         */
+        public override Gtk.Widget get_widget () {
+            // create main view if not already created
+            if (main_view == null) {
+                // get the sidebar and the content area
+                var navigation_sidebar = get_sidebar ();
+                var content_area = get_content_area ();
+
+                // create our main_view; holds side navigation and content area
+                main_view = new Granite.Widgets.ThinPaned ();
+
+                // pack the side bar on the left and content on the right
+                main_view.pack1 (navigation_sidebar, false, false);
+                main_view.pack2 (content_area, true, false);
+
+                // render out the main_view
+                main_view.show_all ();
+            }
+
+            return main_view;
+        }
+
+        /**
+         * Add a Gtk.Widget to the content area hooked to navigation in the
+         * sidebar.
+         */
+        public Granite.Widgets.SourceList.Item add_tweak_page (Gtk.Widget page, string title, string category, string? icon = null) {
+            // check category to see if it exists, create if doesn't
+            if (!categories.has_key (category)) {
+                var new_cat = new Granite.Widgets.SourceList.ExpandableItem (category);
+                sidebar.root.add (new_cat);
+                categories.set (category, new_cat);
+            }
+
+            // make sure that the page is visable
+            // TODO: does this screw anything up?
+            page.show_all ();
+
+            // create navigation sidebar entry and add it to the category
+            // TODO: set icon
+            var cat = categories.get (category);
+            var new_item = new Granite.Widgets.SourceList.Item (title);
+            if (icon != null) {
+                new_item.icon = new ThemedIcon(icon);
+            }
+            cat.add (new_item);
+
+            // add widget to tweak_content notebook
+            // TODO: this should be a gint, but I don't know how to use it.
+            int new_page_index = tweak_content.append_page (page, new Gtk.Label (title));
+
+            // link navigation entry to passed in page
+            page_lookup.set (new_item, new_page_index);
+
+            return new_item;
+        }
+
+        /**
+         * Callback method for sidebar selection
+         */
+        private void selected (Granite.Widgets.SourceList.Item? item) {
+            if (item != null && page_lookup.has_key (item)) {
+                tweak_content.page = page_lookup.get (item);
+            }
+        }
+
+        public override void shown () {
+        }
+
+        public override void hidden () {
+        }
+
+        public override void search_callback (string location) {
+        }
+
+        public override async Gee.TreeMap<string, string> search (string search) {
+            return new Gee.TreeMap<string, string> (null, null);
+        }
+    }
 }
- 
-public static int main (string[] args) {
-    Gtk.init (ref args);
 
-    var plug = new TweaksPlug ();
-    plug.register ("Tweaks");
-    plug.show_all ();
-
-    Gtk.main ();
-
-    return 0;
+public Switchboard.Plug get_plug (Module module) {
+    debug ("Activating Tweak plug");
+    var plug = new ElementaryTweak.TweakPlug ();
+    return plug;
 }

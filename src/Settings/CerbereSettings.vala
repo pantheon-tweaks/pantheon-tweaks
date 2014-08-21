@@ -1,21 +1,42 @@
-public class CerbereSettings : Granite.Services.Settings
-{
-    public int crash_time_interval { get; set; }
-    public int max_crashes { get; set; }
-    public string[] monitored_processes { get; set; }
+/*
+ * Copyright (C) Elementary Tweak Developers, 2014
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
 
-    static CerbereSettings? instance = null;
+namespace ElementaryTweak {
 
-    private CerbereSettings ()
+    public class CerbereSettings : Granite.Services.Settings
     {
-        base ("org.pantheon.cerbere");
-    }
+        public int crash_time_interval { get; set; }
+        public int max_crashes { get; set; }
+        public string[] monitored_processes { get; set; }
 
-    public static CerbereSettings get_default ()
-    {
-        if (instance == null)
-            instance = new CerbereSettings ();
+        static CerbereSettings? instance = null;
 
-        return instance;
+        private CerbereSettings ()
+        {
+            base ("org.pantheon.cerbere");
+        }
+
+        public static CerbereSettings get_default ()
+        {
+            if (instance == null)
+                instance = new CerbereSettings ();
+
+            return instance;
+        }
     }
 }

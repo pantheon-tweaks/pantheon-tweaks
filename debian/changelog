@@ -1,4 +1,10 @@
-elementary-tweaks (0.1) precise; urgency=low
+elementary-tweak (0.2) precise; urgency=low
+
+  * Freya release
+
+ -- Michael P. Starkweather <mpstark@gmail.com>  Wed, 20 Aug 2014 11:00:00 -0500
+
+elementary-tweak (0.1) precise; urgency=low
 
   * Initial release
 

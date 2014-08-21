@@ -1,6 +1,0 @@
-[@PLUGNAME@.plug]
-exec=@PLUGNAME@
-icon=@PLUGICON@
-title=@PLUGTITLE@
-category=@PLUGCATEGORY@
-X-GNOME-Gettext-Domain=@GETTEXT_PACKAGE@
