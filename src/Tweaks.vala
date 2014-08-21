@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Elementary Tweak Developers, 2014
+ * Copyright (C) Elementary Tweaks Developers, 2014
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,12 +16,12 @@
  *
  */
 
-namespace ElementaryTweak {
+namespace ElementaryTweaks {
 
     /**
      * A Switchboard plugin to tweak the Elementary OS system.
      */
-    public class TweakPlug : Switchboard.Plug {
+    public class TweaksPlug : Switchboard.Plug {
         private Granite.Widgets.ThinPaned main_view;
         private Granite.Widgets.SourceList sidebar;
         private Gtk.Notebook tweak_content;
@@ -31,7 +31,7 @@ namespace ElementaryTweak {
         /**
          * Creates a new Tweak Plug
          */
-        public TweakPlug () {
+        public TweaksPlug () {
             // init plugin stuff
             Object (category: Category.PERSONAL,
                     code_name: Build.PLUGCODENAME,
@@ -239,6 +239,6 @@ namespace ElementaryTweak {
 
 public Switchboard.Plug get_plug (Module module) {
     debug ("Activating Tweak plug");
-    var plug = new ElementaryTweak.TweakPlug ();
+    var plug = new ElementaryTweaks.TweaksPlug ();
     return plug;
 }

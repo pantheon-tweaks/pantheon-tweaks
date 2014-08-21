@@ -1,4 +1,4 @@
-Source: elementary-tweak
+Source: elementary-tweaks
 Section: x11
 Priority: optional
 Maintainer: Michael P. Starkweather <mpstark@gmail.com>
@@ -14,7 +14,7 @@ Build-Depends: cmake (>= 2.8),
 Standards-Version: 3.9.5
 Homepage: https://launchpad.net/elementarytweak
 
-Package: elementary-tweak
+Package: elementary-tweaks
 Architecture: any
 Depends: gala, plank, slingshot-launcher, ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
@@ -23,7 +23,7 @@ Enhances: switchboard
 Description: Change hidden desktop settings
  Switchboard plug for controlling hidden options.
 
-Package: elementary-tweak-dbg
+Package: elementary-tweaks-dbg
 Architecture: any
 Section: debug
 Priority: extra

@@ -10,13 +10,13 @@
 #export DH_VERBOSE=1
 
 %:
-	dh $@ 
+	dh $@
 
 override_dh_strip:
-	dh_strip --dbg-package=elementary-tweak-dbg
+	dh_strip --dbg-package=elementary-tweaks-dbg
 
 override_dh_auto_install:
-	dh_auto_install --destdir=debian/elementary-tweak
+	dh_auto_install --destdir=debian/elementary-tweaks
 
 override_dh_builddeb:
 	dh_builddeb -- -Zxz
