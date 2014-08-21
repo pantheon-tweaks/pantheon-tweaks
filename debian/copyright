@@ -1,14 +1,15 @@
 This work was packaged for Debian by:
 
-    Michael "Versable" <versable@gmail.com>  Fri, 14 Jun 2013 08:45:35 +0300
+    Michael P. Starkweather <mpstark@gmail.com>  Wed, 20 Aug 2014 11:00:00 -0500
 
 Upstream Author(s):
 
+    Michael P. Starkweather <mpstark@gmail.com>
     Michael "Versable" <versable@gmail.com>
 
 Copyright:
 
-    Copyright (C) 2013 Michael "Versable" <versable@gmail.com>
+    Copyright (C) 2014 Elementary Tweak Developers and Michael "Versable" <versable@gmail.com>
 
 License:
 
@@ -30,6 +31,6 @@ Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
 
 The Debian packaging is:
 
-    Copyright (C) 2013 Michael "Versable" <versable@gmail.com>
+    Copyright (C) 2014 Michael P. Starkweather <mpstark@gmail.com>
 
 and is licensed under the GPL version 3, see above.
