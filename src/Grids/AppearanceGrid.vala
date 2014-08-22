@@ -21,97 +21,59 @@ namespace ElementaryTweaks {
     public class AppearanceGrid : Gtk.Grid
     {
         public AppearanceGrid () {
-            this.row_spacing = 6;
-            this.column_spacing = 12;
+            // setup grid so that it aligns everything properly
+            this.set_orientation (Gtk.Orientation.VERTICAL);
             this.margin_top = 24;
-            this.column_homogeneous = true;
+            this.row_spacing = 6;
+            this.halign = Gtk.Align.CENTER;
 
-            /* Window Decoration */
-            var themes_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            var themes = new Gtk.ComboBoxText ();
-            themes = combo_box_themes ( "themes", "metacity-1");
+            // Metacity (Window Decorations) theme
+            ComboBoxTweak metacity_theme = new ComboBoxTweak (
+                        _("Metacity Theme:"),
+                        _("Tweaks the Metacity (window decorations) theme"),
+                        Util.get_themes ("themes", "metacity-1"),
+                        (() => { return WindowSettings.get_default ().theme; }), // get
+                        ((val) => { WindowSettings.get_default ().theme = val; }), // set
+                        (() => { WindowSettings.get_default ().schema.reset ("theme"); }) // reset
+                    );
+            this.add (metacity_theme.container);
 
-            themes.active_id = WindowSettings.get_default ().theme;
-            themes.changed.connect (() => WindowSettings.get_default ().theme = themes.active_id );
-            themes.halign = Gtk.Align.START;
-            themes.width_request = 160;
+            // Gtk+ theme
+            ComboBoxTweak gtk_theme = new ComboBoxTweak (
+                        _("GTK+ Theme:"),
+                        _("Tweaks the GTK+ theme"),
+                        Util.get_themes ("themes", "gtk-3.0"),
+                        (() => { return InterfaceSettings.get_default ().gtk_theme; }), // get
+                        ((val) => { InterfaceSettings.get_default ().gtk_theme = val; }), // set
+                        (() => { InterfaceSettings.get_default ().schema.reset ("gtk-theme"); }) // reset
+                    );
+            this.add (gtk_theme.container);
 
-            var themes_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
+            // Icon theme
+            ComboBoxTweak icon_theme = new ComboBoxTweak (
+                        _("Icon Theme:"),
+                        _("Tweaks the icon theme"),
+                        Util.get_themes ("themes", "index.theme"),
+                        (() => { return InterfaceSettings.get_default ().icon_theme; }), // get
+                        ((val) => { InterfaceSettings.get_default ().icon_theme = val; }), // set
+                        (() => { InterfaceSettings.get_default ().schema.reset ("icon-theme"); }) // reset
+                    );
+            this.add (icon_theme.container);
 
-            themes_default.clicked.connect (() => {
-                    WindowSettings.get_default ().schema.reset ("theme");
-                    themes.active_id = WindowSettings.get_default ().theme;
-                    });
+            // Cursor theme
+            ComboBoxTweak cursor_theme = new ComboBoxTweak (
+                        _("Cursor Theme:"),
+                        _("Tweaks the cursor theme"),
+                        Util.get_themes ("icons", "cursors"),
+                        (() => { return InterfaceSettings.get_default ().cursor_theme; }), // get
+                        ((val) => { InterfaceSettings.get_default ().cursor_theme = val; }), // set
+                        (() => { InterfaceSettings.get_default ().schema.reset ("cursor-theme"); }) // reset
+                    );
+            this.add (cursor_theme.container);
 
-            themes_default.halign = Gtk.Align.START;
 
-            themes_box.pack_start (themes, false);
-            themes_box.pack_start (themes_default, false);
-
-            /* Interface Themes */
-            var ui_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            var ui = new Gtk.ComboBoxText ();
-            ui = combo_box_themes ( "themes", "gtk-3.0");
-
-            ui.active_id = InterfaceSettings.get_default ().gtk_theme;
-            ui.changed.connect (() => InterfaceSettings.get_default ().gtk_theme = ui.active_id );
-            ui.halign = Gtk.Align.START;
-            ui.width_request = 160;
-
-            var ui_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
-
-            ui_default.clicked.connect (() => {
-                    InterfaceSettings.get_default ().schema.reset ("gtk-theme");
-                    ui.active_id = InterfaceSettings.get_default ().gtk_theme;
-                    });
-            ui_default.halign = Gtk.Align.START;
-
-            ui_box.pack_start (ui, false);
-            ui_box.pack_start (ui_default, false);
-
-            /* Icon Themes */
-            var icon_theme_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            var icon_theme = new Gtk.ComboBoxText ();
-            icon_theme = combo_box_themes ( "icons", "index.theme");
-
-            icon_theme.active_id = InterfaceSettings.get_default ().icon_theme;
-            icon_theme.changed.connect (() => InterfaceSettings.get_default ().icon_theme = icon_theme.active_id );
-            icon_theme.halign = Gtk.Align.START;
-            icon_theme.width_request = 160;
-
-            var icon_theme_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
-
-            icon_theme_default.clicked.connect (() => {
-                    InterfaceSettings.get_default ().schema.reset ("icon-theme");
-                    icon_theme.active_id = InterfaceSettings.get_default ().icon_theme;
-                    });
-            icon_theme_default.halign = Gtk.Align.START;
-
-            icon_theme_box.pack_start (icon_theme, false);
-            icon_theme_box.pack_start (icon_theme_default, false);
-
-            /* Cursor Themes */
-            var cursor_theme_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            var cursor_theme = new Gtk.ComboBoxText ();
-            cursor_theme = combo_box_themes ( "icons", "cursors");
-
-            cursor_theme.active_id = InterfaceSettings.get_default ().cursor_theme;
-            cursor_theme.changed.connect (() => InterfaceSettings.get_default ().cursor_theme = cursor_theme.active_id );
-            cursor_theme.halign = Gtk.Align.START;
-            cursor_theme.width_request = 160;
-
-            var cursor_theme_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
-
-            cursor_theme_default.clicked.connect (() => {
-                    InterfaceSettings.get_default ().schema.reset ("cursor-theme");
-                    cursor_theme.active_id = InterfaceSettings.get_default ().cursor_theme;
-                    });
-            cursor_theme_default.halign = Gtk.Align.START;
-
-            cursor_theme_box.pack_start (cursor_theme, false);
-            cursor_theme_box.pack_start (cursor_theme_default, false);
-
-            /* Button Layout */
+            // TODO: redo this so that it works and isn't.. like this.
+            /*
             var button_layout_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
             var button_layout = new Gtk.ComboBoxText ();
             var custom_layout_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
@@ -182,25 +144,12 @@ namespace ElementaryTweaks {
             custom_layout_box.pack_start (custom_layout_apply, false);
 
 
-            /* Add to Grid */
-            this.attach (new LLabel.right (_("Window Decoration Theme:")), 0, 1, 2, 1);
-            this.attach (themes_box, 2, 1, 2, 1);
-
-            this.attach (new LLabel.right (_("Interface Theme:")), 0, 2, 2, 1);
-            this.attach (ui_box, 2, 2, 2, 1);
-
-            this.attach (new LLabel.right (_("Icon Theme:")), 0, 3, 2, 1);
-            this.attach (icon_theme_box, 2, 3, 2, 1);
-
-            this.attach (new LLabel.right (_("Cursor Theme:")), 0, 4, 2, 1);
-            this.attach (cursor_theme_box, 2, 4, 2, 1);
-
             this.attach (new LLabel.right (_("Button Layout:")), 0, 5, 2, 1);
             this.attach (button_layout_box, 2, 5, 2, 1);
 
             this.attach (custom_text, 0, 6, 2, 1);
             this.attach (custom_layout_box, 2, 6, 2, 1);
-
+            */
         }
     }
 }
