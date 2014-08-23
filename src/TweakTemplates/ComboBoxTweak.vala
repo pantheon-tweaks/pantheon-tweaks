@@ -19,7 +19,7 @@
 namespace ElementaryTweaks {
 
     /**
-     * A Gtk.ComboBox with a defaults button wrapped in a container.
+     * A Gtk.ComboBox with a defaults button and a label wrapped in a container.
      */
     public class ComboBoxTweak {
         public delegate string GetValue ();
