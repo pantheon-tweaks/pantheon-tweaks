@@ -30,7 +30,7 @@ namespace ElementaryTweaks {
             // Metacity (Window Decorations) theme
             ComboBoxTweak metacity_theme = new ComboBoxTweak (
                         _("Metacity Theme:"),
-                        _("Tweaks the Metacity (window decorations) theme"),
+                        _("Used to render windows that do not use GTK+"),
                         Util.get_themes ("themes", "metacity-1"),
                         (() => { return WindowSettings.get_default ().theme; }), // get
                         ((val) => { WindowSettings.get_default ().theme = val; }), // set
@@ -41,7 +41,7 @@ namespace ElementaryTweaks {
             // Gtk+ theme
             ComboBoxTweak gtk_theme = new ComboBoxTweak (
                         _("GTK+ Theme:"),
-                        _("Tweaks the GTK+ theme"),
+                        _("Used to render GTK+ windows like Switchboard"),
                         Util.get_themes ("themes", "gtk-3.0"),
                         (() => { return InterfaceSettings.get_default ().gtk_theme; }), // get
                         ((val) => { InterfaceSettings.get_default ().gtk_theme = val; }), // set
@@ -52,7 +52,7 @@ namespace ElementaryTweaks {
             // Icon theme
             ComboBoxTweak icon_theme = new ComboBoxTweak (
                         _("Icon Theme:"),
-                        _("Tweaks the icon theme"),
+                        _("Used to theme the icon set, including application icons"),
                         Util.get_themes ("themes", "index.theme"),
                         (() => { return InterfaceSettings.get_default ().icon_theme; }), // get
                         ((val) => { InterfaceSettings.get_default ().icon_theme = val; }), // set
@@ -63,7 +63,7 @@ namespace ElementaryTweaks {
             // Cursor theme
             ComboBoxTweak cursor_theme = new ComboBoxTweak (
                         _("Cursor Theme:"),
-                        _("Tweaks the cursor theme"),
+                        _("Used to theme the cursor, may not work"),
                         Util.get_themes ("icons", "cursors"),
                         (() => { return InterfaceSettings.get_default ().cursor_theme; }), // get
                         ((val) => { InterfaceSettings.get_default ().cursor_theme = val; }), // set
