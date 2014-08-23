@@ -89,14 +89,6 @@ namespace ElementaryTweaks {
             if (schema_exists("org.pantheon.terminal.settings"))
                 add_tweak_page (new TerminalGrid (), _("Terminal"), _("Applications"), "utilities-terminal");
 
-            /* Wingpanel-slim Tab*/
-            if (schema_exists("org.pantheon.desktop.wingpanel-slim"))
-                add_tweak_page (new WingpanelslimGrid (), _("Wingpanel Slim"), _("Applications"), "wingpanel");
-
-            /* Super-wingpanel Tab*/
-            if (schema_exists("org.pantheon.desktop.super-wingpanel"))
-                add_tweak_page (new SuperwingpanelGrid (), _("Super Wingpanel"), _("Applications"), "wingpanel");
-
             // expand all of the tabs
             sidebar.root.expand_all ();
         }
@@ -143,7 +135,7 @@ namespace ElementaryTweaks {
          * Returns true if the schema exists.
          */
         bool schema_exists(string schema) {
-            return schema in Settings.list_schemas ();
+            return (SettingsSchemaSource.get_default ().lookup(schema, true) != null);
         }
 
         /**

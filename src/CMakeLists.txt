@@ -28,8 +28,6 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Settings/GnomeSettings.vala
     Settings/SynapseSettings.vala
     Settings/TerminalSettings.vala
-    Settings/WingpanelslimSettings.vala
-    Settings/SuperwingpanelSettings.vala
     Grids/AppearanceGrid.vala
     Grids/CerbereGrid.vala
     Grids/FontsGrid.vala
@@ -42,8 +40,6 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Grids/SlingshotGrid.vala
     Grids/SynapseGrid.vala
     Grids/TerminalGrid.vala
-    Grids/WingpanelslimGrid.vala
-    Grids/SuperwingpanelGrid.vala
     Objects/ShortcutObject.vala
     Widgets/LLabel.vala
     Widgets/AcceleratorInputWidget.vala
