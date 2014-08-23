@@ -21,94 +21,51 @@ namespace ElementaryTweaks {
     public class FontsGrid : Gtk.Grid
     {
         public FontsGrid () {
-            this.row_spacing = 6;
-            this.column_spacing = 12;
+            // setup grid so that it aligns everything properly
+            this.set_orientation (Gtk.Orientation.VERTICAL);
             this.margin_top = 24;
-            this.column_homogeneous = true;
+            this.row_spacing = 6;
+            this.halign = Gtk.Align.CENTER;
 
-            /* Default Font */
-            var default_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            var default_font = new Gtk.FontButton.with_font (InterfaceSettings.get_default ().font_name);
-            default_font.font_set.connect (() => InterfaceSettings.get_default ().font_name = default_font.get_font_name ());
-            default_font.width_request = 160;
-            default_font.use_font = true;
+            // Default font tweak
+            FontTweak default_font = new FontTweak (
+                        _("Default Font:"),
+                        _("Used by default by most applications"),
+                        (() => { return InterfaceSettings.get_default ().font_name; }), // get
+                        ((val) => { InterfaceSettings.get_default ().font_name = val; }), // set
+                        (() => { InterfaceSettings.get_default ().schema.reset ("font-name"); }) // reset
+                    );
+            this.add (default_font.container);
 
-            var default_font_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
+            // Document font tweak
+            FontTweak document_font = new FontTweak (
+                        _("Document Font:"),
+                        _("Used when displaying documents, if no other font was chosen"),
+                        (() => { return InterfaceSettings.get_default ().document_font_name; }), // get
+                        ((val) => { InterfaceSettings.get_default ().document_font_name = val; }), // set
+                        (() => { InterfaceSettings.get_default ().schema.reset ("document-font-name"); }) // reset
+                    );
+            this.add (document_font.container);
 
-            default_font_default.clicked.connect (() => {
-                    InterfaceSettings.get_default ().schema.reset ("font-name");
-                    default_font.font_name = InterfaceSettings.get_default ().font_name;
-                    });
+            // Monospace font tweak
+            FontTweak monospace_font = new FontTweak (
+                        _("Monospace Font:"),
+                        _("Used in the terminal, for code, and sometimes for plain text"),
+                        (() => { return InterfaceSettings.get_default ().monospace_font_name; }), // get
+                        ((val) => { InterfaceSettings.get_default ().monospace_font_name = val; }), // set
+                        (() => { InterfaceSettings.get_default ().schema.reset ("monospace-font-name"); }) // reset
+                    );
+            this.add (monospace_font.container);
 
-            default_font_box.pack_start (default_font, false);
-            default_font_box.pack_start (default_font_default, false);
-
-            /* Document Font */
-            var document_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            var document_font = new Gtk.FontButton.with_font (InterfaceSettings.get_default ().document_font_name);
-            document_font.font_set.connect (() => InterfaceSettings.get_default ().document_font_name = document_font.get_font_name ());
-            document_font.width_request = 160;
-            document_font.use_font = true;
-
-            var document_font_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
-
-            document_font_default.clicked.connect (() => {
-                    InterfaceSettings.get_default ().schema.reset ("document-font-name");
-                    document_font.font_name = InterfaceSettings.get_default ().document_font_name;
-                    });
-
-            document_font_box.pack_start (document_font, false);
-            document_font_box.pack_start (document_font_default, false);
-
-            /* Monospace Font */
-            var mono_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            var mono_font = new Gtk.FontButton.with_font (InterfaceSettings.get_default ().monospace_font_name);
-            mono_font.set_filter_func((family, face) => {
-                    return family.is_monospace();
-                    });
-            mono_font.font_set.connect (() => InterfaceSettings.get_default ().monospace_font_name = mono_font.get_font_name ());
-            mono_font.width_request = 160;
-            mono_font.use_font = true;
-
-            var mono_font_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
-
-            mono_font_default.clicked.connect (() => {
-                    InterfaceSettings.get_default ().schema.reset ("monospace-font-name");
-                    mono_font.font_name = InterfaceSettings.get_default ().monospace_font_name;
-                    });
-
-            mono_font_box.pack_start (mono_font, false);
-            mono_font_box.pack_start (mono_font_default, false);
-
-            /* Window Font */
-            var window_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            var window_font = new Gtk.FontButton.with_font (WindowSettings.get_default ().titlebar_font);
-            window_font.font_set.connect (() => WindowSettings.get_default ().titlebar_font = window_font.get_font_name ());
-            window_font.width_request = 160;
-            window_font.use_font = true;
-
-            var window_font_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
-
-            window_font_default.clicked.connect (() => {
-                    WindowSettings.get_default ().schema.reset ("titlebar-font");
-                    window_font.font_name = WindowSettings.get_default ().titlebar_font;
-                    });
-
-            window_font_box.pack_start (window_font, false);
-            window_font_box.pack_start (window_font_default, false);
-
-
-            this.attach (new LLabel.right (_("Default Font:")), 1, 0, 1, 1);
-            this.attach (default_font_box, 2, 0, 1, 1);
-
-            this.attach (new LLabel.right (_("Document Font:")), 1, 1, 1, 1);
-            this.attach (document_font_box, 2, 1, 1, 1);
-
-            this.attach (new LLabel.right (_("Monospace Font:")), 1, 2, 1, 1);
-            this.attach (mono_font_box, 2, 2, 1, 1);
-
-            this.attach (new LLabel.right (_("Window Title Font:")), 1, 3, 1, 1);
-            this.attach (window_font_box, 2, 3, 1, 1);
+            // Window title font tweak
+            FontTweak window_title_font = new FontTweak (
+                        _("Titlebar Font:"),
+                        _("Used to display window titles"),
+                        (() => { return WindowSettings.get_default ().titlebar_font; }), // get
+                        ((val) => { WindowSettings.get_default ().titlebar_font = val; }), // set
+                        (() => { WindowSettings.get_default ().schema.reset ("titlebar-font"); }) // reset
+                    );
+            this.add (window_title_font.container);
         }
     }
 }
