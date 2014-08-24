@@ -63,7 +63,7 @@ namespace ElementaryTweaks {
             add_tweak_page (new ShortcutsGrid (), _("Shortcuts"), _("General"), "preferences-desktop-keyboard");
 
             // Misc Tweaks
-            add_tweak_page (new MiscGrid (), _("Miscellaneous"), _("General"), "preferences-system-session");
+            add_tweak_page (new MiscGrid (), _("Miscellaneous"), _("General"), "applications-other");
 
             // Plank Tweaks
             if (file_exists("/plank/dock1/settings"))
@@ -226,7 +226,7 @@ namespace ElementaryTweaks {
 }
 
 public Switchboard.Plug get_plug (Module module) {
-    debug ("Activating Tweak plug");
+    info ("Activating Tweak plug");
     var plug = new ElementaryTweaks.TweaksPlug ();
     return plug;
 }
