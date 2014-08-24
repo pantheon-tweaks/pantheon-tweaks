@@ -19,6 +19,8 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Util.vala
     TweakTemplates/ComboBoxTweak.vala
     TweakTemplates/FontTweak.vala
+    TweakTemplates/SpinButtonTweak.vala
+    TweakTemplates/SwitchTweak.vala
     Settings/FilesSettings.vala
     Settings/GalaSettings.vala
     Settings/PlankSettings.vala
