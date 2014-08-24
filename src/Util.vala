@@ -41,7 +41,7 @@ namespace ElementaryTweaks {
                                 name != "Emacs" && name != "Default" && !themes.contains(name))
                             themes.add(name);
                     }
-                } catch (Error e) { warning (e.message); }
+                } catch (Error e) { /*warning (e.message);*/ }
             }
 
             return themes;
