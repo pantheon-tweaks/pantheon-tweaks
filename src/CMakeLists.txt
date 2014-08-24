@@ -23,12 +23,12 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     TweakTemplates/SwitchTweak.vala
     Settings/FilesSettings.vala
     Settings/GalaSettings.vala
+    Settings/GtkSettings.vala
     Settings/PlankSettings.vala
     Settings/KeyboardSettings.vala
     Settings/SlingshotSettings.vala
     Settings/CerbereSettings.vala
     Settings/GnomeSettings.vala
-    Settings/SynapseSettings.vala
     Settings/TerminalSettings.vala
     Grids/AppearanceGrid.vala
     Grids/CerbereGrid.vala
@@ -40,7 +40,6 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Grids/PlankGrid.vala
     Grids/MiscGrid.vala
     Grids/SlingshotGrid.vala
-    Grids/SynapseGrid.vala
     Grids/TerminalGrid.vala
     Objects/ShortcutObject.vala
     Widgets/LLabel.vala
