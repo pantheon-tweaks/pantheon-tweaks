@@ -73,10 +73,6 @@ namespace ElementaryTweaks {
             if (schema_exists("org.pantheon.files.preferences"))
                 add_tweak_page (new FilesGrid (), _("Files"), _("Applications"), "system-file-manager");
 
-            // Synapse Tweaks
-            if (schema_exists("net.launchpad.synapse-project.indicator"))
-                add_tweak_page (new SynapseGrid (), _("Search Indicator"), _("Applications"), "system-search");
-
             // Slingshot Tweaks
             if (schema_exists("org.pantheon.desktop.slingshot"))
                 add_tweak_page (new SlingshotGrid (), _("Slingshot"), _("Applications"), "preferences-tweaks-slingshot");
