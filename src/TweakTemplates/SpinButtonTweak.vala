@@ -47,7 +47,7 @@ namespace ElementaryTweaks {
             // spinbutton
             spin_button = new Gtk.SpinButton.with_range (start, end, step);
             spin_button.halign = Gtk.Align.START;
-            spin_button.width_request = 160;
+            spin_button.width_request = 130;
             spin_button.set_tooltip_text (tooltip);
 
             // set the current value of spinner to current value
