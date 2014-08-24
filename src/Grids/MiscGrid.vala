@@ -26,18 +26,11 @@ namespace ElementaryTweaks {
             this.margin_top = 24;
             this.column_homogeneous = true;
 
-
             /* Audible Bell */
             var audible_bell = new Gtk.Switch ();
             audible_bell.set_active(WindowSettings.get_default ().audible_bell);
             audible_bell.notify["active"].connect (() => WindowSettings.get_default ().audible_bell = audible_bell.active );
             audible_bell.halign = Gtk.Align.START;
-
-            /* Natural Scrolling */
-            var scroll = new Gtk.Switch ();
-            scroll.set_active(scroll_exists ());
-            scroll.notify["active"].connect (() => scroll_switch());
-            scroll.halign = Gtk.Align.START;
 
             /* Double Click Titlebar Action */
             var dbl_click_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
@@ -131,40 +124,6 @@ namespace ElementaryTweaks {
 
             this.attach (new LLabel.right (_("Audible Bell:")), 0, 3, 1, 1);
             this.attach (audible_bell, 1, 3, 1, 1);
-
-            this.attach (new LLabel.right (_("Natural Scrolling:")), 0, 5, 1, 1);
-            this.attach (scroll, 1, 5, 1, 1);
-
         }
-    }
-
-    public void scroll_switch () {
-        try {
-            var file_dest = File.new_for_path (Environment.get_user_config_dir () + "/autostart/natural-scrolling.desktop");
-            var file_src = File.new_for_path ("/usr/lib/plugs/pantheon/tweaks/natural-scrolling.desktop");
-
-            if (file_dest.query_exists ())
-                file_dest.delete ();
-
-            if ( scroll_exists() ) {
-                Process.spawn_command_line_async ("/usr/lib/plugs/pantheon/tweaks/natural_scrolling.sh false");
-            } else {
-                Process.spawn_command_line_async ("/usr/lib/plugs/pantheon/tweaks/natural_scrolling.sh true");
-                file_src.copy (file_dest, FileCopyFlags.NONE);
-            }
-        } catch (Error e){
-            warning (e.message);
-        }
-    }
-
-    public bool scroll_exists () {
-        try {
-            string scrolling_state;
-            Process.spawn_command_line_sync ("/usr/lib/plugs/pantheon/tweaks/natural_scrolling.sh", out scrolling_state);
-            return scrolling_state.contains("true");
-        } catch (Error e) {
-            warning (e.message);
-        }
-        return false;
     }
 }
