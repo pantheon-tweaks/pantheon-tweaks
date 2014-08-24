@@ -27,6 +27,16 @@ namespace ElementaryTweaks {
             this.row_spacing = 6;
             this.halign = Gtk.Align.CENTER;
 
+            // Dark theme tweak
+            SwitchTweak prefer_dark_theme = new SwitchTweak (
+                        _("Prefer Dark Theme:"),
+                        _("WARNING: Will cause some apps to look terrible"),
+                        (() => { return GtkSettings.get_default ().prefer_dark_theme; }), // get
+                        ((val) => { GtkSettings.get_default ().prefer_dark_theme = val; }), // set
+                        (() => { GtkSettings.get_default ().prefer_dark_theme = false; }) // reset
+                    );
+            this.add (prefer_dark_theme.container);
+
             // Metacity (Window Decorations) theme
             ComboBoxTweak metacity_theme = new ComboBoxTweak (
                         _("Metacity Theme:"),
