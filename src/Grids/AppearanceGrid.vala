@@ -63,7 +63,7 @@ namespace ElementaryTweaks {
             ComboBoxTweak icon_theme = new ComboBoxTweak.with_list (
                         _("Icon Theme:"),
                         _("Used to theme the icon set, including application icons"),
-                        Util.get_themes ("themes", "index.theme"),
+                        Util.get_themes ("icons", "index.theme"),
                         (() => { return InterfaceSettings.get_default ().icon_theme; }), // get
                         ((val) => { InterfaceSettings.get_default ().icon_theme = val; }), // set
                         (() => { InterfaceSettings.get_default ().schema.reset ("icon-theme"); }) // reset
