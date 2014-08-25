@@ -38,7 +38,7 @@ namespace ElementaryTweaks {
             this.add (prefer_dark_theme.container);
 
             // Metacity (Window Decorations) theme
-            ComboBoxTweak metacity_theme = new ComboBoxTweak (
+            ComboBoxTweak metacity_theme = new ComboBoxTweak.with_list (
                         _("Metacity Theme:"),
                         _("Used to render windows that do not use GTK+"),
                         Util.get_themes ("themes", "metacity-1"),
@@ -49,7 +49,7 @@ namespace ElementaryTweaks {
             this.add (metacity_theme.container);
 
             // Gtk+ theme
-            ComboBoxTweak gtk_theme = new ComboBoxTweak (
+            ComboBoxTweak gtk_theme = new ComboBoxTweak.with_list (
                         _("GTK+ Theme:"),
                         _("Used to render GTK+ windows like Switchboard"),
                         Util.get_themes ("themes", "gtk-3.0"),
@@ -60,7 +60,7 @@ namespace ElementaryTweaks {
             this.add (gtk_theme.container);
 
             // Icon theme
-            ComboBoxTweak icon_theme = new ComboBoxTweak (
+            ComboBoxTweak icon_theme = new ComboBoxTweak.with_list (
                         _("Icon Theme:"),
                         _("Used to theme the icon set, including application icons"),
                         Util.get_themes ("themes", "index.theme"),
@@ -71,7 +71,7 @@ namespace ElementaryTweaks {
             this.add (icon_theme.container);
 
             // Cursor theme
-            ComboBoxTweak cursor_theme = new ComboBoxTweak (
+            ComboBoxTweak cursor_theme = new ComboBoxTweak.with_list (
                         _("Cursor Theme:"),
                         _("Used to theme the cursor, may not work"),
                         Util.get_themes ("icons", "cursors"),

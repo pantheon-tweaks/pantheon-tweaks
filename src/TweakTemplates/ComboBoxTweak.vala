@@ -34,10 +34,10 @@ namespace ElementaryTweaks {
         /**
          * Constructor for creating a new ComboBoxTweak.
          *
-         * Send in a list containing all of the potential values as well as functions
+         * Send in a map containing all of the potential values as well as functions
          * and setting the particular thing that we are tweaking.
          */
-        public ComboBoxTweak (string tweakName, string tooltip, Gee.ArrayList<string> values, GetValue getV, SetValue setV, ResetValue resetV) {
+        public ComboBoxTweak (string tweakName, string tooltip, Gee.Map<string, string> values, GetValue getV, SetValue setV, ResetValue resetV) {
             // label that identifies the tweak
             label = new Gtk.Label (tweakName);
 
@@ -54,8 +54,8 @@ namespace ElementaryTweaks {
             combo_box.set_tooltip_text (tooltip);
 
             // add all of the passed in values into the combo box
-            foreach (string val in values)
-                combo_box.append (val, val); // id = val; value = val;
+            foreach (var val in values.entries)
+                combo_box.append (val.key, val.value); // id = val; value = val;
 
             // set current value to active entry
             combo_box.active_id = getV ();
@@ -81,6 +81,19 @@ namespace ElementaryTweaks {
             container.add (label);
             container.add (combo_box);
             container.add (default_button);
+        }
+
+        /**
+         * ComboBoxTweak with a list
+         */
+        public ComboBoxTweak.with_list (string tweakName, string tooltip, Gee.List<string> values, GetValue getV, SetValue setV, ResetValue resetV) {
+            // need to use a map,
+            var map = new Gee.HashMap<string, string> ();
+            foreach (string val in values) {
+                map.set (val, val);
+            }
+
+            this (tweakName, tooltip, map, getV, setV, resetV);
         }
     }
 }
