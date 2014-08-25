@@ -20,146 +20,99 @@ namespace ElementaryTweaks {
 
     public class AnimationsGrid : Gtk.Grid
     {
+        private Gtk.Grid animation_durations; // this can't be local to set sensitive from closure, not sure why
+
         public AnimationsGrid () {
-            this.row_spacing = 6;
-            this.column_spacing = 12;
+            // setup grid so that it aligns everything properly
+            this.set_orientation (Gtk.Orientation.VERTICAL);
             this.margin_top = 24;
-            this.column_homogeneous = true;
+            this.row_spacing = 6;
+            this.halign = Gtk.Align.CENTER;
 
+            // this will hold all of the animation durations so that we can set_sensitive all at once
+            animation_durations = new Gtk.Grid ();
+            animation_durations.set_orientation (Gtk.Orientation.VERTICAL);
+            animation_durations.row_spacing = 6;
+            animation_durations.halign = Gtk.Align.CENTER;
 
-            var open_dur_label = new LLabel.right (_("Open Duration:"));
-            var close_dur_label = new LLabel.right (_("Close Duration:"));
-            var snap_dur_label = new LLabel.right (_("Snap Duration:"));
-            var mini_dur_label = new LLabel.right (_("Minimize Duration:"));
-            var work_dur_label = new LLabel.right (_("Workspace Switch Duration:"));
+            // make sure that we are consistant about greying out if not enabled
+            animation_durations.sensitive = AnimationSettings.get_default ().enable_animations;
 
-            var open_dur_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            var open_dur_spin = new Gtk.SpinButton.with_range (0, 10000, 1);
+            // Animation toggle
+            SwitchTweak animations = new SwitchTweak (
+                        _("Animations:"),
+                        _("If the animations play at all"),
+                        (() => { return AnimationSettings.get_default ().enable_animations; }), // get
+                        ((val) => {
+                                animation_durations.sensitive = val;
+                                AnimationSettings.get_default ().enable_animations = val;
+                            }), // set
+                        (() => { AnimationSettings.get_default ().schema.reset ("enable-animations"); }) // reset
+                    );
+            this.add (animations.container);
 
-            open_dur_spin.width_request = 160;
-            open_dur_spin.set_value (AnimationSettings.get_default ().open_duration);
-            open_dur_spin.value_changed.connect (() => AnimationSettings.get_default ().open_duration = (int)open_dur_spin.get_value ());
+            // separator to try to make it obvious that the toggle button controls the entire block beneath
+            this.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
 
-            var open_dur_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
-            open_dur_default.clicked.connect (() => {
-                    AnimationSettings.get_default ().schema.reset ("open-duration");
-                    open_dur_spin.set_value (AnimationSettings.get_default ().open_duration);
-                    });
+            // Open duration tweak
+            SpinButtonTweak open_duration = new SpinButtonTweak (
+                        _("Open Duration:"),
+                        _("Plays when an application is opened"),
+                        0, 10000, 1,
+                        (() => { return AnimationSettings.get_default ().open_duration; }), // get
+                        ((val) => { AnimationSettings.get_default ().open_duration = val; }), // set
+                        (() => { AnimationSettings.get_default ().schema.reset ("open-duration"); }) // reset
+                    );
+            animation_durations.add (open_duration.container);
 
-            open_dur_box.pack_start (open_dur_spin, false);
-            open_dur_box.pack_start (open_dur_default, false);
+            // Close duration tweak
+            SpinButtonTweak close_duration = new SpinButtonTweak (
+                        _("Close Duration:"),
+                        _("Plays when an application is closed"),
+                        0, 10000, 1,
+                        (() => { return AnimationSettings.get_default ().close_duration; }), // get
+                        ((val) => { AnimationSettings.get_default ().close_duration = val; }), // set
+                        (() => { AnimationSettings.get_default ().schema.reset ("close-duration"); }) // reset
+                    );
+            animation_durations.add (close_duration.container);
 
+            // Snap duration tweak
+            SpinButtonTweak snap_duration = new SpinButtonTweak (
+                        _("Snap Duration:"),
+                        _("Plays when an application is snapped to the side"),
+                        0, 10000, 1,
+                        (() => { return AnimationSettings.get_default ().snap_duration; }), // get
+                        ((val) => { AnimationSettings.get_default ().snap_duration = val; }), // set
+                        (() => { AnimationSettings.get_default ().schema.reset ("snap-duration"); }) // reset
+                    );
+            animation_durations.add (snap_duration.container);
 
-            var close_dur_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            var close_dur_spin = new Gtk.SpinButton.with_range (0, 10000, 1);
+            // Minimize duration tweak
+            SpinButtonTweak minimize_duration = new SpinButtonTweak (
+                        _("Minimize Duration:"),
+                        _("Plays when an application is minimized"),
+                        0, 10000, 1,
+                        (() => { return AnimationSettings.get_default ().minimize_duration; }), // get
+                        ((val) => { AnimationSettings.get_default ().minimize_duration = val; }), // set
+                        (() => { AnimationSettings.get_default ().schema.reset ("minimize-duration"); }) // reset
+                    );
+            animation_durations.add (minimize_duration.container);
 
-            close_dur_spin.width_request = 160;
-            close_dur_spin.set_value (AnimationSettings.get_default ().close_duration);
-            close_dur_spin.value_changed.connect (() => AnimationSettings.get_default ().close_duration = (int)close_dur_spin.get_value ());
+            // Minimize duration tweak
+            SpinButtonTweak workspace_switch_duration = new SpinButtonTweak (
+                        _("Workspace Switch Duration:"),
+                        _("Plays when an application is minimized"),
+                        0, 10000, 1,
+                        (() => { return AnimationSettings.get_default ().workspace_switch_duration; }), // get
+                        ((val) => { AnimationSettings.get_default ().workspace_switch_duration = val; }), // set
+                        (() => { AnimationSettings.get_default ().schema.reset ("workspace-switch-duration"); }) // reset
+                    );
+            animation_durations.add (workspace_switch_duration.container);
 
-            var close_dur_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
-            close_dur_default.clicked.connect (() => {
-                    AnimationSettings.get_default ().schema.reset ("close-duration");
-                    close_dur_spin.set_value (AnimationSettings.get_default ().close_duration);
-                    });
+            // add the grid with all of the animation durations in it
+            this.add (animation_durations);
 
-            close_dur_box.pack_start (close_dur_spin, false);
-            close_dur_box.pack_start (close_dur_default, false);
-
-
-            var snap_dur_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            var snap_dur_spin = new Gtk.SpinButton.with_range (0, 10000, 1);
-
-            snap_dur_spin.width_request = 160;
-            snap_dur_spin.set_value (AnimationSettings.get_default ().snap_duration);
-            snap_dur_spin.value_changed.connect (() => AnimationSettings.get_default ().snap_duration = (int)snap_dur_spin.get_value ());
-
-            var snap_dur_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
-            snap_dur_default.clicked.connect (() => {
-                    AnimationSettings.get_default ().schema.reset ("snap-duration");
-                    snap_dur_spin.set_value (AnimationSettings.get_default ().snap_duration);
-                    });
-
-            snap_dur_box.pack_start (snap_dur_spin, false);
-            snap_dur_box.pack_start (snap_dur_default, false);
-
-
-            var mini_dur_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            var mini_dur_spin = new Gtk.SpinButton.with_range (0, 10000, 1);
-
-            mini_dur_spin.width_request = 160;
-            mini_dur_spin.set_value (AnimationSettings.get_default ().minimize_duration);
-            mini_dur_spin.value_changed.connect (() => AnimationSettings.get_default ().minimize_duration = (int)mini_dur_spin.get_value ());
-            var mini_dur_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
-            mini_dur_default.clicked.connect (() => {
-                    AnimationSettings.get_default ().schema.reset ("minimize-duration");
-                    mini_dur_spin.set_value (AnimationSettings.get_default ().minimize_duration);
-                    });
-
-            mini_dur_box.pack_start (mini_dur_spin, false);
-            mini_dur_box.pack_start (mini_dur_default, false);
-
-
-            var work_dur_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            var work_dur_spin = new Gtk.SpinButton.with_range (0, 10000, 1);
-
-            work_dur_spin.width_request = 160;
-            work_dur_spin.set_value (AnimationSettings.get_default ().workspace_switch_duration);
-            work_dur_spin.value_changed.connect (() => AnimationSettings.get_default ().workspace_switch_duration = (int)work_dur_spin.get_value ());
-            var work_dur_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
-            work_dur_default.clicked.connect (() => {
-                    AnimationSettings.get_default ().schema.reset ("workspace-switch-duration");
-                    work_dur_spin.set_value (AnimationSettings.get_default ().workspace_switch_duration);
-                    });
-
-            work_dur_box.pack_start (work_dur_spin, false);
-            work_dur_box.pack_start (work_dur_default, false);
-
-
-            /* Animation Switch */
-            var enable_anim = new Gtk.Switch ();
-            enable_anim.notify["active"].connect (() => {
-                    open_dur_box.sensitive = enable_anim.active;
-                    close_dur_box.sensitive = enable_anim.active;
-                    snap_dur_box.sensitive = enable_anim.active;
-                    mini_dur_box.sensitive = enable_anim.active;
-                    work_dur_box.sensitive = enable_anim.active;
-                    open_dur_label.sensitive = enable_anim.active;
-                    close_dur_label.sensitive = enable_anim.active;
-                    snap_dur_label.sensitive = enable_anim.active;
-                    mini_dur_label.sensitive = enable_anim.active;
-                    work_dur_label.sensitive = enable_anim.active;
-                    AnimationSettings.get_default ().enable_animations = enable_anim.active;
-                    });
-
-            enable_anim.active = AnimationSettings.get_default ().enable_animations;
-
-            open_dur_box.sensitive = enable_anim.active;
-            close_dur_box.sensitive = enable_anim.active;
-            snap_dur_box.sensitive = enable_anim.active;
-            mini_dur_box.sensitive = enable_anim.active;
-            work_dur_box.sensitive = enable_anim.active;
-            open_dur_label.sensitive = enable_anim.active;
-            close_dur_label.sensitive = enable_anim.active;
-            snap_dur_label.sensitive = enable_anim.active;
-            mini_dur_label.sensitive = enable_anim.active;
-            work_dur_label.sensitive = enable_anim.active;
-
-            enable_anim.halign = Gtk.Align.START;
-
-            /* Attach to grid */
-            this.attach (new LLabel.right_with_markup (("<span weight=\"bold\">"+_("Animations:")+"</span>")), 0, 0, 1, 1);
-            this.attach (enable_anim, 1, 0, 1, 1);
-            this.attach (open_dur_label, 0, 1, 1, 1);
-            this.attach (open_dur_box, 1, 1, 1, 1);
-            this.attach (close_dur_label, 0, 2, 1, 1);
-            this.attach (close_dur_box, 1, 2, 1, 1);
-            this.attach (snap_dur_label, 0, 3, 1, 1);
-            this.attach (snap_dur_box, 1, 3, 1, 1);
-            this.attach (mini_dur_label, 0, 4, 1, 1);
-            this.attach (mini_dur_box, 1, 4, 1, 1);
-            this.attach (work_dur_label, 0, 5, 1, 1);
-            this.attach (work_dur_box, 1, 5, 1, 1);
+            this.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
         }
     }
 }

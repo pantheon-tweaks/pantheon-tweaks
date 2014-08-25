@@ -21,25 +21,23 @@ namespace ElementaryTweaks {
     public class MiscGrid : Gtk.Grid
     {
         public MiscGrid () {
-            this.row_spacing = 6;
-            this.column_spacing = 12;
+            // setup grid so that it aligns everything properly
+            this.set_orientation (Gtk.Orientation.VERTICAL);
             this.margin_top = 24;
-            this.column_homogeneous = true;
+            this.row_spacing = 6;
+            this.halign = Gtk.Align.CENTER;
 
+            // Audible Bell toggle
+            SwitchTweak audible_bell = new SwitchTweak (
+                        _("Audible Bell:"),
+                        _("Sound that plays when an error has been made"),
+                        (() => { return WindowSettings.get_default ().audible_bell; }), // get
+                        ((val) => { WindowSettings.get_default ().audible_bell = val; }), // set
+                        (() => { WindowSettings.get_default ().schema.reset ("audible-bell"); }) // reset
+                    );
+            this.add (audible_bell.container);
 
-            /* Audible Bell */
-            var audible_bell = new Gtk.Switch ();
-            audible_bell.set_active(WindowSettings.get_default ().audible_bell);
-            audible_bell.notify["active"].connect (() => WindowSettings.get_default ().audible_bell = audible_bell.active );
-            audible_bell.halign = Gtk.Align.START;
-
-            /* Natural Scrolling */
-            var scroll = new Gtk.Switch ();
-            scroll.set_active(scroll_exists ());
-            scroll.notify["active"].connect (() => scroll_switch());
-            scroll.halign = Gtk.Align.START;
-
-            /* Double Click Titlebar Action */
+            /*
             var dbl_click_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
             var dbl_click = new Gtk.ComboBoxText ();
             dbl_click.append ("menu", _("Menu"));
@@ -66,7 +64,6 @@ namespace ElementaryTweaks {
             dbl_click_box.pack_start (dbl_click, false);
             dbl_click_box.pack_start (dbl_click_default, false);
 
-            /* Middle Click Titlebar Action */
             var mdl_click_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
             var mdl_click = new Gtk.ComboBoxText ();
             mdl_click.append ("menu", _("Menu"));
@@ -93,7 +90,6 @@ namespace ElementaryTweaks {
             mdl_click_box.pack_start (mdl_click, false);
             mdl_click_box.pack_start (mdl_click_default, false);
 
-            /* Right Click Titlebar Action */
             var rgt_click_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
             var rgt_click = new Gtk.ComboBoxText ();
             rgt_click.append ("menu", _("Menu"));
@@ -128,43 +124,7 @@ namespace ElementaryTweaks {
 
             this.attach (new LLabel.right (_("Right Click Titlebar Action:")), 0, 2, 1, 1);
             this.attach (rgt_click_box, 1, 2, 1, 1);
-
-            this.attach (new LLabel.right (_("Audible Bell:")), 0, 3, 1, 1);
-            this.attach (audible_bell, 1, 3, 1, 1);
-
-            this.attach (new LLabel.right (_("Natural Scrolling:")), 0, 5, 1, 1);
-            this.attach (scroll, 1, 5, 1, 1);
-
+            */
         }
-    }
-
-    public void scroll_switch () {
-        try {
-            var file_dest = File.new_for_path (Environment.get_user_config_dir () + "/autostart/natural-scrolling.desktop");
-            var file_src = File.new_for_path ("/usr/lib/plugs/pantheon/tweaks/natural-scrolling.desktop");
-
-            if (file_dest.query_exists ())
-                file_dest.delete ();
-
-            if ( scroll_exists() ) {
-                Process.spawn_command_line_async ("/usr/lib/plugs/pantheon/tweaks/natural_scrolling.sh false");
-            } else {
-                Process.spawn_command_line_async ("/usr/lib/plugs/pantheon/tweaks/natural_scrolling.sh true");
-                file_src.copy (file_dest, FileCopyFlags.NONE);
-            }
-        } catch (Error e){
-            warning (e.message);
-        }
-    }
-
-    public bool scroll_exists () {
-        try {
-            string scrolling_state;
-            Process.spawn_command_line_sync ("/usr/lib/plugs/pantheon/tweaks/natural_scrolling.sh", out scrolling_state);
-            return scrolling_state.contains("true");
-        } catch (Error e) {
-            warning (e.message);
-        }
-        return false;
     }
 }

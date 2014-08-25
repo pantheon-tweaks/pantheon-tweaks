@@ -1,12 +1,12 @@
 # This a sample CMakeLists.txt for compiling plug for Switchboard
-# http://elementaryos.org/docs/developer-guide/cmake 
+# http://elementaryos.org/docs/developer-guide/cmake
 
 cmake_minimum_required (VERSION 2.8)
 cmake_policy (VERSION 2.8)
 
 # Set the Properties of your Plug
 
-# Set the Name of the plug, should be an executable command, lowercase, no spaces 
+# Set the Name of the plug, should be an executable command, lowercase, no spaces
 set (PLUGNAME "tweaks")
 # Set the Category of the Plug, one of:
 # personal, hardware, network, system
@@ -47,7 +47,7 @@ include (CPack)
 add_custom_target (dist COMMAND ${CMAKE_MAKE_PROGRAM} package_source)
 
 # Files
-file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")
+#file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")
 
 # Traslation stuff
 add_subdirectory (po)

@@ -16,17 +16,20 @@ include (ValaPrecompile)
 # Add all your vala files and requires packages to the List below to include them in the build
 vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Tweaks.vala
+    Util.vala
+    TweakTemplates/ComboBoxTweak.vala
+    TweakTemplates/FontTweak.vala
+    TweakTemplates/SpinButtonTweak.vala
+    TweakTemplates/SwitchTweak.vala
     Settings/FilesSettings.vala
     Settings/GalaSettings.vala
+    Settings/GtkSettings.vala
     Settings/PlankSettings.vala
     Settings/KeyboardSettings.vala
     Settings/SlingshotSettings.vala
     Settings/CerbereSettings.vala
     Settings/GnomeSettings.vala
-    Settings/SynapseSettings.vala
     Settings/TerminalSettings.vala
-    Settings/WingpanelslimSettings.vala
-    Settings/SuperwingpanelSettings.vala
     Grids/AppearanceGrid.vala
     Grids/CerbereGrid.vala
     Grids/FontsGrid.vala
@@ -37,10 +40,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Grids/PlankGrid.vala
     Grids/MiscGrid.vala
     Grids/SlingshotGrid.vala
-    Grids/SynapseGrid.vala
     Grids/TerminalGrid.vala
-    Grids/WingpanelslimGrid.vala
-    Grids/SuperwingpanelGrid.vala
     Objects/ShortcutObject.vala
     Widgets/LLabel.vala
     Widgets/AcceleratorInputWidget.vala

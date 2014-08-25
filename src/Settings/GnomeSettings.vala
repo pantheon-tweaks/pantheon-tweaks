@@ -71,28 +71,7 @@ namespace ElementaryTweaks {
 
     public Gtk.ComboBoxText combo_box_themes ( string path, string condition ) {
         var return_box = new Gtk.ComboBoxText ();
-        var themes = new Gee.ArrayList<string> ();
-
-        string[] dirs = {
-            "/usr/share/" + path + "/",
-            Environment.get_home_dir () + "/." + path + "/" };
-
-        foreach (string dir in dirs) {
-            try {
-                var enumerator = File.new_for_path (dir).enumerate_children (FileAttribute.STANDARD_NAME, 0);
-                FileInfo file_info;
-                while ((file_info = enumerator.next_file ()) != null) {
-                    var name = file_info.get_name ();
-                    var checktheme = File.new_for_path (dir + name + "/" + condition);
-                    var checkicons = File.new_for_path (dir + name + "/48x48/" + condition);
-                    if ( ( checktheme.query_exists() || checkicons.query_exists() ) &&
-                            name != "Emacs" && name != "Default" && !themes.contains(name))
-                        themes.add(name);
-                }
-            } catch (Error e) { warning (e.message); }
-        }
-
-        themes.sort((GLib.CompareDataFunc<string>)GLib.strcmp);
+        var themes = Util.get_themes (path, condition);
 
         foreach (string theme in themes)
             return_box.append (theme, theme);

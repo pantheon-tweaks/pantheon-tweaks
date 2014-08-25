@@ -280,18 +280,6 @@ namespace ElementaryTweaks {
             lock_items.notify["active"].connect (() => PlankSettings.get_default ().lock_items = lock_items.get_active());
             lock_items.halign = Gtk.Align.START;
 
-            /* Workspace Overview Icon */
-            var overview_icon = new Gtk.Switch ();
-            overview_icon.set_active(icon_exists("gala-workspace"));
-            overview_icon.notify["active"].connect (() => icon_switch("gala-workspace"));
-            overview_icon.halign = Gtk.Align.START;
-
-            /* Show Desktop Icon */
-            var desktop_icon = new Gtk.Switch ();
-            desktop_icon.set_active(icon_exists("show-desktop"));
-            desktop_icon.notify["active"].connect (() => icon_switch("show-desktop"));
-            desktop_icon.halign = Gtk.Align.START;
-
             /* Monitor */
             var monitor_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
             var monitor = new Gtk.ComboBoxText ();
@@ -348,12 +336,6 @@ namespace ElementaryTweaks {
 
             this.attach (new LLabel.right (_("Lock Items:")), 0, 9, 1, 1);
             this.attach (lock_items, 1, 9, 1, 1);
-
-            this.attach (new LLabel.right (_("Workspace Overview Icon:")), 0, 10, 1, 1);
-            this.attach (overview_icon, 1, 10, 1, 1);
-
-            this.attach (new LLabel.right (_("Show Desktop Icon:")), 0, 11, 1, 1);
-            this.attach (desktop_icon, 1, 11, 1, 1);
         }
     }
 }

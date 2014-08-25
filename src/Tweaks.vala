@@ -63,7 +63,7 @@ namespace ElementaryTweaks {
             add_tweak_page (new ShortcutsGrid (), _("Shortcuts"), _("General"), "preferences-desktop-keyboard");
 
             // Misc Tweaks
-            add_tweak_page (new MiscGrid (), _("Miscellaneous"), _("General"), "preferences-system-session");
+            add_tweak_page (new MiscGrid (), _("Miscellaneous"), _("General"), "applications-other");
 
             // Plank Tweaks
             if (file_exists("/plank/dock1/settings"))
@@ -72,10 +72,6 @@ namespace ElementaryTweaks {
             // File browser Tweaks
             if (schema_exists("org.pantheon.files.preferences"))
                 add_tweak_page (new FilesGrid (), _("Files"), _("Applications"), "system-file-manager");
-
-            // Synapse Tweaks
-            if (schema_exists("net.launchpad.synapse-project.indicator"))
-                add_tweak_page (new SynapseGrid (), _("Search Indicator"), _("Applications"), "system-search");
 
             // Slingshot Tweaks
             if (schema_exists("org.pantheon.desktop.slingshot"))
@@ -88,14 +84,6 @@ namespace ElementaryTweaks {
             /* Terminal Tab*/
             if (schema_exists("org.pantheon.terminal.settings"))
                 add_tweak_page (new TerminalGrid (), _("Terminal"), _("Applications"), "utilities-terminal");
-
-            /* Wingpanel-slim Tab*/
-            if (schema_exists("org.pantheon.desktop.wingpanel-slim"))
-                add_tweak_page (new WingpanelslimGrid (), _("Wingpanel Slim"), _("Applications"), "wingpanel");
-
-            /* Super-wingpanel Tab*/
-            if (schema_exists("org.pantheon.desktop.super-wingpanel"))
-                add_tweak_page (new SuperwingpanelGrid (), _("Super Wingpanel"), _("Applications"), "wingpanel");
 
             // expand all of the tabs
             sidebar.root.expand_all ();
@@ -143,7 +131,7 @@ namespace ElementaryTweaks {
          * Returns true if the schema exists.
          */
         bool schema_exists(string schema) {
-            return schema in Settings.list_schemas ();
+            return (SettingsSchemaSource.get_default ().lookup(schema, true) != null);
         }
 
         /**
@@ -238,7 +226,7 @@ namespace ElementaryTweaks {
 }
 
 public Switchboard.Plug get_plug (Module module) {
-    debug ("Activating Tweak plug");
+    info ("Activating Tweak plug");
     var plug = new ElementaryTweaks.TweaksPlug ();
     return plug;
 }
