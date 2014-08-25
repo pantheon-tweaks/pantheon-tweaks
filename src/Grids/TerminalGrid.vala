@@ -38,10 +38,10 @@ namespace ElementaryTweaks {
     const TerminalTheme[] DEFAULT_THEMES = {
         {
             "Default",
-            "#FFFFFF",
-            "#f2f2f2",
-            "#101010",
-            "#303030:#e1321a:#6ab017:#ffc005:#004f9e:#ec0048:#2aa7e7:#f2f2f2:#5d5d5d:#ff361e:#7bc91f:#ffd00a:#0071ff:#ff1d62:#4bb8fd:#a020f0"
+            "#839496",
+            "#94a3a5",
+            "#252e32",
+            "#073642:#dc322f:#859900:#b58900:#268bd2:#ec0048:#2aa198:#94a3a5:#586e75:#cb4b16:#859900:#b58900:#268bd2:#d33682:#2aa198:#6c71c4"
         },
         {
             "Chalk",
