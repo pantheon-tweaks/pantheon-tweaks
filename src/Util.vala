@@ -27,7 +27,8 @@ namespace ElementaryTweaks {
 
             string[] dirs = {
                 "/usr/share/" + path + "/",
-                Environment.get_home_dir () + "/." + path + "/" };
+                Environment.get_home_dir () + "/." + path + "/",
+                Environment.get_home_dir () + "/.local/share/" + path + "/"};
 
             foreach (string dir in dirs) {
                 try {
@@ -38,7 +39,7 @@ namespace ElementaryTweaks {
                         var checktheme = File.new_for_path (dir + name + "/" + condition);
                         var checkicons = File.new_for_path (dir + name + "/48x48/" + condition);
                         if ( ( checktheme.query_exists() || checkicons.query_exists() ) &&
-                                name != "Emacs" && name != "Default" && !themes.contains(name))
+                                name != "Emacs" && name != "Default" && name != "default" && !themes.contains(name))
                             themes.add(name);
                     }
                 } catch (Error e) { /*warning (e.message);*/ }
