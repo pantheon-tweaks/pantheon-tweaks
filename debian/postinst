@@ -1,6 +1,5 @@
 #!/bin/sh
 
-chmod +x /usr/lib/plugs/pantheon/tweaks/natural_scrolling.sh
 gtk-update-icon-cache -f '/usr/share/icons/elementary/'
 
 exit 0
