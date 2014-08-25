@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-01-05 04:04+0100\n"
-"PO-Revision-Date: 2014-08-19 07:14+0000\n"
-"Last-Translator: DarkVadorus <darkvadorus@yahoo.fr>\n"
+"PO-Revision-Date: 2014-08-22 20:32+0000\n"
+"Last-Translator: RM <l4rt1st-1nc0nnu@laposte.net>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-20 06:30+0000\n"
+"X-Launchpad-Export-Date: 2014-08-23 07:58+0000\n"
 "X-Generator: Launchpad (build 17163)\n"
 
 #: ../src/Tweaks.vala:49
@@ -218,7 +218,7 @@ msgstr "Comportement :"
 
 #: ../src/Grids/PlankGrid.vala:326
 msgid "Delay (in ms):"
-msgstr ""
+msgstr "Délai (en millisecondes) :"
 
 #: ../src/Grids/PlankGrid.vala:329
 #: ../src/Grids/TerminalGrid.vala:210
@@ -237,7 +237,7 @@ msgstr "Position :"
 
 #: ../src/Grids/PlankGrid.vala:340
 msgid "Offset:"
-msgstr ""
+msgstr "Décallage :"
 
 #: ../src/Grids/PlankGrid.vala:343
 msgid "Alignment:"
@@ -245,7 +245,7 @@ msgstr "Alignement :"
 
 #: ../src/Grids/PlankGrid.vala:349
 msgid "Lock Items:"
-msgstr ""
+msgstr "Itèmes verouillés :"
 
 #: ../src/Grids/PlankGrid.vala:352
 msgid "Workspace Overview Icon:"
@@ -400,19 +400,19 @@ msgstr ""
 
 #: ../src/Grids/SuperwingpanelGrid.vala:51
 msgid "Never Hide"
-msgstr ""
+msgstr "Ne jamais masquer"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:52
 msgid "Intellihide"
-msgstr ""
+msgstr "Masquage intelligent"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:53
 msgid "Intellislim"
-msgstr ""
+msgstr "Masquage fin"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:54
 msgid "Auto Hide"
-msgstr ""
+msgstr "Masquage automatique"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:75
 msgid "Show Window Controls:"
@@ -424,15 +424,15 @@ msgstr ""
 
 #: ../src/Grids/SuperwingpanelGrid.vala:133
 msgid "Slim Mode:"
-msgstr ""
+msgstr "Mode fin :"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:141
 msgid "Separate Launcher:"
-msgstr ""
+msgstr "Séparer le lanceur :"
 
 #: ../src/Grids/SuperwingpanelGrid.vala:205
 msgid "Margin:"
-msgstr ""
+msgstr "Marge"
 
 #: ../src/Grids/FilesGrid.vala:38
 msgid "Locale"
