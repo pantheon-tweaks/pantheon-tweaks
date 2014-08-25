@@ -60,7 +60,7 @@ namespace ElementaryTweaks {
                 add_tweak_page (new ShadowsGrid (), _("Shadows"), _("General"), "preferences-tweaks-shadows");
 
             // Shortcut Tweaks
-            add_tweak_page (new ShortcutsGrid (), _("Shortcuts"), _("General"), "preferences-desktop-keyboard");
+            //add_tweak_page (new ShortcutsGrid (), _("Shortcuts"), _("General"), "preferences-desktop-keyboard");
 
             // Misc Tweaks
             add_tweak_page (new MiscGrid (), _("Miscellaneous"), _("General"), "applications-other");
