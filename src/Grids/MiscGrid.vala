@@ -21,18 +21,23 @@ namespace ElementaryTweaks {
     public class MiscGrid : Gtk.Grid
     {
         public MiscGrid () {
-            this.row_spacing = 6;
-            this.column_spacing = 12;
+            // setup grid so that it aligns everything properly
+            this.set_orientation (Gtk.Orientation.VERTICAL);
             this.margin_top = 24;
-            this.column_homogeneous = true;
+            this.row_spacing = 6;
+            this.halign = Gtk.Align.CENTER;
 
-            /* Audible Bell */
-            var audible_bell = new Gtk.Switch ();
-            audible_bell.set_active(WindowSettings.get_default ().audible_bell);
-            audible_bell.notify["active"].connect (() => WindowSettings.get_default ().audible_bell = audible_bell.active );
-            audible_bell.halign = Gtk.Align.START;
+            // Audible Bell toggle
+            SwitchTweak audible_bell = new SwitchTweak (
+                        _("Audible Bell:"),
+                        _("Sound that plays when an error has been made"),
+                        (() => { return WindowSettings.get_default ().audible_bell; }), // get
+                        ((val) => { WindowSettings.get_default ().audible_bell = val; }), // set
+                        (() => { WindowSettings.get_default ().schema.reset ("audible-bell"); }) // reset
+                    );
+            this.add (audible_bell.container);
 
-            /* Double Click Titlebar Action */
+            /*
             var dbl_click_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
             var dbl_click = new Gtk.ComboBoxText ();
             dbl_click.append ("menu", _("Menu"));
@@ -59,7 +64,6 @@ namespace ElementaryTweaks {
             dbl_click_box.pack_start (dbl_click, false);
             dbl_click_box.pack_start (dbl_click_default, false);
 
-            /* Middle Click Titlebar Action */
             var mdl_click_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
             var mdl_click = new Gtk.ComboBoxText ();
             mdl_click.append ("menu", _("Menu"));
@@ -86,7 +90,6 @@ namespace ElementaryTweaks {
             mdl_click_box.pack_start (mdl_click, false);
             mdl_click_box.pack_start (mdl_click_default, false);
 
-            /* Right Click Titlebar Action */
             var rgt_click_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
             var rgt_click = new Gtk.ComboBoxText ();
             rgt_click.append ("menu", _("Menu"));
@@ -121,9 +124,7 @@ namespace ElementaryTweaks {
 
             this.attach (new LLabel.right (_("Right Click Titlebar Action:")), 0, 2, 1, 1);
             this.attach (rgt_click_box, 1, 2, 1, 1);
-
-            this.attach (new LLabel.right (_("Audible Bell:")), 0, 3, 1, 1);
-            this.attach (audible_bell, 1, 3, 1, 1);
+            */
         }
     }
 }
