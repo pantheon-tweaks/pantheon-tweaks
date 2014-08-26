@@ -39,9 +39,10 @@ namespace ElementaryTweaks {
             animation_durations.sensitive = AnimationSettings.get_default ().enable_animations;
 
             // Animation toggle
-            SwitchTweak animations = new SwitchTweak (
+            var animations = new TweakWidget.with_switch (
                         _("Animations:"),
                         _("If the animations play at all"),
+                        null,
                         (() => { return AnimationSettings.get_default ().enable_animations; }), // get
                         ((val) => {
                                 animation_durations.sensitive = val;
@@ -49,65 +50,70 @@ namespace ElementaryTweaks {
                             }), // set
                         (() => { AnimationSettings.get_default ().schema.reset ("enable-animations"); }) // reset
                     );
-            this.add (animations.container);
+            this.add (animations);
 
             // separator to try to make it obvious that the toggle button controls the entire block beneath
             this.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
 
             // Open duration tweak
-            SpinButtonTweak open_duration = new SpinButtonTweak (
+            var open_duration = new TweakWidget.with_spin_button (
                         _("Open Duration:"),
                         _("Plays when an application is opened"),
-                        0, 10000, 1,
+                        null,
                         (() => { return AnimationSettings.get_default ().open_duration; }), // get
                         ((val) => { AnimationSettings.get_default ().open_duration = val; }), // set
-                        (() => { AnimationSettings.get_default ().schema.reset ("open-duration"); }) // reset
+                        (() => { AnimationSettings.get_default ().schema.reset ("open-duration"); }), // reset
+                        0, 10000, 1
                     );
-            animation_durations.add (open_duration.container);
+            animation_durations.add (open_duration);
 
             // Close duration tweak
-            SpinButtonTweak close_duration = new SpinButtonTweak (
+            var close_duration = new TweakWidget.with_spin_button (
                         _("Close Duration:"),
                         _("Plays when an application is closed"),
-                        0, 10000, 1,
+                        null,
                         (() => { return AnimationSettings.get_default ().close_duration; }), // get
                         ((val) => { AnimationSettings.get_default ().close_duration = val; }), // set
-                        (() => { AnimationSettings.get_default ().schema.reset ("close-duration"); }) // reset
+                        (() => { AnimationSettings.get_default ().schema.reset ("close-duration"); }), // reset
+                        0, 10000, 1
                     );
-            animation_durations.add (close_duration.container);
+            animation_durations.add (close_duration);
 
             // Snap duration tweak
-            SpinButtonTweak snap_duration = new SpinButtonTweak (
+            var snap_duration = new TweakWidget.with_spin_button (
                         _("Snap Duration:"),
                         _("Plays when an application is snapped to the side"),
-                        0, 10000, 1,
+                        null,
                         (() => { return AnimationSettings.get_default ().snap_duration; }), // get
                         ((val) => { AnimationSettings.get_default ().snap_duration = val; }), // set
-                        (() => { AnimationSettings.get_default ().schema.reset ("snap-duration"); }) // reset
+                        (() => { AnimationSettings.get_default ().schema.reset ("snap-duration"); }), // reset
+                        0, 10000, 1
                     );
-            animation_durations.add (snap_duration.container);
+            animation_durations.add (snap_duration);
 
             // Minimize duration tweak
-            SpinButtonTweak minimize_duration = new SpinButtonTweak (
+            var minimize_duration = new TweakWidget.with_spin_button (
                         _("Minimize Duration:"),
                         _("Plays when an application is minimized"),
-                        0, 10000, 1,
+                        null,
                         (() => { return AnimationSettings.get_default ().minimize_duration; }), // get
                         ((val) => { AnimationSettings.get_default ().minimize_duration = val; }), // set
-                        (() => { AnimationSettings.get_default ().schema.reset ("minimize-duration"); }) // reset
+                        (() => { AnimationSettings.get_default ().schema.reset ("minimize-duration"); }), // reset
+                        0, 10000, 1
                     );
-            animation_durations.add (minimize_duration.container);
+            animation_durations.add (minimize_duration);
 
             // Minimize duration tweak
-            SpinButtonTweak workspace_switch_duration = new SpinButtonTweak (
+            var workspace_switch_duration = new TweakWidget.with_spin_button (
                         _("Workspace Switch Duration:"),
-                        _("Plays when an application is minimized"),
-                        0, 10000, 1,
+                        _("Plays when a workspace switch is initiated"),
+                        null,
                         (() => { return AnimationSettings.get_default ().workspace_switch_duration; }), // get
                         ((val) => { AnimationSettings.get_default ().workspace_switch_duration = val; }), // set
-                        (() => { AnimationSettings.get_default ().schema.reset ("workspace-switch-duration"); }) // reset
+                        (() => { AnimationSettings.get_default ().schema.reset ("workspace-switch-duration"); }), // reset
+                        0, 10000, 1
                     );
-            animation_durations.add (workspace_switch_duration.container);
+            animation_durations.add (workspace_switch_duration);
 
             // add the grid with all of the animation durations in it
             this.add (animation_durations);

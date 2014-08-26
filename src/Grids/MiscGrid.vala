@@ -28,14 +28,15 @@ namespace ElementaryTweaks {
             this.halign = Gtk.Align.CENTER;
 
             // Audible Bell toggle
-            SwitchTweak audible_bell = new SwitchTweak (
+            var audible_bell = new TweakWidget.with_switch (
                         _("Audible Bell:"),
                         _("Sound that plays when an error has been made"),
+                        null,
                         (() => { return WindowSettings.get_default ().audible_bell; }), // get
                         ((val) => { WindowSettings.get_default ().audible_bell = val; }), // set
                         (() => { WindowSettings.get_default ().schema.reset ("audible-bell"); }) // reset
                     );
-            this.add (audible_bell.container);
+            this.add (audible_bell);
 
             /*
             var dbl_click_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);

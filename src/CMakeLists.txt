@@ -17,10 +17,6 @@ include (ValaPrecompile)
 vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Tweaks.vala
     Util.vala
-    TweakTemplates/ComboBoxTweak.vala
-    TweakTemplates/FontTweak.vala
-    TweakTemplates/SpinButtonTweak.vala
-    TweakTemplates/SwitchTweak.vala
     Settings/FilesSettings.vala
     Settings/GalaSettings.vala
     Settings/GtkSettings.vala
@@ -44,6 +40,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Objects/ShortcutObject.vala
     Widgets/LLabel.vala
     Widgets/AcceleratorInputWidget.vala
+    Widgets/TweakWidget.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     glib-2.0

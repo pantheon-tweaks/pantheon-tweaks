@@ -18,8 +18,22 @@
 
 namespace ElementaryTweaks {
 
-    struct TerminalTheme
+    /**
+     * A set of settings for the terminal that sets how it looks
+     */
+    public class TerminalTheme
     {
+        public string name;
+        public string cursor;
+        public string foreground;
+        public string background;
+        public string palette;
+
+        private static Gee.Map<string, TerminalTheme> defaults = null;
+
+        /**
+         * Constructs a new terminal theme
+         */
         public TerminalTheme (string _name, string _cursor, string fg, string bg, string _palette)
         {
             name = _name;
@@ -28,62 +42,148 @@ namespace ElementaryTweaks {
             background = bg;
             palette = _palette;
         }
-        string name;
-        string cursor;
-        string foreground;
-        string background;
-        string palette;
-    }
 
-    const TerminalTheme[] DEFAULT_THEMES = {
-        {
-            "Default",
-            "#839496",
-            "#94a3a5",
-            "#252e32",
-            "#073642:#dc322f:#859900:#b58900:#268bd2:#ec0048:#2aa198:#94a3a5:#586e75:#cb4b16:#859900:#b58900:#268bd2:#d33682:#2aa198:#6c71c4"
-        },
-        {
-            "Chalk",
-            "#d0d0d0",
-            "#d0d0d0",
-            "#151515",
-            "#151515:#fb9fb1:#acc267:#ddb26f:#6fc2ef:#e1a3ee:#12cfc0:#d0d0d0:#505050:#eda987:#202020:#303030:#b0b0b0:#e0e0e0:#deaf8f:#f5f5f5"
-        },
-        {
-            "Monokai",
-            "#f8f8f2",
-            "#f8f8f2",
-            "#272822",
-            "#272822:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#a1efe4:#f8f8f2:#75715e:#fd971f:#383830:#49483e:#a59f85:#f5f4f1:#cc6633:#f9f8f5"
-        },
-        {
-            "Solarized",
-            "#93a1a1",
-            "#93a1a1",
-            "#002b36",
-            "#002b36:#dc322f:#859900:#b58900:#268bd2:#6c71c4:#2aa198:#93a1a1:#657b83:#cb4b16:#073642:#586e75:#839496:#eee8d5:#d33682:#fdf6e3"
-        },
-        {
-            "Zenburn",
-            "#8f8faf",
-            "#dcdcdc",
-            "#1f1f1f",
-            "#3f3f3f:#e8e893:#9e9ece:#f0f0df:#8c8cd0:#c0c0be:#dfdfaf:#efefef:#3f3f3f:#e8e893:#9e9ece:#f0f0df:#8c8cd0:#c0c0be:#dfdfaf:#efefef"
+        /**
+         * Applies this theme to the terminal.
+         */
+        public void apply_theme () {
+            var settings = TerminalSettings.get_default ();
+
+            settings.cursor_color = cursor;
+            settings.foreground = foreground;
+            settings.background = background;
+            settings.palette = palette;
         }
-    };
+
+        /**
+         * Gets the applied theme from the settings.
+         */
+        public static TerminalTheme get_applied_theme () {
+            var settings = TerminalSettings.get_default ();
+
+            string _cursor = settings.cursor_color;
+            string _foreground = settings.foreground;
+            string _background = settings.background;
+            string _palette = settings.palette;
+
+            var default_themes = get_default_themes ();
+
+            // check to see if the theme is in the default themes
+            foreach (TerminalTheme theme in default_themes.values) {
+                if (_cursor == theme.cursor &&
+                        _foreground == theme.foreground &&
+                        _background == theme.background &&
+                        _palette == settings.palette) {
+                    // found it
+                    return theme;
+                }
+            }
+
+            // it isn't a default theme, it's custom
+            return new TerminalTheme (_("Custom"), _cursor, _foreground, _background, _palette);
+        }
+
+        /**
+         * Get all of the default themes
+         */
+        public static Gee.Map<string, TerminalTheme> get_default_themes () {
+            if (defaults == null) {
+                defaults = new Gee.HashMap<string, TerminalTheme> ();
+                defaults.set ("Default",
+                        new TerminalTheme (
+                            "Default",
+                            "#839496",
+                            "#94a3a5",
+                            "#252e32",
+                            "#073642:#dc322f:#859900:#b58900:#268bd2:#ec0048:#2aa198:#94a3a5:#586e75:#cb4b16:#859900:#b58900:#268bd2:#d33682:#2aa198:#6c71c4"
+                            ));
+                defaults.set ("Chalk",
+                        new TerminalTheme (
+                            "Chalk",
+                            "#d0d0d0",
+                            "#d0d0d0",
+                            "#151515",
+                            "#151515:#fb9fb1:#acc267:#ddb26f:#6fc2ef:#e1a3ee:#12cfc0:#d0d0d0:#505050:#eda987:#202020:#303030:#b0b0b0:#e0e0e0:#deaf8f:#f5f5f5"
+                            ));
+                defaults.set ("Monokai",
+                        new TerminalTheme (
+                            "Monokai",
+                            "#f8f8f2",
+                            "#f8f8f2",
+                            "#272822",
+                            "#272822:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#a1efe4:#f8f8f2:#75715e:#fd971f:#383830:#49483e:#a59f85:#f5f4f1:#cc6633:#f9f8f5"
+                            ));
+                defaults.set ("Solarized",
+                        new TerminalTheme (
+                            "Solarized",
+                            "#93a1a1",
+                            "#93a1a1",
+                            "#002b36",
+                            "#002b36:#dc322f:#859900:#b58900:#268bd2:#6c71c4:#2aa198:#93a1a1:#657b83:#cb4b16:#073642:#586e75:#839496:#eee8d5:#d33682:#fdf6e3"
+                            ));
+                defaults.set ("Zenburn",
+                        new TerminalTheme (
+                            "Zenburn",
+                            "#8f8faf",
+                            "#dcdcdc",
+                            "#1f1f1f",
+                            "#3f3f3f:#e8e893:#9e9ece:#f0f0df:#8c8cd0:#c0c0be:#dfdfaf:#efefef:#3f3f3f:#e8e893:#9e9ece:#f0f0df:#8c8cd0:#c0c0be:#dfdfaf:#efefef"
+                            ));
+            }
+
+            return defaults;
+        }
+    }
 
     public class TerminalGrid : Gtk.Grid
     {
         public TerminalGrid ()
         {
-            column_spacing = 12;
-            row_spacing = 6;
-            margin_top = 24;
-            column_homogeneous = true;
+            // setup grid so that it aligns everything properly
+            this.set_orientation (Gtk.Orientation.VERTICAL);
+            this.margin_top = 24;
+            this.row_spacing = 6;
+            this.halign = Gtk.Align.CENTER;
 
-            //                var settings = new Settings ("org.pantheon.terminal.settings");
+            // Terminal Opacity tweak
+            var opacity = new TweakWidget.with_spin_button (
+                        _("Opacity:"),
+                        _("How transparent the background of the terminal is"),
+                        null,
+                        (() => { return TerminalSettings.get_default ().opacity ; }), // get
+                        ((val) => { TerminalSettings.get_default ().opacity = val; }), // set
+                        (() => { TerminalSettings.get_default ().schema.reset ("opacity"); }), // reset
+                        0, 100, 1
+                    );
+            this.add (opacity);
 
+            // Terminal Theme
+            var default_themes = TerminalTheme.get_default_themes ();
+            var theme_map = new Gee.HashMap<string, string> ();
+            foreach (string theme_name in default_themes.keys) {
+                theme_map.set (theme_name, theme_name);
+            }
+            //theme_map.set (_("Custom"), _("Custom"));
+
+            var theme = new TweakWidget.with_combo_box (
+                        _("Theme:"), // name
+                        _("A set of settings for terminal palette and background color"), // tooltip
+                        null, // warning
+                        (() => { return TerminalTheme.get_applied_theme ().name; }), // get
+                        ((val) => {
+                                TerminalTheme.get_default_themes ()[val].apply_theme ();
+                            }), // set
+                        (() => {
+                                TerminalSettings.get_default ().schema.reset ("background");
+                                TerminalSettings.get_default ().schema.reset ("foreground");
+                                TerminalSettings.get_default ().schema.reset ("cursor-color");
+                                TerminalSettings.get_default ().schema.reset ("palette");
+                            }), // reset
+                        theme_map
+                    );
+            this.add (theme);
+
+            /*
             // scrollback
             var limit_scrollback = new Gtk.Switch ();
             limit_scrollback.halign = Gtk.Align.START;
@@ -172,15 +272,6 @@ namespace ElementaryTweaks {
             themes_box.pack_start (themes, false);
             themes_box.pack_start (themes_default, false);
 
-            /* FIXME we may want to be a bit more generous here and use an existing parser
-             * get the custom themes together from ~/.local/share/pantheon-terminal/themes, if it exists
-             * the name of the file is used as name for the theme, the file has to look like this:
-             * (no empty line on top or things will break)
-             * cursor-color
-             * foreground-color
-             * background-color
-             * palette1:palette2:palette3:...:pallete16
-             */
             var custom_themes_file = File.new_for_path (Environment.get_user_data_dir () + "/pantheon-terminal/themes");
             if (custom_themes_file.query_exists ()) {
                 try {
@@ -229,6 +320,7 @@ namespace ElementaryTweaks {
 
             attach (new LLabel.right (_("Theme:")), 0, 5, 1, 1);
             attach (themes_box, 1, 5, 1, 1);
+            */
         }
     }
 }
