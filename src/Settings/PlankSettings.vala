@@ -117,6 +117,19 @@ namespace ElementaryTweaks {
             }
         }
 
+        public bool current_workspace_only {
+            get {
+                try {
+                    return configs.get_boolean ("PlankDockPreferences", "CurrentWorkspaceOnly");
+                } catch (Error e) { warning (e.message); }
+                return false;
+            }
+            set {
+                configs.set_boolean ("PlankDockPreferences", "CurrentWorkspaceOnly", value);
+                save ();
+            }
+        }
+
         public int hide_mode {
             get {
                 try {

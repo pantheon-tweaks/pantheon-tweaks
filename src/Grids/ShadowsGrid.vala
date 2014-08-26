@@ -28,32 +28,34 @@ namespace ElementaryTweaks {
             this.halign = Gtk.Align.CENTER;
 
             // Focused Windows
-            SpinButtonTweak focused_windows = new SpinButtonTweak (
+            var focused_windows = new TweakWidget.with_spin_button (
                         _("Focused Windows:"),
                         _("Shadow beneath windows that you have currently selected"),
-                        0, 200, 1,
+                        _("This may not actually do anything"),
                         (() => { return int.parse (ShadowSettings.get_default ().normal_focused[0]); }), // get
                         ((val) => {
                                 ShadowSettings.get_default ().normal_focused[0] = val.to_string ();
                                 ShadowSettings.get_default ().normal_focused[3] = Math.round (val * 0.75).to_string ();
                             }), // set
-                        (() => { ShadowSettings.get_default ().schema.reset ("normal-focused"); }) // reset
+                        (() => { ShadowSettings.get_default ().schema.reset ("normal-focused"); }), // reset
+                        0, 200, 1
                     );
-            this.add (focused_windows.container);
+            this.add (focused_windows);
 
             // Unfocused Windows
-            SpinButtonTweak unfocused_windows = new SpinButtonTweak (
+            var unfocused_windows = new TweakWidget.with_spin_button (
                         _("Unfocused Windows:"),
                         _("Shadow beneath windows that you do not have selected"),
-                        0, 200, 1,
+                        _("This may not actually do anything"),
                         (() => { return int.parse (ShadowSettings.get_default ().normal_unfocused[0]); }), // get
                         ((val) => {
                                 ShadowSettings.get_default ().normal_unfocused[0] = val.to_string ();
                                 ShadowSettings.get_default ().normal_unfocused[3] = Math.round (val * 0.75).to_string ();
                             }), // set
-                        (() => { ShadowSettings.get_default ().schema.reset ("normal-unfocused"); }) // reset
+                        (() => { ShadowSettings.get_default ().schema.reset ("normal-unfocused"); }), // reset
+                        0, 200, 1
                     );
-            this.add (unfocused_windows.container);
+            this.add (unfocused_windows);
         }
     }
 }

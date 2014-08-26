@@ -28,59 +28,63 @@ namespace ElementaryTweaks {
             this.halign = Gtk.Align.CENTER;
 
             // Dark theme tweak
-            SwitchTweak prefer_dark_theme = new SwitchTweak (
-                        _("Prefer Dark Theme:"),
-                        _("WARNING: Will cause some apps to look terrible"),
+            var prefer_dark_theme = new TweakWidget.with_switch (
+                        _("Prefer Dark Theme:"), // name
+                        _("GTK+ windows will now prefer the dark GTK+ theme"), // tooltip
+                        _("Some applications will not react well with this enabled and can look terrible"), // warning
                         (() => { return GtkSettings.get_default ().prefer_dark_theme; }), // get
                         ((val) => { GtkSettings.get_default ().prefer_dark_theme = val; }), // set
                         (() => { GtkSettings.get_default ().prefer_dark_theme = false; }) // reset
                     );
-            this.add (prefer_dark_theme.container);
+            this.add (prefer_dark_theme);
 
-            // Metacity (Window Decorations) theme
-            ComboBoxTweak metacity_theme = new ComboBoxTweak.with_list (
-                        _("Metacity Theme:"),
-                        _("Used to render windows that do not use GTK+"),
-                        Util.get_themes ("themes", "metacity-1"),
+            // Metacity theme
+            var metacity_theme = new TweakWidget.with_combo_box (
+                        _("Metacity Theme:"), // name
+                        _("Used to render windows that do not use GTK+"), // tooltip
+                        null, // warning
                         (() => { return WindowSettings.get_default ().theme; }), // get
                         ((val) => { WindowSettings.get_default ().theme = val; }), // set
-                        (() => { WindowSettings.get_default ().schema.reset ("theme"); }) // reset
+                        (() => { WindowSettings.get_default ().schema.reset ("theme"); }), // reset
+                        Util.get_themes_map ("themes", "metacity-1") // map
                     );
-            this.add (metacity_theme.container);
+            this.add (metacity_theme);
 
             // Gtk+ theme
-            ComboBoxTweak gtk_theme = new ComboBoxTweak.with_list (
-                        _("GTK+ Theme:"),
-                        _("Used to render GTK+ windows like Switchboard"),
-                        Util.get_themes ("themes", "gtk-3.0"),
+            var gtk_theme = new TweakWidget.with_combo_box (
+                        _("GTK+ Theme:"), // name
+                        _("Used to render GTK+ windows like Switchboard"), // tooltip
+                        null, // warning
                         (() => { return InterfaceSettings.get_default ().gtk_theme; }), // get
                         ((val) => { InterfaceSettings.get_default ().gtk_theme = val; }), // set
-                        (() => { InterfaceSettings.get_default ().schema.reset ("gtk-theme"); }) // reset
+                        (() => { InterfaceSettings.get_default ().schema.reset ("gtk-theme"); }), // reset
+                        Util.get_themes_map ("themes", "gtk-3.0") // map
                     );
-            this.add (gtk_theme.container);
+            this.add (gtk_theme);
 
             // Icon theme
-            ComboBoxTweak icon_theme = new ComboBoxTweak.with_list (
-                        _("Icon Theme:"),
-                        _("Used to theme the icon set, including application icons"),
-                        Util.get_themes ("icons", "index.theme"),
+            var icon_theme = new TweakWidget.with_combo_box (
+                        _("Icon Theme:"), // name
+                        _("Used to theme the icon set, including application icons"), // tooltip
+                        null, // warning
                         (() => { return InterfaceSettings.get_default ().icon_theme; }), // get
                         ((val) => { InterfaceSettings.get_default ().icon_theme = val; }), // set
-                        (() => { InterfaceSettings.get_default ().schema.reset ("icon-theme"); }) // reset
+                        (() => { InterfaceSettings.get_default ().schema.reset ("icon-theme"); }), // reset
+                        Util.get_themes_map ("icons", "index.theme") // map
                     );
-            this.add (icon_theme.container);
+            this.add (icon_theme);
 
             // Cursor theme
-            ComboBoxTweak cursor_theme = new ComboBoxTweak.with_list (
-                        _("Cursor Theme:"),
-                        _("Used to theme the cursor, may not work"),
-                        Util.get_themes ("icons", "cursors"),
+            var cursor_theme = new TweakWidget.with_combo_box (
+                        _("Cursor Theme:"), // name
+                        _("Used to theme the cursor"), // tooltip
+                        null, // warning
                         (() => { return InterfaceSettings.get_default ().cursor_theme; }), // get
                         ((val) => { InterfaceSettings.get_default ().cursor_theme = val; }), // set
-                        (() => { InterfaceSettings.get_default ().schema.reset ("cursor-theme"); }) // reset
+                        (() => { InterfaceSettings.get_default ().schema.reset ("cursor-theme"); }), // reset
+                        Util.get_themes_map ("icons", "cursors") // map
                     );
-            this.add (cursor_theme.container);
-
+            this.add (cursor_theme);
 
             // TODO: redo this so that it works and isn't.. like this.
             /*

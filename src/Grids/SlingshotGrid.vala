@@ -28,26 +28,28 @@ namespace ElementaryTweaks {
             this.halign = Gtk.Align.CENTER;
 
             // Slingshot number of rows tweak
-            SpinButtonTweak slingshot_rows = new SpinButtonTweak (
+            var slingshot_rows = new TweakWidget.with_spin_button (
                         _("Rows:"),
                         _("The number of rows displayed in Slingshot"),
-                        2, 10, 1,
+                        null,
                         (() => { return SlingshotSettings.get_default ().rows ; }), // get
                         ((val) => { SlingshotSettings.get_default ().rows = val; }), // set
-                        (() => { SlingshotSettings.get_default ().schema.reset ("rows"); }) // reset
+                        (() => { SlingshotSettings.get_default ().schema.reset ("rows"); }), // reset
+                        2, 10, 1
                     );
-            this.add (slingshot_rows.container);
+            this.add (slingshot_rows);
 
             // Slingshot number of rows tweak
-            SpinButtonTweak slingshot_columns = new SpinButtonTweak (
+            var slingshot_columns = new TweakWidget.with_spin_button (
                         _("Columns:"),
                         _("The number of columns displayed in Slingshot"),
-                        4, 15, 1,
+                        null,
                         (() => { return SlingshotSettings.get_default ().columns ; }), // get
                         ((val) => { SlingshotSettings.get_default ().columns = val; }), // set
-                        (() => { SlingshotSettings.get_default ().schema.reset ("columns"); }) // reset
+                        (() => { SlingshotSettings.get_default ().schema.reset ("columns"); }), // reset
+                        4, 15, 1
                     );
-            this.add (slingshot_columns.container);
+            this.add (slingshot_columns);
 
             /*
             var slingshot_columns_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);

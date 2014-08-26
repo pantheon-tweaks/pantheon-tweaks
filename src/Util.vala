@@ -22,7 +22,7 @@ namespace ElementaryTweaks {
         /**
          * Gets and returns a list of the current themes by path and condition.
          */
-        public static Gee.ArrayList<string> get_themes (string path, string condition) {
+        public static Gee.List<string> get_themes (string path, string condition) {
             var themes = new Gee.ArrayList<string> ();
 
             string[] dirs = {
@@ -46,6 +46,17 @@ namespace ElementaryTweaks {
             }
 
             return themes;
+        }
+
+        public static Gee.Map<string, string> get_themes_map (string path, string condition) {
+            var themes = get_themes (path, condition);
+            var map = new Gee.HashMap<string, string> ();
+
+            foreach (string theme in themes) {
+                map.set (theme, theme);
+            }
+
+            return map;
         }
     }
 }

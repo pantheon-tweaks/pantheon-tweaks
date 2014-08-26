@@ -28,14 +28,15 @@ namespace ElementaryTweaks {
             this.halign = Gtk.Align.CENTER;
 
             // Single Click tweak
-            SwitchTweak single_click = new SwitchTweak (
+            var single_click = new TweakWidget.with_switch (
                         _("Single Click:"),
                         _("If set off, files will use 'normal' double-click behavior"),
+                        null,
                         (() => { return FilesSettings.get_default ().single_click; }), // get
                         ((val) => { FilesSettings.get_default ().single_click = val; }), // set
                         (() => { FilesSettings.get_default ().schema.reset ("single-click"); }) // reset
                     );
-            this.add (single_click.container);
+            this.add (single_click);
 
             // Date format tweak
             var date_format_map = new Gee.HashMap<string, string> ();
@@ -43,15 +44,16 @@ namespace ElementaryTweaks {
             date_format_map.set ("iso", _("ISO"));
             date_format_map.set ("informal", _("Informal"));
 
-            ComboBoxTweak date_format = new ComboBoxTweak (
+            var date_format = new TweakWidget.with_combo_box (
                         _("Date Format:"),
                         _("For date accessed, modified, etc."),
-                        date_format_map,
+                        null,
                         (() => { return FilesSettings.get_default ().date_format; }), // get
                         ((val) => { FilesSettings.get_default ().date_format = val; }), // set
-                        (() => { FilesSettings.get_default ().schema.reset ("date-format"); }) // reset
+                        (() => { FilesSettings.get_default ().schema.reset ("date-format"); }), // reset
+                        date_format_map
                     );
-            this.add (date_format.container);
+            this.add (date_format);
 
             // Sidebar Zoom tweak
             var sidebar_zoom_map = new Gee.HashMap<string, string> ();
@@ -63,15 +65,16 @@ namespace ElementaryTweaks {
             sidebar_zoom_map.set ("larger", _("Larger"));
             sidebar_zoom_map.set ("largest", _("Largest"));
 
-            ComboBoxTweak sidebar_zoom = new ComboBoxTweak (
+            var sidebar_zoom = new TweakWidget.with_combo_box (
                         _("Sidebar Icon Size:"),
                         _("Size of the icons in the sidebar"),
-                        sidebar_zoom_map,
+                        null,
                         (() => { return FilesSettings.get_default ().sidebar_zoom_level; }), // get
                         ((val) => { FilesSettings.get_default ().sidebar_zoom_level = val; }), // set
-                        (() => { FilesSettings.get_default ().schema.reset ("sidebar-zoom-level"); }) // reset
+                        (() => { FilesSettings.get_default ().schema.reset ("sidebar-zoom-level"); }), // reset
+                        sidebar_zoom_map
                     );
-            this.add (sidebar_zoom.container);
+            this.add (sidebar_zoom);
         }
     }
 }
