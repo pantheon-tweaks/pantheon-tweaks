@@ -200,5 +200,28 @@ namespace ElementaryTweaks {
 
             widget_grid.add (spin_button);
         }
+
+        /**
+         * Constructs a tweak widget that has an entry that tweaks a string value
+         */
+        public TweakWidget.with_entry (string name, string tooltip, string? warningText, GetValue<string> getV, SetValue<string> setV, ResetValue resetV) {
+            this (name, tooltip, warningText, resetV);
+
+            // entry
+            var entry = new Gtk.Entry ();
+            entry.halign = Gtk.Align.FILL;
+            entry.hexpand = true;
+
+            // set the current value of the entry widget
+            entry.text = getV ();
+
+            // when the entry is activated, set the value to the current value
+            entry.activate.connect (() => setV (entry.text));
+
+            // when default button is pressed, reset the entry to new value
+            default_button.clicked.connect_after (() => entry.text = getV ());
+
+            widget_grid.add (entry);
+        }
     }
 }

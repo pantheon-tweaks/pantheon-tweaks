@@ -58,6 +58,7 @@ namespace ElementaryTweaks {
         public bool attach_modal_dialogs { get; set; }
         public bool dim_parents { get; set; }
 
+        static Gee.HashMap<string, string> preset_button_layouts;
         static AppearanceSettings? instance = null;
 
         private AppearanceSettings ()
@@ -71,6 +72,20 @@ namespace ElementaryTweaks {
                 instance = new AppearanceSettings ();
 
             return instance;
+        }
+
+        public static Gee.HashMap<string, string> get_preset_button_layouts () {
+            if (preset_button_layouts == null) {
+                preset_button_layouts = new Gee.HashMap<string, string> ();
+                preset_button_layouts["close:maximize"] = _("elementary");
+                preset_button_layouts[":close"] = _("Close Only");
+                preset_button_layouts["close,minimize:maximize"] = _("Minimize Left");
+                preset_button_layouts["close:minimize,maximize"] = _("Minimize Right");
+                preset_button_layouts[":minimize,maximize,close"] = _("Windows");
+                preset_button_layouts["close,minimize,maximize"] = _("OS X");
+                preset_button_layouts["custom"] = _("Custom");
+            }
+            return preset_button_layouts;
         }
     }
 
