@@ -20,6 +20,8 @@ namespace ElementaryTweaks {
 
     public class AppearanceGrid : Gtk.Grid
     {
+        private Gtk.Widget custom_layout; // stupid closure won't 'see' the widget unless it's non-local
+
         public AppearanceGrid () {
             // setup grid so that it aligns everything properly
             this.set_orientation (Gtk.Orientation.VERTICAL);
@@ -86,84 +88,58 @@ namespace ElementaryTweaks {
                     );
             this.add (cursor_theme);
 
-            // TODO: redo this so that it works and isn't.. like this.
-            /*
-            var button_layout_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            var button_layout = new Gtk.ComboBoxText ();
-            var custom_layout_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-            var custom_layout = new Gtk.Entry();
-            var custom_text = new LLabel.right (_("Custom Layout:"));
+            this.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
 
-            button_layout.append ("close:maximize", ("elementary"));
-            button_layout.append (":close", _("Close Only"));
-            button_layout.append ("close,minimize:maximize", _("Minimize Left"));
-            button_layout.append ("close:minimize,maximize", _("Minimize Right"));
-            button_layout.append (":minimize,maximize,close", _("Windows"));
-            button_layout.append ("close,minimize,maximize:", _("OS X"));
-            button_layout.append ("custom", _("Custom"));
+            // Custom layout
+            custom_layout = new TweakWidget.with_entry (
+                        _("Custom Layout:"), // name
+                        _("Custom window control layout"), // tooltip
+                        null, // warning
+                        (() => { return AppearanceSettings.get_default ().button_layout; }), // get
+                        ((val) => {
+                                AppearanceSettings.get_default ().button_layout = val;
+                                XSettings.get_default ().decoration_layout = val;
+                            }), // set
+                        (() => {
+                                AppearanceSettings.get_default ().schema.reset ("button-layout");
+                                XSettings.get_default ().reset ();
+                            }) // reset
+                    );
 
-            if ( AppearanceSettings.get_default ().button_layout == "close:maximize" ||
-                    AppearanceSettings.get_default ().button_layout == ":close" ||
-                    AppearanceSettings.get_default ().button_layout == "close,minimize:maximize" ||
-                    AppearanceSettings.get_default ().button_layout == "close:minimize,maximize" ||
-                    AppearanceSettings.get_default ().button_layout == ":minimize,maximize,close" ||
-                    AppearanceSettings.get_default ().button_layout == "close,minimize,maximize:")
-                button_layout.active_id = AppearanceSettings.get_default ().button_layout;
-            else
-                button_layout.active_id = "custom";
-
-            custom_layout.text = AppearanceSettings.get_default ().button_layout;
-
-            if ( button_layout.active_id == "custom" ) {
-                custom_layout_box.set_sensitive(true);
-                custom_text.set_sensitive(true);
-            } else {
-                custom_layout_box.set_sensitive(false);
-                custom_text.set_sensitive(false);
-            }
-
-            button_layout.changed.connect (() => {
-                    if ( button_layout.active_id == "custom" ) {
-                    custom_layout_box.set_sensitive(true);
-                    custom_text.set_sensitive(true);
-                    } else {
-                    custom_layout_box.set_sensitive(false);
-                    custom_text.set_sensitive(false);
-                    AppearanceSettings.get_default ().button_layout = button_layout.active_id;
-                    custom_layout.text = AppearanceSettings.get_default ().button_layout;
-                    }
-                    });
-            button_layout.halign = Gtk.Align.START;
-            button_layout.width_request = 160;
-
-            custom_layout.activate.connect (() => AppearanceSettings.get_default ().button_layout = custom_layout.text);
-            custom_layout.halign = Gtk.Align.START;
-            custom_layout.width_request = 160;
-
-            var button_layout_default = new Gtk.ToolButton.from_stock (Gtk.Stock.REVERT_TO_SAVED);
-
-            button_layout_default.clicked.connect (() => {
-                    AppearanceSettings.get_default ().schema.reset ("button-layout");
-                    button_layout.active_id = AppearanceSettings.get_default ().button_layout;
-                    });
-            button_layout_default.halign = Gtk.Align.START;
-
-            button_layout_box.pack_start (button_layout, false);
-            button_layout_box.pack_start (button_layout_default, false);
-
-            var custom_layout_apply = new Gtk.ToolButton.from_stock (Gtk.Stock.APPLY);
-            custom_layout_apply.clicked.connect (() => AppearanceSettings.get_default ().button_layout = custom_layout.text);
-
-            custom_layout_box.pack_start (custom_layout, false);
-            custom_layout_box.pack_start (custom_layout_apply, false);
-
-
-            this.attach (new LLabel.right (_("Button Layout:")), 0, 5, 2, 1);
-            this.attach (button_layout_box, 2, 5, 2, 1);
-
-            this.attach (custom_text, 0, 6, 2, 1);
-            this.attach (custom_layout_box, 2, 6, 2, 1);
-            */
+            // Window Controls
+            var window_controls_map = AppearanceSettings.get_preset_button_layouts ();
+            var window_controls = new TweakWidget.with_combo_box (
+                        _("Window Controls:"), // name
+                        _("Controls located at the top of the window for close, minimize, and maximize"), // tooltip
+                        _("May break window controls! May stop working with updates to system!"), // warning
+                        (() => {
+                                if (!AppearanceSettings.get_preset_button_layouts ().has_key (AppearanceSettings.get_default ().button_layout)) {
+                                    custom_layout.sensitive = true;
+                                    return "custom";
+                                }
+                                custom_layout.sensitive = false;
+                                return AppearanceSettings.get_default ().button_layout;
+                            }), // get
+                        ((val) => {
+                                if (val == "custom") {
+                                    // activate entry box
+                                    custom_layout.sensitive = true;
+                                }
+                                else {
+                                    // deactivate entry box
+                                    custom_layout.sensitive = false;
+                                    AppearanceSettings.get_default ().button_layout = val;
+                                    XSettings.get_default ().decoration_layout = val;
+                                }
+                            }), // set
+                        (() => {
+                                AppearanceSettings.get_default ().schema.reset ("button-layout");
+                                XSettings.get_default ().reset ();
+                            }), // reset
+                        window_controls_map
+                    );
+            this.add (window_controls);
+            this.add (custom_layout);
         }
     }
 }

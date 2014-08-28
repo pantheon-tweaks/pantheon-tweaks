@@ -26,6 +26,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Settings/CerbereSettings.vala
     Settings/GnomeSettings.vala
     Settings/TerminalSettings.vala
+    Settings/XSettings.vala
     Grids/AppearanceGrid.vala
     Grids/CerbereGrid.vala
     Grids/FontsGrid.vala
