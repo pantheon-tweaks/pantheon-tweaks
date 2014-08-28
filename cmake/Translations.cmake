@@ -29,6 +29,7 @@ endmacro(add_translations_directory)
 macro(add_translations_catalog NLS_PACKAGE)
     add_custom_target (pot COMMENT “Building translation catalog.”)
     find_program (XGETTEXT_EXECUTABLE xgettext)
+    find_program (MSGMERGE_EXECUTABLE msgmerge)
 
     set(C_SOURCE "")
     set(VALA_SOURCE "")
@@ -58,7 +59,7 @@ macro(add_translations_catalog NLS_PACKAGE)
         -o ${CMAKE_CURRENT_SOURCE_DIR}/${NLS_PACKAGE}.pot
         --add-comments="/" --keyword="_" --keyword="N_" --keyword="C_:1c,2" --keyword="NC_:1c,2" --keyword="ngettext:1,2" --keyword="Q_:1g" --from-code=UTF-8)
 
-   set(CONTINUE_FLAG "")
+    set(CONTINUE_FLAG "")
 
     IF(NOT "${C_SOURCE}" STREQUAL "")
         add_custom_command(TARGET pot WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} COMMAND ${BASE_XGETTEXT_COMMAND} ${C_SOURCE})
@@ -72,5 +73,10 @@ macro(add_translations_catalog NLS_PACKAGE)
 
     IF(NOT "${GLADE_SOURCE}" STREQUAL "")
         add_custom_command (TARGET pot WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} COMMAND ${BASE_XGETTEXT_COMMAND} ${CONTINUE_FLAG} -LGlade ${GLADE_SOURCE})
-    ENDIF()  
+    ENDIF()
+
+    file (GLOB PO_FILES ${CMAKE_CURRENT_SOURCE_DIR}/*.po)
+    foreach (PO_INPUT ${PO_FILES})
+        add_custom_command(TARGET pot WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} COMMAND ${MSGMERGE_EXECUTABLE} --update --sort-output --quiet ${PO_INPUT} ${NLS_PACKAGE}.pot)
+    endforeach (PO_INPUT ${PO_FILES})
 endmacro()
