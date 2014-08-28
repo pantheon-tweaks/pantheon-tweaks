@@ -6,601 +6,713 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-01-05 04:04+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-28 07:48-0500\n"
 "PO-Revision-Date: 2014-08-19 07:17+0000\n"
 "Last-Translator: SyedKhaleel Jageer <jskcse4@gmail.com>\n"
 "Language-Team: Tamil <ta@li.org>\n"
+"Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2014-08-20 06:30+0000\n"
 "X-Generator: Launchpad (build 17163)\n"
 
-#: ../src/Tweaks.vala:49
-msgid "General"
-msgstr "பொதுவான"
+#: ../src/Grids/TerminalGrid.vala:170
+msgid "A set of settings for terminal palette and background color"
+msgstr ""
 
-#: ../src/Tweaks.vala:50
-msgid "Applications"
-msgstr "பயன்பாடுகள்"
-
-#: ../src/Tweaks.vala:57
-msgid "Appearance"
-msgstr "தோற்றம்"
-
-#: ../src/Tweaks.vala:60
-msgid "Fonts"
-msgstr "எழுத்துருக்கள்"
-
-#: ../src/Tweaks.vala:64
-msgid "Animations"
-msgstr "அசைவூட்டங்கள்"
-
-#: ../src/Tweaks.vala:68
-msgid "Shadows"
-msgstr "நிழல்கள்"
-
-#: ../src/Tweaks.vala:71
-msgid "Shortcuts"
-msgstr "சுருக்குவழிகள்"
-
-#: ../src/Tweaks.vala:74
-msgid "Miscellaneous"
-msgstr "பலவகைப்பட்ட"
-
-#: ../src/Tweaks.vala:81
-msgid "Plank"
-msgstr "மரப்பலகை"
-
-#: ../src/Tweaks.vala:85
-msgid "Files"
-msgstr "கோப்புகள்"
-
-#: ../src/Tweaks.vala:89
-msgid "Search Indicator"
-msgstr "தேடல் காட்டி"
-
-#: ../src/Tweaks.vala:93
-msgid "Slingshot"
-msgstr "ஸ்லிங்ஷாட்"
-
-#: ../src/Tweaks.vala:97
-msgid "Cerbere"
-msgstr "செர்பிரே"
-
-#: ../src/Tweaks.vala:101
-msgid "Terminal"
-msgstr "முனையம்"
-
-#: ../src/Tweaks.vala:105
-msgid "Wingpanel Slim"
-msgstr "மெலிந்த விங்பேனல்"
-
-#: ../src/Tweaks.vala:109
-msgid "Super Wingpanel"
-msgstr "சூப்பர் விங்பேனல்"
-
-#: ../src/Objects/ShortcutObject.vala:38
-#: ../src/Widgets/AcceleratorInputWidget.vala:67
-#: ../src/Widgets/AcceleratorInputWidget.vala:85
-msgid "Disabled"
-msgstr "செயல்நீக்கப்பட்டது"
-
-#: ../src/Grids/SlingshotGrid.vala:29
-msgid "Smallest"
-msgstr "மிகச்சிறிய"
-
-#: ../src/Grids/SlingshotGrid.vala:30
-msgid "Smaller"
-msgstr "மிக சிரிய"
-
-#: ../src/Grids/SlingshotGrid.vala:31
-msgid "Small"
-msgstr "சிறிய"
-
-#: ../src/Grids/SlingshotGrid.vala:32
-msgid "Normal"
-msgstr "இயல்பாக"
-
-#: ../src/Grids/SlingshotGrid.vala:33
-msgid "Large"
-msgstr "பெரிய"
-
-#: ../src/Grids/SlingshotGrid.vala:34
-msgid "Larger"
-msgstr "மிகப்பெரிய"
-
-#: ../src/Grids/SlingshotGrid.vala:35
-msgid "Largest"
-msgstr "மிகப்பெரிய"
-
-#: ../src/Grids/SlingshotGrid.vala:93
-msgid "Rows:"
-msgstr "வரிகள்:"
-
-#: ../src/Grids/SlingshotGrid.vala:96
-msgid "Columns:"
-msgstr "நெடுவரிசைகள்:"
-
-#: ../src/Grids/CerbereGrid.vala:39
-msgid "Watched Processes"
-msgstr "பார்த்த செயல்கள்"
-
-#: ../src/Grids/CerbereGrid.vala:50
-#: ../src/Grids/CerbereGrid.vala:60
-#: ../src/Grids/ShortcutsGrid.vala:91
-#: ../src/Grids/ShortcutsGrid.vala:158
+#: ../src/Grids/CerbereGrid.vala:53 ../src/Grids/CerbereGrid.vala:63
+#: ../src/Grids/ShortcutsGrid.vala:95 ../src/Grids/ShortcutsGrid.vala:162
 msgid "Add..."
 msgstr "சேர்..."
 
-#: ../src/Grids/CerbereGrid.vala:51
-#: ../src/Grids/CerbereGrid.vala:61
-#: ../src/Grids/ShortcutsGrid.vala:92
-#: ../src/Grids/ShortcutsGrid.vala:159
-msgid "Remove"
-msgstr "அகற்று"
-
-#: ../src/Grids/CerbereGrid.vala:62
-#: ../src/Grids/ShortcutsGrid.vala:160
-msgid "Revert to Default"
-msgstr "இயல்புநிலைக்கு மீட்டமை"
-
-#: ../src/Grids/PlankGrid.vala:67
-msgid "Top"
-msgstr "மேல்"
-
-#: ../src/Grids/PlankGrid.vala:68
-msgid "Bottom"
-msgstr "கீழே"
-
-#: ../src/Grids/PlankGrid.vala:69
-#: ../src/Grids/WingpanelslimGrid.vala:52
-#: ../src/Grids/SuperwingpanelGrid.vala:181
-msgid "Left"
-msgstr "இடது"
-
-#: ../src/Grids/PlankGrid.vala:70
-#: ../src/Grids/WingpanelslimGrid.vala:50
-#: ../src/Grids/SuperwingpanelGrid.vala:179
-msgid "Right"
-msgstr "வலது"
-
-#: ../src/Grids/PlankGrid.vala:71
-msgid "Center"
-msgstr "மையம்"
-
-#: ../src/Grids/PlankGrid.vala:72
-msgid "Panel"
-msgstr "பலகை"
-
-#: ../src/Grids/PlankGrid.vala:173
-msgid "Item Alignment:"
-msgstr "உருப்படி சீரமைப்பு:"
-
-#: ../src/Grids/PlankGrid.vala:211
-msgid "Unknown Value"
-msgstr "அறியப்படாத மதிப்பு"
-
-#: ../src/Grids/PlankGrid.vala:232
-msgid "Don't hide"
-msgstr "மறைக்காதே"
-
-#: ../src/Grids/PlankGrid.vala:233
-msgid "Intelligent hide"
-msgstr "அறிவார்ந்து மறைக்க"
-
-#: ../src/Grids/PlankGrid.vala:234
-msgid "Auto hide"
-msgstr "தன்னியக்க மறைதல்"
-
-#: ../src/Grids/PlankGrid.vala:235
-msgid "Hide on maximize"
-msgstr "பெரிதாக்கும் போது மறைக்க"
-
-#: ../src/Grids/PlankGrid.vala:298
-msgid "Primary Monitor"
-msgstr "முதன்மையான மானிட்டர்"
-
-#: ../src/Grids/PlankGrid.vala:301
-#, c-format
-msgid "Monitor %d"
-msgstr "மானிட்டர் %d"
-
-#: ../src/Grids/PlankGrid.vala:320
-msgid "Icon Size:"
-msgstr "ஐகான் அளவு:"
-
-#: ../src/Grids/PlankGrid.vala:323
-#: ../src/Grids/SuperwingpanelGrid.vala:50
-msgid "Hide Mode:"
-msgstr "மறைக்கும் முறை:"
-
-#: ../src/Grids/PlankGrid.vala:326
-msgid "Delay (in ms):"
-msgstr "தாமதம்(in ms):"
-
-#: ../src/Grids/PlankGrid.vala:329
-#: ../src/Grids/TerminalGrid.vala:210
-msgid "Theme:"
-msgstr "அலங்காரம்:"
-
-#: ../src/Grids/PlankGrid.vala:333
-msgid "Monitor:"
-msgstr "மானிட்டர்:"
-
-#: ../src/Grids/PlankGrid.vala:337
-#: ../src/Grids/WingpanelslimGrid.vala:49
-#: ../src/Grids/SuperwingpanelGrid.vala:178
-msgid "Position:"
-msgstr "நிலை:"
-
-#: ../src/Grids/PlankGrid.vala:340
-msgid "Offset:"
-msgstr "ஆஃப்செட்:"
-
-#: ../src/Grids/PlankGrid.vala:343
+#: ../src/Grids/PlankGrid.vala:151
 msgid "Alignment:"
 msgstr "சீரமைப்பு:"
 
-#: ../src/Grids/PlankGrid.vala:349
-msgid "Lock Items:"
-msgstr "லாக் பொருட்கள்:"
+#: ../src/Tweaks.vala:56
+msgid "Animations"
+msgstr "அசைவூட்டங்கள்"
 
-#: ../src/Grids/PlankGrid.vala:352
-msgid "Workspace Overview Icon:"
-msgstr "பணியிட கண்ணோட்ட ஐகான:"
-
-#: ../src/Grids/PlankGrid.vala:355
-msgid "Show Desktop Icon:"
-msgstr "டெஸ்க்டாப் ஐகான் காட்டு:"
-
-#: ../src/Grids/ShadowsGrid.vala:27
-msgid "Focused Windows:"
-msgstr "குவிக்கப்பட்ட சாளரம்:"
-
-#: ../src/Grids/ShadowsGrid.vala:28
-msgid "Unfocused Windows:"
-msgstr "ஒருமுகப்படுத்தாத சாளரம்:"
-
-#: ../src/Grids/ShadowsGrid.vala:29
-msgid "Focused Dialogs:"
-msgstr "குவிக்கப்பட்ட உரையாடல்கள்:"
-
-#: ../src/Grids/ShadowsGrid.vala:30
-msgid "Unfocused Dialogs:"
-msgstr "ஒருமுகப்படுத்தாத உரையாடல்கள்:"
-
-#: ../src/Grids/ShadowsGrid.vala:31
-msgid "Menu:"
-msgstr "பட்டி:"
-
-#: ../src/Grids/ShadowsGrid.vala:194
-msgid "Shadows:"
-msgstr "நிழல்கள்:"
-
-#: ../src/Grids/AnimationsGrid.vala:27
-msgid "Open Duration:"
-msgstr "திறக்கும் காலம்:"
-
-#: ../src/Grids/AnimationsGrid.vala:28
-msgid "Close Duration:"
-msgstr "மூடும் காலம்:"
-
-#: ../src/Grids/AnimationsGrid.vala:29
-msgid "Snap Duration:"
-msgstr ""
-
-#: ../src/Grids/AnimationsGrid.vala:30
-msgid "Minimize Duration:"
-msgstr "காலம் குறைத்தல்:"
-
-#: ../src/Grids/AnimationsGrid.vala:31
-msgid "Workspace Switch Duration:"
-msgstr "பணியிட மாற்று காலம்:"
-
-#: ../src/Grids/AnimationsGrid.vala:148
+#: ../src/Grids/AnimationsGrid.vala:43
 msgid "Animations:"
 msgstr "அசைவூட்டங்கள்:"
 
-#: ../src/Grids/WingpanelslimGrid.vala:51
-#: ../src/Grids/SuperwingpanelGrid.vala:180
-msgid "Middle"
-msgstr "மத்தியில்"
+#: ../src/Tweaks.vala:49
+msgid "Appearance"
+msgstr "தோற்றம்"
 
-#: ../src/Grids/WingpanelslimGrid.vala:53
-#: ../src/Grids/SuperwingpanelGrid.vala:182
-msgid "Flush Left"
-msgstr "இடது பறிப்பு"
+#: ../src/Tweaks.vala:70 ../src/Tweaks.vala:74 ../src/Tweaks.vala:78
+#: ../src/Tweaks.vala:82 ../src/Tweaks.vala:86
+msgid "Applications"
+msgstr "பயன்பாடுகள்"
 
-#: ../src/Grids/WingpanelslimGrid.vala:54
-#: ../src/Grids/SuperwingpanelGrid.vala:183
-msgid "Flush Right"
-msgstr "வலது பறிப்பு"
-
-#: ../src/Grids/WingpanelslimGrid.vala:75
-#: ../src/Grids/SuperwingpanelGrid.vala:151
-msgid "Edge:"
-msgstr "விளிம்பு:"
-
-#: ../src/Grids/WingpanelslimGrid.vala:76
-#: ../src/Grids/SuperwingpanelGrid.vala:152
-msgid "Slanted"
-msgstr "சரிவான"
-
-#: ../src/Grids/WingpanelslimGrid.vala:77
-#: ../src/Grids/SuperwingpanelGrid.vala:153
-msgid "Squared"
-msgstr "சதுரமாக"
-
-#: ../src/Grids/WingpanelslimGrid.vala:78
-#: ../src/Grids/SuperwingpanelGrid.vala:154
-msgid "Curved 1"
-msgstr "வளைந்த 1"
-
-#: ../src/Grids/WingpanelslimGrid.vala:79
-#: ../src/Grids/SuperwingpanelGrid.vala:155
-msgid "Curved 2"
-msgstr "வளைந்த 2"
-
-#: ../src/Grids/WingpanelslimGrid.vala:80
-#: ../src/Grids/SuperwingpanelGrid.vala:156
-msgid "Curved 3"
-msgstr "வளைந்த 3"
-
-#: ../src/Grids/WingpanelslimGrid.vala:100
-msgid "Auto Hide:"
-msgstr "ஆட்டோ மறை:"
-
-#: ../src/Grids/WingpanelslimGrid.vala:108
-#: ../src/Grids/SuperwingpanelGrid.vala:84
-msgid "Show Launcher:"
-msgstr "துவக்கியை காட்டு:"
-
-#: ../src/Grids/WingpanelslimGrid.vala:117
-#: ../src/Grids/SuperwingpanelGrid.vala:113
-msgid "Launcher:"
-msgstr "துவக்கி:"
-
-#: ../src/Grids/WingpanelslimGrid.vala:163
-msgid "Slim Wingpanel:"
-msgstr "மெலிதான விங்பேனல்:"
-
-#: ../src/Grids/ShortcutsGrid.vala:68
-msgid "Name"
-msgstr "பெயர்"
-
-#: ../src/Grids/ShortcutsGrid.vala:69
-msgid "Shortcut"
-msgstr "சுருக்குவிசை"
-
-#: ../src/Grids/ShortcutsGrid.vala:70
-msgid "Command"
-msgstr "கட்டளை"
-
-#: ../src/Grids/ShortcutsGrid.vala:117
-msgid "Every field must be filled!"
-msgstr "ஒவ்வொரு துறையையும் கண்டிப்பாக பூர்த்தி செய்ய வேண்டும்!"
-
-#: ../src/Grids/ShortcutsGrid.vala:126
-msgid "Name:"
-msgstr "பெயர்:"
-
-#: ../src/Grids/ShortcutsGrid.vala:129
-msgid "Shortcut:"
-msgstr "சுருக்குவிசை:"
-
-#: ../src/Grids/ShortcutsGrid.vala:132
-msgid "Command:"
-msgstr "கட்டளை:"
-
-#: ../src/Grids/SuperwingpanelGrid.vala:30
-msgid "Super Wingpanel:"
-msgstr "சூப்பர் விங்பேனல்:"
-
-#: ../src/Grids/SuperwingpanelGrid.vala:51
-msgid "Never Hide"
-msgstr "ஒருபோதும் மறைக்க"
-
-#: ../src/Grids/SuperwingpanelGrid.vala:52
-msgid "Intellihide"
-msgstr "அறிவார்ந்த மறைத்தல்"
-
-#: ../src/Grids/SuperwingpanelGrid.vala:53
-msgid "Intellislim"
-msgstr "இன்டலிஸ்லிம்"
-
-#: ../src/Grids/SuperwingpanelGrid.vala:54
-msgid "Auto Hide"
-msgstr "தானாக மறை"
-
-#: ../src/Grids/SuperwingpanelGrid.vala:75
-msgid "Show Window Controls:"
-msgstr "விண்டோ கட்டுப்பாடுகளை காட்ட:"
-
-#: ../src/Grids/SuperwingpanelGrid.vala:93
-msgid "Launcher Text Override:"
-msgstr ""
-
-#: ../src/Grids/SuperwingpanelGrid.vala:133
-msgid "Slim Mode:"
-msgstr "ஸ்லிம் முறை:"
-
-#: ../src/Grids/SuperwingpanelGrid.vala:141
-msgid "Separate Launcher:"
-msgstr "தனி துவக்கி:"
-
-#: ../src/Grids/SuperwingpanelGrid.vala:205
-msgid "Margin:"
-msgstr "மார்ஜின்:"
-
-#: ../src/Grids/FilesGrid.vala:38
-msgid "Locale"
-msgstr "இடம்"
-
-#: ../src/Grids/FilesGrid.vala:39
-msgid "ISO"
-msgstr "ISO"
-
-#: ../src/Grids/FilesGrid.vala:40
-msgid "Informal"
-msgstr "முறைசாரா"
-
-#: ../src/Grids/FilesGrid.vala:85
-msgid "Single Click:"
-msgstr "ஒரே கிளிக்கில்:"
-
-#: ../src/Grids/FilesGrid.vala:88
-msgid "Date Format:"
-msgstr "தேதி வடிவம்:"
-
-#: ../src/Grids/FilesGrid.vala:91
-msgid "Sidebar Icon Size:"
-msgstr "பக்கப்பட்டை ஐகான் அளவு:"
-
-#: ../src/Grids/TerminalGrid.vala:180
-#: ../src/Grids/AppearanceGrid.vala:124
-msgid "Custom"
-msgstr "தனிப்பயன்"
-
-#: ../src/Grids/TerminalGrid.vala:199
-msgid "Limit Scrollback Lines:"
-msgstr "உருளும் வரிகள் வரம்பு:"
-
-#: ../src/Grids/TerminalGrid.vala:203
-msgid "Custom Font:"
-msgstr "தனிபயன் எழுத்துரு:"
-
-#: ../src/Grids/TerminalGrid.vala:207
-msgid "Opacity:"
-msgstr "ஒளிபுகாமை:"
-
-#: ../src/Grids/MiscGrid.vala:48
-#: ../src/Grids/MiscGrid.vala:75
-#: ../src/Grids/MiscGrid.vala:102
-msgid "Menu"
-msgstr "பட்டி"
-
-#: ../src/Grids/MiscGrid.vala:49
-#: ../src/Grids/MiscGrid.vala:76
-#: ../src/Grids/MiscGrid.vala:103
-msgid "Maximize"
-msgstr "பெரிதாக்கு"
-
-#: ../src/Grids/MiscGrid.vala:50
-#: ../src/Grids/MiscGrid.vala:77
-#: ../src/Grids/MiscGrid.vala:104
-msgid "Maximize Horizontally"
-msgstr "கிடை மட்டத்தில்  பெரிதாக்கு"
-
-#: ../src/Grids/MiscGrid.vala:51
-#: ../src/Grids/MiscGrid.vala:78
-#: ../src/Grids/MiscGrid.vala:105
-msgid "Maximize Vertically"
-msgstr "செங்குத்தாக பெரிதாக்கு"
-
-#: ../src/Grids/MiscGrid.vala:52
-#: ../src/Grids/MiscGrid.vala:79
-#: ../src/Grids/MiscGrid.vala:106
-msgid "Minimize"
-msgstr "சிறிதாக்கு"
-
-#: ../src/Grids/MiscGrid.vala:53
-#: ../src/Grids/MiscGrid.vala:80
-#: ../src/Grids/MiscGrid.vala:107
-msgid "Shade"
-msgstr "நிழலாக்கு"
-
-#: ../src/Grids/MiscGrid.vala:54
-#: ../src/Grids/MiscGrid.vala:81
-#: ../src/Grids/MiscGrid.vala:108
-msgid "Lower Window"
-msgstr "சாளரத்தை இறக்கு"
-
-#: ../src/Grids/MiscGrid.vala:126
-msgid "Double Click Titlebar Action:"
-msgstr "இரட்டை கிளிக் தலைப்புப்பட்டி செயல்:"
-
-#: ../src/Grids/MiscGrid.vala:129
-msgid "Middle Click Titlebar Action:"
-msgstr ""
-
-#: ../src/Grids/MiscGrid.vala:132
-msgid "Right Click Titlebar Action:"
-msgstr "வலது கிளிக் தலைப்பு பட்டி செயல்:"
-
-#: ../src/Grids/MiscGrid.vala:135
+#: ../src/Grids/MiscGrid.vala:32
 msgid "Audible Bell:"
 msgstr ""
 
-#: ../src/Grids/MiscGrid.vala:138
-msgid "Overlay Scrollbars:"
-msgstr ""
+#: ../src/Grids/PlankGrid.vala:68
+msgid "Auto hide"
+msgstr "தன்னியக்க மறைதல்"
 
-#: ../src/Grids/MiscGrid.vala:141
-msgid "Natural Scrolling:"
-msgstr "இயல்பான உருட்டல்:"
+#: ../src/Grids/PlankGrid.vala:130
+msgid "Bottom"
+msgstr "கீழே"
 
-#: ../src/Grids/FontsGrid.vala:98
-msgid "Default Font:"
-msgstr "இயல்புநிலை எழுத்துரு:"
+#: ../src/Grids/PlankGrid.vala:148 ../src/Grids/PlankGrid.vala:165
+#, fuzzy
+msgid "Centered"
+msgstr "மையம்"
 
-#: ../src/Grids/FontsGrid.vala:101
-msgid "Document Font:"
-msgstr "ஆவண எழுத்துரு:"
+#: ../src/Tweaks.vala:82
+msgid "Cerbere"
+msgstr "செர்பிரே"
 
-#: ../src/Grids/FontsGrid.vala:104
-msgid "Monospace Font:"
-msgstr "மோனோஸ்பேஸ் எழுத்துரு:"
+#: ../src/Grids/AnimationsGrid.vala:72
+msgid "Close Duration:"
+msgstr "மூடும் காலம்:"
 
-#: ../src/Grids/FontsGrid.vala:107
-msgid "Window Title Font:"
-msgstr "சாளர தலைப்பு எழுத்துரு:"
-
-#: ../src/Grids/SynapseGrid.vala:46
-msgid "Search Indicator Shortcut:"
-msgstr "தேடல் காட்டி குறுக்குவழி:"
-
-#: ../src/Grids/AppearanceGrid.vala:116
-msgid "Custom Layout:"
-msgstr "தனிபயன் அமைப்பை:"
-
-#: ../src/Grids/AppearanceGrid.vala:119
+#: ../src/Settings/GalaSettings.vala:81
 msgid "Close Only"
 msgstr "மூட மட்டும்"
 
-#: ../src/Grids/AppearanceGrid.vala:120
-msgid "Minimize Left"
-msgstr "இடது பக்கத்திற்க்கு குறைத்தல்"
+#: ../src/Grids/SlingshotGrid.vala:44
+msgid "Columns:"
+msgstr "நெடுவரிசைகள்:"
 
-#: ../src/Grids/AppearanceGrid.vala:121
-msgid "Minimize Right"
-msgstr "வலது பக்கத்திற்க்கு குறைத்தல்"
+#: ../src/Grids/ShortcutsGrid.vala:74
+msgid "Command"
+msgstr "கட்டளை"
 
-#: ../src/Grids/AppearanceGrid.vala:122
-msgid "Windows"
-msgstr "விண்டோஸ்"
+#: ../src/Grids/ShortcutsGrid.vala:136
+msgid "Command:"
+msgstr "கட்டளை:"
 
-#: ../src/Grids/AppearanceGrid.vala:123
-msgid "OS X"
-msgstr "OS X"
+#: ../src/Grids/AppearanceGrid.vala:113
+msgid ""
+"Controls located at the top of the window for close, minimize, and maximize"
+msgstr ""
 
-#: ../src/Grids/AppearanceGrid.vala:183
-msgid "Window Decoration Theme:"
-msgstr "சாளர அலங்கரிப்பு தீம்:"
+#: ../src/Grids/PlankGrid.vala:32
+msgid "Current Workspace Only"
+msgstr ""
 
-#: ../src/Grids/AppearanceGrid.vala:186
-msgid "Interface Theme:"
-msgstr "இடைமுகம் தீம்:"
-
-#: ../src/Grids/AppearanceGrid.vala:189
-msgid "Icon Theme:"
-msgstr "ஐகான் தீம்:"
-
-#: ../src/Grids/AppearanceGrid.vala:192
+#: ../src/Grids/AppearanceGrid.vala:81
 msgid "Cursor Theme:"
 msgstr "கர்சர் தீம்:"
 
-#: ../src/Grids/AppearanceGrid.vala:195
-msgid "Button Layout:"
-msgstr "பொத்தான் அமைப்பு:"
+#: ../src/Grids/TerminalGrid.vala:83 ../src/Settings/GalaSettings.vala:86
+msgid "Custom"
+msgstr "தனிப்பயன்"
+
+#: ../src/Grids/AppearanceGrid.vala:95
+msgid "Custom Layout:"
+msgstr "தனிபயன் அமைப்பை:"
+
+#: ../src/Grids/AppearanceGrid.vala:96
+msgid "Custom window control layout"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:48
+msgid "Date Format:"
+msgstr "தேதி வடிவம்:"
+
+#: ../src/Grids/FontsGrid.vala:32
+msgid "Default Font:"
+msgstr "இயல்புநிலை எழுத்துரு:"
+
+#: ../src/Objects/ShortcutObject.vala:58
+#: ../src/Widgets/AcceleratorInputWidget.vala:87
+#: ../src/Widgets/AcceleratorInputWidget.vala:105
+msgid "Disabled"
+msgstr "செயல்நீக்கப்பட்டது"
+
+#: ../src/Grids/FontsGrid.vala:43
+msgid "Document Font:"
+msgstr "ஆவண எழுத்துரு:"
+
+#: ../src/Grids/PlankGrid.vala:66
+msgid "Don't hide"
+msgstr "மறைக்காதே"
+
+#: ../src/Grids/ShortcutsGrid.vala:121
+msgid "Every field must be filled!"
+msgstr "ஒவ்வொரு துறையையும் கண்டிப்பாக பூர்த்தி செய்ய வேண்டும்!"
+
+#: ../src/Tweaks.vala:74
+msgid "Files"
+msgstr "கோப்புகள்"
+
+#: ../src/Grids/ShadowsGrid.vala:32
+msgid "Focused Windows:"
+msgstr "குவிக்கப்பட்ட சாளரம்:"
+
+#: ../src/Tweaks.vala:52
+msgid "Fonts"
+msgstr "எழுத்துருக்கள்"
+
+#: ../src/Grids/FilesGrid.vala:49
+msgid "For date accessed, modified, etc."
+msgstr ""
+
+#: ../src/Grids/AppearanceGrid.vala:57
+#, fuzzy
+msgid "GTK+ Theme:"
+msgstr "அலங்காரம்:"
+
+#: ../src/Grids/AppearanceGrid.vala:35
+msgid "GTK+ windows will now prefer the dark GTK+ theme"
+msgstr ""
+
+#: ../src/Tweaks.vala:49 ../src/Tweaks.vala:52 ../src/Tweaks.vala:56
+#: ../src/Tweaks.vala:60 ../src/Tweaks.vala:66
+msgid "General"
+msgstr "பொதுவான"
+
+#: ../src/Grids/PlankGrid.vala:84
+#, fuzzy
+msgid "Hide Delay (ms):"
+msgstr "தாமதம்(in ms):"
+
+#: ../src/Grids/PlankGrid.vala:72
+msgid "Hide Mode:"
+msgstr "மறைக்கும் முறை:"
+
+#: ../src/Grids/PlankGrid.vala:69
+msgid "Hide on maximize"
+msgstr "பெரிதாக்கும் போது மறைக்க"
+
+#: ../src/Grids/TerminalGrid.vala:151
+msgid "How transparent the background of the terminal is"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:44
+msgid "ISO"
+msgstr "ISO"
+
+#: ../src/Grids/PlankGrid.vala:54
+msgid "Icon Size:"
+msgstr "ஐகான் அளவு:"
+
+#: ../src/Grids/AppearanceGrid.vala:69
+msgid "Icon Theme:"
+msgstr "ஐகான் தீம்:"
+
+#: ../src/Grids/FilesGrid.vala:33
+msgid "If set off, files will use 'normal' double-click behavior"
+msgstr ""
+
+#: ../src/Grids/AnimationsGrid.vala:44
+msgid "If the animations play at all"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:45
+msgid "Informal"
+msgstr "முறைசாரா"
+
+#: ../src/Grids/PlankGrid.vala:67
+msgid "Intelligent hide"
+msgstr "அறிவார்ந்து மறைக்க"
+
+#: ../src/Grids/PlankGrid.vala:168
+msgid "Item Alignment:"
+msgstr "உருப்படி சீரமைப்பு:"
+
+#: ../src/Grids/FilesGrid.vala:64
+msgid "Large"
+msgstr "பெரிய"
+
+#: ../src/Grids/FilesGrid.vala:65
+msgid "Larger"
+msgstr "மிகப்பெரிய"
+
+#: ../src/Grids/FilesGrid.vala:66
+msgid "Largest"
+msgstr "மிகப்பெரிய"
+
+#: ../src/Grids/PlankGrid.vala:127 ../src/Grids/PlankGrid.vala:147
+#: ../src/Grids/PlankGrid.vala:164
+msgid "Left"
+msgstr "இடது"
+
+#: ../src/Grids/FilesGrid.vala:43
+msgid "Locale"
+msgstr "இடம்"
+
+#: ../src/Grids/PlankGrid.vala:43
+msgid "Lock Items:"
+msgstr "லாக் பொருட்கள்:"
+
+#: ../src/Grids/AppearanceGrid.vala:114
+msgid "May break window controls! May stop working with updates to system!"
+msgstr ""
+
+#: ../src/Grids/AppearanceGrid.vala:45
+#, fuzzy
+msgid "Metacity Theme:"
+msgstr "இடைமுகம் தீம்:"
+
+#: ../src/Grids/AnimationsGrid.vala:96
+msgid "Minimize Duration:"
+msgstr "காலம் குறைத்தல்:"
+
+#: ../src/Settings/GalaSettings.vala:82
+msgid "Minimize Left"
+msgstr "இடது பக்கத்திற்க்கு குறைத்தல்"
+
+#: ../src/Settings/GalaSettings.vala:83
+msgid "Minimize Right"
+msgstr "வலது பக்கத்திற்க்கு குறைத்தல்"
+
+#: ../src/Tweaks.vala:66
+msgid "Miscellaneous"
+msgstr "பலவகைப்பட்ட"
+
+#: ../src/Grids/PlankGrid.vala:111
+msgid "Monitor %d"
+msgstr "மானிட்டர் %d"
+
+#: ../src/Grids/PlankGrid.vala:115
+msgid "Monitor:"
+msgstr "மானிட்டர்:"
+
+#: ../src/Grids/FontsGrid.vala:54
+msgid "Monospace Font:"
+msgstr "மோனோஸ்பேஸ் எழுத்துரு:"
+
+#: ../src/Grids/ShortcutsGrid.vala:72
+msgid "Name"
+msgstr "பெயர்"
+
+#: ../src/Grids/ShortcutsGrid.vala:130
+msgid "Name:"
+msgstr "பெயர்:"
+
+#: ../src/Grids/FilesGrid.vala:63
+msgid "Normal"
+msgstr "இயல்பாக"
+
+#: ../src/Settings/GalaSettings.vala:85
+msgid "OS X"
+msgstr "OS X"
+
+#: ../src/Grids/PlankGrid.vala:180
+msgid "Offset:"
+msgstr "ஆஃப்செட்:"
+
+#: ../src/Grids/TerminalGrid.vala:150
+msgid "Opacity:"
+msgstr "ஒளிபுகாமை:"
+
+#: ../src/Grids/AnimationsGrid.vala:60
+msgid "Open Duration:"
+msgstr "திறக்கும் காலம்:"
+
+#: ../src/Grids/PlankGrid.vala:145
+msgid "Panel"
+msgstr "பலகை"
+
+#: ../src/Tweaks.vala:70
+msgid "Plank"
+msgstr "மரப்பலகை"
+
+#: ../src/Grids/PlankGrid.vala:73
+msgid "Plank's hide mode"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:97
+msgid "Plank's theme for the dock"
+msgstr ""
+
+#: ../src/Grids/AnimationsGrid.vala:109
+msgid "Plays when a workspace switch is initiated"
+msgstr ""
+
+#: ../src/Grids/AnimationsGrid.vala:73
+msgid "Plays when an application is closed"
+msgstr ""
+
+#: ../src/Grids/AnimationsGrid.vala:97
+msgid "Plays when an application is minimized"
+msgstr ""
+
+#: ../src/Grids/AnimationsGrid.vala:61
+msgid "Plays when an application is opened"
+msgstr ""
+
+#: ../src/Grids/AnimationsGrid.vala:85
+msgid "Plays when an application is snapped to the side"
+msgstr ""
+
+#: ../src/Grids/AppearanceGrid.vala:34
+msgid "Prefer Dark Theme:"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:108
+msgid "Primary Monitor"
+msgstr "முதன்மையான மானிட்டர்"
+
+#: ../src/Grids/CerbereGrid.vala:54 ../src/Grids/CerbereGrid.vala:64
+#: ../src/Grids/ShortcutsGrid.vala:96 ../src/Grids/ShortcutsGrid.vala:163
+msgid "Remove"
+msgstr "அகற்று"
+
+#: ../src/Grids/CerbereGrid.vala:65 ../src/Grids/ShortcutsGrid.vala:164
+msgid "Revert to Default"
+msgstr "இயல்புநிலைக்கு மீட்டமை"
+
+#: ../src/Widgets/TweakWidget.vala:83
+#, fuzzy
+msgid "Revert to default setting"
+msgstr "இயல்புநிலைக்கு மீட்டமை"
+
+#: ../src/Grids/PlankGrid.vala:128 ../src/Grids/PlankGrid.vala:146
+#: ../src/Grids/PlankGrid.vala:163
+msgid "Right"
+msgstr "வலது"
+
+#: ../src/Grids/SlingshotGrid.vala:32
+msgid "Rows:"
+msgstr "வரிகள்:"
+
+#: ../src/Grids/PlankGrid.vala:133
+#, fuzzy
+msgid "Screen Position:"
+msgstr "நிலை:"
+
+#: ../src/Grids/ShadowsGrid.vala:48
+msgid "Shadow beneath windows that you do not have selected"
+msgstr ""
+
+#: ../src/Grids/ShadowsGrid.vala:33
+msgid "Shadow beneath windows that you have currently selected"
+msgstr ""
+
+#: ../src/Tweaks.vala:60
+msgid "Shadows"
+msgstr "நிழல்கள்"
+
+#: ../src/Grids/ShortcutsGrid.vala:73
+msgid "Shortcut"
+msgstr "சுருக்குவிசை"
+
+#: ../src/Grids/ShortcutsGrid.vala:133
+msgid "Shortcut:"
+msgstr "சுருக்குவிசை:"
+
+#: ../src/Grids/PlankGrid.vala:33
+msgid "Show only windows on the current workspace"
+msgstr ""
+
+#: ../src/Grids/FilesGrid.vala:69
+msgid "Sidebar Icon Size:"
+msgstr "பக்கப்பட்டை ஐகான் அளவு:"
+
+#: ../src/Grids/FilesGrid.vala:32
+msgid "Single Click:"
+msgstr "ஒரே கிளிக்கில்:"
+
+#: ../src/Grids/FilesGrid.vala:70
+msgid "Size of the icons in the sidebar"
+msgstr ""
+
+#: ../src/Tweaks.vala:78
+msgid "Slingshot"
+msgstr "ஸ்லிங்ஷாட்"
+
+#: ../src/Grids/FilesGrid.vala:62
+msgid "Small"
+msgstr "சிறிய"
+
+#: ../src/Grids/FilesGrid.vala:61
+msgid "Smaller"
+msgstr "மிக சிரிய"
+
+#: ../src/Grids/FilesGrid.vala:60
+msgid "Smallest"
+msgstr "மிகச்சிறிய"
+
+#: ../src/Grids/AnimationsGrid.vala:84
+msgid "Snap Duration:"
+msgstr ""
+
+#: ../src/Grids/AppearanceGrid.vala:36
+msgid ""
+"Some applications will not react well with this enabled and can look terrible"
+msgstr ""
+
+#: ../src/Grids/MiscGrid.vala:33
+msgid "Sound that plays when an error has been made"
+msgstr ""
+
+#: ../src/Tweaks.vala:86
+msgid "Terminal"
+msgstr "முனையம்"
+
+#: ../src/Grids/PlankGrid.vala:152
+msgid "The alignment for the dock on the monitor's edge"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:169
+msgid "The alignment of the items in this dock if panel-mode is used"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:116
+msgid "The monitor that Plank is displayed on"
+msgstr ""
+
+#: ../src/Grids/SlingshotGrid.vala:45
+msgid "The number of columns displayed in Slingshot"
+msgstr ""
+
+#: ../src/Grids/SlingshotGrid.vala:33
+msgid "The number of rows displayed in Slingshot"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:181
+msgid "The offset (in percent) from the alignment point to shift Plank"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:55
+msgid "The size of each icon in the plank"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:96 ../src/Grids/TerminalGrid.vala:169
+msgid "Theme:"
+msgstr "அலங்காரம்:"
+
+#: ../src/Grids/ShadowsGrid.vala:34 ../src/Grids/ShadowsGrid.vala:49
+msgid "This may not actually do anything"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:85
+msgid "Time to wait before unhiding the dock"
+msgstr ""
+
+#: ../src/Grids/FontsGrid.vala:65
+#, fuzzy
+msgid "Titlebar Font:"
+msgstr "சாளர தலைப்பு எழுத்துரு:"
+
+#: ../src/Grids/PlankGrid.vala:129
+msgid "Top"
+msgstr "மேல்"
+
+#: ../src/Tweaks.vala:39
+msgid "Tweak elementary OS settings"
+msgstr ""
+
+#: ../src/Tweaks.vala:38
+msgid "Tweaks"
+msgstr ""
+
+#: ../src/Grids/ShadowsGrid.vala:47
+msgid "Unfocused Windows:"
+msgstr "ஒருமுகப்படுத்தாத சாளரம்:"
+
+#: ../src/Grids/FontsGrid.vala:33
+msgid "Used by default by most applications"
+msgstr ""
+
+#: ../src/Grids/FontsGrid.vala:55
+msgid "Used in the terminal, for code, and sometimes for plain text"
+msgstr ""
+
+#: ../src/Grids/FontsGrid.vala:66
+msgid "Used to display window titles"
+msgstr ""
+
+#: ../src/Grids/AppearanceGrid.vala:58
+msgid "Used to render GTK+ windows like Switchboard"
+msgstr ""
+
+#: ../src/Grids/AppearanceGrid.vala:46
+msgid "Used to render windows that do not use GTK+"
+msgstr ""
+
+#: ../src/Grids/AppearanceGrid.vala:82
+msgid "Used to theme the cursor"
+msgstr ""
+
+#: ../src/Grids/AppearanceGrid.vala:70
+msgid "Used to theme the icon set, including application icons"
+msgstr ""
+
+#: ../src/Grids/FontsGrid.vala:44
+msgid "Used when displaying documents, if no other font was chosen"
+msgstr ""
+
+#: ../src/Grids/CerbereGrid.vala:42
+msgid "Watched Processes"
+msgstr "பார்த்த செயல்கள்"
+
+#: ../src/Grids/PlankGrid.vala:134
+msgid "Where on the screen Plank is displayed"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:44
+msgid "Whether to prevent drag'n'drop actions and lock items on the dock"
+msgstr ""
+
+#: ../src/Grids/PlankGrid.vala:34
+msgid "Will still show pinned items on different workspaces"
+msgstr ""
+
+#: ../src/Grids/AppearanceGrid.vala:112
+#, fuzzy
+msgid "Window Controls:"
+msgstr "விண்டோ கட்டுப்பாடுகளை காட்ட:"
+
+#: ../src/Settings/GalaSettings.vala:84
+msgid "Windows"
+msgstr "விண்டோஸ்"
+
+#: ../src/Grids/AnimationsGrid.vala:108
+msgid "Workspace Switch Duration:"
+msgstr "பணியிட மாற்று காலம்:"
+
+#: ../src/Settings/GalaSettings.vala:80
+msgid "elementary"
+msgstr ""
+
+#~ msgid "Auto Hide"
+#~ msgstr "தானாக மறை"
+
+#~ msgid "Auto Hide:"
+#~ msgstr "ஆட்டோ மறை:"
+
+#~ msgid "Button Layout:"
+#~ msgstr "பொத்தான் அமைப்பு:"
+
+#~ msgid "Curved 1"
+#~ msgstr "வளைந்த 1"
+
+#~ msgid "Curved 2"
+#~ msgstr "வளைந்த 2"
+
+#~ msgid "Curved 3"
+#~ msgstr "வளைந்த 3"
+
+#~ msgid "Custom Font:"
+#~ msgstr "தனிபயன் எழுத்துரு:"
+
+#~ msgid "Double Click Titlebar Action:"
+#~ msgstr "இரட்டை கிளிக் தலைப்புப்பட்டி செயல்:"
+
+#~ msgid "Edge:"
+#~ msgstr "விளிம்பு:"
+
+#~ msgid "Flush Left"
+#~ msgstr "இடது பறிப்பு"
+
+#~ msgid "Flush Right"
+#~ msgstr "வலது பறிப்பு"
+
+#~ msgid "Focused Dialogs:"
+#~ msgstr "குவிக்கப்பட்ட உரையாடல்கள்:"
+
+#~ msgid "Intellihide"
+#~ msgstr "அறிவார்ந்த மறைத்தல்"
+
+#~ msgid "Intellislim"
+#~ msgstr "இன்டலிஸ்லிம்"
+
+#~ msgid "Launcher:"
+#~ msgstr "துவக்கி:"
+
+#~ msgid "Limit Scrollback Lines:"
+#~ msgstr "உருளும் வரிகள் வரம்பு:"
+
+#~ msgid "Lower Window"
+#~ msgstr "சாளரத்தை இறக்கு"
+
+#~ msgid "Margin:"
+#~ msgstr "மார்ஜின்:"
+
+#~ msgid "Maximize"
+#~ msgstr "பெரிதாக்கு"
+
+#~ msgid "Maximize Horizontally"
+#~ msgstr "கிடை மட்டத்தில்  பெரிதாக்கு"
+
+#~ msgid "Maximize Vertically"
+#~ msgstr "செங்குத்தாக பெரிதாக்கு"
+
+#~ msgid "Menu"
+#~ msgstr "பட்டி"
+
+#~ msgid "Menu:"
+#~ msgstr "பட்டி:"
+
+#~ msgid "Middle"
+#~ msgstr "மத்தியில்"
+
+#~ msgid "Minimize"
+#~ msgstr "சிறிதாக்கு"
+
+#~ msgid "Natural Scrolling:"
+#~ msgstr "இயல்பான உருட்டல்:"
+
+#~ msgid "Never Hide"
+#~ msgstr "ஒருபோதும் மறைக்க"
+
+#~ msgid "Right Click Titlebar Action:"
+#~ msgstr "வலது கிளிக் தலைப்பு பட்டி செயல்:"
+
+#~ msgid "Search Indicator"
+#~ msgstr "தேடல் காட்டி"
+
+#~ msgid "Search Indicator Shortcut:"
+#~ msgstr "தேடல் காட்டி குறுக்குவழி:"
+
+#~ msgid "Separate Launcher:"
+#~ msgstr "தனி துவக்கி:"
+
+#~ msgid "Shade"
+#~ msgstr "நிழலாக்கு"
+
+#~ msgid "Shadows:"
+#~ msgstr "நிழல்கள்:"
+
+#~ msgid "Shortcuts"
+#~ msgstr "சுருக்குவழிகள்"
+
+#~ msgid "Show Desktop Icon:"
+#~ msgstr "டெஸ்க்டாப் ஐகான் காட்டு:"
+
+#~ msgid "Show Launcher:"
+#~ msgstr "துவக்கியை காட்டு:"
+
+#~ msgid "Slanted"
+#~ msgstr "சரிவான"
+
+#~ msgid "Slim Mode:"
+#~ msgstr "ஸ்லிம் முறை:"
+
+#~ msgid "Slim Wingpanel:"
+#~ msgstr "மெலிதான விங்பேனல்:"
+
+#~ msgid "Squared"
+#~ msgstr "சதுரமாக"
+
+#~ msgid "Super Wingpanel"
+#~ msgstr "சூப்பர் விங்பேனல்"
+
+#~ msgid "Super Wingpanel:"
+#~ msgstr "சூப்பர் விங்பேனல்:"
+
+#~ msgid "Unfocused Dialogs:"
+#~ msgstr "ஒருமுகப்படுத்தாத உரையாடல்கள்:"
+
+#~ msgid "Unknown Value"
+#~ msgstr "அறியப்படாத மதிப்பு"
+
+#~ msgid "Window Decoration Theme:"
+#~ msgstr "சாளர அலங்கரிப்பு தீம்:"
+
+#~ msgid "Wingpanel Slim"
+#~ msgstr "மெலிந்த விங்பேனல்"
+
+#~ msgid "Workspace Overview Icon:"
+#~ msgstr "பணியிட கண்ணோட்ட ஐகான:"
