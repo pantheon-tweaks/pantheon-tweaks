@@ -111,7 +111,7 @@ namespace ElementaryTweaks {
             var window_controls = new TweakWidget.with_combo_box (
                         _("Window Controls:"), // name
                         _("Controls located at the top of the window for close, minimize, and maximize"), // tooltip
-                        _("May break window controls!"), // warning
+                        _("May break window controls! May stop working with updates to system!"), // warning
                         (() => {
                                 if (!AppearanceSettings.get_preset_button_layouts ().has_key (AppearanceSettings.get_default ().button_layout)) {
                                     custom_layout.sensitive = true;
