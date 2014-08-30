@@ -8,119 +8,73 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-28 07:48-0500\n"
-"PO-Revision-Date: 2014-08-19 07:15+0000\n"
-"Last-Translator: Michael P. Starkweather <Mpstark@gmail.com>\n"
+"PO-Revision-Date: 2014-10-11 07:55+0000\n"
+"Last-Translator: abuyop <Unknown>\n"
 "Language-Team: Malay <ms@li.org>\n"
-"Language: ms\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-20 06:30+0000\n"
-"X-Generator: Launchpad (build 17163)\n"
+"X-Launchpad-Export-Date: 2014-10-12 07:22+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
+"Language: ms\n"
 
-#: ../src/Grids/TerminalGrid.vala:170
-msgid "A set of settings for terminal palette and background color"
-msgstr ""
+#: ../src/Tweaks.vala:38
+msgid "Tweaks"
+msgstr "Tweak"
 
-#: ../src/Grids/CerbereGrid.vala:53 ../src/Grids/CerbereGrid.vala:63
-#: ../src/Grids/ShortcutsGrid.vala:95 ../src/Grids/ShortcutsGrid.vala:162
-msgid "Add..."
-msgstr "Tambah..."
+#: ../src/Tweaks.vala:39
+msgid "Tweak elementary OS settings"
+msgstr "Tetapan Tweak OS elementary"
 
-#: ../src/Grids/PlankGrid.vala:151
-msgid "Alignment:"
-msgstr "Jajaran:"
+#: ../src/Tweaks.vala:49
+msgid "Appearance"
+msgstr "Penampilan"
+
+#: ../src/Tweaks.vala:49 ../src/Tweaks.vala:52 ../src/Tweaks.vala:56
+#: ../src/Tweaks.vala:60 ../src/Tweaks.vala:66
+msgid "General"
+msgstr "Am"
+
+#: ../src/Tweaks.vala:52
+msgid "Fonts"
+msgstr "Fon"
 
 #: ../src/Tweaks.vala:56
 msgid "Animations"
 msgstr "Animasi"
 
-#: ../src/Grids/AnimationsGrid.vala:43
-msgid "Animations:"
-msgstr "Animasi:"
+#: ../src/Tweaks.vala:60
+msgid "Shadows"
+msgstr "Bayang"
 
-#: ../src/Tweaks.vala:49
-msgid "Appearance"
-msgstr "Penampilan"
+#: ../src/Tweaks.vala:66
+msgid "Miscellaneous"
+msgstr "Pelbagai"
+
+#: ../src/Tweaks.vala:70
+msgid "Plank"
+msgstr "Plank"
 
 #: ../src/Tweaks.vala:70 ../src/Tweaks.vala:74 ../src/Tweaks.vala:78
 #: ../src/Tweaks.vala:82 ../src/Tweaks.vala:86
 msgid "Applications"
 msgstr "Aplikasi"
 
-#: ../src/Grids/MiscGrid.vala:32
-msgid "Audible Bell:"
-msgstr "Loceng Boleh Dengar:"
+#: ../src/Tweaks.vala:74
+msgid "Files"
+msgstr "Fail"
 
-#: ../src/Grids/PlankGrid.vala:68
-msgid "Auto hide"
-msgstr "Sembunyi sendiri"
-
-#: ../src/Grids/PlankGrid.vala:130
-msgid "Bottom"
-msgstr "Bawah"
-
-#: ../src/Grids/PlankGrid.vala:148 ../src/Grids/PlankGrid.vala:165
-#, fuzzy
-msgid "Centered"
-msgstr "Tengah"
+#: ../src/Tweaks.vala:78
+msgid "Slingshot"
+msgstr "Slingshot"
 
 #: ../src/Tweaks.vala:82
 msgid "Cerbere"
 msgstr "Cerbere"
 
-#: ../src/Grids/AnimationsGrid.vala:72
-msgid "Close Duration:"
-msgstr "Tempoh Tutup:"
-
-#: ../src/Settings/GalaSettings.vala:81
-msgid "Close Only"
-msgstr "Tutup Sahaja"
-
-#: ../src/Grids/SlingshotGrid.vala:44
-msgid "Columns:"
-msgstr "Lajur:"
-
-#: ../src/Grids/ShortcutsGrid.vala:74
-msgid "Command"
-msgstr "Perintah"
-
-#: ../src/Grids/ShortcutsGrid.vala:136
-msgid "Command:"
-msgstr "Perintah:"
-
-#: ../src/Grids/AppearanceGrid.vala:113
-msgid ""
-"Controls located at the top of the window for close, minimize, and maximize"
-msgstr ""
-
-#: ../src/Grids/PlankGrid.vala:32
-msgid "Current Workspace Only"
-msgstr ""
-
-#: ../src/Grids/AppearanceGrid.vala:81
-msgid "Cursor Theme:"
-msgstr "Tema Kursor:"
-
-#: ../src/Grids/TerminalGrid.vala:83 ../src/Settings/GalaSettings.vala:86
-msgid "Custom"
-msgstr "Suai"
-
-#: ../src/Grids/AppearanceGrid.vala:95
-msgid "Custom Layout:"
-msgstr "Bentangan Suai:"
-
-#: ../src/Grids/AppearanceGrid.vala:96
-msgid "Custom window control layout"
-msgstr ""
-
-#: ../src/Grids/FilesGrid.vala:48
-msgid "Date Format:"
-msgstr "Format Tarikh:"
-
-#: ../src/Grids/FontsGrid.vala:32
-msgid "Default Font:"
-msgstr "Fon Lalai:"
+#: ../src/Tweaks.vala:86
+msgid "Terminal"
+msgstr "Terminal"
 
 #: ../src/Objects/ShortcutObject.vala:58
 #: ../src/Widgets/AcceleratorInputWidget.vala:87
@@ -128,96 +82,115 @@ msgstr "Fon Lalai:"
 msgid "Disabled"
 msgstr "Dilumpuhkan"
 
-#: ../src/Grids/FontsGrid.vala:43
-msgid "Document Font:"
-msgstr "Fon Dokumen:"
+#: ../src/Grids/CerbereGrid.vala:42
+msgid "Watched Processes"
+msgstr "Proses Dipantau"
 
-#: ../src/Grids/PlankGrid.vala:66
-msgid "Don't hide"
-msgstr "Jangan sembunyi"
+#: ../src/Grids/CerbereGrid.vala:53 ../src/Grids/CerbereGrid.vala:63
+#: ../src/Grids/ShortcutsGrid.vala:95 ../src/Grids/ShortcutsGrid.vala:162
+msgid "Add..."
+msgstr "Tambah..."
 
-#: ../src/Grids/ShortcutsGrid.vala:121
-msgid "Every field must be filled!"
-msgstr "Setiap medan mestilah diisi!"
+#: ../src/Grids/CerbereGrid.vala:54 ../src/Grids/CerbereGrid.vala:64
+#: ../src/Grids/ShortcutsGrid.vala:96 ../src/Grids/ShortcutsGrid.vala:163
+msgid "Remove"
+msgstr "Buang"
 
-#: ../src/Tweaks.vala:74
-msgid "Files"
-msgstr "Fail"
+#: ../src/Grids/CerbereGrid.vala:65 ../src/Grids/ShortcutsGrid.vala:164
+msgid "Revert to Default"
+msgstr "Kembali ke Lalai"
 
-#: ../src/Grids/ShadowsGrid.vala:32
-msgid "Focused Windows:"
-msgstr "Tetingkap Difokus:"
+#: ../src/Grids/AnimationsGrid.vala:43
+msgid "Animations:"
+msgstr "Animasi:"
 
-#: ../src/Tweaks.vala:52
-msgid "Fonts"
-msgstr "Fon"
+#: ../src/Grids/AnimationsGrid.vala:44
+msgid "If the animations play at all"
+msgstr "Jika animasi mainkan"
 
-#: ../src/Grids/FilesGrid.vala:49
-msgid "For date accessed, modified, etc."
-msgstr ""
+#: ../src/Grids/AnimationsGrid.vala:60
+msgid "Open Duration:"
+msgstr "Tempoh Buka:"
 
-#: ../src/Grids/AppearanceGrid.vala:57
-#, fuzzy
-msgid "GTK+ Theme:"
-msgstr "Tema:"
+#: ../src/Grids/AnimationsGrid.vala:61
+msgid "Plays when an application is opened"
+msgstr "Main bila aplikasi dibuka"
 
-#: ../src/Grids/AppearanceGrid.vala:35
-msgid "GTK+ windows will now prefer the dark GTK+ theme"
-msgstr ""
+#: ../src/Grids/AnimationsGrid.vala:72
+msgid "Close Duration:"
+msgstr "Tempoh Tutup:"
 
-#: ../src/Tweaks.vala:49 ../src/Tweaks.vala:52 ../src/Tweaks.vala:56
-#: ../src/Tweaks.vala:60 ../src/Tweaks.vala:66
-msgid "General"
-msgstr "Am"
+#: ../src/Grids/AnimationsGrid.vala:73
+msgid "Plays when an application is closed"
+msgstr "Main bila aplikasi ditutup"
 
-#: ../src/Grids/PlankGrid.vala:84
-#, fuzzy
-msgid "Hide Delay (ms):"
-msgstr "Lengahan (dalam ms):"
+#: ../src/Grids/AnimationsGrid.vala:84
+msgid "Snap Duration:"
+msgstr "Tempoh Lekap:"
 
-#: ../src/Grids/PlankGrid.vala:72
-msgid "Hide Mode:"
-msgstr "Mod Sembunyi:"
+#: ../src/Grids/AnimationsGrid.vala:85
+msgid "Plays when an application is snapped to the side"
+msgstr "Main bila aplikasi dilekap ke sisi"
 
-#: ../src/Grids/PlankGrid.vala:69
-msgid "Hide on maximize"
-msgstr "Sembunyi bila dimaksimumkan"
+#: ../src/Grids/AnimationsGrid.vala:96
+msgid "Minimize Duration:"
+msgstr "Tempoh Minimum:"
 
-#: ../src/Grids/TerminalGrid.vala:151
-msgid "How transparent the background of the terminal is"
-msgstr ""
+#: ../src/Grids/AnimationsGrid.vala:97
+msgid "Plays when an application is minimized"
+msgstr "Main bila aplikasi diminimumkan"
+
+#: ../src/Grids/AnimationsGrid.vala:108
+msgid "Workspace Switch Duration:"
+msgstr "Tempoh Tukar Ruang Kerja:"
+
+#: ../src/Grids/AnimationsGrid.vala:109
+msgid "Plays when a workspace switch is initiated"
+msgstr "Main bila ruang kerja bertukar dimulakan"
+
+#: ../src/Grids/FilesGrid.vala:32
+msgid "Single Click:"
+msgstr "Klik Tunggal:"
+
+#: ../src/Grids/FilesGrid.vala:33
+msgid "If set off, files will use 'normal' double-click behavior"
+msgstr "Jika dimatikan, fail akan guna kelakuan dwi-klik biasa"
+
+#: ../src/Grids/FilesGrid.vala:43
+msgid "Locale"
+msgstr "Setempat"
 
 #: ../src/Grids/FilesGrid.vala:44
 msgid "ISO"
 msgstr "ISO"
 
-#: ../src/Grids/PlankGrid.vala:54
-msgid "Icon Size:"
-msgstr "Saiz Ikon:"
-
-#: ../src/Grids/AppearanceGrid.vala:69
-msgid "Icon Theme:"
-msgstr "Tema Ikon:"
-
-#: ../src/Grids/FilesGrid.vala:33
-msgid "If set off, files will use 'normal' double-click behavior"
-msgstr ""
-
-#: ../src/Grids/AnimationsGrid.vala:44
-msgid "If the animations play at all"
-msgstr ""
-
 #: ../src/Grids/FilesGrid.vala:45
 msgid "Informal"
 msgstr "Tak-formal"
 
-#: ../src/Grids/PlankGrid.vala:67
-msgid "Intelligent hide"
-msgstr "Sembunyi pintar"
+#: ../src/Grids/FilesGrid.vala:48
+msgid "Date Format:"
+msgstr "Format Tarikh:"
 
-#: ../src/Grids/PlankGrid.vala:168
-msgid "Item Alignment:"
-msgstr "Jajaran Item:"
+#: ../src/Grids/FilesGrid.vala:49
+msgid "For date accessed, modified, etc."
+msgstr "Untuk tarikh dicapai, diubahsuai, dll."
+
+#: ../src/Grids/FilesGrid.vala:60
+msgid "Smallest"
+msgstr "Terkecil"
+
+#: ../src/Grids/FilesGrid.vala:61
+msgid "Smaller"
+msgstr "Lebih kecil"
+
+#: ../src/Grids/FilesGrid.vala:62
+msgid "Small"
+msgstr "Kecil"
+
+#: ../src/Grids/FilesGrid.vala:63
+msgid "Normal"
+msgstr "Biasa"
 
 #: ../src/Grids/FilesGrid.vala:64
 msgid "Large"
@@ -231,43 +204,134 @@ msgstr "Lebih Besar"
 msgid "Largest"
 msgstr "Terbesar"
 
-#: ../src/Grids/PlankGrid.vala:127 ../src/Grids/PlankGrid.vala:147
-#: ../src/Grids/PlankGrid.vala:164
-msgid "Left"
-msgstr "Kiri"
+#: ../src/Grids/FilesGrid.vala:69
+msgid "Sidebar Icon Size:"
+msgstr "Saiz Ikon Palang Sisi:"
 
-#: ../src/Grids/FilesGrid.vala:43
-msgid "Locale"
-msgstr "Setempat"
+#: ../src/Grids/FilesGrid.vala:70
+msgid "Size of the icons in the sidebar"
+msgstr "Saiz ikon dalam palang sisi"
+
+#: ../src/Grids/FontsGrid.vala:32
+msgid "Default Font:"
+msgstr "Fon Lalai:"
+
+#: ../src/Grids/FontsGrid.vala:33
+msgid "Used by default by most applications"
+msgstr "Digunakan secara lalai oleh kebanyakan aplikasi"
+
+#: ../src/Grids/FontsGrid.vala:43
+msgid "Document Font:"
+msgstr "Fon Dokumen:"
+
+#: ../src/Grids/FontsGrid.vala:44
+msgid "Used when displaying documents, if no other font was chosen"
+msgstr "Digunakan bila memaparkan dokumen, jika tiada fon lain dipilih"
+
+#: ../src/Grids/FontsGrid.vala:54
+msgid "Monospace Font:"
+msgstr "Fon Monospace:"
+
+#: ../src/Grids/FontsGrid.vala:55
+msgid "Used in the terminal, for code, and sometimes for plain text"
+msgstr "Digunakan dalam terminal, untuk kod, dan kadangkala untuk teks biasa"
+
+#: ../src/Grids/FontsGrid.vala:65
+msgid "Titlebar Font:"
+msgstr "Fon Palang Tajuk:"
+
+#: ../src/Grids/FontsGrid.vala:66
+msgid "Used to display window titles"
+msgstr "Digunakan untuk papar tajuk tetingkap"
+
+#: ../src/Grids/SlingshotGrid.vala:32
+msgid "Rows:"
+msgstr "Baris:"
+
+#: ../src/Grids/SlingshotGrid.vala:33
+msgid "The number of rows displayed in Slingshot"
+msgstr "Bilangan baris yang dipapar dalam Slingshot"
+
+#: ../src/Grids/SlingshotGrid.vala:44
+msgid "Columns:"
+msgstr "Lajur:"
+
+#: ../src/Grids/SlingshotGrid.vala:45
+msgid "The number of columns displayed in Slingshot"
+msgstr "Bilangan lajur yang dipapar dalam Slingshot"
+
+#: ../src/Grids/PlankGrid.vala:32
+msgid "Current Workspace Only"
+msgstr "Ruang Kerja Semasa Sahaja"
+
+#: ../src/Grids/PlankGrid.vala:33
+msgid "Show only windows on the current workspace"
+msgstr "Hanya tunjuk tetingkap pada ruang kerja semasa"
+
+#: ../src/Grids/PlankGrid.vala:34
+msgid "Will still show pinned items on different workspaces"
+msgstr "Masih tunjukkan item dicemat pada ruang kerja yang berbeza"
 
 #: ../src/Grids/PlankGrid.vala:43
 msgid "Lock Items:"
 msgstr "Item Dikunci:"
 
-#: ../src/Grids/AppearanceGrid.vala:114
-msgid "May break window controls! May stop working with updates to system!"
+#: ../src/Grids/PlankGrid.vala:44
+msgid "Whether to prevent drag'n'drop actions and lock items on the dock"
 msgstr ""
+"Sama ada hendak halang tindakan seret-dan-lepas dan kunci item pada labuh"
 
-#: ../src/Grids/AppearanceGrid.vala:45
-#, fuzzy
-msgid "Metacity Theme:"
-msgstr "Tema Antaramuka:"
+#: ../src/Grids/PlankGrid.vala:54
+msgid "Icon Size:"
+msgstr "Saiz Ikon:"
 
-#: ../src/Grids/AnimationsGrid.vala:96
-msgid "Minimize Duration:"
-msgstr "Tempoh Minimum:"
+#: ../src/Grids/PlankGrid.vala:55
+msgid "The size of each icon in the plank"
+msgstr "Saiz bagi setiap ikon dalam plank"
 
-#: ../src/Settings/GalaSettings.vala:82
-msgid "Minimize Left"
-msgstr "Minimum Ke Kiri"
+#: ../src/Grids/PlankGrid.vala:66
+msgid "Don't hide"
+msgstr "Jangan sembunyi"
 
-#: ../src/Settings/GalaSettings.vala:83
-msgid "Minimize Right"
-msgstr "Minimum Ke Kanan"
+#: ../src/Grids/PlankGrid.vala:67
+msgid "Intelligent hide"
+msgstr "Sembunyi pintar"
 
-#: ../src/Tweaks.vala:66
-msgid "Miscellaneous"
-msgstr "Pelbagai"
+#: ../src/Grids/PlankGrid.vala:68
+msgid "Auto hide"
+msgstr "Sembunyi sendiri"
+
+#: ../src/Grids/PlankGrid.vala:69
+msgid "Hide on maximize"
+msgstr "Sembunyi bila dimaksimumkan"
+
+#: ../src/Grids/PlankGrid.vala:72
+msgid "Hide Mode:"
+msgstr "Mod Sembunyi:"
+
+#: ../src/Grids/PlankGrid.vala:73
+msgid "Plank's hide mode"
+msgstr "Mod sembunyi Plank"
+
+#: ../src/Grids/PlankGrid.vala:84
+msgid "Hide Delay (ms):"
+msgstr "Lengah Sembunyi (ms):"
+
+#: ../src/Grids/PlankGrid.vala:85
+msgid "Time to wait before unhiding the dock"
+msgstr "Masa menunggu sebelum memunculkan labuh"
+
+#: ../src/Grids/PlankGrid.vala:96 ../src/Grids/TerminalGrid.vala:169
+msgid "Theme:"
+msgstr "Tema:"
+
+#: ../src/Grids/PlankGrid.vala:97
+msgid "Plank's theme for the dock"
+msgstr "Tema Plank untuk labuh"
+
+#: ../src/Grids/PlankGrid.vala:108
+msgid "Primary Monitor"
+msgstr "Monitor Utama"
 
 #: ../src/Grids/PlankGrid.vala:111
 msgid "Monitor %d"
@@ -277,451 +341,235 @@ msgstr "Monitor %d"
 msgid "Monitor:"
 msgstr "Monitor:"
 
-#: ../src/Grids/FontsGrid.vala:54
-msgid "Monospace Font:"
-msgstr "Fon Monospace:"
+#: ../src/Grids/PlankGrid.vala:116
+msgid "The monitor that Plank is displayed on"
+msgstr "Monitor yang mana Plank dipaparkan"
 
-#: ../src/Grids/ShortcutsGrid.vala:72
-msgid "Name"
-msgstr "Nama"
-
-#: ../src/Grids/ShortcutsGrid.vala:130
-msgid "Name:"
-msgstr "Nama:"
-
-#: ../src/Grids/FilesGrid.vala:63
-msgid "Normal"
-msgstr "Biasa"
-
-#: ../src/Settings/GalaSettings.vala:85
-msgid "OS X"
-msgstr "OS X"
-
-#: ../src/Grids/PlankGrid.vala:180
-msgid "Offset:"
-msgstr "Ofset:"
-
-#: ../src/Grids/TerminalGrid.vala:150
-msgid "Opacity:"
-msgstr "Kelegapan:"
-
-#: ../src/Grids/AnimationsGrid.vala:60
-msgid "Open Duration:"
-msgstr "Tempoh Buka:"
-
-#: ../src/Grids/PlankGrid.vala:145
-msgid "Panel"
-msgstr "Panel"
-
-#: ../src/Tweaks.vala:70
-msgid "Plank"
-msgstr "Plank"
-
-#: ../src/Grids/PlankGrid.vala:73
-msgid "Plank's hide mode"
-msgstr ""
-
-#: ../src/Grids/PlankGrid.vala:97
-msgid "Plank's theme for the dock"
-msgstr ""
-
-#: ../src/Grids/AnimationsGrid.vala:109
-msgid "Plays when a workspace switch is initiated"
-msgstr ""
-
-#: ../src/Grids/AnimationsGrid.vala:73
-msgid "Plays when an application is closed"
-msgstr ""
-
-#: ../src/Grids/AnimationsGrid.vala:97
-msgid "Plays when an application is minimized"
-msgstr ""
-
-#: ../src/Grids/AnimationsGrid.vala:61
-msgid "Plays when an application is opened"
-msgstr ""
-
-#: ../src/Grids/AnimationsGrid.vala:85
-msgid "Plays when an application is snapped to the side"
-msgstr ""
-
-#: ../src/Grids/AppearanceGrid.vala:34
-msgid "Prefer Dark Theme:"
-msgstr ""
-
-#: ../src/Grids/PlankGrid.vala:108
-msgid "Primary Monitor"
-msgstr "Monitor Utama"
-
-#: ../src/Grids/CerbereGrid.vala:54 ../src/Grids/CerbereGrid.vala:64
-#: ../src/Grids/ShortcutsGrid.vala:96 ../src/Grids/ShortcutsGrid.vala:163
-msgid "Remove"
-msgstr "Buang"
-
-#: ../src/Grids/CerbereGrid.vala:65 ../src/Grids/ShortcutsGrid.vala:164
-msgid "Revert to Default"
-msgstr "Kembali ke Lalai"
-
-#: ../src/Widgets/TweakWidget.vala:83
-#, fuzzy
-msgid "Revert to default setting"
-msgstr "Kembali ke Lalai"
+#: ../src/Grids/PlankGrid.vala:127 ../src/Grids/PlankGrid.vala:147
+#: ../src/Grids/PlankGrid.vala:164
+msgid "Left"
+msgstr "Kiri"
 
 #: ../src/Grids/PlankGrid.vala:128 ../src/Grids/PlankGrid.vala:146
 #: ../src/Grids/PlankGrid.vala:163
 msgid "Right"
 msgstr "Kanan"
 
-#: ../src/Grids/SlingshotGrid.vala:32
-msgid "Rows:"
-msgstr "Baris:"
+#: ../src/Grids/PlankGrid.vala:129
+msgid "Top"
+msgstr "Atas"
+
+#: ../src/Grids/PlankGrid.vala:130
+msgid "Bottom"
+msgstr "Bawah"
 
 #: ../src/Grids/PlankGrid.vala:133
-#, fuzzy
 msgid "Screen Position:"
-msgstr "Kedudukan:"
+msgstr "Kedudukan Skrin:"
 
-#: ../src/Grids/ShadowsGrid.vala:48
-msgid "Shadow beneath windows that you do not have selected"
-msgstr ""
+#: ../src/Grids/PlankGrid.vala:134
+msgid "Where on the screen Plank is displayed"
+msgstr "Lokasi Plank skrin dipaparkan"
 
-#: ../src/Grids/ShadowsGrid.vala:33
-msgid "Shadow beneath windows that you have currently selected"
-msgstr ""
+#: ../src/Grids/PlankGrid.vala:145
+msgid "Panel"
+msgstr "Panel"
 
-#: ../src/Tweaks.vala:60
-msgid "Shadows"
-msgstr "Bayang"
+#: ../src/Grids/PlankGrid.vala:148 ../src/Grids/PlankGrid.vala:165
+msgid "Centered"
+msgstr "Ditengahkan"
 
-#: ../src/Grids/ShortcutsGrid.vala:73
-msgid "Shortcut"
-msgstr "Pintasan"
+#: ../src/Grids/PlankGrid.vala:151
+msgid "Alignment:"
+msgstr "Jajaran:"
 
-#: ../src/Grids/ShortcutsGrid.vala:133
-msgid "Shortcut:"
-msgstr "Pintasan:"
+#: ../src/Grids/PlankGrid.vala:152
+msgid "The alignment for the dock on the monitor's edge"
+msgstr "Jajaran pada llabuh di pinggir monitor"
 
-#: ../src/Grids/PlankGrid.vala:33
-msgid "Show only windows on the current workspace"
-msgstr ""
+#: ../src/Grids/PlankGrid.vala:168
+msgid "Item Alignment:"
+msgstr "Jajaran Item:"
 
-#: ../src/Grids/FilesGrid.vala:69
-msgid "Sidebar Icon Size:"
-msgstr "Saiz Ikon Palang Sisi:"
+#: ../src/Grids/PlankGrid.vala:169
+msgid "The alignment of the items in this dock if panel-mode is used"
+msgstr "Jajaran item dalam labuh ini jika mod-panel digunakan"
 
-#: ../src/Grids/FilesGrid.vala:32
-msgid "Single Click:"
-msgstr "Klik Tunggal:"
+#: ../src/Grids/PlankGrid.vala:180
+msgid "Offset:"
+msgstr "Ofset:"
 
-#: ../src/Grids/FilesGrid.vala:70
-msgid "Size of the icons in the sidebar"
-msgstr ""
+#: ../src/Grids/PlankGrid.vala:181
+msgid "The offset (in percent) from the alignment point to shift Plank"
+msgstr "Ofset (dalam peratus) dari titik jajaran ke shift Plank"
 
-#: ../src/Tweaks.vala:78
-msgid "Slingshot"
-msgstr "Slingshot"
+#: ../src/Grids/TerminalGrid.vala:83 ../src/Settings/GalaSettings.vala:86
+msgid "Custom"
+msgstr "Suai"
 
-#: ../src/Grids/FilesGrid.vala:62
-msgid "Small"
-msgstr "Kecil"
+#: ../src/Grids/TerminalGrid.vala:150
+msgid "Opacity:"
+msgstr "Kelegapan:"
 
-#: ../src/Grids/FilesGrid.vala:61
-msgid "Smaller"
-msgstr "Lebih kecil"
+#: ../src/Grids/TerminalGrid.vala:151
+msgid "How transparent the background of the terminal is"
+msgstr "Bagaimana kelutsinaran latar belakang terminal"
 
-#: ../src/Grids/FilesGrid.vala:60
-msgid "Smallest"
-msgstr "Terkecil"
+#: ../src/Grids/TerminalGrid.vala:170
+msgid "A set of settings for terminal palette and background color"
+msgstr "Satu set tetapan untuk palet terminal dan warna latar belakang"
 
-#: ../src/Grids/AnimationsGrid.vala:84
-msgid "Snap Duration:"
-msgstr "Tempoh Lekap:"
+#: ../src/Grids/AppearanceGrid.vala:34
+msgid "Prefer Dark Theme:"
+msgstr "Utamakan Tema Gelap:"
+
+#: ../src/Grids/AppearanceGrid.vala:35
+msgid "GTK+ windows will now prefer the dark GTK+ theme"
+msgstr "Tetingkap GTK+ kini akan utamakan tema GTK+ gelap"
 
 #: ../src/Grids/AppearanceGrid.vala:36
 msgid ""
 "Some applications will not react well with this enabled and can look terrible"
 msgstr ""
+"Sesetengah aplikasi tidak akan bertindakbalas dengan baik jika dibenarkan "
+"dan kelihatan teruk"
+
+#: ../src/Grids/AppearanceGrid.vala:45
+msgid "Metacity Theme:"
+msgstr "Tema Metacity:"
+
+#: ../src/Grids/AppearanceGrid.vala:46
+msgid "Used to render windows that do not use GTK+"
+msgstr "Digunakan untuk terap tetingkap yang tidak guna GTK+"
+
+#: ../src/Grids/AppearanceGrid.vala:57
+msgid "GTK+ Theme:"
+msgstr "Tema GTK+:"
+
+#: ../src/Grids/AppearanceGrid.vala:58
+msgid "Used to render GTK+ windows like Switchboard"
+msgstr "Digunakan untuk terap tetingkap GTK+ seperti Switchboard"
+
+#: ../src/Grids/AppearanceGrid.vala:69
+msgid "Icon Theme:"
+msgstr "Tema Ikon:"
+
+#: ../src/Grids/AppearanceGrid.vala:70
+msgid "Used to theme the icon set, including application icons"
+msgstr "Digunakan untuk temakan set ikon, termasuklah ikon aplikasi"
+
+#: ../src/Grids/AppearanceGrid.vala:81
+msgid "Cursor Theme:"
+msgstr "Tema Kursor:"
+
+#: ../src/Grids/AppearanceGrid.vala:82
+msgid "Used to theme the cursor"
+msgstr "Digunakan untuk temakan kursor"
+
+#: ../src/Grids/AppearanceGrid.vala:95
+msgid "Custom Layout:"
+msgstr "Bentangan Suai:"
+
+#: ../src/Grids/AppearanceGrid.vala:96
+msgid "Custom window control layout"
+msgstr "Bentangan kawalan tetingkap suai"
+
+#: ../src/Grids/AppearanceGrid.vala:112
+msgid "Window Controls:"
+msgstr "Kawalan Tetingkap:"
+
+#: ../src/Grids/AppearanceGrid.vala:113
+msgid ""
+"Controls located at the top of the window for close, minimize, and maximize"
+msgstr ""
+"Kawalan berada di bahagian atas tetingkap untuk tutup, minimum, dan maksimum"
+
+#: ../src/Grids/AppearanceGrid.vala:114
+msgid "May break window controls! May stop working with updates to system!"
+msgstr ""
+"Boleh rosakkan kawalan tetingkap! Mungkin berhenti berfungsi dengan "
+"kemaskini sistem!"
+
+#: ../src/Grids/MiscGrid.vala:32
+msgid "Audible Bell:"
+msgstr "Loceng Boleh Dengar:"
 
 #: ../src/Grids/MiscGrid.vala:33
 msgid "Sound that plays when an error has been made"
-msgstr ""
+msgstr "Bunyi yang dimainkan bila ralat telah berlaku"
 
-#: ../src/Tweaks.vala:86
-msgid "Terminal"
-msgstr "Terminal"
+#: ../src/Grids/ShadowsGrid.vala:32
+msgid "Focused Windows:"
+msgstr "Tetingkap Difokus:"
 
-#: ../src/Grids/PlankGrid.vala:152
-msgid "The alignment for the dock on the monitor's edge"
-msgstr ""
-
-#: ../src/Grids/PlankGrid.vala:169
-msgid "The alignment of the items in this dock if panel-mode is used"
-msgstr ""
-
-#: ../src/Grids/PlankGrid.vala:116
-msgid "The monitor that Plank is displayed on"
-msgstr ""
-
-#: ../src/Grids/SlingshotGrid.vala:45
-msgid "The number of columns displayed in Slingshot"
-msgstr ""
-
-#: ../src/Grids/SlingshotGrid.vala:33
-msgid "The number of rows displayed in Slingshot"
-msgstr ""
-
-#: ../src/Grids/PlankGrid.vala:181
-msgid "The offset (in percent) from the alignment point to shift Plank"
-msgstr ""
-
-#: ../src/Grids/PlankGrid.vala:55
-msgid "The size of each icon in the plank"
-msgstr ""
-
-#: ../src/Grids/PlankGrid.vala:96 ../src/Grids/TerminalGrid.vala:169
-msgid "Theme:"
-msgstr "Tema:"
+#: ../src/Grids/ShadowsGrid.vala:33
+msgid "Shadow beneath windows that you have currently selected"
+msgstr "Bayang di bawah tetingkap yang anda pilih buat masa ini"
 
 #: ../src/Grids/ShadowsGrid.vala:34 ../src/Grids/ShadowsGrid.vala:49
 msgid "This may not actually do anything"
-msgstr ""
-
-#: ../src/Grids/PlankGrid.vala:85
-msgid "Time to wait before unhiding the dock"
-msgstr ""
-
-#: ../src/Grids/FontsGrid.vala:65
-#, fuzzy
-msgid "Titlebar Font:"
-msgstr "Fon Tajuk Tetingkap:"
-
-#: ../src/Grids/PlankGrid.vala:129
-msgid "Top"
-msgstr "Atas"
-
-#: ../src/Tweaks.vala:39
-msgid "Tweak elementary OS settings"
-msgstr ""
-
-#: ../src/Tweaks.vala:38
-msgid "Tweaks"
-msgstr ""
+msgstr "Ia mungkin tidak membuat apa-apa"
 
 #: ../src/Grids/ShadowsGrid.vala:47
 msgid "Unfocused Windows:"
 msgstr "Tetingkap Tidak Difokus:"
 
-#: ../src/Grids/FontsGrid.vala:33
-msgid "Used by default by most applications"
-msgstr ""
+#: ../src/Grids/ShadowsGrid.vala:48
+msgid "Shadow beneath windows that you do not have selected"
+msgstr "Bayang di bawah tetingkap yang anda tidak pilih"
 
-#: ../src/Grids/FontsGrid.vala:55
-msgid "Used in the terminal, for code, and sometimes for plain text"
-msgstr ""
+#: ../src/Grids/ShortcutsGrid.vala:72
+msgid "Name"
+msgstr "Nama"
 
-#: ../src/Grids/FontsGrid.vala:66
-msgid "Used to display window titles"
-msgstr ""
+#: ../src/Grids/ShortcutsGrid.vala:73
+msgid "Shortcut"
+msgstr "Pintasan"
 
-#: ../src/Grids/AppearanceGrid.vala:58
-msgid "Used to render GTK+ windows like Switchboard"
-msgstr ""
+#: ../src/Grids/ShortcutsGrid.vala:74
+msgid "Command"
+msgstr "Perintah"
 
-#: ../src/Grids/AppearanceGrid.vala:46
-msgid "Used to render windows that do not use GTK+"
-msgstr ""
+#: ../src/Grids/ShortcutsGrid.vala:121
+msgid "Every field must be filled!"
+msgstr "Setiap medan mestilah diisi!"
 
-#: ../src/Grids/AppearanceGrid.vala:82
-msgid "Used to theme the cursor"
-msgstr ""
+#: ../src/Grids/ShortcutsGrid.vala:130
+msgid "Name:"
+msgstr "Nama:"
 
-#: ../src/Grids/AppearanceGrid.vala:70
-msgid "Used to theme the icon set, including application icons"
-msgstr ""
+#: ../src/Grids/ShortcutsGrid.vala:133
+msgid "Shortcut:"
+msgstr "Pintasan:"
 
-#: ../src/Grids/FontsGrid.vala:44
-msgid "Used when displaying documents, if no other font was chosen"
-msgstr ""
+#: ../src/Grids/ShortcutsGrid.vala:136
+msgid "Command:"
+msgstr "Perintah:"
 
-#: ../src/Grids/CerbereGrid.vala:42
-msgid "Watched Processes"
-msgstr "Proses Dipantau"
+#: ../src/Settings/GalaSettings.vala:80
+msgid "elementary"
+msgstr "elementary"
 
-#: ../src/Grids/PlankGrid.vala:134
-msgid "Where on the screen Plank is displayed"
-msgstr ""
+#: ../src/Settings/GalaSettings.vala:81
+msgid "Close Only"
+msgstr "Tutup Sahaja"
 
-#: ../src/Grids/PlankGrid.vala:44
-msgid "Whether to prevent drag'n'drop actions and lock items on the dock"
-msgstr ""
+#: ../src/Settings/GalaSettings.vala:82
+msgid "Minimize Left"
+msgstr "Minimum Ke Kiri"
 
-#: ../src/Grids/PlankGrid.vala:34
-msgid "Will still show pinned items on different workspaces"
-msgstr ""
-
-#: ../src/Grids/AppearanceGrid.vala:112
-#, fuzzy
-msgid "Window Controls:"
-msgstr "Tunjuk Kawalan Tetingkap:"
+#: ../src/Settings/GalaSettings.vala:83
+msgid "Minimize Right"
+msgstr "Minimum Ke Kanan"
 
 #: ../src/Settings/GalaSettings.vala:84
 msgid "Windows"
 msgstr "Tetingkap"
 
-#: ../src/Grids/AnimationsGrid.vala:108
-msgid "Workspace Switch Duration:"
-msgstr "Tempoh Tukar Ruang Kerja:"
+#: ../src/Settings/GalaSettings.vala:85
+msgid "OS X"
+msgstr "OS X"
 
-#: ../src/Settings/GalaSettings.vala:80
-msgid "elementary"
-msgstr ""
-
-#~ msgid "Auto Hide"
-#~ msgstr "Sembunyi Sendiri"
-
-#~ msgid "Auto Hide:"
-#~ msgstr "Sembunyi Sendiri:"
-
-#~ msgid "Button Layout:"
-#~ msgstr "Bentangan Butang:"
-
-#~ msgid "Curved 1"
-#~ msgstr "Lengkuk 1"
-
-#~ msgid "Curved 2"
-#~ msgstr "Lengkuk 2"
-
-#~ msgid "Curved 3"
-#~ msgstr "Lengkuk 3"
-
-#~ msgid "Custom Font:"
-#~ msgstr "Fon Suai:"
-
-#~ msgid "Double Click Titlebar Action:"
-#~ msgstr "Tindakan Palang Tajuk Dwi-Klik:"
-
-#~ msgid "Edge:"
-#~ msgstr "Pinggir:"
-
-#~ msgid "Flush Left"
-#~ msgstr "Kosong Kiri"
-
-#~ msgid "Flush Right"
-#~ msgstr "Kosong Kanan"
-
-#~ msgid "Focused Dialogs:"
-#~ msgstr "Dialog Difokus:"
-
-#~ msgid "Intellihide"
-#~ msgstr "Sembunyi-Pintar"
-
-#~ msgid "Intellislim"
-#~ msgstr "Intellislim"
-
-#~ msgid "Launcher Text Override:"
-#~ msgstr "Batalkan Teks Pelancar:"
-
-#~ msgid "Launcher:"
-#~ msgstr "Pelancar:"
-
-#~ msgid "Limit Scrollback Lines:"
-#~ msgstr "Had Baris Tatal Balik:"
-
-#~ msgid "Lower Window"
-#~ msgstr "Turunkan Tetingkap"
-
-#~ msgid "Margin:"
-#~ msgstr "Margin:"
-
-#~ msgid "Maximize"
-#~ msgstr "Maksimum"
-
-#~ msgid "Maximize Horizontally"
-#~ msgstr "Maksimumkan secara Mengufuk"
-
-#~ msgid "Maximize Vertically"
-#~ msgstr "Maksimumkan secara Menegak"
-
-#~ msgid "Menu"
-#~ msgstr "Menu"
-
-#~ msgid "Menu:"
-#~ msgstr "Menu:"
-
-#~ msgid "Middle"
-#~ msgstr "Pertengahan"
-
-#~ msgid "Middle Click Titlebar Action:"
-#~ msgstr "Tindakan Palang Tajuk Klik-Tengah:"
-
-#~ msgid "Minimize"
-#~ msgstr "Minimum"
-
-#~ msgid "Natural Scrolling:"
-#~ msgstr "Penatalan Tabii:"
-
-#~ msgid "Never Hide"
-#~ msgstr "Tidak Sesekali Sembunyi"
-
-#~ msgid "Overlay Scrollbars:"
-#~ msgstr "Palang Tajuk Tindihan Atas:"
-
-#~ msgid "Right Click Titlebar Action:"
-#~ msgstr "Tindakan Palang Tajuk Kanan:"
-
-#~ msgid "Search Indicator"
-#~ msgstr "Gelintar Penunjuk"
-
-#~ msgid "Search Indicator Shortcut:"
-#~ msgstr "Pintasan Penunjuk Gelintar:"
-
-#~ msgid "Separate Launcher:"
-#~ msgstr "Pelancar Pisah:"
-
-#~ msgid "Shade"
-#~ msgstr "Lorek"
-
-#~ msgid "Shadows:"
-#~ msgstr "Bayang:"
-
-#~ msgid "Shortcuts"
-#~ msgstr "Pintasan"
-
-#~ msgid "Show Desktop Icon:"
-#~ msgstr "Tunjuk Ikon Desktop:"
-
-#~ msgid "Show Launcher:"
-#~ msgstr "Tunjuk Pelancar:"
-
-#~ msgid "Slanted"
-#~ msgstr "Disendeng"
-
-#~ msgid "Slim Mode:"
-#~ msgstr "Mod Nipis:"
-
-#~ msgid "Slim Wingpanel:"
-#~ msgstr "Wingpanel nipis:"
-
-#~ msgid "Squared"
-#~ msgstr "Dipetak"
-
-#~ msgid "Super Wingpanel"
-#~ msgstr "Super Wingpanel"
-
-#~ msgid "Super Wingpanel:"
-#~ msgstr "Wingpanel Super:"
-
-#~ msgid "Unfocused Dialogs:"
-#~ msgstr "Dialog Tidak Difokus:"
-
-#~ msgid "Unknown Value"
-#~ msgstr "Nilai Tidak Diketahui"
-
-#~ msgid "Window Decoration Theme:"
-#~ msgstr "Tema Hiasan Tetingkap:"
-
-#~ msgid "Wingpanel Slim"
-#~ msgstr "Wingpanel Slim"
-
-#~ msgid "Workspace Overview Icon:"
-#~ msgstr "Ikon Selayang Pandang Ruang Kerja:"
+#: ../src/Widgets/TweakWidget.vala:83
+msgid "Revert to default setting"
+msgstr "Kembali ke tetapan lalai"

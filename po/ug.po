@@ -1,22 +1,21 @@
-# Romanian translation for elementary-community
-# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
-# This file is distributed under the same license as the elementary-community package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# Uyghur translation for elementary-tweaks
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the elementary-tweaks package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: elementary-community\n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: elementary-tweaks\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-28 07:48-0500\n"
-"PO-Revision-Date: 2014-08-19 07:17+0000\n"
-"Last-Translator: Ciprian <ciprian420@gmail.com>\n"
-"Language-Team: Romanian <ro@li.org>\n"
+"PO-Revision-Date: 2015-10-24 12:37+0000\n"
+"Last-Translator: Eltikin <eltikinuyghur@hotmail.com>\n"
+"Language-Team: Uyghur <ug@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-30 08:41+0000\n"
-"X-Generator: Launchpad (build 17176)\n"
-"Language: ro\n"
+"X-Launchpad-Export-Date: 2015-10-25 05:45+0000\n"
+"X-Generator: Launchpad (build 17812)\n"
 
 #: ../src/Tweaks.vala:38
 msgid "Tweaks"
@@ -28,28 +27,28 @@ msgstr ""
 
 #: ../src/Tweaks.vala:49
 msgid "Appearance"
-msgstr "Înfățișare"
+msgstr "قىياپىتى"
 
 #: ../src/Tweaks.vala:49 ../src/Tweaks.vala:52 ../src/Tweaks.vala:56
 #: ../src/Tweaks.vala:60 ../src/Tweaks.vala:66
 msgid "General"
-msgstr ""
+msgstr "ئادەتتە"
 
 #: ../src/Tweaks.vala:52
 msgid "Fonts"
-msgstr ""
+msgstr "خەت نۇسخىسى"
 
 #: ../src/Tweaks.vala:56
 msgid "Animations"
-msgstr "Animații"
+msgstr "جانلاندۇرۇم"
 
 #: ../src/Tweaks.vala:60
 msgid "Shadows"
-msgstr ""
+msgstr "سايە"
 
 #: ../src/Tweaks.vala:66
 msgid "Miscellaneous"
-msgstr ""
+msgstr "باشقىلار"
 
 #: ../src/Tweaks.vala:70
 msgid "Plank"
@@ -58,15 +57,15 @@ msgstr ""
 #: ../src/Tweaks.vala:70 ../src/Tweaks.vala:74 ../src/Tweaks.vala:78
 #: ../src/Tweaks.vala:82 ../src/Tweaks.vala:86
 msgid "Applications"
-msgstr ""
+msgstr "ئەپلەر"
 
 #: ../src/Tweaks.vala:74
 msgid "Files"
-msgstr ""
+msgstr "ھۆججەتلەر"
 
 #: ../src/Tweaks.vala:78
 msgid "Slingshot"
-msgstr ""
+msgstr "Slingshot"
 
 #: ../src/Tweaks.vala:82
 msgid "Cerbere"
@@ -74,13 +73,13 @@ msgstr ""
 
 #: ../src/Tweaks.vala:86
 msgid "Terminal"
-msgstr ""
+msgstr "تېرمىنال"
 
 #: ../src/Objects/ShortcutObject.vala:58
 #: ../src/Widgets/AcceleratorInputWidget.vala:87
 #: ../src/Widgets/AcceleratorInputWidget.vala:105
 msgid "Disabled"
-msgstr ""
+msgstr "چەكلەنگەن"
 
 #: ../src/Grids/CerbereGrid.vala:42
 msgid "Watched Processes"
@@ -89,16 +88,16 @@ msgstr ""
 #: ../src/Grids/CerbereGrid.vala:53 ../src/Grids/CerbereGrid.vala:63
 #: ../src/Grids/ShortcutsGrid.vala:95 ../src/Grids/ShortcutsGrid.vala:162
 msgid "Add..."
-msgstr ""
+msgstr "قوش…"
 
 #: ../src/Grids/CerbereGrid.vala:54 ../src/Grids/CerbereGrid.vala:64
 #: ../src/Grids/ShortcutsGrid.vala:96 ../src/Grids/ShortcutsGrid.vala:163
 msgid "Remove"
-msgstr ""
+msgstr "ئۆچۈر"
 
 #: ../src/Grids/CerbereGrid.vala:65 ../src/Grids/ShortcutsGrid.vala:164
 msgid "Revert to Default"
-msgstr ""
+msgstr "كۆڭۈلدىكىگە ئۆزگەرتىش"
 
 #: ../src/Grids/AnimationsGrid.vala:43
 msgid "Animations:"
@@ -158,11 +157,11 @@ msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:43
 msgid "Locale"
-msgstr ""
+msgstr "رايون"
 
 #: ../src/Grids/FilesGrid.vala:44
 msgid "ISO"
-msgstr ""
+msgstr "ISO"
 
 #: ../src/Grids/FilesGrid.vala:45
 msgid "Informal"
@@ -178,27 +177,27 @@ msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:60
 msgid "Smallest"
-msgstr ""
+msgstr "ئەڭ كىچىك"
 
 #: ../src/Grids/FilesGrid.vala:61
 msgid "Smaller"
-msgstr ""
+msgstr "كىچىكرەك"
 
 #: ../src/Grids/FilesGrid.vala:62
 msgid "Small"
-msgstr ""
+msgstr "كىچىك"
 
 #: ../src/Grids/FilesGrid.vala:63
 msgid "Normal"
-msgstr ""
+msgstr "نورمال"
 
 #: ../src/Grids/FilesGrid.vala:64
 msgid "Large"
-msgstr ""
+msgstr "چوڭ"
 
 #: ../src/Grids/FilesGrid.vala:65
 msgid "Larger"
-msgstr ""
+msgstr "چوڭراق"
 
 #: ../src/Grids/FilesGrid.vala:66
 msgid "Largest"
@@ -246,7 +245,7 @@ msgstr ""
 
 #: ../src/Grids/SlingshotGrid.vala:32
 msgid "Rows:"
-msgstr ""
+msgstr "قۇر:"
 
 #: ../src/Grids/SlingshotGrid.vala:33
 msgid "The number of rows displayed in Slingshot"
@@ -254,7 +253,7 @@ msgstr ""
 
 #: ../src/Grids/SlingshotGrid.vala:44
 msgid "Columns:"
-msgstr ""
+msgstr "ئىستون:"
 
 #: ../src/Grids/SlingshotGrid.vala:45
 msgid "The number of columns displayed in Slingshot"
@@ -298,7 +297,7 @@ msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:68
 msgid "Auto hide"
-msgstr ""
+msgstr "ئۆزلۈكىدىن يوشۇر"
 
 #: ../src/Grids/PlankGrid.vala:69
 msgid "Hide on maximize"
@@ -322,7 +321,7 @@ msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:96 ../src/Grids/TerminalGrid.vala:169
 msgid "Theme:"
-msgstr ""
+msgstr "ئۆرنەك:"
 
 #: ../src/Grids/PlankGrid.vala:97
 msgid "Plank's theme for the dock"
@@ -347,20 +346,20 @@ msgstr ""
 #: ../src/Grids/PlankGrid.vala:127 ../src/Grids/PlankGrid.vala:147
 #: ../src/Grids/PlankGrid.vala:164
 msgid "Left"
-msgstr ""
+msgstr "سول"
 
 #: ../src/Grids/PlankGrid.vala:128 ../src/Grids/PlankGrid.vala:146
 #: ../src/Grids/PlankGrid.vala:163
 msgid "Right"
-msgstr "Dreapta"
+msgstr "ئوڭ"
 
 #: ../src/Grids/PlankGrid.vala:129
 msgid "Top"
-msgstr ""
+msgstr "ئۈستى"
 
 #: ../src/Grids/PlankGrid.vala:130
 msgid "Bottom"
-msgstr ""
+msgstr "ئاستى"
 
 #: ../src/Grids/PlankGrid.vala:133
 msgid "Screen Position:"
@@ -372,15 +371,15 @@ msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:145
 msgid "Panel"
-msgstr ""
+msgstr "تاختا"
 
 #: ../src/Grids/PlankGrid.vala:148 ../src/Grids/PlankGrid.vala:165
 msgid "Centered"
-msgstr ""
+msgstr "ئوتتۇرىدا"
 
 #: ../src/Grids/PlankGrid.vala:151
 msgid "Alignment:"
-msgstr ""
+msgstr "توغرىلاش:"
 
 #: ../src/Grids/PlankGrid.vala:152
 msgid "The alignment for the dock on the monitor's edge"
@@ -396,7 +395,7 @@ msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:180
 msgid "Offset:"
-msgstr ""
+msgstr "ئېغىش:"
 
 #: ../src/Grids/PlankGrid.vala:181
 msgid "The offset (in percent) from the alignment point to shift Plank"
@@ -404,11 +403,11 @@ msgstr ""
 
 #: ../src/Grids/TerminalGrid.vala:83 ../src/Settings/GalaSettings.vala:86
 msgid "Custom"
-msgstr ""
+msgstr "ئىختىيارى…"
 
 #: ../src/Grids/TerminalGrid.vala:150
 msgid "Opacity:"
-msgstr ""
+msgstr "غۇۋالىقى:"
 
 #: ../src/Grids/TerminalGrid.vala:151
 msgid "How transparent the background of the terminal is"
@@ -514,15 +513,15 @@ msgstr ""
 
 #: ../src/Grids/ShortcutsGrid.vala:72
 msgid "Name"
-msgstr ""
+msgstr "ئاتى"
 
 #: ../src/Grids/ShortcutsGrid.vala:73
 msgid "Shortcut"
-msgstr ""
+msgstr "تېزلەتمە"
 
 #: ../src/Grids/ShortcutsGrid.vala:74
 msgid "Command"
-msgstr ""
+msgstr "بۇيرۇق"
 
 #: ../src/Grids/ShortcutsGrid.vala:121
 msgid "Every field must be filled!"
@@ -530,15 +529,15 @@ msgstr ""
 
 #: ../src/Grids/ShortcutsGrid.vala:130
 msgid "Name:"
-msgstr ""
+msgstr "ئاتى:"
 
 #: ../src/Grids/ShortcutsGrid.vala:133
 msgid "Shortcut:"
-msgstr ""
+msgstr "تېزلەتمە:"
 
 #: ../src/Grids/ShortcutsGrid.vala:136
 msgid "Command:"
-msgstr ""
+msgstr "بۇيرۇق:"
 
 #: ../src/Settings/GalaSettings.vala:80
 msgid "elementary"
@@ -558,7 +557,7 @@ msgstr ""
 
 #: ../src/Settings/GalaSettings.vala:84
 msgid "Windows"
-msgstr "Ferestre"
+msgstr "كۆزنەكلەر"
 
 #: ../src/Settings/GalaSettings.vala:85
 msgid "OS X"
