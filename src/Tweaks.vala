@@ -28,10 +28,12 @@ namespace ElementaryTweaks {
         private Gtk.Notebook tweak_content;
         private Gee.HashMap<string, Granite.Widgets.SourceList.ExpandableItem> categories;
         private Gee.HashMap<Granite.Widgets.SourceList.Item, int> page_lookup;
-        
-        private Gtk.InfoBar infobar ; 
+
+        private Gtk.InfoBar infobar ;
         private Gtk.Label info_label ;
         private Gtk.Grid content_grid  ;
+
+        public Gtk.Widget current_grid { get ; private set ; }
         /**
          * Creates a new Tweak Plug
          */
@@ -47,7 +49,7 @@ namespace ElementaryTweaks {
             // TODO: there might be a better way of doing this.
             get_widget();
 
-            create_infobar () ;
+            // create_infobar () ;
             // add all the tweaks
 
             // Appearance Tweaks; make sure to select as default page on open
@@ -72,7 +74,7 @@ namespace ElementaryTweaks {
 
             // eGtk theme tweaks
             add_tweak_page (new EgtkThemeGrid (this), _("Theme"), _("General"), "applications-graphics");
-            
+
             // Plank Tweaks
             if (file_exists("/plank/dock1/settings"))
                 add_tweak_page (new PlankGrid (), _("Plank"), _("Applications"), "plank");
@@ -99,35 +101,41 @@ namespace ElementaryTweaks {
 
         private void create_infobar () {
             infobar = new Gtk.InfoBar ();
-            //infobar.margin_top = 16 ; 
-            // infobar.margin_bottom = 16 ; 
+            //infobar.margin_top = 16 ;
+            // infobar.margin_bottom = 16 ;
             infobar.message_type = Gtk.MessageType.INFO;
             //infobar.halign = Gtk.Align.CENTER ;
             // main_grid.attach (infobar, 0, 1, 1, 1);
             var content = infobar.get_content_area () as Gtk.Container;
             info_label = new Gtk.Label (_("You need to log out and log in to see the changes"));
             content.add (info_label);
+            // infobar.no_show_all = true;
+            infobar.hide () ;
         }
-        
+
         /**
-         * Show the info using a info displayed at the top of the screen 
-         */ 
+         * Show the info using a info displayed at the top of the screen
+         */
         public void show_info_bar (string text) {
+            message ("SHOW: %s", text) ;
             info_label.set_text (text) ;
             //infobar.no_show_all = false;
-            infobar.show_all ();
+            //infobar.visible = true ;
+            infobar.show ();
         }
-        
+
         /**
-         * Hide the info bar 
+         * Hide the info bar
          */
         public void hide_info_bar () {
+            message ("HIDE") ;
             //infobar.no_show_all = true;
+            //infobar.visible = false ;
             infobar.hide ();
         }
-        
+
         /**
-         * Displays the error message in a dialog box 
+         * Displays the error message in a dialog box
          */
         public void display_error (string message) {
             var dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL,
@@ -138,7 +146,7 @@ namespace ElementaryTweaks {
             });
             dialog.run ();
         }
-        
+
         /**
          * Returns the navigation sidebar, which will control which page that the
          * content_area will render.
@@ -168,22 +176,26 @@ namespace ElementaryTweaks {
                             /*var grid = new Gtk.Grid ();
             grid.column_spacing = 12;
             grid.row_spacing = 6; */
-            
-                content_grid =  new Gtk.Grid (); 
+
+                content_grid =  new Gtk.Grid ();
                 content_grid.hexpand = false;
-                
+
                 tweak_content = new Gtk.Notebook ();
                 tweak_content.set_margin_top (0);
                 tweak_content.show_tabs = false;
                 tweak_content.get_style_context ().add_class ("content-view");
                 //tweak_content.width_request = 500;
 
-                create_infobar () ; 
-                
+                create_infobar () ;
+
                 content_grid.attach (infobar, 0, 0, 1, 1 ) ;
-                content_grid.attach (tweak_content, 0, 1, 1, 1 ) ; 
-                hide_info_bar () ;
+                content_grid.attach (tweak_content, 0, 1, 1, 1 ) ;
                 content_grid.show_all () ;
+                content_grid.no_show_all = true ;
+                // hide_info_bar () ;
+                // content_grid.show_all () ;
+                // content_grid.no_show_all = true ;
+
                 // TODO: actually load something in here
             }
 
@@ -224,6 +236,7 @@ namespace ElementaryTweaks {
 
                 // render out the main_view
                 main_view.show_all ();
+                // content_grid.show () ;
             }
 
             return main_view;
@@ -269,7 +282,9 @@ namespace ElementaryTweaks {
          */
         private void selected (Granite.Widgets.SourceList.Item? item) {
             if (item != null && page_lookup.has_key (item)) {
-                tweak_content.page = page_lookup.get (item);
+                var current_item = page_lookup.get (item);
+                tweak_content.page = current_item;
+                current_grid = tweak_content.get_nth_page (current_item) ;
             }
         }
 

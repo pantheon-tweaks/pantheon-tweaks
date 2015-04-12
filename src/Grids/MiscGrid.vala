@@ -38,6 +38,16 @@ namespace ElementaryTweaks {
                     );
             this.add (audible_bell);
 
+            /*var ctrl_space_enabled = new TweakWidget.with_switch (
+                        _("Ctrl+Space to switch keyboard:"),
+                        _("Ctrl+Space is mapped to keyboard switching"),
+                        null,
+                        (() => { return IbusSettings.get_default ().audible_bell; }), // get
+                        ((val) => { WindowSettings.get_default ().audible_bell = val; }), // set
+                        (() => { WindowSettings.get_default ().schema.reset ("audible-bell"); }) // reset
+                    );
+            this.add (audible_bell);*/
+
             /*
             var dbl_click_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
             var dbl_click = new Gtk.ComboBoxText ();

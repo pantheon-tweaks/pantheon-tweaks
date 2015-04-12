@@ -13,7 +13,7 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * 
+ *
  * Authors
  *   - PerfectCarl <name.is.carl@gmail.com>
  *
@@ -24,18 +24,20 @@ namespace ElementaryTweaks {
     public class EgtkThemeGrid : Gtk.Grid
     {
         private TweakWidget width_button  ;
-        private TweakWidget etgk_switch ;         
+        private TweakWidget etgk_switch ;
         private TweakWidget rounded_switch ;
-        private LockButtonTweakWidget unlock_button ; 
+        private LockButtonTweakWidget unlock_button ;
         private ColorComboboxTweakWidget tab_combox ;
-        //private Gtk.InfoBar infobar ; 
+        //private Gtk.InfoBar infobar ;
         //private Gtk.Label info_label ;
         private bool is_unlocked = false ;
-        private Permission permission ; 
-        private bool old_enabled_value = false ; 
-        
+        private Permission permission ;
+        private bool old_enabled_value = false ;
+
+        private EgtkThemeGrid instance ;
+
 /*
-ON TERMINAL 
+ON TERMINAL
 
 ENV : SUDO_GID=1000
 ENV : MAIL=/var/mail/root
@@ -67,24 +69,26 @@ ENV : LC_PAPER=fr_FR.UTF-8
 */
 
         protected TweaksPlug plug ;
-        public EgtkThemeGrid (TweaksPlug plug)
+
+        public EgtkThemeGrid (TweaksPlug parent_plug)
         {
-            this.plug = plug ; 
+            this.plug = parent_plug ;
             // setup grid so that it aligns everything properly
             this.set_orientation (Gtk.Orientation.VERTICAL);
             //this.margin_top = 24;
             this.row_spacing = 6;
             this.halign = Gtk.Align.CENTER;
-            
+            this.instance = this ;
+
             permission = create_permission () ;
             unlock_button = new LockButtonTweakWidget(
                         _("Please, pretty please, Unlock me"),
                         _("Changing the default theme requires adminstrator rights"),
-                        ((unlocked) => { 
+                        ((unlocked) => {
                             is_unlocked = unlocked;
                             update_widget_state () ;
                             }), // set
-                        permission 
+                        permission
                     );
             unlock_button.margin_bottom = 16 ;
             unlock_button.margin_top = 24;
@@ -94,41 +98,39 @@ ENV : LC_PAPER=fr_FR.UTF-8
                         _("Enable theme modifications:"),
                         _("If the default theme is changed with values below. When a new version of egtk is intalled, those values are automatically applied"),
                         null,
-                        (() => { 
-                            return EgtkThemeSettings.get_default ().enable_egtk_patch; 
+                        (() => {
+                            return EgtkThemeSettings.get_default ().enable_egtk_patch;
                         }), // get
                         ((val) => {
                             enable_changes (val) ;
                             width_button.sensitive = val;
                             rounded_switch.sensitive = val;
-                            if (!val) 
-                                hide_info_bar () ;
                             EgtkThemeSettings.get_default ().enable_egtk_patch = val;
                             update_widget_state () ;
                         }), // set
-                        (() => { 
-                            EgtkThemeSettings.get_default ().schema.reset ("enable_egtk_patch"); 
+                        (() => {
+                            EgtkThemeSettings.get_default ().schema.reset ("enable_egtk_patch");
                         }) // reset
                     );
             this.add (etgk_switch);
-            
+
             // separator to try to make it obvious that the toggle button controls the entire block beneath
             this.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
-            
+
             // Scrollbar width
             width_button = new TweakWidget.with_spin_button (
                         _("Scrollbar Width:"),
                         _("How wide the scrollbars are"),
                         null,
-                        (() => { 
-                            return EgtkThemeSettings.get_default ().scrollbar_width ; 
+                        (() => {
+                            return EgtkThemeSettings.get_default ().scrollbar_width ;
                         }), // get
-                        ((val) => { 
-                            EgtkThemeSettings.get_default ().scrollbar_width = val; 
+                        ((val) => {
+                            EgtkThemeSettings.get_default ().scrollbar_width = val;
                             apply_changes () ;
                             }), // set
-                        (() => { 
-                            EgtkThemeSettings.get_default ().schema.reset ("scrollbar-width"); 
+                        (() => {
+                            EgtkThemeSettings.get_default ().schema.reset ("scrollbar-width");
                         }), // reset
                         0, 100, 1
                     );
@@ -138,30 +140,30 @@ ENV : LC_PAPER=fr_FR.UTF-8
                         _("Scrollbar Button Radius:"),
                         _("Radius of the edges of the scrollbar button. Set it to 0 to make it square"),
                         null,
-                        (() => { 
+                        (() => {
                             return EgtkThemeSettings.get_default ().scrollbar_button_radius; }), // get
                         ((val) => {
                             EgtkThemeSettings.get_default ().scrollbar_button_radius = val;
                             apply_changes () ;
                             }), // set
-                        (() => { 
-                            EgtkThemeSettings.get_default ().schema.reset ("scrollbar-button-radius"); 
+                        (() => {
+                            EgtkThemeSettings.get_default ().schema.reset ("scrollbar-button-radius");
                             apply_changes () ;
                         }), // reset
                         0, 100, 1
                     );
             this.add (rounded_switch);
 
-            var tab_combox_values = create_combox_values () ; 
+            var tab_combox_values = create_combox_values () ;
             tab_combox = new ColorComboboxTweakWidget (
                         _("Active dark tab underline:"), // name
                         _("The color for the active tab in the dark egtk theme (used in the terminal for example)"), // tooltip
                         null, // warning
-                        (() => { 
-                                return EgtkThemeSettings.get_default ().active_tab_underline_color; 
+                        (() => {
+                                return EgtkThemeSettings.get_default ().active_tab_underline_color;
                         }), // get
                         ((val) => {
-                                if( val == "custom" ) 
+                                if( val == "custom" )
                                 {
                                     pick_color () ;
                                 }
@@ -173,56 +175,56 @@ ENV : LC_PAPER=fr_FR.UTF-8
                             }), // set
                         (() => {
                                 var schema = EgtkThemeSettings.get_default ().schema ;
-                                
+
                                 schema.reset ("active-tab-underline-values");
                                 tab_combox.init_combox_values (create_combox_values ()) ;
-                                
+
                                 schema.reset ("active-tab-underline-color");
-                                
+
                             }), // reset
                             tab_combox_values
-                    );     
+                    );
             this.add (tab_combox);
 
             // Update the depending controls
             update_widget_state () ;
             hide_info_bar () ;
-            
+
             if (InterfaceSettings.get_default ().gtk_theme != "elementary") {
                 show_info_bar (_("You are using a custom Gtk theme. Only the elementary theme will be changed.")) ;
             }
         }
-        
+
         private void update_widget_state () {
-            
+
             var enable_egtk_patch =  EgtkThemeSettings.get_default ().enable_egtk_patch ;
-            
+
             etgk_switch.sensitive = is_unlocked ;
             var enabled = is_unlocked && enable_egtk_patch ;
             width_button.sensitive = enabled;
             rounded_switch.sensitive = enabled;
             tab_combox.sensitive = enabled;
         }
-        
+
         private Gee.HashMap<string, string> create_combox_values () {
             var tab_colors_map = new Gee.HashMap<string, string> ();
             tab_colors_map.set ("default", _("Default"));
             // Add variable colors
             var color_descs = EgtkThemeSettings.get_default ().active_tab_underline_values.split (";") ;
-            foreach ( var desc in color_descs) 
+            foreach ( var desc in color_descs)
             {
-                var values= desc.split (":") ; 
-                var color_code=values[0] ; 
+                var values= desc.split (":") ;
+                var color_code=values[0] ;
                 if( color_code != null )
                 {
                     color_code=color_code.strip () ;
-                    if( color_code != "" ) 
+                    if( color_code != "" )
                     {
-                        var color_name=color_code ; 
+                        var color_name=color_code ;
                         if (values.length >1) {
                             var text = values[1] ;
                             if( text != null)
-                                text = _(text.strip ()) ; 
+                                text = _(text.strip ()) ;
                             color_name= text;
                         }
                         tab_colors_map.set (color_code, color_name);
@@ -232,12 +234,12 @@ ENV : LC_PAPER=fr_FR.UTF-8
             tab_colors_map.set ("custom", _("Custom"));
             return tab_colors_map ;
         }
-            
+
         private void pick_color () {
             string color = "" ;
             var dialog = new Gtk.ColorChooserDialog (_("Select a color"), null);
             if (dialog.run () == Gtk.ResponseType.OK) {
-                
+
                 color = to_hex(dialog.rgba);
             }
             dialog.close ();
@@ -248,20 +250,22 @@ ENV : LC_PAPER=fr_FR.UTF-8
                 settings.active_tab_underline_values += " ; " + color ;
             }
         }
-        
+
         private string to_hex (Gdk.RGBA color) {
-            return "#%02X%02X%02X".printf( (uint8)(Math.floor (255*color.red)), 
+            return "#%02X%02X%02X".printf( (uint8)(Math.floor (255*color.red)),
                 (uint8)(Math.floor (255*color.green)), (uint8)(Math.floor (255*color.blue))) ;
         }
         private void apply_changes () {
             if(  EgtkThemeSettings.get_default ().enable_egtk_patch )
                 show_info_bar () ;
-            else 
+            else
                 hide_info_bar () ;
-                
-            execute_theme_patching_sync () ;
+
+            // execute_theme_patching_sync () ;
+            execute_theme_patching_async () ;
+
         }
-        
+
         private Polkit.Permission? create_permission () {
             string filename = "org.pantheon.elementary-tweaks.egtk" ;
             try {
@@ -276,74 +280,74 @@ ENV : LC_PAPER=fr_FR.UTF-8
         private void report_error (string message) {
             plug.display_error ("Elementary-tweaks (EgtkThemeGrid): %s".printf (message) ) ;
         }
-        
-        private void enable_changes ( bool enabled ) 
+
+        private void enable_changes ( bool enabled )
         {
-            if (enabled != old_enabled_value) 
+            if (enabled != old_enabled_value)
                 show_info_bar () ;
-        }   
-        
+        }
+
         private void show_info_bar (string text=_("You need to log out and log in to see the changes")) {
             /*info_label.set_text (text) ;
             infobar.no_show_all = false;
             infobar.show_all ();*/
             plug.show_info_bar (text) ;
         }
-        
+
         private void hide_info_bar () {
             /*infobar.no_show_all = true;
             infobar.hide ();*/
             plug.hide_info_bar () ;
         }
-        
+
         private void execute_theme_patching_sync () {
-            
+
             if (permission.allowed ) {
                 var settings = EgtkThemeSettings.get_default () ;
-                
+
                 string output;
                 string error;
                 int status;
                 var cli = "%s/theme-patcher".printf (Build.PKGDATADIR);
                 try {
-                    
-                    Process.spawn_sync (null, 
-                        {   "pkexec", cli, 
+
+                    Process.spawn_sync (null,
+                        {   "pkexec", cli,
                             settings.enable_egtk_patch.to_string (),
-                            settings.scrollbar_width.to_string (), 
-                            settings.scrollbar_button_radius.to_string (), 
-                            settings.active_tab_underline_color 
-                        }, 
+                            settings.scrollbar_width.to_string (),
+                            settings.scrollbar_button_radius.to_string (),
+                            settings.active_tab_underline_color
+                        },
                         Environ.get (),
                         SpawnFlags.SEARCH_PATH,
                         null,
                         out output,
                         out error,
                         out status);
-                
+
                 } catch (Error e) {
                     report_error ("error while executing '%s'. Message: '%s'. Output: '%s', Error: '%s'".printf (cli, e.message, output, error)) ;
                 }
             }
         }
         private void execute_theme_patching_async () {
-            
+
             if (permission.allowed ) {
                 var settings = EgtkThemeSettings.get_default () ;
-                
+
                 Pid child_pid;
                 var cli = "%s/theme-patcher".printf (Build.PKGDATADIR);
                 try {
-                                        
-                    Process.spawn_async (null, 
-                        {   "pkexec", cli, 
+
+                    Process.spawn_async (null,
+                        {   "pkexec", cli,
                             settings.enable_egtk_patch.to_string (),
-                            settings.scrollbar_width.to_string (), 
-                            settings.scrollbar_button_radius.to_string (), 
-                            settings.active_tab_underline_color 
-                        }, 
+                            settings.scrollbar_width.to_string (),
+                            settings.scrollbar_button_radius.to_string (),
+                            settings.active_tab_underline_color
+                        },
                         Environ.get (),
-                        SpawnFlags.SEARCH_PATH,
+                        SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD,
                         null,
                         out child_pid);
                     // FIXME doesn't execute ouput: Refusing to render service to dead parents.

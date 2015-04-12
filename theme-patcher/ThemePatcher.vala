@@ -16,28 +16,29 @@
  *
  * Authors
  *   - PerfectCarl <name.is.carl@gmail.com>
- * 
+ *
  */
 
 namespace ElementaryTweaks {
     static string log_string  ;
-    static const bool logged_to_file = true ;  
-    
+    static const bool logged_to_file = false ;
+    static const bool logged_to_console = false ;
+
     int main (string[] args)
     {
         log_string  = "" ;
-        add_log ("Theme patcher") ; 
-        
+        add_log ("Theme patcher") ;
+
 
         var program_name = args[0] ;
         try{
-                            
+
             bool enable_egtk_patch = false;
             int scrollbar_width = 0 ;
             int scrollbar_button_radius = 0 ;
             string  active_tab_underline_color = "";
-            
-            // This is regular update 
+
+            // This is regular update
             if( args.length == 1 )
             {
                 //add_error ("The application expect 4 arguments: enable_egtk_patch scrollbar_width scrollbar_button_radius active_tab_underline_color") ;
@@ -46,7 +47,7 @@ namespace ElementaryTweaks {
                 log_environment ()  ;
                 add_log ( "Reading settings (argument count: %d)".printf (args.length)) ;
                 var settings = EgtkThemeSettings.load_from_file () ;
-                
+
                 enable_egtk_patch = settings.enable_egtk_patch ;
                 scrollbar_width = settings.scrollbar_width ;
                 scrollbar_button_radius = settings.scrollbar_button_radius ;
@@ -62,29 +63,29 @@ namespace ElementaryTweaks {
             }
 
             var patcher = new EgtkThemePatcher () ;
-            if( !enable_egtk_patch) 
+            if( !enable_egtk_patch)
             {
                 add_log ("Resetting the theme to default values") ;
-                
+
                 patcher.patch_scrollbar () ;
                 patcher.patch_current_tab_underline_dark () ;
             }
             else
             {
                 var message = "  . width: %d, radius: %d, tab color: %s".printf (
-                    scrollbar_width, 
+                    scrollbar_width,
                     scrollbar_button_radius,
                     active_tab_underline_color) ;
-                    
+
                 add_log (message) ;
-                
+
                 patcher.patch_scrollbar (scrollbar_width, scrollbar_button_radius) ;
                 patcher.patch_current_tab_underline_dark (active_tab_underline_color) ;
             }
-            
+
             add_log ("Patching done.");
             save_log () ;
-        } catch (ThemeError error ) 
+        } catch (ThemeError error )
         {
             add_error ("[%s] Error while trying to patch Egtk theme: '%s'\n".printf (program_name, error.message)) ;
             save_log () ;
@@ -93,17 +94,18 @@ namespace ElementaryTweaks {
 
         return 0 ;
     }
-    
+
     private void log_environment () {
         var strings = Environ.@get () ;
-        foreach ( var str in strings ) 
+        foreach ( var str in strings )
         {
             add_log ("ENV : "+ str ) ;
         }
     }
-    
+
     private static void add_log (string text) {
-        stdout.printf ("%s\n", text) ;
+        if( logged_to_console )
+            stdout.printf ("%s\n", text) ;
         if( logged_to_file ) {
             var now = new DateTime.now_local ();
             log_string += "(%s) %s\n".printf (now.to_string (), text) ;
@@ -119,24 +121,24 @@ namespace ElementaryTweaks {
     }
 
     private static void save_log () {
-        if( !logged_to_file ) 
-            return ; 
-            
-        var filename = "/tmp/theme-patcher-%lld.log".printf( new DateTime.now_local ().to_unix() ) ; 
+        if( !logged_to_file )
+            return ;
+
+        var filename = "/tmp/theme-patcher-%lld.log".printf( new DateTime.now_local ().to_unix() ) ;
         try {
             var file = File.new_for_path (filename ) ;
-            if (file.query_exists () ) 
+            if (file.query_exists () )
             {
-                string content = "" ; 
+                string content = "" ;
                 FileUtils.get_contents (filename, out content);
-                log_string +=  "--------------------\n" + content ; 
+                log_string +=  "--------------------\n" + content ;
             }
             FileUtils.set_contents (filename, log_string);
         }
-        catch (Error e ) 
+        catch (Error e )
         {
             critical ("Can't write to file '%s'. Error: %s", filename, e.message ) ;
         }
     }
-    
+
 }

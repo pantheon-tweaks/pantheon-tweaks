@@ -1,12 +1,12 @@
-elementary-tweaks (0.3) precise; urgency=low
+elementary-tweaks (0.3) trusty; urgency=low
 
-  * Add theme customization 
-  * Update plank options 
+  * Add theme customization
+  * Update plank options
   * Update terminal options
   * Misc UI fixes
 
  -- Carl P. <name.is.carl@gmail.com>  Wed, 20 Aug 2014 11:00:00 -0500
- 
+
 elementary-tweaks (0.2) precise; urgency=low
 
   * Freya release

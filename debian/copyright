@@ -1,9 +1,9 @@
 This work was packaged for Debian by:
 
-    Michael P. Starkweather <mpstark@gmail.com>  Wed, 20 Aug 2014 11:00:00 -0500
+    Carl P. and Michael P. Starkweather <mpstark@gmail.com>  Wed, 20 Aug 2014 11:00:00 -0500
 
 Upstream Author(s):
-
+    Carl P. <name.is.carl@gmail.com>
     Michael P. Starkweather <mpstark@gmail.com>
     Michael "Versable" <versable@gmail.com>
 
@@ -31,6 +31,6 @@ Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
 
 The Debian packaging is:
 
-    Copyright (C) 2014 Michael P. Starkweather <mpstark@gmail.com>
+    Copyright (C) 2014 Carl P. and Michael P. Starkweather <mpstark@gmail.com>
 
 and is licensed under the GPL version 3, see above.
