@@ -1,0 +1,37 @@
+Source: elementary-tweaks
+Section: x11
+Priority: optional
+Maintainer: Michael P. Starkweather <mpstark@gmail.com>
+Build-Depends: cmake (>= 2.8),
+               debhelper (>= 9),
+               libgranite-dev,
+               libgtk-3-dev (>= 3.10),
+               libglib2.0-dev,
+               libgee-0.8-dev,
+               libgconf2-dev,
+               libswitchboard-2.0-dev,
+               libpolkit-gobject-1-dev,
+               valac (>= 0.22)
+Standards-Version: 3.9.5
+Homepage: https://launchpad.net/elementarytweak
+
+Package: elementary-tweaks
+Architecture: any
+Depends: gala, plank, slingshot-launcher, ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends: dpkg (>= 1.15.6)
+Recommends: plank
+Enhances: switchboard
+Description: Change hidden desktop settings
+ Switchboard plug for controlling hidden options.
+
+Package: elementary-tweaks-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: elementary-tweak (= ${binary:Version}), ${misc:Depends}
+Pre-Depends: dpkg (>= 1.15.6)
+Enhances: elementary-tweak
+Description: Change hidden desktop settings (debugging symbols)
+ Switchboard plug for controlling hidden options.
+ .
+ This package contains debugging symbols for switchboard-plug-template.

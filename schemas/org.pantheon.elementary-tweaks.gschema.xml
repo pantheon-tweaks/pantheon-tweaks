@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema path="/org/pantheon/elementary-tweaks/egtk/" id="org.pantheon.elementary-tweaks.egtk">
+    <key type="b" name="enable-egtk-patch">
+      <default>false</default>
+      <summary>Whether or not to auto-organize folders and rename files</summary>
+    </key>          
+    <key type="i" name="scrollbar-width">
+      <default>6</default>
+      <summary>Width of the scrollbar</summary>
+    </key>
+    <key type="i" name="scrollbar-button-radius">
+      <default>10</default>
+      <summary>Radius of the edges of the scrollbar button. Set it to 0 to make it square</summary>
+    </key>
+    <key type="s" name="active-tab-underline-color">
+      <default>'default'</default>
+      <summary>The color for the active tab in the dark egtk theme (used in the terminal for example)</summary>
+    </key>
+    <key type="s" name="active-tab-underline-values">
+      <default>'#337AB7:Blue ; #5CB85C:Green ; #F0AD4E:Yellow ; #D9534F:Red'</default>
+      <summary>Custom values for the active underline color</summary>
+    </key>
+  </schema>
+</schemalist>
