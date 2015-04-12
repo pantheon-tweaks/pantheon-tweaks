@@ -1,5 +1,5 @@
 ## Easily customize elementary 
-elementary-tweaks is a *switchboard plug* that lets you customize easily elementary
+elementary-tweaks is a **switchboard plug** that lets you customize easily elementary
 
 This repository is a fork of the [original elementary-tweaks](https://launchpad.net/elementary-tweaks) and could not have been done without the work of Michael P. Starkweather, Michael "Versable" and many [more contributors](debian/copyright).
 
