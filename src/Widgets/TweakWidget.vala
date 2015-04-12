@@ -24,22 +24,23 @@ namespace ElementaryTweaks {
 
     public class TweakWidget: Gtk.Grid {
 
-        protected const int WIDTH = 140 ;
+        protected const int WIDTH = 180 ;
+        protected const int TEXT_WIDTH = 180 ;
         protected const int COLUMN_SPACING = 10 ;
 
         protected SetValue<string> setter_text ;
-        protected GetValue<string> getter_text ; 
-        protected string text_value ; 
-        
+        protected GetValue<string> getter_text ;
+        protected string text_value ;
+
         public string text {
             get {
                 if( getter_text!= null )
                     text_value = getter_text () ;
-                else 
+                else
                     text_value =  "" ;
                 return text_value ;
             }
-            set 
+            set
             {
                 if( setter_text != null ) {
                     setter_text (value) ;
@@ -142,6 +143,7 @@ namespace ElementaryTweaks {
             var combo_box = new Gtk.ComboBoxText ();
             combo_box.halign = Gtk.Align.FILL;
             combo_box.hexpand = true;
+            combo_box.width_request = TEXT_WIDTH ;
 
             // add all of the passed in values into the combo box
             // id is the thing that we set while value is the display
@@ -157,20 +159,20 @@ namespace ElementaryTweaks {
                 if( combo_box.active_id != null )
                     set_value (combo_box.active_id);
             });
-            
+
             setter_text = (val) => {
-                if( val != null) 
+                if( val != null)
                 {
                     combo_box.active_id = val ;
                     // If the value is not present, it is added
-                    if( combo_box.active_id != val) { 
+                    if( combo_box.active_id != val) {
                         combo_box.append (val, val);
                         combo_box.active_id = val ;
                     }
                 }
             } ;
             getter_text = () => {
-                return combo_box.active_id ; 
+                return combo_box.active_id ;
             } ;
 
             // when the default button is pressed, reset the combo box to the new value
@@ -218,7 +220,7 @@ namespace ElementaryTweaks {
             font_button.hexpand = true;
             font_button.use_font = true;
             font_button.width_request = 250 ;
-            
+
             // when font is changed, set the value to active entry
             font_button.font_set.connect (() => set_value (font_button.get_font_name ()));
 
@@ -262,17 +264,18 @@ namespace ElementaryTweaks {
             var entry = new Gtk.Entry ();
             entry.halign = Gtk.Align.FILL;
             entry.hexpand = true;
+            entry.width_request = TEXT_WIDTH ;
 
             // set the current value of the entry widget
             entry.text = get_value ();
-            
+
             setter_text = (val) => {
-                entry.text = val ; 
+                entry.text = val ;
             } ;
             getter_text = () => {
-                return entry.text ; 
+                return entry.text ;
             } ;
-            
+
             // when the entry is activated, set the value to the current value
             entry.activate.connect (() => set_value (entry.text));
 
