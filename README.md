@@ -2,8 +2,8 @@ For more information see https://launchpad.net/elementary-tweaks
 
 ## How to install
 
-    sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily
-    sudo apt-get update
+    # Install i-hate-farms repository (not necessary if already done)
+    wget -O - http://i-hate-farms.github.io/spores/install | sudo sh - 
     sudo apt-get install elementary-tweaks
     
 ## Features
