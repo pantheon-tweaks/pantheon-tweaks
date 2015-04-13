@@ -13,7 +13,7 @@ This repository is a fork of the [original elementary-tweaks](https://launchpad.
     
 ## Features
 
-### O.3
+### v1.0
   - Customize default egtk theme
 ![sample](docs/theme.png)
   - Add more settings to `Terminal` : caret shape, natural selection and warning
