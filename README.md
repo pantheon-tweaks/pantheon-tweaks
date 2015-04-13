@@ -8,7 +8,7 @@ This repository is a fork of the [original elementary-tweaks](https://launchpad.
 ## How to install
 
     # Install i-hate-farms repository (not necessary if already done)
-    wget -O - http://i-hate-farms.github.io/spores/install | sudo sh - 
+    curl -sL  http://i-hate-farms.github.io/spores/install | sudo bash - 
     sudo apt-get install elementary-tweaks
     
 ## Features
