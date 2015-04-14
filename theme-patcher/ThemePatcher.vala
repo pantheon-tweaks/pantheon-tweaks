@@ -47,11 +47,16 @@ namespace ElementaryTweaks {
                 log_environment ()  ;
                 add_log ( "Reading settings (argument count: %d)".printf (args.length)) ;
                 var settings = EgtkThemeSettings.load_from_file () ;
-
+                if (settings == null )
+                {
+                    // Configuration file not present, nothing to patch 
+                    return 0 ;
+                }
                 enable_egtk_patch = settings.enable_egtk_patch ;
                 scrollbar_width = settings.scrollbar_width ;
                 scrollbar_button_radius = settings.scrollbar_button_radius ;
                 active_tab_underline_color = settings.active_tab_underline_color ;
+                
             }
             else
             {

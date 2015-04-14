@@ -60,8 +60,13 @@ namespace ElementaryTweaks {
             }
         }
         
-        public static EgtkThemeSettings load_from_file ()
+        public static EgtkThemeSettings? load_from_file ()
         {
+            
+            var config_file_exists = File.new_for_path (CONFIG_FILE_PATH).query_exists () ;
+            if ( !config_file_exists )
+                return null ; 
+                
             var result = new EgtkThemeSettings ();
             string data ; 
             try {
