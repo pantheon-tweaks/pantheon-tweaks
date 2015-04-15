@@ -44,6 +44,8 @@ Setting up the environment
     # Then install the 32bits version of your dependencies in a sandboxed environment
 Using [this tutorial](http://www.kaizou.org/2014/02/cross-compile-chroot/)
 
+    sudo add-apt-repository ppa:vala-team
+
 ### Installing the i836 deps locally
 From this [SO answer](http://stackoverflow.com/a/23207868/740464)
 
