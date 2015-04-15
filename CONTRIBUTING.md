@@ -38,7 +38,7 @@
 
 Setting up the environment
 
-### Setting up a chroot     
+### Setting up a chroot (about 700M to build a cmake vala gtk app)     
     # Install the cross compiling toolchain (about 50M on the disk)
     sudo apt-get install g++-multilib 
     # Then install the 32bits version of your dependencies in a sandboxed environment
