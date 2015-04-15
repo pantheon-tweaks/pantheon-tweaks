@@ -43,8 +43,9 @@ Setting up the environment
     sudo apt-get install g++-multilib 
     # Then install the 32bits version of your dependencies in a sandboxed environment
 Using [this tutorial](http://www.kaizou.org/2014/02/cross-compile-chroot/)
-
+    sudo apt-get install software-properties-common
     sudo add-apt-repository ppa:vala-team
+    sudo apt-get install valac-0.26
 
 ### Installing the i836 deps locally
 From this [SO answer](http://stackoverflow.com/a/23207868/740464)
