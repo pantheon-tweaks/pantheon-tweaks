@@ -27,7 +27,14 @@
     
 ## Packaging 
 
+### 64bits -> 64bits 
+
     debuild -i -us -uc -b
     debuild clean    
     
     sudo dpkg -i ../elementary-tweaks_0.2_amd64.deb
+
+### 64bits -> 32bits
+
+    debuild -ai386 -i -us -uc -b
+    debuild clean    
