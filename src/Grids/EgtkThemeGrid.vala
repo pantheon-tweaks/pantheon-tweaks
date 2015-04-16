@@ -308,7 +308,7 @@ ENV : LC_PAPER=fr_FR.UTF-8
                 string output;
                 string error;
                 int status;
-                var cli = "%s/theme-patcher".printf (Build.PKGDATADIR);
+                var cli = "%s/theme-patcher".printf (Build.PACKAGE_DATA_DIR);
                 try {
 
                     Process.spawn_sync (null,
@@ -336,7 +336,7 @@ ENV : LC_PAPER=fr_FR.UTF-8
                 var settings = EgtkThemeSettings.get_default () ;
 
                 Pid child_pid;
-                var cli = "%s/theme-patcher".printf (Build.PKGDATADIR);
+                var cli = "%s/theme-patcher".printf (Build.PACKAGE_DATA_DIR);
                 try {
 
                     Process.spawn_async (null,

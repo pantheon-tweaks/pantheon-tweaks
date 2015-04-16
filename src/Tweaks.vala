@@ -40,7 +40,7 @@ namespace ElementaryTweaks {
         public TweaksPlug () {
             // init plugin stuff
             Object (category: Category.PERSONAL,
-                    code_name: Build.PLUGCODENAME,
+                    code_name: Build.PROJECT_NAME,
                     display_name: _("Tweaks"),
                     description: _("Tweak elementary OS settings"),
                     icon: "applications-development");

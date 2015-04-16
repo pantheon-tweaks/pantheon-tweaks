@@ -159,7 +159,7 @@ do_prepare () {
 }
 
 do_init () {
-	    # if the Hen version can't be found, it means that the
+      # if the Hen version can't be found, it means that the
       # Hen needs to be installed
       if [ ! -f "${DEST_FOLDER}/Hen-VERSION.txt" ] ; then
         do_update
