@@ -82,7 +82,7 @@ ENV : LC_PAPER=fr_FR.UTF-8
 
             permission = create_permission () ;
             unlock_button = new LockButtonTweakWidget(
-                        _("Please, pretty please, Unlock me"),
+                        _("You need admistrator rights for this"),
                         _("Changing the default theme requires adminstrator rights"),
                         ((unlocked) => {
                             is_unlocked = unlocked;
