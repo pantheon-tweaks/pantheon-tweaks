@@ -31,7 +31,6 @@ application (
         gconf-2.0
         polkit-gobject-1  
         posix  
-        packagekit-glib2
 )
 
 
