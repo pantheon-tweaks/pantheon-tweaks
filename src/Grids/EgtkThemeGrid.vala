@@ -255,11 +255,22 @@ ENV : LC_PAPER=fr_FR.UTF-8
             return "#%02X%02X%02X".printf( (uint8)(Math.floor (255*color.red)),
                 (uint8)(Math.floor (255*color.green)), (uint8)(Math.floor (255*color.blue))) ;
         }
+
         private void apply_changes () {
-            if(  EgtkThemeSettings.get_default ().enable_egtk_patch )
+            var settings = EgtkThemeSettings.get_default () ; 
+            if(  settings.enable_egtk_patch )
                 show_info_bar () ;
             else
                 hide_info_bar () ;
+
+            if (!settings.enable_egtk_patch /*&& settings.enable_egtk_patch != old_enabled_value*/)
+            {
+                settings.reset = true ; 
+                // Execcute this to reset the theme
+                execute_theme_patching_async () ;
+                settings.reset = false ;
+
+            }    
 
             // execute_theme_patching_sync () ;
             execute_theme_patching_async () ;
@@ -285,6 +296,7 @@ ENV : LC_PAPER=fr_FR.UTF-8
         {
             if (enabled != old_enabled_value)
                 show_info_bar () ;
+             apply_changes () ;
         }
 
         private void show_info_bar (string text=_("You need to log out and log in to see the changes")) {
@@ -316,7 +328,9 @@ ENV : LC_PAPER=fr_FR.UTF-8
                             settings.enable_egtk_patch.to_string (),
                             settings.scrollbar_width.to_string (),
                             settings.scrollbar_button_radius.to_string (),
-                            settings.active_tab_underline_color
+                            settings.active_tab_underline_color,
+                            settings.reset.to_string (),
+                            settings.verbose.to_string ()
                         },
                         Environ.get (),
                         SpawnFlags.SEARCH_PATH,
@@ -324,7 +338,10 @@ ENV : LC_PAPER=fr_FR.UTF-8
                         out output,
                         out error,
                         out status);
-
+                    if( settings.verbose )
+                        message ( "Executing theme-patcher %s, ... %s %s", settings.enable_egtk_patch.to_string (),
+                            settings.reset.to_string (),
+                            settings.verbose.to_string ())  ;
                 } catch (Error e) {
                     report_error ("error while executing '%s'. Message: '%s'. Output: '%s', Error: '%s'".printf (cli, e.message, output, error)) ;
                 }
@@ -344,13 +361,18 @@ ENV : LC_PAPER=fr_FR.UTF-8
                             settings.enable_egtk_patch.to_string (),
                             settings.scrollbar_width.to_string (),
                             settings.scrollbar_button_radius.to_string (),
-                            settings.active_tab_underline_color
+                            settings.active_tab_underline_color,
+                            settings.reset.to_string (),
+                            settings.verbose.to_string ()                            
                         },
                         Environ.get (),
                         SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD,
                         null,
                         out child_pid);
-                    // FIXME doesn't execute ouput: Refusing to render service to dead parents.
+                    if( settings.verbose )
+                        message ( "Executing theme-patcher %s, ... %s %s", settings.enable_egtk_patch.to_string (),
+                            settings.reset.to_string (),
+                            settings.verbose.to_string ())  ;
                 } catch (SpawnError e) {
                     report_error ("error while executing '%s'. Message: '%s'.".printf (cli, e.message)) ;
                 }

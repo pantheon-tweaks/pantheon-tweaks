@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Elementary Tweaks Developers, 2014
+ * Copyright (C) PerfectCarl, 2015
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,15 +21,15 @@
 
 namespace ElementaryTweaks {
     static string log_string  ;
-    static const bool logged_to_file = false ;
-    static const bool logged_to_console = false ;
+    static bool logged_to_file = false ;
+    static bool logged_to_console = false ;
 
     int main (string[] args)
     {
         log_string  = "" ;
-        add_log ("Theme patcher") ;
+        var past_message = "" ;
 
-
+        message ("HELP") ;
         var program_name = args[0] ;
         try{
 
@@ -37,7 +37,9 @@ namespace ElementaryTweaks {
             int scrollbar_width = 0 ;
             int scrollbar_button_radius = 0 ;
             string  active_tab_underline_color = "";
-
+            bool reset = false;
+            bool verbose = false;
+            
             // This is regular update
             if( args.length == 1 )
             {
@@ -45,7 +47,7 @@ namespace ElementaryTweaks {
                 //save_log () ;
                 //return 1 ;
                 log_environment ()  ;
-                add_log ( "Reading settings (argument count: %d)".printf (args.length)) ;
+                past_message =  "Reading settings (argument count: %d)".printf (args.length) ;
                 var settings = EgtkThemeSettings.load_from_file () ;
                 if (settings == null )
                 {
@@ -56,7 +58,9 @@ namespace ElementaryTweaks {
                 scrollbar_width = settings.scrollbar_width ;
                 scrollbar_button_radius = settings.scrollbar_button_radius ;
                 active_tab_underline_color = settings.active_tab_underline_color ;
-                
+                reset = settings.reset ;
+                verbose = settings.verbose ;
+
             }
             else
             {
@@ -64,18 +68,28 @@ namespace ElementaryTweaks {
                 scrollbar_width = int.parse (args[2]);
                 scrollbar_button_radius = int.parse (args[3]);
                 active_tab_underline_color = args[4];
-                EgtkThemeSettings.save_to_file (enable_egtk_patch, scrollbar_width, scrollbar_button_radius, active_tab_underline_color) ;
+                reset = args[5] == "true";
+                verbose = args[6] == "true";
+
+                EgtkThemeSettings.save_to_file (enable_egtk_patch, scrollbar_width, scrollbar_button_radius, 
+                    active_tab_underline_color, reset, verbose) ;
             }
+            logged_to_file = logged_to_console = verbose ; 
+            add_log ("Theme patcher") ;
+            if (past_message != "" )
+                add_log (past_message) ;
 
             var patcher = new EgtkThemePatcher () ;
-            if( !enable_egtk_patch)
+            if(reset)
             {
                 add_log ("Resetting the theme to default values") ;
 
-                patcher.patch_scrollbar () ;
-                patcher.patch_current_tab_underline_dark () ;
+                // patcher.patch_scrollbar () ;
+                // patcher.patch_current_tab_underline_dark () ;
+                reinstall_theme () ;
             }
-            else
+
+            if( enable_egtk_patch)
             {
                 var message = "  . width: %d, radius: %d, tab color: %s".printf (
                     scrollbar_width,
@@ -98,6 +112,29 @@ namespace ElementaryTweaks {
         }
 
         return 0 ;
+    }
+
+    private void reinstall_theme () {
+        string output;
+        string error;
+        int status;
+        try {
+
+            Process.spawn_sync (null,
+                {   "apt-get", "install",
+                    " elementary-theme", "--reinstall"
+                },
+                Environ.get (),
+                SpawnFlags.SEARCH_PATH,
+                null,
+                out output,
+                out error,
+                out status);
+                add_log( "'elementary-theme' reinstalled.") ;
+        } catch (Error e) {
+            add_error ("error while executing reinstalling the theme. Message: '%s'. Output: '%s', Error: '%s'".printf (e.message, output, error)) ;
+        }
+    
     }
 
     private void log_environment () {

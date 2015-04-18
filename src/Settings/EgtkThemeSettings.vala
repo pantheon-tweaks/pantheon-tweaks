@@ -30,6 +30,8 @@ namespace ElementaryTweaks {
         public string active_tab_underline_color { get; set; }
         public string active_tab_underline_values { get; set; }
         public bool enable_egtk_patch { get; set; }
+        public bool reset { get; set; }
+        public bool verbose { get; set; }
 
         static EgtkThemeSettings? instance = null;
 
@@ -46,13 +48,14 @@ namespace ElementaryTweaks {
             return instance;
         }
         
-        public static void save_to_file (bool enable_egtk_patch, int scrollbar_width, int scrollbar_button_radius, string active_tab_underline_color) {
+        public static void save_to_file (bool enable_egtk_patch, int scrollbar_width, 
+            int scrollbar_button_radius, string active_tab_underline_color, bool reset, bool verbose) {
             string data = ""; 
             try {
                 
-                data = "%s;%d;%d;%s".printf (enable_egtk_patch.to_string (), 
+                data = "%s;%d;%d;%s;%s;%s".printf (enable_egtk_patch.to_string (), 
                     scrollbar_width, scrollbar_button_radius, 
-                    active_tab_underline_color);
+                    active_tab_underline_color, reset.to_string (), verbose.to_string ());
                 
                 FileUtils.set_contents (CONFIG_FILE_PATH, data);
             } catch (Error e) {
@@ -89,7 +92,15 @@ namespace ElementaryTweaks {
                 if( strings.length >3 )
                 {
                     result.active_tab_underline_color = strings[3] ;
-                }                
+                }     
+                if( strings.length >4 )
+                {
+                    result.reset = strings[4] == "true" ;
+                } 
+                if( strings.length >5 )
+                {
+                    result.verbose = strings[5] == "true" ;
+                }                                            
             } catch (Error e) {
                 critical ("Can't read config file: %s", e.message) ;
             }

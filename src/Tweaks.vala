@@ -117,7 +117,7 @@ namespace ElementaryTweaks {
          * Show the info using a info displayed at the top of the screen
          */
         public void show_info_bar (string text) {
-            message ("SHOW: %s", text) ;
+            // message ("SHOW: %s", text) ;
             info_label.set_text (text) ;
             //infobar.no_show_all = false;
             //infobar.visible = true ;

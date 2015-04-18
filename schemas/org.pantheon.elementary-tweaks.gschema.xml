@@ -21,5 +21,13 @@
       <default>'#337AB7:Blue ; #5CB85C:Green ; #F0AD4E:Yellow ; #D9534F:Red'</default>
       <summary>Custom values for the active underline color</summary>
     </key>
+    <key type="b" name="reset">
+      <default>false</default>
+      <summary>Whether the theme modifications should be reset</summary>
+    </key>    
+    <key type="b" name="verbose">
+      <default>false</default>
+      <summary>Whether the theme patcher writes info in the console and /tmp/theme-patcher*.log</summary>
+    </key>    
   </schema>
 </schemalist>
