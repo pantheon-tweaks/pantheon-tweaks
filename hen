@@ -52,7 +52,7 @@ do_setup () {
         echo ""
         sudo add-apt-repository -y ppa:vala-team
         sudo apt-get update > /dev/null
-        sudo apt-get install -y cmake valac-0.26 build-essential valadoc devscripts
+        sudo apt-get install -y cmake valac valac-0.26 build-essential valadoc devscripts
         RETURN_CODE=$?
         if [ "${RETURN_CODE}" == "0" ] ; then
           echo -e "${white}Installation done successfully.${NC}"
