@@ -48,7 +48,7 @@ do_setup () {
         echo ""
         echo -e "${white}Installing Hen dependencies...${NC}"
         echo "----------"
-        echo -e "It maky take a while but it will be ${white}done only once${NC}..."
+        echo -e "It may take a while but it will be ${white}done only once${NC}..."
         echo ""
         sudo add-apt-repository -y ppa:vala-team
         sudo apt-get update > /dev/null
