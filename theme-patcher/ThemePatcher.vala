@@ -28,8 +28,7 @@ namespace ElementaryTweaks {
     {
         log_string  = "" ;
         var past_message = "" ;
-
-        message ("HELP") ;
+        
         var program_name = args[0] ;
         try{
 
@@ -70,9 +69,10 @@ namespace ElementaryTweaks {
                 active_tab_underline_color = args[4];
                 reset = args[5] == "true";
                 verbose = args[6] == "true";
-
+                // Always write that reset is false to avoid 
+                // recursive call when called with reset (because the hook is called)
                 EgtkThemeSettings.save_to_file (enable_egtk_patch, scrollbar_width, scrollbar_button_radius, 
-                    active_tab_underline_color, reset, verbose) ;
+                    active_tab_underline_color, false, verbose) ;
             }
             logged_to_file = logged_to_console = verbose ; 
             add_log ("Theme patcher") ;
@@ -121,8 +121,8 @@ namespace ElementaryTweaks {
         try {
 
             Process.spawn_sync (null,
-                {   "apt-get", "install",
-                    " elementary-theme", "--reinstall"
+                {   "sudo", "apt-get", "install",
+                    "elementary-theme", "--reinstall"
                 },
                 Environ.get (),
                 SpawnFlags.SEARCH_PATH,
@@ -131,6 +131,8 @@ namespace ElementaryTweaks {
                 out error,
                 out status);
                 add_log( "'elementary-theme' reinstalled.") ;
+                if (status != 0 )
+                    add_log ("Output: '%s. Error: '%s'".printf (output, error)) ;
         } catch (Error e) {
             add_error ("error while executing reinstalling the theme. Message: '%s'. Output: '%s', Error: '%s'".printf (e.message, output, error)) ;
         }

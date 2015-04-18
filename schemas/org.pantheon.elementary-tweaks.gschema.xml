@@ -6,7 +6,7 @@
       <summary>Whether or not to auto-organize folders and rename files</summary>
     </key>          
     <key type="i" name="scrollbar-width">
-      <default>6</default>
+      <default>3</default>
       <summary>Width of the scrollbar</summary>
     </key>
     <key type="i" name="scrollbar-button-radius">

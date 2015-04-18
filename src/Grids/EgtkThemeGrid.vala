@@ -36,6 +36,8 @@ namespace ElementaryTweaks {
 
         private EgtkThemeGrid instance ;
 
+        private ThemePatchingQueue queue = new ThemePatchingQueue () ;
+
 /*
 ON TERMINAL
 
@@ -102,10 +104,10 @@ ENV : LC_PAPER=fr_FR.UTF-8
                             return EgtkThemeSettings.get_default ().enable_egtk_patch;
                         }), // get
                         ((val) => {
-                            enable_changes (val) ;
                             width_button.sensitive = val;
                             rounded_switch.sensitive = val;
                             EgtkThemeSettings.get_default ().enable_egtk_patch = val;
+                            enable_changes (val) ;
                             update_widget_state () ;
                         }), // set
                         (() => {
@@ -347,7 +349,21 @@ ENV : LC_PAPER=fr_FR.UTF-8
                 }
             }
         }
+        
         private void execute_theme_patching_async () {
+            if (permission.allowed ) {
+                var settings = EgtkThemeSettings.get_default () ;
+
+                queue.patch_theme (settings.enable_egtk_patch,
+                                settings.scrollbar_width,
+                                settings.scrollbar_button_radius,
+                                settings.active_tab_underline_color,
+                                settings.reset,
+                                settings.verbose) ;
+            }
+        }        
+        
+        private void execute_theme_patching_async_old () {
 
             if (permission.allowed ) {
                 var settings = EgtkThemeSettings.get_default () ;
