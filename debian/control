@@ -1,7 +1,7 @@
 Source: elementary-tweaks
 Section: x11
 Priority: optional
-Maintainer: Michael P. Starkweather <mpstark@gmail.com>
+Maintainer: Carl P. <name.is.carl@gmail.com>
 Build-Depends: cmake (>= 2.8),
                debhelper (>= 9),
                libgranite-dev,
@@ -13,7 +13,7 @@ Build-Depends: cmake (>= 2.8),
                libpolkit-gobject-1-dev,
                valac (>= 0.22)
 Standards-Version: 3.9.5
-Homepage: https://launchpad.net/elementarytweak
+Homepage: https://github.com/I-hate-farms/elementary-tweaks
 
 Package: elementary-tweaks
 Architecture: any
