@@ -38,6 +38,8 @@ namespace ElementaryTweaks {
 
         private ThemePatchingQueue queue = new ThemePatchingQueue () ;
 
+        private Gee.HashMap<int, string> jobs = new Gee.HashMap<int, string> () ;
+
 /*
 ON TERMINAL
 
@@ -82,6 +84,19 @@ ENV : LC_PAPER=fr_FR.UTF-8
             this.halign = Gtk.Align.CENTER;
             this.instance = this ;
 
+
+            queue.job_done.connect ((pid) => {
+                var name = jobs.get (pid) ;
+                // show_info_bar ("Job '%s' finished (pid:%d)".printf (name, pid)) ;
+                show_info_bar (_("'%s' done").printf (name, pid)) ;
+                Timeout.add_seconds(3, () => {
+                    show_info_bar () ;
+                    return true ; 
+                    });
+
+                jobs.unset (pid) ;
+
+            }) ;
             permission = create_permission () ;
             unlock_button = new LockButtonTweakWidget(
                         _("You need admistrator rights for this"),
@@ -269,13 +284,13 @@ ENV : LC_PAPER=fr_FR.UTF-8
             {
                 settings.reset = true ; 
                 // Execcute this to reset the theme
-                execute_theme_patching_async () ;
+                execute_theme_patching_async ("Resetting theme") ;
                 settings.reset = false ;
 
             }    
 
             // execute_theme_patching_sync () ;
-            execute_theme_patching_async () ;
+            execute_theme_patching_async ("Applying changes") ;
 
         }
 
@@ -301,11 +316,19 @@ ENV : LC_PAPER=fr_FR.UTF-8
              apply_changes () ;
         }
 
-        private void show_info_bar (string text=_("You need to log out and log in to see the changes")) {
-            /*info_label.set_text (text) ;
+        private void show_info_bar (string text ="") {
+            var str = text ;  
+            if (str == "") {
+                var job_count = jobs.size ;
+                if (job_count > 0 )
+                    str =_("%d operation(s) in progress").printf (jobs.size);
+                else 
+                    str =_("You need to log out and log in to see the changes.") ;
+            }
+            /*info_label.set_text (str) ;
             infobar.no_show_all = false;
             infobar.show_all ();*/
-            plug.show_info_bar (text) ;
+            plug.show_info_bar (str) ;
         }
 
         private void hide_info_bar () {
@@ -350,16 +373,27 @@ ENV : LC_PAPER=fr_FR.UTF-8
             }
         }
         
-        private void execute_theme_patching_async () {
+        private void execute_theme_patching_async (string name) {
             if (permission.allowed ) {
                 var settings = EgtkThemeSettings.get_default () ;
 
-                queue.patch_theme (settings.enable_egtk_patch,
-                                settings.scrollbar_width,
-                                settings.scrollbar_button_radius,
-                                settings.active_tab_underline_color,
-                                settings.reset,
-                                settings.verbose) ;
+                queue.patch_theme.begin (settings.enable_egtk_patch,
+                    settings.scrollbar_width,
+                    settings.scrollbar_button_radius,
+                    settings.active_tab_underline_color,
+                    settings.reset,
+                    settings.verbose, 
+                    (obj, res) => {
+                        //try {
+                            int pid = queue.patch_theme.end(res);
+                            jobs.@set( pid, name) ;
+                            // show_info_bar ("Executing '%s' (job %d)".printf (name, pid)) ;
+                        /*} catch (ThreadError e) {
+                            string msg = e.message;
+                            stderr.printf(@"Thread error: $msg\n");
+                        }*/
+                    }) ;
+                
             }
         }        
         

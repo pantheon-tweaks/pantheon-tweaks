@@ -1,20 +1,26 @@
 namespace ElementaryTweaks {
 
+
+  // public delegate void job_done_func (int pid) ; 
+
   public class ThemePatchingQueue : Object
   {
     private uint ongoing_job_count = 0;
     private Queue<DelegateWrapper> pending_jobs =
         new Queue<DelegateWrapper> ();
    
+    public signal void job_done (int pid) ;
+
     /* Change this to change the cap on the number of concurrent
      * operations. */
     private const uint max_jobs = 1;
    
-    public async void patch_theme (bool enable_egtk_patch, int scrollbar_width, 
+    public async int patch_theme (bool enable_egtk_patch, int scrollbar_width, 
             int scrollbar_button_radius, string active_tab_underline_color, bool reset, bool verbose) 
         throws GLib.Error
       {
    
+        int result = -1 ; 
         /* If the number of ongoing operations is at the limit,
          * queue this operation and yield. */
         if (this.ongoing_job_count >
@@ -31,7 +37,7 @@ namespace ElementaryTweaks {
         try
           {
             this.ongoing_job_count++;
-            yield this.patch_theme_unlimited (enable_egtk_patch, scrollbar_width, scrollbar_button_radius, active_tab_underline_color, reset, verbose);
+            result = yield this.patch_theme_unlimited (enable_egtk_patch, scrollbar_width, scrollbar_button_radius, active_tab_underline_color, reset, verbose);
           }
         finally
           {
@@ -46,10 +52,10 @@ namespace ElementaryTweaks {
               }
           }
    
-        //return retval;
+        return result;
       }
    
-    private async void patch_theme_unlimited (bool enable_egtk_patch, int scrollbar_width, 
+    private async int patch_theme_unlimited (bool enable_egtk_patch, int scrollbar_width, 
             int scrollbar_button_radius, string active_tab_underline_color, bool reset, bool verbose) 
         throws GLib.Error
       {
@@ -77,9 +83,17 @@ namespace ElementaryTweaks {
                     active_tab_underline_color,
                     reset.to_string (),
                     verbose.to_string ())  ;
+            ChildWatch.add (child_pid, (pid, status) => {
+              // Triggered when the child indicated by child_pid exits
+              Process.close_pid (pid);
+              job_done (pid) ;
+            });
+            return child_pid ;
+
         } catch (SpawnError e) {
             critical  ("error while executing '%s'. Message: '%s'.".printf (cli, e.message)) ;
         }
+        return -1 ; 
       }
   }
    
