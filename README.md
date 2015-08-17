@@ -20,10 +20,10 @@ This repository is a fork of the [original elementary-tweaks](https://launchpad.
   - UI fixes
 
 #### Themes 
-![sample](docs/scrollbar-width.png)
+![sample](docs/tweaks-theme.png)
 
 #### Scrollbar width
-![sample](docs/tweaks-theme.png)
+![sample](docs/scrollbar-width.png)
 
 ## [Contributing](CONTRIBUTING.md)
 
