@@ -15,10 +15,15 @@ This repository is a fork of the [original elementary-tweaks](https://launchpad.
 
 ### v1.0
   - Customize default egtk theme
-![sample](docs/theme.png)
   - Add more settings to `Terminal` : caret shape, natural selection and warning
   - Add more settings to `Plank`: pressure reveal, auto pinning, etc.
   - UI fixes
+
+#### Themes 
+![sample](docs/docs/scrollbar-width.png)
+
+#### Scrollbar width
+![sample](docs/docs/tweaks-theme.png)
 
 ## [Contributing](CONTRIBUTING.md)
 
