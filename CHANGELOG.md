@@ -1,7 +1,4 @@
-TODO:
-  - test po (tom)+label
-
-* 0.3
+* 1.0
   - Themes (egtk 3.0 and egtk 2.0)
      - supports scrollbar width
      - supports scrollbar radius
