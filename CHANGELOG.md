@@ -1,5 +1,5 @@
 * 1.0.1
-  -  #2 fix polkit issue
+  -  fix polkit issue
 
 * 1.0
   - Themes (egtk 3.0 and egtk 2.0)
