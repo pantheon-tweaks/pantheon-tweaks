@@ -1,0 +1,352 @@
+#!/bin/bash
+# File history
+#  - 0.1 : add task update and help
+#  - 0.2 : add task build and prepare
+#  - 0.3 : add task list
+#  - 0.4 : add task rebuild
+#  - 0.5 : fix warnings
+#  - 0.6 : add task rel
+#  - 0.7 : fixing formatting
+#  - 0.8 : add install task and improve error handling
+#  - 0.9 : rename cmake to .hen
+#  - 0.10: add valadoc and deb-build
+#  - 0.11: add force-update
+#  - 0.12: update delete build folder
+#  - 0.13: add run and debug targets
+#  - 0.14: introduce project.hen file
+#  - 0.15: add init
+#  - 0.16: added devscripts to the list of init packages
+# FIXME file with () in the name makes the build fail
+# TODO better documentation in help and list
+
+OPERATION="build"
+
+DEST_FOLDER=./.hen
+TEMP_FOLDER=./hen-tmp
+SOURCE_URL=https://github.com/I-hate-zoos/hen/raw/master/dist/
+PACKAGE_NAME=hen-latest.zip
+PACKAGE_URL=${SOURCE_URL}/${PACKAGE_NAME}
+VERSION_URL=${SOURCE_URL}/Hen-VERSION.txt
+
+PACKAGE_FILE=${TEMP_FOLDER}/${PACKAGE_NAME}
+VERSION_FILE=${TEMP_FOLDER}/Hen-VERSION.txt
+
+BUILD_FOLDER=./build
+
+red='\033[0;31m'
+white='\033[1;37m'
+NC='\033[0m' # No Color
+
+if [ -n "$1" ]; then
+    OPERATION=$1
+fi
+PARAM=$2
+
+do_setup () {
+      # If hen hasn't been installed
+      if [ ! -f ~/.cache/hen/setup_done ] ; then
+        echo ""
+        echo -e "${white}Installing Hen dependencies...${NC}"
+        echo "----------"
+        echo -e "It may take a while but it will be ${white}done only once${NC}..."
+        echo ""
+        sudo add-apt-repository -y ppa:vala-team
+        sudo apt-get update > /dev/null
+        sudo apt-get install -y cmake valac valac-0.26 build-essential valadoc devscripts
+        RETURN_CODE=$?
+        if [ "${RETURN_CODE}" == "0" ] ; then
+          echo -e "${white}Installation done successfully.${NC}"
+          if [ ! -d ~/.cache/hen/ ] ; then
+            mkdir ~/.cache/hen/
+          fi
+          touch ~/.cache/hen/setup_done
+        fi
+      fi
+}
+
+do_update () {
+    do_setup
+    if [ -d ${TEMP_FOLDER} ] ; then
+        rm -rf ${TEMP_FOLDER}
+    fi
+    mkdir ${TEMP_FOLDER}
+    echo ""
+    echo -e "${white}Checking for newer version...${NC}"
+    echo "----------"
+    wget --quiet -P ${TEMP_FOLDER} ${VERSION_URL}
+    SERVER_VERSION=`cat ${VERSION_FILE}`
+    if [ -d ${DEST_FOLDER} ] ; then
+        LOCAL_VERSION=`cat ${DEST_FOLDER}/Hen-VERSION.txt`
+        echo "   Local version : ${LOCAL_VERSION}"
+    fi
+
+    echo -e "   Server version: ${white}${SERVER_VERSION}${NC}"
+
+    # Is an update required?
+    if [ "${SERVER_VERSION}" == "${LOCAL_VERSION}" ]; then
+        echo "Your version is up to date (${LOCAL_VERSION})"
+    else
+        echo "Newer version found!"
+        echo "Getting the new files from server..."
+        wget --quiet -P ${TEMP_FOLDER} ${PACKAGE_URL}
+        if [ -d ${DEST_FOLDER} ] ; then
+            rm -rf ${DEST_FOLDER}
+        fi
+        unzip -q ${PACKAGE_FILE} -d ${DEST_FOLDER}
+
+      # Delete the build folder so the files will be regenerated next time
+      if [ -d ${BUILD_FOLDER} ] ; then
+        rm -rf ${BUILD_FOLDER}
+      fi
+      # Update the current hen script file with the a new one
+      cp ${DEST_FOLDER}/hen .
+
+      # Delete the build folder forcing a rebuild the next time
+      if [ -d "./build/" ] ; then
+        rm -rf "./build/"
+      fi
+      
+      # Cleaning up
+      rm -rf ${TEMP_FOLDER}
+      echo -e "${white}Hen updated to ${SERVER_VERSION}${NC}"
+    fi
+
+}
+
+do_force_update () {    
+    if [ -d ${DEST_FOLDER} ] ; then
+        rm -rf ${DEST_FOLDER}
+    fi
+    do_update 
+}
+
+do_prepare () {
+      # if the Hen version can't be found, it means that the
+      # Hen needs to be installed
+      if [ ! -f "${DEST_FOLDER}/Hen-VERSION.txt" ] ; then
+        do_update
+      fi
+      if [ ! -f "project.hen" ] ; then
+        echo -e "${red}You need to have a project file named project.hen${NC}"
+        echo -e "Use ${white}./hen init${NC} to initialize your project"
+        exit -1
+      fi
+      echo ""
+      echo -e "${white}Preparing your build ...${NC}"
+      echo "----------"
+      if [ -d ${BUILD_FOLDER} ] ; then
+        rm -rf ${BUILD_FOLDER}
+      fi
+      # Renaming and expanding project.hen to CMakeLists.txt
+      if [ -f "CMakeLists.txt" ] ; then
+        # Remove old backup of present
+        if [ -f "CMakeLists.txt.backup-hen" ] ; then
+          rm CMakeLists.txt.backup-hen
+        fi        
+        mv CMakeLists.txt CMakeLists.txt.backup-hen
+      fi
+      cp ${DEST_FOLDER}/CMakeLists.template CMakeLists.txt
+      cat project.hen >> CMakeLists.txt
+      cat ${DEST_FOLDER}/CMakeLists.ending.template >> CMakeLists.txt
+      
+      mkdir ${BUILD_FOLDER}
+      cd ${BUILD_FOLDER}
+      cmake ..
+      cd ..
+      if [ -f "CMakeLists.txt.backup-hen" ] ; then
+        mv CMakeLists.txt.backup-hen CMakeLists.txt
+      fi
+}
+
+do_init () {
+      # if the Hen version can't be found, it means that the
+      # Hen needs to be installed
+      if [ ! -f "${DEST_FOLDER}/Hen-VERSION.txt" ] ; then
+        do_update
+      fi
+      if [ -f "project.hen" ] ; then
+        echo -e "${red}You already have a project.hen file.${NC}"
+        echo -e "A new one can't be generated as it would ${white}override the existing one.${NC}"
+        exit -1
+      fi
+      cp ${DEST_FOLDER}/project.hen.template project.hen
+      echo -e "Your project file ${white}project.hen${NC} has been created."
+      echo -e "After you have edited it to your needs, run ${white}./hen build${NC} to build your new project."
+}
+
+do_build () {
+      if [ ! -d ${BUILD_FOLDER} ] ; then
+        do_prepare
+      fi
+      echo ""
+      echo -e "${white}Building your application ...${NC}"
+      echo "----------"
+      cd ${BUILD_FOLDER}
+      make
+      RETURN_CODE=$?
+      if [ "$RETURN_CODE" == "0" ] ; then
+        BUILD_SUCCESSFUL=TRUE
+      else
+        BUILD_SUCCESSFUL=FALSE
+      fi
+      cd ..
+}
+
+do_install () {
+      if [ ! -d ${BUILD_FOLDER} ] ; then
+        do_build
+      fi
+      echo ""
+      echo -e "${white}Installing your application ...${NC}"
+      echo "----------"
+      cd ${BUILD_FOLDER}
+      sudo make install
+      cd ..
+}
+
+
+do_package () {
+      if [ ! -d ${BUILD_FOLDER} ] ; then
+        do_build
+      fi
+      echo ""
+      echo -e "${white}Building deb packages...${NC}"
+      echo "----------"
+      cd ${BUILD_FOLDER}
+      # By default we build for debian
+      if [ -z "$PARAM" ]; then
+          PARAM=debian
+      fi
+      make package_${PARAM}
+      cd ..
+}
+
+do_run () {
+      if [ ! -d ${BUILD_FOLDER} ] ; then
+        do_build
+      fi
+      echo ""
+      echo -e "${white}Running your application...${NC}"
+      echo "----------"
+      cd ${BUILD_FOLDER}
+      make run
+      cd ..
+}
+
+do_debug () {
+      if [ ! -d ${BUILD_FOLDER} ] ; then
+        do_build
+      fi
+      echo ""
+      echo -e "${white}Debugging with gdb...${NC}"
+      echo "----------"
+      cd ${BUILD_FOLDER}
+      make debug
+      cd ..
+}
+
+do_valadoc () {
+      if [ ! -d ${BUILD_FOLDER} ] ; then
+        do_build
+      fi
+      echo ""
+      echo -e "${white}Building valadoc...${NC}"
+      echo "----------"
+      cd ${BUILD_FOLDER}
+      make valadoc
+      cd ..
+}
+
+do_rebuild () {
+  echo -e "${white}Regenerating your build ...${NC}"
+  if [ -d ${BUILD_FOLDER} ] ; then
+    rm -rf ${BUILD_FOLDER}
+  fi
+  if [ -d "./dist"} ] ; then
+    rm -rf "./dist"
+  fi    
+  do_build
+}
+
+do_help () {
+    if [ -d ${DEST_FOLDER} ] ; then
+        LOCAL_VERSION=`cat ${DEST_FOLDER}/Hen-VERSION.txt`
+        echo -e "${white}Hen ${LOCAL_VERSION}${NC}"
+        echo ""
+      cat ${DEST_FOLDER}/Hen-HELP.txt
+  else
+    echo -e "${white}No help is available${NC}. Please update hen with: $0 update"
+  fi
+}
+
+do_internal_release () {
+  cp hen ${DEST_FOLDER}/
+  DIST_FILE=./dist/hen-latest.zip
+  if [ -f ${DIST_FILE} ] ; then
+    rm ${DIST_FILE}
+  fi
+  cd ${DEST_FOLDER}
+  zip -q -r ../dist/hen-latest.zip .
+  cd ..
+  cp ${DEST_FOLDER}/Hen-VERSION.txt ./dist/
+  echo -e "${white}Release ready${NC}."
+}
+
+do_display_error() {
+  echo -e "${red}The task '${OPERATION}' is unknown.${NC}"
+  echo "Refer to the help ('hen help') for more information."
+  exit 1
+}
+
+do_list () {
+  echo -e "${white}Hen${NC} defines the following make tasks"
+  echo -e "  - ${white}[default]${NC} : build your application along with extra files if applicable (desktop, vapi, pc, deps...)"
+  echo -e "  - ${white}install${NC} : install your application to the previously defined PREFIX (./usr by default)"
+  echo -e "  - ${white}pot${NC} : generates the translation files in the po folder"
+  echo ""
+  echo "You can invoke those tasks in the ./build folder: "
+  echo "  cd build"
+  echo "  make pot"
+}
+
+
+case "$OPERATION" in
+   "update") do_update
+   ;;
+   "force-update") do_force_update
+   ;;
+   "prepare") do_prepare
+   ;;
+   "build")do_build
+   ;;
+   "list")do_list
+   ;;
+   "rebuild")do_rebuild
+   ;;
+   "install")do_install
+   ;;
+   "rel")do_internal_release
+   ;;
+   "package")do_package
+   ;;
+   "valadoc")do_valadoc
+   ;;     
+   "run")do_run
+   ;;      
+   "init")do_init
+   ;;      
+   "debug")do_debug
+   ;;     
+   "help")do_help
+   ;;
+   "--help")do_help
+   ;;
+   "--?")do_help
+   ;;
+   "/?")do_help
+   ;;
+   "-h")do_help
+   ;;
+   *)do_display_error
+    ;;
+esac

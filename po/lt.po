@@ -3,19 +3,19 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-28 07:48-0500\n"
-"PO-Revision-Date: 2015-12-10 22:42+0000\n"
-"Last-Translator: Moo <hazap@hotmail.com>\n"
+"PO-Revision-Date: 2014-08-22 09:25+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-11 06:31+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2014-08-30 08:41+0000\n"
+"X-Generator: Launchpad (build 17176)\n"
 "Language: \n"
 
 #: ../src/Tweaks.vala:38
 msgid "Tweaks"
-msgstr "Papildomi nustatymai"
+msgstr ""
 
 #: ../src/Tweaks.vala:39
 msgid "Tweak elementary OS settings"
@@ -23,28 +23,28 @@ msgstr ""
 
 #: ../src/Tweaks.vala:49
 msgid "Appearance"
-msgstr "Išvaizda"
+msgstr ""
 
 #: ../src/Tweaks.vala:49 ../src/Tweaks.vala:52 ../src/Tweaks.vala:56
 #: ../src/Tweaks.vala:60 ../src/Tweaks.vala:66
 msgid "General"
-msgstr "Bendri"
+msgstr ""
 
 #: ../src/Tweaks.vala:52
 msgid "Fonts"
-msgstr "Šriftai"
+msgstr ""
 
 #: ../src/Tweaks.vala:56
 msgid "Animations"
-msgstr "Animacijos"
+msgstr ""
 
 #: ../src/Tweaks.vala:60
 msgid "Shadows"
-msgstr "Šešėliai"
+msgstr ""
 
 #: ../src/Tweaks.vala:66
 msgid "Miscellaneous"
-msgstr "Kiti"
+msgstr ""
 
 #: ../src/Tweaks.vala:70
 msgid "Plank"
@@ -53,11 +53,11 @@ msgstr ""
 #: ../src/Tweaks.vala:70 ../src/Tweaks.vala:74 ../src/Tweaks.vala:78
 #: ../src/Tweaks.vala:82 ../src/Tweaks.vala:86
 msgid "Applications"
-msgstr "Programos"
+msgstr ""
 
 #: ../src/Tweaks.vala:74
 msgid "Files"
-msgstr "Failai"
+msgstr ""
 
 #: ../src/Tweaks.vala:78
 msgid "Slingshot"
@@ -69,7 +69,7 @@ msgstr ""
 
 #: ../src/Tweaks.vala:86
 msgid "Terminal"
-msgstr "Terminalas"
+msgstr ""
 
 #: ../src/Objects/ShortcutObject.vala:58
 #: ../src/Widgets/AcceleratorInputWidget.vala:87
@@ -84,12 +84,12 @@ msgstr ""
 #: ../src/Grids/CerbereGrid.vala:53 ../src/Grids/CerbereGrid.vala:63
 #: ../src/Grids/ShortcutsGrid.vala:95 ../src/Grids/ShortcutsGrid.vala:162
 msgid "Add..."
-msgstr "Pridėti..."
+msgstr ""
 
 #: ../src/Grids/CerbereGrid.vala:54 ../src/Grids/CerbereGrid.vala:64
 #: ../src/Grids/ShortcutsGrid.vala:96 ../src/Grids/ShortcutsGrid.vala:163
 msgid "Remove"
-msgstr "Pašalinti"
+msgstr ""
 
 #: ../src/Grids/CerbereGrid.vala:65 ../src/Grids/ShortcutsGrid.vala:164
 msgid "Revert to Default"
@@ -145,7 +145,7 @@ msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:32
 msgid "Single Click:"
-msgstr "Vienas paspaudimas:"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:33
 msgid "If set off, files will use 'normal' double-click behavior"
@@ -165,7 +165,7 @@ msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:48
 msgid "Date Format:"
-msgstr "Datos formatas:"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:49
 msgid "For date accessed, modified, etc."
@@ -209,7 +209,7 @@ msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:32
 msgid "Default Font:"
-msgstr "Įprastas šriftas:"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:33
 msgid "Used by default by most applications"
@@ -217,7 +217,7 @@ msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:43
 msgid "Document Font:"
-msgstr "Dokumentų šriftas"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:44
 msgid "Used when displaying documents, if no other font was chosen"
@@ -277,7 +277,7 @@ msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:54
 msgid "Icon Size:"
-msgstr "Piktogramų dydis:"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:55
 msgid "The size of each icon in the plank"
@@ -293,7 +293,7 @@ msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:68
 msgid "Auto hide"
-msgstr "Automatiškai slėpti"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:69
 msgid "Hide on maximize"
@@ -301,7 +301,7 @@ msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:72
 msgid "Hide Mode:"
-msgstr "Slėpimo būdas:"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:73
 msgid "Plank's hide mode"
@@ -317,7 +317,7 @@ msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:96 ../src/Grids/TerminalGrid.vala:169
 msgid "Theme:"
-msgstr "Tema:"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:97
 msgid "Plank's theme for the dock"
@@ -325,7 +325,7 @@ msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:108
 msgid "Primary Monitor"
-msgstr "Pagrindinis ekranas"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:111
 msgid "Monitor %d"

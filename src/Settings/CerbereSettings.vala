@@ -20,8 +20,8 @@ namespace ElementaryTweaks {
 
     public class CerbereSettings : Granite.Services.Settings
     {
-        public int crash_time_interval { get; set; }
-        public int max_crashes { get; set; }
+        public uint crash_time_interval { get; set; }
+        public uint max_crashes { get; set; }
         public string[] monitored_processes { get; set; }
 
         static CerbereSettings? instance = null;

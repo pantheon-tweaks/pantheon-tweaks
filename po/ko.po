@@ -8,32 +8,32 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-28 07:48-0500\n"
-"PO-Revision-Date: 2016-03-02 20:54+0000\n"
-"Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
+"PO-Revision-Date: 2014-08-19 07:15+0000\n"
+"Last-Translator: Michael P. Starkweather <Mpstark@gmail.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-03 06:15+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2014-08-30 08:41+0000\n"
+"X-Generator: Launchpad (build 17176)\n"
 "Language: ko\n"
 
 #: ../src/Tweaks.vala:38
 msgid "Tweaks"
-msgstr "트윅"
+msgstr ""
 
 #: ../src/Tweaks.vala:39
 msgid "Tweak elementary OS settings"
-msgstr "elementary OS 설정을 조정합니다."
+msgstr ""
 
 #: ../src/Tweaks.vala:49
 msgid "Appearance"
-msgstr "꾸미기"
+msgstr "모양"
 
 #: ../src/Tweaks.vala:49 ../src/Tweaks.vala:52 ../src/Tweaks.vala:56
 #: ../src/Tweaks.vala:60 ../src/Tweaks.vala:66
 msgid "General"
-msgstr "일반 설정"
+msgstr "일반"
 
 #: ../src/Tweaks.vala:52
 msgid "Fonts"
@@ -53,20 +53,20 @@ msgstr "기타"
 
 #: ../src/Tweaks.vala:70
 msgid "Plank"
-msgstr "플랭크"
+msgstr "플랑크 독"
 
 #: ../src/Tweaks.vala:70 ../src/Tweaks.vala:74 ../src/Tweaks.vala:78
 #: ../src/Tweaks.vala:82 ../src/Tweaks.vala:86
 msgid "Applications"
-msgstr "애플리케이션"
+msgstr "프로그램"
 
 #: ../src/Tweaks.vala:74
 msgid "Files"
-msgstr "파일스"
+msgstr "파일"
 
 #: ../src/Tweaks.vala:78
 msgid "Slingshot"
-msgstr "슬링샷"
+msgstr "Slingshot"
 
 #: ../src/Tweaks.vala:82
 msgid "Cerbere"
@@ -106,7 +106,7 @@ msgstr "애니메이션:"
 
 #: ../src/Grids/AnimationsGrid.vala:44
 msgid "If the animations play at all"
-msgstr "애니메이션이 재생되는 경우"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:60
 msgid "Open Duration:"
@@ -114,7 +114,7 @@ msgstr "열 시간:"
 
 #: ../src/Grids/AnimationsGrid.vala:61
 msgid "Plays when an application is opened"
-msgstr "애플리케이션을 열면 재생"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:72
 msgid "Close Duration:"
@@ -122,7 +122,7 @@ msgstr "닫을 시간:"
 
 #: ../src/Grids/AnimationsGrid.vala:73
 msgid "Plays when an application is closed"
-msgstr "애플리케이션을 닫으면 재생"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:84
 msgid "Snap Duration:"
@@ -130,7 +130,7 @@ msgstr "스크린샷 지속 시간:"
 
 #: ../src/Grids/AnimationsGrid.vala:85
 msgid "Plays when an application is snapped to the side"
-msgstr "애플리케이션을 가장자리로 움직이면 재생"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:96
 msgid "Minimize Duration:"
@@ -138,7 +138,7 @@ msgstr "최소화 시간:"
 
 #: ../src/Grids/AnimationsGrid.vala:97
 msgid "Plays when an application is minimized"
-msgstr "애플리케이션을 최소화하면 재생"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:108
 msgid "Workspace Switch Duration:"
@@ -146,7 +146,7 @@ msgstr "작업 공간 전환 시간:"
 
 #: ../src/Grids/AnimationsGrid.vala:109
 msgid "Plays when a workspace switch is initiated"
-msgstr "작업공간 스위치를 켜면 재생"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:32
 msgid "Single Click:"
@@ -154,7 +154,7 @@ msgstr "한 번 클릭:"
 
 #: ../src/Grids/FilesGrid.vala:33
 msgid "If set off, files will use 'normal' double-click behavior"
-msgstr "꺼져있는 경우, 파일들은 기본값으로 설정된 것과 같이 더블클릭을 사용할 것입니다."
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:43
 msgid "Locale"
@@ -174,7 +174,7 @@ msgstr "날짜 형식:"
 
 #: ../src/Grids/FilesGrid.vala:49
 msgid "For date accessed, modified, etc."
-msgstr "마지막으로 연 날짜, 마지막으로 수정한 날짜 등"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:60
 msgid "Smallest"
@@ -210,7 +210,7 @@ msgstr "사이드바 아이콘 크기:"
 
 #: ../src/Grids/FilesGrid.vala:70
 msgid "Size of the icons in the sidebar"
-msgstr "사이드바의 아이콘 크기"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:32
 msgid "Default Font:"
@@ -218,7 +218,7 @@ msgstr "기본 글꼴:"
 
 #: ../src/Grids/FontsGrid.vala:33
 msgid "Used by default by most applications"
-msgstr "대부분의 애플리케이션이 기본으로 사용"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:43
 msgid "Document Font:"
@@ -226,7 +226,7 @@ msgstr "문서 글꼴:"
 
 #: ../src/Grids/FontsGrid.vala:44
 msgid "Used when displaying documents, if no other font was chosen"
-msgstr "폰트를 지정하지 않을 경우 기본으로 문서를 표시할 때 사용됨"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:54
 msgid "Monospace Font:"
@@ -234,43 +234,43 @@ msgstr "모노스페이스 글꼴:"
 
 #: ../src/Grids/FontsGrid.vala:55
 msgid "Used in the terminal, for code, and sometimes for plain text"
-msgstr "터미널, 코드, 또는 일반 텍스트에서 사용됨"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:65
 msgid "Titlebar Font:"
-msgstr "제목 표시줄 글꼴:"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:66
 msgid "Used to display window titles"
-msgstr "창의 제목 표시줄에서 사용"
+msgstr ""
 
 #: ../src/Grids/SlingshotGrid.vala:32
 msgid "Rows:"
-msgstr "행:"
+msgstr "열:"
 
 #: ../src/Grids/SlingshotGrid.vala:33
 msgid "The number of rows displayed in Slingshot"
-msgstr "슬링샷에서 표시할 행 수"
+msgstr ""
 
 #: ../src/Grids/SlingshotGrid.vala:44
 msgid "Columns:"
-msgstr "열:"
+msgstr "행:"
 
 #: ../src/Grids/SlingshotGrid.vala:45
 msgid "The number of columns displayed in Slingshot"
-msgstr "슬링샷에서 표시할 열 수"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:32
 msgid "Current Workspace Only"
-msgstr "현재 작업공간만"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:33
 msgid "Show only windows on the current workspace"
-msgstr "현재 작업공간에 있는 창들만 보여줍니다."
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:34
 msgid "Will still show pinned items on different workspaces"
-msgstr "다른 작업공간에서도 고정된 애플리케이션은 보여줌"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:43
 msgid "Lock Items:"
@@ -278,7 +278,7 @@ msgstr "잠그기"
 
 #: ../src/Grids/PlankGrid.vala:44
 msgid "Whether to prevent drag'n'drop actions and lock items on the dock"
-msgstr "독에 새로운 애플리케이션을 드래그 해 추가하고 위치를 바꾸는 것을 잠글 여부"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:54
 msgid "Icon Size:"
@@ -286,7 +286,7 @@ msgstr "아이콘 크기:"
 
 #: ../src/Grids/PlankGrid.vala:55
 msgid "The size of each icon in the plank"
-msgstr "플랭크에서 사용할 아이콘의 크기"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:66
 msgid "Don't hide"
@@ -310,15 +310,15 @@ msgstr "숨기기 모드:"
 
 #: ../src/Grids/PlankGrid.vala:73
 msgid "Plank's hide mode"
-msgstr "플랭크 숨기기 모드"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:84
 msgid "Hide Delay (ms):"
-msgstr "숨기기 지연 시간 (ms):"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:85
 msgid "Time to wait before unhiding the dock"
-msgstr "독을 숨기기 전에 기다릴 시간"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:96 ../src/Grids/TerminalGrid.vala:169
 msgid "Theme:"
@@ -326,7 +326,7 @@ msgstr "테마:"
 
 #: ../src/Grids/PlankGrid.vala:97
 msgid "Plank's theme for the dock"
-msgstr "플랭크의 독 테마"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:108
 msgid "Primary Monitor"
@@ -342,7 +342,7 @@ msgstr "모니터:"
 
 #: ../src/Grids/PlankGrid.vala:116
 msgid "The monitor that Plank is displayed on"
-msgstr "플랭크를 표시할 모니터"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:127 ../src/Grids/PlankGrid.vala:147
 #: ../src/Grids/PlankGrid.vala:164
@@ -364,11 +364,11 @@ msgstr "하단"
 
 #: ../src/Grids/PlankGrid.vala:133
 msgid "Screen Position:"
-msgstr "화면 위치:"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:134
 msgid "Where on the screen Plank is displayed"
-msgstr "화면에서 어떤 부분에 플랭크를 표시할 지"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:145
 msgid "Panel"
@@ -376,7 +376,7 @@ msgstr "패널"
 
 #: ../src/Grids/PlankGrid.vala:148 ../src/Grids/PlankGrid.vala:165
 msgid "Centered"
-msgstr "중앙"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:151
 msgid "Alignment:"
@@ -384,7 +384,7 @@ msgstr "정렬:"
 
 #: ../src/Grids/PlankGrid.vala:152
 msgid "The alignment for the dock on the monitor's edge"
-msgstr "모니터의 가장자리에 독을 정렬시킴"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:168
 msgid "Item Alignment:"
@@ -392,7 +392,7 @@ msgstr "항목 정렬:"
 
 #: ../src/Grids/PlankGrid.vala:169
 msgid "The alignment of the items in this dock if panel-mode is used"
-msgstr "패널 모드를 사용할 때 독의 항목을 정렬하는 방법"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:180
 msgid "Offset:"
@@ -400,7 +400,7 @@ msgstr "오프셋:"
 
 #: ../src/Grids/PlankGrid.vala:181
 msgid "The offset (in percent) from the alignment point to shift Plank"
-msgstr "정렬된 위치에서 플랭크를 미세 이동 (퍼센트)"
+msgstr ""
 
 #: ../src/Grids/TerminalGrid.vala:83 ../src/Settings/GalaSettings.vala:86
 msgid "Custom"
@@ -412,40 +412,40 @@ msgstr "불투명도:"
 
 #: ../src/Grids/TerminalGrid.vala:151
 msgid "How transparent the background of the terminal is"
-msgstr "터미널의 배경 투명도"
+msgstr ""
 
 #: ../src/Grids/TerminalGrid.vala:170
 msgid "A set of settings for terminal palette and background color"
-msgstr "터미널 색과 관련된 설정"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:34
 msgid "Prefer Dark Theme:"
-msgstr "어두운 테마 선호:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:35
 msgid "GTK+ windows will now prefer the dark GTK+ theme"
-msgstr "GTK+ 창들이 어두운 테마를 먼저 사용합니다."
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:36
 msgid ""
 "Some applications will not react well with this enabled and can look terrible"
-msgstr "몇몇 애플리케이션들은 올바르게 작동하지 않거나 이상하게 보일 수 있습니다."
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:45
 msgid "Metacity Theme:"
-msgstr "메타시티 테마:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:46
 msgid "Used to render windows that do not use GTK+"
-msgstr "GTK+를 사용하지 않는 창을 표시할 때 사용"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:57
 msgid "GTK+ Theme:"
-msgstr "GTK+ 테마:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:58
 msgid "Used to render GTK+ windows like Switchboard"
-msgstr "Switchboard와 같은 GTK+ 창 표시에 사용"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:69
 msgid "Icon Theme:"
@@ -453,7 +453,7 @@ msgstr "아이콘 테마:"
 
 #: ../src/Grids/AppearanceGrid.vala:70
 msgid "Used to theme the icon set, including application icons"
-msgstr "애플리케이션 아이콘을 포함한 아이콘 표시에 사용되는 테마"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:81
 msgid "Cursor Theme:"
@@ -461,7 +461,7 @@ msgstr "커서 테마:"
 
 #: ../src/Grids/AppearanceGrid.vala:82
 msgid "Used to theme the cursor"
-msgstr "커서를 표시하는데 사용되는 테마"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:95
 msgid "Custom Layout:"
@@ -469,20 +469,20 @@ msgstr "사용자 정의 레이아웃:"
 
 #: ../src/Grids/AppearanceGrid.vala:96
 msgid "Custom window control layout"
-msgstr "사용자 지정 창 조정 레이아웃"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:112
 msgid "Window Controls:"
-msgstr "창 조정 버튼:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:113
 msgid ""
 "Controls located at the top of the window for close, minimize, and maximize"
-msgstr "창 위쪽에 있는 닫기, 최소화, 최대화 버튼"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:114
 msgid "May break window controls! May stop working with updates to system!"
-msgstr "잘못 설정하면 창 조정 버튼을 완전히 망가뜨릴 수 있습니다."
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:32
 msgid "Audible Bell:"
@@ -490,7 +490,7 @@ msgstr "시스템 알림음:"
 
 #: ../src/Grids/MiscGrid.vala:33
 msgid "Sound that plays when an error has been made"
-msgstr "오류에 생겼을 때 재생할 소리"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:32
 msgid "Focused Windows:"
@@ -498,11 +498,11 @@ msgstr "사용하고 있는 창:"
 
 #: ../src/Grids/ShadowsGrid.vala:33
 msgid "Shadow beneath windows that you have currently selected"
-msgstr "선택한 창 아래에 표시할 그림자"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:34 ../src/Grids/ShadowsGrid.vala:49
 msgid "This may not actually do anything"
-msgstr "실제로는 아무것도 바뀌지 않을 수 있습니다."
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:47
 msgid "Unfocused Windows:"
@@ -510,7 +510,7 @@ msgstr "사용하고 있지 않은 창:"
 
 #: ../src/Grids/ShadowsGrid.vala:48
 msgid "Shadow beneath windows that you do not have selected"
-msgstr "선택하지 않은 창 아래에 표시할 그림자"
+msgstr ""
 
 #: ../src/Grids/ShortcutsGrid.vala:72
 msgid "Name"
@@ -542,7 +542,7 @@ msgstr "명령:"
 
 #: ../src/Settings/GalaSettings.vala:80
 msgid "elementary"
-msgstr "elementary"
+msgstr ""
 
 #: ../src/Settings/GalaSettings.vala:81
 msgid "Close Only"
@@ -566,4 +566,4 @@ msgstr "OS X"
 
 #: ../src/Widgets/TweakWidget.vala:83
 msgid "Revert to default setting"
-msgstr "기본 설정으로 돌아가기"
+msgstr ""

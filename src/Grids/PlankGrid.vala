@@ -187,7 +187,35 @@ namespace ElementaryTweaks {
                     );
             this.add (offset);
 
+            var pressure_reveal = new TweakWidget.with_switch (
+                        _("Pressure Reveal:"),
+                        _("Whether to use pressure-based revealing of the dock if the support is available"),
+                        null,
+                        (() => { return PlankSettings.get_default ().pressure_reveal; }), // get
+                        ((val) => { PlankSettings.get_default ().pressure_reveal = val; }), // set
+                        (() => { PlankSettings.get_default ().pressure_reveal = false; }) // reset
+                    );
+            this.add (pressure_reveal);
 
+            var pinned_only = new TweakWidget.with_switch (
+                        _("Pinned Only:"),
+                        _("Whether to show only pinned applications. Useful for running more then one dock"),
+                        null,
+                        (() => { return PlankSettings.get_default ().pinned_only; }), // get
+                        ((val) => { PlankSettings.get_default ().pinned_only = val; }), // set
+                        (() => { PlankSettings.get_default ().pinned_only = false; }) // reset
+                    );
+            this.add (pinned_only);
+            
+            var auto_pinning = new TweakWidget.with_switch (
+                        _("Auto Pinning:"),
+                        _("Whether to automatically pin an application if it seems useful to do"),
+                        null,
+                        (() => { return PlankSettings.get_default ().auto_pinning; }), // get
+                        ((val) => { PlankSettings.get_default ().auto_pinning = val; }), // set
+                        (() => { PlankSettings.get_default ().auto_pinning = true; }) // reset
+                    );
+            this.add (auto_pinning);
             /*
             var label_items = new LLabel.right (_("Item Alignment:"));
             var alignment = PlankSettings.get_default ().dock_alignment;

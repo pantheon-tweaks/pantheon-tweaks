@@ -8,23 +8,23 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-28 07:48-0500\n"
-"PO-Revision-Date: 2015-10-20 20:43+0000\n"
-"Last-Translator: Ayhan Kuru <ayhankuru@yandex.com.tr>\n"
+"PO-Revision-Date: 2014-08-19 07:17+0000\n"
+"Last-Translator: Michael P. Starkweather <Mpstark@gmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-10-21 06:20+0000\n"
-"X-Generator: Launchpad (build 17812)\n"
+"X-Launchpad-Export-Date: 2014-08-30 08:42+0000\n"
+"X-Generator: Launchpad (build 17176)\n"
 "Language: tr\n"
 
 #: ../src/Tweaks.vala:38
 msgid "Tweaks"
-msgstr "İnce Ayarlar"
+msgstr ""
 
 #: ../src/Tweaks.vala:39
 msgid "Tweak elementary OS settings"
-msgstr "Elemantary Os İnce ayarlar"
+msgstr ""
 
 #: ../src/Tweaks.vala:49
 msgid "Appearance"
@@ -37,11 +37,11 @@ msgstr "Genel"
 
 #: ../src/Tweaks.vala:52
 msgid "Fonts"
-msgstr "Yazı Tipleri"
+msgstr "Yazıtipleri"
 
 #: ../src/Tweaks.vala:56
 msgid "Animations"
-msgstr "Animasyonlar"
+msgstr "Canlandırmalar"
 
 #: ../src/Tweaks.vala:60
 msgid "Shadows"
@@ -98,7 +98,7 @@ msgstr "Kaldır"
 
 #: ../src/Grids/CerbereGrid.vala:65 ../src/Grids/ShortcutsGrid.vala:164
 msgid "Revert to Default"
-msgstr "Eski duruma getir"
+msgstr "Varsayılana Dönder"
 
 #: ../src/Grids/AnimationsGrid.vala:43
 msgid "Animations:"
@@ -106,7 +106,7 @@ msgstr "Animasyonlar"
 
 #: ../src/Grids/AnimationsGrid.vala:44
 msgid "If the animations play at all"
-msgstr "Animasyonlar varsa hepsini oynat"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:60
 msgid "Open Duration:"
@@ -114,7 +114,7 @@ msgstr "Açılma Süresi:"
 
 #: ../src/Grids/AnimationsGrid.vala:61
 msgid "Plays when an application is opened"
-msgstr "Oynatıldığında uygulamayı açıldı"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:72
 msgid "Close Duration:"
@@ -122,7 +122,7 @@ msgstr "Kapanma Süresi"
 
 #: ../src/Grids/AnimationsGrid.vala:73
 msgid "Plays when an application is closed"
-msgstr "Oynatıldığında uygulamayı kapandı"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:84
 msgid "Snap Duration:"

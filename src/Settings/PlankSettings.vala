@@ -120,6 +120,19 @@ namespace ElementaryTweaks {
         public bool current_workspace_only {
             get {
                 try {
+                    return configs.get_boolean ("PlankDockPreferences", "PressureReveal");
+                } catch (Error e) { warning (e.message); }
+                return false;
+            }
+            set {
+                configs.set_boolean ("PlankDockPreferences", "PressureReveal", value);
+                save ();
+            }
+        }
+
+        public bool pressure_reveal {
+            get {
+                try {
                     return configs.get_boolean ("PlankDockPreferences", "CurrentWorkspaceOnly");
                 } catch (Error e) { warning (e.message); }
                 return false;
@@ -130,6 +143,32 @@ namespace ElementaryTweaks {
             }
         }
 
+        public bool pinned_only {
+            get {
+                try {
+                    return configs.get_boolean ("PlankDockPreferences", "PinnedOnly");
+                } catch (Error e) { warning (e.message); }
+                return false;
+            }
+            set {
+                configs.set_boolean ("PlankDockPreferences", "PinnedOnly", value);
+                save ();
+            }
+        }
+        
+        public bool auto_pinning {
+            get {
+                try {
+                    return configs.get_boolean ("PlankDockPreferences", "AutoPinning");
+                } catch (Error e) { warning (e.message); }
+                return true;
+            }
+            set {
+                configs.set_boolean ("PlankDockPreferences", "AutoPinning", value);
+                save ();
+            }
+        }
+                        
         public int hide_mode {
             get {
                 try {

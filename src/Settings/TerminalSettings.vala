@@ -27,7 +27,10 @@ namespace ElementaryTweaks {
         public int opacity { get; set; }
         public string palette { get; set; }
         public int scrollback_lines { get; set; }
-
+        public bool unsafe_paste_alert { get; set; }
+        public bool natural_copy_paste { get; set; }
+        public string cursor_shape { get; set; }
+                
         static TerminalSettings? instance = null;
 
         private TerminalSettings ()

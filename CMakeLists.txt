@@ -18,6 +18,9 @@ set (PLUGICON "preferences-desktop-tweaks")
 
 project (${PLUGNAME})
 
+# Comment this out to enable C compiler warnings
+add_definitions (-w)
+
 #########################################################
 # Only alter stuff below if you know what you are doing #
 #########################################################
@@ -46,13 +49,24 @@ set (CPACK_SOURCE_IGNORE_FILES "/build/;/.bzr/;/.bzrignore;~$;${CPACK_SOURCE_IGN
 include (CPack)
 add_custom_target (dist COMMAND ${CMAKE_MAKE_PROGRAM} package_source)
 
-# Files
-#file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")
 
-# Traslation stuff
+# Set policy permission for theme patching
+configure_file (${CMAKE_SOURCE_DIR}/data/org.pantheon.elementary-tweaks.egtk.policy.cmake ${CMAKE_BINARY_DIR}/data/org.pantheon.elementary-tweaks.egtk.policy)
+install (FILES ${CMAKE_BINARY_DIR}/data/org.pantheon.elementary-tweaks.egtk.policy DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/polkit-1/actions/)
+
+# Registering theme-patcher so it gets executed each time a dpkg install takes 
+# place
+# See http://unix.stackexchange.com/questions/76294/hook-a-script-to-apt-get
+configure_file (${CMAKE_SOURCE_DIR}/data/99theme-patcher.cmake ${CMAKE_BINARY_DIR}/data/99theme-patcher)
+install (FILES ${CMAKE_BINARY_DIR}/data/99theme-patcher DESTINATION /etc/apt/apt.conf.d/)
+
+# Translation stuff
 add_subdirectory (po)
 
 # Info-plug
 install (FILES ${resources} DESTINATION ${PKGDATADIR})
 
 add_subdirectory(src)
+add_subdirectory(theme-patcher)
+add_subdirectory(schemas)
+

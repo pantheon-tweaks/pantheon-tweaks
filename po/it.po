@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-28 07:48-0500\n"
-"PO-Revision-Date: 2015-11-13 21:42+0000\n"
-"Last-Translator: Emanuele Tocco <mr.emanueletocco@gmail.com>\n"
+"PO-Revision-Date: 2014-10-27 10:27+0000\n"
+"Last-Translator: Matteo Formenti <matteoformenti1998@gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-14 04:58+0000\n"
-"X-Generator: Launchpad (build 17845)\n"
+"X-Launchpad-Export-Date: 2014-10-28 07:58+0000\n"
+"X-Generator: Launchpad (build 17203)\n"
 "Language: it\n"
 
 #: ../src/Tweaks.vala:38
@@ -275,7 +275,7 @@ msgstr "Visualizza solo nel Workspace corrente"
 
 #: ../src/Grids/PlankGrid.vala:34
 msgid "Will still show pinned items on different workspaces"
-msgstr "Mostrerà ancora elementi fissati in spazi di lavoro differenti"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:43
 msgid "Lock Items:"
@@ -283,7 +283,7 @@ msgstr "Blocca elementi:"
 
 #: ../src/Grids/PlankGrid.vala:44
 msgid "Whether to prevent drag'n'drop actions and lock items on the dock"
-msgstr "Che previene azioni di trascinamento e blocca elementi nella dock"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:54
 msgid "Icon Size:"
@@ -398,7 +398,6 @@ msgstr "Allineamento"
 #: ../src/Grids/PlankGrid.vala:169
 msgid "The alignment of the items in this dock if panel-mode is used"
 msgstr ""
-"L'allineamento degli elementi in questa dock se è usata la modalità pannello"
 
 #: ../src/Grids/PlankGrid.vala:180
 msgid "Offset:"
@@ -407,8 +406,6 @@ msgstr "Scostamento:"
 #: ../src/Grids/PlankGrid.vala:181
 msgid "The offset (in percent) from the alignment point to shift Plank"
 msgstr ""
-"La compensazione (in percentuale) dal punto di allineamento allo spostamento "
-"di Plank"
 
 #: ../src/Grids/TerminalGrid.vala:83 ../src/Settings/GalaSettings.vala:86
 msgid "Custom"
@@ -489,14 +486,10 @@ msgstr "Pulsanti di controllo delle finestre"
 msgid ""
 "Controls located at the top of the window for close, minimize, and maximize"
 msgstr ""
-"Controlli localizzati nella sommità della finestra per chiudere, minimizzare "
-"e massimizzare"
 
 #: ../src/Grids/AppearanceGrid.vala:114
 msgid "May break window controls! May stop working with updates to system!"
 msgstr ""
-"Potrebbe rompere i controlli della finestra! Potrebbe smettere di funzionare "
-"con aggiornamenti di sistema!"
 
 #: ../src/Grids/MiscGrid.vala:32
 msgid "Audible Bell:"
@@ -512,7 +505,7 @@ msgstr "Finestra attiva"
 
 #: ../src/Grids/ShadowsGrid.vala:33
 msgid "Shadow beneath windows that you have currently selected"
-msgstr "Ombra sotto le finestre che hai attualmente selezionato"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:34 ../src/Grids/ShadowsGrid.vala:49
 msgid "This may not actually do anything"
@@ -524,7 +517,7 @@ msgstr "Finestra inattiva"
 
 #: ../src/Grids/ShadowsGrid.vala:48
 msgid "Shadow beneath windows that you do not have selected"
-msgstr "Ombra sotto le finestre che non hai selezionato"
+msgstr ""
 
 #: ../src/Grids/ShortcutsGrid.vala:72
 msgid "Name"
@@ -540,27 +533,27 @@ msgstr "Comando"
 
 #: ../src/Grids/ShortcutsGrid.vala:121
 msgid "Every field must be filled!"
-msgstr "Ogni campo dev'essere riempito!"
+msgstr ""
 
 #: ../src/Grids/ShortcutsGrid.vala:130
 msgid "Name:"
-msgstr "Nome:"
+msgstr ""
 
 #: ../src/Grids/ShortcutsGrid.vala:133
 msgid "Shortcut:"
-msgstr "Scorciatoia:"
+msgstr ""
 
 #: ../src/Grids/ShortcutsGrid.vala:136
 msgid "Command:"
-msgstr "Comando:"
+msgstr ""
 
 #: ../src/Settings/GalaSettings.vala:80
 msgid "elementary"
-msgstr "elementary"
+msgstr ""
 
 #: ../src/Settings/GalaSettings.vala:81
 msgid "Close Only"
-msgstr "Chiudi Solamente"
+msgstr ""
 
 #: ../src/Settings/GalaSettings.vala:82
 msgid "Minimize Left"
@@ -580,4 +573,4 @@ msgstr "OS X"
 
 #: ../src/Widgets/TweakWidget.vala:83
 msgid "Revert to default setting"
-msgstr "Torna alle impostazioni di fabbrica"
+msgstr ""

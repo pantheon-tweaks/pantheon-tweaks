@@ -20,7 +20,7 @@ namespace ElementaryTweaks {
 
     public class AppearanceGrid : Gtk.Grid
     {
-        private Gtk.Widget custom_layout; // stupid closure won't 'see' the widget unless it's non-local
+        private TweakWidget custom_layout; // stupid closure won't 'see' the widget unless it's non-local
 
         public AppearanceGrid () {
             // setup grid so that it aligns everything properly
@@ -130,6 +130,7 @@ namespace ElementaryTweaks {
                                     custom_layout.sensitive = false;
                                     AppearanceSettings.get_default ().button_layout = val;
                                     XSettings.get_default ().decoration_layout = val;
+                                    custom_layout.text = val ;
                                 }
                             }), // set
                         (() => {

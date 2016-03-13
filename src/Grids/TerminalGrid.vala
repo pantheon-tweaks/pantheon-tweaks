@@ -183,6 +183,48 @@ namespace ElementaryTweaks {
                     );
             this.add (theme);
 
+            var unsafe_paste_alert_switch = new TweakWidget.with_switch (
+                        _("Unsafe alert:"),
+                        _("If the user paste's a command into the terminal that might be considered unsafe, when them"),
+                        null,
+                        (() => { return TerminalSettings.get_default ().unsafe_paste_alert; }), // get
+                        ((val) => {
+                                TerminalSettings.get_default ().unsafe_paste_alert = val;
+                            }), // set
+                        (() => { TerminalSettings.get_default ().schema.reset ("unsafe-paste-alert"); }) // reset
+                    );
+            this.add (unsafe_paste_alert_switch);
+            
+            var natural_copy_paste_switch = new TweakWidget.with_switch (
+                        _("Natural copy paste:"),
+                        _("Defined whether to use ctrl-c or ctrl-shift-c for copy"),
+                        null,
+                        (() => { return TerminalSettings.get_default ().natural_copy_paste; }), // get
+                        ((val) => {
+                                TerminalSettings.get_default ().natural_copy_paste = val;
+                            }), // set
+                        (() => { TerminalSettings.get_default ().schema.reset ("natural-copy-paste"); }) // reset
+                    );
+            this.add (natural_copy_paste_switch);
+            
+            var cursor_map = new Gee.HashMap<string, string> ();
+            cursor_map.set ("Block", _("Block"));
+            cursor_map.set ("I-Beam", _("I-Beam"));
+            cursor_map.set ("Underline", _("Underline"));
+            var cursor_shape_combox = new TweakWidget.with_combo_box (
+                        _("Cursor shape:"), // name
+                        _("The shape of the cursor of the terminal"), // tooltip
+                        null, // warning
+                        (() => { return TerminalSettings.get_default ().cursor_shape; }), // get
+                        ((val) => {
+                                 TerminalSettings.get_default ().cursor_shape = val;
+                            }), // set
+                        (() => {
+                                TerminalSettings.get_default ().schema.reset ("cursor-shape");
+                            }), // reset
+                        cursor_map
+                    );
+            this.add (cursor_shape_combox);
             /*
             // scrollback
             var limit_scrollback = new Gtk.Switch ();

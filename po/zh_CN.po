@@ -8,23 +8,23 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-28 07:48-0500\n"
-"PO-Revision-Date: 2015-06-04 07:34+0000\n"
-"Last-Translator: colindemian <dengmengpc@gmail.com>\n"
+"PO-Revision-Date: 2014-08-19 07:17+0000\n"
+"Last-Translator: Michael P. Starkweather <Mpstark@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-06-05 06:06+0000\n"
-"X-Generator: Launchpad (build 17540)\n"
+"X-Launchpad-Export-Date: 2014-08-30 08:42+0000\n"
+"X-Generator: Launchpad (build 17176)\n"
 "Language: \n"
 
 #: ../src/Tweaks.vala:38
 msgid "Tweaks"
-msgstr "调整工具"
+msgstr ""
 
 #: ../src/Tweaks.vala:39
 msgid "Tweak elementary OS settings"
-msgstr "调整 elementary OS 设置"
+msgstr ""
 
 #: ../src/Tweaks.vala:49
 msgid "Appearance"
@@ -49,7 +49,7 @@ msgstr "阴影"
 
 #: ../src/Tweaks.vala:66
 msgid "Miscellaneous"
-msgstr "其它"
+msgstr "杂项"
 
 #: ../src/Tweaks.vala:70
 msgid "Plank"
@@ -80,7 +80,7 @@ msgstr "终端"
 #: ../src/Widgets/AcceleratorInputWidget.vala:87
 #: ../src/Widgets/AcceleratorInputWidget.vala:105
 msgid "Disabled"
-msgstr "已禁用"
+msgstr "禁用"
 
 #: ../src/Grids/CerbereGrid.vala:42
 msgid "Watched Processes"
@@ -106,7 +106,7 @@ msgstr "动画："
 
 #: ../src/Grids/AnimationsGrid.vala:44
 msgid "If the animations play at all"
-msgstr "是否播放动画"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:60
 msgid "Open Duration:"
@@ -114,7 +114,7 @@ msgstr "打开时长："
 
 #: ../src/Grids/AnimationsGrid.vala:61
 msgid "Plays when an application is opened"
-msgstr "当一个应用开启时播放"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:72
 msgid "Close Duration:"
@@ -122,7 +122,7 @@ msgstr "关闭时长："
 
 #: ../src/Grids/AnimationsGrid.vala:73
 msgid "Plays when an application is closed"
-msgstr "当一个应用关闭时播放"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:84
 msgid "Snap Duration:"
@@ -130,7 +130,7 @@ msgstr "Snap 时长："
 
 #: ../src/Grids/AnimationsGrid.vala:85
 msgid "Plays when an application is snapped to the side"
-msgstr "当应用靠近屏幕边缘时播放"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:96
 msgid "Minimize Duration:"
@@ -138,7 +138,7 @@ msgstr "最小化时长："
 
 #: ../src/Grids/AnimationsGrid.vala:97
 msgid "Plays when an application is minimized"
-msgstr "当一个应用最小化时播放"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:108
 msgid "Workspace Switch Duration:"
@@ -146,19 +146,19 @@ msgstr "工作区切换时长："
 
 #: ../src/Grids/AnimationsGrid.vala:109
 msgid "Plays when a workspace switch is initiated"
-msgstr "当一个工作区被切换时播放"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:32
 msgid "Single Click:"
-msgstr "单击打开："
+msgstr "单击："
 
 #: ../src/Grids/FilesGrid.vala:33
 msgid "If set off, files will use 'normal' double-click behavior"
-msgstr "如果关闭，文件将使用“正常”双击打开行为"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:43
 msgid "Locale"
-msgstr "区域设置"
+msgstr "区域"
 
 #: ../src/Grids/FilesGrid.vala:44
 msgid "ISO"
@@ -174,7 +174,7 @@ msgstr "日期格式："
 
 #: ../src/Grids/FilesGrid.vala:49
 msgid "For date accessed, modified, etc."
-msgstr "对于访问日期，修改等"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:60
 msgid "Smallest"
@@ -198,7 +198,7 @@ msgstr "大"
 
 #: ../src/Grids/FilesGrid.vala:65
 msgid "Larger"
-msgstr "较大"
+msgstr "更大"
 
 #: ../src/Grids/FilesGrid.vala:66
 msgid "Largest"
@@ -210,7 +210,7 @@ msgstr "侧边栏图标大小："
 
 #: ../src/Grids/FilesGrid.vala:70
 msgid "Size of the icons in the sidebar"
-msgstr "在侧边栏的图标大小"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:32
 msgid "Default Font:"
@@ -218,7 +218,7 @@ msgstr "默认字体："
 
 #: ../src/Grids/FontsGrid.vala:33
 msgid "Used by default by most applications"
-msgstr "对于大多数应用程序，默认情况下使用"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:43
 msgid "Document Font:"
@@ -226,7 +226,7 @@ msgstr "文档字体："
 
 #: ../src/Grids/FontsGrid.vala:44
 msgid "Used when displaying documents, if no other font was chosen"
-msgstr "用于未指定字体的文档显示"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:54
 msgid "Monospace Font:"
@@ -234,15 +234,15 @@ msgstr "等宽字体："
 
 #: ../src/Grids/FontsGrid.vala:55
 msgid "Used in the terminal, for code, and sometimes for plain text"
-msgstr "用于终端、代码及纯文本显示"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:65
 msgid "Titlebar Font:"
-msgstr "标题字体："
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:66
 msgid "Used to display window titles"
-msgstr "用于显示窗口标题"
+msgstr ""
 
 #: ../src/Grids/SlingshotGrid.vala:32
 msgid "Rows:"
@@ -250,7 +250,7 @@ msgstr "行："
 
 #: ../src/Grids/SlingshotGrid.vala:33
 msgid "The number of rows displayed in Slingshot"
-msgstr "Slingshot 应用列表显示的行数"
+msgstr ""
 
 #: ../src/Grids/SlingshotGrid.vala:44
 msgid "Columns:"
@@ -258,19 +258,19 @@ msgstr "列："
 
 #: ../src/Grids/SlingshotGrid.vala:45
 msgid "The number of columns displayed in Slingshot"
-msgstr "Slingshot 应用列表显示的列数"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:32
 msgid "Current Workspace Only"
-msgstr "只在当前工作区"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:33
 msgid "Show only windows on the current workspace"
-msgstr "只在当前工作区显示"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:34
 msgid "Will still show pinned items on different workspaces"
-msgstr "已锁定的项目仍会在不同工作区显示"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:43
 msgid "Lock Items:"
@@ -278,15 +278,15 @@ msgstr "锁定项目："
 
 #: ../src/Grids/PlankGrid.vala:44
 msgid "Whether to prevent drag'n'drop actions and lock items on the dock"
-msgstr "拖放项目到 Dock 时是否锁定"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:54
 msgid "Icon Size:"
-msgstr "图标尺寸："
+msgstr "图标大小："
 
 #: ../src/Grids/PlankGrid.vala:55
 msgid "The size of each icon in the plank"
-msgstr "Plank 图标尺寸"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:66
 msgid "Don't hide"
@@ -310,15 +310,15 @@ msgstr "隐藏模式："
 
 #: ../src/Grids/PlankGrid.vala:73
 msgid "Plank's hide mode"
-msgstr "Plank 的隐藏模式"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:84
 msgid "Hide Delay (ms):"
-msgstr "隐藏延时（毫秒）："
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:85
 msgid "Time to wait before unhiding the dock"
-msgstr "隐藏结束后显示 Dock 的时间"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:96 ../src/Grids/TerminalGrid.vala:169
 msgid "Theme:"
@@ -326,11 +326,11 @@ msgstr "主题："
 
 #: ../src/Grids/PlankGrid.vala:97
 msgid "Plank's theme for the dock"
-msgstr "Dock 使用的 Plank 主题"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:108
 msgid "Primary Monitor"
-msgstr "主显示器"
+msgstr "主显示屏"
 
 #: ../src/Grids/PlankGrid.vala:111
 msgid "Monitor %d"
@@ -342,7 +342,7 @@ msgstr "显示器："
 
 #: ../src/Grids/PlankGrid.vala:116
 msgid "The monitor that Plank is displayed on"
-msgstr "Plank 在哪一个显示器显示"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:127 ../src/Grids/PlankGrid.vala:147
 #: ../src/Grids/PlankGrid.vala:164
@@ -364,11 +364,11 @@ msgstr "底部"
 
 #: ../src/Grids/PlankGrid.vala:133
 msgid "Screen Position:"
-msgstr "屏幕位置"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:134
 msgid "Where on the screen Plank is displayed"
-msgstr "Plank 在屏幕中显示的位置"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:145
 msgid "Panel"
@@ -376,15 +376,15 @@ msgstr "面板"
 
 #: ../src/Grids/PlankGrid.vala:148 ../src/Grids/PlankGrid.vala:165
 msgid "Centered"
-msgstr "居中"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:151
 msgid "Alignment:"
-msgstr "对齐方式："
+msgstr "对齐："
 
 #: ../src/Grids/PlankGrid.vala:152
 msgid "The alignment for the dock on the monitor's edge"
-msgstr "Dock 在屏幕边缘的对齐方式"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:168
 msgid "Item Alignment:"
@@ -392,15 +392,15 @@ msgstr "条目对齐："
 
 #: ../src/Grids/PlankGrid.vala:169
 msgid "The alignment of the items in this dock if panel-mode is used"
-msgstr "面板模式时项目在屏幕边缘的对齐方式"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:180
 msgid "Offset:"
-msgstr "微调："
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:181
 msgid "The offset (in percent) from the alignment point to shift Plank"
-msgstr "对 Plank 的对齐点进行微调"
+msgstr ""
 
 #: ../src/Grids/TerminalGrid.vala:83 ../src/Settings/GalaSettings.vala:86
 msgid "Custom"
@@ -412,40 +412,40 @@ msgstr "透明度："
 
 #: ../src/Grids/TerminalGrid.vala:151
 msgid "How transparent the background of the terminal is"
-msgstr "终端背景的透明度"
+msgstr ""
 
 #: ../src/Grids/TerminalGrid.vala:170
 msgid "A set of settings for terminal palette and background color"
-msgstr "终端背景主题"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:34
 msgid "Prefer Dark Theme:"
-msgstr "深色主题："
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:35
 msgid "GTK+ windows will now prefer the dark GTK+ theme"
-msgstr "GTK+ 窗口会优先使用深色 GTK+ 主题"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:36
 msgid ""
 "Some applications will not react well with this enabled and can look terrible"
-msgstr "某些应用可能不支持，看起来可能不太美观"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:45
 msgid "Metacity Theme:"
-msgstr "窗口主题："
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:46
 msgid "Used to render windows that do not use GTK+"
-msgstr "非GTK+窗口使用的主题"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:57
 msgid "GTK+ Theme:"
-msgstr "GTK+ 主题："
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:58
 msgid "Used to render GTK+ windows like Switchboard"
-msgstr "GTK+窗口使用的主题"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:69
 msgid "Icon Theme:"
@@ -453,7 +453,7 @@ msgstr "图标主题："
 
 #: ../src/Grids/AppearanceGrid.vala:70
 msgid "Used to theme the icon set, including application icons"
-msgstr "图标主题包，包括应用程序图标"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:81
 msgid "Cursor Theme:"
@@ -461,7 +461,7 @@ msgstr "光标主题："
 
 #: ../src/Grids/AppearanceGrid.vala:82
 msgid "Used to theme the cursor"
-msgstr "鼠标主题"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:95
 msgid "Custom Layout:"
@@ -469,20 +469,20 @@ msgstr "自定义布局："
 
 #: ../src/Grids/AppearanceGrid.vala:96
 msgid "Custom window control layout"
-msgstr "自定义窗口布局"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:112
 msgid "Window Controls:"
-msgstr "窗口按钮位置："
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:113
 msgid ""
 "Controls located at the top of the window for close, minimize, and maximize"
-msgstr "关闭、最小化及最大化按钮的位置"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:114
 msgid "May break window controls! May stop working with updates to system!"
-msgstr "可能会破坏窗口控制！系统升级后可能会失效！"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:32
 msgid "Audible Bell:"
@@ -490,7 +490,7 @@ msgstr "响铃："
 
 #: ../src/Grids/MiscGrid.vala:33
 msgid "Sound that plays when an error has been made"
-msgstr "发生错误时播放的提示音"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:32
 msgid "Focused Windows:"
@@ -498,11 +498,11 @@ msgstr "焦点窗口："
 
 #: ../src/Grids/ShadowsGrid.vala:33
 msgid "Shadow beneath windows that you have currently selected"
-msgstr "当前已选中窗口的阴影显示"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:34 ../src/Grids/ShadowsGrid.vala:49
 msgid "This may not actually do anything"
-msgstr "可能会没有任何效果"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:47
 msgid "Unfocused Windows:"
@@ -510,7 +510,7 @@ msgstr "非焦点窗口："
 
 #: ../src/Grids/ShadowsGrid.vala:48
 msgid "Shadow beneath windows that you do not have selected"
-msgstr "未选中窗口的阴影显示"
+msgstr ""
 
 #: ../src/Grids/ShortcutsGrid.vala:72
 msgid "Name"
@@ -542,7 +542,7 @@ msgstr "命令："
 
 #: ../src/Settings/GalaSettings.vala:80
 msgid "elementary"
-msgstr "elementary 风格"
+msgstr ""
 
 #: ../src/Settings/GalaSettings.vala:81
 msgid "Close Only"
@@ -562,8 +562,8 @@ msgstr "窗口"
 
 #: ../src/Settings/GalaSettings.vala:85
 msgid "OS X"
-msgstr "MAC OS X 风格"
+msgstr "OS X"
 
 #: ../src/Widgets/TweakWidget.vala:83
 msgid "Revert to default setting"
-msgstr "重置为默认设置"
+msgstr ""

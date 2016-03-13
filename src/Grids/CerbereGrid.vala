@@ -102,9 +102,9 @@ namespace ElementaryTweaks {
 
             reset_button.clicked.connect (() => {
                     if ( watched.contains("wingpanel-slim") )
-                    CerbereSettings.get_default ().monitored_processes = { "wingpanel-slim" , "plank", "slingshot-launcher --silent" };
+                        CerbereSettings.get_default ().monitored_processes = { "wingpanel-slim" , "plank", "slingshot-launcher --silent" };
                     else
-                    CerbereSettings.get_default ().schema.reset ("monitored-processes");
+                        CerbereSettings.get_default ().schema.reset ("monitored-processes");
                     list_update();
                     });
 

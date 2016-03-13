@@ -8,23 +8,23 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-28 07:48-0500\n"
-"PO-Revision-Date: 2015-11-05 20:34+0000\n"
-"Last-Translator: Jan Máslo <jeden.Maslic.nestaci@openmailbox.org>\n"
+"PO-Revision-Date: 2014-08-19 07:12+0000\n"
+"Last-Translator: Tomas Kral <kralutomas@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-06 05:40+0000\n"
-"X-Generator: Launchpad (build 17838)\n"
+"X-Launchpad-Export-Date: 2014-08-30 08:41+0000\n"
+"X-Generator: Launchpad (build 17176)\n"
 "Language: cs\n"
 
 #: ../src/Tweaks.vala:38
 msgid "Tweaks"
-msgstr "Vylepšení"
+msgstr ""
 
 #: ../src/Tweaks.vala:39
 msgid "Tweak elementary OS settings"
-msgstr "Vylepšit nastavení elementary OS"
+msgstr ""
 
 #: ../src/Tweaks.vala:49
 msgid "Appearance"
@@ -53,7 +53,7 @@ msgstr "Různé"
 
 #: ../src/Tweaks.vala:70
 msgid "Plank"
-msgstr "Plank"
+msgstr ""
 
 #: ../src/Tweaks.vala:70 ../src/Tweaks.vala:74 ../src/Tweaks.vala:78
 #: ../src/Tweaks.vala:82 ../src/Tweaks.vala:86
@@ -66,11 +66,11 @@ msgstr "Správce souborů"
 
 #: ../src/Tweaks.vala:78
 msgid "Slingshot"
-msgstr "Slingshot"
+msgstr ""
 
 #: ../src/Tweaks.vala:82
 msgid "Cerbere"
-msgstr "Cerebre"
+msgstr ""
 
 #: ../src/Tweaks.vala:86
 msgid "Terminal"
@@ -80,7 +80,7 @@ msgstr "Příkazová řádka"
 #: ../src/Widgets/AcceleratorInputWidget.vala:87
 #: ../src/Widgets/AcceleratorInputWidget.vala:105
 msgid "Disabled"
-msgstr "Vypnuto"
+msgstr ""
 
 #: ../src/Grids/CerbereGrid.vala:42
 msgid "Watched Processes"
@@ -98,7 +98,7 @@ msgstr "Odebrat"
 
 #: ../src/Grids/CerbereGrid.vala:65 ../src/Grids/ShortcutsGrid.vala:164
 msgid "Revert to Default"
-msgstr "Vrátit se na výchozí"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:43
 msgid "Animations:"
@@ -106,47 +106,47 @@ msgstr "Animace:"
 
 #: ../src/Grids/AnimationsGrid.vala:44
 msgid "If the animations play at all"
-msgstr "Jestli budou animace zapnuté"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:60
 msgid "Open Duration:"
-msgstr "Rychlost otevření:"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:61
 msgid "Plays when an application is opened"
-msgstr "Přehrává se, když se aplikace otevře"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:72
 msgid "Close Duration:"
-msgstr "Rychlost zavření"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:73
 msgid "Plays when an application is closed"
-msgstr "Přehrává se, když se aplikace zavře"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:84
 msgid "Snap Duration:"
-msgstr "Rychlost přichycení"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:85
 msgid "Plays when an application is snapped to the side"
-msgstr "Přehrává se, když se aplikace přichití k okraji"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:96
 msgid "Minimize Duration:"
-msgstr "Rychlost minimalizace"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:97
 msgid "Plays when an application is minimized"
-msgstr "Přehrává se, když se aplikace minimalizuje"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:108
 msgid "Workspace Switch Duration:"
-msgstr "Rychlost přepínání pracovní plochy"
+msgstr ""
 
 #: ../src/Grids/AnimationsGrid.vala:109
 msgid "Plays when a workspace switch is initiated"
-msgstr "Prehrává se, když se mění pracovní plocha"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:32
 msgid "Single Click:"
@@ -155,11 +155,10 @@ msgstr "Jedno kliknutí:"
 #: ../src/Grids/FilesGrid.vala:33
 msgid "If set off, files will use 'normal' double-click behavior"
 msgstr ""
-"Pokud vypnuto, správce souborů bude používat 'normální' chování - dvojklik"
 
 #: ../src/Grids/FilesGrid.vala:43
 msgid "Locale"
-msgstr "Místní"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:44
 msgid "ISO"
@@ -167,7 +166,7 @@ msgstr "ISO"
 
 #: ../src/Grids/FilesGrid.vala:45
 msgid "Informal"
-msgstr "Neformální"
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:48
 msgid "Date Format:"
@@ -175,7 +174,7 @@ msgstr "Formát data:"
 
 #: ../src/Grids/FilesGrid.vala:49
 msgid "For date accessed, modified, etc."
-msgstr "Pro datum přístupu, modifikace, atd."
+msgstr ""
 
 #: ../src/Grids/FilesGrid.vala:60
 msgid "Smallest"
@@ -211,7 +210,7 @@ msgstr "Velikost ikon postranní lišty:"
 
 #: ../src/Grids/FilesGrid.vala:70
 msgid "Size of the icons in the sidebar"
-msgstr "Velikost ikon v postranní liště"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:32
 msgid "Default Font:"
@@ -219,7 +218,7 @@ msgstr "Výchozí písmo:"
 
 #: ../src/Grids/FontsGrid.vala:33
 msgid "Used by default by most applications"
-msgstr "Používáno standartně většinou aplikací"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:43
 msgid "Document Font:"
@@ -228,7 +227,6 @@ msgstr "Písmo dokumentů:"
 #: ../src/Grids/FontsGrid.vala:44
 msgid "Used when displaying documents, if no other font was chosen"
 msgstr ""
-"Používáno při zobrazování dokumentů, pokud nebylo zvoleno jíné písmo."
 
 #: ../src/Grids/FontsGrid.vala:54
 msgid "Monospace Font:"
@@ -236,15 +234,15 @@ msgstr "Monospace písmo:"
 
 #: ../src/Grids/FontsGrid.vala:55
 msgid "Used in the terminal, for code, and sometimes for plain text"
-msgstr "Používáno v příkazovém řádku, pro kód a někdy pro prostý text"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:65
 msgid "Titlebar Font:"
-msgstr "Písmo záhlaví okna:"
+msgstr ""
 
 #: ../src/Grids/FontsGrid.vala:66
 msgid "Used to display window titles"
-msgstr "Používáno k zobrazení titulků oken"
+msgstr ""
 
 #: ../src/Grids/SlingshotGrid.vala:32
 msgid "Rows:"
@@ -252,7 +250,7 @@ msgstr "Řádků:"
 
 #: ../src/Grids/SlingshotGrid.vala:33
 msgid "The number of rows displayed in Slingshot"
-msgstr "Počet řádků zobrazených v Slingshotu"
+msgstr ""
 
 #: ../src/Grids/SlingshotGrid.vala:44
 msgid "Columns:"
@@ -260,27 +258,27 @@ msgstr "Sloupců:"
 
 #: ../src/Grids/SlingshotGrid.vala:45
 msgid "The number of columns displayed in Slingshot"
-msgstr "Počet sloupců zobrazených v Slingshotu"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:32
 msgid "Current Workspace Only"
-msgstr "Pouze současná pracovní plocha"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:33
 msgid "Show only windows on the current workspace"
-msgstr "Zobrazí poze okna na současné pracovní pĺoše"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:34
 msgid "Will still show pinned items on different workspaces"
-msgstr "Pode stále zobrazovat připnutá okna z jiných pracovních ploch"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:43
 msgid "Lock Items:"
-msgstr "Uzamknout položky"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:44
 msgid "Whether to prevent drag'n'drop actions and lock items on the dock"
-msgstr "Jestli je zakázáno přetahování a položky jsou uzamčené na doku"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:54
 msgid "Icon Size:"
@@ -288,7 +286,7 @@ msgstr "Velikost ikon:"
 
 #: ../src/Grids/PlankGrid.vala:55
 msgid "The size of each icon in the plank"
-msgstr "Velikost ikon na doku"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:66
 msgid "Don't hide"
@@ -312,15 +310,15 @@ msgstr "Režim skrývání:"
 
 #: ../src/Grids/PlankGrid.vala:73
 msgid "Plank's hide mode"
-msgstr "Plankův způsob skrývání"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:84
 msgid "Hide Delay (ms):"
-msgstr "Prodleva skrývání (ms):"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:85
 msgid "Time to wait before unhiding the dock"
-msgstr "Jak dlouho čekat před odkrytím doku"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:96 ../src/Grids/TerminalGrid.vala:169
 msgid "Theme:"
@@ -328,7 +326,7 @@ msgstr "Motiv:"
 
 #: ../src/Grids/PlankGrid.vala:97
 msgid "Plank's theme for the dock"
-msgstr "Plankův motiv pro dok"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:108
 msgid "Primary Monitor"
@@ -336,15 +334,15 @@ msgstr "Hlavní monitor"
 
 #: ../src/Grids/PlankGrid.vala:111
 msgid "Monitor %d"
-msgstr "Monitor %d"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:115
 msgid "Monitor:"
-msgstr "Monitor"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:116
 msgid "The monitor that Plank is displayed on"
-msgstr "Monitor, na kterém je Plank zobrazen"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:127 ../src/Grids/PlankGrid.vala:147
 #: ../src/Grids/PlankGrid.vala:164
@@ -366,11 +364,11 @@ msgstr "Dolů"
 
 #: ../src/Grids/PlankGrid.vala:133
 msgid "Screen Position:"
-msgstr "Pozice na obrazovce"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:134
 msgid "Where on the screen Plank is displayed"
-msgstr "Kde na obrazovce je Plank zobrazen"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:145
 msgid "Panel"
@@ -378,7 +376,7 @@ msgstr "Panel"
 
 #: ../src/Grids/PlankGrid.vala:148 ../src/Grids/PlankGrid.vala:165
 msgid "Centered"
-msgstr "Uprostřed"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:151
 msgid "Alignment:"
@@ -386,7 +384,7 @@ msgstr "Zarovnání:"
 
 #: ../src/Grids/PlankGrid.vala:152
 msgid "The alignment for the dock on the monitor's edge"
-msgstr "Zarovnání doku na okraji monitoru"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:168
 msgid "Item Alignment:"
@@ -394,15 +392,15 @@ msgstr "Zarovnání položek:"
 
 #: ../src/Grids/PlankGrid.vala:169
 msgid "The alignment of the items in this dock if panel-mode is used"
-msgstr "Zarovnání položek na doku, pokud je použit panelový mód"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:180
 msgid "Offset:"
-msgstr "Posun:"
+msgstr ""
 
 #: ../src/Grids/PlankGrid.vala:181
 msgid "The offset (in percent) from the alignment point to shift Plank"
-msgstr "Posun (v procentech) od bodu zarovnání Planku"
+msgstr ""
 
 #: ../src/Grids/TerminalGrid.vala:83 ../src/Settings/GalaSettings.vala:86
 msgid "Custom"
@@ -410,94 +408,89 @@ msgstr "Vlastní"
 
 #: ../src/Grids/TerminalGrid.vala:150
 msgid "Opacity:"
-msgstr "Krytí:"
+msgstr ""
 
 #: ../src/Grids/TerminalGrid.vala:151
 msgid "How transparent the background of the terminal is"
-msgstr "Jak průhlené je pozadí příkazového řádku"
+msgstr ""
 
 #: ../src/Grids/TerminalGrid.vala:170
 msgid "A set of settings for terminal palette and background color"
-msgstr "Sada nastavení barevé palety a barvy pozadí"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:34
 msgid "Prefer Dark Theme:"
-msgstr "Upřednostnit tmavý motiv:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:35
 msgid "GTK+ windows will now prefer the dark GTK+ theme"
-msgstr "Okna GTK+ budou upřednostňovat tmavý motiv"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:36
 msgid ""
 "Some applications will not react well with this enabled and can look terrible"
 msgstr ""
-"Některé aplikace na toto nemusí dobře reagovat a mohou vypadat ohyzně"
 
 #: ../src/Grids/AppearanceGrid.vala:45
 msgid "Metacity Theme:"
-msgstr "Motiv Metacity:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:46
 msgid "Used to render windows that do not use GTK+"
-msgstr "Použito k vykreslování oken, které nepoužívají GTK+"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:57
 msgid "GTK+ Theme:"
-msgstr "Motiv GTK+:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:58
 msgid "Used to render GTK+ windows like Switchboard"
-msgstr "Použito k vykreslování oken GKT+, jako je nastavení"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:69
 msgid "Icon Theme:"
-msgstr "Motiv ikon:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:70
 msgid "Used to theme the icon set, including application icons"
-msgstr "Použito jako motiv ikon, včetně ikon aplikací."
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:81
 msgid "Cursor Theme:"
-msgstr "Motiv kurzoru:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:82
 msgid "Used to theme the cursor"
-msgstr "Požíto jako motiv kurzoru"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:95
 msgid "Custom Layout:"
-msgstr "Vlastní rozložení:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:96
 msgid "Custom window control layout"
-msgstr "Vlastní rozložení ovládacích prvků okna"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:112
 msgid "Window Controls:"
-msgstr "Ovládací prvky okna:"
+msgstr ""
 
 #: ../src/Grids/AppearanceGrid.vala:113
 msgid ""
 "Controls located at the top of the window for close, minimize, and maximize"
 msgstr ""
-"Ovládací prvky na vrchním okraji okna pro zavírání, minimalizování a "
-"maximalizování"
 
 #: ../src/Grids/AppearanceGrid.vala:114
 msgid "May break window controls! May stop working with updates to system!"
 msgstr ""
-"Může zabránit správnému ovládání okna. Může přestat fungovat po aktualizaci "
-"systému!"
 
 #: ../src/Grids/MiscGrid.vala:32
 msgid "Audible Bell:"
-msgstr "Zvukové upozornění:"
+msgstr ""
 
 #: ../src/Grids/MiscGrid.vala:33
 msgid "Sound that plays when an error has been made"
-msgstr "Zvuk přehrávaný při provedení chyby"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:32
 msgid "Focused Windows:"
@@ -505,11 +498,11 @@ msgstr "Aktivní okna:"
 
 #: ../src/Grids/ShadowsGrid.vala:33
 msgid "Shadow beneath windows that you have currently selected"
-msgstr "Stín pod okny, které jsou právě označené"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:34 ../src/Grids/ShadowsGrid.vala:49
 msgid "This may not actually do anything"
-msgstr "Toto se možná nijak neprojeví"
+msgstr ""
 
 #: ../src/Grids/ShadowsGrid.vala:47
 msgid "Unfocused Windows:"
@@ -517,11 +510,11 @@ msgstr "Neaktivní okna:"
 
 #: ../src/Grids/ShadowsGrid.vala:48
 msgid "Shadow beneath windows that you do not have selected"
-msgstr "Sín pod okny, které nejsou označené"
+msgstr ""
 
 #: ../src/Grids/ShortcutsGrid.vala:72
 msgid "Name"
-msgstr "Název"
+msgstr ""
 
 #: ../src/Grids/ShortcutsGrid.vala:73
 msgid "Shortcut"
@@ -549,19 +542,19 @@ msgstr "Příkaz:"
 
 #: ../src/Settings/GalaSettings.vala:80
 msgid "elementary"
-msgstr "elementary"
+msgstr ""
 
 #: ../src/Settings/GalaSettings.vala:81
 msgid "Close Only"
-msgstr "Poze zavřít"
+msgstr ""
 
 #: ../src/Settings/GalaSettings.vala:82
 msgid "Minimize Left"
-msgstr "Minimalizovat vlevo"
+msgstr ""
 
 #: ../src/Settings/GalaSettings.vala:83
 msgid "Minimize Right"
-msgstr "Minimalizovat vpravo"
+msgstr ""
 
 #: ../src/Settings/GalaSettings.vala:84
 msgid "Windows"
@@ -573,4 +566,4 @@ msgstr "OS X"
 
 #: ../src/Widgets/TweakWidget.vala:83
 msgid "Revert to default setting"
-msgstr "Vrátit standartní nastavení"
+msgstr ""
