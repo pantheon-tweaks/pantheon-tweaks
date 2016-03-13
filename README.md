@@ -5,12 +5,6 @@ This repository is a fork of the [original elementary-tweaks](https://launchpad.
 
 ![sample](docs/screenshot.png)
 
-## How to install
-
-    # Install i-hate-farms repository (not necessary if already done)
-    curl -sL  http://i-hate-farms.github.io/spores/install | sudo bash - 
-    sudo apt-get install elementary-tweaks
-    
 ## Features
 
 ### v1.0
