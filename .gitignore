@@ -1,3 +1,2 @@
-build
-.bzr
-.bzrignore
+build/
+dist/
