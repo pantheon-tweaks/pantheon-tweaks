@@ -5,18 +5,13 @@ cmake_minimum_required (VERSION 2.8)
 cmake_policy (VERSION 2.8)
 
 # Set the Properties of your Plug
-
-# Set the Name of the plug, should be an executable command, lowercase, no spaces
 set (PLUGNAME "tweaks")
-# Set the Category of the Plug, one of:
-# personal, hardware, network, system
 set (PLUGCATEGORY "personal")
-# Set the Title to use for the Plug in the Overview and in the Titlebar
-set (PLUGTITLE "Tweaks")
-# The symbolic name of the Icon to use for the plug
+set (PLUGTITLE "System Tweaks")
 set (PLUGICON "preferences-desktop-tweaks")
 
-project (${PLUGNAME})
+set (VERSION "1.0")
+project (elementary-tweaks)
 
 # Comment this out to enable C compiler warnings
 add_definitions (-w)
@@ -45,7 +40,7 @@ add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\")
 set (CPACK_PACKAGE_VERSION ${VERSION})
 set (CPACK_SOURCE_GENERATOR "TGZ")
 set (CPACK_SOURCE_PACKAGE_FILE_NAME "${CMAKE_PROJECT_NAME}-${CPACK_PACKAGE_VERSION}")
-set (CPACK_SOURCE_IGNORE_FILES "/build/;/.bzr/;/.bzrignore;~$;${CPACK_SOURCE_IGNORE_FILES}")
+set (CPACK_SOURCE_IGNORE_FILES "/build/;/.bzr/;/.bzrignore;/.gitignore;~$;${CPACK_SOURCE_IGNORE_FILES}")
 include (CPack)
 add_custom_target (dist COMMAND ${CMAKE_MAKE_PROGRAM} package_source)
 
