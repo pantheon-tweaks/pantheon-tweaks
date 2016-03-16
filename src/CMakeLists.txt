@@ -26,7 +26,6 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Settings/GnomeSettings.vala
     Settings/TerminalSettings.vala
     Settings/XSettings.vala
-    # Settings/EgtkThemeSettings.vala
     Grids/AppearanceGrid.vala
     Grids/CerbereGrid.vala
     Grids/FontsGrid.vala
@@ -38,9 +37,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Grids/MiscGrid.vala
     Grids/SlingshotGrid.vala
     Grids/TerminalGrid.vala
-    # Grids/EgtkThemeGrid.vala
     Objects/ShortcutObject.vala
-    Objects/ThemePatchingOperation.vala    
     Widgets/LLabel.vala
     Widgets/AcceleratorInputWidget.vala
     Widgets/TweakWidget.vala
