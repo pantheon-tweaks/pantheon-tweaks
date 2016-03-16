@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Elementary Tweaks Developers, 2014
+ * Copyright (C) Elementary Tweaks Developers, 2014 - 2016
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,13 +15,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-//using Meadows.Stacktrace ;
 
 namespace ElementaryTweaks {
-
-    /**
-     * A Switchboard plugin to tweak the Elementary OS system.
-     */
     public class TweaksPlug : Switchboard.Plug {
         private Granite.Widgets.ThinPaned main_view;
         private Granite.Widgets.SourceList sidebar;
@@ -34,16 +29,14 @@ namespace ElementaryTweaks {
         private Gtk.Grid content_grid  ;
 
         public Gtk.Widget current_grid { get ; private set ; }
-        /**
-         * Creates a new Tweak Plug
-         */
+        
         public TweaksPlug () {
             // init plugin stuff
             Object (category: Category.PERSONAL,
                     code_name: Build.PROJECT_NAME,
                     display_name: _("Tweaks"),
                     description: _("Tweak elementary OS settings"),
-                    icon: "applications-development");
+                    icon: "preferences-desktop-tweaks");
 
             // make sure that UI is created.
             // TODO: there might be a better way of doing this.
@@ -71,9 +64,6 @@ namespace ElementaryTweaks {
 
             // Misc Tweaks
             add_tweak_page (new MiscGrid (), _("Miscellaneous"), _("General"), "applications-other");
-
-            // eGtk theme tweaks
-            add_tweak_page (new EgtkThemeGrid (this), _("Theme"), _("General"), "applications-graphics");
 
             // Plank Tweaks
             if (file_exists("/plank/dock1/settings"))
@@ -288,14 +278,9 @@ namespace ElementaryTweaks {
             }
         }
 
-        public override void shown () {
-        }
-
-        public override void hidden () {
-        }
-
-        public override void search_callback (string location) {
-        }
+        public override void shown () { }
+        public override void hidden () { }
+        public override void search_callback (string location) { }
 
         public override async Gee.TreeMap<string, string> search (string search) {
             return new Gee.TreeMap<string, string> (null, null);
@@ -304,8 +289,7 @@ namespace ElementaryTweaks {
 }
 
 public Switchboard.Plug get_plug (Module module) {
-    //Stacktrace.register_handlers () ;
-    info ("Activating Tweak plug");
+    info ("Activating tweaks plug");
     var plug = new ElementaryTweaks.TweaksPlug ();
     return plug;
 }

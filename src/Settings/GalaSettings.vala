@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Elementary Tweaks Developers, 2014
+ * Copyright (C) Elementary Tweaks Developers, 2014 - 2016
  *
  * Some code taken from from Gala (https://launchpad.net/gala)
  * Copyright (C) 2012 GardenGnome, Rico Tzschichholz, Tom Beckmann, Michael Langfermann
