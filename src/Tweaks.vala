@@ -73,7 +73,7 @@ namespace ElementaryTweaks {
             add_tweak_page (new MiscGrid (), _("Miscellaneous"), _("General"), "applications-other");
 
             // eGtk theme tweaks
-            add_tweak_page (new EgtkThemeGrid (this), _("Theme"), _("General"), "applications-graphics");
+            // add_tweak_page (new EgtkThemeGrid (this), _("Theme"), _("General"), "applications-graphics");
 
             // Plank Tweaks
             if (file_exists("/plank/dock1/settings"))

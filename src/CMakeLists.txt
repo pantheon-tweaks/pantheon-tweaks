@@ -3,7 +3,6 @@ find_package (PkgConfig)
 # Add all your dependencies to the list below
 pkg_check_modules (DEPS REQUIRED gthread-2.0 gtk+-3.0 switchboard-2.0 granite gconf-2.0 gee-0.8 polkit-gobject-1 glib-2.0)
 
-#add_definitions (${DEPS_CFLAGS} -I/usr/include/polkit-1) 
 add_definitions (${DEPS_CFLAGS})
 link_libraries (${DEPS_LIBRARIES})
 link_directories (${DEPS_LIBRARY_DIRS})
@@ -27,7 +26,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Settings/GnomeSettings.vala
     Settings/TerminalSettings.vala
     Settings/XSettings.vala
-    Settings/EgtkThemeSettings.vala
+    # Settings/EgtkThemeSettings.vala
     Grids/AppearanceGrid.vala
     Grids/CerbereGrid.vala
     Grids/FontsGrid.vala
@@ -39,7 +38,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Grids/MiscGrid.vala
     Grids/SlingshotGrid.vala
     Grids/TerminalGrid.vala
-    Grids/EgtkThemeGrid.vala
+    # Grids/EgtkThemeGrid.vala
     Objects/ShortcutObject.vala
     Objects/ThemePatchingOperation.vala    
     Widgets/LLabel.vala

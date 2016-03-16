@@ -1,6 +1,3 @@
-# This a sample CMakeLists.txt for compiling plug for Switchboard
-# http://elementaryos.org/docs/developer-guide/cmake
-
 cmake_minimum_required (VERSION 2.8)
 cmake_policy (VERSION 2.8)
 
@@ -15,10 +12,6 @@ project (elementary-tweaks)
 
 # Comment this out to enable C compiler warnings
 add_definitions (-w)
-
-#########################################################
-# Only alter stuff below if you know what you are doing #
-#########################################################
 
 include (GNUInstallDirs)
 set (DATADIR "${CMAKE_INSTALL_FULL_LIBDIR}/switchboard")
@@ -40,20 +33,9 @@ add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\")
 set (CPACK_PACKAGE_VERSION ${VERSION})
 set (CPACK_SOURCE_GENERATOR "TGZ")
 set (CPACK_SOURCE_PACKAGE_FILE_NAME "${CMAKE_PROJECT_NAME}-${CPACK_PACKAGE_VERSION}")
-set (CPACK_SOURCE_IGNORE_FILES "/build/;/.bzr/;/.bzrignore;/.gitignore;~$;${CPACK_SOURCE_IGNORE_FILES}")
+set (CPACK_SOURCE_IGNORE_FILES "/build/;/.bzr/;/.bzrignore;/.gitignore/.git/;;~$;${CPACK_SOURCE_IGNORE_FILES}")
 include (CPack)
 add_custom_target (dist COMMAND ${CMAKE_MAKE_PROGRAM} package_source)
-
-
-# Set policy permission for theme patching
-configure_file (${CMAKE_SOURCE_DIR}/data/org.pantheon.elementary-tweaks.egtk.policy.cmake ${CMAKE_BINARY_DIR}/data/org.pantheon.elementary-tweaks.egtk.policy)
-install (FILES ${CMAKE_BINARY_DIR}/data/org.pantheon.elementary-tweaks.egtk.policy DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/polkit-1/actions/)
-
-# Registering theme-patcher so it gets executed each time a dpkg install takes 
-# place
-# See http://unix.stackexchange.com/questions/76294/hook-a-script-to-apt-get
-configure_file (${CMAKE_SOURCE_DIR}/data/99theme-patcher.cmake ${CMAKE_BINARY_DIR}/data/99theme-patcher)
-install (FILES ${CMAKE_BINARY_DIR}/data/99theme-patcher DESTINATION /etc/apt/apt.conf.d/)
 
 # Translation stuff
 add_subdirectory (po)
@@ -62,6 +44,4 @@ add_subdirectory (po)
 install (FILES ${resources} DESTINATION ${PKGDATADIR})
 
 add_subdirectory(src)
-add_subdirectory(theme-patcher)
-add_subdirectory(schemas)
 
