@@ -43,7 +43,7 @@ namespace ElementaryTweaks {
                     code_name: Build.PROJECT_NAME,
                     display_name: _("Tweaks"),
                     description: _("Tweak elementary OS settings"),
-                    icon: "applications-development");
+                    icon: "preferences-desktop-tweaks");
 
             // make sure that UI is created.
             // TODO: there might be a better way of doing this.
