@@ -18,25 +18,12 @@
 
 namespace ElementaryTweaks {
 
-    public class AnimationsGrid : Gtk.Grid
-    {
+    public class AnimationsGrid : Categories.Pane {
         private Gtk.Grid animation_durations; // this can't be local to set sensitive from closure, not sure why
 
         public AnimationsGrid () {
-            // setup grid so that it aligns everything properly
-            this.set_orientation (Gtk.Orientation.VERTICAL);
-            this.margin_top = 24;
-            this.row_spacing = 6;
-            this.halign = Gtk.Align.CENTER;
+            base (_("Animations"), "preferences-desktop-sound");
 
-            // this will hold all of the animation durations so that we can set_sensitive all at once
-            animation_durations = new Gtk.Grid ();
-            animation_durations.set_orientation (Gtk.Orientation.VERTICAL);
-            animation_durations.row_spacing = 6;
-            animation_durations.halign = Gtk.Align.CENTER;
-
-            // make sure that we are consistant about greying out if not enabled
-            animation_durations.sensitive = AnimationSettings.get_default ().enable_animations;
 
             // Animation toggle
             var animations = new TweakWidget.with_switch (
@@ -50,10 +37,10 @@ namespace ElementaryTweaks {
                             }), // set
                         (() => { AnimationSettings.get_default ().schema.reset ("enable-animations"); }) // reset
                     );
-            this.add (animations);
+            grid.add (animations);
 
             // separator to try to make it obvious that the toggle button controls the entire block beneath
-            this.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
+            grid.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
 
             // Open duration tweak
             var open_duration = new TweakWidget.with_spin_button (
@@ -65,7 +52,7 @@ namespace ElementaryTweaks {
                         (() => { AnimationSettings.get_default ().schema.reset ("open-duration"); }), // reset
                         0, 10000, 1
                     );
-            animation_durations.add (open_duration);
+            grid.add (open_duration);
 
             // Close duration tweak
             var close_duration = new TweakWidget.with_spin_button (
@@ -77,7 +64,7 @@ namespace ElementaryTweaks {
                         (() => { AnimationSettings.get_default ().schema.reset ("close-duration"); }), // reset
                         0, 10000, 1
                     );
-            animation_durations.add (close_duration);
+            grid.add (close_duration);
 
             // Snap duration tweak
             var snap_duration = new TweakWidget.with_spin_button (
@@ -89,7 +76,7 @@ namespace ElementaryTweaks {
                         (() => { AnimationSettings.get_default ().schema.reset ("snap-duration"); }), // reset
                         0, 10000, 1
                     );
-            animation_durations.add (snap_duration);
+            grid.add (snap_duration);
 
             // Minimize duration tweak
             var minimize_duration = new TweakWidget.with_spin_button (
@@ -101,7 +88,7 @@ namespace ElementaryTweaks {
                         (() => { AnimationSettings.get_default ().schema.reset ("minimize-duration"); }), // reset
                         0, 10000, 1
                     );
-            animation_durations.add (minimize_duration);
+            grid.add (minimize_duration);
 
             // Minimize duration tweak
             var workspace_switch_duration = new TweakWidget.with_spin_button (
@@ -113,12 +100,7 @@ namespace ElementaryTweaks {
                         (() => { AnimationSettings.get_default ().schema.reset ("workspace-switch-duration"); }), // reset
                         0, 10000, 1
                     );
-            animation_durations.add (workspace_switch_duration);
-
-            // add the grid with all of the animation durations in it
-            this.add (animation_durations);
-
-            this.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
+            grid.add (workspace_switch_duration);
         }
     }
 }

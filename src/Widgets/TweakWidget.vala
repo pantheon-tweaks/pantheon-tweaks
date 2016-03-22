@@ -24,13 +24,13 @@ namespace ElementaryTweaks {
 
     public class TweakWidget: Gtk.Grid {
 
-        protected const int WIDTH = 180 ;
-        protected const int TEXT_WIDTH = 180 ;
-        protected const int COLUMN_SPACING = 10 ;
+        protected const int WIDTH = 180;
+        protected const int TEXT_WIDTH = 180;
+        protected const int COLUMN_SPACING = 10;
 
-        protected SetValue<string> setter_text ;
-        protected GetValue<string> getter_text ;
-        protected string text_value ;
+        protected SetValue<string> setter_text;
+        protected GetValue<string> getter_text;
+        protected string text_value;
 
         public string text {
             get {
@@ -40,8 +40,8 @@ namespace ElementaryTweaks {
                     text_value =  "" ;
                 return text_value ;
             }
-            set
-            {
+
+            set {
                 if( setter_text != null ) {
                     setter_text (value) ;
                 }

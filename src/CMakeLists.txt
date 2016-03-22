@@ -39,6 +39,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Grids/TerminalGrid.vala
     Objects/ShortcutObject.vala
     Widgets/LLabel.vala
+    Widgets/Categories.vala
     Widgets/AcceleratorInputWidget.vala
     Widgets/TweakWidget.vala
     Widgets/ColorComboboxTweakWidget.vala    

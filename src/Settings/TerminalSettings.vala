@@ -24,7 +24,7 @@ namespace ElementaryTweaks {
         public string cursor_color { get; set; }
         public string font { get; set; }
         public string foreground { get; set; }
-        public int opacity { get; set; }
+        //public int opacity { get; set; }
         public string palette { get; set; }
         public int scrollback_lines { get; set; }
         public bool unsafe_paste_alert { get; set; }

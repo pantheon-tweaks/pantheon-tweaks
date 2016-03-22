@@ -58,5 +58,21 @@ namespace ElementaryTweaks {
 
             return map;
         }
+
+        /**
+         * Returns true if the schema exists.
+         */
+        static bool schema_exists(string schema) {
+            return (SettingsSchemaSource.get_default ().lookup(schema, true) != null);
+        }
+
+        /**
+         * Returns true if the file exists.
+         */
+        static bool file_exists(string dir) {
+            var checkfile = File.new_for_path (Environment.get_user_config_dir () + dir);
+            return checkfile.query_exists ();
+        }
+
     }
 }

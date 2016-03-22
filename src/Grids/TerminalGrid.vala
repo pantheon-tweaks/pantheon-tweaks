@@ -145,7 +145,7 @@ namespace ElementaryTweaks {
             this.row_spacing = 6;
             this.halign = Gtk.Align.CENTER;
 
-            // Terminal Opacity tweak
+            /* Terminal Opacity tweak
             var opacity = new TweakWidget.with_spin_button (
                         _("Opacity:"),
                         _("How transparent the background of the terminal is"),
@@ -156,7 +156,7 @@ namespace ElementaryTweaks {
                         0, 100, 1
                     );
             this.add (opacity);
-
+            */
             // Terminal Theme
             var default_themes = TerminalTheme.get_default_themes ();
             var theme_map = new Gee.HashMap<string, string> ();
