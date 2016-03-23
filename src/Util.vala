@@ -63,6 +63,8 @@ namespace ElementaryTweaks {
             var themes = get_themes (path, condition);
             var store = new Gtk.ListStore (2, typeof (string), typeof (string));
             var index = 0;
+
+            active_index = 0;
             Gtk.TreeIter iter;
 
             foreach (string theme in themes) {

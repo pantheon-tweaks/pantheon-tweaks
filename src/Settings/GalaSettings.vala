@@ -59,6 +59,7 @@ namespace ElementaryTweaks {
         public bool dim_parents { get; set; }
 
         static Gee.HashMap<string, string> preset_button_layouts;
+        static Gtk.ListStore button_layouts;
         static AppearanceSettings? instance = null;
 
         private AppearanceSettings ()
@@ -86,6 +87,36 @@ namespace ElementaryTweaks {
                 preset_button_layouts["custom"] = _("Custom");
             }
             return preset_button_layouts;
+        }
+
+        public static Gtk.ListStore get_button_layouts (out int active_index) {
+            if (button_layouts == null) {
+                button_layouts = new Gtk.ListStore(2, typeof (string), typeof (string));
+                Gtk.TreeIter iter;
+
+                int index = 0;
+                active_index = 0;
+
+                var layouts = new Gee.HashMap<string, string> ();
+                layouts["close:maximize"] = _("elementary");
+                layouts[":close"] = _("Close Only");
+                layouts["close,minimize:maximize"] = _("Minimize Left");
+                layouts["close:minimize,maximize"] = _("Minimize Right");
+                layouts[":minimize,maximize,close"] = _("Windows");
+                layouts["close,minimize,maximize"] = _("OS X");
+
+                foreach (var layout in layouts.entries) {
+                    debug ("Adding button layout: %s => %s", layout.key, layout.value);
+                    button_layouts.append (out iter);
+                    button_layouts.set (iter, 0, layout.value, 1, layout.key);
+                    if (AppearanceSettings.get_default ().button_layout == layout.key) {
+                        active_index = index;
+                    }
+                    index++;
+                }
+            }
+
+            return button_layouts;
         }
     }
 
