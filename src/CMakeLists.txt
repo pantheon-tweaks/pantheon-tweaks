@@ -26,24 +26,13 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Settings/GnomeSettings.vala
     Settings/TerminalSettings.vala
     Settings/XSettings.vala
-    Grids/AppearanceGrid.vala
-    Grids/CerbereGrid.vala
-    Grids/FontsGrid.vala
-    Grids/FilesGrid.vala
-    Grids/ShortcutsGrid.vala
-    Grids/AnimationsGrid.vala
-    Grids/ShadowsGrid.vala
-    Grids/PlankGrid.vala
-    Grids/MiscGrid.vala
-    Grids/SlingshotGrid.vala
-    Grids/TerminalGrid.vala
+    Panes/AnimationsPane.vala
+    Panes/AppearancePane.vala
+    Panes/FontsPane.vala
     Objects/ShortcutObject.vala
-    Widgets/LLabel.vala
     Widgets/Categories.vala
-    Widgets/AcceleratorInputWidget.vala
-    Widgets/TweakWidget.vala
-    Widgets/ColorComboboxTweakWidget.vala    
-    Widgets/LockButtonTweakWidget.vala    
+    Widgets/SettingBox.vala
+    Widgets/Label.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     glib-2.0
@@ -52,8 +41,8 @@ PACKAGES
     switchboard-2.0
     granite
     gconf-2.0
-    polkit-gobject-1  
-    posix  
+    polkit-gobject-1
+    posix
 OPTIONS
     --thread
     --vapidir=${CMAKE_CURRENT_SOURCE_DIR}/../vapi/
