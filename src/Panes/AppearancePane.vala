@@ -32,6 +32,7 @@ namespace ElementaryTweaks {
 
         construct {
             build_ui ();
+            init_data ();
             connect_signals ();
         }
 
@@ -57,6 +58,30 @@ namespace ElementaryTweaks {
             grid.add (layout_box);
 
             grid.show_all ();
+        }
+
+        private void init_data () {
+            var gtk_index = 0;
+            var metacity_index = 0;
+            var icon_index = 0;
+            var cursor_index = 0;
+
+            var gtk_store = Util.get_themes_store ("themes", "gtk-3.0", InterfaceSettings.get_default ().gtk_theme, out gtk_index);
+            var metacity_store = Util.get_themes_store ("themes", "metacity-1", WindowSettings.get_default ().theme, out metacity_index);
+            var icon_store = Util.get_themes_store ("icons", "index.theme", InterfaceSettings.get_default ().icon_theme, out icon_index);
+            var cursor_store = Util.get_themes_store ("icons", "cursors", InterfaceSettings.get_default ().cursor_theme, out cursor_index);
+
+            gtk_theme_combobox.set_model (gtk_store);
+            metacity_theme_combobox.set_model (metacity_store);
+            icon_theme_combobox.set_model (icon_store);
+            cursor_theme_combobox.set_model (cursor_store);
+
+            gtk_theme_combobox.set_active (gtk_index);
+            metacity_theme_combobox.set_active (metacity_index);
+            icon_theme_combobox.set_active (icon_index);
+            cursor_theme_combobox.set_active (cursor_index);
+
+            prefer_dark_switch.set_state (GtkSettings.get_default ().prefer_dark_theme);
         }
 
         private void connect_signals () {}
