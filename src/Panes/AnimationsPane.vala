@@ -18,11 +18,18 @@
 
 namespace ElementaryTweaks {
     public class Panes.AnimationsPane : Categories.Pane {
-        public Gtk.Adjustment open_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
-        public Gtk.Adjustment close_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
-        public Gtk.Adjustment snap_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
-        public Gtk.Adjustment minimize_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
-        public Gtk.Adjustment workspace_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
+        private Gtk.Switch master_switch;
+        private Gtk.SpinButton open_duration;
+        private Gtk.SpinButton close_duration;
+        private Gtk.SpinButton snap_duration;
+        private Gtk.SpinButton minimize_duration;
+        private Gtk.SpinButton workspace_duration;
+
+        private Gtk.Adjustment open_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
+        private Gtk.Adjustment close_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
+        private Gtk.Adjustment snap_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
+        private Gtk.Adjustment minimize_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
+        private Gtk.Adjustment workspace_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
 
         public AnimationsPane () {
             base (_("Animations"), "go-jump");
@@ -30,6 +37,7 @@ namespace ElementaryTweaks {
 
         construct {
             build_ui ();
+            init_data ();
             connect_signals ();
         }
 
@@ -37,15 +45,15 @@ namespace ElementaryTweaks {
             var master_box = new Widgets.SettingsBox ();
             var animations_box = new Widgets.SettingsBox ();
 
-            var master_switch = master_box.add_switch ("Animations");
+            master_switch = master_box.add_switch (_("Enable animations"));
 
             var duration_label = new Widgets.Label (_("Duration"));
 
-            var open_duration = animations_box.add_spin_button ("Open", open_adj);
-            var close_duration = animations_box.add_spin_button ("Close", close_adj);
-            var snap_duration = animations_box.add_spin_button ("Snap", snap_adj);
-            var minimize_duration = animations_box.add_spin_button ("Minimize", minimize_adj);
-            var workspace_duration = animations_box.add_spin_button ("Workspace switch", workspace_adj);
+            open_duration = animations_box.add_spin_button (_("Open"), open_adj);
+            close_duration = animations_box.add_spin_button (_("Close"), close_adj);
+            snap_duration = animations_box.add_spin_button (_("Snap"), snap_adj);
+            minimize_duration = animations_box.add_spin_button (_("Minimize"), minimize_adj);
+            workspace_duration = animations_box.add_spin_button (_("Workspace switch"), workspace_adj);
 
             grid.add (master_box);
             grid.add (duration_label);
@@ -54,8 +62,26 @@ namespace ElementaryTweaks {
             grid.show_all ();
         }
 
-        private void connect_signals () {
+        private void init_data () {
+            master_switch.set_state (AnimationSettings.get_default ().enable_animations);
 
+            open_duration.set_value (AnimationSettings.get_default ().open_duration);
+            close_duration.set_value (AnimationSettings.get_default ().close_duration);
+            snap_duration.set_value (AnimationSettings.get_default ().snap_duration);
+            minimize_duration.set_value (AnimationSettings.get_default ().minimize_duration);
+            workspace_duration.set_value (AnimationSettings.get_default ().workspace_switch_duration);
+        }
+
+        private void connect_signals () {
+            master_switch.notify["active"].connect (() => {
+                AnimationSettings.get_default ().enable_animations = master_switch.state;
+            });
+
+            connect_spin_button (open_duration, (val) => { AnimationSettings.get_default ().open_duration = val; });
+            connect_spin_button (close_duration, (val) => { AnimationSettings.get_default ().close_duration = val; });
+            connect_spin_button (snap_duration, (val) => { AnimationSettings.get_default ().snap_duration = val; });
+            connect_spin_button (minimize_duration, (val) => { AnimationSettings.get_default ().minimize_duration = val; });
+            connect_spin_button (workspace_duration, (val) => { AnimationSettings.get_default ().workspace_switch_duration = val; });
         }
     }
 }

@@ -146,6 +146,12 @@ namespace ElementaryTweaks {
                     set_func (button.get_font_name ());
                 });
             }
+
+            protected void connect_spin_button (Gtk.SpinButton button, SetValue<int> set_func) {
+                button.value_changed.connect (() => {
+                    set_func (button.get_value_as_int ());
+                });
+            }
         }
 
         public class Header : Gtk.Label {
