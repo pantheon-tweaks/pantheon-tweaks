@@ -25,7 +25,7 @@ namespace ElementaryTweaks {
         public Gtk.Adjustment workspace_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
 
         public AnimationsPane () {
-            base (_("Animations"), "preferences-tweaks-anim");
+            base (_("Animations"), "go-jump");
         }
 
         construct {
