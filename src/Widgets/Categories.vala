@@ -34,11 +34,29 @@ namespace ElementaryTweaks {
             var appearance = new Panes.AppearancePane ();
             list_box.add (appearance);
 
+            var fonts = new Panes.FontsPane ();
+            list_box.add (fonts);
+
             var animations = new Panes.AnimationsPane ();
             list_box.add (animations);
 
-            var fonts = new Panes.FontsPane ();
-            list_box.add (fonts);
+            var misc = new Panes.MiscPane ();
+            list_box.add (misc);
+
+            var files = new Panes.FilesPane ();
+            list_box.add (files);
+
+            var plank = new Panes.PlankPane ();
+            list_box.add (plank);
+
+            var slingshot = new Panes.SlingshotPane ();
+            list_box.add (slingshot);
+
+            var cerbere = new Panes.CerberePane ();
+            list_box.add (cerbere);
+
+            var terminal = new Panes.TerminalPane ();
+            list_box.add (terminal);
 
             list_box.row_selected.connect ((row) => {
                 var page = ((Pane) row);
@@ -53,6 +71,8 @@ namespace ElementaryTweaks {
             list_box.set_header_func ((row, before) => {
                 if (row == appearance) {
                     row.set_header (new Header (_("General")));
+                } else if (row == files) {
+                    row.set_header (new Header (_("Applications")));
                 }
             });
         }

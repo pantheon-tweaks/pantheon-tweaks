@@ -17,30 +17,18 @@
  */
 
 namespace ElementaryTweaks {
-    public class Panes.TerminalPane : Categories.Pane {
-        private Gtk.ComboBox default_font_combobox;
-
-        public TerminalPane () {
-            base (_("Terminal"), "utilities-terminal");
+    public class Panes.SlingshotPane : Categories.Pane {
+        public SlingshotPane () {
+            base (_("Launcher"), "system-run");
         }
 
         construct {
-            if (Util.schema_exists ("org.pantheon.terminal.settings")) {
-                build_ui ();
-                connect_signals ();
-            }
+            build_ui ();
+            connect_signals ();
         }
 
         private void build_ui () {
-            var fonts_label = new Widgets.Label (_("Font Settings"));
-            var fonts_box = new Widgets.SettingsBox ();
 
-            default_font_combobox = fonts_box.add_combo_box (_("Default font"));
-
-            grid.add (fonts_label);
-            grid.add (fonts_box);
-
-            grid.show_all ();
         }
 
         private void connect_signals () {

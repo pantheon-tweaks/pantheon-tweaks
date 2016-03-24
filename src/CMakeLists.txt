@@ -29,6 +29,12 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Panes/AnimationsPane.vala
     Panes/AppearancePane.vala
     Panes/FontsPane.vala
+    Panes/MiscPane.vala
+    Panes/FilesPane.vala
+    Panes/TerminalPane.vala
+    Panes/CerberePane.vala
+    Panes/PlankPane.vala
+    Panes/SlingshotPane.vala
     Objects/ShortcutObject.vala
     Widgets/Categories.vala
     Widgets/SettingBox.vala

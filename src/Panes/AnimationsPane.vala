@@ -39,14 +39,19 @@ namespace ElementaryTweaks {
 
             var master_switch = master_box.add_switch ("Animations");
 
-            var open_duration = animations_box.add_spin_button ("Open duration", open_adj);
-            var close_duration = animations_box.add_spin_button ("Close duration", close_adj);
-            var snap_duration = animations_box.add_spin_button ("Snap duration", snap_adj);
-            var minimize_duration = animations_box.add_spin_button ("Minimize duration", minimize_adj);
-            var workspace_duration = animations_box.add_spin_button ("Workspace switch duration", workspace_adj);
+            var duration_label = new Widgets.Label (_("Duration"));
+
+            var open_duration = animations_box.add_spin_button ("Open", open_adj);
+            var close_duration = animations_box.add_spin_button ("Close", close_adj);
+            var snap_duration = animations_box.add_spin_button ("Snap", snap_adj);
+            var minimize_duration = animations_box.add_spin_button ("Minimize", minimize_adj);
+            var workspace_duration = animations_box.add_spin_button ("Workspace switch", workspace_adj);
 
             grid.add (master_box);
+            grid.add (duration_label);
             grid.add (animations_box);
+
+            grid.show_all ();
         }
 
         private void connect_signals () {
