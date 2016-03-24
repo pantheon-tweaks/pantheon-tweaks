@@ -19,6 +19,7 @@
 namespace ElementaryTweaks {
     public class Panes.PlankPane : Categories.Pane {
         private Gtk.Switch current_workspace;
+        private Gtk.Switch show_unpinned;
         private Gtk.Switch lock_items;
 
         private Gtk.Adjustment icon_size = new Gtk.Adjustment (0,0,1000,1,10,10);
@@ -42,25 +43,31 @@ namespace ElementaryTweaks {
         }
 
         private void build_ui () {
-            var plank_box = new Widgets.SettingsBox ();
+            var behabiour = new Widgets.SettingsBox ();
+            var appearance = new Widgets.SettingsBox ();
 
-            //behabiour
+            //Behavior
+            var behabiour_label = new Widgets.Label (_("Behavior"));
+            lock_items = behabiour.add_switch (_("Lock items"));
+            show_unpinned = behabiour.add_switch (_("Show Unpinned"));
+            current_workspace =behabiour.add_switch (_("Restrict to Workpace"));
+            hide_mode = behabiour.add_combo_box (_("Hide mode"));
+            behabiour.add_spin_button (_("Hide delay"), hide_delay);
 
+            //Appearance
+            var appearance_label = new Widgets.Label (_("Appearance"));
+            theme = appearance.add_combo_box (_("Theme"));
+            appearance.add_spin_button (_("Icon size"), icon_size);
+            monitor = appearance.add_combo_box (_("Monitor"));
+            screen_position = appearance.add_combo_box (_("Screen position"));
+            alignment = appearance.add_combo_box (_("Alignment"));
+            item_alignment = appearance.add_combo_box (_("Item alignment"));
+            appearance.add_spin_button (_("Offset"), offset);
 
-            //look
-
-
-            plank_box.add_spin_button (_("Icon size"), icon_size);
-            hide_mode = plank_box.add_combo_box (_("Hide mode"));
-            plank_box.add_spin_button (_("Hide delay"), hide_delay);
-            theme = plank_box.add_combo_box (_("Theme"));
-            monitor = plank_box.add_combo_box (_("Monitor"));
-            screen_position = plank_box.add_combo_box (_("Screen position"));
-            alignment = plank_box.add_combo_box (_("Alignment"));
-            item_alignment = plank_box.add_combo_box (_("Item alignment"));
-            plank_box.add_spin_button (_("Offset"), offset);
-
-            grid.add (plank_box);
+            grid.add (behabiour_label);
+            grid.add (behabiour);
+            grid.add (appearance_label);
+            grid.add (appearance);
             grid.show_all ();
         }
 

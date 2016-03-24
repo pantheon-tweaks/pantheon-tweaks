@@ -79,7 +79,8 @@ namespace ElementaryTweaks {
             if (preset_button_layouts == null) {
                 preset_button_layouts = new Gee.HashMap<string, string> ();
                 preset_button_layouts["close:maximize"] = _("elementary");
-                preset_button_layouts[":close"] = _("Close Only");
+                preset_button_layouts["close:"] = _("Close Only Right");
+                preset_button_layouts[":close"] = _("Close Only Left");
                 preset_button_layouts["close,minimize:maximize"] = _("Minimize Left");
                 preset_button_layouts["close:minimize,maximize"] = _("Minimize Right");
                 preset_button_layouts[":minimize,maximize,close"] = _("Windows");
@@ -99,7 +100,8 @@ namespace ElementaryTweaks {
 
                 var layouts = new Gee.HashMap<string, string> ();
                 layouts["close:maximize"] = _("elementary");
-                layouts[":close"] = _("Close Only");
+                layouts[":close"] = _("Close Only Right");
+                layouts["close:"] = _("Close Only Left");
                 layouts["close,minimize:maximize"] = _("Minimize Left");
                 layouts["close:minimize,maximize"] = _("Minimize Right");
                 layouts[":minimize,maximize,close"] = _("Windows");
