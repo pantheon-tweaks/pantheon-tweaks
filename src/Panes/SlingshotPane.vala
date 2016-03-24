@@ -19,7 +19,7 @@
 namespace ElementaryTweaks {
     public class Panes.SlingshotPane : Categories.Pane {
         public SlingshotPane () {
-            base (_("Launcher"), "system-run");
+            base (_("Launcher"), "preferences-tweaks-slingshot");
         }
 
         construct {

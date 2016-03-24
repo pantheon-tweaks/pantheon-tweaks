@@ -19,7 +19,7 @@
 namespace ElementaryTweaks {
     public class Panes.CerberePane : Categories.Pane {
         public CerberePane () {
-            base (_("Cerbere"), "object-rotate-left");
+            base (_("Cerbere"), "preferences-tweaks-cerbere");
         }
 
         construct {

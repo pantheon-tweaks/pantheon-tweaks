@@ -32,7 +32,7 @@ namespace ElementaryTweaks {
         private Gtk.ListStore controls_store;
 
         public AppearancePane () {
-            base (_("Appearance"), "applications-painting");
+            base (_("Appearance"), "applications-graphics");
         }
 
         construct {

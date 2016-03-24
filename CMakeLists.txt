@@ -23,10 +23,10 @@ list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 # Configure file
 configure_file (${CMAKE_SOURCE_DIR}/config.vala.cmake ${CMAKE_BINARY_DIR}/src/config.vala)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icon/preferences-desktop-tweaks.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/elementary/categories/32/)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icon/preferences-tweaks-anim.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/24x24/categories/)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icon/preferences-tweaks-cerbere.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/24x24/categories/)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icon/preferences-tweaks-shadows.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/24x24/categories/)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icon/preferences-tweaks-slingshot.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/24x24/categories/)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icon/preferences-tweaks-anim.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/32x32/categories/)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icon/preferences-tweaks-cerbere.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/32x32/categories/)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icon/preferences-tweaks-shadows.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/32x32/categories/)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/icon/preferences-tweaks-slingshot.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/32x32/categories/)
 add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\")
 
 # Add 'make dist' command for creating release tarball
