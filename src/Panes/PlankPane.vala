@@ -18,6 +18,20 @@
 
 namespace ElementaryTweaks {
     public class Panes.PlankPane : Categories.Pane {
+        private Gtk.Switch current_workspace;
+        private Gtk.Switch lock_items;
+
+        private Gtk.Adjustment icon_size = new Gtk.Adjustment (0,0,1000,1,10,10);
+        private Gtk.Adjustment hide_delay = new Gtk.Adjustment (0,0,1000,1,10,10);
+        private Gtk.Adjustment offset = new Gtk.Adjustment (0,0,1000,1,10,10);
+
+        private Gtk.ComboBox hide_mode;
+        private Gtk.ComboBox theme;
+        private Gtk.ComboBox monitor;
+        private Gtk.ComboBox screen_position;
+        private Gtk.ComboBox alignment;
+        private Gtk.ComboBox item_alignment;
+
         public PlankPane () {
             base (_("Dock"), "plank");
         }
@@ -28,7 +42,26 @@ namespace ElementaryTweaks {
         }
 
         private void build_ui () {
+            var plank_box = new Widgets.SettingsBox ();
 
+            //behabiour
+
+
+            //look
+
+
+            plank_box.add_spin_button (_("Icon size"), icon_size);
+            hide_mode = plank_box.add_combo_box (_("Hide mode"));
+            plank_box.add_spin_button (_("Hide delay"), hide_delay);
+            theme = plank_box.add_combo_box (_("Theme"));
+            monitor = plank_box.add_combo_box (_("Monitor"));
+            screen_position = plank_box.add_combo_box (_("Screen position"));
+            alignment = plank_box.add_combo_box (_("Alignment"));
+            item_alignment = plank_box.add_combo_box (_("Item alignment"));
+            plank_box.add_spin_button (_("Offset"), offset);
+
+            grid.add (plank_box);
+            grid.show_all ();
         }
 
         private void connect_signals () {

@@ -18,6 +18,10 @@
 
 namespace ElementaryTweaks {
     public class Panes.FilesPane : Categories.Pane {
+        private Gtk.Switch single_click;
+        private Gtk.ComboBox date_format;
+        private Gtk.ComboBox sidebar_size;
+
         public FilesPane () {
             base (_("Files"), "system-file-manager");
         }
@@ -28,7 +32,14 @@ namespace ElementaryTweaks {
         }
 
         private void build_ui () {
+            var files_box = new Widgets.SettingsBox ();
 
+            single_click = files_box.add_switch (_("Single click"));
+            date_format = files_box.add_combo_box (_("Date format"));
+            sidebar_size = files_box.add_combo_box (_("Sidebar icon size"));
+
+            grid.add (files_box);
+            grid.show_all ();
         }
 
         private void connect_signals () {
