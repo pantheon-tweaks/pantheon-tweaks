@@ -18,7 +18,10 @@
 
 namespace ElementaryTweaks {
     public class Panes.FontsPane : Categories.Pane {
-        private Gtk.ComboBox default_font_combobox;
+        private Gtk.FontButton default_font = new Gtk.FontButton ();
+        private Gtk.FontButton document_font = new Gtk.FontButton ();
+        private Gtk.FontButton mono_font = new Gtk.FontButton ();
+        private Gtk.FontButton titlebar_font = new Gtk.FontButton ();
 
         public FontsPane () {
             base (_("Fonts"), "applications-fonts");
@@ -33,7 +36,11 @@ namespace ElementaryTweaks {
             var fonts_label = new Widgets.Label (_("Font Settings"));
             var fonts_box = new Widgets.SettingsBox ();
 
-            default_font_combobox = fonts_box.add_combo_box (_("Default font"));
+            fonts_box.add_widget (_("Default font"), default_font);
+            fonts_box.add_widget (_("Document font"), document_font);
+            fonts_box.add_widget (_("Monospace font"), mono_font);
+            fonts_box.add_widget (_("Titlebar font"), titlebar_font);
+
 
             grid.add (fonts_label);
             grid.add (fonts_box);

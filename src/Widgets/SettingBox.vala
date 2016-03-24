@@ -40,9 +40,8 @@ namespace ElementaryTweaks {
 
         public Gtk.ComboBox add_combo_box (string title) {
             var combo = new Gtk.ComboBox ();
-            combo.set_size_request (180,0);
+            combo.set_size_request (180, 0);
             add_widget (title, combo);
-
 
             var renderer = new Gtk.CellRendererText ();
             combo.pack_start (renderer, true);
@@ -52,39 +51,37 @@ namespace ElementaryTweaks {
         }
 
         public Gtk.Scale add_scale (string title, Gtk.Adjustment adjustment) {
-            var settings_box = new EmptyBox (title, has_childen);
             var scale = new Gtk.Scale (Gtk.Orientation.HORIZONTAL, adjustment);
-            bind_sensitivity (scale, settings_box);
-            scale.set_size_request (250,0);
+            scale.set_size_request (250, 0);
             scale.set_draw_value (false);
-            scale.set_margin_end (12);
 
-            settings_box.grid.add (scale);
-            list_box.add (settings_box);
-            show_all ();
+            add_widget (title, scale);
 
-            has_childen = true;
             return scale;
         }
 
         public Gtk.Switch add_switch (string title) {
-            var settings_box = new EmptyBox (title, has_childen);
             var toggle = new Gtk.Switch ();
-            bind_sensitivity (toggle, settings_box);
 
-            settings_box.grid.add (toggle);
-            list_box.add (settings_box);
-            show_all ();
+            add_widget (title, toggle);
 
-            has_childen = true;
             return toggle;
         }
 
-        public void bind_sensitivity (Gtk.Widget widget, EmptyBox settings_box ) {
+        public Gtk.SpinButton add_spin_button (string title, Gtk.Adjustment adjustment) {
+            var spinner = new Gtk.SpinButton (adjustment, 1, 0);
+            spinner.set_size_request (150, 0);
+
+            add_widget (title, spinner);
+
+            return spinner;
+        }
+
+        private void bind_sensitivity (Gtk.Widget widget, EmptyBox settings_box ) {
             widget.bind_property ("sensitive", settings_box, "sensitive", BindingFlags.SYNC_CREATE | BindingFlags.BIDIRECTIONAL);
         }
 
-        public class EmptyBox : Gtk.ListBoxRow {
+        protected class EmptyBox : Gtk.ListBoxRow {
             public Gtk.Grid grid;
             public Gtk.Label label;
 

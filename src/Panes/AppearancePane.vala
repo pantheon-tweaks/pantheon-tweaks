@@ -18,8 +18,6 @@
 
 namespace ElementaryTweaks {
     public class Panes.AppearancePane : Categories.Pane {
-        public delegate void SetValue<T> (T val);
-
         private Gtk.Switch prefer_dark_switch;
         private Gtk.ComboBox gtk_combobox;
         private Gtk.ComboBox metacity_combobox;
@@ -107,17 +105,6 @@ namespace ElementaryTweaks {
             connect_combobox (controls_combobox, controls_store,
                 (val) => {  AppearanceSettings.get_default ().button_layout = val;
                             XSettings.get_default ().decoration_layout = val; });
-        }
-
-        private void connect_combobox (Gtk.ComboBox box, Gtk.ListStore store, SetValue<string> set_func) {
-            box.changed.connect (() => {
-                Value val;
-                Gtk.TreeIter iter;
-
-                box.get_active_iter (out iter);
-                store.get_value (iter, 1, out val);
-                set_func ((string) val);
-            });
         }
     }
 }

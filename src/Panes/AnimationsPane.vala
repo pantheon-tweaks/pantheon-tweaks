@@ -18,8 +18,14 @@
 
 namespace ElementaryTweaks {
     public class Panes.AnimationsPane : Categories.Pane {
+        public Gtk.Adjustment open_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
+        public Gtk.Adjustment close_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
+        public Gtk.Adjustment snap_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
+        public Gtk.Adjustment minimize_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
+        public Gtk.Adjustment workspace_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
+
         public AnimationsPane () {
-            base (_("Animations"), "preferences-desktop-sound");
+            base (_("Animations"), "preferences-tweaks-anim");
         }
 
         construct {
@@ -28,12 +34,19 @@ namespace ElementaryTweaks {
         }
 
         private void build_ui () {
-            var test_box = new Widgets.SettingsBox ();
-            test_box.add_switch ("test");
-            test_box.add_switch ("another test");
-            grid.add (test_box);
+            var master_box = new Widgets.SettingsBox ();
+            var animations_box = new Widgets.SettingsBox ();
 
-            grid.show_all ();
+            var master_switch = master_box.add_switch ("Animations");
+
+            var open_duration = animations_box.add_spin_button ("Open duration", open_adj);
+            var close_duration = animations_box.add_spin_button ("Close duration", close_adj);
+            var snap_duration = animations_box.add_spin_button ("Snap duration", snap_adj);
+            var minimize_duration = animations_box.add_spin_button ("Minimize duration", minimize_adj);
+            var workspace_duration = animations_box.add_spin_button ("Workspace switch duration", workspace_adj);
+
+            grid.add (master_box);
+            grid.add (animations_box);
         }
 
         private void connect_signals () {

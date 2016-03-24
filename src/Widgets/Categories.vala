@@ -34,10 +34,13 @@ namespace ElementaryTweaks {
             var appearance = new Panes.AppearancePane ();
             list_box.add (appearance);
 
-            //var fonts = new Panes.FontsPane ();
-            //list_box.add (fonts);
+            var animations = new Panes.AnimationsPane ();
+            list_box.add (animations);
 
-            list_box.row_activated.connect ((row) => {
+            var fonts = new Panes.FontsPane ();
+            list_box.add (fonts);
+
+            list_box.row_selected.connect ((row) => {
                 var page = ((Pane) row);
                 if (page.added == false) {
                     page.added = true;
@@ -61,7 +64,9 @@ namespace ElementaryTweaks {
             first.activate ();
         }
 
-        public class Pane : Gtk.ListBoxRow {
+        public abstract class Pane : Gtk.ListBoxRow {
+            protected delegate void SetValue<T> (T val);
+
             public Gtk.Label label;
             Gtk.Image image;
             public bool added = false;
@@ -103,6 +108,17 @@ namespace ElementaryTweaks {
                 grid.show ();
                 pane.add (grid);
                 pane.show ();
+            }
+
+            protected void connect_combobox (Gtk.ComboBox box, Gtk.ListStore store, SetValue<string> set_func) {
+                box.changed.connect (() => {
+                    Value val;
+                    Gtk.TreeIter iter;
+
+                    box.get_active_iter (out iter);
+                    store.get_value (iter, 1, out val);
+                    set_func ((string) val);
+                });
             }
         }
 
