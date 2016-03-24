@@ -140,6 +140,12 @@ namespace ElementaryTweaks {
                     set_func ((string) val);
                 });
             }
+
+            protected void connect_font_button (Gtk.FontButton button, SetValue<string> set_func) {
+                button.font_set.connect (() => {
+                    set_func (button.get_font_name ());
+                });
+            }
         }
 
         public class Header : Gtk.Label {
