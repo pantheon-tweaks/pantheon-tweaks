@@ -59,6 +59,7 @@ namespace ElementaryTweaks {
             list_box.add (terminal);
 
             list_box.row_selected.connect ((row) => {
+                if (row == null) return;
                 var page = ((Pane) row);
                 if (page.added == false) {
                     page.added = true;
