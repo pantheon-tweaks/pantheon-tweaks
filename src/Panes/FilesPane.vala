@@ -19,6 +19,7 @@
 namespace ElementaryTweaks {
     public class Panes.FilesPane : Categories.Pane {
         private Gtk.Switch single_click;
+        private Gtk.Switch restore_tabs;
         private Gtk.ComboBox date_format;
         private Gtk.ComboBox sidebar_size;
 
@@ -35,6 +36,7 @@ namespace ElementaryTweaks {
             var files_box = new Widgets.SettingsBox ();
 
             single_click = files_box.add_switch (_("Single click"));
+            restore_tabs = files_box.add_switch (_("Restore Tabs"));
             date_format = files_box.add_combo_box (_("Date format"));
             sidebar_size = files_box.add_combo_box (_("Sidebar icon size"));
 

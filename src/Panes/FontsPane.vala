@@ -37,6 +37,11 @@ namespace ElementaryTweaks {
             var fonts_label = new Widgets.Label (_("Font Settings"));
             var fonts_box = new Widgets.SettingsBox ();
 
+            default_font.use_font = true;
+            document_font.use_font = true;
+            mono_font.use_font = true;
+            titlebar_font.use_font = true;
+
             fonts_box.add_widget (_("Default font"), default_font);
             fonts_box.add_widget (_("Document font"), document_font);
             fonts_box.add_widget (_("Monospace font"), mono_font);

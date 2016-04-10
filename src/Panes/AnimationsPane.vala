@@ -46,6 +46,7 @@ namespace ElementaryTweaks {
             var animations_box = new Widgets.SettingsBox ();
 
             master_switch = master_box.add_switch (_("Enable animations"));
+            master_switch.bind_property ("active", animations_box, "sensitive", BindingFlags.SYNC_CREATE);
 
             var duration_label = new Widgets.Label (_("Duration"));
 
