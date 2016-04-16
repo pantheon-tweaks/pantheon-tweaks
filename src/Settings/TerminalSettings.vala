@@ -18,8 +18,7 @@
 
 namespace ElementaryTweaks {
 
-    public class TerminalSettings : Granite.Services.Settings
-    {
+    public class TerminalSettings : Granite.Services.Settings {
         public string background { get; set; }
         public string cursor_color { get; set; }
         public string font { get; set; }
@@ -29,17 +28,16 @@ namespace ElementaryTweaks {
         public int scrollback_lines { get; set; }
         public bool unsafe_paste_alert { get; set; }
         public bool natural_copy_paste { get; set; }
+        public bool follow_last_tab { get; set; }
         public string cursor_shape { get; set; }
                 
         static TerminalSettings? instance = null;
 
-        private TerminalSettings ()
-        {
+        private TerminalSettings () {
             base ("org.pantheon.terminal.settings");
         }
 
-        public static TerminalSettings get_default ()
-        {
+        public static TerminalSettings get_default () {
             if (instance == null)
                 instance = new TerminalSettings ();
 

@@ -93,6 +93,5 @@ namespace ElementaryTweaks {
             var checkfile = File.new_for_path (Environment.get_user_config_dir () + dir);
             return checkfile.query_exists ();
         }
-
     }
 }

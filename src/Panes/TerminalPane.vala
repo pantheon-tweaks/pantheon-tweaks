@@ -18,7 +18,9 @@
 
 namespace ElementaryTweaks {
     public class Panes.TerminalPane : Categories.Pane {
-        private Gtk.ComboBox default_font_combobox;
+        private Gtk.ColorButton background;
+        private Gtk.Switch natural_copy_paste;
+        private Gtk.Switch follow_last_tab;
 
         public TerminalPane () {
             base (_("Terminal"), "utilities-terminal");
@@ -27,24 +29,46 @@ namespace ElementaryTweaks {
         construct {
             if (Util.schema_exists ("org.pantheon.terminal.settings")) {
                 build_ui ();
+                init_data ();
                 connect_signals ();
             }
         }
 
         private void build_ui () {
-            var fonts_label = new Widgets.Label (_("Font Settings"));
-            var fonts_box = new Widgets.SettingsBox ();
+            var box = new Widgets.SettingsBox ();
 
-            default_font_combobox = fonts_box.add_combo_box (_("Default font"));
+            background = new Gtk.ColorButton ();
 
-            grid.add (fonts_label);
-            grid.add (fonts_box);
+            box.add_widget ("Background color", background);
+            natural_copy_paste = box.add_switch (_("Natural copy paste"));
+            follow_last_tab = box.add_switch (_("Follow last tab"));
+
+            grid.add (box);
 
             grid.show_all ();
         }
 
-        private void connect_signals () {
+        private void init_data () {
+            var rgba = new Gdk.RGBA ();
+            rgba.parse (TerminalSettings.get_default ().background);
+            background.use_alpha = true;
+            background.rgba = rgba;
+            natural_copy_paste.set_state (TerminalSettings.get_default ().natural_copy_paste);
+            follow_last_tab.set_state (TerminalSettings.get_default ().follow_last_tab);
+        }
 
+        private void connect_signals () {
+            background.color_set.connect ( () => {
+                TerminalSettings.get_default ().background = background.rgba.to_string ();
+            });
+
+            natural_copy_paste.notify["active"].connect (() => {
+                TerminalSettings.get_default ().natural_copy_paste = natural_copy_paste.state;
+            });
+
+            follow_last_tab.notify["active"].connect (() => {
+                TerminalSettings.get_default ().follow_last_tab = follow_last_tab.state;
+            });
         }
     }
 }
