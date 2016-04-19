@@ -18,6 +18,7 @@
 
 namespace ElementaryTweaks {
     public class Panes.CerberePane : Categories.Pane {
+
         public CerberePane () {
             base (_("Cerbere"), "preferences-tweaks-cerbere");
         }
@@ -28,6 +29,7 @@ namespace ElementaryTweaks {
         }
 
         private void build_ui () {
+
 
         }
 

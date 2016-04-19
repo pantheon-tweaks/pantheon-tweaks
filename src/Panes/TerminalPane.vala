@@ -49,7 +49,7 @@ namespace ElementaryTweaks {
         }
 
         private void init_data () {
-            var rgba = new Gdk.RGBA ();
+            var rgba = Gdk.RGBA ();
             rgba.parse (TerminalSettings.get_default ().background);
             background.use_alpha = true;
             background.rgba = rgba;

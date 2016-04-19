@@ -21,15 +21,19 @@ namespace ElementaryTweaks {
         private Gtk.Switch single_click;
         private Gtk.Switch restore_tabs;
         private Gtk.ComboBox date_format;
-        private Gtk.ComboBox sidebar_size;
+
+        private Gtk.ListStore date_format_store;
 
         public FilesPane () {
             base (_("Files"), "system-file-manager");
         }
 
         construct {
-            build_ui ();
-            connect_signals ();
+            if (Util.schema_exists ("org.pantheon.files.preferences")) {
+                build_ui ();
+                init_data ();
+                connect_signals ();
+            }
         }
 
         private void build_ui () {
@@ -38,14 +42,32 @@ namespace ElementaryTweaks {
             single_click = files_box.add_switch (_("Single click"));
             restore_tabs = files_box.add_switch (_("Restore Tabs"));
             date_format = files_box.add_combo_box (_("Date format"));
-            sidebar_size = files_box.add_combo_box (_("Sidebar icon size"));
 
             grid.add (files_box);
             grid.show_all ();
         }
 
-        private void connect_signals () {
+        private void init_data () {
+            int date_index;
 
+            date_format_store = FilesSettings.get_date_formats (out date_index);
+            date_format.set_model (date_format_store);
+            date_format.set_active (date_index);
+
+            single_click.set_state (FilesSettings.get_default ().single_click);
+            restore_tabs.set_state (FilesSettings.get_default ().restore_tabs);
+        }
+
+        private void connect_signals () {
+            connect_combobox (date_format, date_format_store, (val) => { FilesSettings.get_default ().date_format = val; });
+
+            single_click.notify["active"].connect (() => {
+                FilesSettings.get_default ().single_click = single_click.active;
+            });
+
+            restore_tabs.notify["active"].connect (() => {
+                FilesSettings.get_default ().restore_tabs = restore_tabs.active;
+            });
         }
     }
 }

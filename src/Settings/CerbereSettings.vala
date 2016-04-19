@@ -27,7 +27,7 @@ namespace ElementaryTweaks {
         static CerbereSettings? instance = null;
 
         private CerbereSettings () {
-            base ("org.pantheon.cerbere");
+            base ("org.pantheon.desktop.cerbere");
         }
 
         public static CerbereSettings get_default () {
