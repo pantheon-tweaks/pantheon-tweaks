@@ -37,6 +37,7 @@ namespace ElementaryTweaks {
 
         construct {
             build_ui ();
+            make_stores ();
             init_data ();
             connect_signals ();
         }
@@ -46,10 +47,10 @@ namespace ElementaryTweaks {
             var theme_box = new Widgets.SettingsBox ();
 
             gtk_combobox = theme_box.add_combo_box (_("GTK+"));
-            prefer_dark_switch = theme_box.add_switch (_("Prefer dark variant"));
-            metacity_combobox = theme_box.add_combo_box (_("Metacity (Non-GTK+ applications)"));
+            //metacity_combobox = theme_box.add_combo_box (_("Metacity (Non-GTK+ applications)"));
             icon_combobox = theme_box.add_combo_box (_("Icons"));
             cursor_combobox = theme_box.add_combo_box (_("Cursor"));
+            prefer_dark_switch = theme_box.add_switch (_("Prefer dark variant"));
 
             grid.add (theme_label);
             grid.add (theme_box);
@@ -65,15 +66,15 @@ namespace ElementaryTweaks {
             grid.show_all ();
         }
 
-        private void init_data () {
+        private void make_stores () {
             var gtk_index = 0;
+            var controls_index = 0;
             var metacity_index = 0;
             var icon_index = 0;
             var cursor_index = 0;
-            var controls_index = 0;
 
             gtk_store = Util.get_themes_store ("themes", "gtk-3.0", InterfaceSettings.get_default ().gtk_theme, out gtk_index);
-            metacity_store = Util.get_themes_store ("themes", "metacity-1", WindowSettings.get_default ().theme, out metacity_index);
+            //metacity_store = Util.get_themes_store ("themes", "metacity-1", WindowSettings.get_default ().theme, out metacity_index);
             icon_store = Util.get_themes_store ("icons", "index.theme", InterfaceSettings.get_default ().icon_theme, out icon_index);
             cursor_store = Util.get_themes_store ("icons", "cursors", InterfaceSettings.get_default ().cursor_theme, out cursor_index);
             controls_store = AppearanceSettings.get_button_layouts (out controls_index);
@@ -83,9 +84,23 @@ namespace ElementaryTweaks {
             icon_combobox.set_model (icon_store);
             cursor_combobox.set_model (cursor_store);
             controls_combobox.set_model (controls_store);
+        }
+
+        protected override void init_data () {
+            var gtk_index = 0;
+            //var metacity_index = 0;
+            var icon_index = 0;
+            var cursor_index = 0;
+            var controls_index = 0;
+
+            Util.get_themes_store ("themes", "gtk-3.0", InterfaceSettings.get_default ().gtk_theme, out gtk_index);
+            //Util.get_themes_store ("themes", "metacity-1", WindowSettings.get_default ().theme, out metacity_index);
+            Util.get_themes_store ("icons", "index.theme", InterfaceSettings.get_default ().icon_theme, out icon_index);
+            Util.get_themes_store ("icons", "cursors", InterfaceSettings.get_default ().cursor_theme, out cursor_index);
+            AppearanceSettings.get_button_layouts (out controls_index);
 
             gtk_combobox.set_active (gtk_index);
-            metacity_combobox.set_active (metacity_index);
+            //metacity_combobox.set_active (metacity_index);
             icon_combobox.set_active (icon_index);
             cursor_combobox.set_active (cursor_index);
             controls_combobox.set_active (controls_index);
@@ -99,12 +114,20 @@ namespace ElementaryTweaks {
             });
 
             connect_combobox (gtk_combobox, gtk_store, (val) => { InterfaceSettings.get_default ().gtk_theme = val; });
-            connect_combobox (metacity_combobox, metacity_store, (val) => { WindowSettings.get_default ().theme = val; });
+            //connect_combobox (metacity_combobox, metacity_store, (val) => { WindowSettings.get_default ().theme = val; });
             connect_combobox (icon_combobox, icon_store, (val) => { InterfaceSettings.get_default ().icon_theme = val; });
             connect_combobox (cursor_combobox, cursor_store, (val) => { InterfaceSettings.get_default ().cursor_theme = val; });
             connect_combobox (controls_combobox, controls_store,
                 (val) => {  AppearanceSettings.get_default ().button_layout = val;
                             XSettings.get_default ().decoration_layout = val; });
+
+            connect_reset_button (()=> {
+                GtkSettings.get_default().prefer_dark_theme = false;
+                //WindowSettings.get_default ().reset_appearance ();
+                InterfaceSettings.get_default ().reset_appearance ();
+                AppearanceSettings.get_default ().reset ();
+                XSettings.get_default ().reset ();
+            });
         }
     }
 }

@@ -33,6 +33,8 @@ namespace ElementaryTweaks {
 
         }
 
+        protected override void init_data () {}
+
         private void connect_signals () {
 
         }

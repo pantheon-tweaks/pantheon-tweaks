@@ -40,20 +40,20 @@ namespace ElementaryTweaks {
             var animations = new Panes.AnimationsPane ();
             list_box.add (animations);
 
-            var misc = new Panes.MiscPane ();
-            list_box.add (misc);
+            //var misc = new Panes.MiscPane ();
+            //list_box.add (misc);
 
             var files = new Panes.FilesPane ();
             list_box.add (files);
 
-            var plank = new Panes.PlankPane ();
-            list_box.add (plank);
+            //var plank = new Panes.PlankPane ();
+            //list_box.add (plank);
 
             var slingshot = new Panes.SlingshotPane ();
             list_box.add (slingshot);
 
-            var cerbere = new Panes.CerberePane ();
-            list_box.add (cerbere);
+            //var cerbere = new Panes.CerberePane ();
+            //list_box.add (cerbere);
 
             var terminal = new Panes.TerminalPane ();
             list_box.add (terminal);
@@ -87,6 +87,7 @@ namespace ElementaryTweaks {
 
         public abstract class Pane : Gtk.ListBoxRow {
             protected delegate void SetValue<T> (T val);
+            protected delegate void Reset ();
 
             public Gtk.Label label;
             Gtk.Image image;
@@ -94,6 +95,7 @@ namespace ElementaryTweaks {
             public Gtk.ScrolledWindow pane { public get; private set; }
             public Gtk.Grid grid { public get; private set; }
             public Widgets.SettingsBox settings_box { public get; private set; }
+            protected Gtk.LinkButton reset;
 
             public Pane (string label_string, string icon_name) {
                 label.label = label_string;
@@ -153,6 +155,25 @@ namespace ElementaryTweaks {
                     set_func (button.get_value_as_int ());
                 });
             }
+
+            protected void connect_reset_button (Reset reset_func) {
+                reset = new Gtk.LinkButton (_("Reset to default"));
+                reset.can_focus = false;
+                reset.set_vexpand (true);
+                reset.valign = Gtk.Align.END;
+                reset.halign = Gtk.Align.END;
+
+                reset.activate_link.connect (() => {
+                    reset_func ();
+                    init_data ();
+                    return true;
+                });
+
+                grid.add (reset);
+                grid.show_all ();
+            }
+
+            protected virtual void init_data () {}
         }
 
         public class Header : Gtk.Label {

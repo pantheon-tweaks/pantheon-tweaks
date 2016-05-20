@@ -31,6 +31,7 @@ namespace ElementaryTweaks {
         construct {
             if (Util.schema_exists ("org.pantheon.files.preferences")) {
                 build_ui ();
+                make_stores ();
                 init_data ();
                 connect_signals ();
             }
@@ -47,10 +48,15 @@ namespace ElementaryTweaks {
             grid.show_all ();
         }
 
-        private void init_data () {
+        private void make_stores () {
+            int date_index;
+            date_format_store = FilesSettings.get_date_formats (out date_index);
+        }
+
+        protected override void init_data () {
             int date_index;
 
-            date_format_store = FilesSettings.get_date_formats (out date_index);
+            FilesSettings.get_date_formats (out date_index);
             date_format.set_model (date_format_store);
             date_format.set_active (date_index);
 
@@ -67,6 +73,10 @@ namespace ElementaryTweaks {
 
             restore_tabs.notify["active"].connect (() => {
                 FilesSettings.get_default ().restore_tabs = restore_tabs.active;
+            });
+
+            connect_reset_button (() => {
+                FilesSettings.get_default ().reset ();
             });
         }
     }

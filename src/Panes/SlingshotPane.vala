@@ -53,7 +53,7 @@ namespace ElementaryTweaks {
             grid.show_all ();
         }
 
-        private void init_data () {
+        protected override void init_data () {
             rows.set_value (SlingshotSettings.get_default ().rows);
             columns.set_value (SlingshotSettings.get_default ().columns);
 
@@ -71,6 +71,8 @@ namespace ElementaryTweaks {
 
             connect_spin_button (rows, (val) => { SlingshotSettings.get_default ().rows = val; });
             connect_spin_button (columns, (val) => { SlingshotSettings.get_default ().columns = val; });
+
+            connect_reset_button (() => {SlingshotSettings.get_default().reset (); });
         }
     }
 }

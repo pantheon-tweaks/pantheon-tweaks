@@ -48,7 +48,7 @@ namespace ElementaryTweaks {
             grid.show_all ();
         }
 
-        private void init_data () {
+        protected override void init_data () {
             var rgba = Gdk.RGBA ();
             rgba.parse (TerminalSettings.get_default ().background);
             background.use_alpha = true;
@@ -69,6 +69,8 @@ namespace ElementaryTweaks {
             follow_last_tab.notify["active"].connect (() => {
                 TerminalSettings.get_default ().follow_last_tab = follow_last_tab.state;
             });
+
+            connect_reset_button (() => {TerminalSettings.get_default ().reset();});
         }
     }
 }

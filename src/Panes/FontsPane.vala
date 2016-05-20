@@ -53,7 +53,7 @@ namespace ElementaryTweaks {
             grid.show_all ();
         }
 
-        private void init_data () {
+        protected override void init_data () {
             default_font.font_name = InterfaceSettings.get_default ().font_name;
             document_font.font_name = InterfaceSettings.get_default ().document_font_name;
             mono_font.font_name = InterfaceSettings.get_default ().monospace_font_name;
@@ -65,6 +65,11 @@ namespace ElementaryTweaks {
             connect_font_button (document_font, (val) => { InterfaceSettings.get_default ().document_font_name = val; });
             connect_font_button (mono_font, (val) => { InterfaceSettings.get_default ().monospace_font_name = val; });
             connect_font_button (titlebar_font, (val) => { WindowSettings.get_default ().titlebar_font = val; });
+
+            connect_reset_button (() => {
+                InterfaceSettings.get_default().reset_fonts ();
+                WindowSettings.get_default().reset_fonts ();
+            });
         }
     }
 }

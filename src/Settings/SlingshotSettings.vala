@@ -39,5 +39,12 @@ namespace ElementaryTweaks {
 
             return instance;
         }
+
+        public void reset () {
+            schema.reset ("show-category-filter");
+            schema.reset ("use-category");
+            schema.reset ("rows");
+            schema.reset ("columns");
+        }
     }
 }

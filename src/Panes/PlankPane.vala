@@ -71,6 +71,8 @@ namespace ElementaryTweaks {
             grid.show_all ();
         }
 
+        protected override void init_data () {}
+
         private void connect_signals () {
 
         }

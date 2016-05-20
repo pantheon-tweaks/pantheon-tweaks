@@ -75,6 +75,10 @@ namespace ElementaryTweaks {
             return instance;
         }
 
+        public void reset () {
+            schema.reset ("button-layout");
+        }
+
         public static Gee.HashMap<string, string> get_preset_button_layouts () {
             if (preset_button_layouts == null) {
                 preset_button_layouts = new Gee.HashMap<string, string> ();
@@ -116,6 +120,8 @@ namespace ElementaryTweaks {
                     }
                     index++;
                 }
+            } else {
+                active_index = 1;
             }
 
             return button_layouts;
@@ -168,6 +174,15 @@ namespace ElementaryTweaks {
                 instance = new AnimationSettings ();
 
             return instance;
+        }
+
+        public void reset () {
+            schema.reset ("enable-animations");
+            schema.reset ("open-duration");
+            schema.reset ("snap-duration");
+            schema.reset ("minimize-duration");
+            schema.reset ("close-duration");
+            schema.reset ("workspace-switch-duration");
         }
     }
 }

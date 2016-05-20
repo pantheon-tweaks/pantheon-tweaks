@@ -62,5 +62,11 @@ namespace ElementaryTweaks {
 
             return date_layouts;
         }
+
+        public void reset () {
+            schema.reset ("date-format");
+            schema.reset ("single-click");
+            schema.reset ("restore-tabs");
+        }
     }
 }

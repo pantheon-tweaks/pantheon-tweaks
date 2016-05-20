@@ -63,7 +63,7 @@ namespace ElementaryTweaks {
             grid.show_all ();
         }
 
-        private void init_data () {
+        protected override void init_data () {
             master_switch.set_state (AnimationSettings.get_default ().enable_animations);
 
             open_duration.set_value (AnimationSettings.get_default ().open_duration);
@@ -83,6 +83,8 @@ namespace ElementaryTweaks {
             connect_spin_button (snap_duration, (val) => { AnimationSettings.get_default ().snap_duration = val; });
             connect_spin_button (minimize_duration, (val) => { AnimationSettings.get_default ().minimize_duration = val; });
             connect_spin_button (workspace_duration, (val) => { AnimationSettings.get_default ().workspace_switch_duration = val; });
+
+            connect_reset_button (() => {AnimationSettings.get_default().reset ();});
         }
     }
 }
