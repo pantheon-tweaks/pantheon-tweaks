@@ -10,7 +10,7 @@ elementary tweaks is a system settings panel for elementary OS **Loki** that let
 - elementary-tweaks now looks more "elementary"!. We've rebuilt elementary tweaks from the ground up to make it look like a native plug for your settings settings.
 - Fixed: Removed theme-patcher and other more dangerus settings that were [causing problems](https://github.com/I-hate-farms/elementary-tweaks/issues/14)
 
-* [Previous Changelog](CHANGELOG.md)
+[Previous Changelog](CHANGELOG.md)
 
 ## Installation
 Coming Soon… 
