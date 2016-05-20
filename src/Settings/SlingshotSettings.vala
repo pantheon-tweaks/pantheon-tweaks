@@ -21,7 +21,7 @@ namespace ElementaryTweaks {
     public class SlingshotSettings : Granite.Services.Settings
     {
         public bool show_category_filter { get; set; }
-        public int icon_size { get; set; }
+        public bool use_category { get; set; }
         public int rows { get; set; }
         public int columns { get; set; }
 

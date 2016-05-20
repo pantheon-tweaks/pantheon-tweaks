@@ -18,21 +18,59 @@
 
 namespace ElementaryTweaks {
     public class Panes.SlingshotPane : Categories.Pane {
+        private Gtk.Switch category_switcher;
+        private Gtk.Switch category_default;
+
+        private Gtk.Adjustment rows_adj = new Gtk.Adjustment (0,1,10,1,1,1);
+        private Gtk.Adjustment columns_adj = new Gtk.Adjustment (0,3,10,1,1,1);
+
+        private Gtk.SpinButton rows;
+        private Gtk.SpinButton columns;
+
         public SlingshotPane () {
             base (_("Launcher"), "preferences-tweaks-slingshot");
         }
 
         construct {
             build_ui ();
+            init_data ();
             connect_signals ();
         }
 
         private void build_ui () {
+            var size_box = new Widgets.SettingsBox ();
+            var category_box = new Widgets.SettingsBox ();
 
+            rows = size_box.add_spin_button (_("Rows"), rows_adj);
+            columns = size_box.add_spin_button (_("Columns"), columns_adj);
+
+            category_switcher = category_box.add_switch (_("Show category switch"));
+            category_default = category_box.add_switch (_("Show category view by default"));
+
+            grid.add (size_box);
+            grid.add (category_box);
+
+            grid.show_all ();
+        }
+
+        private void init_data () {
+            rows.set_value (SlingshotSettings.get_default ().rows);
+            columns.set_value (SlingshotSettings.get_default ().columns);
+
+            category_default.set_state (SlingshotSettings.get_default ().use_category);
+            category_switcher.set_state (SlingshotSettings.get_default ().show_category_filter);
         }
 
         private void connect_signals () {
+             category_switcher.notify["active"].connect (() => {
+                SlingshotSettings.get_default ().show_category_filter = category_switcher.state;
+            });
+             category_default.notify["active"].connect (() => {
+                SlingshotSettings.get_default ().use_category = category_default.state;
+            });
 
+            connect_spin_button (rows, (val) => { SlingshotSettings.get_default ().rows = val; });
+            connect_spin_button (columns, (val) => { SlingshotSettings.get_default ().columns = val; });
         }
     }
 }
