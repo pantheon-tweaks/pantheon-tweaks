@@ -1,13 +1,19 @@
 # elementary-tweaks
-elementary-tweaks is a system settings component for elementary OS that lets you easily customise the desktop's appearance.
+elementary tweaks is a system settings panel for elementary OS **Loki** that lets you easily and safely customise your desktop's appearance 
 
-This repository is a fork of the [original elementary-tweaks](https://launchpad.net/elementary-tweaks) and could not have been done without the work of its [authors](AUTHORS) Michael P. Starkweather, Michael "Versable", PerfectCarl and additional [contributors](CONTRIBUTORS).
 
 ![sample](docs/screenshot.png)
 
-## Development
+ 
+## What's New?
 
-* [Changelog](CHANGELOG.md)
+- elementary-tweaks now looks more "elementary"!. We've rebuilt elementary tweaks from the ground up to make it look like a native plug for your settings settings.
+- Fixed: Removed theme-patcher and other more dangerus settings that were [causing problems](https://github.com/I-hate-farms/elementary-tweaks/issues/14)
+
+* [Previous Changelog](CHANGELOG.md)
+
+## Installation
+Coming Soon… 
 
 ### How to build
 ```
@@ -20,3 +26,7 @@ make
 sudo make install 
 switchboard
 ```
+
+### Special Thanks
+This repository is a fork of the [original elementary-tweaks](https://launchpad.net/elementary-tweaks) and could not have been done without the work of its [authors](AUTHORS) Michael P. Starkweather, Michael "Versable", PerfectCarl, Marvin Beckers and additional [contributors](CONTRIBUTORS).
+
