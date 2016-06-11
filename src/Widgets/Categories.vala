@@ -40,8 +40,8 @@ namespace ElementaryTweaks {
             var animations = new Panes.AnimationsPane ();
             list_box.add (animations);
 
-            //var misc = new Panes.MiscPane ();
-            //list_box.add (misc);
+            var misc = new Panes.MiscPane ();
+            list_box.add (misc);
 
             var files = new Panes.FilesPane ();
             list_box.add (files);

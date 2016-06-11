@@ -16,6 +16,7 @@ include (ValaPrecompile)
 vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Tweaks.vala
     Util.vala
+    Settings/IndicatorSoundSettings.vala
     Settings/FilesSettings.vala
     Settings/GalaSettings.vala
     Settings/GtkSettings.vala

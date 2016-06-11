@@ -25,11 +25,11 @@ namespace ElementaryTweaks {
         private Gtk.SpinButton minimize_duration;
         private Gtk.SpinButton workspace_duration;
 
-        private Gtk.Adjustment open_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
-        private Gtk.Adjustment close_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
-        private Gtk.Adjustment snap_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
-        private Gtk.Adjustment minimize_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
-        private Gtk.Adjustment workspace_adj = new Gtk.Adjustment (0,0,1000,1,10,10);
+        private Gtk.Adjustment open_adj = new Gtk.Adjustment (0,0,1000,10,10,10);
+        private Gtk.Adjustment close_adj = new Gtk.Adjustment (0,0,1000,10,10,10);
+        private Gtk.Adjustment snap_adj = new Gtk.Adjustment (0,0,1000,10,10,10);
+        private Gtk.Adjustment minimize_adj = new Gtk.Adjustment (0,0,1000,10,10,10);
+        private Gtk.Adjustment workspace_adj = new Gtk.Adjustment (0,0,1000,10,10,10);
 
         public AnimationsPane () {
             base (_("Animations"), "go-jump");

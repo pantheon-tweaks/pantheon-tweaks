@@ -18,23 +18,40 @@
 
 namespace ElementaryTweaks {
     public class Panes.MiscPane : Categories.Pane {
+        private Gtk.SpinButton max_volume;
+        private Gtk.Adjustment max_volume_adj = new Gtk.Adjustment (0, 10, 160, 5, 10, 10);
+
         public MiscPane () {
             base (_("Miscellaneous"), "applications-utilities");
         }
 
         construct {
             build_ui ();
+            init_data ();
             connect_signals ();
         }
 
         private void build_ui () {
+            var indicator_sound_box = new Widgets.SettingsBox ();
 
+            var indicator_sound_label = new Widgets.Label (_("Sound Indicator"));
+
+            max_volume = indicator_sound_box.add_spin_button (_("Max volume"), max_volume_adj);
+
+            grid.add (indicator_sound_label);
+            grid.add (indicator_sound_box);
+            grid.show_all ();
         }
 
-        protected override void init_data () {}
+        protected override void init_data () {
+            max_volume.set_value (IndicatorSoundSettings.get_default ().max_volume);
+            stderr.printf ("Max volume: %s\n" , IndicatorSoundSettings.get_default ().max_volume.to_string ());
+        }
 
         private void connect_signals () {
+            connect_spin_button (max_volume, (val) => {IndicatorSoundSettings.get_default ().max_volume = val;});
 
+            connect_reset_button (() => {IndicatorSoundSettings.get_default().reset ();});
         }
     }
 }
