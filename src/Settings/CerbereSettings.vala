@@ -36,5 +36,9 @@ namespace ElementaryTweaks {
 
             return instance;
         }
+
+        public void reset () {
+            schema.reset ("monitored-processes");
+        }
     }
 }

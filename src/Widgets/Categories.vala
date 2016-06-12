@@ -52,8 +52,8 @@ namespace ElementaryTweaks {
             var slingshot = new Panes.SlingshotPane ();
             list_box.add (slingshot);
 
-            //var cerbere = new Panes.CerberePane ();
-            //list_box.add (cerbere);
+            var cerbere = new Panes.CerberePane ();
+            list_box.add (cerbere);
 
             var terminal = new Panes.TerminalPane ();
             list_box.add (terminal);
@@ -156,10 +156,10 @@ namespace ElementaryTweaks {
                 });
             }
 
-            protected void connect_reset_button (Reset reset_func) {
+            protected void connect_reset_button (Reset reset_func, bool expand = true) {
                 reset = new Gtk.LinkButton (_("Reset to default"));
                 reset.can_focus = false;
-                reset.set_vexpand (true);
+                reset.set_vexpand (expand);
                 reset.valign = Gtk.Align.END;
                 reset.halign = Gtk.Align.END;
 

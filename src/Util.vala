@@ -93,5 +93,12 @@ namespace ElementaryTweaks {
             var checkfile = File.new_for_path (Environment.get_user_config_dir () + dir);
             return checkfile.query_exists ();
         }
+
+        public static string create_markup (string name, string description) {
+            string markup = "<b>%s</b>\n%s".printf (name, description);
+
+
+            return markup;
+        }
     }
 }
