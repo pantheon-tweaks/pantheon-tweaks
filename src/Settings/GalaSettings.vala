@@ -59,6 +59,7 @@ namespace ElementaryTweaks {
         public bool dim_parents { get; set; }
 
         static Gee.HashMap<string, string> preset_button_layouts;
+        static Gtk.ListStore button_layouts;
         static AppearanceSettings? instance = null;
 
         private AppearanceSettings ()
@@ -74,11 +75,16 @@ namespace ElementaryTweaks {
             return instance;
         }
 
+        public void reset () {
+            schema.reset ("button-layout");
+        }
+
         public static Gee.HashMap<string, string> get_preset_button_layouts () {
             if (preset_button_layouts == null) {
                 preset_button_layouts = new Gee.HashMap<string, string> ();
                 preset_button_layouts["close:maximize"] = _("elementary");
-                preset_button_layouts[":close"] = _("Close Only");
+                preset_button_layouts["close:"] = _("Close Only Right");
+                preset_button_layouts[":close"] = _("Close Only Left");
                 preset_button_layouts["close,minimize:maximize"] = _("Minimize Left");
                 preset_button_layouts["close:minimize,maximize"] = _("Minimize Right");
                 preset_button_layouts[":minimize,maximize,close"] = _("Windows");
@@ -86,6 +92,39 @@ namespace ElementaryTweaks {
                 preset_button_layouts["custom"] = _("Custom");
             }
             return preset_button_layouts;
+        }
+
+        public static Gtk.ListStore get_button_layouts (out int active_index) {
+            if (button_layouts == null) {
+                button_layouts = new Gtk.ListStore(2, typeof (string), typeof (string));
+                Gtk.TreeIter iter;
+
+                int index = 0;
+                active_index = 0;
+
+                var layouts = new Gee.HashMap<string, string> ();
+                layouts["close:maximize"] = _("elementary");
+                layouts[":close"] = _("Close Only Right");
+                layouts["close:"] = _("Close Only Left");
+                layouts["close,minimize:maximize"] = _("Minimize Left");
+                layouts["close:minimize,maximize"] = _("Minimize Right");
+                layouts[":minimize,maximize,close"] = _("Windows");
+                layouts["close,minimize,maximize"] = _("OS X");
+
+                foreach (var layout in layouts.entries) {
+                    debug ("Adding button layout: %s => %s", layout.key, layout.value);
+                    button_layouts.append (out iter);
+                    button_layouts.set (iter, 0, layout.value, 1, layout.key);
+                    if (AppearanceSettings.get_default ().button_layout == layout.key) {
+                        active_index = index;
+                    }
+                    index++;
+                }
+            } else {
+                active_index = 1;
+            }
+
+            return button_layouts;
         }
     }
 
@@ -135,6 +174,15 @@ namespace ElementaryTweaks {
                 instance = new AnimationSettings ();
 
             return instance;
+        }
+
+        public void reset () {
+            schema.reset ("enable-animations");
+            schema.reset ("open-duration");
+            schema.reset ("snap-duration");
+            schema.reset ("minimize-duration");
+            schema.reset ("close-duration");
+            schema.reset ("workspace-switch-duration");
         }
     }
 }

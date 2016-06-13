@@ -42,6 +42,14 @@ namespace ElementaryTweaks {
 
             return instance;
         }
+
+        public void reset_fonts () {
+            schema.reset ("titlebar-font");
+        }
+
+        public void reset_appearance () {
+            schema.reset ("theme");
+        }
     }
 
     public class InterfaceSettings : Granite.Services.Settings
@@ -66,6 +74,18 @@ namespace ElementaryTweaks {
                 instance = new InterfaceSettings ();
 
             return instance;
+        }
+
+        public void reset_appearance () {
+            schema.reset ("gtk-theme");
+            schema.reset ("cursor-theme");
+            schema.reset ("icon-theme");
+        }
+
+        public void reset_fonts () {
+            schema.reset ("document-font-name");
+            schema.reset ("font-name");
+            schema.reset ("monospace-font-name");
         }
     }
 

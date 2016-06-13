@@ -58,5 +58,47 @@ namespace ElementaryTweaks {
 
             return map;
         }
+
+        public static Gtk.ListStore get_themes_store (string path, string condition, string active, out int active_index = null) {
+            var themes = get_themes (path, condition);
+            var store = new Gtk.ListStore (2, typeof (string), typeof (string));
+            var index = 0;
+
+            active_index = 0;
+            Gtk.TreeIter iter;
+
+            foreach (string theme in themes) {
+                store.append (out iter);
+                store.set (iter, 0, theme, 1, theme);
+                if (theme == active) {
+                    active_index = index;
+                }
+                index++;
+            }
+
+            return store;
+        }
+
+        /**
+         * Returns true if the schema exists.
+         */
+        public static bool schema_exists(string schema) {
+            return (SettingsSchemaSource.get_default ().lookup(schema, true) != null);
+        }
+
+        /**
+         * Returns true if the file exists.
+         */
+        public static bool file_exists(string dir) {
+            var checkfile = File.new_for_path (Environment.get_user_config_dir () + dir);
+            return checkfile.query_exists ();
+        }
+
+        public static string create_markup (string name, string description) {
+            string markup = "<b>%s</b>\n%s".printf (name, description);
+
+
+            return markup;
+        }
     }
 }

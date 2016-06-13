@@ -18,8 +18,7 @@
 
 namespace ElementaryTweaks {
 
-    public class XSettings
-    {
+    public class XSettings {
         public string decoration_layout {
             get {
                 var overrides = settings.get_value ("overrides");

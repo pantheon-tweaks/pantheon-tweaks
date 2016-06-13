@@ -1,5 +1,5 @@
 /*
- * Copyright (C) Elementary Tweaks Developers, 2014 - 2016
+ * Copyright (C) Switchboard Accessibility Plug, 2016
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,28 +17,12 @@
  */
 
 namespace ElementaryTweaks {
-
-    public class CerbereSettings : Granite.Services.Settings
-    {
-        public uint crash_time_interval { get; set; }
-        public uint max_crashes { get; set; }
-        public string[] monitored_processes { get; set; }
-
-        static CerbereSettings? instance = null;
-
-        private CerbereSettings () {
-            base ("org.pantheon.desktop.cerbere");
-        }
-
-        public static CerbereSettings get_default () {
-            if (instance == null)
-                instance = new CerbereSettings ();
-
-            return instance;
-        }
-
-        public void reset () {
-            schema.reset ("monitored-processes");
+    public class Widgets.Label : Gtk.Label {
+        public Label (string text) {
+            label = text;
+            get_style_context ().add_class ("h4");
+            halign = Gtk.Align.START;
+            hexpand = true;
         }
     }
 }

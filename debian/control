@@ -1,7 +1,7 @@
 Source: elementary-tweaks
 Section: x11
 Priority: optional
-Maintainer: Carl P. <name.is.carl@gmail.com>
+Maintainer: Felipe Escoto. <felescoto95@hotmail.com>
 Build-Depends: cmake (>= 2.8),
                debhelper (>= 9),
                libgranite-dev,
@@ -11,13 +11,13 @@ Build-Depends: cmake (>= 2.8),
                libgconf2-dev,
                libswitchboard-2.0-dev,
                libpolkit-gobject-1-dev,
-               valac (>= 0.22)
+               valac (>= 0.30)
 Standards-Version: 3.9.5
-Homepage: https://github.com/I-hate-farms/elementary-tweaks
+Homepage: https://github.com/elementary-tweaks/elementary-tweaks
 
 Package: elementary-tweaks
 Architecture: any
-Depends: gala, plank, slingshot-launcher, ${misc:Depends}, ${shlibs:Depends}
+Depends: gala, plank, ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
 Recommends: plank
 Enhances: switchboard
