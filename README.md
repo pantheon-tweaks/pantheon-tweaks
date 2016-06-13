@@ -1,4 +1,4 @@
-# elementary-tweaks
+# elementary tweaks
 elementary tweaks is a system settings panel for elementary OS **Loki** that lets you easily and safely customise your desktop's appearance 
 
 
