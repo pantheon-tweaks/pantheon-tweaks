@@ -20,7 +20,7 @@ sudo apt-get install elementary-tweaks
 
 ### How to build
 ```
-sudo apt-get install libgconf2-dev libpolkit-gobject-1-dev libswitchboard-2.0-dev
+sudo apt-get install libgconf2-dev libpolkit-gobject-1-dev libswitchboard-2.0-dev elementary-sdk
 mkdir build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/usr ../
