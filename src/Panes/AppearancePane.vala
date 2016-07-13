@@ -19,6 +19,7 @@
 namespace ElementaryTweaks {
     public class Panes.AppearancePane : Categories.Pane {
         private Gtk.Switch prefer_dark_switch;
+        private Gtk.Switch gnome_menu;
         private Gtk.ComboBox gtk_combobox;
         private Gtk.ComboBox metacity_combobox;
         private Gtk.ComboBox icon_combobox;
@@ -59,6 +60,7 @@ namespace ElementaryTweaks {
             var layout_box = new Widgets.SettingsBox ();
 
             controls_combobox = layout_box.add_combo_box (_("Layout"));
+            gnome_menu = layout_box.add_switch (_("Show GNOME menu"));
 
             grid.add (layout_label);
             grid.add (layout_box);
@@ -105,6 +107,7 @@ namespace ElementaryTweaks {
             cursor_combobox.set_active (cursor_index);
             controls_combobox.set_active (controls_index);
 
+            gnome_menu.set_state (XSettings.get_default ().has_gnome_menu ());
             prefer_dark_switch.set_state (GtkSettings.get_default ().prefer_dark_theme);
         }
 
@@ -119,7 +122,12 @@ namespace ElementaryTweaks {
             connect_combobox (cursor_combobox, cursor_store, (val) => { InterfaceSettings.get_default ().cursor_theme = val; });
             connect_combobox (controls_combobox, controls_store,
                 (val) => {  AppearanceSettings.get_default ().button_layout = val;
-                            XSettings.get_default ().decoration_layout = val; });
+                            XSettings.get_default ().set_gnome_menu (gnome_menu.state, val);
+                            });
+
+            gnome_menu.notify["active"].connect (() => {
+                controls_combobox.changed ();
+            });
 
             connect_reset_button (()=> {
                 GtkSettings.get_default().prefer_dark_theme = false;

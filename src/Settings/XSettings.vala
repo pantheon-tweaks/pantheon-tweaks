@@ -32,15 +32,16 @@ namespace ElementaryTweaks {
                 }
             }
             set {
-                if (value != "" && value != "close:maximize") {
+
+                if (value != "") {
                     //FIXME: this is so gross, since we're tossing everything else out
                     VariantBuilder builder = new VariantBuilder (new VariantType ("a{sv}"));
                     builder.add ("{sv}", "Gtk/DecorationLayout", new Variant.string (value));
+                    builder.add ("{sv}", "Gtk/DialogsUseHeader", new Variant.int32 (0));
+                    builder.add ("{sv}", "Gtk/ShellShowsAppMenu", new Variant.int32 (0));
+
                     Variant dictionary = builder.end ();
                     settings.set_value ("overrides", dictionary);
-                }
-                else {
-                    settings.reset ("overrides");
                 }
             }
         }
@@ -64,6 +65,22 @@ namespace ElementaryTweaks {
 
         public void reset () {
             settings.reset ("overrides");
+        }
+
+        public bool has_gnome_menu () {
+            return decoration_layout.contains ("menu");
+        }
+
+        public void set_gnome_menu (bool set, string new_layout) {
+            if (set) {
+                decoration_layout = new_layout + ",menu";
+                if (decoration_layout.contains (":,")) decoration_layout = decoration_layout.replace (":,", ":");
+                else if (!decoration_layout.contains (":")) decoration_layout = new_layout + ":menu";
+            } else if (!set) {
+                decoration_layout = new_layout;
+            }
+
+            stderr.printf ("XSettings: %s\n", decoration_layout);
         }
     }
 }
