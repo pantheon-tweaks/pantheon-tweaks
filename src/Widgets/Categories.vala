@@ -58,6 +58,9 @@ namespace ElementaryTweaks {
             var terminal = new Panes.TerminalPane ();
             list_box.add (terminal);
 
+            var audience = new Panes.AudiencePane ();
+            list_box.add (audience);
+
             list_box.row_selected.connect ((row) => {
                 if (row == null) return;
                 var page = ((Pane) row);

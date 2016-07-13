@@ -16,6 +16,7 @@ include (ValaPrecompile)
 vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Tweaks.vala
     Util.vala
+    Settings/AudienceSettings.vala
     Settings/IndicatorSoundSettings.vala
     Settings/FilesSettings.vala
     Settings/GalaSettings.vala
@@ -27,6 +28,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Settings/GnomeSettings.vala
     Settings/TerminalSettings.vala
     Settings/XSettings.vala
+    Panes/AudiencePane.vala
     Panes/AnimationsPane.vala
     Panes/AppearancePane.vala
     Panes/FontsPane.vala
