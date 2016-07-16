@@ -18,8 +18,8 @@
 
 namespace ElementaryTweaks {
     public class Panes.AudiencePane : Categories.Pane {
+        //public Gtk.Switch stay_on_top;
         public Gtk.Switch move_window;
-        public Gtk.Switch stay_on_top;
         public Gtk.Switch playback_wait;
 
         public AudiencePane () {
@@ -35,7 +35,7 @@ namespace ElementaryTweaks {
         private void build_ui () {
             var behaviour = new Widgets.SettingsBox ();
 
-            stay_on_top = behaviour.add_switch (_("Stay on top while playing"));
+            //stay_on_top = behaviour.add_switch (_("Stay on top while playing"));
             move_window = behaviour.add_switch (_("Move window from video canvas"));
             playback_wait = behaviour.add_switch (_("Don't instantly start video playback"));
 
@@ -44,17 +44,17 @@ namespace ElementaryTweaks {
         }
 
         protected override void init_data () {
+            //stay_on_top.set_state (AudienceSettings.get_default ().stay_on_top);
             move_window.set_state (AudienceSettings.get_default ().move_window);
-            stay_on_top.set_state (AudienceSettings.get_default ().stay_on_top);
             playback_wait.set_state (AudienceSettings.get_default ().playback_wait);
         }
 
         private void connect_signals () {
+            //stay_on_top.notify["active"].connect (() => {AudienceSettings.get_default ().stay_on_top = stay_on_top.state; });
             move_window.notify["active"].connect (() => {AudienceSettings.get_default ().move_window = move_window.state; });
-            stay_on_top.notify["active"].connect (() => {AudienceSettings.get_default ().stay_on_top = stay_on_top.state; });
             playback_wait.notify["active"].connect (() => {AudienceSettings.get_default ().playback_wait = playback_wait.state; });
 
-            connect_reset_button (()=> {
+            connect_reset_button (() => {
                 AudienceSettings.get_default ().reset ();
             });
         }
