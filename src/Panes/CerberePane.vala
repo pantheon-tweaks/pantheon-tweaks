@@ -25,8 +25,10 @@ namespace ElementaryTweaks {
         }
 
         construct {
-            build_ui ();
-            connect_signals ();
+            if (Util.schema_exists ("org.pantheon.desktop.cerbere")) {
+                build_ui ();
+                connect_signals ();
+            }
         }
 
         private void build_ui () {

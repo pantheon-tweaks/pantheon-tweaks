@@ -32,9 +32,11 @@ namespace ElementaryTweaks {
         }
 
         construct {
-            build_ui ();
-            init_data ();
-            connect_signals ();
+            if (Util.schema_exists ("org.pantheon.desktop.slingshot")) {
+                build_ui ();
+                init_data ();
+                connect_signals ();
+            }
         }
 
         private void build_ui () {

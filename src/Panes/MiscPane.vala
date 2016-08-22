@@ -26,9 +26,11 @@ namespace ElementaryTweaks {
         }
 
         construct {
-            build_ui ();
-            init_data ();
-            connect_signals ();
+            if (Util.schema_exists ("org.pantheon.desktop.wingpanel.indicators.sound")) {
+                build_ui ();
+                init_data ();
+                connect_signals ();
+            }
         }
 
         private void build_ui () {
@@ -50,7 +52,6 @@ namespace ElementaryTweaks {
 
         private void connect_signals () {
             connect_spin_button (max_volume, (val) => {IndicatorSoundSettings.get_default ().max_volume = val;});
-
             connect_reset_button (() => {IndicatorSoundSettings.get_default().reset ();});
         }
     }
