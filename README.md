@@ -13,9 +13,15 @@ elementary tweaks is a system settings panel for elementary OS **Loki** that let
 [Previous Changelog](CHANGELOG.md)
 
 ## Installation
+
 ```
 sudo add-apt-repository ppa:philip.scott/elementary-tweaks && sudo apt-get update
 sudo apt-get install elementary-tweaks
+```
+
+If you have never added a PPA on Loki before, you might need to run this command first: 
+```
+sudo apt-get install software-properties-common
 ```
 
 ### How to build
