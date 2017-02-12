@@ -22,6 +22,7 @@ namespace ElementaryTweaks {
         private Gtk.Switch natural_copy_paste;
         private Gtk.Switch follow_last_tab;
         private Gtk.Switch unsafe_paste_alert;
+        private Gtk.Switch term_bell;
 
         public TerminalPane () {
             base (_("Terminal"), "utilities-terminal");
@@ -44,6 +45,7 @@ namespace ElementaryTweaks {
             natural_copy_paste = box.add_switch (_("Natural copy paste"));
             follow_last_tab = box.add_switch (_("Follow last tab"));
             unsafe_paste_alert = box.add_switch (_("Unsafe paste alert"));
+            term_bell = box.add_switch (_("Terminal bell"));
 
             grid.add (box);
 
@@ -58,6 +60,7 @@ namespace ElementaryTweaks {
             natural_copy_paste.set_state (TerminalSettings.get_default ().natural_copy_paste);
             follow_last_tab.set_state (TerminalSettings.get_default ().follow_last_tab);
             unsafe_paste_alert.set_state (TerminalSettings.get_default ().unsafe_paste_alert);
+            term_bell.set_state (TerminalSettings.get_default ().audible_bell);
         }
 
         private void connect_signals () {
@@ -75,6 +78,10 @@ namespace ElementaryTweaks {
 
             unsafe_paste_alert.notify["active"].connect (() => {
                 TerminalSettings.get_default ().unsafe_paste_alert = unsafe_paste_alert.state;
+            });
+
+            term_bell.notify["active"].connect (() => {
+                TerminalSettings.get_default ().audible_bell = term_bell.state;
             });
 
             connect_reset_button (() => {TerminalSettings.get_default ().reset();});
