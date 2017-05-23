@@ -20,7 +20,6 @@ namespace ElementaryTweaks {
 
     public class SlingshotSettings : Granite.Services.Settings
     {
-        public bool show_category_filter { get; set; }
         public bool use_category { get; set; }
         public int rows { get; set; }
         public int columns { get; set; }
@@ -41,7 +40,6 @@ namespace ElementaryTweaks {
         }
 
         public void reset () {
-            schema.reset ("show-category-filter");
             schema.reset ("use-category");
             schema.reset ("rows");
             schema.reset ("columns");
