@@ -1,3 +1,0 @@
-namespace Build {
-    public const string PROJECT_NAME = @PROJECT_NAME@;
-}

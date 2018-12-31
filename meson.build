@@ -1,4 +1,4 @@
-project('elementary-tweaks', 'vala', 'c')
+project('elementary-tweaks', 'vala', 'c', version: '1.0')
 
 switchboard_dep = dependency('switchboard-2.0')
 gettext_name = meson.project_name() + '-plug'
@@ -12,14 +12,7 @@ add_global_arguments(
 )
 
 subdir('po')
-
-conf_data = configuration_data()
-conf_data.set_quoted('PROJECT_NAME', meson.project_name())
-config_header = configure_file(
-    input : 'config.vala.in',
-    output : 'config.vala',
-    configuration : conf_data
-)
+subdir('icon')
 
 plug_files = files(
     'src/Tweaks.vala',
@@ -52,7 +45,6 @@ plug_files = files(
 
 shared_module(
     meson.project_name(),
-    config_header,
     plug_files,
     dependencies: [
         dependency('gconf-2.0'),
@@ -66,27 +58,6 @@ shared_module(
     ],
     install: true,
     install_dir: pkgdatadir
-)
-
-install_data(
-    join_paths('icon', 'preferences-desktop-tweaks.svg'),
-    install_dir: join_paths(get_option('prefix'), 'share', 'icons', 'elementary', 'categories', '32')
-)
-install_data(
-    join_paths('icon', 'preferences-tweaks-anim.svg'),
-    install_dir: join_paths(get_option('prefix'), 'share', 'icons', 'elementary', 'categories', '32')
-)
-install_data(
-    join_paths('icon', 'preferences-tweaks-cerbere.svg'),
-    install_dir: join_paths(get_option('prefix'), 'share', 'icons', 'elementary', 'categories', '32')
-)
-install_data(
-    join_paths('icon', 'preferences-tweaks-shadows.svg'),
-    install_dir: join_paths(get_option('prefix'), 'share', 'icons', 'elementary', 'categories', '32')
-)
-install_data(
-    join_paths('icon', 'preferences-tweaks-slingshot.svg'),
-    install_dir: join_paths(get_option('prefix'), 'share', 'icons', 'elementary', 'categories', '32')
 )
 
 meson.add_install_script('meson/post_install.py')
