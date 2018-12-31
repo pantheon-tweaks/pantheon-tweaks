@@ -11,8 +11,8 @@ add_global_arguments(
     language:'c'
 )
 
-subdir('po')
 subdir('icon')
+subdir('po')
 
 plug_files = files(
     'src/Tweaks.vala',
