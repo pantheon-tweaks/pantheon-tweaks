@@ -23,6 +23,7 @@ namespace ElementaryTweaks {
         private Gtk.Switch follow_last_tab;
         private Gtk.Switch unsafe_paste_alert;
         private Gtk.Switch rem_tabs;
+        private Gtk.Switch term_bell;
 
         public TerminalPane () {
             base (_("Terminal"), "utilities-terminal");
@@ -46,6 +47,7 @@ namespace ElementaryTweaks {
             follow_last_tab = box.add_switch (_("Follow last tab"));
             unsafe_paste_alert = box.add_switch (_("Unsafe paste alert"));
             rem_tabs = box.add_switch (_("Remember tabs"));
+            term_bell = box.add_switch (_("Terminal bell"));
 
             grid.add (box);
 
@@ -61,6 +63,7 @@ namespace ElementaryTweaks {
             follow_last_tab.set_state (TerminalSettings.get_default ().follow_last_tab);
             unsafe_paste_alert.set_state (TerminalSettings.get_default ().unsafe_paste_alert);
             rem_tabs.set_state (TerminalSettings.get_default ().remember_tabs);
+            term_bell.set_state (TerminalSettings.get_default ().audible_bell);
         }
 
         private void connect_signals () {
@@ -82,6 +85,10 @@ namespace ElementaryTweaks {
 
             rem_tabs.notify["active"].connect (() => {
                 TerminalSettings.get_default ().remember_tabs = rem_tabs.state;
+            });
+
+            term_bell.notify["active"].connect (() => {
+                TerminalSettings.get_default ().audible_bell = term_bell.state;
             });
 
             connect_reset_button (() => {TerminalSettings.get_default ().reset();});
