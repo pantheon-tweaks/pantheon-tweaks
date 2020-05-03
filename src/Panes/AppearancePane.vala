@@ -57,7 +57,7 @@ namespace ElementaryTweaks {
             //metacity_combobox = theme_box.add_combo_box (_("Metacity (Non-GTK+ applications)"));
             icon_combobox = theme_box.add_combo_box (_("Icons"));
             cursor_combobox = theme_box.add_combo_box (_("Cursor"));
-            prefer_dark_switch = theme_box.add_switch (_("Force all apps to use dark style"));
+            prefer_dark_switch = theme_box.add_switch (_("Force third-party apps to use dark style"));
 
             grid.add (theme_label);
             grid.add (theme_box);
