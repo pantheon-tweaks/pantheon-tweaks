@@ -71,9 +71,9 @@ namespace ElementaryTweaks {
 
             list_box.set_header_func ((row, before) => {
                 if (row == appearance) {
-                    row.set_header (new Header (_("General")));
+                    row.set_header (new Granite.HeaderLabel (_("General")));
                 } else if (row == files) {
-                    row.set_header (new Header (_("Applications")));
+                    row.set_header (new Granite.HeaderLabel (_("Applications")));
                 }
             });
         }
@@ -174,18 +174,6 @@ namespace ElementaryTweaks {
             }
 
             protected virtual void init_data () {}
-        }
-
-        public class Header : Gtk.Label {
-            public Header (string header) {
-                label = "%s".printf (GLib.Markup.escape_text (header));
-                show_all ();
-            }
-
-            construct {
-                halign = Gtk.Align.START;
-                get_style_context ().add_class ("h4");
-            }
         }
     }
 }
