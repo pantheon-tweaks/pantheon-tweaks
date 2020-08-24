@@ -16,7 +16,7 @@
  *
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
 
     /**
      * Settings for Gtk; thanks gnome-tweak-tool for the help!

@@ -16,7 +16,7 @@
  *
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
 
     public class TweaksPlug : Switchboard.Plug {
         public static TweaksPlug plug;
@@ -30,7 +30,7 @@ namespace ElementaryTweaks {
             var settings = new Gee.TreeMap<string, string?> (null, null);
             settings.set ("Tweaks", null);
             Object (category: Category.PERSONAL,
-                    code_name: "elementary-tweaks",
+                    code_name: "pantheon-tweaks",
                     display_name: _("Tweaks"),
                     description: _("Tweak elementary OS settings"),
                     icon: "preferences-desktop-tweaks",
@@ -69,6 +69,6 @@ namespace ElementaryTweaks {
 
 public Switchboard.Plug get_plug (Module module) {
     info ("Activating tweaks plug");
-    var plug = new ElementaryTweaks.TweaksPlug ();
+    var plug = new PantheonTweaks.TweaksPlug ();
     return plug;
 }

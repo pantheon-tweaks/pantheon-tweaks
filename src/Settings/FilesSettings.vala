@@ -16,7 +16,7 @@
  *
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
 
     public class FilesSettings : Granite.Services.Settings {
         public string date_format { get; set; }

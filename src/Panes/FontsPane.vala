@@ -16,7 +16,7 @@
  *
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
     public class Panes.FontsPane : Categories.Pane {
         private Gtk.FontButton default_font = new Gtk.FontButton ();
         private Gtk.FontButton document_font = new Gtk.FontButton ();

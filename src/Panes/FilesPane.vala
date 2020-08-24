@@ -16,7 +16,7 @@
  *
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
     public class Panes.FilesPane : Categories.Pane {
         private Gtk.Switch single_click;
         private Gtk.Switch restore_tabs;

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
     public class Categories : Gtk.ScrolledWindow {
         private Gtk.Stack stack;
         private Gtk.ListBox list_box;

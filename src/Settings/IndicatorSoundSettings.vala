@@ -16,7 +16,7 @@
  *
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
 
     public class IndicatorSoundSettings : Object {
         private static IndicatorSoundSettings? instance = null;

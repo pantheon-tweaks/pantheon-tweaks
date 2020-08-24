@@ -16,7 +16,7 @@
  *
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
     public class Panes.TerminalPane : Categories.Pane {
         private Gtk.ColorButton background;
         private Gtk.Switch natural_copy_paste;

@@ -16,7 +16,7 @@
  *
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
     public class Panes.PlankPane : Categories.Pane {
         private Gtk.Switch current_workspace;
         private Gtk.Switch show_unpinned;

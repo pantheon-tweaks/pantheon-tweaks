@@ -19,7 +19,7 @@
  *
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
 
     const string SCHEMA = "org.pantheon.desktop.gala";
 

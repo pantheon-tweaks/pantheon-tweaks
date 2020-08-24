@@ -16,7 +16,7 @@
  *
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
     public class Panes.SlingshotPane : Categories.Pane {
         private Gtk.Switch category_default;
 

@@ -16,7 +16,7 @@
  *
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
     public class Panes.AnimationsPane : Categories.Pane {
         private Gtk.Switch master_switch;
         private Gtk.SpinButton open_duration;

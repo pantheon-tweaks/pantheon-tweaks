@@ -1,4 +1,4 @@
-Source: elementary-tweaks
+Source: pantheon-tweaks
 Section: x11
 Priority: optional
 Maintainer: Felipe Escoto. <felescoto95@hotmail.com>
@@ -13,9 +13,9 @@ Build-Depends: cmake (>= 2.8),
                libpolkit-gobject-1-dev,
                valac (>= 0.30)
 Standards-Version: 3.9.5
-Homepage: https://github.com/elementary-tweaks/elementary-tweaks
+Homepage: https://github.com/pantheon-tweaks/pantheon-tweaks
 
-Package: elementary-tweaks
+Package: pantheon-tweaks
 Architecture: any
 Depends: gala, plank, ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
@@ -24,13 +24,13 @@ Enhances: switchboard
 Description: Change hidden desktop settings
  Switchboard plug for controlling hidden options.
 
-Package: elementary-tweaks-dbg
+Package: pantheon-tweaks-dbg
 Architecture: any
 Section: debug
 Priority: extra
-Depends: elementary-tweaks (= ${binary:Version}), ${misc:Depends}
+Depends: pantheon-tweaks (= ${binary:Version}), ${misc:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
-Enhances: elementary-tweaks
+Enhances: pantheon-tweaks
 Description: Change hidden desktop settings (debugging symbols)
  Switchboard plug for controlling hidden options.
  .

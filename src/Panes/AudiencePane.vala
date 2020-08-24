@@ -16,7 +16,7 @@
  *
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
     public class Panes.AudiencePane : Categories.Pane {
         public Gtk.Switch stay_on_top;
         public Gtk.Switch move_window;

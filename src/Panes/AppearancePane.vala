@@ -16,7 +16,7 @@
  *
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
     public class Panes.AppearancePane : Categories.Pane {
         private Gtk.Switch prefer_dark_switch;
         private Gtk.Switch gnome_menu;

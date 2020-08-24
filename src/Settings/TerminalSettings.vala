@@ -16,7 +16,7 @@
  *
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
 
     public class TerminalSettings : Granite.Services.Settings {
         public string background { get; set; }

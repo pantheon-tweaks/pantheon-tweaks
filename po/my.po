@@ -1,11 +1,11 @@
-# Burmese translation for elementary-tweaks
+# Burmese translation for pantheon-tweaks
 # Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
-# This file is distributed under the same license as the elementary-tweaks package.
+# This file is distributed under the same license as the pantheon-tweaks package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: elementary-tweaks\n"
+"Project-Id-Version: pantheon-tweaks\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-28 07:48-0500\n"
 "PO-Revision-Date: 2014-10-18 15:09+0000\n"

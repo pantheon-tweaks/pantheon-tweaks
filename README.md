@@ -1,28 +1,11 @@
-# elementary tweaks
-elementary tweaks is a system settings panel for elementary OS **Juno** that lets you easily and safely customise your desktop's appearance 
-
+# Pantheon Tweaks
+A system settings panel for the Pantheon Desktop and elementary OS **6.0** that lets you easily and safely customise your desktop's appearance 
 
 ![sample](docs/screenshot.png)
 
- 
-## What's New?
-- Fully updated and working to reflect the changes of elementary OS Juno
-- elementary-tweaks now looks more "elementary"! We've rebuilt elementary tweaks from the ground up to make it look like a native plug for your system's settings.
-- Fixed: Removed theme-patcher and other more dangerous settings that were [causing problems](https://github.com/I-hate-farms/elementary-tweaks/issues/14)
-
-[Previous Changelog](CHANGELOG.md)
-
 ## Installation
 
-```
-sudo add-apt-repository ppa:philip.scott/elementary-tweaks
-sudo apt install elementary-tweaks
-```
-
-If you have never added a PPA on Juno before, you might need to run this command first: 
-```
-sudo apt install software-properties-common
-```
+Coming Soon... 
 
 ### How to build
 ```

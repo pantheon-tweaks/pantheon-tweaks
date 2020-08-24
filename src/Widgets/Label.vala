@@ -16,7 +16,7 @@
  *
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
     public class Widgets.Label : Gtk.Label {
         public Label (string text) {
             label = text;

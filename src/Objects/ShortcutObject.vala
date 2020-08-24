@@ -16,7 +16,7 @@
  *
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
 
     // stores a shortcut, converts to gsettings format and readable format
     // and checks for validity

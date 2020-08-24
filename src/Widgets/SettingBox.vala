@@ -16,7 +16,7 @@
  *
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
     public class Widgets.SettingsBox : Gtk.Frame {
         private Gtk.ListBox list_box;
         private bool has_childen = false;

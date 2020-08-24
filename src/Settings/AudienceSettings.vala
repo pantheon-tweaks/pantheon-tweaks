@@ -16,7 +16,7 @@
  *
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
 
     public class AudienceSettings : Granite.Services.Settings {
         public bool move_window { get; set; }

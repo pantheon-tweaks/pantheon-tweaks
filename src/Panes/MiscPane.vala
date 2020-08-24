@@ -16,7 +16,7 @@
  *
  */
 
-namespace ElementaryTweaks {
+namespace PantheonTweaks {
     public class Panes.MiscPane : Categories.Pane {
         private Gtk.SpinButton max_volume;
         private Gtk.Adjustment max_volume_adj = new Gtk.Adjustment (0, 10, 160, 5, 10, 10);
