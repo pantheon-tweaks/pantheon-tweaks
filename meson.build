@@ -37,7 +37,6 @@ plug_files = files(
     'src/Objects/ShortcutObject.vala',
     'src/Widgets/Categories.vala',
     'src/Widgets/SettingBox.vala',
-    'src/Widgets/Label.vala',
 )
 
 shared_module(

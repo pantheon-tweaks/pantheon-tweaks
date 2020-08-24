@@ -45,7 +45,7 @@ namespace PantheonTweaks {
         private void build_ui () {
             var animations_box = new Widgets.SettingsBox ();
 
-            var duration_label = new Widgets.Label (_("Duration"));
+            var duration_label = new Granite.HeaderLabel (_("Duration"));
 
             open_duration = animations_box.add_spin_button (_("Open"), open_adj);
             close_duration = animations_box.add_spin_button (_("Close"), close_adj);

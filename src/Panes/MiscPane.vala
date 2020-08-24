@@ -36,7 +36,7 @@ namespace PantheonTweaks {
         private void build_ui () {
             var indicator_sound_box = new Widgets.SettingsBox ();
 
-            var indicator_sound_label = new Widgets.Label (_("Sound Indicator"));
+            var indicator_sound_label = new Granite.HeaderLabel (_("Sound Indicator"));
 
             max_volume = indicator_sound_box.add_spin_button (_("Max volume"), max_volume_adj);
 
