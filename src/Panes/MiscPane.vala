@@ -1,5 +1,6 @@
 /*
- * Copyright (C) Elementary Tweaks Developers, 2016
+ * Copyright (C) Elementary Tweaks Developers, 2016-2020
+ *               Pantheon Tweaks Developers, 2020
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,43 +17,30 @@
  *
  */
 
-namespace PantheonTweaks {
-    public class Panes.MiscPane : Categories.Pane {
-        private Gtk.SpinButton max_volume;
-        private Gtk.Adjustment max_volume_adj = new Gtk.Adjustment (0, 10, 160, 5, 10, 10);
+public class PantheonTweaks.Panes.MiscPane : Categories.Pane {
+    public MiscPane () {
+        base (_("Miscellaneous"), "applications-utilities");
+    }
 
-        public MiscPane () {
-            base (_("Miscellaneous"), "applications-utilities");
+    construct {
+        if (!Util.schema_exists ("io.elementary.desktop.wingpanel.sound")) {
+            return;
         }
 
-        construct {
-            if (Util.schema_exists ("io.elementary.desktop.wingpanel.sound")) {
-                build_ui ();
-                init_data ();
-                connect_signals ();
-            }
-        }
+        var indicator_sound_box = new Widgets.SettingsBox ();
 
-        private void build_ui () {
-            var indicator_sound_box = new Widgets.SettingsBox ();
+        var indicator_sound_label = new Granite.HeaderLabel (_("Sound Indicator"));
 
-            var indicator_sound_label = new Granite.HeaderLabel (_("Sound Indicator"));
+        var max_volume_adj = new Gtk.Adjustment (0, 10, 160, 5, 10, 10);
+        var max_volume = indicator_sound_box.add_spin_button (_("Max volume"), max_volume_adj);
 
-            max_volume = indicator_sound_box.add_spin_button (_("Max volume"), max_volume_adj);
+        grid.add (indicator_sound_label);
+        grid.add (indicator_sound_box);
+        grid.show_all ();
 
-            grid.add (indicator_sound_label);
-            grid.add (indicator_sound_box);
-            grid.show_all ();
-        }
+        max_volume.set_value (IndicatorSoundSettings.get_default ().max_volume);
 
-        protected override void init_data () {
-            max_volume.set_value (IndicatorSoundSettings.get_default ().max_volume);
-            stderr.printf ("Max volume: %s\n" , IndicatorSoundSettings.get_default ().max_volume.to_string ());
-        }
-
-        private void connect_signals () {
-            connect_spin_button (max_volume, (val) => {IndicatorSoundSettings.get_default ().max_volume = val;});
-            connect_reset_button (() => {IndicatorSoundSettings.get_default().reset ();});
-        }
+        connect_spin_button (max_volume, (val) => {IndicatorSoundSettings.get_default ().max_volume = val;});
+        connect_reset_button (() => {IndicatorSoundSettings.get_default().reset ();});
     }
 }
