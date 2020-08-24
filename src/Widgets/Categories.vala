@@ -49,9 +49,6 @@ namespace PantheonTweaks {
             //var plank = new Panes.PlankPane ();
             //list_box.add (plank);
 
-            var slingshot = new Panes.SlingshotPane ();
-            list_box.add (slingshot);
-
             var terminal = new Panes.TerminalPane ();
             list_box.add (terminal);
 
