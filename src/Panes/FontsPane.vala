@@ -54,10 +54,10 @@ namespace PantheonTweaks {
         }
 
         protected override void init_data () {
-            default_font.font_name = InterfaceSettings.get_default ().font_name;
-            document_font.font_name = InterfaceSettings.get_default ().document_font_name;
-            mono_font.font_name = InterfaceSettings.get_default ().monospace_font_name;
-            titlebar_font.font_name = WindowSettings.get_default ().titlebar_font;
+            default_font.font = InterfaceSettings.get_default ().font_name;
+            document_font.font = InterfaceSettings.get_default ().document_font_name;
+            mono_font.font = InterfaceSettings.get_default ().monospace_font_name;
+            titlebar_font.font = WindowSettings.get_default ().titlebar_font;
         }
 
         private void connect_signals () {
