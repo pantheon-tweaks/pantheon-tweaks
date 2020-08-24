@@ -25,12 +25,19 @@ namespace PantheonTweaks {
         private GLib.KeyFile keyfile;
         private string path;
         private static GtkSettings? instance = null;
+        private bool keyfile_exists = false;
 
         /**
          * GTK should prefer the dark theme or not
          */
         public bool prefer_dark_theme {
-            get { return (get_integer ("gtk-application-prefer-dark-theme") == 1); }
+            get {
+                if (keyfile_exists) {
+                    return (get_integer ("gtk-application-prefer-dark-theme") == 1);
+                } else {
+                    return false;
+                }
+            }
             set { set_integer ("gtk-application-prefer-dark-theme", value ? 1 : 0); }
         }
 
@@ -40,8 +47,15 @@ namespace PantheonTweaks {
         public GtkSettings () {
             keyfile = new GLib.KeyFile ();
 
+            path = GLib.Environment.get_user_config_dir () + "/gtk-3.0/settings.ini";
+
+            if (!(File.new_for_path (path).query_exists ())) {
+                return;
+            }
+
+            keyfile_exists = true;
+
             try {
-                path = GLib.Environment.get_user_config_dir() + "/gtk-3.0/settings.ini";
                 keyfile.load_from_file (path, 0);
             }
             catch (Error e) {
