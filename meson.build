@@ -34,7 +34,6 @@ plug_files = files(
     'src/Panes/FilesPane.vala',
     'src/Panes/TerminalPane.vala',
     'src/Panes/PlankPane.vala',
-    'src/Objects/ShortcutObject.vala',
     'src/Widgets/Categories.vala',
     'src/Widgets/SettingBox.vala',
     'src/Widgets/Label.vala',
