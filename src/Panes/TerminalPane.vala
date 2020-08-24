@@ -19,7 +19,6 @@
 namespace PantheonTweaks {
     public class Panes.TerminalPane : Categories.Pane {
         private Gtk.ColorButton background;
-        private Gtk.Switch natural_copy_paste;
         private Gtk.Switch follow_last_tab;
         private Gtk.Switch unsafe_paste_alert;
         private Gtk.Switch rem_tabs;
@@ -43,7 +42,6 @@ namespace PantheonTweaks {
             background = new Gtk.ColorButton ();
 
             box.add_widget (_("Background color"), background);
-            natural_copy_paste = box.add_switch (_("Natural copy paste"));
             follow_last_tab = box.add_switch (_("Follow last tab"));
             unsafe_paste_alert = box.add_switch (_("Unsafe paste alert"));
             rem_tabs = box.add_switch (_("Remember tabs"));
@@ -59,7 +57,6 @@ namespace PantheonTweaks {
             rgba.parse (TerminalSettings.get_default ().background);
             background.use_alpha = true;
             background.rgba = rgba;
-            natural_copy_paste.set_state (TerminalSettings.get_default ().natural_copy_paste);
             follow_last_tab.set_state (TerminalSettings.get_default ().follow_last_tab);
             unsafe_paste_alert.set_state (TerminalSettings.get_default ().unsafe_paste_alert);
             rem_tabs.set_state (TerminalSettings.get_default ().remember_tabs);
@@ -69,10 +66,6 @@ namespace PantheonTweaks {
         private void connect_signals () {
             background.color_set.connect ( () => {
                 TerminalSettings.get_default ().background = background.rgba.to_string ();
-            });
-
-            natural_copy_paste.notify["active"].connect (() => {
-                TerminalSettings.get_default ().natural_copy_paste = natural_copy_paste.state;
             });
 
             follow_last_tab.notify["active"].connect (() => {
