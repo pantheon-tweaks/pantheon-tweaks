@@ -18,7 +18,6 @@
 
 namespace PantheonTweaks {
     public class Panes.AnimationsPane : Categories.Pane {
-        private Gtk.Switch master_switch;
         private Gtk.SpinButton open_duration;
         private Gtk.SpinButton close_duration;
         private Gtk.SpinButton snap_duration;
@@ -44,11 +43,7 @@ namespace PantheonTweaks {
         }
 
         private void build_ui () {
-            var master_box = new Widgets.SettingsBox ();
             var animations_box = new Widgets.SettingsBox ();
-
-            master_switch = master_box.add_switch (_("Enable animations"));
-            master_switch.bind_property ("active", animations_box, "sensitive", BindingFlags.SYNC_CREATE);
 
             var duration_label = new Widgets.Label (_("Duration"));
 
@@ -58,7 +53,6 @@ namespace PantheonTweaks {
             minimize_duration = animations_box.add_spin_button (_("Minimize"), minimize_adj);
             workspace_duration = animations_box.add_spin_button (_("Workspace switch"), workspace_adj);
 
-            grid.add (master_box);
             grid.add (duration_label);
             grid.add (animations_box);
 
@@ -66,8 +60,6 @@ namespace PantheonTweaks {
         }
 
         protected override void init_data () {
-            master_switch.set_state (AnimationSettings.get_default ().enable_animations);
-
             open_duration.set_value (AnimationSettings.get_default ().open_duration);
             close_duration.set_value (AnimationSettings.get_default ().close_duration);
             snap_duration.set_value (AnimationSettings.get_default ().snap_duration);
@@ -76,10 +68,6 @@ namespace PantheonTweaks {
         }
 
         private void connect_signals () {
-            master_switch.notify["active"].connect (() => {
-                AnimationSettings.get_default ().enable_animations = master_switch.state;
-            });
-
             connect_spin_button (open_duration, (val) => { AnimationSettings.get_default ().open_duration = val; });
             connect_spin_button (close_duration, (val) => { AnimationSettings.get_default ().close_duration = val; });
             connect_spin_button (snap_duration, (val) => { AnimationSettings.get_default ().snap_duration = val; });
