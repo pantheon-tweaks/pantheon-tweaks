@@ -50,7 +50,7 @@ namespace PantheonTweaks {
         }
 
         private void build_ui () {
-            var theme_label = new Widgets.Label (_("Theme Settings"));
+            var theme_label = new Granite.HeaderLabel (_("Theme Settings"));
             var theme_box = new Widgets.SettingsBox ();
 
             gtk_combobox = theme_box.add_combo_box (_("GTK+"));
@@ -62,7 +62,7 @@ namespace PantheonTweaks {
             grid.add (theme_label);
             grid.add (theme_box);
 
-            var layout_label = new Widgets.Label (_("Window Controls"));
+            var layout_label = new Granite.HeaderLabel (_("Window Controls"));
             var layout_box = new Widgets.SettingsBox ();
 
             controls_combobox = layout_box.add_combo_box (_("Layout"));

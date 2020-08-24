@@ -34,7 +34,7 @@ namespace PantheonTweaks {
         }
 
         private void build_ui () {
-            var fonts_label = new Widgets.Label (_("Font Settings"));
+            var fonts_label = new Granite.HeaderLabel (_("Font Settings"));
             var fonts_box = new Widgets.SettingsBox ();
 
             default_font.use_font = true;

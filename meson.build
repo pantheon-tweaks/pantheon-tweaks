@@ -36,7 +36,6 @@ plug_files = files(
     'src/Panes/PlankPane.vala',
     'src/Widgets/Categories.vala',
     'src/Widgets/SettingBox.vala',
-    'src/Widgets/Label.vala',
 )
 
 shared_module(

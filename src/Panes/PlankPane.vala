@@ -47,7 +47,7 @@ namespace PantheonTweaks {
             var appearance = new Widgets.SettingsBox ();
 
             //Behavior
-            var behabiour_label = new Widgets.Label (_("Behavior"));
+            var behabiour_label = new Granite.HeaderLabel (_("Behavior"));
             lock_items = behabiour.add_switch (_("Lock items"));
             show_unpinned = behabiour.add_switch (_("Show Unpinned"));
             current_workspace =behabiour.add_switch (_("Restrict to Workspace"));
@@ -55,7 +55,7 @@ namespace PantheonTweaks {
             behabiour.add_spin_button (_("Hide delay"), hide_delay);
 
             //Appearance
-            var appearance_label = new Widgets.Label (_("Appearance"));
+            var appearance_label = new Granite.HeaderLabel (_("Appearance"));
             theme = appearance.add_combo_box (_("Theme"));
             appearance.add_spin_button (_("Icon size"), icon_size);
             monitor = appearance.add_combo_box (_("Monitor"));
