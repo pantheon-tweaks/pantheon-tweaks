@@ -31,8 +31,13 @@ namespace PantheonTweaks {
                 Environment.get_home_dir () + "/.local/share/" + path + "/"};
 
             foreach (string dir in dirs) {
+                var file = File.new_for_path (dir);
+                if (!file.query_exists ()) {
+                    continue;
+                }
+
                 try {
-                    var enumerator = File.new_for_path (dir).enumerate_children (FileAttribute.STANDARD_NAME, 0);
+                    var enumerator = file.enumerate_children (FileAttribute.STANDARD_NAME, 0);
                     FileInfo file_info;
                     while ((file_info = enumerator.next_file ()) != null) {
                         var name = file_info.get_name ();
@@ -42,7 +47,9 @@ namespace PantheonTweaks {
                                 name != "Emacs" && name != "Default" && name != "default" && !themes.contains(name))
                             themes.add(name);
                     }
-                } catch (Error e) { /*warning (e.message);*/ }
+                } catch (Error e) {
+                    warning (e.message);
+                }
             }
 
             return themes;
