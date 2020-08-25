@@ -1,5 +1,6 @@
 /*
- * Copyright (C) Elementary Tweaks Developers, 2014 - 2016
+ * Copyright (C) Elementary Tweaks Developers, 2014 - 2020
+ *               Pantheon Tweaks Developers, 2020
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
