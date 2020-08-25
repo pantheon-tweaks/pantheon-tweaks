@@ -1,5 +1,6 @@
 /*
- * Copyright (C) Elementary Tweaks Developers, 2016
+ * Copyright (C) Elementary Tweaks Developers, 2016 - 2020
+ *               Pantheon Tweaks Developers, 2020
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,49 +17,40 @@
  *
  */
 
-namespace PantheonTweaks {
-    public class Panes.AudiencePane : Categories.Pane {
-        public Gtk.Switch stay_on_top;
-        public Gtk.Switch move_window;
-        public Gtk.Switch playback_wait;
+public class PantheonTweaks.Panes.AudiencePane : Categories.Pane {
+    private const string VIDEOS_OLD_SCHEMA = "org.pantheon.audience";
+    private const string VIDEOS_NEW_SCHEMA = "io.elementary.videos";
 
-        public AudiencePane () {
-            base (_("Videos"), "multimedia-video-player");
+    public AudiencePane () {
+        base (_("Videos"), "multimedia-video-player");
+    }
+
+    construct {
+        if (!(Util.schema_exists (VIDEOS_OLD_SCHEMA) || Util.schema_exists (VIDEOS_NEW_SCHEMA))) {
+            return;
         }
 
-        construct {
-            if (Util.schema_exists ("org.pantheon.audience") || Util.schema_exists("io.elementary.videos")) {
-                build_ui ();
-                init_data ();
-                connect_signals ();
+        var settings = new Settings ((Util.schema_exists (VIDEOS_NEW_SCHEMA)) ? VIDEOS_NEW_SCHEMA : VIDEOS_OLD_SCHEMA);
+
+        var behaviour = new Widgets.SettingsBox ();
+
+        var stay_on_top = behaviour.add_switch (_("Stay on top while playing"));
+        var move_window = behaviour.add_switch (_("Move window from video canvas"));
+        var playback_wait = behaviour.add_switch (_("Don't instantly start video playback"));
+
+        grid.add (behaviour);
+        grid.show_all ();
+
+        settings.bind ("stay-on-top", stay_on_top, "active", SettingsBindFlags.DEFAULT);
+        settings.bind ("move-window", move_window, "active", SettingsBindFlags.DEFAULT);
+        settings.bind ("playback-wait", playback_wait, "active", SettingsBindFlags.DEFAULT);
+
+        connect_reset_button (() => {
+            string[] keys = {"stay-on-top", "move-window", "playback-wait"};
+
+            foreach (var key in keys) {
+                settings.reset (key);
             }
-        }
-
-        private void build_ui () {
-            var behaviour = new Widgets.SettingsBox ();
-
-            stay_on_top = behaviour.add_switch (_("Stay on top while playing"));
-            move_window = behaviour.add_switch (_("Move window from video canvas"));
-            playback_wait = behaviour.add_switch (_("Don't instantly start video playback"));
-
-            grid.add (behaviour);
-            grid.show_all ();
-        }
-
-        protected override void init_data () {
-            stay_on_top.set_state (AudienceSettings.get_default ().stay_on_top);
-            move_window.set_state (AudienceSettings.get_default ().move_window);
-            playback_wait.set_state (AudienceSettings.get_default ().playback_wait);
-        }
-
-        private void connect_signals () {
-            stay_on_top.notify["active"].connect (() => {AudienceSettings.get_default ().stay_on_top = stay_on_top.state; });
-            move_window.notify["active"].connect (() => {AudienceSettings.get_default ().move_window = move_window.state; });
-            playback_wait.notify["active"].connect (() => {AudienceSettings.get_default ().playback_wait = playback_wait.state; });
-
-            connect_reset_button (() => {
-                AudienceSettings.get_default ().reset ();
-            });
-        }
+        });
     }
 }
