@@ -146,36 +146,4 @@ namespace PantheonTweaks {
             return instance;
         }
     }
-
-    public class AnimationSettings : Granite.Services.Settings {
-        public bool enable_animations { get; set; }
-        public int open_duration { get; set; }
-        public int snap_duration { get; set; }
-        public int minimize_duration { get; set; }
-        public int close_duration { get; set; }
-        public int workspace_switch_duration { get; set; }
-
-        static AnimationSettings? instance = null;
-
-        private AnimationSettings () {
-            base (SCHEMA + ".animations");
-        }
-
-        public static AnimationSettings get_default () {
-            if (instance == null) {
-                instance = new AnimationSettings ();
-            }
-
-            return instance;
-        }
-
-        public void reset () {
-            schema.reset ("enable-animations");
-            schema.reset ("open-duration");
-            schema.reset ("snap-duration");
-            schema.reset ("minimize-duration");
-            schema.reset ("close-duration");
-            schema.reset ("workspace-switch-duration");
-        }
-    }
 }
