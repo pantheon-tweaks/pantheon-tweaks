@@ -24,7 +24,7 @@ public class PantheonTweaks.Panes.AnimationsPane : Categories.Pane {
     }
 
     construct {
-        if (!Util.schema_exists ("org.pantheon.desktop.gala.animations")) {
+        if (!Util.schema_exists (ANIMATIONS_SCHEMA)) {
             return;
         }
 
