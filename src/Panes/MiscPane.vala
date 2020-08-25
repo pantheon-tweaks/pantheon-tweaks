@@ -18,14 +18,18 @@
  */
 
 public class PantheonTweaks.Panes.MiscPane : Categories.Pane {
+    private const string SOUND_SCHEMA = "io.elementary.desktop.wingpanel.sound";
+
     public MiscPane () {
         base (_("Miscellaneous"), "applications-utilities");
     }
 
     construct {
-        if (!Util.schema_exists ("io.elementary.desktop.wingpanel.sound")) {
+        if (!Util.schema_exists (SOUND_SCHEMA)) {
             return;
         }
+
+        var sound_settings = new GLib.Settings (SOUND_SCHEMA);
 
         var indicator_sound_box = new Widgets.SettingsBox ();
 
@@ -38,9 +42,8 @@ public class PantheonTweaks.Panes.MiscPane : Categories.Pane {
         grid.add (indicator_sound_box);
         grid.show_all ();
 
-        max_volume.set_value (IndicatorSoundSettings.get_default ().max_volume);
+        sound_settings.bind ("max-volume", max_volume, "value", SettingsBindFlags.DEFAULT);
 
-        connect_spin_button (max_volume, (val) => {IndicatorSoundSettings.get_default ().max_volume = val;});
-        connect_reset_button (() => {IndicatorSoundSettings.get_default().reset ();});
+        connect_reset_button (() => {sound_settings.reset ("max-volume");});
     }
 }
