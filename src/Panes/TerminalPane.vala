@@ -1,5 +1,6 @@
 /*
- * Copyright (C) Elementary Tweaks Developers, 2016
+ * Copyright (C) Elementary Tweaks Developers, 2016 - 2020
+ *               Pantheon Tweaks Developers, 2020
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,75 +17,66 @@
  *
  */
 
-namespace PantheonTweaks {
-    public class Panes.TerminalPane : Categories.Pane {
-        private Gtk.ColorButton background;
-        private Gtk.Switch follow_last_tab;
-        private Gtk.Switch unsafe_paste_alert;
-        private Gtk.Switch rem_tabs;
-        private Gtk.Switch term_bell;
+public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
+    private const string TERMINAL_OLD_SCHEMA = "org.pantheon.terminal.settings";
+    private const string TERMINAL_NEW_SCHEMA = "io.elementary.terminal.settings";
 
-        public TerminalPane () {
-            base (_("Terminal"), "utilities-terminal");
+    private GLib.Settings settings;
+
+    private Gtk.ColorButton background;
+
+    public TerminalPane () {
+        base (_("Terminal"), "utilities-terminal");
+    }
+
+    construct {
+        if (!(Util.schema_exists (TERMINAL_OLD_SCHEMA) || Util.schema_exists (TERMINAL_NEW_SCHEMA))) {
+            return;
         }
 
-        construct {
-            if (Util.schema_exists ("org.pantheon.terminal.settings") || Util.schema_exists ("io.elementary.terminal.settings")) {
-                build_ui ();
-                init_data ();
-                connect_signals ();
+        settings = new GLib.Settings ((Util.schema_exists (TERMINAL_NEW_SCHEMA)) ? TERMINAL_NEW_SCHEMA : TERMINAL_OLD_SCHEMA);
+
+        var box = new Widgets.SettingsBox ();
+
+        background = new Gtk.ColorButton ();
+        background.use_alpha = true;
+        box.add_widget (_("Background color"), background);
+
+        var follow_last_tab = box.add_switch (_("Follow last tab"));
+        var unsafe_paste_alert = box.add_switch (_("Unsafe paste alert"));
+        var rem_tabs = box.add_switch (_("Remember tabs"));
+        var term_bell = box.add_switch (_("Terminal bell"));
+
+        grid.add (box);
+
+        grid.show_all ();
+
+        update_background_value ();
+
+        background.color_set.connect (() => {
+            settings.set_string ("background", background.rgba.to_string ());
+        });
+
+        settings.bind ("follow-last-tab", follow_last_tab, "active", SettingsBindFlags.DEFAULT);
+        settings.bind ("unsafe-paste-alert", unsafe_paste_alert, "active", SettingsBindFlags.DEFAULT);
+        settings.bind ("remember-tabs", rem_tabs, "active", SettingsBindFlags.DEFAULT);
+        settings.bind ("audible-bell", term_bell, "active", SettingsBindFlags.DEFAULT);
+
+        connect_reset_button (() => {
+            string[] keys = {"background", "unsafe-paste-alert", "natural-copy-paste",
+                                "follow-last-tab", "audible-bell", "remember-tabs"};
+
+            foreach (string key in keys) {
+                settings.reset (key);
             }
-        }
 
-        private void build_ui () {
-            var box = new Widgets.SettingsBox ();
+            update_background_value ();
+        });
+    }
 
-            background = new Gtk.ColorButton ();
-
-            box.add_widget (_("Background color"), background);
-            follow_last_tab = box.add_switch (_("Follow last tab"));
-            unsafe_paste_alert = box.add_switch (_("Unsafe paste alert"));
-            rem_tabs = box.add_switch (_("Remember tabs"));
-            term_bell = box.add_switch (_("Terminal bell"));
-
-            grid.add (box);
-
-            grid.show_all ();
-        }
-
-        protected override void init_data () {
-            var rgba = Gdk.RGBA ();
-            rgba.parse (TerminalSettings.get_default ().background);
-            background.use_alpha = true;
-            background.rgba = rgba;
-            follow_last_tab.set_state (TerminalSettings.get_default ().follow_last_tab);
-            unsafe_paste_alert.set_state (TerminalSettings.get_default ().unsafe_paste_alert);
-            rem_tabs.set_state (TerminalSettings.get_default ().remember_tabs);
-            term_bell.set_state (TerminalSettings.get_default ().audible_bell);
-        }
-
-        private void connect_signals () {
-            background.color_set.connect ( () => {
-                TerminalSettings.get_default ().background = background.rgba.to_string ();
-            });
-
-            follow_last_tab.notify["active"].connect (() => {
-                TerminalSettings.get_default ().follow_last_tab = follow_last_tab.state;
-            });
-
-            unsafe_paste_alert.notify["active"].connect (() => {
-                TerminalSettings.get_default ().unsafe_paste_alert = unsafe_paste_alert.state;
-            });
-
-            rem_tabs.notify["active"].connect (() => {
-                TerminalSettings.get_default ().remember_tabs = rem_tabs.state;
-            });
-
-            term_bell.notify["active"].connect (() => {
-                TerminalSettings.get_default ().audible_bell = term_bell.state;
-            });
-
-            connect_reset_button (() => {TerminalSettings.get_default ().reset();});
-        }
+    private void update_background_value () {
+        var rgba = Gdk.RGBA ();
+        rgba.parse (settings.get_string ("background"));
+        background.rgba = rgba;
     }
 }
