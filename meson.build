@@ -17,7 +17,6 @@ subdir('po')
 plug_files = files(
     'src/Tweaks.vala',
     'src/Util.vala',
-    'src/Settings/FilesSettings.vala',
     'src/Settings/GalaSettings.vala',
     'src/Settings/GtkSettings.vala',
     'src/Settings/PlankSettings.vala',

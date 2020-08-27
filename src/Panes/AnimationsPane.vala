@@ -1,5 +1,6 @@
 /*
- * Copyright (C) Elementary Tweaks Developers, 2014 - 2016
+ * Copyright (C) Elementary Tweaks Developers, 2014 - 2020
+ *               Pantheon Tweaks Developers, 2020
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,65 +17,56 @@
  *
  */
 
-namespace PantheonTweaks {
-    public class Panes.AnimationsPane : Categories.Pane {
-        private Gtk.SpinButton open_duration;
-        private Gtk.SpinButton close_duration;
-        private Gtk.SpinButton snap_duration;
-        private Gtk.SpinButton minimize_duration;
-        private Gtk.SpinButton workspace_duration;
+public class PantheonTweaks.Panes.AnimationsPane : Categories.Pane {
+    private const string ANIMATIONS_SCHEMA = "org.pantheon.desktop.gala.animations";
 
-        private Gtk.Adjustment open_adj = new Gtk.Adjustment (0,0,1000,10,10,10);
-        private Gtk.Adjustment close_adj = new Gtk.Adjustment (0,0,1000,10,10,10);
-        private Gtk.Adjustment snap_adj = new Gtk.Adjustment (0,0,1000,10,10,10);
-        private Gtk.Adjustment minimize_adj = new Gtk.Adjustment (0,0,1000,10,10,10);
-        private Gtk.Adjustment workspace_adj = new Gtk.Adjustment (0,0,1000,10,10,10);
+    public AnimationsPane () {
+        base (_("Animations"), "go-jump");
+    }
 
-        public AnimationsPane () {
-            base (_("Animations"), "go-jump");
+    construct {
+        if (!Util.schema_exists (ANIMATIONS_SCHEMA)) {
+            return;
         }
 
-        construct {
-            if (Util.schema_exists ("org.pantheon.desktop.gala.animations")) {
-                build_ui ();
-                init_data ();
-                connect_signals ();
+        var settings = new GLib.Settings (ANIMATIONS_SCHEMA);
+
+        var animations_box = new Widgets.SettingsBox ();
+
+        var duration_label = new Granite.HeaderLabel (_("Duration"));
+
+        var open_adj = new Gtk.Adjustment (0, 0, 1000, 10, 10, 10);
+        var close_adj = new Gtk.Adjustment (0, 0, 1000, 10, 10, 10);
+        var snap_adj = new Gtk.Adjustment (0, 0, 1000, 10, 10, 10);
+        var minimize_adj = new Gtk.Adjustment (0, 0, 1000, 10, 10, 10);
+        var workspace_adj = new Gtk.Adjustment (0, 0, 1000, 10, 10, 10);
+    
+        var open_duration = animations_box.add_spin_button (_("Open"), open_adj);
+        var close_duration = animations_box.add_spin_button (_("Close"), close_adj);
+        var snap_duration = animations_box.add_spin_button (_("Snap"), snap_adj);
+        var minimize_duration = animations_box.add_spin_button (_("Minimize"), minimize_adj);
+        var workspace_duration = animations_box.add_spin_button (_("Workspace switch"), workspace_adj);
+
+        grid.add (duration_label);
+        grid.add (animations_box);
+
+        grid.show_all ();
+
+        settings.bind ("open-duration", open_duration, "value", SettingsBindFlags.DEFAULT);
+        settings.bind ("close-duration", close_duration, "value", SettingsBindFlags.DEFAULT);
+        settings.bind ("snap-duration", snap_duration, "value", SettingsBindFlags.DEFAULT);
+        settings.bind ("minimize-duration", minimize_duration, "value", SettingsBindFlags.DEFAULT);
+        settings.bind ("workspace-switch-duration", workspace_duration, "value", SettingsBindFlags.DEFAULT);
+
+        connect_reset_button (() => {
+            string[] keys = {
+                "enable-animations", "open-duration", "snap-duration",
+                "minimize-duration", "close-duration", "workspace-switch-duration"
+            };
+
+            foreach (var key in keys) {
+                settings.reset (key);
             }
-        }
-
-        private void build_ui () {
-            var animations_box = new Widgets.SettingsBox ();
-
-            var duration_label = new Granite.HeaderLabel (_("Duration"));
-
-            open_duration = animations_box.add_spin_button (_("Open"), open_adj);
-            close_duration = animations_box.add_spin_button (_("Close"), close_adj);
-            snap_duration = animations_box.add_spin_button (_("Snap"), snap_adj);
-            minimize_duration = animations_box.add_spin_button (_("Minimize"), minimize_adj);
-            workspace_duration = animations_box.add_spin_button (_("Workspace switch"), workspace_adj);
-
-            grid.add (duration_label);
-            grid.add (animations_box);
-
-            grid.show_all ();
-        }
-
-        protected override void init_data () {
-            open_duration.set_value (AnimationSettings.get_default ().open_duration);
-            close_duration.set_value (AnimationSettings.get_default ().close_duration);
-            snap_duration.set_value (AnimationSettings.get_default ().snap_duration);
-            minimize_duration.set_value (AnimationSettings.get_default ().minimize_duration);
-            workspace_duration.set_value (AnimationSettings.get_default ().workspace_switch_duration);
-        }
-
-        private void connect_signals () {
-            connect_spin_button (open_duration, (val) => { AnimationSettings.get_default ().open_duration = val; });
-            connect_spin_button (close_duration, (val) => { AnimationSettings.get_default ().close_duration = val; });
-            connect_spin_button (snap_duration, (val) => { AnimationSettings.get_default ().snap_duration = val; });
-            connect_spin_button (minimize_duration, (val) => { AnimationSettings.get_default ().minimize_duration = val; });
-            connect_spin_button (workspace_duration, (val) => { AnimationSettings.get_default ().workspace_switch_duration = val; });
-
-            connect_reset_button (() => {AnimationSettings.get_default().reset ();});
-        }
+        });
     }
 }
