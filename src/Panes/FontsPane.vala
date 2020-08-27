@@ -1,5 +1,6 @@
 /*
- * Copyright (C) Elementary Tweaks Developers, 2016
+ * Copyright (C) Elementary Tweaks Developers, 2016 - 2020
+ *               Pantheon Tweaks Developers, 2020
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,60 +17,53 @@
  *
  */
 
-namespace PantheonTweaks {
-    public class Panes.FontsPane : Categories.Pane {
-        private Gtk.FontButton default_font = new Gtk.FontButton ();
-        private Gtk.FontButton document_font = new Gtk.FontButton ();
-        private Gtk.FontButton mono_font = new Gtk.FontButton ();
-        private Gtk.FontButton titlebar_font = new Gtk.FontButton ();
+public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
+    public FontsPane () {
+        base (_("Fonts"), "applications-fonts");
+    }
 
-        public FontsPane () {
-            base (_("Fonts"), "applications-fonts");
-        }
+    construct {
+        var interface_settings = new GLib.Settings ("org.gnome.desktop.interface");
+        var window_settings = new GLib.Settings ("org.gnome.desktop.wm.preferences");
 
-        construct {
-            build_ui ();
-            init_data ();
-            connect_signals ();
-        }
+        var fonts_label = new Granite.HeaderLabel (_("Font Settings"));
+        var fonts_box = new Widgets.SettingsBox ();
 
-        private void build_ui () {
-            var fonts_label = new Granite.HeaderLabel (_("Font Settings"));
-            var fonts_box = new Widgets.SettingsBox ();
+        var default_font = new Gtk.FontButton ();
+        default_font.use_font = true;
 
-            default_font.use_font = true;
-            document_font.use_font = true;
-            mono_font.use_font = true;
-            titlebar_font.use_font = true;
+        var document_font = new Gtk.FontButton ();
+        document_font.use_font = true;
 
-            fonts_box.add_widget (_("Default font"), default_font);
-            fonts_box.add_widget (_("Document font"), document_font);
-            fonts_box.add_widget (_("Monospace font"), mono_font);
-            fonts_box.add_widget (_("Titlebar font"), titlebar_font);
+        var mono_font = new Gtk.FontButton ();
+        mono_font.use_font = true;
 
-            grid.add (fonts_label);
-            grid.add (fonts_box);
+        var titlebar_font = new Gtk.FontButton ();
+        titlebar_font.use_font = true;
 
-            grid.show_all ();
-        }
+        fonts_box.add_widget (_("Default font"), default_font);
+        fonts_box.add_widget (_("Document font"), document_font);
+        fonts_box.add_widget (_("Monospace font"), mono_font);
+        fonts_box.add_widget (_("Titlebar font"), titlebar_font);
 
-        protected override void init_data () {
-            default_font.font = InterfaceSettings.get_default ().font_name;
-            document_font.font = InterfaceSettings.get_default ().document_font_name;
-            mono_font.font = InterfaceSettings.get_default ().monospace_font_name;
-            titlebar_font.font = WindowSettings.get_default ().titlebar_font;
-        }
+        grid.add (fonts_label);
+        grid.add (fonts_box);
 
-        private void connect_signals () {
-            connect_font_button (default_font, (val) => { InterfaceSettings.get_default ().font_name = val; });
-            connect_font_button (document_font, (val) => { InterfaceSettings.get_default ().document_font_name = val; });
-            connect_font_button (mono_font, (val) => { InterfaceSettings.get_default ().monospace_font_name = val; });
-            connect_font_button (titlebar_font, (val) => { WindowSettings.get_default ().titlebar_font = val; });
+        grid.show_all ();
 
-            connect_reset_button (() => {
-                InterfaceSettings.get_default().reset_fonts ();
-                WindowSettings.get_default().reset_fonts ();
-            });
-        }
+        interface_settings.bind ("font-name", default_font, "font-name", SettingsBindFlags.DEFAULT);
+        interface_settings.bind ("document-font-name", document_font, "font-name", SettingsBindFlags.DEFAULT);
+        interface_settings.bind ("monospace-font-name", mono_font, "font-name", SettingsBindFlags.DEFAULT);
+        window_settings.bind ("titlebar-font", titlebar_font, "font-name", SettingsBindFlags.DEFAULT);
+
+        connect_reset_button (() => {
+            string[] keys = {"font-name", "document-font-name", "monospace-font-name"};
+
+            foreach (var key in keys) {
+                interface_settings.reset (key);
+            }
+
+            window_settings.reset ("titlebar-font");
+        });
     }
 }
