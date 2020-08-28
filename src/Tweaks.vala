@@ -1,5 +1,6 @@
 /*
- * Copyright (C) Elementary Tweaks Developers, 2014 - 2016
+ * Copyright (C) Elementary Tweaks Developers, 2014 - 2020
+ *               Pantheon Tweaks Developers, 2020
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,54 +17,45 @@
  *
  */
 
-namespace PantheonTweaks {
+public class PantheonTweaks.TweaksPlug : Switchboard.Plug {
+    private Gtk.Paned paned;
 
-    public class TweaksPlug : Switchboard.Plug {
-        public static TweaksPlug plug;
-        Gtk.Paned paned;
+    public TweaksPlug () {
+        // init plugin stuff
+        var settings = new Gee.TreeMap<string, string?> (null, null);
+        settings.set ("Tweaks", null);
+        Object (category: Category.PERSONAL,
+                code_name: "pantheon-tweaks",
+                display_name: _("Tweaks"),
+                description: _("Tweak elementary OS settings"),
+                icon: "preferences-desktop-tweaks",
+                supported_settings: settings);
+    }
 
+    /**
+     * Returns the main Gtk.Widget that contains all of our UI for Switchboard.
+     */
+    public override Gtk.Widget get_widget () {
+        if (paned == null) {
+            paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
+            var categories = new Categories ();
+            paned.pack1 (categories, false, false);
+            var stack = new Gtk.Stack ();
+            paned.add2 (stack);
+            categories.set_stack (stack);
 
-        public Gtk.Widget current_grid { get ; private set ; }
-
-        public TweaksPlug () {
-            // init plugin stuff
-            var settings = new Gee.TreeMap<string, string?> (null, null);
-            settings.set ("Tweaks", null);
-            Object (category: Category.PERSONAL,
-                    code_name: "pantheon-tweaks",
-                    display_name: _("Tweaks"),
-                    description: _("Tweak elementary OS settings"),
-                    icon: "preferences-desktop-tweaks",
-                    supported_settings: settings);
-            plug = this;
+            paned.show_all ();
         }
 
+        return paned;
+    }
 
-        /**
-         * Returns the main Gtk.Widget that contains all of our UI for Switchboard.
-         */
-        public override Gtk.Widget get_widget () {
-            if (paned == null) {
-                paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
-                var categories = new Categories ();
-                paned.pack1 (categories, false, false);
-                var stack = new Gtk.Stack ();
-                paned.add2 (stack);
-                categories.set_stack (stack);
+    public override void shown () { }
+    public override void hidden () { }
+    public override void search_callback (string location) { }
 
-                paned.show_all ();
-            }
-
-            return paned;
-        }
-
-        public override void shown () { }
-        public override void hidden () { }
-        public override void search_callback (string location) { }
-
-        public override async Gee.TreeMap<string, string> search (string search) {
-            return new Gee.TreeMap<string, string> (null, null);
-        }
+    public override async Gee.TreeMap<string, string> search (string search) {
+        return new Gee.TreeMap<string, string> (null, null);
     }
 }
 
