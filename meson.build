@@ -20,7 +20,6 @@ plug_files = files(
     'src/Settings/GalaSettings.vala',
     'src/Settings/GtkSettings.vala',
     'src/Settings/PlankSettings.vala',
-    'src/Settings/GnomeSettings.vala',
     'src/Settings/XSettings.vala',
     'src/Panes/AudiencePane.vala',
     'src/Panes/AnimationsPane.vala',

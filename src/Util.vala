@@ -55,7 +55,7 @@ public class PantheonTweaks.Util {
         return themes;
     }
 
-    public static Gee.Map<string, string> get_themes_map (string path, string condition) {
+    public static Gee.HashMap<string, string> get_themes_map (string path, string condition) {
         var themes = get_themes (path, condition);
         var map = new Gee.HashMap<string, string> ();
 
