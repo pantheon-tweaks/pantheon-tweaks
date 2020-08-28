@@ -1,5 +1,6 @@
 /*
- * Copyright (C) Elementary Tweaks Developers, 2016
+ * Copyright (C) Elementary Tweaks Developers, 2016 - 2020
+ *               Pantheon Tweaks Developers, 2020
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,114 +17,90 @@
  *
  */
 
-namespace PantheonTweaks {
-    public class Panes.AppearancePane : Categories.Pane {
-        private Gtk.Switch prefer_dark_switch;
-        private Gtk.Switch gnome_menu;
-        private Gtk.ComboBox gtk_combobox;
-        //  private Gtk.ComboBox metacity_combobox;
-        private Gtk.ComboBox icon_combobox;
-        private Gtk.ComboBox cursor_combobox;
-        private Gtk.ComboBox controls_combobox;
+public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
+    private Gtk.ComboBox gtk_combobox;
+    private Gtk.ComboBox icon_combobox;
+    private Gtk.ComboBox cursor_combobox;
+    private Gtk.Switch prefer_dark_switch;
+    private Gtk.ComboBox controls_combobox;
+    private Gtk.Switch gnome_menu;
 
-        private Gtk.ListStore gtk_store;
-        //  private Gtk.ListStore metacity_store;
-        private Gtk.ListStore icon_store;
-        private Gtk.ListStore cursor_store;
-        private Gtk.ListStore controls_store;
+    private int gtk_index = 0;
+    private int icon_index = 0;
+    private int cursor_index = 0;
+    private int controls_index = 0;
 
-        private int gtk_index = 0;
-        //private int metacity_index = 0;
-        private int icon_index = 0;
-        private int cursor_index = 0;
-        private int controls_index = 0;
+    public AppearancePane () {
+        base (_("Appearance"), "applications-graphics");
+    }
 
-        public AppearancePane () {
-            base (_("Appearance"), "applications-graphics");
-        }
+    construct {
+        var theme_label = new Granite.HeaderLabel (_("Theme Settings"));
+        var theme_box = new Widgets.SettingsBox ();
 
-        construct {
-            build_ui ();
-            make_stores ();
-            init_data ();
-            connect_signals ();
-        }
+        var gtk_store = Util.get_themes_store ("themes", "gtk-3.0", InterfaceSettings.get_default ().gtk_theme, out gtk_index);
+        gtk_combobox = theme_box.add_combo_box (_("GTK+"));
+        gtk_combobox.set_model (gtk_store);
 
-        private void build_ui () {
-            var theme_label = new Granite.HeaderLabel (_("Theme Settings"));
-            var theme_box = new Widgets.SettingsBox ();
+        var icon_store = Util.get_themes_store ("icons", "index.theme", InterfaceSettings.get_default ().icon_theme, out icon_index);
+        icon_combobox = theme_box.add_combo_box (_("Icons"));
+        icon_combobox.set_model (icon_store);
 
-            gtk_combobox = theme_box.add_combo_box (_("GTK+"));
-            //metacity_combobox = theme_box.add_combo_box (_("Metacity (Non-GTK+ applications)"));
-            icon_combobox = theme_box.add_combo_box (_("Icons"));
-            cursor_combobox = theme_box.add_combo_box (_("Cursor"));
-            prefer_dark_switch = theme_box.add_switch (_("Force dark stylesheet"));
+        var cursor_store = Util.get_themes_store ("icons", "cursors", InterfaceSettings.get_default ().cursor_theme, out cursor_index);
+        cursor_combobox = theme_box.add_combo_box (_("Cursor"));
+        cursor_combobox.set_model (cursor_store);
 
-            grid.add (theme_label);
-            grid.add (theme_box);
+        prefer_dark_switch = theme_box.add_switch (_("Force dark stylesheet"));
 
-            var layout_label = new Granite.HeaderLabel (_("Window Controls"));
-            var layout_box = new Widgets.SettingsBox ();
+        var layout_label = new Granite.HeaderLabel (_("Window Controls"));
+        var layout_box = new Widgets.SettingsBox ();
 
-            controls_combobox = layout_box.add_combo_box (_("Layout"));
-            gnome_menu = layout_box.add_switch (_("Show GNOME menu"));
+        var controls_store = AppearanceSettings.get_button_layouts (out controls_index);
+        controls_combobox = layout_box.add_combo_box (_("Layout"));
+        controls_combobox.set_model (controls_store);
 
-            grid.add (layout_label);
-            grid.add (layout_box);
+        gnome_menu = layout_box.add_switch (_("Show GNOME menu"));
 
-            grid.show_all ();
-        }
+        init_data ();
 
-        private void make_stores () {
-            gtk_store = Util.get_themes_store ("themes", "gtk-3.0", InterfaceSettings.get_default ().gtk_theme, out gtk_index);
-            //metacity_store = Util.get_themes_store ("themes", "metacity-1", WindowSettings.get_default ().theme, out metacity_index);
-            icon_store = Util.get_themes_store ("icons", "index.theme", InterfaceSettings.get_default ().icon_theme, out icon_index);
-            cursor_store = Util.get_themes_store ("icons", "cursors", InterfaceSettings.get_default ().cursor_theme, out cursor_index);
-            controls_store = AppearanceSettings.get_button_layouts (out controls_index);
+        grid.add (theme_label);
+        grid.add (theme_box);
+        grid.add (layout_label);
+        grid.add (layout_box);
 
-            gtk_combobox.set_model (gtk_store);
-            //  metacity_combobox.set_model (metacity_store);
-            icon_combobox.set_model (icon_store);
-            cursor_combobox.set_model (cursor_store);
-            controls_combobox.set_model (controls_store);
-        }
+        grid.show_all ();
 
-        protected override void init_data () {
-            gtk_combobox.set_active (gtk_index);
-            //metacity_combobox.set_active (metacity_index);
-            icon_combobox.set_active (icon_index);
-            cursor_combobox.set_active (cursor_index);
-            controls_combobox.set_active (controls_index);
+        prefer_dark_switch.notify["active"].connect (() => {
+            GtkSettings.get_default ().prefer_dark_theme = prefer_dark_switch.state;
+        });
 
-            gnome_menu.set_state (XSettings.get_default ().has_gnome_menu ());
-            prefer_dark_switch.set_state (GtkSettings.get_default ().prefer_dark_theme);
-        }
+        connect_combobox (gtk_combobox, gtk_store, (val) => { InterfaceSettings.get_default ().gtk_theme = val; });
+        connect_combobox (icon_combobox, icon_store, (val) => { InterfaceSettings.get_default ().icon_theme = val; });
+        connect_combobox (cursor_combobox, cursor_store, (val) => { InterfaceSettings.get_default ().cursor_theme = val; });
+        connect_combobox (controls_combobox, controls_store,
+            (val) => { AppearanceSettings.get_default ().button_layout = val;
+                       XSettings.get_default ().set_gnome_menu (gnome_menu.state, val);
+        });
 
-        private void connect_signals () {
-            prefer_dark_switch.notify["active"].connect (() => {
-                GtkSettings.get_default ().prefer_dark_theme = prefer_dark_switch.state;
-            });
+        gnome_menu.notify["active"].connect (() => {
+            controls_combobox.changed ();
+        });
 
-            connect_combobox (gtk_combobox, gtk_store, (val) => { InterfaceSettings.get_default ().gtk_theme = val; });
-            //connect_combobox (metacity_combobox, metacity_store, (val) => { WindowSettings.get_default ().theme = val; });
-            connect_combobox (icon_combobox, icon_store, (val) => { InterfaceSettings.get_default ().icon_theme = val; });
-            connect_combobox (cursor_combobox, cursor_store, (val) => { InterfaceSettings.get_default ().cursor_theme = val; });
-            connect_combobox (controls_combobox, controls_store,
-                (val) => {  AppearanceSettings.get_default ().button_layout = val;
-                            XSettings.get_default ().set_gnome_menu (gnome_menu.state, val);
-                            });
+        connect_reset_button (()=> {
+            GtkSettings.get_default ().prefer_dark_theme = false;
+            InterfaceSettings.get_default ().reset_appearance ();
+            AppearanceSettings.get_default ().reset ();
+            XSettings.get_default ().reset ();
+        });
+    }
 
-            gnome_menu.notify["active"].connect (() => {
-                controls_combobox.changed ();
-            });
+    protected override void init_data () {
+        gtk_combobox.set_active (gtk_index);
+        icon_combobox.set_active (icon_index);
+        cursor_combobox.set_active (cursor_index);
+        controls_combobox.set_active (controls_index);
 
-            connect_reset_button (()=> {
-                GtkSettings.get_default().prefer_dark_theme = false;
-                //WindowSettings.get_default ().reset_appearance ();
-                InterfaceSettings.get_default ().reset_appearance ();
-                AppearanceSettings.get_default ().reset ();
-                XSettings.get_default ().reset ();
-            });
-        }
+        gnome_menu.set_state (XSettings.get_default ().has_gnome_menu ());
+        prefer_dark_switch.set_state (GtkSettings.get_default ().prefer_dark_theme);
     }
 }
