@@ -1,5 +1,6 @@
 /*
- * Copyright (C) Elementary Tweaks Developers, 2014 - 2016
+ * Copyright (C) Elementary Tweaks Developers, 2014 - 2020
+ *               Pantheon Tweaks Developers, 2020
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,162 +16,202 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace PantheonTweaks {
-    public class Categories : Gtk.ScrolledWindow {
-        private Gtk.Stack stack;
-        private Gtk.ListBox list_box;
+public class PantheonTweaks.Categories : Gtk.Paned {
 
-        public Categories () {
+    construct {
+        // Left: Add PaneListItems to PaneList
+        var appearance_item = new PaneListItem (PaneName.APPEARANCE);
+        var fonts_item = new PaneListItem (PaneName.FONTS);
+        var animations_item = new PaneListItem (PaneName.ANIMATIONS);
+        var misc_item = new PaneListItem (PaneName.MISC);
+        var files_item = new PaneListItem (PaneName.FILES);
+        var terminal_item = new PaneListItem (PaneName.TERMINAL);
+        var audience_item = new PaneListItem (PaneName.AUDIENCE);
 
+        var pane_list = new Gtk.ListBox ();
+        pane_list.set_size_request (176, 10);
+        pane_list.add (appearance_item);
+        pane_list.add (fonts_item);
+        pane_list.add (animations_item);
+        pane_list.add (misc_item);
+        pane_list.add (files_item);
+        pane_list.add (terminal_item);
+        pane_list.add (audience_item);
+
+        // Right: Add Pane itself to Stack
+        var appearance_pane = new Panes.AppearancePane (PaneName.APPEARANCE);
+        var fonts_pane = new Panes.FontsPane (PaneName.FONTS);
+        var animations_pane = new Panes.AnimationsPane (PaneName.ANIMATIONS);
+        var misc_pane = new Panes.MiscPane (PaneName.MISC);
+        var files_pane = new Panes.FilesPane (PaneName.FILES);
+        var terminal_pane = new Panes.TerminalPane (PaneName.TERMINAL);
+        var audience_pane = new Panes.AudiencePane (PaneName.AUDIENCE);
+
+        var stack = new Gtk.Stack ();
+        stack.add_named (appearance_pane, PaneName.APPEARANCE.get_id ());
+        stack.add_named (fonts_pane, PaneName.FONTS.get_id ());
+        stack.add_named (animations_pane, PaneName.ANIMATIONS.get_id ());
+        stack.add_named (misc_pane, PaneName.MISC.get_id ());
+        stack.add_named (files_pane, PaneName.FILES.get_id ());
+        stack.add_named (terminal_pane, PaneName.TERMINAL.get_id ());
+        stack.add_named (audience_pane, PaneName.AUDIENCE.get_id ());
+
+        pack1 (pane_list, false, false);
+        add2 (stack);
+
+        pane_list.row_selected.connect ((row) => {
+            var item_id = ((Categories.PaneListItem) row).pane_name.get_id ();
+            stack.visible_child_name = item_id;
+        });
+
+        pane_list.set_header_func ((row, before) => {
+            if (row == appearance_item) {
+                row.set_header (new Granite.HeaderLabel (_("General")));
+            } else if (row == files_item) {
+                row.set_header (new Granite.HeaderLabel (_("Applications")));
+            }
+        });
+    }
+
+    public class PaneListItem : Gtk.ListBoxRow {
+        public PaneName pane_name { get; construct; }
+
+        public PaneListItem (PaneName pane_name) {
+            Object (
+                pane_name: pane_name
+            );
         }
 
         construct {
-            hscrollbar_policy = Gtk.PolicyType.NEVER;
-            list_box = new Gtk.ListBox ();
-            list_box.expand = true;
-            set_size_request (176, 10);
-            add (list_box);
+            var label = new Gtk.Label (pane_name.get_display_name ());
+            label.hexpand = true;
+            label.halign = Gtk.Align.START;
 
-            var appearance = new Panes.AppearancePane ();
-            list_box.add (appearance);
+            var image = new Gtk.Image.from_icon_name (pane_name.get_icon_name (), Gtk.IconSize.DND);
 
-            var fonts = new Panes.FontsPane ();
-            list_box.add (fonts);
+            var rowgrid = new Gtk.Grid ();
+            rowgrid.orientation = Gtk.Orientation.HORIZONTAL;
+            rowgrid.column_spacing = 6;
+            rowgrid.margin = 3;
+            rowgrid.margin_start = 12;
+            rowgrid.add (image);
+            rowgrid.add (label);
 
-            var animations = new Panes.AnimationsPane ();
-            list_box.add (animations);
+            add (rowgrid);
+        }
+    }
 
-            var misc = new Panes.MiscPane ();
-            list_box.add (misc);
+    public abstract class Pane : Granite.SimpleSettingsPage {
+        protected delegate void SetValue<T> (T val);
+        protected delegate void Reset ();
 
-            var files = new Panes.FilesPane ();
-            list_box.add (files);
+        protected Pane (PaneName pane_name) {
+            Object (
+                icon_name: pane_name.get_icon_name (),
+                title: pane_name.get_display_name (),
+                description: pane_name.get_description ()
+            );
+        }
 
-            //var plank = new Panes.PlankPane ();
-            //list_box.add (plank);
+        construct {
+            content_area.expand = true;
+            content_area.margin_start = 60;
+        }
 
-            var terminal = new Panes.TerminalPane ();
-            list_box.add (terminal);
+        protected void connect_combobox (Gtk.ComboBox box, Gtk.ListStore store, SetValue<string> set_func) {
+            box.changed.connect (() => {
+                Value val;
+                Gtk.TreeIter iter;
 
-            var audience = new Panes.AudiencePane ();
-            list_box.add (audience);
-
-            list_box.row_selected.connect ((row) => {
-                if (row == null) return;
-                var page = ((Pane) row);
-                if (page.added == false) {
-                    page.added = true;
-                    stack.add (page.pane);
-                }
-
-                stack.set_visible_child (page.pane);
-            });
-
-            list_box.set_header_func ((row, before) => {
-                if (row == appearance) {
-                    row.set_header (new Granite.HeaderLabel (_("General")));
-                } else if (row == files) {
-                    row.set_header (new Granite.HeaderLabel (_("Applications")));
-                }
+                box.get_active_iter (out iter);
+                store.get_value (iter, 1, out val);
+                set_func ((string) val);
             });
         }
 
-        public void set_stack (Gtk.Stack stack) {
-            this.stack = stack;
-            weak Gtk.ListBoxRow first = list_box.get_row_at_index (0);
-            list_box.select_row (first);
-            first.activate ();
+        protected void connect_font_button (Gtk.FontButton button, SetValue<string> set_func) {
+            button.font_set.connect (() => {
+                set_func (button.font);
+            });
         }
 
-        public abstract class Pane : Gtk.ListBoxRow {
-            protected delegate void SetValue<T> (T val);
-            protected delegate void Reset ();
+        protected void connect_spin_button (Gtk.SpinButton button, SetValue<int> set_func) {
+            button.value_changed.connect (() => {
+                set_func (button.get_value_as_int ());
+            });
+        }
 
-            public Gtk.Label label;
-            Gtk.Image image;
-            public bool added = false;
-            public Gtk.ScrolledWindow pane { public get; private set; }
-            public Gtk.Grid grid { public get; private set; }
-            public Widgets.SettingsBox settings_box { public get; private set; }
-            protected Gtk.LinkButton reset;
+        protected void connect_reset_button (Reset reset_func, bool expand = true) {
+            var reset = new Gtk.LinkButton (_("Reset to default"));
+            reset.can_focus = false;
 
-            protected Pane (string label_string, string icon_name) {
-                label.label = label_string;
-                image.icon_name = icon_name;
+            reset.activate_link.connect (() => {
+                reset_func ();
+                return true;
+            });
+
+            action_area.add (reset);
+            show_all ();
+        }
+
+        protected class SpinButton : Gtk.SpinButton {
+            public SpinButton (Gtk.Adjustment adjustment) {
+                Object (adjustment: adjustment);
             }
 
             construct {
-                var rowgrid = new Gtk.Grid ();
-                pane = new Gtk.ScrolledWindow (null, null);
-                rowgrid.orientation = Gtk.Orientation.HORIZONTAL;
-                rowgrid.column_spacing = 6;
-                rowgrid.margin = 3;
-                rowgrid.margin_start = 12;
-                add (rowgrid);
+                climb_rate = 1;
+                digits = 0;
+                set_size_request (150, 0);
+            }
+        }
 
-                label = new Gtk.Label (null);
-                label.hexpand = true;
-                label.halign = Gtk.Align.START;
+        protected class Switch : Gtk.Switch {
+            construct {
+                halign = Gtk.Align.START;
+            }
+        }
 
-                image = new Gtk.Image ();
-                image.icon_size = Gtk.IconSize.DND;
+        protected class ComboBox : Gtk.ComboBox {
+            construct {
+                set_size_request (180, 0);
+                halign = Gtk.Align.START;
 
-                rowgrid.add (image);
-                rowgrid.add (label);
+                var renderer = new Gtk.CellRendererText ();
+                pack_start (renderer, true);
+                add_attribute (renderer, "text", 0);
+            }
+        }
 
-                grid = new Gtk.Grid ();
-                grid.orientation = Gtk.Orientation.VERTICAL;
-                grid.margin = 12;
-                grid.margin_top = 24;
-                grid.row_spacing = 12;
-                grid.column_spacing = 0;
-                grid.expand = true;
-                grid.show ();
-                pane.add (grid);
-                pane.show ();
+        protected class ComboBoxText : Gtk.ComboBoxText {
+            construct {
+                set_size_request (180, 0);
+                halign = Gtk.Align.START;
+            }
+        }
+
+        protected class SummaryLabel : Gtk.Label {
+            public SummaryLabel (string label) {
+                Object (label: label);
             }
 
-            protected void connect_combobox (Gtk.ComboBox box, Gtk.ListStore store, SetValue<string> set_func) {
-                box.changed.connect (() => {
-                    Value val;
-                    Gtk.TreeIter iter;
+            construct {
+                halign = Gtk.Align.END;
+            }
+        }
 
-                    box.get_active_iter (out iter);
-                    store.get_value (iter, 1, out val);
-                    set_func ((string) val);
-                });
+        protected class DimLabel : Gtk.Label {
+            public DimLabel (string label) {
+                Object (label: label);
             }
 
-            protected void connect_font_button (Gtk.FontButton button, SetValue<string> set_func) {
-                button.font_set.connect (() => {
-                    set_func (button.font);
-                });
+            construct {
+                max_width_chars = 60;
+                margin_bottom = 18;
+                wrap = true;
+                xalign = 0;
+                get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
             }
-
-            protected void connect_spin_button (Gtk.SpinButton button, SetValue<int> set_func) {
-                button.value_changed.connect (() => {
-                    set_func (button.get_value_as_int ());
-                });
-            }
-
-            protected void connect_reset_button (Reset reset_func, bool expand = true) {
-                reset = new Gtk.LinkButton (_("Reset to default"));
-                reset.can_focus = false;
-                reset.set_vexpand (expand);
-                reset.valign = Gtk.Align.END;
-                reset.halign = Gtk.Align.END;
-
-                reset.activate_link.connect (() => {
-                    reset_func ();
-                    init_data ();
-                    return true;
-                });
-
-                grid.add (reset);
-                grid.show_all ();
-            }
-
-            protected virtual void init_data () {}
         }
     }
 }

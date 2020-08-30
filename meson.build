@@ -15,6 +15,7 @@ subdir('icon')
 subdir('po')
 
 plug_files = files(
+    'src/PaneName.vala',
     'src/Tweaks.vala',
     'src/Util.vala',
     'src/Settings/GalaSettings.vala',
@@ -29,7 +30,7 @@ plug_files = files(
     'src/Panes/MiscPane.vala',
     'src/Panes/FilesPane.vala',
     'src/Panes/TerminalPane.vala',
-    'src/Panes/PlankPane.vala',
+    # 'src/Panes/PlankPane.vala',
     'src/Widgets/Categories.vala',
     'src/Widgets/SettingBox.vala',
 )

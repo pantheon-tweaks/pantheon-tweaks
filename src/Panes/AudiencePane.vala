@@ -21,8 +21,8 @@ public class PantheonTweaks.Panes.AudiencePane : Categories.Pane {
     private const string VIDEOS_OLD_SCHEMA = "org.pantheon.audience";
     private const string VIDEOS_NEW_SCHEMA = "io.elementary.videos";
 
-    public AudiencePane () {
-        base (_("Videos"), "multimedia-video-player");
+    public AudiencePane (PaneName pane_name) {
+        base (pane_name);
     }
 
     construct {
@@ -32,18 +32,31 @@ public class PantheonTweaks.Panes.AudiencePane : Categories.Pane {
 
         var settings = new Settings ((Util.schema_exists (VIDEOS_NEW_SCHEMA)) ? VIDEOS_NEW_SCHEMA : VIDEOS_OLD_SCHEMA);
 
-        var behaviour = new Widgets.SettingsBox ();
+        var stay_on_top_label = new SummaryLabel (_("Stay on top while playing:"));
+        var stay_on_top_switch = new Switch ();
 
-        var stay_on_top = behaviour.add_switch (_("Stay on top while playing"));
-        var move_window = behaviour.add_switch (_("Move window from video canvas"));
-        var playback_wait = behaviour.add_switch (_("Don't instantly start video playback"));
+        var move_window_label = new SummaryLabel (_("Move window from video canvas:"));
+        var move_window_switch = new Switch ();
+        var move_window_info = new DimLabel (_("If enabled, a window can be dragged by clicking anywhere of it"));
 
-        grid.add (behaviour);
-        grid.show_all ();
+        var playback_wait_label = new SummaryLabel (_("Don't instantly start video playback:"));
+        var playback_wait_switch = new Switch ();
+        var playback_wait_info = new DimLabel (_("If enabled, videos are not played until clicking the play button"));
 
-        settings.bind ("stay-on-top", stay_on_top, "active", SettingsBindFlags.DEFAULT);
-        settings.bind ("move-window", move_window, "active", SettingsBindFlags.DEFAULT);
-        settings.bind ("playback-wait", playback_wait, "active", SettingsBindFlags.DEFAULT);
+        content_area.attach (stay_on_top_label, 0, 0, 1, 1);
+        content_area.attach (stay_on_top_switch, 1, 0, 1, 1);
+        content_area.attach (move_window_label, 0, 1, 1, 1);
+        content_area.attach (move_window_switch, 1, 1, 1, 1);
+        content_area.attach (move_window_info, 1, 2, 1, 1);
+        content_area.attach (playback_wait_label, 0, 3, 1, 1);
+        content_area.attach (playback_wait_switch, 1, 3, 1, 1);
+        content_area.attach (playback_wait_info, 1, 4, 1, 1);
+
+        show_all ();
+
+        settings.bind ("stay-on-top", stay_on_top_switch, "active", SettingsBindFlags.DEFAULT);
+        settings.bind ("move-window", move_window_switch, "active", SettingsBindFlags.DEFAULT);
+        settings.bind ("playback-wait", playback_wait_switch, "active", SettingsBindFlags.DEFAULT);
 
         connect_reset_button (() => {
             string[] keys = {"stay-on-top", "move-window", "playback-wait"};
