@@ -44,7 +44,7 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
 
         var follow_last_tab_label = new SummaryLabel (_("Follow last tab:"));
         var follow_last_tab_switch = new Switch ();
-        var follow_last_tab_info = new DimLabel (_("Whether to set the working directory of new tabs the same with the one of last open tab."));
+        var follow_last_tab_info = new DimLabel (_("Creating a new tab sets the working directory of the last opened tab."));
 
         var unsafe_paste_alert_label = new SummaryLabel (_("Unsafe paste alert:"));
         var unsafe_paste_alert_switch = new Switch ();

@@ -37,11 +37,11 @@ public class PantheonTweaks.Panes.AudiencePane : Categories.Pane {
 
         var move_window_label = new SummaryLabel (_("Move window from video canvas:"));
         var move_window_switch = new Switch ();
-        var move_window_info = new DimLabel (_("If enabled, a window can be dragged by clicking anywhere of it."));
+        var move_window_info = new DimLabel (_("If enabled, the window can be dragged by clicking anywhere on it."));
 
         var playback_wait_label = new SummaryLabel (_("Don't instantly start video playback:"));
         var playback_wait_switch = new Switch ();
-        var playback_wait_info = new DimLabel (_("If enabled, videos are not played until clicking the play button."));
+        var playback_wait_info = new DimLabel (_("If enabled, opening a video will not auto play it."));
 
         content_area.attach (stay_on_top_label, 0, 0, 1, 1);
         content_area.attach (stay_on_top_switch, 1, 0, 1, 1);

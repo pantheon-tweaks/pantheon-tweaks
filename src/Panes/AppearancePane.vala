@@ -72,7 +72,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
         var prefer_dark_label = new SummaryLabel (_("Force to use dark stylesheet:"));
         prefer_dark_switch = new Switch ();
-        var prefer_dark_info = new DimLabel (_("The official dark style only works for apps that support it. This setting forces all apps to use dark style."));
+        var prefer_dark_info = new DimLabel (_("Forces dark style on all apps, even if it's not supported. Requires restarting the application."));
 
         var layout_label = new Granite.HeaderLabel (_("Window Controls"));
 
@@ -80,7 +80,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         var controls_store = AppearanceSettings.get_button_layouts (out controls_index);
         controls_combobox = new ComboBox ();
         controls_combobox.set_model (controls_store);
-        var controls_info = new DimLabel (_("Changes button layout of window."));
+        var controls_info = new DimLabel (_("Changes button layout of the window."));
 
         var gnome_menu_label = new SummaryLabel (_("Show GNOME menu:"));
         gnome_menu = new Switch ();

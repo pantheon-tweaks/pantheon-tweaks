@@ -90,13 +90,13 @@ public enum PantheonTweaks.PaneName {
     public string? get_description () {
         switch (this) {
             case PaneName.APPEARANCE:
-                return _("Change theme and button layout of windows. Changing theme may cause visibility issue.");
+                return _("Change the theme and button layout of windows. Changing theme may cause visibility issue.");
             case PaneName.FONTS:
-                return _("Changes fonts used in your system or document by default.");
+                return _("Change the fonts used in your system and documents by default.");
             case PaneName.ANIMATIONS:
-                return _("Adjust length of animations for window management or multitasking.");
+                return _("Adjust the animation length used for window management or multitasking.");
             case PaneName.MISC:
-                return _("Configure some hidden settings for indicators.");
+                return _("Configure some other hidden settings.");
             case PaneName.FILES:
             case PaneName.TERMINAL:
             case PaneName.AUDIENCE:
