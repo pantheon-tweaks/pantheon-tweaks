@@ -18,8 +18,11 @@
  */
 
 public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
-    public FontsPane (PaneName pane_name) {
-        base (pane_name);
+    public FontsPane () {
+        base (
+            _("Fonts"), "applications-fonts",
+            _("Change the fonts used in your system and documents by default.")
+        );
     }
 
     construct {

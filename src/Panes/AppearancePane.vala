@@ -30,8 +30,11 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
     private int cursor_index = 0;
     private int controls_index = 0;
 
-    public AppearancePane (PaneName pane_name) {
-        base (pane_name);
+    public AppearancePane () {
+        base (
+            _("Appearance"), "applications-graphics",
+            _("Change the theme and button layout of windows. Changing theme may cause visibility issue.")
+        );
     }
 
     construct {

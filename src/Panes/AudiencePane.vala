@@ -21,8 +21,8 @@ public class PantheonTweaks.Panes.AudiencePane : Categories.Pane {
     private const string VIDEOS_OLD_SCHEMA = "org.pantheon.audience";
     private const string VIDEOS_NEW_SCHEMA = "io.elementary.videos";
 
-    public AudiencePane (PaneName pane_name) {
-        base (pane_name);
+    public AudiencePane () {
+        base (_("Videos"), "multimedia-video-player");
     }
 
     construct {

@@ -25,8 +25,8 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
 
     private Gtk.ColorButton background_color_button;
 
-    public TerminalPane (PaneName pane_name) {
-        base (pane_name);
+    public TerminalPane () {
+        base (_("Terminal"), "utilities-terminal");
     }
 
     construct {

@@ -21,8 +21,8 @@ public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
     private const string FILES_OLD_SCHEMA = "org.pantheon.files.preferences";
     private const string FILES_NEW_SCHEMA = "io.elementary.files.preferences";
 
-    public FilesPane (PaneName pane_name) {
-        base (pane_name);
+    public FilesPane () {
+        base (_("Files"), "system-file-manager");
     }
 
     construct {

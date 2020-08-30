@@ -20,8 +20,11 @@
 public class PantheonTweaks.Panes.AnimationsPane : Categories.Pane {
     private const string ANIMATIONS_SCHEMA = "org.pantheon.desktop.gala.animations";
 
-    public AnimationsPane (PaneName pane_name) {
-        base (pane_name);
+    public AnimationsPane () {
+        base (
+            _("Animations"), "go-jump",
+            _("Adjust the animation length used for window management or multitasking.")
+        );
     }
 
     construct {

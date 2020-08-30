@@ -20,8 +20,11 @@
 public class PantheonTweaks.Panes.MiscPane : Categories.Pane {
     private const string SOUND_SCHEMA = "io.elementary.desktop.wingpanel.sound";
 
-    public MiscPane (PaneName pane_name) {
-        base (pane_name);
+    public MiscPane () {
+        base (
+            _("Miscellaneous"), "applications-utilities",
+            _("Configure some other hidden settings.")
+        );
     }
 
     construct {
