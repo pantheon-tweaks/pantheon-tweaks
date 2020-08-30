@@ -46,8 +46,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         gtk_combobox.set_model (gtk_store);
 
         /// TRANSLATORS: The two "%s" represent the paths to put custom icons
-        var gtk_info = new DimLabel (_("To show custom themes here, put them in %s or %s.").printf (
-            "~/.themes/<theme-name>/gtk-3.0",
+        var gtk_info = new DimLabel (_("To show custom themes here, put them in %s.").printf (
             "~/.local/share/themes/<theme-name>/gtk-3.0"
         ));
 
@@ -57,8 +56,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         icon_combobox.set_model (icon_store);
 
         /// TRANSLATORS: The two "%s" represent the paths to put custom icons
-        var icon_info = new DimLabel (_("To show custom icons here, put them in %s or %s.").printf (
-            "~/.icons/<theme-name>",
+        var icon_info = new DimLabel (_("To show custom icons here, put them in %s.").printf (
             "~/.local/share/icons/<theme-name>"
         ));
 
@@ -68,8 +66,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         cursor_combobox.set_model (cursor_store);
 
         /// TRANSLATORS: The two "%s" represent the paths to put custom cursors
-        var cursor_info = new DimLabel (_("To show custom cursors here, put them in %s or %s.").printf (
-            "~/.icons/<theme-name>/cursors",
+        var cursor_info = new DimLabel (_("To show custom cursors here, put them in %s.").printf (
             "~/.local/share/icons/<theme-name>/cursors"
         ));
 
