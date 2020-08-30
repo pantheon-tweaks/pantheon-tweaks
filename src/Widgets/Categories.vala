@@ -128,7 +128,7 @@ public class PantheonTweaks.Categories : Gtk.Paned {
         protected virtual void init_data () {}
 
         protected class PaneListItem : Gtk.ListBoxRow {
-            public Pane pane { get; construct; }
+            public unowned Pane pane { get; construct; }
 
             public PaneListItem (Pane pane) {
                 Object (
