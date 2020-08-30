@@ -155,6 +155,8 @@ public class PantheonTweaks.Categories : Gtk.Paned {
             show_all ();
         }
 
+        protected virtual void init_data () {}
+
         protected class SpinButton : Gtk.SpinButton {
             public SpinButton (Gtk.Adjustment adjustment) {
                 Object (adjustment: adjustment);
