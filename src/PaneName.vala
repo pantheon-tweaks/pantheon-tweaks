@@ -21,7 +21,6 @@ public enum PantheonTweaks.PaneName {
     ANIMATIONS,
     MISC,
     FILES,
-    DOCK,
     TERMINAL,
     AUDIENCE;
 
@@ -37,8 +36,6 @@ public enum PantheonTweaks.PaneName {
                 return "miscellaneous";
             case PaneName.FILES:
                 return "files";
-            case PaneName.DOCK:
-                return "dock";
             case PaneName.TERMINAL:
                 return "terminal";
             case PaneName.AUDIENCE:
@@ -60,8 +57,6 @@ public enum PantheonTweaks.PaneName {
                 return _("Miscellaneous");
             case PaneName.FILES:
                 return _("Files");
-            case PaneName.DOCK:
-                return _("Dock");
             case PaneName.TERMINAL:
                 return _("Terminal");
             case PaneName.AUDIENCE:
@@ -83,8 +78,6 @@ public enum PantheonTweaks.PaneName {
                 return "applications-utilities";
             case PaneName.FILES:
                 return "system-file-manager";
-            case PaneName.DOCK:
-                return "plank";
             case PaneName.TERMINAL:
                 return "utilities-terminal";
             case PaneName.AUDIENCE:
@@ -105,7 +98,6 @@ public enum PantheonTweaks.PaneName {
             case PaneName.MISC:
                 return _("Configure some hidden settings for indicators.");
             case PaneName.FILES:
-            case PaneName.DOCK:
             case PaneName.TERMINAL:
             case PaneName.AUDIENCE:
             default:
