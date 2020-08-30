@@ -132,11 +132,10 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
             InterfaceSettings.get_default ().reset_appearance ();
             AppearanceSettings.get_default ().reset ();
             XSettings.get_default ().reset ();
-            init_data ();
         });
     }
 
-    private void init_data () {
+    protected override void init_data () {
         gtk_combobox.set_active (gtk_index);
         icon_combobox.set_active (icon_index);
         cursor_combobox.set_active (cursor_index);

@@ -147,6 +147,7 @@ public class PantheonTweaks.Categories : Gtk.Paned {
 
             reset.activate_link.connect (() => {
                 reset_func ();
+                init_data ();
                 return true;
             });
 
