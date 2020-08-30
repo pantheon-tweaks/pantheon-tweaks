@@ -21,7 +21,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
     private Gtk.ComboBox gtk_combobox;
     private Gtk.ComboBox icon_combobox;
     private Gtk.ComboBox cursor_combobox;
-    private Gtk.Switch prefer_dark_switch;
+    private Gtk.Switch dark_style_switch;
     private Gtk.ComboBox controls_combobox;
     private Gtk.Switch gnome_menu;
 
@@ -70,8 +70,8 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
             "~/.local/share/icons/<theme-name>/cursors"
         ));
 
-        var prefer_dark_label = new SummaryLabel (_("Force to use dark stylesheet:"));
-        prefer_dark_switch = new Switch ();
+        var dark_style_label = new SummaryLabel (_("Force to use dark stylesheet:"));
+        dark_style_switch = new Switch ();
         var prefer_dark_info = new DimLabel (_("Forces dark style on all apps, even if it's not supported. Requires restarting the application."));
 
         var layout_label = new Granite.HeaderLabel (_("Window Controls"));
@@ -98,8 +98,8 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         content_area.attach (cursor_label, 0, 5, 1, 1);
         content_area.attach (cursor_combobox, 1, 5, 1, 1);
         content_area.attach (cursor_info, 1, 6, 1, 1);
-        content_area.attach (prefer_dark_label, 0, 7, 1, 1);
-        content_area.attach (prefer_dark_switch, 1, 7, 1, 1);
+        content_area.attach (dark_style_label, 0, 7, 1, 1);
+        content_area.attach (dark_style_switch, 1, 7, 1, 1);
         content_area.attach (prefer_dark_info, 1, 8, 1, 1);
         content_area.attach (layout_label, 0, 9, 1, 1);
         content_area.attach (controls_label, 0, 10, 1, 1);
@@ -111,8 +111,8 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
         show_all ();
 
-        prefer_dark_switch.notify["active"].connect (() => {
-            GtkSettings.get_default ().prefer_dark_theme = prefer_dark_switch.state;
+        dark_style_switch.notify["active"].connect (() => {
+            GtkSettings.get_default ().prefer_dark_theme = dark_style_switch.state;
         });
 
         connect_combobox (gtk_combobox, gtk_store, (val) => { InterfaceSettings.get_default ().gtk_theme = val; });
@@ -142,6 +142,6 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         controls_combobox.set_active (controls_index);
 
         gnome_menu.set_state (XSettings.get_default ().has_gnome_menu ());
-        prefer_dark_switch.set_state (GtkSettings.get_default ().prefer_dark_theme);
+        dark_style_switch.set_state (GtkSettings.get_default ().prefer_dark_theme);
     }
 }
