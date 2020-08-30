@@ -43,7 +43,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         gtk_combobox.set_model (gtk_store);
 
         /// TRANSLATORS: The two "%s" represent the paths to put custom icons
-        var gtk_info = new DimLabel (_("To show custom themes here, put them in %s or %s").printf (
+        var gtk_info = new DimLabel (_("To show custom themes here, put them in %s or %s.").printf (
             "~/.themes/<theme-name>/gtk-3.0",
             "~/.local/share/themes/<theme-name>/gtk-3.0"
         ));
@@ -54,7 +54,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         icon_combobox.set_model (icon_store);
 
         /// TRANSLATORS: The two "%s" represent the paths to put custom icons
-        var icon_info = new DimLabel (_("To show custom icons here, put them in %s or %s").printf (
+        var icon_info = new DimLabel (_("To show custom icons here, put them in %s or %s.").printf (
             "~/.icons/<theme-name>",
             "~/.local/share/icons/<theme-name>"
         ));
@@ -65,14 +65,14 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         cursor_combobox.set_model (cursor_store);
 
         /// TRANSLATORS: The two "%s" represent the paths to put custom cursors
-        var cursor_info = new DimLabel (_("To show custom cursors here, put them in %s or %s").printf (
+        var cursor_info = new DimLabel (_("To show custom cursors here, put them in %s or %s.").printf (
             "~/.icons/<theme-name>/cursors",
             "~/.local/share/icons/<theme-name>/cursors"
         ));
 
         var prefer_dark_label = new SummaryLabel (_("Force to use dark stylesheet:"));
         prefer_dark_switch = new Switch ();
-        var prefer_dark_info = new DimLabel (_("The official dark style only works for apps that support it. This setting forces all apps to use dark style"));
+        var prefer_dark_info = new DimLabel (_("The official dark style only works for apps that support it. This setting forces all apps to use dark style."));
 
         var layout_label = new Granite.HeaderLabel (_("Window Controls"));
 
@@ -80,11 +80,11 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         var controls_store = AppearanceSettings.get_button_layouts (out controls_index);
         controls_combobox = new ComboBox ();
         controls_combobox.set_model (controls_store);
-        var controls_info = new DimLabel (_("Changes button layout of window"));
+        var controls_info = new DimLabel (_("Changes button layout of window."));
 
         var gnome_menu_label = new SummaryLabel (_("Show GNOME menu:"));
         gnome_menu = new Switch ();
-        var gnome_menu_info = new DimLabel (_("Whether to show GNOME menu in GNOME apps"));
+        var gnome_menu_info = new DimLabel (_("Whether to show GNOME menu in GNOME apps."));
 
         init_data ();
 

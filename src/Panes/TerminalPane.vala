@@ -44,19 +44,19 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
 
         var follow_last_tab_label = new SummaryLabel (_("Follow last tab:"));
         var follow_last_tab_switch = new Switch ();
-        var follow_last_tab_info = new DimLabel (_("Whether to set the working directory of new tabs the same with the one of last open tab"));
+        var follow_last_tab_info = new DimLabel (_("Whether to set the working directory of new tabs the same with the one of last open tab."));
 
         var unsafe_paste_alert_label = new SummaryLabel (_("Unsafe paste alert:"));
         var unsafe_paste_alert_switch = new Switch ();
-        var unsafe_paste_alert_info = new DimLabel (_("Show a warning dialog when a pasted command contains 'sudo'"));
+        var unsafe_paste_alert_info = new DimLabel (_("Show a warning dialog when a pasted command contains 'sudo'."));
 
         var rem_tabs_label = new SummaryLabel (_("Remember tabs:"));
         var rem_tabs_switch = new Switch ();
-        var rem_tabs_info = new DimLabel (_("If enabled, last opened tabs are restored on start"));
+        var rem_tabs_info = new DimLabel (_("If enabled, last opened tabs are restored on start."));
 
         var term_bell_label = new SummaryLabel (_("Terminal bell:"));
         var term_bell_switch = new Switch ();
-        var term_bell_info = new DimLabel (_("Notify complete of a task with a sound"));
+        var term_bell_info = new DimLabel (_("Notify complete of a task with a sound."));
 
         content_area.attach (background_color_label, 0, 0, 1, 1);
         content_area.attach (background_color_button, 1, 0, 1, 1);
