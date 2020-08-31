@@ -15,9 +15,8 @@ Homepage: https://github.com/pantheon-tweaks/pantheon-tweaks
 
 Package: pantheon-tweaks
 Architecture: any
-Depends: gala, plank, ${misc:Depends}, ${shlibs:Depends}
+Depends: gala, ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
-Recommends: plank
 Enhances: switchboard
 Description: Change hidden desktop settings
  Switchboard plug for controlling hidden options.

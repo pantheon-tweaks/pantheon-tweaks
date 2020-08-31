@@ -19,7 +19,6 @@ plug_files = files(
     'src/Util.vala',
     'src/Settings/GalaSettings.vala',
     'src/Settings/GtkSettings.vala',
-    'src/Settings/PlankSettings.vala',
     'src/Settings/XSettings.vala',
     'src/Panes/AudiencePane.vala',
     'src/Panes/AnimationsPane.vala',
@@ -28,7 +27,6 @@ plug_files = files(
     'src/Panes/MiscPane.vala',
     'src/Panes/FilesPane.vala',
     'src/Panes/TerminalPane.vala',
-    'src/Panes/PlankPane.vala',
     'src/Widgets/Categories.vala',
     'src/Widgets/SettingBox.vala',
 )
