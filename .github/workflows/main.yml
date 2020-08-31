@@ -15,7 +15,7 @@ jobs:
     - name: Install Dependencies
       run: |
         apt update
-        apt install -y libgconf2-dev libpolkit-gobject-1-dev libswitchboard-2.0-dev elementary-sdk
+        apt install -y libswitchboard-2.0-dev elementary-sdk
     - name: Build
       run: |
         meson build
