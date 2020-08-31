@@ -46,9 +46,6 @@ namespace PantheonTweaks {
             var files = new Panes.FilesPane ();
             list_box.add (files);
 
-            //var plank = new Panes.PlankPane ();
-            //list_box.add (plank);
-
             var terminal = new Panes.TerminalPane ();
             list_box.add (terminal);
 
