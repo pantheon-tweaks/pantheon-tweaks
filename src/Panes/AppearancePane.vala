@@ -45,9 +45,9 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         gtk_combobox = new ComboBox ();
         gtk_combobox.set_model (gtk_store);
 
-        /// TRANSLATORS: The two "%s" represent the paths to put custom icons
+        /// TRANSLATORS: The "%s" represents the path where custom themes are installed
         var gtk_info = new DimLabel (_("To show custom themes here, put them in %s.").printf (
-            "~/.local/share/themes/<theme-name>/gtk-3.0"
+            "~/.local/share/themes/<%s>/gtk-3.0".printf (_("theme-name"))
         ));
 
         var icon_label = new SummaryLabel (_("Icons:"));
@@ -55,9 +55,9 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         icon_combobox = new ComboBox ();
         icon_combobox.set_model (icon_store);
 
-        /// TRANSLATORS: The two "%s" represent the paths to put custom icons
+        /// TRANSLATORS: The "%s" represents the path where custom icons are installed
         var icon_info = new DimLabel (_("To show custom icons here, put them in %s.").printf (
-            "~/.local/share/icons/<theme-name>"
+            "~/.local/share/icons/<%s>".printf (_("theme-name"))
         ));
 
         var cursor_label = new SummaryLabel (_("Cursor:"));
@@ -65,9 +65,9 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         cursor_combobox = new ComboBox ();
         cursor_combobox.set_model (cursor_store);
 
-        /// TRANSLATORS: The two "%s" represent the paths to put custom cursors
+        /// TRANSLATORS: The "%s" represents the path where custom cursors are installed
         var cursor_info = new DimLabel (_("To show custom cursors here, put them in %s.").printf (
-            "~/.local/share/icons/<theme-name>/cursors"
+            "~/.local/share/icons/<%s>/cursors".printf (_("theme-name"))
         ));
 
         var dark_style_label = new SummaryLabel (_("Force to use dark stylesheet:"));

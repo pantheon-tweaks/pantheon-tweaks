@@ -56,7 +56,7 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
 
         var term_bell_label = new SummaryLabel (_("Terminal bell:"));
         var term_bell_switch = new Switch ();
-        var term_bell_info = new DimLabel (_("Notify complete of a task with a sound."));
+        var term_bell_info = new DimLabel (_("Sound when hitting the end of a line and also for tab-completion when there are either no or multiple possible completions."));
 
         content_area.attach (background_color_label, 0, 0, 1, 1);
         content_area.attach (background_color_button, 1, 0, 1, 1);
