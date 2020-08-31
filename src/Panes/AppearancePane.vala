@@ -18,10 +18,12 @@
  */
 
 public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
-    private Gtk.ComboBox controls_combobox;
-    private Gtk.Switch gnome_menu;
+    private Gee.HashMap<string, string> preset_button_layouts;
+    private XSettings x_settings;
+    private GLib.Settings appearance_settings;
 
-    private int controls_index = 0;
+    private Gtk.ComboBoxText controls_combobox;
+    private Gtk.Switch gnome_menu;
 
     public AppearancePane () {
         base (_("Appearance"), "applications-graphics");
@@ -30,6 +32,9 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
     construct {
         var interface_settings = new GLib.Settings ("org.gnome.desktop.interface");
         var gtk_settings = GtkSettings.get_default ();
+        x_settings = XSettings.get_default ();
+        appearance_settings = new GLib.Settings ("org.pantheon.desktop.gala.appearance");
+        var gnome_wm_settings = new GLib.Settings ("org.gnome.desktop.wm.preferences");
 
         var theme_label = new Granite.HeaderLabel (_("Theme Settings"));
         var theme_box = new Widgets.SettingsBox ();
@@ -49,9 +54,8 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         var layout_label = new Granite.HeaderLabel (_("Window Controls"));
         var layout_box = new Widgets.SettingsBox ();
 
-        var controls_store = AppearanceSettings.get_button_layouts (out controls_index);
-        controls_combobox = layout_box.add_combo_box (_("Layout"));
-        controls_combobox.set_model (controls_store);
+        var controls_map = get_preset_button_layouts ();
+        controls_combobox = layout_box.add_combo_box_text (_("Layout"), controls_map);
 
         gnome_menu = layout_box.add_switch (_("Show GNOME menu"));
 
@@ -69,9 +73,11 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         interface_settings.bind ("cursor-theme", cursor_combobox, "active_id", SettingsBindFlags.DEFAULT);
         prefer_dark_switch.bind_property ("active", gtk_settings, "prefer-dark-theme", BindingFlags.BIDIRECTIONAL);
 
-        connect_combobox (controls_combobox, controls_store,
-            (val) => { AppearanceSettings.get_default ().button_layout = val;
-                       XSettings.get_default ().set_gnome_menu (gnome_menu.state, val);
+        controls_combobox.changed.connect (() => {
+            string new_layout = controls_combobox.active_id;
+            appearance_settings.set_string ("button-layout", new_layout);
+            gnome_wm_settings.set_string ("button-layout", new_layout);
+            x_settings.set_gnome_menu (gnome_menu.state, new_layout);
         });
 
         gnome_menu.notify["active"].connect (() => {
@@ -85,14 +91,33 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
                 interface_settings.reset (key);
             }
 
+            appearance_settings.reset ("button-layout");
+            gnome_wm_settings.reset ("button-layout");
+            x_settings.reset ();
+
             gtk_settings.prefer_dark_theme = false;
-            AppearanceSettings.get_default ().reset ();
-            XSettings.get_default ().reset ();
+            init_data ();
         });
     }
 
-    protected override void init_data () {
-        controls_combobox.set_active (controls_index);
-        gnome_menu.set_state (XSettings.get_default ().has_gnome_menu ());
+    private void init_data () {
+        controls_combobox.active_id = appearance_settings.get_string ("button-layout");
+        gnome_menu.state = x_settings.has_gnome_menu ();
+    }
+
+    private Gee.HashMap<string, string> get_preset_button_layouts () {
+        if (preset_button_layouts == null) {
+            preset_button_layouts = new Gee.HashMap<string, string> ();
+            preset_button_layouts["close:maximize"] = _("elementary");
+            preset_button_layouts[":close"] = _("Close Only Right");
+            preset_button_layouts["close:"] = _("Close Only Left");
+            preset_button_layouts["close,minimize:maximize"] = _("Minimize Left");
+            preset_button_layouts["close:minimize,maximize"] = _("Minimize Right");
+            preset_button_layouts[":minimize,maximize,close"] = _("Windows");
+            preset_button_layouts["close,minimize,maximize"] = _("OS X");
+            preset_button_layouts["close,maximize,minimize"] = _("Ubuntu");
+        }
+
+        return preset_button_layouts;
     }
 }
