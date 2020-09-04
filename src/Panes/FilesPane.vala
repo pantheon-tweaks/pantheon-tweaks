@@ -44,10 +44,7 @@ public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
         date_format_map.set ("informal", _("Informal"));
 
         var date_format_label = new SummaryLabel (_("Date format:"));
-        var date_format_combo = new ComboBoxText ();
-        foreach (var item in date_format_map.entries) {
-            date_format_combo.append (item.key, item.value);
-        }
+        var date_format_combo = new ComboBoxText (date_format_map);
 
         content_area.attach (single_click_label, 0, 0, 1, 1);
         content_area.attach (single_click_switch, 1, 0, 1, 1);

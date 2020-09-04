@@ -117,15 +117,12 @@ public class PantheonTweaks.Categories : Gtk.Paned {
 
             reset.activate_link.connect (() => {
                 reset_func ();
-                init_data ();
                 return true;
             });
 
             action_area.add (reset);
             show_all ();
         }
-
-        protected virtual void init_data () {}
 
         protected class PaneListItem : Gtk.ListBoxRow {
             public unowned Pane pane { get; construct; }
@@ -185,9 +182,13 @@ public class PantheonTweaks.Categories : Gtk.Paned {
         }
 
         protected class ComboBoxText : Gtk.ComboBoxText {
-            construct {
+            public ComboBoxText (Gee.HashMap<string, string> items) {
                 set_size_request (180, 0);
                 halign = Gtk.Align.START;
+
+                foreach (var item in items.entries) {
+                    append (item.key, item.value);
+                }
             }
         }
 

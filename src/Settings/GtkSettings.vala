@@ -21,7 +21,7 @@ namespace PantheonTweaks {
     /**
      * Settings for Gtk; thanks gnome-tweak-tool for the help!
      */
-    public class GtkSettings {
+    public class GtkSettings : GLib.Object {
         private GLib.KeyFile keyfile;
         private string path;
         private static GtkSettings? instance = null;
