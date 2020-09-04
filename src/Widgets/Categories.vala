@@ -132,14 +132,14 @@ public class PantheonTweaks.Categories : Gtk.Paned {
                     pane: pane
                 );
             }
-    
+
             construct {
                 var label = new Gtk.Label (pane.title);
                 label.hexpand = true;
                 label.halign = Gtk.Align.START;
-    
+
                 var image = new Gtk.Image.from_icon_name (pane.icon_name, Gtk.IconSize.DND);
-    
+
                 var rowgrid = new Gtk.Grid ();
                 rowgrid.orientation = Gtk.Orientation.HORIZONTAL;
                 rowgrid.column_spacing = 6;
@@ -147,11 +147,11 @@ public class PantheonTweaks.Categories : Gtk.Paned {
                 rowgrid.margin_start = 12;
                 rowgrid.add (image);
                 rowgrid.add (label);
-    
+
                 add (rowgrid);
             }
         }
-    
+
         protected class SpinButton : Gtk.SpinButton {
             public SpinButton (Gtk.Adjustment adjustment) {
                 Object (adjustment: adjustment);
