@@ -159,15 +159,12 @@ namespace PantheonTweaks {
 
                 reset.activate_link.connect (() => {
                     reset_func ();
-                    init_data ();
                     return true;
                 });
 
                 grid.add (reset);
                 grid.show_all ();
             }
-
-            protected virtual void init_data () {}
         }
     }
 }

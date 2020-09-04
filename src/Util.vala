@@ -55,7 +55,7 @@ public class PantheonTweaks.Util {
         return themes;
     }
 
-    public static Gee.Map<string, string> get_themes_map (string path, string condition) {
+    public static Gee.HashMap<string, string> get_themes_map (string path, string condition) {
         var themes = get_themes (path, condition);
         var map = new Gee.HashMap<string, string> ();
 
@@ -64,27 +64,6 @@ public class PantheonTweaks.Util {
         }
 
         return map;
-    }
-
-    public static Gtk.ListStore get_themes_store (string path, string condition, string active, out int active_index = null) {
-        var themes = get_themes (path, condition);
-        var store = new Gtk.ListStore (2, typeof (string), typeof (string));
-        var index = 0;
-
-        active_index = 0;
-        Gtk.TreeIter iter;
-
-        foreach (string theme in themes) {
-            store.append (out iter);
-            store.set (iter, 0, theme, 1, theme);
-            if (theme == active) {
-                active_index = index;
-            }
-
-            index++;
-        }
-
-        return store;
     }
 
     /**
