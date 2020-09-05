@@ -17,12 +17,12 @@
  *
  */
 
-public class PantheonTweaks.Util {
+public class PantheonTweaks.ThemeSettings {
 
     /**
      * Gets and returns a list of the current themes by path and condition.
      */
-    public static Gee.List<string> get_themes (string path, string condition) {
+    private static Gee.List<string> get_themes (string path, string condition) {
         var themes = new Gee.ArrayList<string> ();
 
         string[] dirs = {
@@ -64,12 +64,5 @@ public class PantheonTweaks.Util {
         }
 
         return map;
-    }
-
-    /**
-     * Returns true if the schema exists.
-     */
-    public static bool schema_exists (string schema) {
-        return (SettingsSchemaSource.get_default ().lookup (schema, true) != null);
     }
 }

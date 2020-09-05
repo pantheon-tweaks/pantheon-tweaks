@@ -26,11 +26,11 @@ public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
     }
 
     construct {
-        if (!(Util.schema_exists (FILES_OLD_SCHEMA) || Util.schema_exists (FILES_NEW_SCHEMA))) {
+        if (!(schema_exists (FILES_OLD_SCHEMA) || schema_exists (FILES_NEW_SCHEMA))) {
             return;
         }
 
-        var settings = new GLib.Settings ((Util.schema_exists (FILES_NEW_SCHEMA)) ? FILES_NEW_SCHEMA : FILES_OLD_SCHEMA);
+        var settings = new GLib.Settings ((schema_exists (FILES_NEW_SCHEMA)) ? FILES_NEW_SCHEMA : FILES_OLD_SCHEMA);
 
         var single_click_label = new SummaryLabel (_("Single click:"));
         var single_click_switch = new Switch ();
