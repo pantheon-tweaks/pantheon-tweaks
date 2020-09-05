@@ -23,7 +23,7 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
 
     private GLib.Settings settings;
 
-    private Gtk.ColorButton background;
+    private Gtk.ColorButton background_color_button;
 
     public TerminalPane () {
         base (_("Terminal"), "utilities-terminal");
@@ -36,31 +36,55 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
 
         settings = new GLib.Settings ((Util.schema_exists (TERMINAL_NEW_SCHEMA)) ? TERMINAL_NEW_SCHEMA : TERMINAL_OLD_SCHEMA);
 
-        var box = new Widgets.SettingsBox ();
+        var background_color_label = new SummaryLabel (_("Background color:"));
+        background_color_button = new Gtk.ColorButton () {
+            halign = Gtk.Align.START,
+            use_alpha = true
+        };
 
-        background = new Gtk.ColorButton ();
-        background.use_alpha = true;
-        box.add_widget (_("Background color"), background);
+        var follow_last_tab_label = new SummaryLabel (_("Follow last tab:"));
+        var follow_last_tab_switch = new Switch ();
+        var follow_last_tab_info = new DimLabel (_("Creating a new tab sets the working directory of the last opened tab."));
 
-        var follow_last_tab = box.add_switch (_("Follow last tab"));
-        var unsafe_paste_alert = box.add_switch (_("Unsafe paste alert"));
-        var rem_tabs = box.add_switch (_("Remember tabs"));
-        var term_bell = box.add_switch (_("Terminal bell"));
+        var unsafe_paste_alert_label = new SummaryLabel (_("Unsafe paste alert:"));
+        var unsafe_paste_alert_switch = new Switch ();
+        var unsafe_paste_alert_info = new DimLabel (_("Show a warning dialog when a pasted command contains 'sudo'."));
 
-        grid.add (box);
+        var rem_tabs_label = new SummaryLabel (_("Remember tabs:"));
+        var rem_tabs_switch = new Switch ();
+        var rem_tabs_info = new DimLabel (_("If enabled, last opened tabs are restored on start."));
 
-        grid.show_all ();
+        var term_bell_label = new SummaryLabel (_("Terminal bell:"));
+        var term_bell_switch = new Switch ();
+        var term_bell_info = new DimLabel (_("Sound when hitting the end of a line and also for tab-completion when there are either no or multiple possible completions."));
+
+        content_area.attach (background_color_label, 0, 0, 1, 1);
+        content_area.attach (background_color_button, 1, 0, 1, 1);
+        content_area.attach (follow_last_tab_label, 0, 1, 1, 1);
+        content_area.attach (follow_last_tab_switch, 1, 1, 1, 1);
+        content_area.attach (follow_last_tab_info, 1, 2, 1, 1);
+        content_area.attach (unsafe_paste_alert_label, 0, 3, 1, 1);
+        content_area.attach (unsafe_paste_alert_switch, 1, 3, 1, 1);
+        content_area.attach (unsafe_paste_alert_info, 1, 4, 1, 1);
+        content_area.attach (rem_tabs_label, 0, 5, 1, 1);
+        content_area.attach (rem_tabs_switch, 1, 5, 1, 1);
+        content_area.attach (rem_tabs_info, 1, 6, 1, 1);
+        content_area.attach (term_bell_label, 0, 7, 1, 1);
+        content_area.attach (term_bell_switch, 1, 7, 1, 1);
+        content_area.attach (term_bell_info, 1, 8, 1, 1);
+
+        show_all ();
 
         update_background_value ();
 
-        background.color_set.connect (() => {
-            settings.set_string ("background", background.rgba.to_string ());
+        background_color_button.color_set.connect (() => {
+            settings.set_string ("background", background_color_button.rgba.to_string ());
         });
 
-        settings.bind ("follow-last-tab", follow_last_tab, "active", SettingsBindFlags.DEFAULT);
-        settings.bind ("unsafe-paste-alert", unsafe_paste_alert, "active", SettingsBindFlags.DEFAULT);
-        settings.bind ("remember-tabs", rem_tabs, "active", SettingsBindFlags.DEFAULT);
-        settings.bind ("audible-bell", term_bell, "active", SettingsBindFlags.DEFAULT);
+        settings.bind ("follow-last-tab", follow_last_tab_switch, "active", SettingsBindFlags.DEFAULT);
+        settings.bind ("unsafe-paste-alert", unsafe_paste_alert_switch, "active", SettingsBindFlags.DEFAULT);
+        settings.bind ("remember-tabs", rem_tabs_switch, "active", SettingsBindFlags.DEFAULT);
+        settings.bind ("audible-bell", term_bell_switch, "active", SettingsBindFlags.DEFAULT);
 
         connect_reset_button (() => {
             string[] keys = {"background", "unsafe-paste-alert", "natural-copy-paste",
@@ -77,6 +101,6 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
     private void update_background_value () {
         var rgba = Gdk.RGBA ();
         rgba.parse (settings.get_string ("background"));
-        background.rgba = rgba;
+        background_color_button.rgba = rgba;
     }
 }

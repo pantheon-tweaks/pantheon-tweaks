@@ -32,24 +32,32 @@ public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
 
         var settings = new GLib.Settings ((Util.schema_exists (FILES_NEW_SCHEMA)) ? FILES_NEW_SCHEMA : FILES_OLD_SCHEMA);
 
-        var files_box = new Widgets.SettingsBox ();
+        var single_click_label = new SummaryLabel (_("Single click:"));
+        var single_click_switch = new Switch ();
 
-        var single_click = files_box.add_switch (_("Single click"));
-        var restore_tabs = files_box.add_switch (_("Restore Tabs"));
+        var restore_tabs_label = new SummaryLabel (_("Restore tabs:"));
+        var restore_tabs_switch = new Switch ();
 
         var date_format_map = new Gee.HashMap<string, string> ();
         date_format_map.set ("locale", _("Locale"));
         date_format_map.set ("iso", _("ISO"));
         date_format_map.set ("informal", _("Informal"));
 
-        var date_format = files_box.add_combo_box_text (_("Date format"), date_format_map);
+        var date_format_label = new SummaryLabel (_("Date format:"));
+        var date_format_combo = new ComboBoxText (date_format_map);
 
-        grid.add (files_box);
-        grid.show_all ();
+        content_area.attach (single_click_label, 0, 0, 1, 1);
+        content_area.attach (single_click_switch, 1, 0, 1, 1);
+        content_area.attach (restore_tabs_label, 0, 1, 1, 1);
+        content_area.attach (restore_tabs_switch, 1, 1, 1, 1);
+        content_area.attach (date_format_label, 0, 2, 1, 1);
+        content_area.attach (date_format_combo, 1, 2, 1, 1);
 
-        settings.bind ("single-click", single_click, "active", SettingsBindFlags.DEFAULT);
-        settings.bind ("restore-tabs", restore_tabs, "active", SettingsBindFlags.DEFAULT);
-        settings.bind ("date-format", date_format, "active_id", SettingsBindFlags.DEFAULT);
+        show_all ();
+
+        settings.bind ("single-click", single_click_switch, "active", SettingsBindFlags.DEFAULT);
+        settings.bind ("restore-tabs", restore_tabs_switch, "active", SettingsBindFlags.DEFAULT);
+        settings.bind ("date-format", date_format_combo, "active_id", SettingsBindFlags.DEFAULT);
 
         connect_reset_button (() => {
             string[] keys = {"single-click", "restore-tabs", "date-format"};

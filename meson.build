@@ -27,7 +27,6 @@ plug_files = files(
     'src/Panes/FilesPane.vala',
     'src/Panes/TerminalPane.vala',
     'src/Widgets/Categories.vala',
-    'src/Widgets/SettingBox.vala',
 )
 
 shared_module(
