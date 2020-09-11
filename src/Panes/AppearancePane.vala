@@ -154,7 +154,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
             preset_button_layouts["close,minimize:maximize"] = _("Minimize Left");
             preset_button_layouts["close:minimize,maximize"] = _("Minimize Right");
             preset_button_layouts[":minimize,maximize,close"] = _("Windows");
-            preset_button_layouts["close,minimize,maximize"] = _("OS X");
+            preset_button_layouts["close,minimize,maximize"] = _("macOS");
             preset_button_layouts["close,maximize,minimize"] = _("Ubuntu");
         }
 
