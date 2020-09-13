@@ -1,13 +1,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# ryonakano <ryonakaknock3@gmail.com>, 2018.
+# ryonakano <ryonakaknock3@gmail.com>, 2018, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-13 22:02+0900\n"
-"PO-Revision-Date: 2019-04-13 22:13+0900\n"
+"POT-Creation-Date: 2020-09-13 21:21+0900\n"
+"PO-Revision-Date: 2020-09-13 21:36+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -15,335 +15,308 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.2.1\n"
 
-#: src/Tweaks.vala:34
+#: src/Tweaks.vala:29
 msgid "Tweaks"
 msgstr "Tweaks"
 
-#: src/Tweaks.vala:35
+#: src/Tweaks.vala:30
 msgid "Tweak elementary OS settings"
 msgstr "elementary OS の設定を微調整します"
 
-#: src/Settings/FilesSettings.vala:47
-msgid "Locale"
-msgstr "ロケール"
-
-#: src/Settings/FilesSettings.vala:48
-msgid "ISO"
-msgstr "ISO"
-
-#: src/Settings/FilesSettings.vala:49
-msgid "Informal"
-msgstr "略式"
-
-#: src/Settings/GalaSettings.vala:81
-msgid "elementary"
-msgstr "elementary"
-
-#: src/Settings/GalaSettings.vala:82
-msgid "Close Only Right"
-msgstr "閉じるボタンのみを右に"
-
-#: src/Settings/GalaSettings.vala:83
-msgid "Close Only Left"
-msgstr "閉じるボタンのみを左に"
-
-#: src/Settings/GalaSettings.vala:84
-msgid "Minimize Left"
-msgstr "最小化ボタンを左に"
-
-#: src/Settings/GalaSettings.vala:85
-msgid "Minimize Right"
-msgstr "最小化ボタンを右に"
-
-#: src/Settings/GalaSettings.vala:86
-msgid "Windows"
-msgstr "Windows"
-
-#: src/Settings/GalaSettings.vala:87
-msgid "OS X"
-msgstr "OS X"
-
-#: src/Settings/GalaSettings.vala:88
-msgid "Ubuntu"
-msgstr "Ubuntu"
-
-#: src/Panes/AudiencePane.vala:26
+#: src/Panes/AudiencePane.vala:25
 msgid "Videos"
 msgstr "ビデオ"
 
-#: src/Panes/AudiencePane.vala:40
-msgid "Stay on top while playing"
-msgstr "再生中は最前面に表示"
+#: src/Panes/AudiencePane.vala:35
+msgid "Stay on top while playing:"
+msgstr "再生中は最前面に表示:"
 
-#: src/Panes/AudiencePane.vala:41
-msgid "Move window from video canvas"
-msgstr "ビデオキャンバスでウィンドウを移動"
+#: src/Panes/AudiencePane.vala:38
+msgid "Move window from video canvas:"
+msgstr "ビデオキャンバスでウィンドウを移動:"
+
+#: src/Panes/AudiencePane.vala:40
+msgid "If enabled, the window can be dragged by clicking anywhere on it."
+msgstr ""
+"有効にすると、ウィンドウのどこをクリックしてもドラッグできるようになります。"
 
 #: src/Panes/AudiencePane.vala:42
-msgid "Don't instantly start video playback"
-msgstr "すぐにビデオの再生を開始しない"
+msgid "Don't instantly start video playback:"
+msgstr "動画を自動的に再生しない:"
 
-#: src/Panes/AnimationsPane.vala:35
+#: src/Panes/AudiencePane.vala:44
+msgid "If enabled, opening a video will not auto play it."
+msgstr "有効にすると、動画を開いても自動的に再生しません。"
+
+#: src/Panes/AnimationsPane.vala:25
 msgid "Animations"
 msgstr "アニメーション"
 
-#: src/Panes/AnimationsPane.vala:50
-msgid "Enable animations"
-msgstr "アニメーションを有効にする"
+#: src/Panes/AnimationsPane.vala:26
+msgid "Adjust the animation length used for window management or multitasking."
+msgstr ""
+"ウィンドウ管理やマルチタスクに使用されるアニメーションの長さを調節します。"
+
+#: src/Panes/AnimationsPane.vala:37
+msgid "Open:"
+msgstr "開く:"
+
+#: src/Panes/AnimationsPane.vala:41
+msgid "Close:"
+msgstr "閉じる:"
+
+#: src/Panes/AnimationsPane.vala:45
+msgid "Snap:"
+msgstr "スナップ:"
+
+#: src/Panes/AnimationsPane.vala:49
+msgid "Minimize:"
+msgstr "最小化:"
 
 #: src/Panes/AnimationsPane.vala:53
-msgid "Duration"
-msgstr "アニメーションの長さ"
+msgid "Workspace switch:"
+msgstr "ワークスペースの切り替え:"
 
-#: src/Panes/AnimationsPane.vala:55
-msgid "Open"
-msgstr "開く"
-
-#: src/Panes/AnimationsPane.vala:56
-msgid "Close"
-msgstr "閉じる"
-
-#: src/Panes/AnimationsPane.vala:57
-msgid "Snap"
-msgstr "スナップ"
-
-#: src/Panes/AnimationsPane.vala:58
-msgid "Minimize"
-msgstr "最小化"
-
-#: src/Panes/AnimationsPane.vala:59
-msgid "Workspace switch"
-msgstr "ワークスペースの切り替え"
-
-#. Appearance
-#: src/Panes/AppearancePane.vala:42 src/Panes/PlankPane.vala:58
+#: src/Panes/AppearancePane.vala:30
 msgid "Appearance"
 msgstr "外観"
 
-#: src/Panes/AppearancePane.vala:53
+#: src/Panes/AppearancePane.vala:31
+msgid ""
+"Change the theme and button layout of windows. Changing theme may cause "
+"visibility issue."
+msgstr ""
+"ウィンドウのテーマとボタンレイアウトを変更します。テーマを変更すると、視覚的"
+"な不具合が生じる可能性があります。"
+
+#: src/Panes/AppearancePane.vala:42
 msgid "Theme Settings"
 msgstr "テーマの設定"
 
-#: src/Panes/AppearancePane.vala:56
-msgid "GTK+"
-msgstr "GTK+"
+#: src/Panes/AppearancePane.vala:44
+msgid "GTK+:"
+msgstr "GTK+:"
 
-#. metacity_combobox = theme_box.add_combo_box (_("Metacity (Non-GTK+ applications)"));
+#. / TRANSLATORS: The "%s" represents the path where custom themes are installed
+#: src/Panes/AppearancePane.vala:49
+#, c-format
+msgid "To show custom themes here, put them in %s."
+msgstr "カスタムテーマをここに表示させるには、%s 以下に配置してください。"
+
+#: src/Panes/AppearancePane.vala:50 src/Panes/AppearancePane.vala:59
+#: src/Panes/AppearancePane.vala:68
+msgid "theme-name"
+msgstr "テーマ名"
+
+#: src/Panes/AppearancePane.vala:53
+msgid "Icons:"
+msgstr "アイコン:"
+
+#. / TRANSLATORS: The "%s" represents the path where custom icons are installed
 #: src/Panes/AppearancePane.vala:58
-msgid "Icons"
-msgstr "アイコン"
+#, c-format
+msgid "To show custom icons here, put them in %s."
+msgstr "カスタムアイコンをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:59
-msgid "Cursor"
-msgstr "カーソル"
+#: src/Panes/AppearancePane.vala:62
+msgid "Cursor:"
+msgstr "カーソル:"
 
-#: src/Panes/AppearancePane.vala:60
-msgid "Prefer dark variant"
-msgstr "ダークモードを選択"
+#. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
+#: src/Panes/AppearancePane.vala:67
+#, c-format
+msgid "To show custom cursors here, put them in %s."
+msgstr "カスタムカーソルをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:65
+#: src/Panes/AppearancePane.vala:71
+msgid "Force to use dark stylesheet:"
+msgstr "ダークスタイルシートを強制的に適用:"
+
+#: src/Panes/AppearancePane.vala:73
+msgid ""
+"Forces dark style on all apps, even if it's not supported. Requires "
+"restarting the application."
+msgstr ""
+"対応していないアプリに対しても、ダークモードを強制します。アプリケーションの"
+"再起動が必要です。"
+
+#: src/Panes/AppearancePane.vala:75
 msgid "Window Controls"
 msgstr "ウィンドウコントロール"
 
-#: src/Panes/AppearancePane.vala:68
-msgid "Layout"
-msgstr "レイアウト"
+#: src/Panes/AppearancePane.vala:77
+msgid "Layout:"
+msgstr "レイアウト:"
 
-#: src/Panes/AppearancePane.vala:69
-msgid "Show GNOME menu"
-msgstr "GNOME メニューを表示"
+#: src/Panes/AppearancePane.vala:80
+msgid "Changes button layout of the window."
+msgstr "ウィンドウのボタンレイアウトを変更します。"
 
-#: src/Panes/FontsPane.vala:27
+#: src/Panes/AppearancePane.vala:82
+msgid "Show GNOME menu:"
+msgstr "GNOME メニューを表示:"
+
+#: src/Panes/AppearancePane.vala:84
+msgid "Whether to show GNOME menu in GNOME apps."
+msgstr "GNOME アプリで GNOME メニューを表示するかどうかを設定します。"
+
+#: src/Panes/AppearancePane.vala:151
+msgid "elementary"
+msgstr "elementary"
+
+#: src/Panes/AppearancePane.vala:152
+msgid "Close Only Right"
+msgstr "閉じるボタンのみを右に表示"
+
+#: src/Panes/AppearancePane.vala:153
+msgid "Close Only Left"
+msgstr "閉じるボタンのみを左に表示"
+
+#: src/Panes/AppearancePane.vala:154
+msgid "Minimize Left"
+msgstr "最小化ボタンを左に追加"
+
+#: src/Panes/AppearancePane.vala:155
+msgid "Minimize Right"
+msgstr "最小化ボタンを右に追加"
+
+#: src/Panes/AppearancePane.vala:156
+msgid "Windows"
+msgstr "Windows"
+
+#: src/Panes/AppearancePane.vala:157
+msgid "OS X"
+msgstr "OS X"
+
+#: src/Panes/AppearancePane.vala:158
+msgid "Ubuntu"
+msgstr "Ubuntu"
+
+#: src/Panes/FontsPane.vala:23
 msgid "Fonts"
 msgstr "フォント"
 
-#: src/Panes/FontsPane.vala:37
-msgid "Font Settings"
-msgstr "フォントの設定"
+#: src/Panes/FontsPane.vala:24
+msgid "Change the fonts used in your system and documents by default."
+msgstr "システムやドキュメントで使用されるデフォルトのフォントを変更します。"
 
-#: src/Panes/FontsPane.vala:45
-msgid "Default font"
-msgstr "デフォルトのフォント"
+#: src/Panes/FontsPane.vala:32
+msgid "Default Font:"
+msgstr "デフォルトのフォント:"
 
-#: src/Panes/FontsPane.vala:46
-msgid "Document font"
-msgstr "ドキュメントのフォント"
+#: src/Panes/FontsPane.vala:35
+msgid "Document font:"
+msgstr "ドキュメントのフォント:"
 
-#: src/Panes/FontsPane.vala:47
-msgid "Monospace font"
-msgstr "等幅フォント"
+#: src/Panes/FontsPane.vala:38
+msgid "Monospace font:"
+msgstr "等幅フォント:"
 
-#: src/Panes/FontsPane.vala:48
-msgid "Titlebar font"
-msgstr "タイトルバーのフォント"
+#: src/Panes/FontsPane.vala:41
+msgid "Titlebar font:"
+msgstr "タイトルバーのフォント:"
 
 #: src/Panes/MiscPane.vala:25
 msgid "Miscellaneous"
-msgstr "その他"
+msgstr "そのほか"
 
-#: src/Panes/MiscPane.vala:39
+#: src/Panes/MiscPane.vala:26
+msgid "Configure some other hidden settings."
+msgstr "そのほかの隠し設定項目を変更します。"
+
+#: src/Panes/MiscPane.vala:37
 msgid "Sound Indicator"
 msgstr "サウンドインジケーター"
 
-#: src/Panes/MiscPane.vala:41
-msgid "Max volume"
-msgstr "最大音量"
+#: src/Panes/MiscPane.vala:39
+msgid "Max volume:"
+msgstr "最大音量:"
 
-#: src/Panes/FilesPane.vala:28
+#: src/Panes/FilesPane.vala:25
 msgid "Files"
 msgstr "ファイル"
 
+#: src/Panes/FilesPane.vala:35
+msgid "Single click:"
+msgstr "シングルクリック:"
+
+#: src/Panes/FilesPane.vala:38
+msgid "Restore tabs:"
+msgstr "タブを復元:"
+
+#: src/Panes/FilesPane.vala:42
+msgid "Locale"
+msgstr "ロケール"
+
 #: src/Panes/FilesPane.vala:43
-msgid "Single click"
-msgstr "シングルクリック"
+msgid "ISO"
+msgstr "ISO"
 
 #: src/Panes/FilesPane.vala:44
-msgid "Restore Tabs"
-msgstr "タブを復元"
+msgid "Informal"
+msgstr "略式"
 
-#: src/Panes/FilesPane.vala:45
-msgid "Date format"
-msgstr "日付の書式"
+#: src/Panes/FilesPane.vala:46
+msgid "Date format:"
+msgstr "日付の書式:"
 
 #: src/Panes/TerminalPane.vala:29
 msgid "Terminal"
 msgstr "ターミナル"
 
-#: src/Panes/TerminalPane.vala:45
-msgid "Background color"
-msgstr "背景色"
+#: src/Panes/TerminalPane.vala:39
+msgid "Background color:"
+msgstr "背景色:"
 
-#: src/Panes/TerminalPane.vala:46
-msgid "Natural copy paste"
-msgstr "ナチュラルコピー & ペースト"
+#: src/Panes/TerminalPane.vala:45
+msgid "Follow last tab:"
+msgstr "最後のタブに従う:"
 
 #: src/Panes/TerminalPane.vala:47
-msgid "Follow last tab"
-msgstr "最後のタブに従う"
-
-#: src/Panes/TerminalPane.vala:48
-msgid "Unsafe paste alert"
-msgstr "安全でないペーストを警告"
+msgid "Creating a new tab sets the working directory of the last opened tab."
+msgstr ""
+"新しいタブのカレントディレクトリを、最後に開いたタブのカレントディレクトリに"
+"設定します。"
 
 #: src/Panes/TerminalPane.vala:49
-msgid "Remember tabs"
-msgstr "タブを保存"
+msgid "Unsafe paste alert:"
+msgstr "安全でないペーストを警告:"
 
-#: src/Panes/TerminalPane.vala:50
-msgid "Terminal bell"
-msgstr "ターミナルの通知音"
+#: src/Panes/TerminalPane.vala:51
+msgid "Show a warning dialog when a pasted command contains 'sudo'."
+msgstr ""
+"貼り付けされたコマンドに 'sudo' というキーワードが含まれている場合に、警告ダ"
+"イアログを表示します。"
 
-#: src/Panes/PlankPane.vala:37
-msgid "Dock"
-msgstr "ドック"
+#: src/Panes/TerminalPane.vala:53
+msgid "Remember tabs:"
+msgstr "タブを保存:"
 
-#. Behavior
-#: src/Panes/PlankPane.vala:50
-msgid "Behavior"
-msgstr "動作"
+#: src/Panes/TerminalPane.vala:55
+msgid "If enabled, last opened tabs are restored on start."
+msgstr "有効にすると、最後に開いたタブが起動時に復元されます。"
 
-#: src/Panes/PlankPane.vala:51
-msgid "Lock items"
-msgstr "項目をロック"
+#: src/Panes/TerminalPane.vala:57
+msgid "Terminal bell:"
+msgstr "ターミナルの通知音:"
 
-#: src/Panes/PlankPane.vala:52
-msgid "Show Unpinned"
-msgstr "固定していないアイテムも表示"
+#: src/Panes/TerminalPane.vala:59
+msgid ""
+"Sound when hitting the end of a line and also for tab-completion when there "
+"are either no or multiple possible completions."
+msgstr ""
+"行の最後に到達した場合や、入力補完の候補がない、または1つしかない場合に、音を"
+"鳴らします。"
 
-#: src/Panes/PlankPane.vala:53
-msgid "Restrict to Workspace"
-msgstr "現在のワークスペースでのみ表示"
-
-#: src/Panes/PlankPane.vala:54
-msgid "Hide mode"
-msgstr "隠すモード"
-
-#: src/Panes/PlankPane.vala:55
-msgid "Hide delay"
-msgstr "隠すまでの時間"
-
-#: src/Panes/PlankPane.vala:59
-msgid "Theme"
-msgstr "テーマ"
-
-#: src/Panes/PlankPane.vala:60
-msgid "Icon size"
-msgstr "アイコンサイズ"
-
-#: src/Panes/PlankPane.vala:61
-msgid "Monitor"
-msgstr "モニター"
-
-#: src/Panes/PlankPane.vala:62
-msgid "Screen position"
-msgstr "スクリーンの位置"
-
-#: src/Panes/PlankPane.vala:63
-msgid "Alignment"
-msgstr "配置"
-
-#: src/Panes/PlankPane.vala:64
-msgid "Item alignment"
-msgstr "アイテムの配置"
-
-#: src/Panes/PlankPane.vala:65
-msgid "Offset"
-msgstr "オフセット"
-
-#: src/Panes/SlingshotPane.vala:30
-msgid "Launcher"
-msgstr "ランチャー"
-
-#: src/Panes/SlingshotPane.vala:45
-msgid "Rows"
-msgstr "行数"
-
-#: src/Panes/SlingshotPane.vala:46
-msgid "Columns"
-msgstr "列数"
-
-#: src/Panes/SlingshotPane.vala:48
-msgid "Show category view by default"
-msgstr "デフォルトでカテゴリー表示にする"
-
-#: src/Objects/ShortcutObject.vala:58
-msgid "Disabled"
-msgstr "無効"
-
-#: src/Widgets/Categories.vala:74
+#: src/Widgets/Categories.vala:63
 msgid "General"
 msgstr "一般"
 
-#: src/Widgets/Categories.vala:76
+#: src/Widgets/Categories.vala:65
 msgid "Applications"
 msgstr "アプリケーション"
 
-#: src/Widgets/Categories.vala:160
+#: src/Widgets/Categories.vala:115
 msgid "Reset to default"
 msgstr "デフォルトにリセット"
-
-#~ msgid "Custom"
-#~ msgstr "カスタム"
-
-#~ msgid "Show category switch"
-#~ msgstr "ビュースイッチャーを表示"
-
-#~ msgid "Cerbere"
-#~ msgstr "Cerbere"
-
-#~ msgid "Custom command"
-#~ msgstr "カスタムコマンド"
-
-#~ msgid "Keep these applications open:"
-#~ msgstr "これらのアプリケーションを開いたままにする:"
-
-#~ msgid "Add watched app…"
-#~ msgstr "ウォッチするアプリを追加…"
-
-#~ msgid "Remove selected app"
-#~ msgstr "選択されたアプリを一覧から削除"
-
-#~ msgid "Search Applications"
-#~ msgstr "アプリケーションを検索"
