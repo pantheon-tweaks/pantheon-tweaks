@@ -34,7 +34,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
     construct {
         var interface_settings = new GLib.Settings ("org.gnome.desktop.interface");
-        var gtk_settings = GtkSettings.get_default ();
+        var gtk_settings = new GtkSettings ();
         x_settings = XSettings.get_default ();
         appearance_settings = new GLib.Settings ("org.pantheon.desktop.gala.appearance");
         var gnome_wm_settings = new GLib.Settings ("org.gnome.desktop.wm.preferences");
