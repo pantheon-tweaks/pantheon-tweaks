@@ -34,7 +34,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
     construct {
         var interface_settings = new GLib.Settings ("org.gnome.desktop.interface");
-        var gtk_settings = GtkSettings.get_default ();
+        var gtk_settings = new GtkSettings ();
         x_settings = XSettings.get_default ();
         appearance_settings = new GLib.Settings ("org.pantheon.desktop.gala.appearance");
         var gnome_wm_settings = new GLib.Settings ("org.gnome.desktop.wm.preferences");
@@ -42,7 +42,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         var theme_label = new Granite.HeaderLabel (_("Theme Settings"));
 
         var gtk_label = new SummaryLabel (_("GTK+:"));
-        var gtk_map = Util.get_themes_map ("themes", "gtk-3.0");
+        var gtk_map = ThemeSettings.get_themes_map ("themes", "gtk-3.0");
         var gtk_combobox = new ComboBoxText (gtk_map);
 
         /// TRANSLATORS: The "%s" represents the path where custom themes are installed
@@ -51,7 +51,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         ));
 
         var icon_label = new SummaryLabel (_("Icons:"));
-        var icon_map = Util.get_themes_map ("icons", "index.theme");
+        var icon_map = ThemeSettings.get_themes_map ("icons", "index.theme");
         var icon_combobox = new ComboBoxText (icon_map);
 
         /// TRANSLATORS: The "%s" represents the path where custom icons are installed
@@ -60,7 +60,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         ));
 
         var cursor_label = new SummaryLabel (_("Cursor:"));
-        var cursor_map = Util.get_themes_map ("icons", "cursors");
+        var cursor_map = ThemeSettings.get_themes_map ("icons", "cursors");
         var cursor_combobox = new ComboBoxText (cursor_map);
 
         /// TRANSLATORS: The "%s" represents the path where custom cursors are installed
@@ -154,7 +154,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
             preset_button_layouts["close,minimize:maximize"] = _("Minimize Left");
             preset_button_layouts["close:minimize,maximize"] = _("Minimize Right");
             preset_button_layouts[":minimize,maximize,close"] = _("Windows");
-            preset_button_layouts["close,minimize,maximize"] = _("OS X");
+            preset_button_layouts["close,minimize,maximize"] = _("macOS");
             preset_button_layouts["close,maximize,minimize"] = _("Ubuntu");
         }
 

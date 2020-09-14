@@ -26,11 +26,11 @@ public class PantheonTweaks.Panes.AudiencePane : Categories.Pane {
     }
 
     construct {
-        if (!(Util.schema_exists (VIDEOS_OLD_SCHEMA) || Util.schema_exists (VIDEOS_NEW_SCHEMA))) {
+        if (!(schema_exists (VIDEOS_OLD_SCHEMA) || schema_exists (VIDEOS_NEW_SCHEMA))) {
             return;
         }
 
-        var settings = new Settings ((Util.schema_exists (VIDEOS_NEW_SCHEMA)) ? VIDEOS_NEW_SCHEMA : VIDEOS_OLD_SCHEMA);
+        var settings = new Settings ((schema_exists (VIDEOS_NEW_SCHEMA)) ? VIDEOS_NEW_SCHEMA : VIDEOS_OLD_SCHEMA);
 
         var stay_on_top_label = new SummaryLabel (_("Stay on top while playing:"));
         var stay_on_top_switch = new Switch ();
