@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-13 21:21+0900\n"
-"PO-Revision-Date: 2020-09-13 21:36+0900\n"
+"POT-Creation-Date: 2020-09-14 22:39+0900\n"
+"PO-Revision-Date: 2020-09-14 22:40+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -186,8 +186,8 @@ msgid "Windows"
 msgstr "Windows"
 
 #: src/Panes/AppearancePane.vala:157
-msgid "OS X"
-msgstr "OS X"
+msgid "macOS"
+msgstr "macOS"
 
 #: src/Panes/AppearancePane.vala:158
 msgid "Ubuntu"
@@ -317,6 +317,6 @@ msgstr "一般"
 msgid "Applications"
 msgstr "アプリケーション"
 
-#: src/Widgets/Categories.vala:115
+#: src/Widgets/Categories.vala:119
 msgid "Reset to default"
 msgstr "デフォルトにリセット"
