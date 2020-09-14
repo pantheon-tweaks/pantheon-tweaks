@@ -28,7 +28,7 @@ public class PantheonTweaks.Panes.AnimationsPane : Categories.Pane {
     }
 
     construct {
-        if (!Util.schema_exists (ANIMATIONS_SCHEMA)) {
+        if (!schema_exists (ANIMATIONS_SCHEMA)) {
             return;
         }
 

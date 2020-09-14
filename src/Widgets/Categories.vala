@@ -88,6 +88,10 @@ public class PantheonTweaks.Categories : Gtk.Paned {
             content_area.margin_start = 60;
         }
 
+        protected bool schema_exists (string schema) {
+            return (SettingsSchemaSource.get_default ().lookup (schema, true) != null);
+        }
+
         protected void connect_combobox (Gtk.ComboBox box, Gtk.ListStore store, SetValue<string> set_func) {
             box.changed.connect (() => {
                 Value val;

@@ -30,11 +30,11 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
     }
 
     construct {
-        if (!(Util.schema_exists (TERMINAL_OLD_SCHEMA) || Util.schema_exists (TERMINAL_NEW_SCHEMA))) {
+        if (!(schema_exists (TERMINAL_OLD_SCHEMA) || schema_exists (TERMINAL_NEW_SCHEMA))) {
             return;
         }
 
-        settings = new GLib.Settings ((Util.schema_exists (TERMINAL_NEW_SCHEMA)) ? TERMINAL_NEW_SCHEMA : TERMINAL_OLD_SCHEMA);
+        settings = new GLib.Settings ((schema_exists (TERMINAL_NEW_SCHEMA)) ? TERMINAL_NEW_SCHEMA : TERMINAL_OLD_SCHEMA);
 
         var background_color_label = new SummaryLabel (_("Background color:"));
         background_color_button = new Gtk.ColorButton () {
