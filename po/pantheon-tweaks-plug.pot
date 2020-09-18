@@ -1,0 +1,311 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the pantheon-tweaks-plug package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pantheon-tweaks-plug\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-14 22:43+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/Tweaks.vala:29
+msgid "Tweaks"
+msgstr ""
+
+#: src/Tweaks.vala:30
+msgid "Tweak elementary OS settings"
+msgstr ""
+
+#: src/Panes/AudiencePane.vala:25
+msgid "Videos"
+msgstr ""
+
+#: src/Panes/AudiencePane.vala:35
+msgid "Stay on top while playing:"
+msgstr ""
+
+#: src/Panes/AudiencePane.vala:38
+msgid "Move window from video canvas:"
+msgstr ""
+
+#: src/Panes/AudiencePane.vala:40
+msgid "If enabled, the window can be dragged by clicking anywhere on it."
+msgstr ""
+
+#: src/Panes/AudiencePane.vala:42
+msgid "Don't instantly start video playback:"
+msgstr ""
+
+#: src/Panes/AudiencePane.vala:44
+msgid "If enabled, opening a video will not auto play it."
+msgstr ""
+
+#: src/Panes/AnimationsPane.vala:25
+msgid "Animations"
+msgstr ""
+
+#: src/Panes/AnimationsPane.vala:26
+msgid "Adjust the animation length used for window management or multitasking."
+msgstr ""
+
+#: src/Panes/AnimationsPane.vala:37
+msgid "Open:"
+msgstr ""
+
+#: src/Panes/AnimationsPane.vala:41
+msgid "Close:"
+msgstr ""
+
+#: src/Panes/AnimationsPane.vala:45
+msgid "Snap:"
+msgstr ""
+
+#: src/Panes/AnimationsPane.vala:49
+msgid "Minimize:"
+msgstr ""
+
+#: src/Panes/AnimationsPane.vala:53
+msgid "Workspace switch:"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:30
+msgid "Appearance"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:31
+msgid ""
+"Change the theme and button layout of windows. Changing theme may cause "
+"visibility issue."
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:42
+msgid "Theme Settings"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:44
+msgid "GTK+:"
+msgstr ""
+
+#. / TRANSLATORS: The "%s" represents the path where custom themes are installed
+#: src/Panes/AppearancePane.vala:49
+#, c-format
+msgid "To show custom themes here, put them in %s."
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:50 src/Panes/AppearancePane.vala:59
+#: src/Panes/AppearancePane.vala:68
+msgid "theme-name"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:53
+msgid "Icons:"
+msgstr ""
+
+#. / TRANSLATORS: The "%s" represents the path where custom icons are installed
+#: src/Panes/AppearancePane.vala:58
+#, c-format
+msgid "To show custom icons here, put them in %s."
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:62
+msgid "Cursor:"
+msgstr ""
+
+#. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
+#: src/Panes/AppearancePane.vala:67
+#, c-format
+msgid "To show custom cursors here, put them in %s."
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:71
+msgid "Force to use dark stylesheet:"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:73
+msgid ""
+"Forces dark style on all apps, even if it's not supported. Requires "
+"restarting the application."
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:75
+msgid "Window Controls"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:77
+msgid "Layout:"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:80
+msgid "Changes button layout of the window."
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:82
+msgid "Show GNOME menu:"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:84
+msgid "Whether to show GNOME menu in GNOME apps."
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:151
+msgid "elementary"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:152
+msgid "Close Only Right"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:153
+msgid "Close Only Left"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:154
+msgid "Minimize Left"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:155
+msgid "Minimize Right"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:156
+msgid "Windows"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:157
+msgid "macOS"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:158
+msgid "Ubuntu"
+msgstr ""
+
+#: src/Panes/FontsPane.vala:23
+msgid "Fonts"
+msgstr ""
+
+#: src/Panes/FontsPane.vala:24
+msgid "Change the fonts used in your system and documents by default."
+msgstr ""
+
+#: src/Panes/FontsPane.vala:32
+msgid "Default Font:"
+msgstr ""
+
+#: src/Panes/FontsPane.vala:35
+msgid "Document font:"
+msgstr ""
+
+#: src/Panes/FontsPane.vala:38
+msgid "Monospace font:"
+msgstr ""
+
+#: src/Panes/FontsPane.vala:41
+msgid "Titlebar font:"
+msgstr ""
+
+#: src/Panes/MiscPane.vala:25
+msgid "Miscellaneous"
+msgstr ""
+
+#: src/Panes/MiscPane.vala:26
+msgid "Configure some other hidden settings."
+msgstr ""
+
+#: src/Panes/MiscPane.vala:37
+msgid "Sound Indicator"
+msgstr ""
+
+#: src/Panes/MiscPane.vala:39
+msgid "Max volume:"
+msgstr ""
+
+#: src/Panes/FilesPane.vala:25
+msgid "Files"
+msgstr ""
+
+#: src/Panes/FilesPane.vala:35
+msgid "Single click:"
+msgstr ""
+
+#: src/Panes/FilesPane.vala:38
+msgid "Restore tabs:"
+msgstr ""
+
+#: src/Panes/FilesPane.vala:42
+msgid "Locale"
+msgstr ""
+
+#: src/Panes/FilesPane.vala:43
+msgid "ISO"
+msgstr ""
+
+#: src/Panes/FilesPane.vala:44
+msgid "Informal"
+msgstr ""
+
+#: src/Panes/FilesPane.vala:46
+msgid "Date format:"
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:29
+msgid "Terminal"
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:39
+msgid "Background color:"
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:45
+msgid "Follow last tab:"
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:47
+msgid "Creating a new tab sets the working directory of the last opened tab."
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:49
+msgid "Unsafe paste alert:"
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:51
+msgid "Show a warning dialog when a pasted command contains 'sudo'."
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:53
+msgid "Remember tabs:"
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:55
+msgid "If enabled, last opened tabs are restored on start."
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:57
+msgid "Terminal bell:"
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:59
+msgid ""
+"Sound when hitting the end of a line and also for tab-completion when there "
+"are either no or multiple possible completions."
+msgstr ""
+
+#: src/Widgets/Categories.vala:63
+msgid "General"
+msgstr ""
+
+#: src/Widgets/Categories.vala:65
+msgid "Applications"
+msgstr ""
+
+#: src/Widgets/Categories.vala:119
+msgid "Reset to default"
+msgstr ""
