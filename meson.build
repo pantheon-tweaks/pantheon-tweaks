@@ -16,8 +16,8 @@ subdir('po')
 
 plug_files = files(
     'src/Tweaks.vala',
-    'src/Util.vala',
     'src/Settings/GtkSettings.vala',
+    'src/Settings/ThemeSettings.vala',
     'src/Settings/XSettings.vala',
     'src/Panes/AudiencePane.vala',
     'src/Panes/AnimationsPane.vala',
@@ -27,7 +27,6 @@ plug_files = files(
     'src/Panes/FilesPane.vala',
     'src/Panes/TerminalPane.vala',
     'src/Widgets/Categories.vala',
-    'src/Widgets/SettingBox.vala',
 )
 
 shared_module(
