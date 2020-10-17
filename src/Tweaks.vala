@@ -37,13 +37,7 @@ public class PantheonTweaks.TweaksPlug : Switchboard.Plug {
      */
     public override Gtk.Widget get_widget () {
         if (paned == null) {
-            paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
-            var categories = new Categories ();
-            paned.pack1 (categories, false, false);
-            var stack = new Gtk.Stack ();
-            paned.add2 (stack);
-            categories.set_stack (stack);
-
+            paned = new Categories ();
             paned.show_all ();
         }
 
