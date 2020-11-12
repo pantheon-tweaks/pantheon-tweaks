@@ -1,5 +1,5 @@
 # Pantheon Tweaks
-A system settings panel for the Pantheon Desktop and elementary OS **Odin** that lets you easily and safely customise your desktop's appearance.
+A system settings panel for the Pantheon Desktop and elementary OS **Odin** that lets you easily and safely customise your desktop's appearance. For users on elementary OS **Juno** or below, please instead use [elementary tweaks](https://github.com/elementary-tweaks/elementary-tweaks).
 
 ![sample](docs/screenshot.png)
 
