@@ -20,7 +20,9 @@ sudo add-apt-repository ppa:philip.scott/pantheon-tweaks
 sudo apt install pantheon-tweaks
 ```
 
-Open System Settings and there should be a new Plug named "Tweaks".
+Open System Settings and there should be a new Plug named "Tweaks". 
+
+**Note:** if you are currently on Odin daily builds, follow [this](https://github.com/pantheon-tweaks/pantheon-tweaks/issues/43#issuecomment-720077052) to install Pantheon Tweaks instead.
 
 ### From Source Code
 If you want to install from source code, clone this repository and then run the following commands:
