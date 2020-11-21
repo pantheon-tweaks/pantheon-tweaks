@@ -1,7 +1,7 @@
 # Pantheon Tweaks
 A system settings panel for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance.
 
-Pantheon Tweaks is supported on elementary OS **Odin** and above. For users on elementary OS **Juno** or below, please instead use [elementary tweaks](https://github.com/elementary-tweaks/elementary-tweaks).
+Pantheon Tweaks is currently only supported on elementary OS **Odin**. For users on elementary OS **Juno** or below, please instead use [elementary tweaks](https://github.com/elementary-tweaks/elementary-tweaks).
 
 ![sample](docs/screenshot.png)
 
@@ -16,13 +16,13 @@ sudo apt install software-properties-common
 Add the PPA of Pantheon Tweaks and then install it:
 
 ```
-sudo add-apt-repository ppa:philip.scott/pantheon-tweaks
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv c42d52715a84c7d0d02fc740c1d89326b1c71ab9
+echo -e "deb http://ppa.launchpad.net/philip.scott/pantheon-tweaks/ubuntu focal main\ndeb-src http://ppa.launchpad.net/philip.scott/pantheon-tweaks/ubuntu focal main" | sudo tee /etc/apt/sources.list.d/pantheon-tweaks.list
+sudo apt update
 sudo apt install pantheon-tweaks
 ```
 
 Open System Settings and there should be a new Plug named "Tweaks". 
-
-**Note:** if you are currently on Odin daily builds, follow [this](https://github.com/pantheon-tweaks/pantheon-tweaks/issues/43#issuecomment-720077052) to install Pantheon Tweaks instead.
 
 ### From Source Code
 If you want to install from source code, clone this repository and then run the following commands:
