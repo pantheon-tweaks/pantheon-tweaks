@@ -1,13 +1,13 @@
 # Pantheon Tweaks
 A system settings panel for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance.
 
-Pantheon Tweaks is currently only supported on elementary OS **Odin**. For users on elementary OS **Juno** or below, please instead use [elementary tweaks](https://github.com/elementary-tweaks/elementary-tweaks).
+Pantheon Tweaks is currently only supported on elementary OS **Odin**. For users on elementary OS **Juno** or below, please instead use [elementary Tweaks](https://github.com/elementary-tweaks/elementary-tweaks).
 
 ![sample](docs/screenshot.png)
 
 ## Installation
 ### From PPA (recommended)
-If you have never added a PPA on your system before, you might need to run this command first: 
+If you have never added a PPA on your system before, you might need to run this command first:
 
 ```
 sudo apt install software-properties-common
@@ -22,7 +22,7 @@ sudo apt update
 sudo apt install pantheon-tweaks
 ```
 
-Open System Settings and there should be a new Plug named "Tweaks". 
+Open System Settings and there should be a new Plug named "Tweaks".
 
 ### From Source Code
 If you want to install from source code, clone this repository and then run the following commands:
