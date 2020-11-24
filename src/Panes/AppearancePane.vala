@@ -138,6 +138,8 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
             gtk_settings.prefer_dark_theme = false;
             init_data ();
         });
+
+        dark_style_switch.state = gtk_settings.prefer_dark_theme;
     }
 
     private void init_data () {
