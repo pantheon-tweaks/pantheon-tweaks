@@ -34,6 +34,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
     construct {
         var interface_settings = new GLib.Settings ("org.gnome.desktop.interface");
+        var sound_settings = new GLib.Settings ("org.gnome.desktop.sound");
         x_settings = new XSettings ();
         var gtk_settings = new GtkSettings ();
         appearance_settings = new GLib.Settings ("org.pantheon.desktop.gala.appearance");
@@ -124,6 +125,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         interface_settings.bind ("gtk-theme", gtk_combobox, "active_id", SettingsBindFlags.DEFAULT);
         interface_settings.bind ("icon-theme", icon_combobox, "active_id", SettingsBindFlags.DEFAULT);
         interface_settings.bind ("cursor-theme", cursor_combobox, "active_id", SettingsBindFlags.DEFAULT);
+        sound_settings.bind ("theme-name", sound_combobox, "active_id", SettingsBindFlags.DEFAULT);
         dark_style_switch.bind_property ("active", gtk_settings, "prefer-dark-theme", BindingFlags.BIDIRECTIONAL);
 
         controls_combobox.changed.connect (() => {
