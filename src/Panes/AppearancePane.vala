@@ -146,6 +146,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
                 interface_settings.reset (key);
             }
 
+            sound_settings.reset ("theme-name");
             appearance_settings.reset ("button-layout");
             gnome_wm_settings.reset ("button-layout");
             x_settings.reset ();
