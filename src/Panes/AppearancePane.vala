@@ -34,6 +34,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
     construct {
         var interface_settings = new GLib.Settings ("org.gnome.desktop.interface");
+        var sound_settings = new GLib.Settings ("org.gnome.desktop.sound");
         x_settings = new XSettings ();
         var gtk_settings = new GtkSettings ();
         appearance_settings = new GLib.Settings ("org.pantheon.desktop.gala.appearance");
@@ -68,6 +69,15 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
             "~/.local/share/icons/<%s>/cursors".printf (_("theme-name"))
         ));
 
+        var sound_label = new SummaryLabel (_("Sound:"));
+        var sound_map = ThemeSettings.get_themes_map ("sounds", "index.theme");
+        var sound_combobox = new ComboBoxText (sound_map);
+
+        /// TRANSLATORS: The "%s" represents the path where custom sounds are installed
+        var sound_info = new DimLabel (_("To show custom sounds here, put them in %s.").printf (
+            "~/.local/share/sounds/<%s>".printf (_("theme-name"))
+        ));
+
         var dark_style_label = new SummaryLabel (_("Force to use dark stylesheet:"));
         var dark_style_switch = new Switch ();
         dark_style_switch.state = gtk_settings.prefer_dark_theme;
@@ -96,22 +106,26 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         content_area.attach (cursor_label, 0, 5, 1, 1);
         content_area.attach (cursor_combobox, 1, 5, 1, 1);
         content_area.attach (cursor_info, 1, 6, 1, 1);
-        content_area.attach (dark_style_label, 0, 7, 1, 1);
-        content_area.attach (dark_style_switch, 1, 7, 1, 1);
-        content_area.attach (prefer_dark_info, 1, 8, 1, 1);
-        content_area.attach (layout_label, 0, 9, 1, 1);
-        content_area.attach (controls_label, 0, 10, 1, 1);
-        content_area.attach (controls_combobox, 1, 10, 1, 1);
-        content_area.attach (controls_info, 1, 11, 1, 1);
-        content_area.attach (gnome_menu_label, 0, 12, 1, 1);
-        content_area.attach (gnome_menu, 1, 12, 1, 1);
-        content_area.attach (gnome_menu_info, 1, 13, 1, 1);
+        content_area.attach (sound_label, 0, 7, 1, 1);
+        content_area.attach (sound_combobox, 1, 7, 1, 1);
+        content_area.attach (sound_info, 1, 8, 1, 1);
+        content_area.attach (dark_style_label, 0, 9, 1, 1);
+        content_area.attach (dark_style_switch, 1, 9, 1, 1);
+        content_area.attach (prefer_dark_info, 1, 10, 1, 1);
+        content_area.attach (layout_label, 0, 11, 1, 1);
+        content_area.attach (controls_label, 0, 12, 1, 1);
+        content_area.attach (controls_combobox, 1, 12, 1, 1);
+        content_area.attach (controls_info, 1, 13, 1, 1);
+        content_area.attach (gnome_menu_label, 0, 14, 1, 1);
+        content_area.attach (gnome_menu, 1, 14, 1, 1);
+        content_area.attach (gnome_menu_info, 1, 15, 1, 1);
 
         show_all ();
 
         interface_settings.bind ("gtk-theme", gtk_combobox, "active_id", SettingsBindFlags.DEFAULT);
         interface_settings.bind ("icon-theme", icon_combobox, "active_id", SettingsBindFlags.DEFAULT);
         interface_settings.bind ("cursor-theme", cursor_combobox, "active_id", SettingsBindFlags.DEFAULT);
+        sound_settings.bind ("theme-name", sound_combobox, "active_id", SettingsBindFlags.DEFAULT);
         dark_style_switch.bind_property ("active", gtk_settings, "prefer-dark-theme", BindingFlags.BIDIRECTIONAL);
 
         controls_combobox.changed.connect (() => {
@@ -132,6 +146,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
                 interface_settings.reset (key);
             }
 
+            sound_settings.reset ("theme-name");
             appearance_settings.reset ("button-layout");
             gnome_wm_settings.reset ("button-layout");
             x_settings.reset ();
