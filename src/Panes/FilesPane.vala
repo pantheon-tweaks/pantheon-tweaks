@@ -26,7 +26,7 @@ public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
     }
 
     construct {
-        if (!(schema_exists (FILES_OLD_SCHEMA) || schema_exists (FILES_NEW_SCHEMA))) {
+        if (!if_show_pane ({ FILES_OLD_SCHEMA, FILES_NEW_SCHEMA })) {
             return;
         }
 
