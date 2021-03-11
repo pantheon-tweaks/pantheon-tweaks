@@ -1,6 +1,6 @@
 /*
  * Copyright (C) Elementary Tweaks Developers, 2014 - 2020
- *               Pantheon Tweaks Developers, 2020
+ *               Pantheon Tweaks Developers, 2020 - 2021
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -68,7 +68,6 @@ public class PantheonTweaks.Categories : Gtk.Paned {
     }
 
     public abstract class Pane : Granite.SimpleSettingsPage {
-        protected delegate void SetValue<T> (T val);
         protected delegate void Reset ();
 
         public PaneListItem pane_list_item { get; private set; }
@@ -92,30 +91,7 @@ public class PantheonTweaks.Categories : Gtk.Paned {
             return (SettingsSchemaSource.get_default ().lookup (schema, true) != null);
         }
 
-        protected void connect_combobox (Gtk.ComboBox box, Gtk.ListStore store, SetValue<string> set_func) {
-            box.changed.connect (() => {
-                Value val;
-                Gtk.TreeIter iter;
-
-                box.get_active_iter (out iter);
-                store.get_value (iter, 1, out val);
-                set_func ((string) val);
-            });
-        }
-
-        protected void connect_font_button (Gtk.FontButton button, SetValue<string> set_func) {
-            button.font_set.connect (() => {
-                set_func (button.font);
-            });
-        }
-
-        protected void connect_spin_button (Gtk.SpinButton button, SetValue<int> set_func) {
-            button.value_changed.connect (() => {
-                set_func (button.get_value_as_int ());
-            });
-        }
-
-        protected void connect_reset_button (Reset reset_func, bool expand = true) {
+        protected void connect_reset_button (Reset reset_func) {
             var reset = new Gtk.LinkButton (_("Reset to default"));
             reset.can_focus = false;
 
@@ -171,17 +147,6 @@ public class PantheonTweaks.Categories : Gtk.Paned {
         protected class Switch : Gtk.Switch {
             construct {
                 halign = Gtk.Align.START;
-            }
-        }
-
-        protected class ComboBox : Gtk.ComboBox {
-            construct {
-                set_size_request (180, 0);
-                halign = Gtk.Align.START;
-
-                var renderer = new Gtk.CellRendererText ();
-                pack_start (renderer, true);
-                add_attribute (renderer, "text", 0);
             }
         }
 
