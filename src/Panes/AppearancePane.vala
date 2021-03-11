@@ -22,8 +22,8 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
     private XSettings x_settings;
     private GLib.Settings appearance_settings;
 
-    private ComboBoxText controls_combobox;
-    private Switch gnome_menu;
+    private Categories.Pane.ComboBoxText controls_combobox;
+    private Categories.Pane.Switch gnome_menu;
 
     public AppearancePane () {
         base (
