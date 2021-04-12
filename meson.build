@@ -1,4 +1,4 @@
-project('pantheon-tweaks', 'vala', 'c', version: '1.0')
+project('pantheon-tweaks', 'vala', 'c', version: '1.0.0')
 
 switchboard_dep = dependency('switchboard-2.0')
 gettext_name = meson.project_name() + '-plug'
@@ -35,7 +35,7 @@ shared_module(
     dependencies: [
         dependency('gee-0.8'),
         dependency('glib-2.0'),
-        dependency('granite'),
+        dependency('granite', version: '>= 5.5.0'),
         dependency('gtk+-3.0'),
         meson.get_compiler('vala').find_library('posix'),
         switchboard_dep

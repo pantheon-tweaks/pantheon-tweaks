@@ -28,7 +28,7 @@ public class PantheonTweaks.Panes.MiscPane : Categories.Pane {
     }
 
     construct {
-        if (!schema_exists (SOUND_SCHEMA)) {
+        if (!if_show_pane ({ SOUND_SCHEMA })) {
             return;
         }
 
