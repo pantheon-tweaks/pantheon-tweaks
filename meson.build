@@ -1,4 +1,4 @@
-project('pantheon-tweaks', 'vala', 'c', version: '1.0')
+project('pantheon-tweaks', 'vala', 'c', version: '1.0.0')
 
 switchboard_dep = dependency('switchboard-2.0')
 gettext_name = meson.project_name() + '-plug'
