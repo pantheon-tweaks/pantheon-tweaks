@@ -26,7 +26,7 @@ public class PantheonTweaks.Panes.AudiencePane : Categories.Pane {
     }
 
     construct {
-        if (!(schema_exists (VIDEOS_OLD_SCHEMA) || schema_exists (VIDEOS_NEW_SCHEMA))) {
+        if (!if_show_pane ({ VIDEOS_OLD_SCHEMA, VIDEOS_NEW_SCHEMA })) {
             return;
         }
 
