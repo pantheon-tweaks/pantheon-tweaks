@@ -87,11 +87,22 @@ public class PantheonTweaks.Categories : Gtk.Paned {
             content_area.margin_start = 60;
         }
 
+        protected bool if_show_pane (string[] schemas) {
+            foreach (var schema in schemas) {
+                if (schema_exists (schema)) {
+                    return true;
+                }
+            }
+
+            pane_list_item.no_show_all = true;
+            return false;
+        }
+
         protected bool schema_exists (string schema) {
             return (SettingsSchemaSource.get_default ().lookup (schema, true) != null);
         }
 
-        protected void connect_reset_button (Reset reset_func) {
+        protected void connect_reset_button (owned Reset reset_func) {
             var reset = new Gtk.LinkButton (_("Reset to default"));
             reset.can_focus = false;
 
