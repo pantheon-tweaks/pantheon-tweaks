@@ -30,7 +30,7 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
     }
 
     construct {
-        if (!(schema_exists (TERMINAL_OLD_SCHEMA) || schema_exists (TERMINAL_NEW_SCHEMA))) {
+        if (!if_show_pane ({ TERMINAL_OLD_SCHEMA, TERMINAL_NEW_SCHEMA })) {
             return;
         }
 
