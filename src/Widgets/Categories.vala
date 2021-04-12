@@ -126,7 +126,7 @@ public class PantheonTweaks.Categories : Gtk.Paned {
             });
         }
 
-        protected void connect_reset_button (Reset reset_func, bool expand = true) {
+        protected void connect_reset_button (owned Reset reset_func, bool expand = true) {
             var reset = new Gtk.LinkButton (_("Reset to default"));
             reset.can_focus = false;
 
