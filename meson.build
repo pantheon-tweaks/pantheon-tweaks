@@ -35,7 +35,7 @@ shared_module(
     dependencies: [
         dependency('gee-0.8'),
         dependency('glib-2.0'),
-        dependency('granite', version: '>= 5.5.0'),
+        dependency('granite', version: '>= 6.0.0'),
         dependency('gtk+-3.0'),
         meson.get_compiler('vala').find_library('posix'),
         switchboard_dep
