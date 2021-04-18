@@ -1,7 +1,7 @@
 # Pantheon Tweaks
 A system settings panel for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance.
 
-Pantheon Tweaks is currently only supported on elementary OS **Odin**. For users on elementary OS **Juno** or below, please instead use [elementary Tweaks](https://github.com/elementary-tweaks/elementary-tweaks).
+Pantheon Tweaks is currently only supported on elementary OS **Odin**. For users on elementary OS **Hera** or below, please instead use [elementary Tweaks](https://github.com/elementary-tweaks/elementary-tweaks).
 
 ![sample](docs/screenshot.png)
 
@@ -10,16 +10,14 @@ Pantheon Tweaks is currently only supported on elementary OS **Odin**. For users
 If you have never added a PPA on your system before, you might need to run this command first:
 
 ```
-sudo apt install software-properties-common
+sudo apt install -y software-properties-common
 ```
 
 Add the PPA of Pantheon Tweaks and then install it:
 
 ```
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv c42d52715a84c7d0d02fc740c1d89326b1c71ab9
-echo -e "deb http://ppa.launchpad.net/philip.scott/pantheon-tweaks/ubuntu focal main\ndeb-src http://ppa.launchpad.net/philip.scott/pantheon-tweaks/ubuntu focal main" | sudo tee /etc/apt/sources.list.d/pantheon-tweaks.list
-sudo apt update
-sudo apt install pantheon-tweaks
+sudo add-apt-repository -y ppa:philip.scott/pantheon-tweaks
+sudo apt install -y pantheon-tweaks
 ```
 
 Open System Settings and there should be a new Plug named "Tweaks".
@@ -28,7 +26,7 @@ Open System Settings and there should be a new Plug named "Tweaks".
 If you want to install from source code, clone this repository and then run the following commands:
 
 ```
-sudo apt install libswitchboard-2.0-dev elementary-sdk
+sudo apt install elementary-sdk
 meson build --prefix=/usr
 cd build
 ninja
