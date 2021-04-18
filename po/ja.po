@@ -1,13 +1,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# ryonakano <ryonakaknock3@gmail.com>, 2018, 2020.
+# ryonakano <ryonakaknock3@gmail.com>, 2018, 2020-2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-14 22:39+0900\n"
-"PO-Revision-Date: 2020-09-14 22:40+0900\n"
+"POT-Creation-Date: 2021-04-18 10:30+0900\n"
+"PO-Revision-Date: 2021-04-18 10:30+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -90,50 +90,60 @@ msgstr ""
 "ウィンドウのテーマとボタンレイアウトを変更します。テーマを変更すると、視覚的"
 "な不具合が生じる可能性があります。"
 
-#: src/Panes/AppearancePane.vala:42
+#: src/Panes/AppearancePane.vala:43
 msgid "Theme Settings"
 msgstr "テーマの設定"
 
-#: src/Panes/AppearancePane.vala:44
-msgid "GTK+:"
-msgstr "GTK+:"
+#: src/Panes/AppearancePane.vala:45
+msgid "GTK:"
+msgstr "GTK:"
 
 #. / TRANSLATORS: The "%s" represents the path where custom themes are installed
-#: src/Panes/AppearancePane.vala:49
+#: src/Panes/AppearancePane.vala:50
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr "カスタムテーマをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:50 src/Panes/AppearancePane.vala:59
-#: src/Panes/AppearancePane.vala:68
+#: src/Panes/AppearancePane.vala:51 src/Panes/AppearancePane.vala:60
+#: src/Panes/AppearancePane.vala:69 src/Panes/AppearancePane.vala:78
 msgid "theme-name"
 msgstr "テーマ名"
 
-#: src/Panes/AppearancePane.vala:53
+#: src/Panes/AppearancePane.vala:54
 msgid "Icons:"
 msgstr "アイコン:"
 
 #. / TRANSLATORS: The "%s" represents the path where custom icons are installed
-#: src/Panes/AppearancePane.vala:58
+#: src/Panes/AppearancePane.vala:59
 #, c-format
 msgid "To show custom icons here, put them in %s."
 msgstr "カスタムアイコンをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:62
+#: src/Panes/AppearancePane.vala:63
 msgid "Cursor:"
 msgstr "カーソル:"
 
 #. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:67
+#: src/Panes/AppearancePane.vala:68
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr "カスタムカーソルをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:71
+#: src/Panes/AppearancePane.vala:72
+msgid "Sound:"
+msgstr "サウンド:"
+
+#. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
+#: src/Panes/AppearancePane.vala:77
+#, c-format
+msgid "To show custom sounds here, put them in %s."
+msgstr "カスタムサウンドをここに表示させるには、%s 以下に配置してください。"
+
+#: src/Panes/AppearancePane.vala:81
 msgid "Force to use dark stylesheet:"
 msgstr "ダークスタイルシートを強制的に適用:"
 
-#: src/Panes/AppearancePane.vala:73
+#: src/Panes/AppearancePane.vala:84
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
@@ -141,55 +151,55 @@ msgstr ""
 "対応していないアプリに対しても、ダークモードを強制します。アプリケーションの"
 "再起動が必要です。"
 
-#: src/Panes/AppearancePane.vala:75
+#: src/Panes/AppearancePane.vala:86
 msgid "Window Controls"
 msgstr "ウィンドウコントロール"
 
-#: src/Panes/AppearancePane.vala:77
+#: src/Panes/AppearancePane.vala:88
 msgid "Layout:"
 msgstr "レイアウト:"
 
-#: src/Panes/AppearancePane.vala:80
+#: src/Panes/AppearancePane.vala:91
 msgid "Changes button layout of the window."
 msgstr "ウィンドウのボタンレイアウトを変更します。"
 
-#: src/Panes/AppearancePane.vala:82
+#: src/Panes/AppearancePane.vala:93
 msgid "Show GNOME menu:"
 msgstr "GNOME メニューを表示:"
 
-#: src/Panes/AppearancePane.vala:84
+#: src/Panes/AppearancePane.vala:95
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "GNOME アプリで GNOME メニューを表示するかどうかを設定します。"
 
-#: src/Panes/AppearancePane.vala:151
+#: src/Panes/AppearancePane.vala:167
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:152
+#: src/Panes/AppearancePane.vala:168
 msgid "Close Only Right"
 msgstr "閉じるボタンのみを右に表示"
 
-#: src/Panes/AppearancePane.vala:153
+#: src/Panes/AppearancePane.vala:169
 msgid "Close Only Left"
 msgstr "閉じるボタンのみを左に表示"
 
-#: src/Panes/AppearancePane.vala:154
+#: src/Panes/AppearancePane.vala:170
 msgid "Minimize Left"
 msgstr "最小化ボタンを左に追加"
 
-#: src/Panes/AppearancePane.vala:155
+#: src/Panes/AppearancePane.vala:171
 msgid "Minimize Right"
 msgstr "最小化ボタンを右に追加"
 
-#: src/Panes/AppearancePane.vala:156
+#: src/Panes/AppearancePane.vala:172
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:157
+#: src/Panes/AppearancePane.vala:173
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:158
+#: src/Panes/AppearancePane.vala:174
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
@@ -238,26 +248,22 @@ msgid "Files"
 msgstr "ファイル"
 
 #: src/Panes/FilesPane.vala:35
-msgid "Single click:"
-msgstr "シングルクリック:"
-
-#: src/Panes/FilesPane.vala:38
 msgid "Restore tabs:"
 msgstr "タブを復元:"
 
-#: src/Panes/FilesPane.vala:42
+#: src/Panes/FilesPane.vala:39
 msgid "Locale"
 msgstr "ロケール"
 
-#: src/Panes/FilesPane.vala:43
+#: src/Panes/FilesPane.vala:40
 msgid "ISO"
 msgstr "ISO"
 
-#: src/Panes/FilesPane.vala:44
+#: src/Panes/FilesPane.vala:41
 msgid "Informal"
 msgstr "略式"
 
-#: src/Panes/FilesPane.vala:46
+#: src/Panes/FilesPane.vala:43
 msgid "Date format:"
 msgstr "日付の書式:"
 
@@ -317,6 +323,6 @@ msgstr "一般"
 msgid "Applications"
 msgstr "アプリケーション"
 
-#: src/Widgets/Categories.vala:119
+#: src/Widgets/Categories.vala:106
 msgid "Reset to default"
 msgstr "デフォルトにリセット"
