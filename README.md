@@ -26,7 +26,7 @@ Open System Settings and there should be a new Plug named "Tweaks".
 If you want to install from source code, clone this repository and then run the following commands:
 
 ```
-sudo apt install elementary-sdk
+sudo apt install -y elementary-sdk
 meson build --prefix=/usr
 cd build
 ninja
