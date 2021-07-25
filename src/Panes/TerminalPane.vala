@@ -34,7 +34,9 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
             return;
         }
 
-        settings = new GLib.Settings ((schema_exists (TERMINAL_NEW_SCHEMA)) ? TERMINAL_NEW_SCHEMA : TERMINAL_OLD_SCHEMA);
+        settings = new GLib.Settings (
+            (schema_exists (TERMINAL_NEW_SCHEMA)) ? TERMINAL_NEW_SCHEMA : TERMINAL_OLD_SCHEMA
+        );
 
         var background_color_label = new SummaryLabel (_("Background color:"));
         background_color_button = new Gtk.ColorButton () {
@@ -44,7 +46,9 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
 
         var follow_last_tab_label = new SummaryLabel (_("Follow last tab:"));
         var follow_last_tab_switch = new Switch ();
-        var follow_last_tab_info = new DimLabel (_("Creating a new tab sets the working directory of the last opened tab."));
+        var follow_last_tab_info = new DimLabel (
+            _("Creating a new tab sets the working directory of the last opened tab.")
+        );
 
         var unsafe_paste_alert_label = new SummaryLabel (_("Unsafe paste alert:"));
         var unsafe_paste_alert_switch = new Switch ();
@@ -56,7 +60,9 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
 
         var term_bell_label = new SummaryLabel (_("Terminal bell:"));
         var term_bell_switch = new Switch ();
-        var term_bell_info = new DimLabel (_("Sound when hitting the end of a line and also for tab-completion when there are either no or multiple possible completions."));
+        var term_bell_info = new DimLabel (
+            _("Sound when hitting the end of a line and also for tab-completion when there are either no or multiple possible completions.") // vala-lint=line-length
+        );
 
         content_area.attach (background_color_label, 0, 0, 1, 1);
         content_area.attach (background_color_button, 1, 0, 1, 1);
