@@ -165,10 +165,12 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         if (preset_button_layouts == null) {
             preset_button_layouts = new Gee.HashMap<string, string> ();
             preset_button_layouts["close:maximize"] = _("elementary");
+            preset_button_layouts["maximize:close"] = _("elementary Reversed");
             preset_button_layouts[":close"] = _("Close Only Right");
             preset_button_layouts["close:"] = _("Close Only Left");
-            preset_button_layouts["close,minimize:maximize"] = _("Minimize Left");
-            preset_button_layouts["close:minimize,maximize"] = _("Minimize Right");
+            preset_button_layouts["close,minimize:maximize"] = _("Add Minimize Left");
+            preset_button_layouts["close:minimize,maximize"] = _("Add Minimize Right");
+            preset_button_layouts["close:minimize"] = _("Replace Maximize to Minimize");
             preset_button_layouts[":minimize,maximize,close"] = _("Windows");
             preset_button_layouts["close,minimize,maximize"] = _("macOS");
             preset_button_layouts["close,maximize,minimize"] = _("Ubuntu");
