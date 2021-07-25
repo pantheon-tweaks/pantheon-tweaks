@@ -42,7 +42,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
         var theme_label = new Granite.HeaderLabel (_("Theme Settings"));
 
-        var gtk_label = new SummaryLabel (_("GTK+:"));
+        var gtk_label = new SummaryLabel (_("GTK:"));
         var gtk_map = ThemeSettings.get_themes_map ("themes", "gtk-3.0");
         var gtk_combobox = new ComboBoxText (gtk_map);
 
