@@ -343,7 +343,7 @@ msgstr "Écran %d"
 
 #: ../src/Grids/PlankGrid.vala:115
 msgid "Monitor:"
-msgstr "Écran :"
+msgstr "Écran :"
 
 #: ../src/Grids/PlankGrid.vala:116
 msgid "The monitor that Plank is displayed on"
@@ -415,7 +415,7 @@ msgstr "Personnalisé"
 
 #: ../src/Grids/TerminalGrid.vala:150
 msgid "Opacity:"
-msgstr "Opacité :"
+msgstr "Opacité :"
 
 #: ../src/Grids/TerminalGrid.vala:151
 msgid "How transparent the background of the terminal is"
