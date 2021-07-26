@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-26 09:19+0900\n"
-"PO-Revision-Date: 2021-04-18 10:30+0900\n"
+"PO-Revision-Date: 2021-07-26 09:20+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -176,9 +176,8 @@ msgid "elementary"
 msgstr "elementary"
 
 #: src/Panes/AppearancePane.vala:170
-#, fuzzy
 msgid "elementary Reversed"
-msgstr "elementary"
+msgstr "elementary Reversed"
 
 #: src/Panes/AppearancePane.vala:171
 msgid "Close Only Right"
@@ -189,18 +188,16 @@ msgid "Close Only Left"
 msgstr "閉じるボタンのみを左に表示"
 
 #: src/Panes/AppearancePane.vala:173
-#, fuzzy
 msgid "Add Minimize Left"
 msgstr "最小化ボタンを左に追加"
 
 #: src/Panes/AppearancePane.vala:174
-#, fuzzy
 msgid "Add Minimize Right"
 msgstr "最小化ボタンを右に追加"
 
 #: src/Panes/AppearancePane.vala:175
 msgid "Replace Maximize to Minimize"
-msgstr ""
+msgstr "最大化ボタンを最小化ボタンに置き換え"
 
 #: src/Panes/AppearancePane.vala:176
 msgid "Windows"
