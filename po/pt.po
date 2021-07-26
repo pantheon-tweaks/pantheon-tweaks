@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-14 22:43+0900\n"
+"POT-Creation-Date: 2021-07-26 09:19+0900\n"
 "PO-Revision-Date: 2020-11-22 17:42+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
@@ -94,52 +94,60 @@ msgstr ""
 "Alterar o tema e a disposição dos botões das janelas. Alterar o tema pode "
 "causar problemas de visibilidade."
 
-#: src/Panes/AppearancePane.vala:42
+#: src/Panes/AppearancePane.vala:43
 msgid "Theme Settings"
 msgstr "Definições de tema"
 
-#: src/Panes/AppearancePane.vala:44
-#| msgid "GTK+ Theme:"
-msgid "GTK+:"
-msgstr "GTK+:"
+#: src/Panes/AppearancePane.vala:45
+msgid "GTK:"
+msgstr ""
 
 #. / TRANSLATORS: The "%s" represents the path where custom themes are installed
-#: src/Panes/AppearancePane.vala:49
+#: src/Panes/AppearancePane.vala:50
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr "Para mostrar temas personalizados aqui, coloque-os em %s."
 
-#: src/Panes/AppearancePane.vala:50 src/Panes/AppearancePane.vala:59
-#: src/Panes/AppearancePane.vala:68
+#: src/Panes/AppearancePane.vala:51 src/Panes/AppearancePane.vala:60
+#: src/Panes/AppearancePane.vala:69 src/Panes/AppearancePane.vala:78
 msgid "theme-name"
 msgstr "nome-tema"
 
-#: src/Panes/AppearancePane.vala:53
+#: src/Panes/AppearancePane.vala:54
 msgid "Icons:"
 msgstr "Ícones:"
 
 #. / TRANSLATORS: The "%s" represents the path where custom icons are installed
-#: src/Panes/AppearancePane.vala:58
+#: src/Panes/AppearancePane.vala:59
 #, c-format
 msgid "To show custom icons here, put them in %s."
 msgstr "Para mostrar ícones personalizados aqui, coloque-os em %s."
 
-#: src/Panes/AppearancePane.vala:62
-#| msgid "Cursor Theme:"
+#: src/Panes/AppearancePane.vala:63
 msgid "Cursor:"
 msgstr "Cursor:"
 
 #. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:67
+#: src/Panes/AppearancePane.vala:68
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr "Para mostrar cursores personalizados aqui, coloque-os em% s."
 
-#: src/Panes/AppearancePane.vala:71
+#: src/Panes/AppearancePane.vala:72
+msgid "Sound:"
+msgstr ""
+
+#. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
+#: src/Panes/AppearancePane.vala:77
+#, fuzzy, c-format
+msgid "To show custom sounds here, put them in %s."
+msgstr "Para mostrar ícones personalizados aqui, coloque-os em %s."
+
+#: src/Panes/AppearancePane.vala:81
 msgid "Force to use dark stylesheet:"
 msgstr "Forçar o uso de folha de estilo escura:"
 
-#: src/Panes/AppearancePane.vala:73
+#: src/Panes/AppearancePane.vala:85
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
@@ -147,55 +155,66 @@ msgstr ""
 "Força o estilo escuro em todos as aplicações, mesmo se não for compatível. "
 "Requer reiniciar a aplicação."
 
-#: src/Panes/AppearancePane.vala:75
+#: src/Panes/AppearancePane.vala:88
 msgid "Window Controls"
 msgstr "Controlos da janela"
 
-#: src/Panes/AppearancePane.vala:77
+#: src/Panes/AppearancePane.vala:90
 msgid "Layout:"
 msgstr "Disposição:"
 
-#: src/Panes/AppearancePane.vala:80
+#: src/Panes/AppearancePane.vala:93
 msgid "Changes button layout of the window."
 msgstr "Altera a disposição dos botões da janela."
 
-#: src/Panes/AppearancePane.vala:82
+#: src/Panes/AppearancePane.vala:95
 msgid "Show GNOME menu:"
 msgstr "Mostrar o menu GNOME:"
 
-#: src/Panes/AppearancePane.vala:84
+#: src/Panes/AppearancePane.vala:97
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "Se deve mostrar o menu GNOME em aplicações GNOME."
 
-#: src/Panes/AppearancePane.vala:151
+#: src/Panes/AppearancePane.vala:169
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:152
+#: src/Panes/AppearancePane.vala:170
+#, fuzzy
+msgid "elementary Reversed"
+msgstr "elementary"
+
+#: src/Panes/AppearancePane.vala:171
 msgid "Close Only Right"
 msgstr "Fechar apenas à direita"
 
-#: src/Panes/AppearancePane.vala:153
+#: src/Panes/AppearancePane.vala:172
 msgid "Close Only Left"
 msgstr "Fechar apenas à esquerda"
 
-#: src/Panes/AppearancePane.vala:154
-msgid "Minimize Left"
+#: src/Panes/AppearancePane.vala:173
+#, fuzzy
+msgid "Add Minimize Left"
 msgstr "Minimizar à esquerda"
 
-#: src/Panes/AppearancePane.vala:155
-msgid "Minimize Right"
+#: src/Panes/AppearancePane.vala:174
+#, fuzzy
+msgid "Add Minimize Right"
 msgstr "Minimizar à direita"
 
-#: src/Panes/AppearancePane.vala:156
+#: src/Panes/AppearancePane.vala:175
+msgid "Replace Maximize to Minimize"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:176
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:157
+#: src/Panes/AppearancePane.vala:177
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:158
+#: src/Panes/AppearancePane.vala:178
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
@@ -244,26 +263,22 @@ msgid "Files"
 msgstr "Ficheiros"
 
 #: src/Panes/FilesPane.vala:35
-msgid "Single click:"
-msgstr "Clique único:"
-
-#: src/Panes/FilesPane.vala:38
 msgid "Restore tabs:"
 msgstr "Restaurar separadores:"
 
-#: src/Panes/FilesPane.vala:42
+#: src/Panes/FilesPane.vala:39
 msgid "Locale"
 msgstr "Local"
 
-#: src/Panes/FilesPane.vala:43
+#: src/Panes/FilesPane.vala:40
 msgid "ISO"
 msgstr "ISO"
 
-#: src/Panes/FilesPane.vala:44
+#: src/Panes/FilesPane.vala:41
 msgid "Informal"
 msgstr "Informal"
 
-#: src/Panes/FilesPane.vala:46
+#: src/Panes/FilesPane.vala:43
 msgid "Date format:"
 msgstr "Formato de data:"
 
@@ -271,42 +286,42 @@ msgstr "Formato de data:"
 msgid "Terminal"
 msgstr "Terminal"
 
-#: src/Panes/TerminalPane.vala:39
+#: src/Panes/TerminalPane.vala:41
 msgid "Background color:"
 msgstr "Cor de fundo:"
 
-#: src/Panes/TerminalPane.vala:45
+#: src/Panes/TerminalPane.vala:47
 msgid "Follow last tab:"
 msgstr "Seguir o último separador:"
 
-#: src/Panes/TerminalPane.vala:47
+#: src/Panes/TerminalPane.vala:50
 msgid "Creating a new tab sets the working directory of the last opened tab."
 msgstr ""
 "A criação de um novo separador define o diretório de trabalho do último "
 "separador aberto."
 
-#: src/Panes/TerminalPane.vala:49
+#: src/Panes/TerminalPane.vala:53
 msgid "Unsafe paste alert:"
 msgstr "Alerta de colar inseguro:"
 
-#: src/Panes/TerminalPane.vala:51
+#: src/Panes/TerminalPane.vala:55
 msgid "Show a warning dialog when a pasted command contains 'sudo'."
 msgstr ""
 "Mostra uma caixa de diálogo de aviso quando um comando colado contém 'sudo'."
 
-#: src/Panes/TerminalPane.vala:53
+#: src/Panes/TerminalPane.vala:57
 msgid "Remember tabs:"
 msgstr "Lembrar separadores:"
 
-#: src/Panes/TerminalPane.vala:55
+#: src/Panes/TerminalPane.vala:59
 msgid "If enabled, last opened tabs are restored on start."
 msgstr "Se ativado, os últimos separadores abertos são restaurados no início."
 
-#: src/Panes/TerminalPane.vala:57
+#: src/Panes/TerminalPane.vala:61
 msgid "Terminal bell:"
 msgstr "Sino do terminal:"
 
-#: src/Panes/TerminalPane.vala:59
+#: src/Panes/TerminalPane.vala:64
 msgid ""
 "Sound when hitting the end of a line and also for tab-completion when there "
 "are either no or multiple possible completions."
@@ -322,9 +337,16 @@ msgstr "Geral"
 msgid "Applications"
 msgstr "Aplicações"
 
-#: src/Widgets/Categories.vala:119
+#: src/Widgets/Categories.vala:106
 msgid "Reset to default"
 msgstr "Repor predefinição"
+
+#~| msgid "GTK+ Theme:"
+#~ msgid "GTK+:"
+#~ msgstr "GTK+:"
+
+#~ msgid "Single click:"
+#~ msgstr "Clique único:"
 
 #~ msgid "Shadows"
 #~ msgstr "Sombras"

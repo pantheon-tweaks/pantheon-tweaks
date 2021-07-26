@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-16 11:37+0300\n"
+"POT-Creation-Date: 2021-07-26 09:19+0900\n"
 "PO-Revision-Date: 2018-10-14 23:20-0300\n"
 "Last-Translator: Helder Bertoldo <helder.bertoldo@gmail.com>\n"
 "Language-Team: Portuguese Brazilian <LL@li.org>\n"
@@ -17,330 +17,441 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: ../src/Tweaks.vala:32
+#: src/Tweaks.vala:29
 msgid "Tweaks"
 msgstr "Ajustes"
 
-#: ../src/Tweaks.vala:33
+#: src/Tweaks.vala:30
 msgid "Tweak elementary OS settings"
 msgstr "Ajuste as configurações do elementary OS"
 
-#: ../src/Settings/GalaSettings.vala:85 ../src/Settings/GalaSettings.vala:106
-msgid "elementary"
-msgstr "elementary"
-
-#: ../src/Settings/GalaSettings.vala:86 ../src/Settings/GalaSettings.vala:107
-msgid "Close Only Right"
-msgstr "Botão Fechar na Direita"
-
-#: ../src/Settings/GalaSettings.vala:87 ../src/Settings/GalaSettings.vala:108
-msgid "Close Only Left"
-msgstr "Botão Fechar na Esquerda"
-
-#: ../src/Settings/GalaSettings.vala:88 ../src/Settings/GalaSettings.vala:109
-msgid "Minimize Left"
-msgstr "Botão Minimizar na Esquerda"
-
-#: ../src/Settings/GalaSettings.vala:89 ../src/Settings/GalaSettings.vala:110
-msgid "Minimize Right"
-msgstr "Botão Minimizar na Direita"
-
-#: ../src/Settings/GalaSettings.vala:90 ../src/Settings/GalaSettings.vala:111
-msgid "Windows"
-msgstr "Windows"
-
-#: ../src/Settings/GalaSettings.vala:91 ../src/Settings/GalaSettings.vala:112
-msgid "OS X"
-msgstr "OS X"
-
-#: ../src/Settings/GalaSettings.vala:92
-msgid "Custom"
-msgstr "Personalizado"
-
-#: ../src/Settings/FilesSettings.vala:48
-msgid "Locale"
-msgstr "Localidade"
-
-#: ../src/Settings/FilesSettings.vala:49
-msgid "ISO"
-msgstr "ISO"
-
-#: ../src/Settings/FilesSettings.vala:50
-msgid "Informal"
-msgstr "Informal"
-
-#: ../src/Widgets/Categories.vala:77
-msgid "General"
-msgstr "Geral"
-
-#: ../src/Widgets/Categories.vala:79
-msgid "Applications"
-msgstr "Aplicações"
-
-#: ../src/Widgets/Categories.vala:163
-msgid "Reset to default"
-msgstr "Restaurar ao padrão"
-
-#: ../src/Objects/ShortcutObject.vala:58
-msgid "Disabled"
-msgstr "Desabilitar"
-
-#: ../src/Panes/MiscPane.vala:25
-msgid "Miscellaneous"
-msgstr "Diversos"
-
-#: ../src/Panes/MiscPane.vala:37
-msgid "Sound Indicator"
-msgstr "Indicador de Som"
-
-#: ../src/Panes/MiscPane.vala:39
-msgid "Max volume"
-msgstr "Volume máximo"
-
-#: ../src/Panes/AnimationsPane.vala:35
-msgid "Animations"
-msgstr "Animações"
-
-#: ../src/Panes/AnimationsPane.vala:48
-msgid "Enable animations"
-msgstr "Habilitar animações"
-
-#: ../src/Panes/AnimationsPane.vala:51
-msgid "Duration"
-msgstr "Duração"
-
-#: ../src/Panes/AnimationsPane.vala:53
-msgid "Open"
-msgstr "Abrir"
-
-#: ../src/Panes/AnimationsPane.vala:54
-msgid "Close"
-msgstr "Fechar"
-
-#: ../src/Panes/AnimationsPane.vala:55
-msgid "Snap"
-msgstr "Encaixar"
-
-#: ../src/Panes/AnimationsPane.vala:56
-msgid "Minimize"
-msgstr "Minimizar"
-
-#: ../src/Panes/AnimationsPane.vala:57
-msgid "Workspace switch"
-msgstr "Alternar o Espaço de Trabalho"
-
-#: ../src/Panes/SlingshotPane.vala:31
-msgid "Launcher"
-msgstr "Lançador"
-
-#: ../src/Panes/SlingshotPane.vala:44
-msgid "Rows"
-msgstr "Linhas"
-
-#: ../src/Panes/SlingshotPane.vala:45
-msgid "Columns"
-msgstr "Colunas"
-
-#: ../src/Panes/SlingshotPane.vala:47
-msgid "Show category switch"
-msgstr "Exibir alternador de categoria"
-
-#: ../src/Panes/SlingshotPane.vala:48
-msgid "Show category view by default"
-msgstr "Exibir modo Visualizar por Categoria por padrão"
-
-#: ../src/Panes/FontsPane.vala:27
-msgid "Fonts"
-msgstr "Fontes"
-
-#: ../src/Panes/FontsPane.vala:37
-msgid "Font Settings"
-msgstr "Configurações de Fonte"
-
-#: ../src/Panes/FontsPane.vala:45
-msgid "Default font"
-msgstr "Fonte padrão"
-
-#: ../src/Panes/FontsPane.vala:46
-msgid "Document font"
-msgstr "Fonte do documento"
-
-#: ../src/Panes/FontsPane.vala:47
-msgid "Monospace font"
-msgstr "Fonte monoespaçada"
-
-#: ../src/Panes/FontsPane.vala:48
-msgid "Titlebar font"
-msgstr "Fonte da barra de título"
-
-#: ../src/Panes/PlankPane.vala:37
-msgid "Dock"
-msgstr "Doca"
-
-#: ../src/Panes/PlankPane.vala:50
-msgid "Behavior"
-msgstr "Comportamento"
-
-#: ../src/Panes/PlankPane.vala:51
-msgid "Lock items"
-msgstr "Bloquear itens"
-
-#: ../src/Panes/PlankPane.vala:52
-msgid "Show Unpinned"
-msgstr "Exibir Não-Fixados"
-
-#: ../src/Panes/PlankPane.vala:53
-msgid "Restrict to Workspace"
-msgstr "Restringir ao Espaço de Trabalho"
-
-#: ../src/Panes/PlankPane.vala:54
-msgid "Hide mode"
-msgstr "Modo Ocultar"
-
-#: ../src/Panes/PlankPane.vala:55
-msgid "Hide delay"
-msgstr "Atraso ao Ocultar"
-
-#: ../src/Panes/PlankPane.vala:58 ../src/Panes/AppearancePane.vala:36
-msgid "Appearance"
-msgstr "Aparência"
-
-#: ../src/Panes/PlankPane.vala:59
-msgid "Theme"
-msgstr "Tema"
-
-#: ../src/Panes/PlankPane.vala:60
-msgid "Icon size"
-msgstr "Tamanho do ícone"
-
-#: ../src/Panes/PlankPane.vala:61
-msgid "Monitor"
-msgstr "Monitor"
-
-#: ../src/Panes/PlankPane.vala:62
-msgid "Screen position"
-msgstr "Posição da Tela"
-
-#: ../src/Panes/PlankPane.vala:63
-msgid "Alignment"
-msgstr "Alinhamento"
-
-#: ../src/Panes/PlankPane.vala:64
-msgid "Item alignment"
-msgstr "Alinhamento do ítem"
-
-#: ../src/Panes/PlankPane.vala:65
-msgid "Offset"
-msgstr "Deslocamento"
-
-#: ../src/Panes/AppearancePane.vala:47
-msgid "Theme Settings"
-msgstr "Configurações de Tema"
-
-#: ../src/Panes/AppearancePane.vala:50
-msgid "GTK+"
-msgstr "GTK+"
-
-#: ../src/Panes/AppearancePane.vala:52
-msgid "Icons"
-msgstr "Ícones"
-
-#: ../src/Panes/AppearancePane.vala:53
-msgid "Cursor"
-msgstr "Cursor"
-
-#: ../src/Panes/AppearancePane.vala:54
-msgid "Prefer dark variant"
-msgstr "Preferir variante escura"
-
-#: ../src/Panes/AppearancePane.vala:59
-msgid "Window Controls"
-msgstr "Controles da Janela"
-
-#: ../src/Panes/AppearancePane.vala:62
-msgid "Layout"
-msgstr "Layout"
-
-#: ../src/Panes/AppearancePane.vala:63
-msgid "Show GNOME menu"
-msgstr "Exibir menu Gnome"
-
-#: ../src/Panes/CerberePane.vala:24
-msgid "Cerbere"
-msgstr "Cerbere"
-
-#: ../src/Panes/CerberePane.vala:69 ../src/Panes/CerberePane.vala:315
-msgid "Custom command"
-msgstr "Comando Personalizado"
-
-#: ../src/Panes/CerberePane.vala:131
-msgid "Keep these applications open:"
-msgstr "Manter estas aplicações abertas:"
-
-#: ../src/Panes/CerberePane.vala:142
-msgid "Add watched app…"
-msgstr "Adicionar aplicação observada…"
-
-#: ../src/Panes/CerberePane.vala:146
-msgid "Remove selected app"
-msgstr "Remover a aplicação selecionada"
-
-#: ../src/Panes/CerberePane.vala:311
-msgid "Search Applications"
-msgstr "Pesquisar Aplicações"
-
-#: ../src/Panes/FilesPane.vala:28
-msgid "Files"
-msgstr "Arquivos"
-
-#: ../src/Panes/FilesPane.vala:43
-msgid "Single click"
-msgstr "Clique Único"
-
-#: ../src/Panes/FilesPane.vala:44
-msgid "Restore Tabs"
-msgstr "Restaurar Abas"
-
-#: ../src/Panes/FilesPane.vala:45
-msgid "Date format"
-msgstr "Formato da data"
-
-#: ../src/Panes/TerminalPane.vala:27
-msgid "Terminal"
-msgstr "Terminal"
-
-#: ../src/Panes/TerminalPane.vala:43
-msgid "Background color"
-msgstr "Cor de fundo"
-
-#: ../src/Panes/TerminalPane.vala:44
-msgid "Natural copy paste"
-msgstr "Copiar e Colar natural"
-
-#: ../src/Panes/TerminalPane.vala:45
-msgid "Follow last tab"
-msgstr "Siga a última aba"
-
-#: ../src/Panes/TerminalPane.vala:46
-msgid "Unsafe paste alert"
-msgstr "Alerta de colagem não-segura"
-
-#: ../src/Panes/TerminalPane.vala:47
-msgid "Remember tabs"
-msgstr "Restaurar abas"
-
-#: ../src/Panes/AudiencePane.vala:26
+#: src/Panes/AudiencePane.vala:25
 msgid "Videos"
 msgstr "Vídeos"
 
-#: ../src/Panes/AudiencePane.vala:38
-msgid "Stay on top while playing"
+#: src/Panes/AudiencePane.vala:35
+#, fuzzy
+msgid "Stay on top while playing:"
 msgstr "Ficar no topo enquanto reproduz"
 
-#: ../src/Panes/AudiencePane.vala:39
-msgid "Move window from video canvas"
+#: src/Panes/AudiencePane.vala:38
+#, fuzzy
+msgid "Move window from video canvas:"
 msgstr "Mover janela da tela de vídeo"
 
-#: ../src/Panes/AudiencePane.vala:40
-msgid "Don't instantly start video playback"
+#: src/Panes/AudiencePane.vala:40
+msgid "If enabled, the window can be dragged by clicking anywhere on it."
+msgstr ""
+
+#: src/Panes/AudiencePane.vala:42
+#, fuzzy
+msgid "Don't instantly start video playback:"
 msgstr "Não inicie instantaneamente a reprodução de vídeo"
+
+#: src/Panes/AudiencePane.vala:44
+msgid "If enabled, opening a video will not auto play it."
+msgstr ""
+
+#: src/Panes/AnimationsPane.vala:25
+msgid "Animations"
+msgstr "Animações"
+
+#: src/Panes/AnimationsPane.vala:26
+msgid "Adjust the animation length used for window management or multitasking."
+msgstr ""
+
+#: src/Panes/AnimationsPane.vala:37
+#, fuzzy
+msgid "Open:"
+msgstr "Abrir"
+
+#: src/Panes/AnimationsPane.vala:41
+#, fuzzy
+msgid "Close:"
+msgstr "Fechar"
+
+#: src/Panes/AnimationsPane.vala:45
+#, fuzzy
+msgid "Snap:"
+msgstr "Encaixar"
+
+#: src/Panes/AnimationsPane.vala:49
+#, fuzzy
+msgid "Minimize:"
+msgstr "Minimizar"
+
+#: src/Panes/AnimationsPane.vala:53
+#, fuzzy
+msgid "Workspace switch:"
+msgstr "Alternar o Espaço de Trabalho"
+
+#: src/Panes/AppearancePane.vala:30
+msgid "Appearance"
+msgstr "Aparência"
+
+#: src/Panes/AppearancePane.vala:31
+msgid ""
+"Change the theme and button layout of windows. Changing theme may cause "
+"visibility issue."
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:43
+msgid "Theme Settings"
+msgstr "Configurações de Tema"
+
+#: src/Panes/AppearancePane.vala:45
+msgid "GTK:"
+msgstr ""
+
+#. / TRANSLATORS: The "%s" represents the path where custom themes are installed
+#: src/Panes/AppearancePane.vala:50
+#, c-format
+msgid "To show custom themes here, put them in %s."
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:51 src/Panes/AppearancePane.vala:60
+#: src/Panes/AppearancePane.vala:69 src/Panes/AppearancePane.vala:78
+msgid "theme-name"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:54
+#, fuzzy
+msgid "Icons:"
+msgstr "Ícones"
+
+#. / TRANSLATORS: The "%s" represents the path where custom icons are installed
+#: src/Panes/AppearancePane.vala:59
+#, c-format
+msgid "To show custom icons here, put them in %s."
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:63
+#, fuzzy
+msgid "Cursor:"
+msgstr "Cursor"
+
+#. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
+#: src/Panes/AppearancePane.vala:68
+#, c-format
+msgid "To show custom cursors here, put them in %s."
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:72
+msgid "Sound:"
+msgstr ""
+
+#. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
+#: src/Panes/AppearancePane.vala:77
+#, c-format
+msgid "To show custom sounds here, put them in %s."
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:81
+msgid "Force to use dark stylesheet:"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:85
+msgid ""
+"Forces dark style on all apps, even if it's not supported. Requires "
+"restarting the application."
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:88
+msgid "Window Controls"
+msgstr "Controles da Janela"
+
+#: src/Panes/AppearancePane.vala:90
+#, fuzzy
+msgid "Layout:"
+msgstr "Layout"
+
+#: src/Panes/AppearancePane.vala:93
+msgid "Changes button layout of the window."
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:95
+#, fuzzy
+msgid "Show GNOME menu:"
+msgstr "Exibir menu Gnome"
+
+#: src/Panes/AppearancePane.vala:97
+msgid "Whether to show GNOME menu in GNOME apps."
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:169
+msgid "elementary"
+msgstr "elementary"
+
+#: src/Panes/AppearancePane.vala:170
+#, fuzzy
+msgid "elementary Reversed"
+msgstr "elementary"
+
+#: src/Panes/AppearancePane.vala:171
+msgid "Close Only Right"
+msgstr "Botão Fechar na Direita"
+
+#: src/Panes/AppearancePane.vala:172
+msgid "Close Only Left"
+msgstr "Botão Fechar na Esquerda"
+
+#: src/Panes/AppearancePane.vala:173
+#, fuzzy
+msgid "Add Minimize Left"
+msgstr "Botão Minimizar na Esquerda"
+
+#: src/Panes/AppearancePane.vala:174
+#, fuzzy
+msgid "Add Minimize Right"
+msgstr "Botão Minimizar na Direita"
+
+#: src/Panes/AppearancePane.vala:175
+msgid "Replace Maximize to Minimize"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:176
+msgid "Windows"
+msgstr "Windows"
+
+#: src/Panes/AppearancePane.vala:177
+msgid "macOS"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:178
+msgid "Ubuntu"
+msgstr ""
+
+#: src/Panes/FontsPane.vala:23
+msgid "Fonts"
+msgstr "Fontes"
+
+#: src/Panes/FontsPane.vala:24
+msgid "Change the fonts used in your system and documents by default."
+msgstr ""
+
+#: src/Panes/FontsPane.vala:32
+#, fuzzy
+msgid "Default Font:"
+msgstr "Fonte padrão"
+
+#: src/Panes/FontsPane.vala:35
+#, fuzzy
+msgid "Document font:"
+msgstr "Fonte do documento"
+
+#: src/Panes/FontsPane.vala:38
+#, fuzzy
+msgid "Monospace font:"
+msgstr "Fonte monoespaçada"
+
+#: src/Panes/FontsPane.vala:41
+#, fuzzy
+msgid "Titlebar font:"
+msgstr "Fonte da barra de título"
+
+#: src/Panes/MiscPane.vala:25
+msgid "Miscellaneous"
+msgstr "Diversos"
+
+#: src/Panes/MiscPane.vala:26
+msgid "Configure some other hidden settings."
+msgstr ""
+
+#: src/Panes/MiscPane.vala:37
+msgid "Sound Indicator"
+msgstr "Indicador de Som"
+
+#: src/Panes/MiscPane.vala:39
+#, fuzzy
+msgid "Max volume:"
+msgstr "Volume máximo"
+
+#: src/Panes/FilesPane.vala:25
+msgid "Files"
+msgstr "Arquivos"
+
+#: src/Panes/FilesPane.vala:35
+#, fuzzy
+msgid "Restore tabs:"
+msgstr "Restaurar Abas"
+
+#: src/Panes/FilesPane.vala:39
+msgid "Locale"
+msgstr "Localidade"
+
+#: src/Panes/FilesPane.vala:40
+msgid "ISO"
+msgstr "ISO"
+
+#: src/Panes/FilesPane.vala:41
+msgid "Informal"
+msgstr "Informal"
+
+#: src/Panes/FilesPane.vala:43
+#, fuzzy
+msgid "Date format:"
+msgstr "Formato da data"
+
+#: src/Panes/TerminalPane.vala:29
+msgid "Terminal"
+msgstr "Terminal"
+
+#: src/Panes/TerminalPane.vala:41
+#, fuzzy
+msgid "Background color:"
+msgstr "Cor de fundo"
+
+#: src/Panes/TerminalPane.vala:47
+#, fuzzy
+msgid "Follow last tab:"
+msgstr "Siga a última aba"
+
+#: src/Panes/TerminalPane.vala:50
+msgid "Creating a new tab sets the working directory of the last opened tab."
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:53
+#, fuzzy
+msgid "Unsafe paste alert:"
+msgstr "Alerta de colagem não-segura"
+
+#: src/Panes/TerminalPane.vala:55
+msgid "Show a warning dialog when a pasted command contains 'sudo'."
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:57
+#, fuzzy
+msgid "Remember tabs:"
+msgstr "Restaurar abas"
+
+#: src/Panes/TerminalPane.vala:59
+msgid "If enabled, last opened tabs are restored on start."
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:61
+#, fuzzy
+msgid "Terminal bell:"
+msgstr "Terminal"
+
+#: src/Panes/TerminalPane.vala:64
+msgid ""
+"Sound when hitting the end of a line and also for tab-completion when there "
+"are either no or multiple possible completions."
+msgstr ""
+
+#: src/Widgets/Categories.vala:63
+msgid "General"
+msgstr "Geral"
+
+#: src/Widgets/Categories.vala:65
+msgid "Applications"
+msgstr "Aplicações"
+
+#: src/Widgets/Categories.vala:106
+msgid "Reset to default"
+msgstr "Restaurar ao padrão"
+
+#~ msgid "OS X"
+#~ msgstr "OS X"
+
+#~ msgid "Custom"
+#~ msgstr "Personalizado"
+
+#~ msgid "Disabled"
+#~ msgstr "Desabilitar"
+
+#~ msgid "Enable animations"
+#~ msgstr "Habilitar animações"
+
+#~ msgid "Duration"
+#~ msgstr "Duração"
+
+#~ msgid "Launcher"
+#~ msgstr "Lançador"
+
+#~ msgid "Rows"
+#~ msgstr "Linhas"
+
+#~ msgid "Columns"
+#~ msgstr "Colunas"
+
+#~ msgid "Show category switch"
+#~ msgstr "Exibir alternador de categoria"
+
+#~ msgid "Show category view by default"
+#~ msgstr "Exibir modo Visualizar por Categoria por padrão"
+
+#~ msgid "Font Settings"
+#~ msgstr "Configurações de Fonte"
+
+#~ msgid "Dock"
+#~ msgstr "Doca"
+
+#~ msgid "Behavior"
+#~ msgstr "Comportamento"
+
+#~ msgid "Lock items"
+#~ msgstr "Bloquear itens"
+
+#~ msgid "Show Unpinned"
+#~ msgstr "Exibir Não-Fixados"
+
+#~ msgid "Restrict to Workspace"
+#~ msgstr "Restringir ao Espaço de Trabalho"
+
+#~ msgid "Hide mode"
+#~ msgstr "Modo Ocultar"
+
+#~ msgid "Hide delay"
+#~ msgstr "Atraso ao Ocultar"
+
+#~ msgid "Theme"
+#~ msgstr "Tema"
+
+#~ msgid "Icon size"
+#~ msgstr "Tamanho do ícone"
+
+#~ msgid "Monitor"
+#~ msgstr "Monitor"
+
+#~ msgid "Screen position"
+#~ msgstr "Posição da Tela"
+
+#~ msgid "Alignment"
+#~ msgstr "Alinhamento"
+
+#~ msgid "Item alignment"
+#~ msgstr "Alinhamento do ítem"
+
+#~ msgid "Offset"
+#~ msgstr "Deslocamento"
+
+#~ msgid "GTK+"
+#~ msgstr "GTK+"
+
+#~ msgid "Prefer dark variant"
+#~ msgstr "Preferir variante escura"
+
+#~ msgid "Cerbere"
+#~ msgstr "Cerbere"
+
+#~ msgid "Custom command"
+#~ msgstr "Comando Personalizado"
+
+#~ msgid "Keep these applications open:"
+#~ msgstr "Manter estas aplicações abertas:"
+
+#~ msgid "Add watched app…"
+#~ msgstr "Adicionar aplicação observada…"
+
+#~ msgid "Remove selected app"
+#~ msgstr "Remover a aplicação selecionada"
+
+#~ msgid "Search Applications"
+#~ msgstr "Pesquisar Aplicações"
+
+#~ msgid "Single click"
+#~ msgstr "Clique Único"
+
+#~ msgid "Natural copy paste"
+#~ msgstr "Copiar e Colar natural"

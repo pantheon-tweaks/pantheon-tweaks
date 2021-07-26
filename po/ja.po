@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-18 10:30+0900\n"
+"POT-Creation-Date: 2021-07-26 09:19+0900\n"
 "PO-Revision-Date: 2021-04-18 10:30+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -143,7 +143,7 @@ msgstr "カスタムサウンドをここに表示させるには、%s 以下に
 msgid "Force to use dark stylesheet:"
 msgstr "ダークスタイルシートを強制的に適用:"
 
-#: src/Panes/AppearancePane.vala:84
+#: src/Panes/AppearancePane.vala:85
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
@@ -151,55 +151,66 @@ msgstr ""
 "対応していないアプリに対しても、ダークモードを強制します。アプリケーションの"
 "再起動が必要です。"
 
-#: src/Panes/AppearancePane.vala:86
+#: src/Panes/AppearancePane.vala:88
 msgid "Window Controls"
 msgstr "ウィンドウコントロール"
 
-#: src/Panes/AppearancePane.vala:88
+#: src/Panes/AppearancePane.vala:90
 msgid "Layout:"
 msgstr "レイアウト:"
 
-#: src/Panes/AppearancePane.vala:91
+#: src/Panes/AppearancePane.vala:93
 msgid "Changes button layout of the window."
 msgstr "ウィンドウのボタンレイアウトを変更します。"
 
-#: src/Panes/AppearancePane.vala:93
+#: src/Panes/AppearancePane.vala:95
 msgid "Show GNOME menu:"
 msgstr "GNOME メニューを表示:"
 
-#: src/Panes/AppearancePane.vala:95
+#: src/Panes/AppearancePane.vala:97
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "GNOME アプリで GNOME メニューを表示するかどうかを設定します。"
 
-#: src/Panes/AppearancePane.vala:167
+#: src/Panes/AppearancePane.vala:169
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:168
+#: src/Panes/AppearancePane.vala:170
+#, fuzzy
+msgid "elementary Reversed"
+msgstr "elementary"
+
+#: src/Panes/AppearancePane.vala:171
 msgid "Close Only Right"
 msgstr "閉じるボタンのみを右に表示"
 
-#: src/Panes/AppearancePane.vala:169
+#: src/Panes/AppearancePane.vala:172
 msgid "Close Only Left"
 msgstr "閉じるボタンのみを左に表示"
 
-#: src/Panes/AppearancePane.vala:170
-msgid "Minimize Left"
+#: src/Panes/AppearancePane.vala:173
+#, fuzzy
+msgid "Add Minimize Left"
 msgstr "最小化ボタンを左に追加"
 
-#: src/Panes/AppearancePane.vala:171
-msgid "Minimize Right"
+#: src/Panes/AppearancePane.vala:174
+#, fuzzy
+msgid "Add Minimize Right"
 msgstr "最小化ボタンを右に追加"
 
-#: src/Panes/AppearancePane.vala:172
+#: src/Panes/AppearancePane.vala:175
+msgid "Replace Maximize to Minimize"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:176
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:173
+#: src/Panes/AppearancePane.vala:177
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:174
+#: src/Panes/AppearancePane.vala:178
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
@@ -271,43 +282,43 @@ msgstr "日付の書式:"
 msgid "Terminal"
 msgstr "ターミナル"
 
-#: src/Panes/TerminalPane.vala:39
+#: src/Panes/TerminalPane.vala:41
 msgid "Background color:"
 msgstr "背景色:"
 
-#: src/Panes/TerminalPane.vala:45
+#: src/Panes/TerminalPane.vala:47
 msgid "Follow last tab:"
 msgstr "最後のタブに従う:"
 
-#: src/Panes/TerminalPane.vala:47
+#: src/Panes/TerminalPane.vala:50
 msgid "Creating a new tab sets the working directory of the last opened tab."
 msgstr ""
 "新しいタブのカレントディレクトリを、最後に開いたタブのカレントディレクトリに"
 "設定します。"
 
-#: src/Panes/TerminalPane.vala:49
+#: src/Panes/TerminalPane.vala:53
 msgid "Unsafe paste alert:"
 msgstr "安全でないペーストを警告:"
 
-#: src/Panes/TerminalPane.vala:51
+#: src/Panes/TerminalPane.vala:55
 msgid "Show a warning dialog when a pasted command contains 'sudo'."
 msgstr ""
 "貼り付けされたコマンドに 'sudo' というキーワードが含まれている場合に、警告ダ"
 "イアログを表示します。"
 
-#: src/Panes/TerminalPane.vala:53
+#: src/Panes/TerminalPane.vala:57
 msgid "Remember tabs:"
 msgstr "タブを保存:"
 
-#: src/Panes/TerminalPane.vala:55
+#: src/Panes/TerminalPane.vala:59
 msgid "If enabled, last opened tabs are restored on start."
 msgstr "有効にすると、最後に開いたタブが起動時に復元されます。"
 
-#: src/Panes/TerminalPane.vala:57
+#: src/Panes/TerminalPane.vala:61
 msgid "Terminal bell:"
 msgstr "ターミナルの通知音:"
 
-#: src/Panes/TerminalPane.vala:59
+#: src/Panes/TerminalPane.vala:64
 msgid ""
 "Sound when hitting the end of a line and also for tab-completion when there "
 "are either no or multiple possible completions."

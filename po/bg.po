@@ -7,575 +7,674 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-28 07:48-0500\n"
+"POT-Creation-Date: 2021-07-26 09:19+0900\n"
 "PO-Revision-Date: 2014-12-12 15:30+0000\n"
 "Last-Translator: ITPROJECTS <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
+"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2014-12-13 08:17+0000\n"
 "X-Generator: Launchpad (build 17286)\n"
-"Language: bg\n"
 
-#: ../src/Tweaks.vala:38
+#: src/Tweaks.vala:29
 msgid "Tweaks"
 msgstr "Подобрения"
 
-#: ../src/Tweaks.vala:39
+#: src/Tweaks.vala:30
 msgid "Tweak elementary OS settings"
 msgstr "Подобри настройките на Елементаи ОС"
 
-#: ../src/Tweaks.vala:49
-msgid "Appearance"
-msgstr "Външен вид"
+#: src/Panes/AudiencePane.vala:25
+msgid "Videos"
+msgstr ""
 
-#: ../src/Tweaks.vala:49 ../src/Tweaks.vala:52 ../src/Tweaks.vala:56
-#: ../src/Tweaks.vala:60 ../src/Tweaks.vala:66
-msgid "General"
-msgstr "Основни"
+#: src/Panes/AudiencePane.vala:35
+msgid "Stay on top while playing:"
+msgstr ""
 
-#: ../src/Tweaks.vala:52
-msgid "Fonts"
-msgstr "Шрифтове"
+#: src/Panes/AudiencePane.vala:38
+msgid "Move window from video canvas:"
+msgstr ""
 
-#: ../src/Tweaks.vala:56
+#: src/Panes/AudiencePane.vala:40
+msgid "If enabled, the window can be dragged by clicking anywhere on it."
+msgstr ""
+
+#: src/Panes/AudiencePane.vala:42
+msgid "Don't instantly start video playback:"
+msgstr ""
+
+#: src/Panes/AudiencePane.vala:44
+msgid "If enabled, opening a video will not auto play it."
+msgstr ""
+
+#: src/Panes/AnimationsPane.vala:25
 msgid "Animations"
 msgstr "Анимации"
 
-#: ../src/Tweaks.vala:60
-msgid "Shadows"
-msgstr "Сенки"
+#: src/Panes/AnimationsPane.vala:26
+msgid "Adjust the animation length used for window management or multitasking."
+msgstr ""
 
-#: ../src/Tweaks.vala:66
-msgid "Miscellaneous"
-msgstr "Други"
+#: src/Panes/AnimationsPane.vala:37
+msgid "Open:"
+msgstr ""
 
-#: ../src/Tweaks.vala:70
-msgid "Plank"
-msgstr "Планк"
+#: src/Panes/AnimationsPane.vala:41
+#, fuzzy
+msgid "Close:"
+msgstr "Само Затвори"
 
-#: ../src/Tweaks.vala:70 ../src/Tweaks.vala:74 ../src/Tweaks.vala:78
-#: ../src/Tweaks.vala:82 ../src/Tweaks.vala:86
-msgid "Applications"
-msgstr "Приложения"
+#: src/Panes/AnimationsPane.vala:45
+msgid "Snap:"
+msgstr ""
 
-#: ../src/Tweaks.vala:74
-msgid "Files"
-msgstr "Файлове"
+#: src/Panes/AnimationsPane.vala:49
+#, fuzzy
+msgid "Minimize:"
+msgstr "Минимизиране вляво"
 
-#: ../src/Tweaks.vala:78
-msgid "Slingshot"
-msgstr "Слингшот"
-
-#: ../src/Tweaks.vala:82
-msgid "Cerbere"
-msgstr "Цербер"
-
-#: ../src/Tweaks.vala:86
-msgid "Terminal"
-msgstr "Терминал"
-
-#: ../src/Objects/ShortcutObject.vala:58
-#: ../src/Widgets/AcceleratorInputWidget.vala:87
-#: ../src/Widgets/AcceleratorInputWidget.vala:105
-msgid "Disabled"
-msgstr "Изключен"
-
-#: ../src/Grids/CerbereGrid.vala:42
-msgid "Watched Processes"
-msgstr "Наблюдавани Процеси"
-
-#: ../src/Grids/CerbereGrid.vala:53 ../src/Grids/CerbereGrid.vala:63
-#: ../src/Grids/ShortcutsGrid.vala:95 ../src/Grids/ShortcutsGrid.vala:162
-msgid "Add..."
-msgstr "Добавяне..."
-
-#: ../src/Grids/CerbereGrid.vala:54 ../src/Grids/CerbereGrid.vala:64
-#: ../src/Grids/ShortcutsGrid.vala:96 ../src/Grids/ShortcutsGrid.vala:163
-msgid "Remove"
-msgstr "Премахване"
-
-#: ../src/Grids/CerbereGrid.vala:65 ../src/Grids/ShortcutsGrid.vala:164
-msgid "Revert to Default"
-msgstr "Възстанови началното състояние"
-
-#: ../src/Grids/AnimationsGrid.vala:43
-msgid "Animations:"
-msgstr "Анимации:"
-
-#: ../src/Grids/AnimationsGrid.vala:44
-msgid "If the animations play at all"
-msgstr "Ако въобще анимациите действат"
-
-#: ../src/Grids/AnimationsGrid.vala:60
-msgid "Open Duration:"
-msgstr "Продължителност на отваряне:"
-
-#: ../src/Grids/AnimationsGrid.vala:61
-msgid "Plays when an application is opened"
-msgstr "Изпълнява се когато се отвори приложението"
-
-#: ../src/Grids/AnimationsGrid.vala:72
-msgid "Close Duration:"
-msgstr "Продължителност на затваряне:"
-
-#: ../src/Grids/AnimationsGrid.vala:73
-msgid "Plays when an application is closed"
-msgstr "Изпълнява се когато се затвори приложението"
-
-#: ../src/Grids/AnimationsGrid.vala:84
-msgid "Snap Duration:"
-msgstr "Продължителност на преоразмеряване:"
-
-#: ../src/Grids/AnimationsGrid.vala:85
-msgid "Plays when an application is snapped to the side"
-msgstr "Изпълнява се когато приложението е отделено настрана"
-
-#: ../src/Grids/AnimationsGrid.vala:96
-msgid "Minimize Duration:"
-msgstr "Продължителност на минимизиране:"
-
-#: ../src/Grids/AnimationsGrid.vala:97
-msgid "Plays when an application is minimized"
-msgstr "Изпълнява се когато приложението е намалено"
-
-#: ../src/Grids/AnimationsGrid.vala:108
-msgid "Workspace Switch Duration:"
+#: src/Panes/AnimationsPane.vala:53
+#, fuzzy
+msgid "Workspace switch:"
 msgstr "Продължителност на смяна на работен плот:"
 
-#: ../src/Grids/AnimationsGrid.vala:109
-msgid "Plays when a workspace switch is initiated"
-msgstr "Изпълнява се когато работният плот е подменен"
+#: src/Panes/AppearancePane.vala:30
+msgid "Appearance"
+msgstr "Външен вид"
 
-#: ../src/Grids/FilesGrid.vala:32
-msgid "Single Click:"
-msgstr "Отваряне при едно натискане:"
-
-#: ../src/Grids/FilesGrid.vala:33
-msgid "If set off, files will use 'normal' double-click behavior"
+#: src/Panes/AppearancePane.vala:31
+msgid ""
+"Change the theme and button layout of windows. Changing theme may cause "
+"visibility issue."
 msgstr ""
-"Ако е изключено, файловете ще ползват \"обикновенното\" поведение при двойно "
-"щракване"
 
-#: ../src/Grids/FilesGrid.vala:43
-msgid "Locale"
-msgstr "Локал"
+#: src/Panes/AppearancePane.vala:43
+#, fuzzy
+msgid "Theme Settings"
+msgstr "Подобри настройките на Елементаи ОС"
 
-#: ../src/Grids/FilesGrid.vala:44
-msgid "ISO"
-msgstr "ISO"
-
-#: ../src/Grids/FilesGrid.vala:45
-msgid "Informal"
-msgstr "Неформален"
-
-#: ../src/Grids/FilesGrid.vala:48
-msgid "Date Format:"
-msgstr "Формат на дата:"
-
-#: ../src/Grids/FilesGrid.vala:49
-msgid "For date accessed, modified, etc."
-msgstr "За дата ползван, променен ил др."
-
-#: ../src/Grids/FilesGrid.vala:60
-msgid "Smallest"
-msgstr "Най-малък"
-
-#: ../src/Grids/FilesGrid.vala:61
-msgid "Smaller"
-msgstr "По-малък"
-
-#: ../src/Grids/FilesGrid.vala:62
-msgid "Small"
-msgstr "Малък"
-
-#: ../src/Grids/FilesGrid.vala:63
-msgid "Normal"
-msgstr "Нормален"
-
-#: ../src/Grids/FilesGrid.vala:64
-msgid "Large"
-msgstr "Голям"
-
-#: ../src/Grids/FilesGrid.vala:65
-msgid "Larger"
-msgstr "По-голям"
-
-#: ../src/Grids/FilesGrid.vala:66
-msgid "Largest"
-msgstr "Най-голям"
-
-#: ../src/Grids/FilesGrid.vala:69
-msgid "Sidebar Icon Size:"
-msgstr "Размер на иконите в страничното поле:"
-
-#: ../src/Grids/FilesGrid.vala:70
-msgid "Size of the icons in the sidebar"
-msgstr "Размер на иконите н страничната лента"
-
-#: ../src/Grids/FontsGrid.vala:32
-msgid "Default Font:"
-msgstr "Шрифт по подразбиране"
-
-#: ../src/Grids/FontsGrid.vala:33
-msgid "Used by default by most applications"
-msgstr "Ползвано по подразбиране от повечето приложения"
-
-#: ../src/Grids/FontsGrid.vala:43
-msgid "Document Font:"
-msgstr "Шрифт за документи"
-
-#: ../src/Grids/FontsGrid.vala:44
-msgid "Used when displaying documents, if no other font was chosen"
-msgstr "Ползвано когато се показват документи, ако няма друг избран шрифт"
-
-#: ../src/Grids/FontsGrid.vala:54
-msgid "Monospace Font:"
-msgstr "Шрифт с фиксирана ширина на буквите"
-
-#: ../src/Grids/FontsGrid.vala:55
-msgid "Used in the terminal, for code, and sometimes for plain text"
-msgstr "Ползвано в терминала, за код, и понякога за прост текст"
-
-#: ../src/Grids/FontsGrid.vala:65
-msgid "Titlebar Font:"
-msgstr "Шрифт на заглавната лента:"
-
-#: ../src/Grids/FontsGrid.vala:66
-msgid "Used to display window titles"
-msgstr "Ползвано при показването на прозоречни заглавия"
-
-#: ../src/Grids/SlingshotGrid.vala:32
-msgid "Rows:"
-msgstr "Брой редове:"
-
-#: ../src/Grids/SlingshotGrid.vala:33
-msgid "The number of rows displayed in Slingshot"
-msgstr "Броят на редовете показвани в Слингшот"
-
-#: ../src/Grids/SlingshotGrid.vala:44
-msgid "Columns:"
-msgstr "Брой колони:"
-
-#: ../src/Grids/SlingshotGrid.vala:45
-msgid "The number of columns displayed in Slingshot"
-msgstr "Броят на колонките показвани в Слингшот"
-
-#: ../src/Grids/PlankGrid.vala:32
-msgid "Current Workspace Only"
-msgstr "Само Сегашният Плот"
-
-#: ../src/Grids/PlankGrid.vala:33
-msgid "Show only windows on the current workspace"
-msgstr "Покажи само прозорци на сегашния работен плот"
-
-#: ../src/Grids/PlankGrid.vala:34
-msgid "Will still show pinned items on different workspaces"
-msgstr "Все още ще показва заковани елементи на различните работни плотове"
-
-#: ../src/Grids/PlankGrid.vala:43
-msgid "Lock Items:"
-msgstr "Заключени Части:"
-
-#: ../src/Grids/PlankGrid.vala:44
-msgid "Whether to prevent drag'n'drop actions and lock items on the dock"
+#: src/Panes/AppearancePane.vala:45
+msgid "GTK:"
 msgstr ""
-"Дали да се предотвратят придърпващите действия и заключвани елементи в панела"
 
-#: ../src/Grids/PlankGrid.vala:54
-msgid "Icon Size:"
+#. / TRANSLATORS: The "%s" represents the path where custom themes are installed
+#: src/Panes/AppearancePane.vala:50
+#, c-format
+msgid "To show custom themes here, put them in %s."
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:51 src/Panes/AppearancePane.vala:60
+#: src/Panes/AppearancePane.vala:69 src/Panes/AppearancePane.vala:78
+msgid "theme-name"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:54
+#, fuzzy
+msgid "Icons:"
 msgstr "Размер на иконите:"
 
-#: ../src/Grids/PlankGrid.vala:55
-msgid "The size of each icon in the plank"
-msgstr "Размера на всяка икона в панела"
-
-#: ../src/Grids/PlankGrid.vala:66
-msgid "Don't hide"
-msgstr "Да не се скрива"
-
-#: ../src/Grids/PlankGrid.vala:67
-msgid "Intelligent hide"
-msgstr "Интелигентно скриване"
-
-#: ../src/Grids/PlankGrid.vala:68
-msgid "Auto hide"
-msgstr "Автоматично скриване"
-
-#: ../src/Grids/PlankGrid.vala:69
-msgid "Hide on maximize"
-msgstr "Скриване при цял екран"
-
-#: ../src/Grids/PlankGrid.vala:72
-msgid "Hide Mode:"
-msgstr "Режим на скриване:"
-
-#: ../src/Grids/PlankGrid.vala:73
-msgid "Plank's hide mode"
-msgstr "Скрития режим на Планк"
-
-#: ../src/Grids/PlankGrid.vala:84
-msgid "Hide Delay (ms):"
-msgstr "Забавяне при криенето (милисек.):"
-
-#: ../src/Grids/PlankGrid.vala:85
-msgid "Time to wait before unhiding the dock"
-msgstr "Време за чакане преди да се покаже панела"
-
-#: ../src/Grids/PlankGrid.vala:96 ../src/Grids/TerminalGrid.vala:169
-msgid "Theme:"
-msgstr "Тема:"
-
-#: ../src/Grids/PlankGrid.vala:97
-msgid "Plank's theme for the dock"
-msgstr "Темата на Планк за панела"
-
-#: ../src/Grids/PlankGrid.vala:108
-msgid "Primary Monitor"
-msgstr "Главен монитор"
-
-#: ../src/Grids/PlankGrid.vala:111
-msgid "Monitor %d"
-msgstr "Монитор %d"
-
-#: ../src/Grids/PlankGrid.vala:115
-msgid "Monitor:"
-msgstr "Монитор:"
-
-#: ../src/Grids/PlankGrid.vala:116
-msgid "The monitor that Plank is displayed on"
-msgstr "Екрана на който планк да се вижда"
-
-#: ../src/Grids/PlankGrid.vala:127 ../src/Grids/PlankGrid.vala:147
-#: ../src/Grids/PlankGrid.vala:164
-msgid "Left"
-msgstr "Отляво"
-
-#: ../src/Grids/PlankGrid.vala:128 ../src/Grids/PlankGrid.vala:146
-#: ../src/Grids/PlankGrid.vala:163
-msgid "Right"
-msgstr "Отдясно"
-
-#: ../src/Grids/PlankGrid.vala:129
-msgid "Top"
-msgstr "Отгоре"
-
-#: ../src/Grids/PlankGrid.vala:130
-msgid "Bottom"
-msgstr "Отдолу"
-
-#: ../src/Grids/PlankGrid.vala:133
-msgid "Screen Position:"
-msgstr "Екранно Положение:"
-
-#: ../src/Grids/PlankGrid.vala:134
-msgid "Where on the screen Plank is displayed"
-msgstr "Къде на екрана Планк ще се вижда"
-
-#: ../src/Grids/PlankGrid.vala:145
-msgid "Panel"
-msgstr "Панел"
-
-#: ../src/Grids/PlankGrid.vala:148 ../src/Grids/PlankGrid.vala:165
-msgid "Centered"
-msgstr "По средата"
-
-#: ../src/Grids/PlankGrid.vala:151
-msgid "Alignment:"
-msgstr "Подравняване:"
-
-#: ../src/Grids/PlankGrid.vala:152
-msgid "The alignment for the dock on the monitor's edge"
-msgstr "Подравняването на панела до ръба на монитора"
-
-#: ../src/Grids/PlankGrid.vala:168
-msgid "Item Alignment:"
-msgstr "Подредба на елементите:"
-
-#: ../src/Grids/PlankGrid.vala:169
-msgid "The alignment of the items in this dock if panel-mode is used"
+#. / TRANSLATORS: The "%s" represents the path where custom icons are installed
+#: src/Panes/AppearancePane.vala:59
+#, c-format
+msgid "To show custom icons here, put them in %s."
 msgstr ""
-"Подравняването на елементи в този док ако панеления режим е в действие"
 
-#: ../src/Grids/PlankGrid.vala:180
-msgid "Offset:"
-msgstr "Отместване:"
-
-#: ../src/Grids/PlankGrid.vala:181
-msgid "The offset (in percent) from the alignment point to shift Plank"
-msgstr ""
-"Отместването (в стотни/проценти) от подравняващата точка за преместване на "
-"Планк"
-
-#: ../src/Grids/TerminalGrid.vala:83 ../src/Settings/GalaSettings.vala:86
-msgid "Custom"
-msgstr "Персонализиран"
-
-#: ../src/Grids/TerminalGrid.vala:150
-msgid "Opacity:"
-msgstr "Прозрачност"
-
-#: ../src/Grids/TerminalGrid.vala:151
-msgid "How transparent the background of the terminal is"
-msgstr "Колко да е прозрачен фона на терминала"
-
-#: ../src/Grids/TerminalGrid.vala:170
-msgid "A set of settings for terminal palette and background color"
-msgstr "Набор настройки за терминалната палитра и фонов цвят"
-
-#: ../src/Grids/AppearanceGrid.vala:34
-msgid "Prefer Dark Theme:"
-msgstr "Чисто Тъмна Тема:"
-
-#: ../src/Grids/AppearanceGrid.vala:35
-msgid "GTK+ windows will now prefer the dark GTK+ theme"
-msgstr "ГТК+ прозорци отсега ще предпочитат черната ГТК+ тема"
-
-#: ../src/Grids/AppearanceGrid.vala:36
-msgid ""
-"Some applications will not react well with this enabled and can look terrible"
-msgstr ""
-"Някои приложения нама да отвърнат добре с тази настройка в действие и ще "
-"изглеждат ужасно"
-
-#: ../src/Grids/AppearanceGrid.vala:45
-msgid "Metacity Theme:"
-msgstr "Тема за Метасити:"
-
-#: ../src/Grids/AppearanceGrid.vala:46
-msgid "Used to render windows that do not use GTK+"
-msgstr "Ползвано при начертаването на прозорци които не използват ГТК+"
-
-#: ../src/Grids/AppearanceGrid.vala:57
-msgid "GTK+ Theme:"
-msgstr "ГТК+ Тема:"
-
-#: ../src/Grids/AppearanceGrid.vala:58
-msgid "Used to render GTK+ windows like Switchboard"
-msgstr "Ползвано при начертаването на прозорци като Суичбоард"
-
-#: ../src/Grids/AppearanceGrid.vala:69
-msgid "Icon Theme:"
-msgstr "Тема на иконите:"
-
-#: ../src/Grids/AppearanceGrid.vala:70
-msgid "Used to theme the icon set, including application icons"
-msgstr "Ползвано при оцветяването на иконите, включая програмните икони"
-
-#: ../src/Grids/AppearanceGrid.vala:81
-msgid "Cursor Theme:"
+#: src/Panes/AppearancePane.vala:63
+#, fuzzy
+msgid "Cursor:"
 msgstr "Тема на курсора:"
 
-#: ../src/Grids/AppearanceGrid.vala:82
-msgid "Used to theme the cursor"
-msgstr "Ползвано при оцветяването на паказателя"
+#. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
+#: src/Panes/AppearancePane.vala:68
+#, c-format
+msgid "To show custom cursors here, put them in %s."
+msgstr ""
 
-#: ../src/Grids/AppearanceGrid.vala:95
-msgid "Custom Layout:"
-msgstr "Персонализирано разполагане"
+#: src/Panes/AppearancePane.vala:72
+msgid "Sound:"
+msgstr ""
 
-#: ../src/Grids/AppearanceGrid.vala:96
-msgid "Custom window control layout"
-msgstr "Лично прозречно-оформлително управление"
+#. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
+#: src/Panes/AppearancePane.vala:77
+#, c-format
+msgid "To show custom sounds here, put them in %s."
+msgstr ""
 
-#: ../src/Grids/AppearanceGrid.vala:112
-msgid "Window Controls:"
+#: src/Panes/AppearancePane.vala:81
+msgid "Force to use dark stylesheet:"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:85
+msgid ""
+"Forces dark style on all apps, even if it's not supported. Requires "
+"restarting the application."
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:88
+#, fuzzy
+msgid "Window Controls"
 msgstr "Прозоречно Управление:"
 
-#: ../src/Grids/AppearanceGrid.vala:113
-msgid ""
-"Controls located at the top of the window for close, minimize, and maximize"
+#: src/Panes/AppearancePane.vala:90
+#, fuzzy
+msgid "Layout:"
+msgstr "Персонализирано разполагане"
+
+#: src/Panes/AppearancePane.vala:93
+msgid "Changes button layout of the window."
 msgstr ""
-"Управни копчета, намиращи се най-отгоре на прозореца за затваряне, намаляне "
-"или увеличаване"
 
-#: ../src/Grids/AppearanceGrid.vala:114
-msgid "May break window controls! May stop working with updates to system!"
+#: src/Panes/AppearancePane.vala:95
+msgid "Show GNOME menu:"
 msgstr ""
-"Може да съсипе управните копчета! Може да спре да работи пи обновление на "
-"системата!"
 
-#: ../src/Grids/MiscGrid.vala:32
-msgid "Audible Bell:"
-msgstr "Чуваем Звън:"
+#: src/Panes/AppearancePane.vala:97
+msgid "Whether to show GNOME menu in GNOME apps."
+msgstr ""
 
-#: ../src/Grids/MiscGrid.vala:33
-msgid "Sound that plays when an error has been made"
-msgstr "Звук, който се чува при грешка"
-
-#: ../src/Grids/ShadowsGrid.vala:32
-msgid "Focused Windows:"
-msgstr "Съсредоточен Прозорец:"
-
-#: ../src/Grids/ShadowsGrid.vala:33
-msgid "Shadow beneath windows that you have currently selected"
-msgstr "Сянката под текущо избраният прозорец"
-
-#: ../src/Grids/ShadowsGrid.vala:34 ../src/Grids/ShadowsGrid.vala:49
-msgid "This may not actually do anything"
-msgstr "Това може и нищо да не направи"
-
-#: ../src/Grids/ShadowsGrid.vala:47
-msgid "Unfocused Windows:"
-msgstr "Несъсредоточен Прозорец:"
-
-#: ../src/Grids/ShadowsGrid.vala:48
-msgid "Shadow beneath windows that you do not have selected"
-msgstr "Сянката под прозорец, който не е избран"
-
-#: ../src/Grids/ShortcutsGrid.vala:72
-msgid "Name"
-msgstr "Име"
-
-#: ../src/Grids/ShortcutsGrid.vala:73
-msgid "Shortcut"
-msgstr "Бърз клавиш"
-
-#: ../src/Grids/ShortcutsGrid.vala:74
-msgid "Command"
-msgstr "Команда"
-
-#: ../src/Grids/ShortcutsGrid.vala:121
-msgid "Every field must be filled!"
-msgstr "Всички полета трябва да са попълнени!"
-
-#: ../src/Grids/ShortcutsGrid.vala:130
-msgid "Name:"
-msgstr "Име:"
-
-#: ../src/Grids/ShortcutsGrid.vala:133
-msgid "Shortcut:"
-msgstr "Бърз клавиш:"
-
-#: ../src/Grids/ShortcutsGrid.vala:136
-msgid "Command:"
-msgstr "Команда:"
-
-#: ../src/Settings/GalaSettings.vala:80
+#: src/Panes/AppearancePane.vala:169
 msgid "elementary"
 msgstr "елементарно"
 
-#: ../src/Settings/GalaSettings.vala:81
-msgid "Close Only"
+#: src/Panes/AppearancePane.vala:170
+#, fuzzy
+msgid "elementary Reversed"
+msgstr "елементарно"
+
+#: src/Panes/AppearancePane.vala:171
+#, fuzzy
+msgid "Close Only Right"
 msgstr "Само Затвори"
 
-#: ../src/Settings/GalaSettings.vala:82
-msgid "Minimize Left"
+#: src/Panes/AppearancePane.vala:172
+#, fuzzy
+msgid "Close Only Left"
+msgstr "Само Затвори"
+
+#: src/Panes/AppearancePane.vala:173
+#, fuzzy
+msgid "Add Minimize Left"
 msgstr "Минимизиране вляво"
 
-#: ../src/Settings/GalaSettings.vala:83
-msgid "Minimize Right"
+#: src/Panes/AppearancePane.vala:174
+#, fuzzy
+msgid "Add Minimize Right"
 msgstr "Минимизиране вдясно"
 
-#: ../src/Settings/GalaSettings.vala:84
+#: src/Panes/AppearancePane.vala:175
+msgid "Replace Maximize to Minimize"
+msgstr ""
+
+#: src/Panes/AppearancePane.vala:176
 msgid "Windows"
 msgstr "Windows"
 
-#: ../src/Settings/GalaSettings.vala:85
-msgid "OS X"
-msgstr "ОС Х"
+#: src/Panes/AppearancePane.vala:177
+msgid "macOS"
+msgstr ""
 
-#: ../src/Widgets/TweakWidget.vala:83
-msgid "Revert to default setting"
-msgstr "Върни настройката по подразбиране"
+#: src/Panes/AppearancePane.vala:178
+msgid "Ubuntu"
+msgstr ""
+
+#: src/Panes/FontsPane.vala:23
+msgid "Fonts"
+msgstr "Шрифтове"
+
+#: src/Panes/FontsPane.vala:24
+msgid "Change the fonts used in your system and documents by default."
+msgstr ""
+
+#: src/Panes/FontsPane.vala:32
+msgid "Default Font:"
+msgstr "Шрифт по подразбиране"
+
+#: src/Panes/FontsPane.vala:35
+#, fuzzy
+msgid "Document font:"
+msgstr "Шрифт за документи"
+
+#: src/Panes/FontsPane.vala:38
+#, fuzzy
+msgid "Monospace font:"
+msgstr "Шрифт с фиксирана ширина на буквите"
+
+#: src/Panes/FontsPane.vala:41
+#, fuzzy
+msgid "Titlebar font:"
+msgstr "Шрифт на заглавната лента:"
+
+#: src/Panes/MiscPane.vala:25
+msgid "Miscellaneous"
+msgstr "Други"
+
+#: src/Panes/MiscPane.vala:26
+msgid "Configure some other hidden settings."
+msgstr ""
+
+#: src/Panes/MiscPane.vala:37
+msgid "Sound Indicator"
+msgstr ""
+
+#: src/Panes/MiscPane.vala:39
+msgid "Max volume:"
+msgstr ""
+
+#: src/Panes/FilesPane.vala:25
+msgid "Files"
+msgstr "Файлове"
+
+#: src/Panes/FilesPane.vala:35
+msgid "Restore tabs:"
+msgstr ""
+
+#: src/Panes/FilesPane.vala:39
+msgid "Locale"
+msgstr "Локал"
+
+#: src/Panes/FilesPane.vala:40
+msgid "ISO"
+msgstr "ISO"
+
+#: src/Panes/FilesPane.vala:41
+msgid "Informal"
+msgstr "Неформален"
+
+#: src/Panes/FilesPane.vala:43
+#, fuzzy
+msgid "Date format:"
+msgstr "Формат на дата:"
+
+#: src/Panes/TerminalPane.vala:29
+msgid "Terminal"
+msgstr "Терминал"
+
+#: src/Panes/TerminalPane.vala:41
+msgid "Background color:"
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:47
+msgid "Follow last tab:"
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:50
+msgid "Creating a new tab sets the working directory of the last opened tab."
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:53
+msgid "Unsafe paste alert:"
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:55
+msgid "Show a warning dialog when a pasted command contains 'sudo'."
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:57
+msgid "Remember tabs:"
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:59
+msgid "If enabled, last opened tabs are restored on start."
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:61
+#, fuzzy
+msgid "Terminal bell:"
+msgstr "Терминал"
+
+#: src/Panes/TerminalPane.vala:64
+msgid ""
+"Sound when hitting the end of a line and also for tab-completion when there "
+"are either no or multiple possible completions."
+msgstr ""
+
+#: src/Widgets/Categories.vala:63
+msgid "General"
+msgstr "Основни"
+
+#: src/Widgets/Categories.vala:65
+msgid "Applications"
+msgstr "Приложения"
+
+#: src/Widgets/Categories.vala:106
+#, fuzzy
+msgid "Reset to default"
+msgstr "Възстанови началното състояние"
+
+#~ msgid "Shadows"
+#~ msgstr "Сенки"
+
+#~ msgid "Plank"
+#~ msgstr "Планк"
+
+#~ msgid "Slingshot"
+#~ msgstr "Слингшот"
+
+#~ msgid "Cerbere"
+#~ msgstr "Цербер"
+
+#~ msgid "Disabled"
+#~ msgstr "Изключен"
+
+#~ msgid "Watched Processes"
+#~ msgstr "Наблюдавани Процеси"
+
+#~ msgid "Add..."
+#~ msgstr "Добавяне..."
+
+#~ msgid "Remove"
+#~ msgstr "Премахване"
+
+#~ msgid "Animations:"
+#~ msgstr "Анимации:"
+
+#~ msgid "If the animations play at all"
+#~ msgstr "Ако въобще анимациите действат"
+
+#~ msgid "Open Duration:"
+#~ msgstr "Продължителност на отваряне:"
+
+#~ msgid "Plays when an application is opened"
+#~ msgstr "Изпълнява се когато се отвори приложението"
+
+#~ msgid "Close Duration:"
+#~ msgstr "Продължителност на затваряне:"
+
+#~ msgid "Plays when an application is closed"
+#~ msgstr "Изпълнява се когато се затвори приложението"
+
+#~ msgid "Snap Duration:"
+#~ msgstr "Продължителност на преоразмеряване:"
+
+#~ msgid "Plays when an application is snapped to the side"
+#~ msgstr "Изпълнява се когато приложението е отделено настрана"
+
+#~ msgid "Minimize Duration:"
+#~ msgstr "Продължителност на минимизиране:"
+
+#~ msgid "Plays when an application is minimized"
+#~ msgstr "Изпълнява се когато приложението е намалено"
+
+#~ msgid "Plays when a workspace switch is initiated"
+#~ msgstr "Изпълнява се когато работният плот е подменен"
+
+#~ msgid "Single Click:"
+#~ msgstr "Отваряне при едно натискане:"
+
+#~ msgid "If set off, files will use 'normal' double-click behavior"
+#~ msgstr ""
+#~ "Ако е изключено, файловете ще ползват \"обикновенното\" поведение при "
+#~ "двойно щракване"
+
+#~ msgid "For date accessed, modified, etc."
+#~ msgstr "За дата ползван, променен ил др."
+
+#~ msgid "Smallest"
+#~ msgstr "Най-малък"
+
+#~ msgid "Smaller"
+#~ msgstr "По-малък"
+
+#~ msgid "Small"
+#~ msgstr "Малък"
+
+#~ msgid "Normal"
+#~ msgstr "Нормален"
+
+#~ msgid "Large"
+#~ msgstr "Голям"
+
+#~ msgid "Larger"
+#~ msgstr "По-голям"
+
+#~ msgid "Largest"
+#~ msgstr "Най-голям"
+
+#~ msgid "Sidebar Icon Size:"
+#~ msgstr "Размер на иконите в страничното поле:"
+
+#~ msgid "Size of the icons in the sidebar"
+#~ msgstr "Размер на иконите н страничната лента"
+
+#~ msgid "Used by default by most applications"
+#~ msgstr "Ползвано по подразбиране от повечето приложения"
+
+#~ msgid "Used when displaying documents, if no other font was chosen"
+#~ msgstr "Ползвано когато се показват документи, ако няма друг избран шрифт"
+
+#~ msgid "Used in the terminal, for code, and sometimes for plain text"
+#~ msgstr "Ползвано в терминала, за код, и понякога за прост текст"
+
+#~ msgid "Used to display window titles"
+#~ msgstr "Ползвано при показването на прозоречни заглавия"
+
+#~ msgid "Rows:"
+#~ msgstr "Брой редове:"
+
+#~ msgid "The number of rows displayed in Slingshot"
+#~ msgstr "Броят на редовете показвани в Слингшот"
+
+#~ msgid "Columns:"
+#~ msgstr "Брой колони:"
+
+#~ msgid "The number of columns displayed in Slingshot"
+#~ msgstr "Броят на колонките показвани в Слингшот"
+
+#~ msgid "Current Workspace Only"
+#~ msgstr "Само Сегашният Плот"
+
+#~ msgid "Show only windows on the current workspace"
+#~ msgstr "Покажи само прозорци на сегашния работен плот"
+
+#~ msgid "Will still show pinned items on different workspaces"
+#~ msgstr "Все още ще показва заковани елементи на различните работни плотове"
+
+#~ msgid "Lock Items:"
+#~ msgstr "Заключени Части:"
+
+#~ msgid "Whether to prevent drag'n'drop actions and lock items on the dock"
+#~ msgstr ""
+#~ "Дали да се предотвратят придърпващите действия и заключвани елементи в "
+#~ "панела"
+
+#~ msgid "The size of each icon in the plank"
+#~ msgstr "Размера на всяка икона в панела"
+
+#~ msgid "Don't hide"
+#~ msgstr "Да не се скрива"
+
+#~ msgid "Intelligent hide"
+#~ msgstr "Интелигентно скриване"
+
+#~ msgid "Auto hide"
+#~ msgstr "Автоматично скриване"
+
+#~ msgid "Hide on maximize"
+#~ msgstr "Скриване при цял екран"
+
+#~ msgid "Hide Mode:"
+#~ msgstr "Режим на скриване:"
+
+#~ msgid "Plank's hide mode"
+#~ msgstr "Скрития режим на Планк"
+
+#~ msgid "Hide Delay (ms):"
+#~ msgstr "Забавяне при криенето (милисек.):"
+
+#~ msgid "Time to wait before unhiding the dock"
+#~ msgstr "Време за чакане преди да се покаже панела"
+
+#~ msgid "Theme:"
+#~ msgstr "Тема:"
+
+#~ msgid "Plank's theme for the dock"
+#~ msgstr "Темата на Планк за панела"
+
+#~ msgid "Primary Monitor"
+#~ msgstr "Главен монитор"
+
+#~ msgid "Monitor %d"
+#~ msgstr "Монитор %d"
+
+#~ msgid "Monitor:"
+#~ msgstr "Монитор:"
+
+#~ msgid "The monitor that Plank is displayed on"
+#~ msgstr "Екрана на който планк да се вижда"
+
+#~ msgid "Left"
+#~ msgstr "Отляво"
+
+#~ msgid "Right"
+#~ msgstr "Отдясно"
+
+#~ msgid "Top"
+#~ msgstr "Отгоре"
+
+#~ msgid "Bottom"
+#~ msgstr "Отдолу"
+
+#~ msgid "Screen Position:"
+#~ msgstr "Екранно Положение:"
+
+#~ msgid "Where on the screen Plank is displayed"
+#~ msgstr "Къде на екрана Планк ще се вижда"
+
+#~ msgid "Panel"
+#~ msgstr "Панел"
+
+#~ msgid "Centered"
+#~ msgstr "По средата"
+
+#~ msgid "Alignment:"
+#~ msgstr "Подравняване:"
+
+#~ msgid "The alignment for the dock on the monitor's edge"
+#~ msgstr "Подравняването на панела до ръба на монитора"
+
+#~ msgid "Item Alignment:"
+#~ msgstr "Подредба на елементите:"
+
+#~ msgid "The alignment of the items in this dock if panel-mode is used"
+#~ msgstr ""
+#~ "Подравняването на елементи в този док ако панеления режим е в действие"
+
+#~ msgid "Offset:"
+#~ msgstr "Отместване:"
+
+#~ msgid "The offset (in percent) from the alignment point to shift Plank"
+#~ msgstr ""
+#~ "Отместването (в стотни/проценти) от подравняващата точка за преместване "
+#~ "на Планк"
+
+#~ msgid "Custom"
+#~ msgstr "Персонализиран"
+
+#~ msgid "Opacity:"
+#~ msgstr "Прозрачност"
+
+#~ msgid "How transparent the background of the terminal is"
+#~ msgstr "Колко да е прозрачен фона на терминала"
+
+#~ msgid "A set of settings for terminal palette and background color"
+#~ msgstr "Набор настройки за терминалната палитра и фонов цвят"
+
+#~ msgid "Prefer Dark Theme:"
+#~ msgstr "Чисто Тъмна Тема:"
+
+#~ msgid "GTK+ windows will now prefer the dark GTK+ theme"
+#~ msgstr "ГТК+ прозорци отсега ще предпочитат черната ГТК+ тема"
+
+#~ msgid ""
+#~ "Some applications will not react well with this enabled and can look "
+#~ "terrible"
+#~ msgstr ""
+#~ "Някои приложения нама да отвърнат добре с тази настройка в действие и ще "
+#~ "изглеждат ужасно"
+
+#~ msgid "Metacity Theme:"
+#~ msgstr "Тема за Метасити:"
+
+#~ msgid "Used to render windows that do not use GTK+"
+#~ msgstr "Ползвано при начертаването на прозорци които не използват ГТК+"
+
+#~ msgid "GTK+ Theme:"
+#~ msgstr "ГТК+ Тема:"
+
+#~ msgid "Used to render GTK+ windows like Switchboard"
+#~ msgstr "Ползвано при начертаването на прозорци като Суичбоард"
+
+#~ msgid "Icon Theme:"
+#~ msgstr "Тема на иконите:"
+
+#~ msgid "Used to theme the icon set, including application icons"
+#~ msgstr "Ползвано при оцветяването на иконите, включая програмните икони"
+
+#~ msgid "Used to theme the cursor"
+#~ msgstr "Ползвано при оцветяването на паказателя"
+
+#~ msgid "Custom window control layout"
+#~ msgstr "Лично прозречно-оформлително управление"
+
+#~ msgid ""
+#~ "Controls located at the top of the window for close, minimize, and "
+#~ "maximize"
+#~ msgstr ""
+#~ "Управни копчета, намиращи се най-отгоре на прозореца за затваряне, "
+#~ "намаляне или увеличаване"
+
+#~ msgid "May break window controls! May stop working with updates to system!"
+#~ msgstr ""
+#~ "Може да съсипе управните копчета! Може да спре да работи пи обновление на "
+#~ "системата!"
+
+#~ msgid "Audible Bell:"
+#~ msgstr "Чуваем Звън:"
+
+#~ msgid "Sound that plays when an error has been made"
+#~ msgstr "Звук, който се чува при грешка"
+
+#~ msgid "Focused Windows:"
+#~ msgstr "Съсредоточен Прозорец:"
+
+#~ msgid "Shadow beneath windows that you have currently selected"
+#~ msgstr "Сянката под текущо избраният прозорец"
+
+#~ msgid "This may not actually do anything"
+#~ msgstr "Това може и нищо да не направи"
+
+#~ msgid "Unfocused Windows:"
+#~ msgstr "Несъсредоточен Прозорец:"
+
+#~ msgid "Shadow beneath windows that you do not have selected"
+#~ msgstr "Сянката под прозорец, който не е избран"
+
+#~ msgid "Name"
+#~ msgstr "Име"
+
+#~ msgid "Shortcut"
+#~ msgstr "Бърз клавиш"
+
+#~ msgid "Command"
+#~ msgstr "Команда"
+
+#~ msgid "Every field must be filled!"
+#~ msgstr "Всички полета трябва да са попълнени!"
+
+#~ msgid "Name:"
+#~ msgstr "Име:"
+
+#~ msgid "Shortcut:"
+#~ msgstr "Бърз клавиш:"
+
+#~ msgid "Command:"
+#~ msgstr "Команда:"
+
+#~ msgid "OS X"
+#~ msgstr "ОС Х"
+
+#~ msgid "Revert to default setting"
+#~ msgstr "Върни настройката по подразбиране"
