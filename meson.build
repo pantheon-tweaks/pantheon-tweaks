@@ -11,7 +11,7 @@ add_global_arguments(
     language:'c'
 )
 
-subdir('icon')
+subdir('data')
 subdir('po')
 
 plug_files = files(
