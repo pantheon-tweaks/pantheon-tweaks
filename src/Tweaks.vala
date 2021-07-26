@@ -27,7 +27,7 @@ public class PantheonTweaks.TweaksPlug : Switchboard.Plug {
         Object (category: Category.PERSONAL,
                 code_name: "pantheon-tweaks",
                 display_name: _("Tweaks"),
-                description: _("Tweak elementary OS settings"),
+                description: _("Tweak Pantheon settings"),
                 icon: "preferences-desktop-tweaks",
                 supported_settings: settings);
     }
