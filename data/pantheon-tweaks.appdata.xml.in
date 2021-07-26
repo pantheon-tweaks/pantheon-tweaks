@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="addon">
+  <id>com.github.pantheon-tweaks.pantheon-tweaks</id>
+  <extends>io.elementary.switchboard</extends>
+  <name>Pantheon Tweaks</name>
+  <summary>Tweak Pantheon settings</summary>
+  <icon type="stock">preferences-desktop-tweaks</icon>
+  <translation type="gettext">pantheon-tweaks-plug</translation>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/main/data/screenshot.png</image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
+  <url type="bugtracker">https://github.com/pantheon-tweaks/pantheon-tweaks/issues</url>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+</component>

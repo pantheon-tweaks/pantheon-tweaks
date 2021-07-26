@@ -1,3 +1,4 @@
+data/pantheon-tweaks.appdata.xml.in
 src/Tweaks.vala
 src/Settings/GtkSettings.vala
 src/Settings/ThemeSettings.vala
