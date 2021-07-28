@@ -3,7 +3,7 @@ A system settings panel for the Pantheon Desktop that lets you easily and safely
 
 Pantheon Tweaks is currently only supported on elementary OS **Odin**. For users on elementary OS **Hera** or below, please instead use [elementary Tweaks](https://github.com/elementary-tweaks/elementary-tweaks).
 
-![sample](docs/screenshot.png)
+![sample](data/screenshot.png)
 
 ## Installation
 ### From PPA (recommended)
