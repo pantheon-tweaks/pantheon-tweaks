@@ -4,10 +4,16 @@
   <extends>io.elementary.switchboard</extends>
   <name>Pantheon Tweaks</name>
   <summary>Tweak Pantheon settings</summary>
+  <description>
+    <p>
+      A system settings panel for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance.
+    </p>
+  </description>
   <icon type="stock">preferences-desktop-tweaks</icon>
   <translation type="gettext">pantheon-tweaks-plug</translation>
   <screenshots>
     <screenshot type="default">
+      <caption>Appearance pane</caption>
       <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/main/data/screenshot.png</image>
     </screenshot>
   </screenshots>
