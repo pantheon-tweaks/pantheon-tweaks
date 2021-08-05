@@ -18,7 +18,7 @@
  */
 
 public class PantheonTweaks.TweaksPlug : Switchboard.Plug {
-    private Gtk.Paned paned;
+    private PantheonTweaks.Categories categories;
 
     public TweaksPlug () {
         // init plugin stuff
@@ -36,12 +36,12 @@ public class PantheonTweaks.TweaksPlug : Switchboard.Plug {
      * Returns the main Gtk.Widget that contains all of our UI for Switchboard.
      */
     public override Gtk.Widget get_widget () {
-        if (paned == null) {
-            paned = new Categories ();
-            paned.show_all ();
+        if (categories == null) {
+            categories = new Categories ();
+            categories.show_all ();
         }
 
-        return paned;
+        return categories;
     }
 
     public override void shown () { }
