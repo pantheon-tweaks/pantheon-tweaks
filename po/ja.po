@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-26 09:19+0900\n"
-"PO-Revision-Date: 2021-07-26 09:20+0900\n"
+"POT-Creation-Date: 2021-08-05 22:16+0900\n"
+"PO-Revision-Date: 2021-08-05 22:23+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -16,13 +16,65 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: data/pantheon-tweaks.appdata.xml.in:5
+msgid "Pantheon Tweaks"
+msgstr "Pantheon Tweaks"
+
+#: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:30
+msgid "Tweak Pantheon settings"
+msgstr "Pantheon の設定を微調整します"
+
+#: data/pantheon-tweaks.appdata.xml.in:8
+msgid ""
+"A system settings panel for the Pantheon Desktop that lets you easily and "
+"safely customise your desktop's appearance."
+msgstr ""
+"簡単かつ安全にデスクトップの外観をカスタマイズできる、Pantheon デスクトップ向"
+"けのシステム設定パネルです。"
+
+#: data/pantheon-tweaks.appdata.xml.in:17
+msgid ""
+"elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
+"features and fixes:"
+msgstr ""
+"elementary Tweaks から Pantheon Tweaks に名称変更し、以下の新機能と修正が追加"
+"されました:"
+
+#: data/pantheon-tweaks.appdata.xml.in:19
+msgid "Remove preferences now supported in Pantheon officially"
+msgstr "Pantheon に正式に追加された設定項目を削除"
+
+#: data/pantheon-tweaks.appdata.xml.in:20
+msgid "Remove preferences causing the plug crash"
+msgstr "クラッシュを引き起こす設定項目を削除"
+
+#: data/pantheon-tweaks.appdata.xml.in:21
+msgid "Fully redesigned plug"
+msgstr "抜本的なデザイン変更"
+
+#: data/pantheon-tweaks.appdata.xml.in:22
+msgid "Support changing sound theme (thanks to @pongloongyeat)"
+msgstr "サウンドテーマの変更に対応 (貢献者: @pongloongyeat)"
+
+#: data/pantheon-tweaks.appdata.xml.in:23
+msgid "Add new window controls layout"
+msgstr "新しいウィンドウコントロールのレイアウトを追加"
+
+#: data/pantheon-tweaks.appdata.xml.in:24
+msgid "Fix deprecations"
+msgstr "非推奨のコードを修正"
+
+#: data/pantheon-tweaks.appdata.xml.in:25
+msgid "Update translations"
+msgstr "翻訳の更新"
+
+#: data/pantheon-tweaks.appdata.xml.in:32
+msgid "Appearance pane"
+msgstr "“外観”ペイン"
+
 #: src/Tweaks.vala:29
 msgid "Tweaks"
 msgstr "Tweaks"
-
-#: src/Tweaks.vala:30
-msgid "Tweak elementary OS settings"
-msgstr "elementary OS の設定を微調整します"
 
 #: src/Panes/AudiencePane.vala:25
 msgid "Videos"

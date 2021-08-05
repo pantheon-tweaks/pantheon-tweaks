@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-26 09:19+0900\n"
+"POT-Creation-Date: 2021-08-05 22:16+0900\n"
 "PO-Revision-Date: 2014-10-11 07:55+0000\n"
 "Last-Translator: abuyop <Unknown>\n"
 "Language-Team: Malay <ms@li.org>\n"
@@ -18,13 +18,64 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-10-12 07:22+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
+#: data/pantheon-tweaks.appdata.xml.in:5
+msgid "Pantheon Tweaks"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:30
+#, fuzzy
+msgid "Tweak Pantheon settings"
+msgstr "Tetapan Tweak OS elementary"
+
+#: data/pantheon-tweaks.appdata.xml.in:8
+msgid ""
+"A system settings panel for the Pantheon Desktop that lets you easily and "
+"safely customise your desktop's appearance."
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:17
+msgid ""
+"elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
+"features and fixes:"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:19
+msgid "Remove preferences now supported in Pantheon officially"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:20
+msgid "Remove preferences causing the plug crash"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:21
+msgid "Fully redesigned plug"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:22
+msgid "Support changing sound theme (thanks to @pongloongyeat)"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:23
+#, fuzzy
+msgid "Add new window controls layout"
+msgstr "Bentangan kawalan tetingkap suai"
+
+#: data/pantheon-tweaks.appdata.xml.in:24
+msgid "Fix deprecations"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:25
+msgid "Update translations"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:32
+#, fuzzy
+msgid "Appearance pane"
+msgstr "Penampilan"
+
 #: src/Tweaks.vala:29
 msgid "Tweaks"
 msgstr "Tweak"
-
-#: src/Tweaks.vala:30
-msgid "Tweak elementary OS settings"
-msgstr "Tetapan Tweak OS elementary"
 
 #: src/Panes/AudiencePane.vala:25
 msgid "Videos"
@@ -610,9 +661,6 @@ msgstr "Kembali ke Lalai"
 
 #~ msgid "Used to theme the cursor"
 #~ msgstr "Digunakan untuk temakan kursor"
-
-#~ msgid "Custom window control layout"
-#~ msgstr "Bentangan kawalan tetingkap suai"
 
 #~ msgid ""
 #~ "Controls located at the top of the window for close, minimize, and "
