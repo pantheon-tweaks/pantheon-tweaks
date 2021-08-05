@@ -4,7 +4,7 @@ pantheon-tweaks (1.0.0) focal; urgency=medium
   * Remove preferences causing the plug crash
   * Fully redesigned plug
   * Support changing sound theme (thanks to @pongloongyeat)
-  * Add "elementary Reversed" and "Replace Maximize to Minimize" for window controls layout 
+  * Add new window controls layout 
   * Fix deprecations
   * Update translations
 
