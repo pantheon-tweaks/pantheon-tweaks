@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-26 09:19+0900\n"
+"POT-Creation-Date: 2021-08-05 22:16+0900\n"
 "PO-Revision-Date: 2018-10-14 23:20-0300\n"
 "Last-Translator: Helder Bertoldo <helder.bertoldo@gmail.com>\n"
 "Language-Team: Portuguese Brazilian <LL@li.org>\n"
@@ -17,13 +17,64 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.6\n"
 
+#: data/pantheon-tweaks.appdata.xml.in:5
+msgid "Pantheon Tweaks"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:30
+#, fuzzy
+msgid "Tweak Pantheon settings"
+msgstr "Ajuste as configurações do elementary OS"
+
+#: data/pantheon-tweaks.appdata.xml.in:8
+msgid ""
+"A system settings panel for the Pantheon Desktop that lets you easily and "
+"safely customise your desktop's appearance."
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:17
+msgid ""
+"elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
+"features and fixes:"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:19
+msgid "Remove preferences now supported in Pantheon officially"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:20
+msgid "Remove preferences causing the plug crash"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:21
+msgid "Fully redesigned plug"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:22
+msgid "Support changing sound theme (thanks to @pongloongyeat)"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:23
+msgid "Add new window controls layout"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:24
+msgid "Fix deprecations"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:25
+#, fuzzy
+msgid "Update translations"
+msgstr "Habilitar animações"
+
+#: data/pantheon-tweaks.appdata.xml.in:32
+#, fuzzy
+msgid "Appearance pane"
+msgstr "Aparência"
+
 #: src/Tweaks.vala:29
 msgid "Tweaks"
 msgstr "Ajustes"
-
-#: src/Tweaks.vala:30
-msgid "Tweak elementary OS settings"
-msgstr "Ajuste as configurações do elementary OS"
 
 #: src/Panes/AudiencePane.vala:25
 msgid "Videos"
@@ -359,9 +410,6 @@ msgstr "Restaurar ao padrão"
 
 #~ msgid "Disabled"
 #~ msgstr "Desabilitar"
-
-#~ msgid "Enable animations"
-#~ msgstr "Habilitar animações"
 
 #~ msgid "Duration"
 #~ msgstr "Duração"

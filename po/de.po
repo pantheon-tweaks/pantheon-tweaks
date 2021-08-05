@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-tweaks-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-26 09:19+0900\n"
+"POT-Creation-Date: 2021-08-05 22:16+0900\n"
 "PO-Revision-Date: 2021-06-23 17:08+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,13 +18,63 @@ msgstr ""
 "X-Generator: Poedit 2.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: data/pantheon-tweaks.appdata.xml.in:5
+msgid "Pantheon Tweaks"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:30
+#, fuzzy
+msgid "Tweak Pantheon settings"
+msgstr "Einstellungen von elementary OS optimieren"
+
+#: data/pantheon-tweaks.appdata.xml.in:8
+msgid ""
+"A system settings panel for the Pantheon Desktop that lets you easily and "
+"safely customise your desktop's appearance."
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:17
+msgid ""
+"elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
+"features and fixes:"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:19
+msgid "Remove preferences now supported in Pantheon officially"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:20
+msgid "Remove preferences causing the plug crash"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:21
+msgid "Fully redesigned plug"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:22
+msgid "Support changing sound theme (thanks to @pongloongyeat)"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:23
+msgid "Add new window controls layout"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:24
+msgid "Fix deprecations"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:25
+msgid "Update translations"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:32
+#, fuzzy
+msgid "Appearance pane"
+msgstr "Erscheinungsbild"
+
 #: src/Tweaks.vala:29
 msgid "Tweaks"
 msgstr "Tweaks"
-
-#: src/Tweaks.vala:30
-msgid "Tweak elementary OS settings"
-msgstr "Einstellungen von elementary OS optimieren"
 
 #: src/Panes/AudiencePane.vala:25
 msgid "Videos"
