@@ -12,7 +12,7 @@
   <icon type="stock">preferences-desktop-tweaks</icon>
   <translation type="gettext">pantheon-tweaks-plug</translation>
   <releases>
-    <release version="1.0.0" date="2021-07-26" urgency="medium">
+    <release version="1.0.0" date="2021-08-05" urgency="medium">
       <description>
         <p>elementary Tweaks is now renamed to Pantheon Tweaks and get some new features and fixes:</p>
         <ul>
