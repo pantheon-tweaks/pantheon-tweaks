@@ -17,6 +17,8 @@ Package: pantheon-tweaks
 Architecture: any
 Depends: gala, ${misc:Depends}, ${shlibs:Depends}
 Pre-Depends: dpkg (>= 1.15.6)
+Breaks: elementary-tweaks
+Replaces: elementary-tweaks
 Enhances: switchboard
 Description: Change hidden desktop settings
  Switchboard plug for controlling hidden options.
