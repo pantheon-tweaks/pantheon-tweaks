@@ -20,15 +20,3 @@ Pre-Depends: dpkg (>= 1.15.6)
 Enhances: switchboard
 Description: Change hidden desktop settings
  Switchboard plug for controlling hidden options.
-
-Package: pantheon-tweaks-dbg
-Architecture: any
-Section: debug
-Priority: optional
-Depends: pantheon-tweaks (= ${binary:Version}), ${misc:Depends}
-Pre-Depends: dpkg (>= 1.15.6)
-Enhances: pantheon-tweaks
-Description: Change hidden desktop settings (debugging symbols)
- Switchboard plug for controlling hidden options.
- .
- This package contains debugging symbols for switchboard-plug-template.

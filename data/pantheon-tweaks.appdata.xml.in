@@ -11,6 +11,22 @@
   </description>
   <icon type="stock">preferences-desktop-tweaks</icon>
   <translation type="gettext">pantheon-tweaks-plug</translation>
+  <releases>
+    <release version="1.0.0" date="2021-07-26" urgency="medium">
+      <description>
+        <p>elementary Tweaks is now renamed to Pantheon Tweaks and get some new features and fixes:</p>
+        <ul>
+          <li>Remove preferences now supported in Pantheon officially</li>
+          <li>Remove preferences causing the plug crash</li>
+          <li>Fully redesigned plug</li>
+          <li>Support changing sound theme (thanks to @pongloongyeat)</li>
+          <li>Add new window controls layout </li>
+          <li>Fix deprecations</li>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
   <screenshots>
     <screenshot type="default">
       <caption>Appearance pane</caption>

@@ -1,20 +1,11 @@
-elementary-tweaks (1.0) trusty; urgency=low
+pantheon-tweaks (1.0.0) focal; urgency=medium
 
-  * Add theme customization
-  * Update plank options
-  * Update terminal options
-  * Misc UI fixes
+  * Remove preferences now supported in Pantheon officially
+  * Remove preferences causing the plug crash
+  * Fully redesigned plug
+  * Support changing sound theme (thanks to @pongloongyeat)
+  * Add new window controls layout 
+  * Fix deprecations
+  * Update translations
 
- -- Carl P. <name.is.carl@gmail.com>  Wed, 15 Apr 2015 10:19:09 +0200
-
-elementary-tweaks (0.2) precise; urgency=low
-
-  * Freya release
-
- -- Michael P. Starkweather <mpstark@gmail.com>  Wed, 20 Aug 2014 11:00:00 -0500
-
-elementary-tweaks (0.1) precise; urgency=low
-
-  * Initial release
-
- -- Versable <versable@gmail.com>  Fri, 14 Jun 2013 08:45:35 +0200
+ -- Ryo Nakano <ryonakaknock3@gmail.com>  Mon, 26 Jul 2021 19:29:21 +0900
