@@ -20,7 +20,7 @@
           <li>Remove preferences causing the plug crash</li>
           <li>Fully redesigned plug</li>
           <li>Support changing sound theme (thanks to @pongloongyeat)</li>
-          <li>Add "elementary Reversed" and "Replace Maximize to Minimize" for window controls layout </li>
+          <li>Add new window controls layout </li>
           <li>Fix deprecations</li>
           <li>Update translations</li>
         </ul>
