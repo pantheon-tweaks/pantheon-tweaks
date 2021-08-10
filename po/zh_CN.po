@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-05 22:16+0900\n"
-"PO-Revision-Date: 2021-08-10 17:17+0800\n"
+"PO-Revision-Date: 2021-08-10 19:50+0800\n"
 "Last-Translator: imgradeone <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "Language: zh_CN\n"
@@ -85,7 +85,7 @@ msgstr "播放时置顶："
 
 #: src/Panes/AudiencePane.vala:38
 msgid "Move window from video canvas:"
-msgstr ""
+msgstr "在视频区域移动窗口："
 
 #: src/Panes/AudiencePane.vala:40
 msgid "If enabled, the window can be dragged by clicking anywhere on it."
@@ -117,7 +117,7 @@ msgstr "关闭："
 
 #: src/Panes/AnimationsPane.vala:45
 msgid "Snap:"
-msgstr ""
+msgstr "分屏："
 
 #: src/Panes/AnimationsPane.vala:49
 msgid "Minimize:"
