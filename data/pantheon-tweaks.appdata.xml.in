@@ -14,7 +14,6 @@
   <releases>
     <release version="1.0.1" date="2021-08-11" urgency="low">
       <description>
-        <p>elementary Tweaks is now renamed to Pantheon Tweaks and get some new features and fixes:</p>
         <ul>
           <li>Exclude Adwaita/gnome/hicolor themes from theme selections</li>
         </ul>
