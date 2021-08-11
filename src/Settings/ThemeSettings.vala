@@ -18,6 +18,9 @@
  */
 
 public class PantheonTweaks.ThemeSettings {
+    private const string[] IGNORE_LIST = {
+        "Adwaita", "Emacs", "Default", "default", "gnome", "hicolor"
+    };
 
     /**
      * Gets and returns a list of the current themes by path and condition.
@@ -41,11 +44,15 @@ public class PantheonTweaks.ThemeSettings {
                 FileInfo file_info;
                 while ((file_info = enumerator.next_file ()) != null) {
                     var name = file_info.get_name ();
+                    if (name in IGNORE_LIST) {
+                        continue;
+                    }
+
                     var checktheme = File.new_for_path (dir + name + "/" + condition);
                     var checkicons = File.new_for_path (dir + name + "/48x48/" + condition);
-                    if ((checktheme.query_exists () || checkicons.query_exists ()) &&
-                            name != "Emacs" && name != "Default" && name != "default" && !themes.contains (name))
+                    if ((checktheme.query_exists () || checkicons.query_exists ()) && !themes.contains (name)) {
                         themes.add (name);
+                    }
                 }
             } catch (Error e) {
                 warning (e.message);

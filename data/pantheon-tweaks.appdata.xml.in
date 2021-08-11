@@ -12,6 +12,13 @@
   <icon type="stock">preferences-desktop-tweaks</icon>
   <translation type="gettext">pantheon-tweaks-plug</translation>
   <releases>
+    <release version="1.0.1" date="2021-08-11" urgency="low">
+      <description>
+        <ul>
+          <li>Exclude Adwaita/gnome/hicolor themes from theme selections</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.0" date="2021-08-05" urgency="medium">
       <description>
         <p>elementary Tweaks is now renamed to Pantheon Tweaks and get some new features and fixes:</p>
