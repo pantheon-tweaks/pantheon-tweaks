@@ -70,7 +70,6 @@ msgid "Update translations"
 msgstr "Mettre à jour les traductions"
 
 #: data/pantheon-tweaks.appdata.xml.in:32
-#, fuzzy
 msgid "Appearance pane"
 msgstr "Volet d'apparence"
 
@@ -124,12 +123,10 @@ msgid "Snap:"
 msgstr "Accrocher :"
 
 #: src/Panes/AnimationsPane.vala:49
-#, fuzzy
 msgid "Minimize:"
 msgstr "Réduire :"
 
 #: src/Panes/AnimationsPane.vala:53
-#, fuzzy
 msgid "Workspace switch:"
 msgstr "Commutateur d'espace de travail :"
 
@@ -144,7 +141,6 @@ msgstr ""
 "problèmes de visibilité."
 
 #: src/Panes/AppearancePane.vala:43
-#, fuzzy
 msgid "Theme Settings"
 msgstr "Réglage des thèmes"
 
@@ -164,7 +160,6 @@ msgid "theme-name"
 msgstr "nom-thème"
 
 #: src/Panes/AppearancePane.vala:54
-#, fuzzy
 msgid "Icons:"
 msgstr "Icônes :"
 
@@ -175,7 +170,6 @@ msgid "To show custom icons here, put them in %s."
 msgstr "Pour afficher les icônes personnalisées ici, placez-les dans %s."
 
 #: src/Panes/AppearancePane.vala:63
-#, fuzzy
 msgid "Cursor:"
 msgstr "Curseur :"
 
@@ -206,7 +200,6 @@ msgstr ""
 "redémarrage de l'application."
 
 #: src/Panes/AppearancePane.vala:88
-#, fuzzy
 msgid "Window Controls"
 msgstr "Contrôles de fenêtre"
 
@@ -232,27 +225,22 @@ msgid "elementary"
 msgstr "elementary"
 
 #: src/Panes/AppearancePane.vala:170
-#, fuzzy
 msgid "elementary Reversed"
 msgstr "Inversé elementary"
 
 #: src/Panes/AppearancePane.vala:171
-#, fuzzy
 msgid "Close Only Right"
 msgstr "Fermer uniquement à droite"
 
 #: src/Panes/AppearancePane.vala:172
-#, fuzzy
 msgid "Close Only Left"
 msgstr "Fermer uniquement à gauche"
 
 #: src/Panes/AppearancePane.vala:173
-#, fuzzy
 msgid "Add Minimize Left"
 msgstr "Ajouter réduire à gauche"
 
 #: src/Panes/AppearancePane.vala:174
-#, fuzzy
 msgid "Add Minimize Right"
 msgstr "Ajouter réduire à droite"
 
@@ -285,17 +273,14 @@ msgid "Default Font:"
 msgstr "Police par défaut :"
 
 #: src/Panes/FontsPane.vala:35
-#, fuzzy
 msgid "Document font:"
 msgstr "Police des documents :"
 
 #: src/Panes/FontsPane.vala:38
-#, fuzzy
 msgid "Monospace font:"
 msgstr "Police à taille fixe :"
 
 #: src/Panes/FontsPane.vala:41
-#, fuzzy
 msgid "Titlebar font:"
 msgstr "Police de la barre de titre :"
 
@@ -336,7 +321,6 @@ msgid "Informal"
 msgstr "Informel"
 
 #: src/Panes/FilesPane.vala:43
-#, fuzzy
 msgid "Date format:"
 msgstr "Format de date :"
 
@@ -393,7 +377,6 @@ msgid "Applications"
 msgstr "Applications"
 
 #: src/Widgets/Categories.vala:106
-#, fuzzy
 msgid "Reset to default"
 msgstr "Réinitialiser par défaut"
 
