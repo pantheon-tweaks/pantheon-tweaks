@@ -113,7 +113,6 @@ msgid "Open:"
 msgstr "Ouvrir :"
 
 #: src/Panes/AnimationsPane.vala:41
-#, fuzzy
 msgid "Close:"
 msgstr "Fermer :"
 
