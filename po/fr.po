@@ -135,7 +135,7 @@ msgstr "Apparence"
 #: src/Panes/AppearancePane.vala:31
 msgid "Change the theme and button layout of windows. Changing theme may cause visibility issue."
 msgstr ""
-"Modifier le thème et la disposition des boutons des fenêtres. Le changement de thème peut entraînerdes "
+"Modifier le thème et la disposition des boutons des fenêtres. Le changement de thème peut entraîner des"
 "problèmes de visibilité."
 
 #: src/Panes/AppearancePane.vala:43
