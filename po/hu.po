@@ -120,7 +120,7 @@ msgstr "Bezárás:"
 
 #: src/Panes/AnimationsPane.vala:45
 msgid "Snap:"
-msgstr ""
+msgstr "Kitűzés:"
 
 #: src/Panes/AnimationsPane.vala:49
 msgid "Minimize:"
