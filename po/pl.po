@@ -1,7 +1,7 @@
 # Polish translation for elementary-community
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the elementary-community package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# Bartek <blogowanie.xyz@gmail.com>, 2021.
 #
 msgid ""
 msgstr ""
