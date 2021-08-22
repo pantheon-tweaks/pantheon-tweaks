@@ -1,0 +1,14 @@
+name: Gettext Updates
+on:
+  push:
+    branches: main
+jobs:
+  gettext_template:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: elementary/actions/gettext-template@master
+      env:
+        GIT_USER_TOKEN: "${{ secrets.GIT_USER_TOKEN }}"
+      with:
+        regenerate_po: 'true'
