@@ -18,19 +18,18 @@
  */
 
 public class PantheonTweaks.Panes.AudiencePane : Categories.Pane {
-    private const string VIDEOS_OLD_SCHEMA = "org.pantheon.audience";
-    private const string VIDEOS_NEW_SCHEMA = "io.elementary.videos";
+    private const string VIDEOS_SCHEMA = "io.elementary.videos";
 
     public AudiencePane () {
         base (_("Videos"), "multimedia-video-player");
     }
 
     construct {
-        if (!if_show_pane ({ VIDEOS_OLD_SCHEMA, VIDEOS_NEW_SCHEMA })) {
+        if (!if_show_pane ({ VIDEOS_SCHEMA })) {
             return;
         }
 
-        var settings = new Settings ((schema_exists (VIDEOS_NEW_SCHEMA)) ? VIDEOS_NEW_SCHEMA : VIDEOS_OLD_SCHEMA);
+        var settings = new Settings (VIDEOS_SCHEMA);
 
         var stay_on_top_label = new SummaryLabel (_("Stay on top while playing:"));
         var stay_on_top_switch = new Switch ();

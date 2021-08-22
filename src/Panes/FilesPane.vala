@@ -18,19 +18,18 @@
  */
 
 public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
-    private const string FILES_OLD_SCHEMA = "org.pantheon.files.preferences";
-    private const string FILES_NEW_SCHEMA = "io.elementary.files.preferences";
+    private const string FILES_SCHEMA = "io.elementary.files.preferences";
 
     public FilesPane () {
         base (_("Files"), "system-file-manager");
     }
 
     construct {
-        if (!if_show_pane ({ FILES_OLD_SCHEMA, FILES_NEW_SCHEMA })) {
+        if (!if_show_pane ({ FILES_SCHEMA })) {
             return;
         }
 
-        var settings = new GLib.Settings ((schema_exists (FILES_NEW_SCHEMA)) ? FILES_NEW_SCHEMA : FILES_OLD_SCHEMA);
+        var settings = new GLib.Settings (FILES_SCHEMA);
 
         var restore_tabs_label = new SummaryLabel (_("Restore tabs:"));
         var restore_tabs_switch = new Switch ();

@@ -18,8 +18,7 @@
  */
 
 public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
-    private const string TERMINAL_OLD_SCHEMA = "org.pantheon.terminal.settings";
-    private const string TERMINAL_NEW_SCHEMA = "io.elementary.terminal.settings";
+    private const string TERMINAL_SCHEMA = "io.elementary.terminal.settings";
 
     private GLib.Settings settings;
 
@@ -30,13 +29,11 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
     }
 
     construct {
-        if (!if_show_pane ({ TERMINAL_OLD_SCHEMA, TERMINAL_NEW_SCHEMA })) {
+        if (!if_show_pane ({ TERMINAL_SCHEMA })) {
             return;
         }
 
-        settings = new GLib.Settings (
-            (schema_exists (TERMINAL_NEW_SCHEMA)) ? TERMINAL_NEW_SCHEMA : TERMINAL_OLD_SCHEMA
-        );
+        settings = new GLib.Settings (TERMINAL_SCHEMA);
 
         var background_color_label = new SummaryLabel (_("Background color:"));
         background_color_button = new Gtk.ColorButton () {
