@@ -16,6 +16,8 @@
       <description>
         <ul>
           <li>Exclude Adwaita/gnome/hicolor themes from theme selections</li>
+          <li>Support accessing to panes with settings paths</li>
+          <li>Update translations</li>
         </ul>
       </description>
     </release>
