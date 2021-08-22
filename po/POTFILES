@@ -3,11 +3,11 @@ src/Tweaks.vala
 src/Settings/GtkSettings.vala
 src/Settings/ThemeSettings.vala
 src/Settings/XSettings.vala
-src/Panes/AudiencePane.vala
 src/Panes/AnimationsPane.vala
 src/Panes/AppearancePane.vala
 src/Panes/FontsPane.vala
 src/Panes/MiscPane.vala
 src/Panes/FilesPane.vala
 src/Panes/TerminalPane.vala
+src/Panes/VideosPane.vala
 src/Widgets/Categories.vala
