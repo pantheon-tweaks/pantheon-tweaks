@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-05 22:16+0900\n"
+"POT-Creation-Date: 2021-08-23 08:17+0900\n"
 "PO-Revision-Date: 2014-12-11 05:32+0000\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician <gl@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Pantheon Tweaks"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:30
+#: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:38
 msgid "Tweak Pantheon settings"
 msgstr ""
 
@@ -32,71 +32,56 @@ msgid ""
 "safely customise your desktop's appearance."
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:17
+#: data/pantheon-tweaks.appdata.xml.in:18
+msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:19
+msgid "Support accessing to panes with settings paths"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:20
+#: data/pantheon-tweaks.appdata.xml.in:34
+msgid "Update translations"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:26
 msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:19
+#: data/pantheon-tweaks.appdata.xml.in:28
 msgid "Remove preferences now supported in Pantheon officially"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:20
+#: data/pantheon-tweaks.appdata.xml.in:29
 msgid "Remove preferences causing the plug crash"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:21
+#: data/pantheon-tweaks.appdata.xml.in:30
 msgid "Fully redesigned plug"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:22
+#: data/pantheon-tweaks.appdata.xml.in:31
 msgid "Support changing sound theme (thanks to @pongloongyeat)"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:23
+#: data/pantheon-tweaks.appdata.xml.in:32
 msgid "Add new window controls layout"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:24
+#: data/pantheon-tweaks.appdata.xml.in:33
 msgid "Fix deprecations"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:25
-msgid "Update translations"
-msgstr ""
-
-#: data/pantheon-tweaks.appdata.xml.in:32
+#: data/pantheon-tweaks.appdata.xml.in:41
 #, fuzzy
 msgid "Appearance pane"
 msgstr "Aparencia"
 
-#: src/Tweaks.vala:29
+#: src/Tweaks.vala:37
 msgid "Tweaks"
-msgstr ""
-
-#: src/Panes/AudiencePane.vala:25
-msgid "Videos"
-msgstr ""
-
-#: src/Panes/AudiencePane.vala:35
-msgid "Stay on top while playing:"
-msgstr ""
-
-#: src/Panes/AudiencePane.vala:38
-msgid "Move window from video canvas:"
-msgstr ""
-
-#: src/Panes/AudiencePane.vala:40
-msgid "If enabled, the window can be dragged by clicking anywhere on it."
-msgstr ""
-
-#: src/Panes/AudiencePane.vala:42
-msgid "Don't instantly start video playback:"
-msgstr ""
-
-#: src/Panes/AudiencePane.vala:44
-msgid "If enabled, opening a video will not auto play it."
 msgstr ""
 
 #: src/Panes/AnimationsPane.vala:25
@@ -308,83 +293,107 @@ msgstr ""
 msgid "Max volume:"
 msgstr ""
 
-#: src/Panes/FilesPane.vala:25
+#: src/Panes/FilesPane.vala:24
 msgid "Files"
 msgstr "Arquivos"
 
-#: src/Panes/FilesPane.vala:35
+#: src/Panes/FilesPane.vala:34
 msgid "Restore tabs:"
 msgstr ""
 
-#: src/Panes/FilesPane.vala:39
+#: src/Panes/FilesPane.vala:38
 msgid "Locale"
 msgstr "Local"
 
-#: src/Panes/FilesPane.vala:40
+#: src/Panes/FilesPane.vala:39
 msgid "ISO"
 msgstr ""
 
-#: src/Panes/FilesPane.vala:41
+#: src/Panes/FilesPane.vala:40
 msgid "Informal"
 msgstr "Informal"
 
-#: src/Panes/FilesPane.vala:43
+#: src/Panes/FilesPane.vala:42
 #, fuzzy
 msgid "Date format:"
 msgstr "Formato da data:"
 
-#: src/Panes/TerminalPane.vala:29
+#: src/Panes/TerminalPane.vala:28
 msgid "Terminal"
 msgstr "Terminal"
 
-#: src/Panes/TerminalPane.vala:41
+#: src/Panes/TerminalPane.vala:38
 msgid "Background color:"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:47
+#: src/Panes/TerminalPane.vala:44
 msgid "Follow last tab:"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:50
+#: src/Panes/TerminalPane.vala:47
 msgid "Creating a new tab sets the working directory of the last opened tab."
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:53
+#: src/Panes/TerminalPane.vala:50
 msgid "Unsafe paste alert:"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:55
+#: src/Panes/TerminalPane.vala:52
 msgid "Show a warning dialog when a pasted command contains 'sudo'."
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:57
+#: src/Panes/TerminalPane.vala:54
 msgid "Remember tabs:"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:59
+#: src/Panes/TerminalPane.vala:56
 msgid "If enabled, last opened tabs are restored on start."
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:61
+#: src/Panes/TerminalPane.vala:58
 #, fuzzy
 msgid "Terminal bell:"
 msgstr "Terminal"
 
-#: src/Panes/TerminalPane.vala:64
+#: src/Panes/TerminalPane.vala:61
 msgid ""
 "Sound when hitting the end of a line and also for tab-completion when there "
 "are either no or multiple possible completions."
 msgstr ""
 
-#: src/Widgets/Categories.vala:63
+#: src/Panes/VideosPane.vala:24
+msgid "Videos"
+msgstr ""
+
+#: src/Panes/VideosPane.vala:34
+msgid "Stay on top while playing:"
+msgstr ""
+
+#: src/Panes/VideosPane.vala:37
+msgid "Move window from video canvas:"
+msgstr ""
+
+#: src/Panes/VideosPane.vala:39
+msgid "If enabled, the window can be dragged by clicking anywhere on it."
+msgstr ""
+
+#: src/Panes/VideosPane.vala:41
+msgid "Don't instantly start video playback:"
+msgstr ""
+
+#: src/Panes/VideosPane.vala:43
+msgid "If enabled, opening a video will not auto play it."
+msgstr ""
+
+#: src/Widgets/Categories.vala:66
 msgid "General"
 msgstr "Xeral"
 
-#: src/Widgets/Categories.vala:65
+#: src/Widgets/Categories.vala:68
 msgid "Applications"
 msgstr "Aplicativos"
 
-#: src/Widgets/Categories.vala:106
+#: src/Widgets/Categories.vala:120
 #, fuzzy
 msgid "Reset to default"
 msgstr "Restablecer predefinidos"
