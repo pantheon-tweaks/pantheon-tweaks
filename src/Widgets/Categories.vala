@@ -28,7 +28,7 @@ public class PantheonTweaks.Categories : Gtk.Paned {
         var misc_pane = new Panes.MiscPane ();
         var files_pane = new Panes.FilesPane ();
         var terminal_pane = new Panes.TerminalPane ();
-        var audience_pane = new Panes.AudiencePane ();
+        var videos_pane = new Panes.VideosPane ();
 
         // Left: Add PaneListItems to PaneList
         pane_list = new Gtk.ListBox ();
@@ -39,7 +39,7 @@ public class PantheonTweaks.Categories : Gtk.Paned {
         pane_list.add (misc_pane.pane_list_item);
         pane_list.add (files_pane.pane_list_item);
         pane_list.add (terminal_pane.pane_list_item);
-        pane_list.add (audience_pane.pane_list_item);
+        pane_list.add (videos_pane.pane_list_item);
 
         // Right: Add Pane itself to Stack
         var stack = new Gtk.Stack ();
@@ -49,7 +49,7 @@ public class PantheonTweaks.Categories : Gtk.Paned {
         stack.add (misc_pane);
         stack.add (files_pane);
         stack.add (terminal_pane);
-        stack.add (audience_pane);
+        stack.add (videos_pane);
 
         pack1 (pane_list, false, false);
         add2 (stack);

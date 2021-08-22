@@ -17,10 +17,10 @@
  *
  */
 
-public class PantheonTweaks.Panes.AudiencePane : Categories.Pane {
+public class PantheonTweaks.Panes.VideosPane : Categories.Pane {
     private const string VIDEOS_SCHEMA = "io.elementary.videos";
 
-    public AudiencePane () {
+    public VideosPane () {
         base (_("Videos"), "multimedia-video-player");
     }
 
