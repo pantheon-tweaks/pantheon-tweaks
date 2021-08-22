@@ -17,6 +17,9 @@
  */
 
 public class PantheonTweaks.Categories : Gtk.Paned {
+    private const string[] PANE_NAME = { "appearance", "fonts", "animations", "misc", "files", "terminal", "videos" };
+
+    private Gtk.ListBox pane_list;
 
     construct {
         var appearance_pane = new Panes.AppearancePane ();
@@ -28,7 +31,7 @@ public class PantheonTweaks.Categories : Gtk.Paned {
         var audience_pane = new Panes.AudiencePane ();
 
         // Left: Add PaneListItems to PaneList
-        var pane_list = new Gtk.ListBox ();
+        pane_list = new Gtk.ListBox ();
         pane_list.set_size_request (176, 10);
         pane_list.add (appearance_pane.pane_list_item);
         pane_list.add (fonts_pane.pane_list_item);
@@ -65,6 +68,17 @@ public class PantheonTweaks.Categories : Gtk.Paned {
                 list_item.set_header (new Granite.HeaderLabel (_("Applications")));
             }
         });
+    }
+
+    public void set_visible_view (string location) {
+        int index;
+        for (index = 0; index < PANE_NAME.length; index++) {
+            if (PANE_NAME[index] == location) {
+                break;
+            }
+        }
+
+        pane_list.select_row (pane_list.get_row_at_index (index));
     }
 
     public abstract class Pane : Granite.SimpleSettingsPage {
