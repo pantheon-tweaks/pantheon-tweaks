@@ -1,74 +1,76 @@
 # Polish translation for elementary-community
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the elementary-community package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# Bartek <blogowanie.xyz@gmail.com>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-05 22:16+0900\n"
-"PO-Revision-Date: 2015-01-14 12:48+0000\n"
-"Last-Translator: Patryk Strugacz <Unknown>\n"
+"PO-Revision-Date: 2021-08-21 10:42+0200\n"
+"Last-Translator: Bartek <blogowanie.xyz@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2015-01-15 06:10+0000\n"
-"X-Generator: Launchpad (build 17303)\n"
+"X-Generator: Poedit 3.0\n"
 
 #: data/pantheon-tweaks.appdata.xml.in:5
 msgid "Pantheon Tweaks"
-msgstr ""
+msgstr "Usprawnienia Pantheon"
 
 #: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:30
-#, fuzzy
 msgid "Tweak Pantheon settings"
-msgstr "Dostosuj ustawienia elementary OS"
+msgstr "Dostosuj usprawnienia Panteon"
 
 #: data/pantheon-tweaks.appdata.xml.in:8
 msgid ""
 "A system settings panel for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr ""
+"Panel ustawień systemowych dla pulpitu Pantheon, który pozwala łatwo i "
+"bezpiecznie dostosować wygląd pulpitu."
 
 #: data/pantheon-tweaks.appdata.xml.in:17
 msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
 msgstr ""
+"elementary Tweaks jest teraz przemianowany na Pantheon Tweaks i zyskuje nowe "
+"funkcje i poprawki:"
 
 #: data/pantheon-tweaks.appdata.xml.in:19
 msgid "Remove preferences now supported in Pantheon officially"
-msgstr ""
+msgstr "Usunięto preferencje, które teraz oficjalnie są obsługiwane w Pantheon"
 
 #: data/pantheon-tweaks.appdata.xml.in:20
 msgid "Remove preferences causing the plug crash"
-msgstr ""
+msgstr "Usunięto preferencje powodujące awarię wtyczki"
 
 #: data/pantheon-tweaks.appdata.xml.in:21
 msgid "Fully redesigned plug"
-msgstr ""
+msgstr "Całkowicie przeprojektowana wtyczka"
 
 #: data/pantheon-tweaks.appdata.xml.in:22
 msgid "Support changing sound theme (thanks to @pongloongyeat)"
-msgstr ""
+msgstr "Obsługa zmiany motywu dźwięku (dzięki @pongloongyeat)"
 
 #: data/pantheon-tweaks.appdata.xml.in:23
 msgid "Add new window controls layout"
-msgstr ""
+msgstr "Dodano nowy układ kontrolek okna"
 
 #: data/pantheon-tweaks.appdata.xml.in:24
 msgid "Fix deprecations"
-msgstr ""
+msgstr "Naprawa przestarzałych funkcji"
 
 #: data/pantheon-tweaks.appdata.xml.in:25
 msgid "Update translations"
-msgstr ""
+msgstr "Aktualizowanie tłumaczeń"
 
 #: data/pantheon-tweaks.appdata.xml.in:32
-#, fuzzy
 msgid "Appearance pane"
 msgstr "Wygląd"
 
@@ -78,27 +80,31 @@ msgstr "Usprawnienia"
 
 #: src/Panes/AudiencePane.vala:25
 msgid "Videos"
-msgstr ""
+msgstr "Filmy"
 
 #: src/Panes/AudiencePane.vala:35
 msgid "Stay on top while playing:"
-msgstr ""
+msgstr "Pozostań na wierzchu podczas odtwarzania:"
 
 #: src/Panes/AudiencePane.vala:38
 msgid "Move window from video canvas:"
-msgstr ""
+msgstr "Przenieś okno z kanwy wideo:"
 
 #: src/Panes/AudiencePane.vala:40
 msgid "If enabled, the window can be dragged by clicking anywhere on it."
 msgstr ""
+"Jeśli ta opcja jest włączona, okno można przeciągać, klikając w dowolnym "
+"miejscu na nim."
 
 #: src/Panes/AudiencePane.vala:42
 msgid "Don't instantly start video playback:"
-msgstr ""
+msgstr "Nie rozpoczynaj od razu odtwarzania wideo:"
 
 #: src/Panes/AudiencePane.vala:44
 msgid "If enabled, opening a video will not auto play it."
 msgstr ""
+"Jeśli ta opcja jest włączona, otwarcie filmu nie spowoduje jego "
+"automatycznego odtworzenia."
 
 #: src/Panes/AnimationsPane.vala:25
 msgid "Animations"
@@ -107,29 +113,28 @@ msgstr "Animacje"
 #: src/Panes/AnimationsPane.vala:26
 msgid "Adjust the animation length used for window management or multitasking."
 msgstr ""
+"Dostosuj długość animacji używanej do zarządzania oknami lub "
+"wielozadaniowości."
 
 #: src/Panes/AnimationsPane.vala:37
 msgid "Open:"
-msgstr ""
+msgstr "Otwórz:"
 
 #: src/Panes/AnimationsPane.vala:41
-#, fuzzy
 msgid "Close:"
-msgstr "Tylko zamknij"
+msgstr "Zamknij:"
 
 #: src/Panes/AnimationsPane.vala:45
 msgid "Snap:"
-msgstr ""
+msgstr "Pstryknięcie:"
 
 #: src/Panes/AnimationsPane.vala:49
-#, fuzzy
 msgid "Minimize:"
-msgstr "Minimalizacja po lewej"
+msgstr "Zminimalizowanie:"
 
 #: src/Panes/AnimationsPane.vala:53
-#, fuzzy
 msgid "Workspace switch:"
-msgstr "Czas zmiany pulpitu:"
+msgstr "Zmiana pulpitu:"
 
 #: src/Panes/AppearancePane.vala:30
 msgid "Appearance"
@@ -140,122 +145,117 @@ msgid ""
 "Change the theme and button layout of windows. Changing theme may cause "
 "visibility issue."
 msgstr ""
+"Zmień motyw i układ przycisków okien. Zmiana motywu może spowodować problem "
+"z widocznością."
 
 #: src/Panes/AppearancePane.vala:43
-#, fuzzy
 msgid "Theme Settings"
-msgstr "Dostosuj ustawienia elementary OS"
+msgstr "Ustawienia motywu"
 
 #: src/Panes/AppearancePane.vala:45
 msgid "GTK:"
-msgstr ""
+msgstr "GTK:"
 
 #. / TRANSLATORS: The "%s" represents the path where custom themes are installed
 #: src/Panes/AppearancePane.vala:50
 #, c-format
 msgid "To show custom themes here, put them in %s."
-msgstr ""
+msgstr "Aby wyświetlić tutaj motywy niestandardowe, umieść je w %s."
 
 #: src/Panes/AppearancePane.vala:51 src/Panes/AppearancePane.vala:60
 #: src/Panes/AppearancePane.vala:69 src/Panes/AppearancePane.vala:78
 msgid "theme-name"
-msgstr ""
+msgstr "nazwa-motywu"
 
 #: src/Panes/AppearancePane.vala:54
-#, fuzzy
 msgid "Icons:"
-msgstr "Rozmiar ikon:"
+msgstr "Ikony:"
 
 #. / TRANSLATORS: The "%s" represents the path where custom icons are installed
 #: src/Panes/AppearancePane.vala:59
 #, c-format
 msgid "To show custom icons here, put them in %s."
-msgstr ""
+msgstr "Aby wyświetlić tutaj niestandardowe ikony, umieść je w %s."
 
 #: src/Panes/AppearancePane.vala:63
-#, fuzzy
 msgid "Cursor:"
-msgstr "Schemat kursora myszy:"
+msgstr "Kursory:"
 
 #. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
 #: src/Panes/AppearancePane.vala:68
 #, c-format
 msgid "To show custom cursors here, put them in %s."
-msgstr ""
+msgstr "Aby wyświetlić tutaj niestandardowe kursory, umieść je w %s."
 
 #: src/Panes/AppearancePane.vala:72
 msgid "Sound:"
-msgstr ""
+msgstr "Dźwięki:"
 
 #. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
 #: src/Panes/AppearancePane.vala:77
 #, c-format
 msgid "To show custom sounds here, put them in %s."
-msgstr ""
+msgstr "Aby wyświetlić tutaj niestandardowe dźwięki, umieść je w %s."
 
 #: src/Panes/AppearancePane.vala:81
 msgid "Force to use dark stylesheet:"
-msgstr ""
+msgstr "Wymuś użycie ciemnego arkusza stylów:"
 
 #: src/Panes/AppearancePane.vala:85
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
 msgstr ""
+"Wymusza ciemny styl we wszystkich aplikacjach, nawet jeśli nie jest "
+"obsługiwany. Wymaga ponownego uruchomienia aplikacji."
 
 #: src/Panes/AppearancePane.vala:88
-#, fuzzy
 msgid "Window Controls"
-msgstr "Windows"
+msgstr "Kontrolki okien"
 
 #: src/Panes/AppearancePane.vala:90
-#, fuzzy
 msgid "Layout:"
-msgstr "Własny układ:"
+msgstr "Układ:"
 
 #: src/Panes/AppearancePane.vala:93
 msgid "Changes button layout of the window."
-msgstr ""
+msgstr "Zmienia układ przycisków okna."
 
 #: src/Panes/AppearancePane.vala:95
 msgid "Show GNOME menu:"
-msgstr ""
+msgstr "Pokaż menu GNOME:"
 
 #: src/Panes/AppearancePane.vala:97
 msgid "Whether to show GNOME menu in GNOME apps."
-msgstr ""
+msgstr "Czy menu GNOME ma być wyświetlane w aplikacjach GNOME."
 
 #: src/Panes/AppearancePane.vala:169
 msgid "elementary"
-msgstr ""
+msgstr "elementary"
 
 #: src/Panes/AppearancePane.vala:170
 msgid "elementary Reversed"
-msgstr ""
+msgstr "elementary Odwrócony"
 
 #: src/Panes/AppearancePane.vala:171
-#, fuzzy
 msgid "Close Only Right"
-msgstr "Tylko zamknij"
+msgstr "Tylko zamknij po prawej"
 
 #: src/Panes/AppearancePane.vala:172
-#, fuzzy
 msgid "Close Only Left"
-msgstr "Tylko zamknij"
+msgstr "Tylko zamknij po lewej"
 
 #: src/Panes/AppearancePane.vala:173
-#, fuzzy
 msgid "Add Minimize Left"
-msgstr "Minimalizacja po lewej"
+msgstr "Dodaj Minimalizuj po lewej"
 
 #: src/Panes/AppearancePane.vala:174
-#, fuzzy
 msgid "Add Minimize Right"
-msgstr "Minimalizacja po prawej"
+msgstr "Dodaj Minimalizuj po prawej"
 
 #: src/Panes/AppearancePane.vala:175
 msgid "Replace Maximize to Minimize"
-msgstr ""
+msgstr "Zamień Maksymalizuj zamiast Mminimalizuj"
 
 #: src/Panes/AppearancePane.vala:176
 msgid "Windows"
@@ -263,11 +263,11 @@ msgstr "Windows"
 
 #: src/Panes/AppearancePane.vala:177
 msgid "macOS"
-msgstr ""
+msgstr "macOS"
 
 #: src/Panes/AppearancePane.vala:178
 msgid "Ubuntu"
-msgstr ""
+msgstr "Ubuntu"
 
 #: src/Panes/FontsPane.vala:23
 msgid "Fonts"
@@ -275,25 +275,23 @@ msgstr "Czcionki"
 
 #: src/Panes/FontsPane.vala:24
 msgid "Change the fonts used in your system and documents by default."
-msgstr ""
+msgstr "Zmień domyślnie czcionki używane w systemie i dokumentach."
 
 #: src/Panes/FontsPane.vala:32
 msgid "Default Font:"
 msgstr "Domyślna czcionka:"
 
 #: src/Panes/FontsPane.vala:35
-#, fuzzy
 msgid "Document font:"
 msgstr "Czcionka dla dokumentów:"
 
 #: src/Panes/FontsPane.vala:38
-#, fuzzy
 msgid "Monospace font:"
-msgstr "Czcionka o stałęj szerokości:"
+msgstr "Czcionka o stałej szerokości:"
 
 #: src/Panes/FontsPane.vala:41
 msgid "Titlebar font:"
-msgstr ""
+msgstr "Czcionka paska tytułów:"
 
 #: src/Panes/MiscPane.vala:25
 msgid "Miscellaneous"
@@ -301,15 +299,15 @@ msgstr "Pozostałe"
 
 #: src/Panes/MiscPane.vala:26
 msgid "Configure some other hidden settings."
-msgstr ""
+msgstr "Skonfiguruj inne ukryte ustawienia."
 
 #: src/Panes/MiscPane.vala:37
 msgid "Sound Indicator"
-msgstr ""
+msgstr "Wskaźnik dźwięku"
 
 #: src/Panes/MiscPane.vala:39
 msgid "Max volume:"
-msgstr ""
+msgstr "Maksymalna głośność:"
 
 #: src/Panes/FilesPane.vala:25
 msgid "Files"
@@ -317,7 +315,7 @@ msgstr "Pliki"
 
 #: src/Panes/FilesPane.vala:35
 msgid "Restore tabs:"
-msgstr ""
+msgstr "Przywróć karty:"
 
 #: src/Panes/FilesPane.vala:39
 msgid "Locale"
@@ -332,7 +330,6 @@ msgid "Informal"
 msgstr "Nieformalny"
 
 #: src/Panes/FilesPane.vala:43
-#, fuzzy
 msgid "Date format:"
 msgstr "Format daty:"
 
@@ -342,42 +339,48 @@ msgstr "Terminal"
 
 #: src/Panes/TerminalPane.vala:41
 msgid "Background color:"
-msgstr ""
+msgstr "Kolor tła:"
 
 #: src/Panes/TerminalPane.vala:47
 msgid "Follow last tab:"
-msgstr ""
+msgstr "Podążaj za ostatnią kartą:"
 
 #: src/Panes/TerminalPane.vala:50
 msgid "Creating a new tab sets the working directory of the last opened tab."
 msgstr ""
+"Utworzenie nowej karty powoduje ustawienie katalogu roboczego ostatnio "
+"otwartej karty."
 
 #: src/Panes/TerminalPane.vala:53
 msgid "Unsafe paste alert:"
-msgstr ""
+msgstr "Alert niebezpiecznego wklejania:"
 
 #: src/Panes/TerminalPane.vala:55
 msgid "Show a warning dialog when a pasted command contains 'sudo'."
 msgstr ""
+"Pokaż okno dialogowe z ostrzeżeniem, gdy wklejone polecenie zawiera \"sudo\"."
 
 #: src/Panes/TerminalPane.vala:57
 msgid "Remember tabs:"
-msgstr ""
+msgstr "Zapamiętaj karty:"
 
 #: src/Panes/TerminalPane.vala:59
 msgid "If enabled, last opened tabs are restored on start."
 msgstr ""
+"Jeśli ta opcja jest włączona, ostatnio otwarte karty są przywracane podczas "
+"uruchamiania."
 
 #: src/Panes/TerminalPane.vala:61
-#, fuzzy
 msgid "Terminal bell:"
-msgstr "Terminal"
+msgstr "Dzwonek terminala:"
 
 #: src/Panes/TerminalPane.vala:64
 msgid ""
 "Sound when hitting the end of a line and also for tab-completion when there "
 "are either no or multiple possible completions."
 msgstr ""
+"Dźwięk po najechaniu na koniec linii, a także przy uzupełnianiu tabulacji, "
+"gdy nie ma żadnych lub jest wiele możliwych uzupełnień."
 
 #: src/Widgets/Categories.vala:63
 msgid "General"
@@ -388,7 +391,6 @@ msgid "Applications"
 msgstr "Aplikacje"
 
 #: src/Widgets/Categories.vala:106
-#, fuzzy
 msgid "Reset to default"
 msgstr "Przywróć domyślne"
 

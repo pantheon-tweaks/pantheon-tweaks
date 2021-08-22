@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-05 22:16+0900\n"
-"PO-Revision-Date: 2020-11-22 17:42+0000\n"
+"PO-Revision-Date: 2021-08-17 17:07+0100\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "Language: pt\n"
@@ -16,62 +16,64 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2014-08-30 08:41+0000\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 3.0\n"
 
 #: data/pantheon-tweaks.appdata.xml.in:5
 msgid "Pantheon Tweaks"
-msgstr ""
+msgstr "Ajustes do Pantheon"
 
 #: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:30
-#, fuzzy
 msgid "Tweak Pantheon settings"
-msgstr "Ajusta as definições do elementary OS"
+msgstr "Ajuste as definições do Pantheon"
 
 #: data/pantheon-tweaks.appdata.xml.in:8
 msgid ""
 "A system settings panel for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr ""
+"Um painel de definições do sistema para o ambiente de trabalho Pantheon que "
+"permite personalizar com facilidade e segurança a aparência do seu ambiente "
+"de trabalho."
 
 #: data/pantheon-tweaks.appdata.xml.in:17
 msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
 msgstr ""
+"O Ajustes do elementary agora é renomeado para Ajustes do Pantheon e obtém "
+"novas funcionalidades e correções:"
 
 #: data/pantheon-tweaks.appdata.xml.in:19
 msgid "Remove preferences now supported in Pantheon officially"
-msgstr ""
+msgstr "Remove as preferências agora suportadas oficialmente no Pantheon"
 
 #: data/pantheon-tweaks.appdata.xml.in:20
 msgid "Remove preferences causing the plug crash"
-msgstr ""
+msgstr "Remova as preferências que causam a falha do plug"
 
 #: data/pantheon-tweaks.appdata.xml.in:21
 msgid "Fully redesigned plug"
-msgstr ""
+msgstr "Plug totalmente redesenhado"
 
 #: data/pantheon-tweaks.appdata.xml.in:22
 msgid "Support changing sound theme (thanks to @pongloongyeat)"
-msgstr ""
+msgstr "Suporte a mudança de tema de som (agradecimentos a @pongloongyeat)"
 
 #: data/pantheon-tweaks.appdata.xml.in:23
-#, fuzzy
 msgid "Add new window controls layout"
-msgstr "Disposição de controlo de janela personalizado"
+msgstr "Adicionar novo esquema de controlos de janela"
 
 #: data/pantheon-tweaks.appdata.xml.in:24
 msgid "Fix deprecations"
-msgstr ""
+msgstr "Corrigir depreciações"
 
 #: data/pantheon-tweaks.appdata.xml.in:25
 msgid "Update translations"
-msgstr ""
+msgstr "Atualização de traduções"
 
 #: data/pantheon-tweaks.appdata.xml.in:32
-#, fuzzy
 msgid "Appearance pane"
-msgstr "Aparência"
+msgstr "Painel de aparência"
 
 #: src/Tweaks.vala:29
 msgid "Tweaks"
@@ -151,7 +153,7 @@ msgstr "Definições de tema"
 
 #: src/Panes/AppearancePane.vala:45
 msgid "GTK:"
-msgstr ""
+msgstr "GTK:"
 
 #. / TRANSLATORS: The "%s" represents the path where custom themes are installed
 #: src/Panes/AppearancePane.vala:50
@@ -186,13 +188,13 @@ msgstr "Para mostrar cursores personalizados aqui, coloque-os em% s."
 
 #: src/Panes/AppearancePane.vala:72
 msgid "Sound:"
-msgstr ""
+msgstr "Som:"
 
 #. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
 #: src/Panes/AppearancePane.vala:77
-#, fuzzy, c-format
+#, c-format
 msgid "To show custom sounds here, put them in %s."
-msgstr "Para mostrar ícones personalizados aqui, coloque-os em %s."
+msgstr "Para mostrar sons personalizados aqui, coloque-os em %s."
 
 #: src/Panes/AppearancePane.vala:81
 msgid "Force to use dark stylesheet:"
@@ -231,9 +233,8 @@ msgid "elementary"
 msgstr "elementary"
 
 #: src/Panes/AppearancePane.vala:170
-#, fuzzy
 msgid "elementary Reversed"
-msgstr "elementary"
+msgstr "elementary invertido"
 
 #: src/Panes/AppearancePane.vala:171
 msgid "Close Only Right"
@@ -244,18 +245,16 @@ msgid "Close Only Left"
 msgstr "Fechar apenas à esquerda"
 
 #: src/Panes/AppearancePane.vala:173
-#, fuzzy
 msgid "Add Minimize Left"
-msgstr "Minimizar à esquerda"
+msgstr "Adicionar o minimizar à esquerda"
 
 #: src/Panes/AppearancePane.vala:174
-#, fuzzy
 msgid "Add Minimize Right"
-msgstr "Minimizar à direita"
+msgstr "Adicionar o minimizar à direita"
 
 #: src/Panes/AppearancePane.vala:175
 msgid "Replace Maximize to Minimize"
-msgstr ""
+msgstr "Substituir maximizar para minimizar"
 
 #: src/Panes/AppearancePane.vala:176
 msgid "Windows"
