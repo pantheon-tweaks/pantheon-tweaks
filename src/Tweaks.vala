@@ -21,15 +21,24 @@ public class PantheonTweaks.TweaksPlug : Switchboard.Plug {
     private PantheonTweaks.Categories categories;
 
     public TweaksPlug () {
-        // init plugin stuff
         var settings = new Gee.TreeMap<string, string?> (null, null);
-        settings.set ("Tweaks", null);
-        Object (category: Category.PERSONAL,
-                code_name: "pantheon-tweaks",
-                display_name: _("Tweaks"),
-                description: _("Tweak Pantheon settings"),
-                icon: "preferences-desktop-tweaks",
-                supported_settings: settings);
+        settings.set ("tweaks", null);
+        settings.set ("tweaks/appearance", "appearance");
+        settings.set ("tweaks/fonts", "fonts");
+        settings.set ("tweaks/animations", "animations");
+        settings.set ("tweaks/misc", "misc");
+        settings.set ("tweaks/files", "files");
+        settings.set ("tweaks/terminal", "terminal");
+        settings.set ("tweaks/videos", "videos");
+
+        Object (
+            category: Category.PERSONAL,
+            code_name: "pantheon-tweaks",
+            display_name: _("Tweaks"),
+            description: _("Tweak Pantheon settings"),
+            icon: "preferences-desktop-tweaks",
+            supported_settings: settings
+        );
     }
 
     /**
@@ -45,8 +54,12 @@ public class PantheonTweaks.TweaksPlug : Switchboard.Plug {
     }
 
     public override void shown () { }
+
     public override void hidden () { }
-    public override void search_callback (string location) { }
+
+    public override void search_callback (string location) {
+        categories.set_visible_view (location);
+    }
 
     public override async Gee.TreeMap<string, string> search (string search) {
         return new Gee.TreeMap<string, string> (null, null);
