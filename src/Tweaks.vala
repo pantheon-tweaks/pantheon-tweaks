@@ -21,6 +21,9 @@ public class PantheonTweaks.TweaksPlug : Switchboard.Plug {
     private PantheonTweaks.Categories categories;
 
     public TweaksPlug () {
+        GLib.Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+        GLib.Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+
         var settings = new Gee.TreeMap<string, string?> (null, null);
         settings.set ("tweaks", null);
         settings.set ("tweaks/appearance", "appearance");

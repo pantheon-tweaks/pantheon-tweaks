@@ -12,6 +12,15 @@ add_global_arguments(
     language:'c'
 )
 
+config_data = configuration_data()
+config_data.set_quoted('LOCALEDIR', join_paths(get_option('prefix'), get_option('localedir')))
+config_data.set_quoted('GETTEXT_PACKAGE', gettext_name)
+config_file = configure_file(
+    input: 'src/Config.vala.in',
+    output: '@BASENAME@',
+    configuration: config_data
+)
+
 subdir('data')
 subdir('po')
 
@@ -33,6 +42,7 @@ plug_files = files(
 shared_module(
     meson.project_name(),
     plug_files,
+    config_file,
     dependencies: [
         dependency('gee-0.8'),
         dependency('glib-2.0'),
