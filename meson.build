@@ -2,7 +2,8 @@ project('pantheon-tweaks', 'vala', 'c', version: '1.0.0')
 
 switchboard_dep = dependency('switchboard-2.0')
 gettext_name = meson.project_name() + '-plug'
-pkgdatadir = join_paths(switchboard_dep.get_pkgconfig_variable('plugsdir'), 'personal')
+libdir = join_paths(get_option('prefix'), get_option('libdir'))
+pkgdatadir = join_paths(switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir]), 'personal')
 
 i18n = import('i18n')
 
