@@ -1,3 +1,12 @@
+pantheon-tweaks (1.0.1) focal; urgency=low
+
+  * Exclude Adwaita/gnome/hicolor themes from theme selections
+  * Support accessing to panes with settings paths
+  * Make sure the plug works on NixOS (thanks to @bobby285271)
+  * Update translations
+
+ -- Ryo Nakano <ryonakano@ryonakano-desktop>  Tue, 24 Aug 2021 18:53:12 +0900
+
 pantheon-tweaks (1.0.0) focal; urgency=medium
 
   * Remove preferences now supported in Pantheon officially
