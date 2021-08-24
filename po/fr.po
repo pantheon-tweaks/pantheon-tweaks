@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-23 08:17+0900\n"
+"POT-Creation-Date: 2021-08-24 17:06+0900\n"
 "PO-Revision-Date: 2021-08-14 15:37+0200\n"
 "Last-Translator: Roxfr <roxfr@outlook.fr>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Pantheon Tweaks"
 msgstr "Pantheon Tweaks"
 
-#: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:38
+#: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:41
 msgid "Tweak Pantheon settings"
 msgstr "Ajuster les paramètres de Pantheon"
 
@@ -85,7 +85,7 @@ msgstr "Corriger les dépréciations"
 msgid "Appearance pane"
 msgstr "Volet d'apparence"
 
-#: src/Tweaks.vala:37
+#: src/Tweaks.vala:40
 msgid "Tweaks"
 msgstr "Ajustements"
 
@@ -107,15 +107,18 @@ msgstr "Ouvrir :"
 msgid "Close:"
 msgstr "Fermer :"
 
-#: src/Panes/AnimationsPane.vala:45
+#. TRANSLATORS: The word "snap" refers to a feature of Pantheon that allows you to resize a window
+#. into the half size of your screen automatically. So this string means the length of animation
+#. when you "snap" a window.
+#: src/Panes/AnimationsPane.vala:48
 msgid "Snap:"
 msgstr "Accrocher :"
 
-#: src/Panes/AnimationsPane.vala:49
+#: src/Panes/AnimationsPane.vala:52
 msgid "Minimize:"
 msgstr "Réduire :"
 
-#: src/Panes/AnimationsPane.vala:53
+#: src/Panes/AnimationsPane.vala:56
 msgid "Workspace switch:"
 msgstr "Commutateur d'espace de travail :"
 
