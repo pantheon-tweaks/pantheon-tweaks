@@ -8,22 +8,21 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 17:06+0900\n"
-"PO-Revision-Date: 2016-07-16 12:14+0300\n"
-"Last-Translator: Maxim Taranov <png2378@gmail.com>\n"
+"PO-Revision-Date: 2021-08-27 18:04+0400\n"
+"Last-Translator: Andrey Kultyapov <camellan@yandex.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2014-08-30 08:41+0000\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.3\n"
 
 #: data/pantheon-tweaks.appdata.xml.in:5
 msgid "Pantheon Tweaks"
-msgstr ""
+msgstr "Pantheon Tweaks"
 
 #: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:41
-#, fuzzy
 msgid "Tweak Pantheon settings"
 msgstr "Тонкая настройка elementary OS"
 
@@ -32,55 +31,57 @@ msgid ""
 "A system settings panel for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr ""
+"A system settings panel for the Pantheon Desktop that lets you easily and "
+"safely customise your desktop's appearance."
 
 #: data/pantheon-tweaks.appdata.xml.in:18
 msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
-msgstr ""
+msgstr "Exclude Adwaita/gnome/hicolor themes from theme selections"
 
 #: data/pantheon-tweaks.appdata.xml.in:19
 msgid "Support accessing to panes with settings paths"
-msgstr ""
+msgstr "Support accessing to panes with settings paths"
 
 #: data/pantheon-tweaks.appdata.xml.in:20
 #: data/pantheon-tweaks.appdata.xml.in:34
-#, fuzzy
 msgid "Update translations"
-msgstr "Включить анимации"
+msgstr "Обновление переводов"
 
 #: data/pantheon-tweaks.appdata.xml.in:26
 msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
 msgstr ""
+"elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
+"features and fixes:"
 
 #: data/pantheon-tweaks.appdata.xml.in:28
 msgid "Remove preferences now supported in Pantheon officially"
-msgstr ""
+msgstr "Remove preferences now supported in Pantheon officially"
 
 #: data/pantheon-tweaks.appdata.xml.in:29
 msgid "Remove preferences causing the plug crash"
-msgstr ""
+msgstr "Remove preferences causing the plug crash"
 
 #: data/pantheon-tweaks.appdata.xml.in:30
 msgid "Fully redesigned plug"
-msgstr ""
+msgstr "Fully redesigned plug"
 
 #: data/pantheon-tweaks.appdata.xml.in:31
 msgid "Support changing sound theme (thanks to @pongloongyeat)"
-msgstr ""
+msgstr "Support changing sound theme (thanks to @pongloongyeat)"
 
 #: data/pantheon-tweaks.appdata.xml.in:32
 msgid "Add new window controls layout"
-msgstr ""
+msgstr "Add new window controls layout"
 
 #: data/pantheon-tweaks.appdata.xml.in:33
 msgid "Fix deprecations"
-msgstr ""
+msgstr "Fix deprecations"
 
 #: data/pantheon-tweaks.appdata.xml.in:41
-#, fuzzy
 msgid "Appearance pane"
-msgstr "Оформление"
+msgstr "Панель внешнего вида"
 
 #: src/Tweaks.vala:40
 msgid "Tweaks"
@@ -93,34 +94,31 @@ msgstr "Анимации"
 #: src/Panes/AnimationsPane.vala:26
 msgid "Adjust the animation length used for window management or multitasking."
 msgstr ""
+"Настройка длительности анимации, используемой для управления окнами или "
+"многозадачностью."
 
 #: src/Panes/AnimationsPane.vala:37
-#, fuzzy
 msgid "Open:"
-msgstr "Открытие"
+msgstr "Открытие:"
 
 #: src/Panes/AnimationsPane.vala:41
-#, fuzzy
 msgid "Close:"
-msgstr "Закрытие"
+msgstr "Закрытие:"
 
 #. TRANSLATORS: The word "snap" refers to a feature of Pantheon that allows you to resize a window
 #. into the half size of your screen automatically. So this string means the length of animation
 #. when you "snap" a window.
 #: src/Panes/AnimationsPane.vala:48
-#, fuzzy
 msgid "Snap:"
-msgstr "Разворачивание"
+msgstr "Разворачивание:"
 
 #: src/Panes/AnimationsPane.vala:52
-#, fuzzy
 msgid "Minimize:"
-msgstr "Сворачивание"
+msgstr "Сворачивание:"
 
 #: src/Panes/AnimationsPane.vala:56
-#, fuzzy
 msgid "Workspace switch:"
-msgstr "Переключение рабочих столов"
+msgstr "Переключение рабочих столов:"
 
 #: src/Panes/AppearancePane.vala:30
 msgid "Appearance"
@@ -131,6 +129,8 @@ msgid ""
 "Change the theme and button layout of windows. Changing theme may cause "
 "visibility issue."
 msgstr ""
+"Измените тему и расположение кнопок в окнах. Изменение темы может вызвать "
+"проблему с отображением."
 
 #: src/Panes/AppearancePane.vala:43
 msgid "Theme Settings"
@@ -138,89 +138,86 @@ msgstr "Настройки темы"
 
 #: src/Panes/AppearancePane.vala:45
 msgid "GTK:"
-msgstr ""
+msgstr "GTK:"
 
 #. / TRANSLATORS: The "%s" represents the path where custom themes are installed
 #: src/Panes/AppearancePane.vala:50
 #, c-format
 msgid "To show custom themes here, put them in %s."
-msgstr ""
+msgstr "Чтобы показать здесь пользовательские темы, поместите их в %s."
 
 #: src/Panes/AppearancePane.vala:51 src/Panes/AppearancePane.vala:60
 #: src/Panes/AppearancePane.vala:69 src/Panes/AppearancePane.vala:78
 msgid "theme-name"
-msgstr ""
+msgstr "имя темы"
 
 #: src/Panes/AppearancePane.vala:54
-#, fuzzy
 msgid "Icons:"
-msgstr "Иконки"
+msgstr "Иконки:"
 
 #. / TRANSLATORS: The "%s" represents the path where custom icons are installed
 #: src/Panes/AppearancePane.vala:59
 #, c-format
 msgid "To show custom icons here, put them in %s."
-msgstr ""
+msgstr "Чтобы показать здесь пользовательские значки, поместите их в %s."
 
 #: src/Panes/AppearancePane.vala:63
-#, fuzzy
 msgid "Cursor:"
-msgstr "Курсор"
+msgstr "Курсор:"
 
 #. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
 #: src/Panes/AppearancePane.vala:68
 #, c-format
 msgid "To show custom cursors here, put them in %s."
-msgstr ""
+msgstr "Чтобы показать здесь пользовательские курсоры, поместите их в %s."
 
 #: src/Panes/AppearancePane.vala:72
 msgid "Sound:"
-msgstr ""
+msgstr "Звуки:"
 
 #. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
 #: src/Panes/AppearancePane.vala:77
 #, c-format
 msgid "To show custom sounds here, put them in %s."
-msgstr ""
+msgstr "Чтобы показать здесь пользовательские звуки, поместите их в %s."
 
 #: src/Panes/AppearancePane.vala:81
 msgid "Force to use dark stylesheet:"
-msgstr ""
+msgstr "Принудительное использование темного стиля оформления:"
 
 #: src/Panes/AppearancePane.vala:85
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
 msgstr ""
+"Устанавливает темный стиль всем приложениям, даже если он не поддерживается. "
+"Требуется перезапуск приложения."
 
 #: src/Panes/AppearancePane.vala:88
 msgid "Window Controls"
 msgstr "Кнопки управления окном"
 
 #: src/Panes/AppearancePane.vala:90
-#, fuzzy
 msgid "Layout:"
-msgstr "Расположение"
+msgstr "Расположение:"
 
 #: src/Panes/AppearancePane.vala:93
 msgid "Changes button layout of the window."
-msgstr ""
+msgstr "Изменяет расположение кнопок в окне."
 
 #: src/Panes/AppearancePane.vala:95
-#, fuzzy
 msgid "Show GNOME menu:"
-msgstr "Показывать меню GNOME"
+msgstr "Показывать меню GNOME:"
 
 #: src/Panes/AppearancePane.vala:97
 msgid "Whether to show GNOME menu in GNOME apps."
-msgstr ""
+msgstr "Показывать ли меню GNOME в приложениях GNOME."
 
 #: src/Panes/AppearancePane.vala:169
 msgid "elementary"
 msgstr "elementary"
 
 #: src/Panes/AppearancePane.vala:170
-#, fuzzy
 msgid "elementary Reversed"
 msgstr "elementary"
 
@@ -233,18 +230,16 @@ msgid "Close Only Left"
 msgstr "Только «Закрыть» слева"
 
 #: src/Panes/AppearancePane.vala:173
-#, fuzzy
 msgid "Add Minimize Left"
 msgstr "«Свернуть» слева"
 
 #: src/Panes/AppearancePane.vala:174
-#, fuzzy
 msgid "Add Minimize Right"
 msgstr "«Свернуть» справа"
 
 #: src/Panes/AppearancePane.vala:175
 msgid "Replace Maximize to Minimize"
-msgstr ""
+msgstr "Заменить «Развернуть»  на «Свернуть»"
 
 #: src/Panes/AppearancePane.vala:176
 msgid "Windows"
@@ -252,11 +247,11 @@ msgstr "Windows"
 
 #: src/Panes/AppearancePane.vala:177
 msgid "macOS"
-msgstr ""
+msgstr "macOS"
 
 #: src/Panes/AppearancePane.vala:178
 msgid "Ubuntu"
-msgstr ""
+msgstr "Ubuntu"
 
 #: src/Panes/FontsPane.vala:23
 msgid "Fonts"
@@ -264,26 +259,23 @@ msgstr "Шрифты"
 
 #: src/Panes/FontsPane.vala:24
 msgid "Change the fonts used in your system and documents by default."
-msgstr ""
+msgstr "Измените шрифты, используемые в системе и документах по умолчанию."
 
 #: src/Panes/FontsPane.vala:32
 msgid "Default Font:"
 msgstr "Шрифт по умолчанию:"
 
 #: src/Panes/FontsPane.vala:35
-#, fuzzy
 msgid "Document font:"
-msgstr "Шрифт документов"
+msgstr "Шрифт документов:"
 
 #: src/Panes/FontsPane.vala:38
-#, fuzzy
 msgid "Monospace font:"
-msgstr "Моноширинный шрифт"
+msgstr "Моноширинный шрифт:"
 
 #: src/Panes/FontsPane.vala:41
-#, fuzzy
 msgid "Titlebar font:"
-msgstr "Шрифт заголовков"
+msgstr "Шрифт заголовков:"
 
 #: src/Panes/MiscPane.vala:25
 msgid "Miscellaneous"
@@ -291,25 +283,23 @@ msgstr "Прочее"
 
 #: src/Panes/MiscPane.vala:26
 msgid "Configure some other hidden settings."
-msgstr ""
+msgstr "Настройте некоторые другие скрытые параметры."
 
 #: src/Panes/MiscPane.vala:37
 msgid "Sound Indicator"
 msgstr "Индикатор звука"
 
 #: src/Panes/MiscPane.vala:39
-#, fuzzy
 msgid "Max volume:"
-msgstr "Максимальная громкость"
+msgstr "Максимальная громкость:"
 
 #: src/Panes/FilesPane.vala:24
 msgid "Files"
 msgstr "Файлы"
 
 #: src/Panes/FilesPane.vala:34
-#, fuzzy
 msgid "Restore tabs:"
-msgstr "Восстанавливать вкладки"
+msgstr "Восстанавливать вкладки:"
 
 #: src/Panes/FilesPane.vala:38
 msgid "Locale"
@@ -324,82 +314,83 @@ msgid "Informal"
 msgstr "Информативный"
 
 #: src/Panes/FilesPane.vala:42
-#, fuzzy
 msgid "Date format:"
-msgstr "Формат даты"
+msgstr "Формат даты:"
 
 #: src/Panes/TerminalPane.vala:28
 msgid "Terminal"
 msgstr "Терминал"
 
 #: src/Panes/TerminalPane.vala:38
-#, fuzzy
 msgid "Background color:"
-msgstr "Цвет фона"
+msgstr "Цвет фона:"
 
 #: src/Panes/TerminalPane.vala:44
-#, fuzzy
 msgid "Follow last tab:"
-msgstr "Придеживаться последней вкладки"
+msgstr "Придеживаться последней вкладки:"
 
 #: src/Panes/TerminalPane.vala:47
 msgid "Creating a new tab sets the working directory of the last opened tab."
 msgstr ""
+"При создании новой вкладки устанавливается рабочий каталог последней "
+"открытой вкладки."
 
 #: src/Panes/TerminalPane.vala:50
-#, fuzzy
 msgid "Unsafe paste alert:"
-msgstr "Предупреждение о небезопасной вставке"
+msgstr "Предупреждение о небезопасной вставке:"
 
 #: src/Panes/TerminalPane.vala:52
 msgid "Show a warning dialog when a pasted command contains 'sudo'."
 msgstr ""
+"Показывать диалог предупреждения, когда вставленная команда содержит 'sudo'."
 
 #: src/Panes/TerminalPane.vala:54
 msgid "Remember tabs:"
-msgstr ""
+msgstr "Запоминать вкладки:"
 
 #: src/Panes/TerminalPane.vala:56
 msgid "If enabled, last opened tabs are restored on start."
 msgstr ""
+"Если включено, при запуске восстанавливаются последние открытые вкладки."
 
 #: src/Panes/TerminalPane.vala:58
-#, fuzzy
 msgid "Terminal bell:"
-msgstr "Терминал"
+msgstr "Звуковое уведомление в терминале:"
 
 #: src/Panes/TerminalPane.vala:61
 msgid ""
 "Sound when hitting the end of a line and also for tab-completion when there "
 "are either no or multiple possible completions."
 msgstr ""
+"Звук при попадании в конец строки, а также для завершения табуляции, когда "
+"нет или несколько возможных завершений."
 
 #: src/Panes/VideosPane.vala:24
 msgid "Videos"
 msgstr "Видео"
 
 #: src/Panes/VideosPane.vala:34
-#, fuzzy
 msgid "Stay on top while playing:"
-msgstr "Поверх всех окон во время проигрывания"
+msgstr "Поверх всех окон во время проигрывания:"
 
 #: src/Panes/VideosPane.vala:37
-#, fuzzy
 msgid "Move window from video canvas:"
-msgstr "Перемещение окна путём перетаскивания за холст"
+msgstr "Перемещение окна путём перетаскивания за холст:"
 
 #: src/Panes/VideosPane.vala:39
 msgid "If enabled, the window can be dragged by clicking anywhere on it."
 msgstr ""
+"Если эта функция включена, окно можно перетащить, щелкнув в любом его месте."
 
 #: src/Panes/VideosPane.vala:41
-#, fuzzy
 msgid "Don't instantly start video playback:"
-msgstr "Не начинать проигрывание мгновенно"
+msgstr "Не начинать проигрывание мгновенно:"
 
 #: src/Panes/VideosPane.vala:43
 msgid "If enabled, opening a video will not auto play it."
 msgstr ""
+"Если эта функция включена, открытие видео не приведет к его автоматическому "
+"воспроизведению."
 
 #: src/Widgets/Categories.vala:66
 msgid "General"
