@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-24 17:06+0900\n"
-"PO-Revision-Date: 2021-08-14 15:37+0200\n"
+"PO-Revision-Date: 2021-08-26 19:05+0200\n"
 "Last-Translator: Roxfr <roxfr@outlook.fr>\n"
 "Language-Team: French <fr@li.org>\n"
 "Language: fr\n"
@@ -36,11 +36,11 @@ msgstr ""
 
 #: data/pantheon-tweaks.appdata.xml.in:18
 msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
-msgstr ""
+msgstr "Exclure les thèmes Adwaita/gnome/hicolor des sélections de thèmes"
 
 #: data/pantheon-tweaks.appdata.xml.in:19
 msgid "Support accessing to panes with settings paths"
-msgstr ""
+msgstr "Prise en charge de l'accès aux volets avec les chemins de paramètres"
 
 #: data/pantheon-tweaks.appdata.xml.in:20
 #: data/pantheon-tweaks.appdata.xml.in:34
@@ -53,7 +53,7 @@ msgid ""
 "features and fixes:"
 msgstr ""
 "Elementary Tweaks est désormais renommé Pantheon Tweaks et bénéficie de "
-"nouvelles fonctionnalités et correctifs :"
+"nouvelles fonctionnalités et correctifs :"
 
 #: data/pantheon-tweaks.appdata.xml.in:28
 msgid "Remove preferences now supported in Pantheon officially"
@@ -120,7 +120,7 @@ msgstr "Réduire :"
 
 #: src/Panes/AnimationsPane.vala:56
 msgid "Workspace switch:"
-msgstr "Commutateur d'espace de travail :"
+msgstr "Commutateur d'espace de travail :"
 
 #: src/Panes/AppearancePane.vala:30
 msgid "Appearance"
@@ -185,7 +185,7 @@ msgstr "Pour afficher les sons personnalisés ici, placez-les dans %s."
 
 #: src/Panes/AppearancePane.vala:81
 msgid "Force to use dark stylesheet:"
-msgstr "Forcer l'utilisation d'une feuille de style sombre :"
+msgstr "Forcer l'utilisation d'une feuille de style sombre :"
 
 #: src/Panes/AppearancePane.vala:85
 msgid ""
@@ -209,7 +209,7 @@ msgstr "Modifie la disposition des boutons de la fenêtre."
 
 #: src/Panes/AppearancePane.vala:95
 msgid "Show GNOME menu:"
-msgstr "Afficher le menu GNOME :"
+msgstr "Afficher le menu GNOME :"
 
 #: src/Panes/AppearancePane.vala:97
 msgid "Whether to show GNOME menu in GNOME apps."
@@ -303,7 +303,7 @@ msgstr "Fichiers"
 
 #: src/Panes/FilesPane.vala:34
 msgid "Restore tabs:"
-msgstr "Onglets de restauration :"
+msgstr "Onglets de restauration :"
 
 #: src/Panes/FilesPane.vala:38
 msgid "Locale"
@@ -331,7 +331,7 @@ msgstr "Couleur de l'arrière plan :"
 
 #: src/Panes/TerminalPane.vala:44
 msgid "Follow last tab:"
-msgstr "Suivre le dernier onglet :"
+msgstr "Suivre le dernier onglet :"
 
 #: src/Panes/TerminalPane.vala:47
 msgid "Creating a new tab sets the working directory of the last opened tab."
@@ -341,7 +341,7 @@ msgstr ""
 
 #: src/Panes/TerminalPane.vala:50
 msgid "Unsafe paste alert:"
-msgstr "Alerte de collage dangereux :"
+msgstr "Alerte de collage dangereux :"
 
 #: src/Panes/TerminalPane.vala:52
 msgid "Show a warning dialog when a pasted command contains 'sudo'."
@@ -351,7 +351,7 @@ msgstr ""
 
 #: src/Panes/TerminalPane.vala:54
 msgid "Remember tabs:"
-msgstr "Se souvenir des onglets :"
+msgstr "Se souvenir des onglets :"
 
 #: src/Panes/TerminalPane.vala:56
 msgid "If enabled, last opened tabs are restored on start."
@@ -379,7 +379,7 @@ msgstr "Rester en haut tout en jouant :"
 
 #: src/Panes/VideosPane.vala:37
 msgid "Move window from video canvas:"
-msgstr "Déplacer la fenêtre du canevas vidéo :"
+msgstr "Déplacer la fenêtre du canevas vidéo :"
 
 #: src/Panes/VideosPane.vala:39
 msgid "If enabled, the window can be dragged by clicking anywhere on it."
@@ -388,7 +388,7 @@ msgstr ""
 
 #: src/Panes/VideosPane.vala:41
 msgid "Don't instantly start video playback:"
-msgstr "Ne pas démarrer instantanément la lecture vidéo :"
+msgstr "Ne pas démarrer instantanément la lecture vidéo :"
 
 #: src/Panes/VideosPane.vala:43
 msgid "If enabled, opening a video will not auto play it."
@@ -566,7 +566,7 @@ msgstr "Réinitialiser par défaut"
 #~ msgstr "Écran %d"
 
 #~ msgid "Monitor:"
-#~ msgstr "Écran :"
+#~ msgstr "Écran :"
 
 #~ msgid "The monitor that Plank is displayed on"
 #~ msgstr "L'écran sur lequel est affiché Plank"
@@ -621,7 +621,7 @@ msgstr "Réinitialiser par défaut"
 #~ msgstr "Personnalisé"
 
 #~ msgid "Opacity:"
-#~ msgstr "Opacité :"
+#~ msgstr "Opacité :"
 
 #~ msgid "How transparent the background of the terminal is"
 #~ msgstr "Transparence de l'arrière-plan du terminal"
