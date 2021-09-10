@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 17:06+0900\n"
+"POT-Creation-Date: 2021-09-11 07:38+0900\n"
 "PO-Revision-Date: 2017-07-24 17:58+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: \n"
@@ -39,42 +39,46 @@ msgid "Support accessing to panes with settings paths"
 msgstr ""
 
 #: data/pantheon-tweaks.appdata.xml.in:20
-#: data/pantheon-tweaks.appdata.xml.in:34
+msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:21
+#: data/pantheon-tweaks.appdata.xml.in:35
 msgid "Update translations"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:26
+#: data/pantheon-tweaks.appdata.xml.in:27
 msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:28
+#: data/pantheon-tweaks.appdata.xml.in:29
 msgid "Remove preferences now supported in Pantheon officially"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:29
+#: data/pantheon-tweaks.appdata.xml.in:30
 msgid "Remove preferences causing the plug crash"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:30
+#: data/pantheon-tweaks.appdata.xml.in:31
 msgid "Fully redesigned plug"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:31
+#: data/pantheon-tweaks.appdata.xml.in:32
 msgid "Support changing sound theme (thanks to @pongloongyeat)"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:32
+#: data/pantheon-tweaks.appdata.xml.in:33
 #, fuzzy
 msgid "Add new window controls layout"
 msgstr "Tinkintas langų valdiklių išdėstymas"
 
-#: data/pantheon-tweaks.appdata.xml.in:33
+#: data/pantheon-tweaks.appdata.xml.in:34
 msgid "Fix deprecations"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:41
+#: data/pantheon-tweaks.appdata.xml.in:42
 #, fuzzy
 msgid "Appearance pane"
 msgstr "Išvaizda"
@@ -136,7 +140,7 @@ msgstr "Derinti elementary OS nustatymus"
 msgid "GTK:"
 msgstr ""
 
-#. / TRANSLATORS: The "%s" represents the path where custom themes are installed
+#. TRANSLATORS: The "%s" represents the path where custom themes are installed
 #: src/Panes/AppearancePane.vala:50
 #, c-format
 msgid "To show custom themes here, put them in %s."
@@ -152,7 +156,7 @@ msgstr ""
 msgid "Icons:"
 msgstr "Piktogramų dydis:"
 
-#. / TRANSLATORS: The "%s" represents the path where custom icons are installed
+#. TRANSLATORS: The "%s" represents the path where custom icons are installed
 #: src/Panes/AppearancePane.vala:59
 #, c-format
 msgid "To show custom icons here, put them in %s."
@@ -163,7 +167,7 @@ msgstr ""
 msgid "Cursor:"
 msgstr "Žymeklio tema:"
 
-#. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
+#. TRANSLATORS: The "%s" represents the path where custom cursors are installed
 #: src/Panes/AppearancePane.vala:68
 #, c-format
 msgid "To show custom cursors here, put them in %s."
@@ -173,7 +177,7 @@ msgstr ""
 msgid "Sound:"
 msgstr ""
 
-#. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
+#. TRANSLATORS: The "%s" represents the path where custom sounds are installed
 #: src/Panes/AppearancePane.vala:77
 #, c-format
 msgid "To show custom sounds here, put them in %s."

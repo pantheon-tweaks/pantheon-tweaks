@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 17:06+0900\n"
+"POT-Creation-Date: 2021-09-11 07:38+0900\n"
 "PO-Revision-Date: 2021-08-26 19:05+0200\n"
 "Last-Translator: Roxfr <roxfr@outlook.fr>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -43,11 +43,15 @@ msgid "Support accessing to panes with settings paths"
 msgstr "Prise en charge de l'accès aux volets avec les chemins de paramètres"
 
 #: data/pantheon-tweaks.appdata.xml.in:20
-#: data/pantheon-tweaks.appdata.xml.in:34
+msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:21
+#: data/pantheon-tweaks.appdata.xml.in:35
 msgid "Update translations"
 msgstr "Mettre à jour les traductions"
 
-#: data/pantheon-tweaks.appdata.xml.in:26
+#: data/pantheon-tweaks.appdata.xml.in:27
 msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
@@ -55,33 +59,33 @@ msgstr ""
 "Elementary Tweaks est désormais renommé Pantheon Tweaks et bénéficie de "
 "nouvelles fonctionnalités et correctifs :"
 
-#: data/pantheon-tweaks.appdata.xml.in:28
+#: data/pantheon-tweaks.appdata.xml.in:29
 msgid "Remove preferences now supported in Pantheon officially"
 msgstr ""
 "Supprimer les préférences désormais prises en charge dans Pantheon "
 "officiellement"
 
-#: data/pantheon-tweaks.appdata.xml.in:29
+#: data/pantheon-tweaks.appdata.xml.in:30
 msgid "Remove preferences causing the plug crash"
 msgstr "Supprimer les préférences à l’origine du blocage de la fiche"
 
-#: data/pantheon-tweaks.appdata.xml.in:30
+#: data/pantheon-tweaks.appdata.xml.in:31
 msgid "Fully redesigned plug"
 msgstr "Fiche entièrement redessinée"
 
-#: data/pantheon-tweaks.appdata.xml.in:31
+#: data/pantheon-tweaks.appdata.xml.in:32
 msgid "Support changing sound theme (thanks to @pongloongyeat)"
 msgstr "Prise en charge du changement de thème sonore (grâce à @pongloongyeat)"
 
-#: data/pantheon-tweaks.appdata.xml.in:32
+#: data/pantheon-tweaks.appdata.xml.in:33
 msgid "Add new window controls layout"
 msgstr "Ajouter une nouvelle disposition des contrôles de fenêtre"
 
-#: data/pantheon-tweaks.appdata.xml.in:33
+#: data/pantheon-tweaks.appdata.xml.in:34
 msgid "Fix deprecations"
 msgstr "Corriger les dépréciations"
 
-#: data/pantheon-tweaks.appdata.xml.in:41
+#: data/pantheon-tweaks.appdata.xml.in:42
 msgid "Appearance pane"
 msgstr "Volet d'apparence"
 
@@ -142,7 +146,7 @@ msgstr "Réglage des thèmes"
 msgid "GTK:"
 msgstr "GTK :"
 
-#. / TRANSLATORS: The "%s" represents the path where custom themes are installed
+#. TRANSLATORS: The "%s" represents the path where custom themes are installed
 #: src/Panes/AppearancePane.vala:50
 #, c-format
 msgid "To show custom themes here, put them in %s."
@@ -157,7 +161,7 @@ msgstr "nom-thème"
 msgid "Icons:"
 msgstr "Icônes :"
 
-#. / TRANSLATORS: The "%s" represents the path where custom icons are installed
+#. TRANSLATORS: The "%s" represents the path where custom icons are installed
 #: src/Panes/AppearancePane.vala:59
 #, c-format
 msgid "To show custom icons here, put them in %s."
@@ -167,7 +171,7 @@ msgstr "Pour afficher les icônes personnalisées ici, placez-les dans %s."
 msgid "Cursor:"
 msgstr "Curseur :"
 
-#. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
+#. TRANSLATORS: The "%s" represents the path where custom cursors are installed
 #: src/Panes/AppearancePane.vala:68
 #, c-format
 msgid "To show custom cursors here, put them in %s."
@@ -177,7 +181,7 @@ msgstr "Pour afficher les curseurs personnalisés ici, placez-les dans %s."
 msgid "Sound:"
 msgstr "Son :"
 
-#. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
+#. TRANSLATORS: The "%s" represents the path where custom sounds are installed
 #: src/Panes/AppearancePane.vala:77
 #, c-format
 msgid "To show custom sounds here, put them in %s."
