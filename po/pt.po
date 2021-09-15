@@ -1,14 +1,14 @@
 # Portuguese translation for elementary-community
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the elementary-community package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-11 07:38+0900\n"
-"PO-Revision-Date: 2021-08-17 17:07+0100\n"
+"PO-Revision-Date: 2021-09-15 15:13+0100\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "Language: pt\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2014-08-30 08:41+0000\n"
 "X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/pantheon-tweaks.appdata.xml.in:5
 msgid "Pantheon Tweaks"
@@ -37,15 +38,16 @@ msgstr ""
 
 #: data/pantheon-tweaks.appdata.xml.in:18
 msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
-msgstr ""
+msgstr "Excluir os temas Adwaita/gnome/hicolor das seleções de temas"
 
 #: data/pantheon-tweaks.appdata.xml.in:19
 msgid "Support accessing to panes with settings paths"
-msgstr ""
+msgstr "Suporte para o acesso a painéis com caminhos de definições"
 
 #: data/pantheon-tweaks.appdata.xml.in:20
 msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
 msgstr ""
+"Certifica-se de que o plug funciona no NixOS (agradecimentos a @bobby285271)"
 
 #: data/pantheon-tweaks.appdata.xml.in:21
 #: data/pantheon-tweaks.appdata.xml.in:35
@@ -114,7 +116,7 @@ msgstr "Fechar:"
 #. when you "snap" a window.
 #: src/Panes/AnimationsPane.vala:48
 msgid "Snap:"
-msgstr "Snap:"
+msgstr "Instante:"
 
 #: src/Panes/AnimationsPane.vala:52
 msgid "Minimize:"
@@ -153,7 +155,7 @@ msgstr "Para mostrar temas personalizados aqui, coloque-os em %s."
 #: src/Panes/AppearancePane.vala:51 src/Panes/AppearancePane.vala:60
 #: src/Panes/AppearancePane.vala:69 src/Panes/AppearancePane.vala:78
 msgid "theme-name"
-msgstr "nome-tema"
+msgstr "nome do tema"
 
 #: src/Panes/AppearancePane.vala:54
 msgid "Icons:"
@@ -173,7 +175,7 @@ msgstr "Cursor:"
 #: src/Panes/AppearancePane.vala:68
 #, c-format
 msgid "To show custom cursors here, put them in %s."
-msgstr "Para mostrar cursores personalizados aqui, coloque-os em% s."
+msgstr "Para mostrar cursores personalizados aqui, coloque-os em %s."
 
 #: src/Panes/AppearancePane.vala:72
 msgid "Sound:"
