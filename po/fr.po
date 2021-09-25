@@ -44,7 +44,7 @@ msgstr "Prise en charge de l'accès aux volets avec les chemins de paramètres"
 
 #: data/pantheon-tweaks.appdata.xml.in:20
 msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
-msgstr ""
+msgstr "Assurez-vous que le programme fonctionne sur NixOS (merci à @bobby285271)"
 
 #: data/pantheon-tweaks.appdata.xml.in:21
 #: data/pantheon-tweaks.appdata.xml.in:35
