@@ -121,7 +121,24 @@ public class PantheonTweaks.Categories : Gtk.Paned {
             reset.can_focus = false;
 
             reset.activate_link.connect (() => {
-                reset_func ();
+                var reset_confirm_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+                    _("Are you sure you want to reset personalization?"),
+                    _("All settings in this pane will be restored to the factory defaults"),
+                    "dialog-warning", Gtk.ButtonsType.CANCEL
+                ) {
+                    modal = true
+                };
+                var reset_button = reset_confirm_dialog.add_button (_("Reset"), Gtk.ResponseType.ACCEPT);
+                reset_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+                reset_confirm_dialog.response.connect ((response_id) => {
+                    if (response_id == Gtk.ResponseType.ACCEPT) {
+                        reset_func ();
+                    }
+
+                    reset_confirm_dialog.destroy ();
+                });
+                reset_confirm_dialog.show ();
+
                 return true;
             });
 
