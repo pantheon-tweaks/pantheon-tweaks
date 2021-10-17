@@ -34,33 +34,6 @@ public class PantheonTweaks.ThemeSettings {
         PINK,
         BROWN,
         GRAY;
-
-        public string to_string () {
-            switch (this) {
-                case RED:
-                    return "strawberry";
-                case ORANGE:
-                    return "orange";
-                case YELLOW:
-                    return "banana";
-                case GREEN:
-                    return "lime";
-                case MINT:
-                    return "mint";
-                case BLUE:
-                    return "blueberry";
-                case PURPLE:
-                    return "grape";
-                case PINK:
-                    return "bubblegum";
-                case BROWN:
-                    return "cocoa";
-                case GRAY:
-                    return "slate";
-            }
-
-            return "auto";
-        }
     }
 
     public static AccentColor parse_accent_color (string full_style_name) {
