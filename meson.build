@@ -26,6 +26,7 @@ subdir('po')
 
 plug_files = files(
     'src/Tweaks.vala',
+    'src/Settings/AccountsService.vala',
     'src/Settings/GtkSettings.vala',
     'src/Settings/ThemeSettings.vala',
     'src/Settings/XSettings.vala',
