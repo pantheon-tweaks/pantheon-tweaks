@@ -189,7 +189,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
             controls_combobox.changed ();
         });
 
-        connect_reset_button (()=> {
+        on_click_reset (()=> {
             string[] keys = {"gtk-theme", "icon-theme", "cursor-theme"};
 
             foreach (var key in keys) {

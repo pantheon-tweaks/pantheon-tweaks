@@ -23,36 +23,40 @@ public class PantheonTweaks.Categories : Gtk.Paned {
 
     construct {
         var appearance_pane = new Panes.AppearancePane ();
-        var fonts_pane = new Panes.FontsPane ();
-        var animations_pane = new Panes.AnimationsPane ();
-        var misc_pane = new Panes.MiscPane ();
         var files_pane = new Panes.FilesPane ();
-        var terminal_pane = new Panes.TerminalPane ();
-        var videos_pane = new Panes.VideosPane ();
+
+        var panes = new Gee.ArrayList<Categories.Pane> ();
+        panes.add (appearance_pane);
+        panes.add (new Panes.FontsPane ());
+        panes.add (new Panes.AnimationsPane ());
+        panes.add (new Panes.MiscPane ());
+        panes.add (files_pane);
+        panes.add (new Panes.TerminalPane ());
+        panes.add (new Panes.VideosPane ());
 
         // Left: Add PaneListItems to PaneList
         pane_list = new Gtk.ListBox ();
         pane_list.set_size_request (176, 10);
-        pane_list.add (appearance_pane.pane_list_item);
-        pane_list.add (fonts_pane.pane_list_item);
-        pane_list.add (animations_pane.pane_list_item);
-        pane_list.add (misc_pane.pane_list_item);
-        pane_list.add (files_pane.pane_list_item);
-        pane_list.add (terminal_pane.pane_list_item);
-        pane_list.add (videos_pane.pane_list_item);
 
         // Right: Add Pane itself to Stack
         var stack = new Gtk.Stack ();
-        stack.add (appearance_pane);
-        stack.add (fonts_pane);
-        stack.add (animations_pane);
-        stack.add (misc_pane);
-        stack.add (files_pane);
-        stack.add (terminal_pane);
-        stack.add (videos_pane);
+
+        var toast = new Granite.Widgets.Toast (_("Reset settings successfully"));
+
+        var overlay = new Gtk.Overlay ();
+        overlay.add (stack);
+        overlay.add_overlay (toast);
+
+        foreach (var pane in panes) {
+            pane_list.add (pane.pane_list_item);
+            stack.add (pane);
+            pane.restored.connect (() => {
+                toast.send_notification ();
+            });
+        }
 
         pack1 (pane_list, false, false);
-        add2 (stack);
+        add2 (overlay);
 
         pane_list.row_selected.connect ((row) => {
             var list_item = ((Categories.Pane.PaneListItem) row);
@@ -82,6 +86,8 @@ public class PantheonTweaks.Categories : Gtk.Paned {
     }
 
     public abstract class Pane : Granite.SimpleSettingsPage {
+        public signal void restored ();
+
         protected delegate void Reset ();
 
         public PaneListItem pane_list_item { get; private set; }
@@ -116,7 +122,7 @@ public class PantheonTweaks.Categories : Gtk.Paned {
             return (SettingsSchemaSource.get_default ().lookup (schema, true) != null);
         }
 
-        protected void connect_reset_button (owned Reset reset_func) {
+        protected void on_click_reset (owned Reset reset_func) {
             var reset = new Gtk.LinkButton (_("Reset to default"));
             reset.can_focus = false;
 
@@ -133,6 +139,7 @@ public class PantheonTweaks.Categories : Gtk.Paned {
                 reset_confirm_dialog.response.connect ((response_id) => {
                     if (response_id == Gtk.ResponseType.ACCEPT) {
                         reset_func ();
+                        restored ();
                     }
 
                     reset_confirm_dialog.destroy ();

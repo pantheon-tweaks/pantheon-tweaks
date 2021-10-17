@@ -76,7 +76,7 @@ public class PantheonTweaks.Panes.AnimationsPane : Categories.Pane {
         settings.bind ("minimize-duration", minimize_duration_spinbutton, "value", SettingsBindFlags.DEFAULT);
         settings.bind ("workspace-switch-duration", workspace_duration_spinbutton, "value", SettingsBindFlags.DEFAULT);
 
-        connect_reset_button (() => {
+        on_click_reset (() => {
             string[] keys = {
                 "enable-animations", "open-duration", "snap-duration",
                 "minimize-duration", "close-duration", "workspace-switch-duration"

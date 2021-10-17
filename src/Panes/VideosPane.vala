@@ -57,7 +57,7 @@ public class PantheonTweaks.Panes.VideosPane : Categories.Pane {
         settings.bind ("move-window", move_window_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("playback-wait", playback_wait_switch, "active", SettingsBindFlags.DEFAULT);
 
-        connect_reset_button (() => {
+        on_click_reset (() => {
             string[] keys = {"stay-on-top", "move-window", "playback-wait"};
 
             foreach (var key in keys) {

@@ -52,7 +52,7 @@ public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
         settings.bind ("restore-tabs", restore_tabs_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("date-format", date_format_combo, "active_id", SettingsBindFlags.DEFAULT);
 
-        connect_reset_button (() => {
+        on_click_reset (() => {
             string[] keys = {"restore-tabs", "date-format"};
 
             foreach (var key in keys) {
