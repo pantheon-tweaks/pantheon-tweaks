@@ -18,6 +18,80 @@
  */
 
 public class PantheonTweaks.ThemeSettings {
+    public const string ELEMENTARY_STYLESHEET_PREFIX = "io.elementary.stylesheet.";
+
+    public enum AccentColor {
+        NO_PREFERENCE,
+        RED,
+        ORANGE,
+        YELLOW,
+        GREEN,
+        MINT,
+        BLUE,
+        PURPLE,
+        PINK,
+        BROWN,
+        GRAY;
+
+        public string to_string () {
+            switch (this) {
+                case RED:
+                    return "strawberry";
+                case ORANGE:
+                    return "orange";
+                case YELLOW:
+                    return "banana";
+                case GREEN:
+                    return "lime";
+                case MINT:
+                    return "mint";
+                case BLUE:
+                    return "blueberry";
+                case PURPLE:
+                    return "grape";
+                case PINK:
+                    return "bubblegum";
+                case BROWN:
+                    return "cocoa";
+                case GRAY:
+                    return "slate";
+            }
+
+            return "auto";
+        }
+    }
+
+    public static AccentColor parse_accent_color (string full_style_name) {
+        string variant_name = full_style_name.substring (ELEMENTARY_STYLESHEET_PREFIX.length);
+        switch (variant_name) {
+            case "strawberry":
+                return AccentColor.RED;
+            case "orange":
+                return AccentColor.ORANGE;
+            case "banana":
+                return AccentColor.YELLOW;
+            case "lime":
+                return AccentColor.GREEN;
+            case "mint":
+                return AccentColor.MINT;
+            case "blueberry":
+                return AccentColor.BLUE;
+            case "grape":
+                return AccentColor.PURPLE;
+            case "bubblegum":
+                return AccentColor.PINK;
+            case "cocoa":
+                return AccentColor.BROWN;
+            case "slate":
+                return AccentColor.GRAY;
+            case "auto":
+                return AccentColor.NO_PREFERENCE;
+            default:
+                warning ("Unexpected variant of elementary stylesheet, falling back to blueberry");
+                return AccentColor.BLUE;
+        }
+    }
+
     private const string[] IGNORE_LIST = {
         "Adwaita", "Emacs", "Default", "default", "gnome", "hicolor"
     };

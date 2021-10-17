@@ -15,13 +15,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
+ * Some code borrowed from:
+ * elementary/switchboard-plug-pantheon-shell, src/Views/Appearance.vala
  */
 
 public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
     private Gee.HashMap<string, string> preset_button_layouts;
     private XSettings x_settings;
+    private GLib.Settings interface_settings;
     private GLib.Settings appearance_settings;
 
+    private Categories.Pane.ComboBoxText gtk_combobox;
     private Categories.Pane.ComboBoxText controls_combobox;
     private Categories.Pane.Switch gnome_menu;
 
@@ -33,18 +37,46 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
     }
 
     construct {
-        var interface_settings = new GLib.Settings ("org.gnome.desktop.interface");
+        interface_settings = new GLib.Settings ("org.gnome.desktop.interface");
         var sound_settings = new GLib.Settings ("org.gnome.desktop.sound");
         x_settings = new XSettings ();
         var gtk_settings = new GtkSettings ();
         appearance_settings = new GLib.Settings ("org.pantheon.desktop.gala.appearance");
         var gnome_wm_settings = new GLib.Settings ("org.gnome.desktop.wm.preferences");
 
+        Pantheon.AccountsService? pantheon_act = null;
+
+        string? user_path = null;
+        try {
+            FDO.Accounts? accounts_service = GLib.Bus.get_proxy_sync (
+                GLib.BusType.SYSTEM,
+               "org.freedesktop.Accounts",
+               "/org/freedesktop/Accounts"
+            );
+
+            user_path = accounts_service.find_user_by_name (GLib.Environment.get_user_name ());
+        } catch (Error e) {
+            critical (e.message);
+        }
+
+        if (user_path != null) {
+            try {
+                pantheon_act = GLib.Bus.get_proxy_sync (
+                    GLib.BusType.SYSTEM,
+                    "org.freedesktop.Accounts",
+                    user_path,
+                    GLib.DBusProxyFlags.GET_INVALIDATED_PROPERTIES
+                );
+            } catch (Error e) {
+                warning ("Unable to get AccountsService proxy, color scheme preference may be incorrect");
+            }
+        }
+
         var theme_label = new Granite.HeaderLabel (_("Theme Settings"));
 
         var gtk_label = new SummaryLabel (_("GTK:"));
         var gtk_map = ThemeSettings.get_themes_map ("themes", "gtk-3.0");
-        var gtk_combobox = new ComboBoxText (gtk_map);
+        gtk_combobox = new ComboBoxText (gtk_map);
 
         /// TRANSLATORS: The "%s" represents the path where custom themes are installed
         var gtk_info = new DimLabel (_("To show custom themes here, put them in %s.").printf (
@@ -124,11 +156,27 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
         show_all ();
 
-        interface_settings.bind ("gtk-theme", gtk_combobox, "active_id", SettingsBindFlags.DEFAULT);
         interface_settings.bind ("icon-theme", icon_combobox, "active_id", SettingsBindFlags.DEFAULT);
         interface_settings.bind ("cursor-theme", cursor_combobox, "active_id", SettingsBindFlags.DEFAULT);
         sound_settings.bind ("theme-name", sound_combobox, "active_id", SettingsBindFlags.DEFAULT);
         dark_style_switch.bind_property ("active", gtk_settings, "prefer-dark-theme", BindingFlags.BIDIRECTIONAL);
+
+        if (((GLib.DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
+            ((GLib.DBusProxy) pantheon_act).g_properties_changed.connect ((changed, invalid) => {
+                gtk_combobox.active_id = interface_settings.get_string ("gtk-theme");
+            });
+        }
+
+        gtk_combobox.changed.connect (() => {
+            interface_settings.set_string ("gtk-theme", gtk_combobox.active_id);
+
+            if (gtk_combobox.active_id.has_prefix (ThemeSettings.ELEMENTARY_STYLESHEET_PREFIX)) {
+                ThemeSettings.AccentColor color = ThemeSettings.parse_accent_color (gtk_combobox.active_id);
+                if (((GLib.DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
+                    pantheon_act.prefers_accent_color = color;
+                }
+            }
+        });
 
         controls_combobox.changed.connect (() => {
             string new_layout = controls_combobox.active_id;
@@ -148,6 +196,10 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
                 interface_settings.reset (key);
             }
 
+            if (((GLib.DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
+                pantheon_act.prefers_accent_color = ThemeSettings.AccentColor.BLUE;
+            }
+
             sound_settings.reset ("theme-name");
             appearance_settings.reset ("button-layout");
             gnome_wm_settings.reset ("button-layout");
@@ -159,6 +211,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
     }
 
     private void init_data () {
+        gtk_combobox.active_id = interface_settings.get_string ("gtk-theme");
         controls_combobox.active_id = appearance_settings.get_string ("button-layout");
         gnome_menu.state = x_settings.has_gnome_menu ();
     }
