@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-02 19:42+0900\n"
-"PO-Revision-Date: 2021-08-24 17:08+0900\n"
+"PO-Revision-Date: 2021-11-02 19:51+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -35,42 +35,43 @@ msgstr ""
 #: data/pantheon-tweaks.appdata.xml.in:18
 msgid "Sync selected elementary stylesheet variant with Desktop Plug"
 msgstr ""
+"選択された elementary スタイルシートの色がデスクトッププラグの設定と同期する"
+"ように修正"
 
 #: data/pantheon-tweaks.appdata.xml.in:19
 msgid "Improves reliability of restoring visually"
-msgstr ""
+msgstr "設定をリセットしたことが視覚的わかるように修正"
 
 #: data/pantheon-tweaks.appdata.xml.in:20
 msgid ""
 "Prevent System Settings from crashing due to the removal of preferences in "
 "upstream Videos"
 msgstr ""
+"“ビデオ”での設定項目の削除が原因で“システム設定”がクラッシュする不具合を修正"
 
 #: data/pantheon-tweaks.appdata.xml.in:21
 msgid "Correct cursor and icon theme dir copies"
-msgstr ""
+msgstr "カーソルとアイコンテーマのディレクトリのテキストを修正"
 
 #: data/pantheon-tweaks.appdata.xml.in:23
 msgid "Translation updates:"
-msgstr ""
+msgstr "翻訳の更新:"
 
 #: data/pantheon-tweaks.appdata.xml.in:25
-#, fuzzy
 msgid "Update French translation (thanks to @roxfr)"
-msgstr "翻訳の更新"
+msgstr "フランス語翻訳を更新 (貢献者: @roxfr)"
 
 #: data/pantheon-tweaks.appdata.xml.in:26
 msgid "Update Russian translation (thanks to @camellan)"
-msgstr ""
+msgstr "ロシア語翻訳を更新 (貢献者: @camellan)"
 
 #: data/pantheon-tweaks.appdata.xml.in:27
 msgid "Update Portuguese translation (thanks to @hugok79)"
-msgstr ""
+msgstr "ポルトガル語翻訳を更新 (貢献者: @hugok79)"
 
 #: data/pantheon-tweaks.appdata.xml.in:28
-#, fuzzy
 msgid "Update Japanese translation"
-msgstr "翻訳の更新"
+msgstr "日本語翻訳を更新"
 
 #: data/pantheon-tweaks.appdata.xml.in:35
 msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
@@ -82,7 +83,7 @@ msgstr "設定パスを使用してペインにアクセスできる機能を追
 
 #: data/pantheon-tweaks.appdata.xml.in:37
 msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
-msgstr ""
+msgstr "NixOS でプラグが動作するように修正 (貢献者: @bobby285271)"
 
 #: data/pantheon-tweaks.appdata.xml.in:38
 #: data/pantheon-tweaks.appdata.xml.in:52
@@ -409,7 +410,7 @@ msgstr ""
 #. Right: Add Pane itself to Stack
 #: src/Widgets/Categories.vala:43
 msgid "Reset settings successfully"
-msgstr ""
+msgstr "設定を正常にリセットしました"
 
 #: src/Widgets/Categories.vala:69
 msgid "General"
@@ -425,34 +426,16 @@ msgstr "デフォルトにリセット"
 
 #: src/Widgets/Categories.vala:130
 msgid "Are you sure you want to reset personalization?"
-msgstr ""
+msgstr "個人設定をリセットしてもよろしいですか？"
 
 #: src/Widgets/Categories.vala:131
 msgid ""
 "All settings in this pane will be restored to the factory defaults. This "
 "action can't be undone."
 msgstr ""
+"このペインにあるすべての設定が出荷時のデフォルトに復元されます。この操作はや"
+"り直せません。"
 
 #: src/Widgets/Categories.vala:136
 msgid "Reset"
-msgstr ""
-
-#~ msgid "Videos"
-#~ msgstr "ビデオ"
-
-#~ msgid "Stay on top while playing:"
-#~ msgstr "再生中は最前面に表示:"
-
-#~ msgid "Move window from video canvas:"
-#~ msgstr "ビデオキャンバスでウィンドウを移動:"
-
-#~ msgid "If enabled, the window can be dragged by clicking anywhere on it."
-#~ msgstr ""
-#~ "有効にすると、ウィンドウのどこをクリックしてもドラッグできるようになりま"
-#~ "す。"
-
-#~ msgid "Don't instantly start video playback:"
-#~ msgstr "動画を自動的に再生しない:"
-
-#~ msgid "If enabled, opening a video will not auto play it."
-#~ msgstr "有効にすると、動画を開いても自動的に再生しません。"
+msgstr "リセット"
