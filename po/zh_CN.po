@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-11 07:38+0900\n"
+"POT-Creation-Date: 2021-11-02 19:42+0900\n"
 "PO-Revision-Date: 2021-08-10 19:50+0800\n"
 "Last-Translator: imgradeone <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Pantheon Tweaks"
 msgstr "Pantheon 优化"
 
-#: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:41
+#: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:40
 msgid "Tweak Pantheon settings"
 msgstr "修改 Pantheon 桌面环境设置"
 
@@ -33,58 +33,98 @@ msgid ""
 msgstr "专为 Pantheon 设计的系统设置面板，帮助您简便、安全地修改桌面外观。"
 
 #: data/pantheon-tweaks.appdata.xml.in:18
-msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
+msgid "Sync selected elementary stylesheet variant with Desktop Plug"
 msgstr ""
 
 #: data/pantheon-tweaks.appdata.xml.in:19
-msgid "Support accessing to panes with settings paths"
+msgid "Improves reliability of restoring visually"
 msgstr ""
 
 #: data/pantheon-tweaks.appdata.xml.in:20
-msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
+msgid ""
+"Prevent System Settings from crashing due to the removal of preferences in "
+"upstream Videos"
 msgstr ""
 
 #: data/pantheon-tweaks.appdata.xml.in:21
+msgid "Correct cursor and icon theme dir copies"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:23
+msgid "Translation updates:"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:25
+#, fuzzy
+msgid "Update French translation (thanks to @roxfr)"
+msgstr "翻译更新"
+
+#: data/pantheon-tweaks.appdata.xml.in:26
+msgid "Update Russian translation (thanks to @camellan)"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:27
+msgid "Update Portuguese translation (thanks to @hugok79)"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:28
+#, fuzzy
+msgid "Update Japanese translation"
+msgstr "翻译更新"
+
 #: data/pantheon-tweaks.appdata.xml.in:35
+msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:36
+msgid "Support accessing to panes with settings paths"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:37
+msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:38
+#: data/pantheon-tweaks.appdata.xml.in:52
 msgid "Update translations"
 msgstr "翻译更新"
 
-#: data/pantheon-tweaks.appdata.xml.in:27
+#: data/pantheon-tweaks.appdata.xml.in:44
 msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
 msgstr ""
 "elementary 优化现已更名为 Pantheon 优化，同时也获得了一些新功能和修复："
 
-#: data/pantheon-tweaks.appdata.xml.in:29
+#: data/pantheon-tweaks.appdata.xml.in:46
 msgid "Remove preferences now supported in Pantheon officially"
 msgstr "删除 Pantheon 目前官方支持的设置项"
 
-#: data/pantheon-tweaks.appdata.xml.in:30
+#: data/pantheon-tweaks.appdata.xml.in:47
 msgid "Remove preferences causing the plug crash"
 msgstr "删除导致插件崩溃的设置项"
 
-#: data/pantheon-tweaks.appdata.xml.in:31
+#: data/pantheon-tweaks.appdata.xml.in:48
 msgid "Fully redesigned plug"
 msgstr "完全重新设计的插件"
 
-#: data/pantheon-tweaks.appdata.xml.in:32
+#: data/pantheon-tweaks.appdata.xml.in:49
 msgid "Support changing sound theme (thanks to @pongloongyeat)"
 msgstr "支持修改音效主题（特别感谢 @pongloongyeat）"
 
-#: data/pantheon-tweaks.appdata.xml.in:33
+#: data/pantheon-tweaks.appdata.xml.in:50
 msgid "Add new window controls layout"
 msgstr "增加新的窗口控制布局"
 
-#: data/pantheon-tweaks.appdata.xml.in:34
+#: data/pantheon-tweaks.appdata.xml.in:51
 msgid "Fix deprecations"
 msgstr "弃用修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:42
+#: data/pantheon-tweaks.appdata.xml.in:59
 msgid "Appearance pane"
 msgstr "外观面板"
 
-#: src/Tweaks.vala:40
+#: src/Tweaks.vala:39
 msgid "Tweaks"
 msgstr "优化"
 
@@ -104,9 +144,9 @@ msgstr "打开："
 msgid "Close:"
 msgstr "关闭："
 
-#. TRANSLATORS: The word "snap" refers to a feature of Pantheon that allows you to resize a window
-#. into the half size of your screen automatically. So this string means the length of animation
-#. when you "snap" a window.
+#. / TRANSLATORS: The word "snap" refers to a feature of Pantheon that allows you to resize a window
+#. / into the half size of your screen automatically. So this string means the length of animation
+#. / when you "snap" a window.
 #: src/Panes/AnimationsPane.vala:48
 msgid "Snap:"
 msgstr "分屏："
@@ -119,133 +159,133 @@ msgstr "最小化："
 msgid "Workspace switch:"
 msgstr "切换工作区："
 
-#: src/Panes/AppearancePane.vala:30
+#: src/Panes/AppearancePane.vala:34
 msgid "Appearance"
 msgstr "外观"
 
-#: src/Panes/AppearancePane.vala:31
+#: src/Panes/AppearancePane.vala:35
 msgid ""
 "Change the theme and button layout of windows. Changing theme may cause "
 "visibility issue."
 msgstr "修改主题和窗口布局。修改主题可能会出现视觉问题。"
 
-#: src/Panes/AppearancePane.vala:43
+#: src/Panes/AppearancePane.vala:75
 msgid "Theme Settings"
 msgstr "主题设置"
 
-#: src/Panes/AppearancePane.vala:45
+#: src/Panes/AppearancePane.vala:77
 msgid "GTK:"
 msgstr "GTK："
 
-#. TRANSLATORS: The "%s" represents the path where custom themes are installed
-#: src/Panes/AppearancePane.vala:50
+#. / TRANSLATORS: The "%s" represents the path where custom themes are installed
+#: src/Panes/AppearancePane.vala:82
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr "如果您想在此显示自定义主题，请在 %s 下存放主题文件。"
 
-#: src/Panes/AppearancePane.vala:51 src/Panes/AppearancePane.vala:60
-#: src/Panes/AppearancePane.vala:69 src/Panes/AppearancePane.vala:78
+#: src/Panes/AppearancePane.vala:83 src/Panes/AppearancePane.vala:92
+#: src/Panes/AppearancePane.vala:101 src/Panes/AppearancePane.vala:110
 msgid "theme-name"
 msgstr "theme-name"
 
-#: src/Panes/AppearancePane.vala:54
+#: src/Panes/AppearancePane.vala:86
 msgid "Icons:"
 msgstr "图标："
 
-#. TRANSLATORS: The "%s" represents the path where custom icons are installed
-#: src/Panes/AppearancePane.vala:59
+#. / TRANSLATORS: The "%s" represents the path where custom icons are installed
+#: src/Panes/AppearancePane.vala:91
 #, c-format
 msgid "To show custom icons here, put them in %s."
 msgstr "如果您想在此显示自定义图标，请在 %s 下存放图标文件。"
 
-#: src/Panes/AppearancePane.vala:63
+#: src/Panes/AppearancePane.vala:95
 msgid "Cursor:"
 msgstr "光标："
 
-#. TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:68
+#. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
+#: src/Panes/AppearancePane.vala:100
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr "如果您想在此显示自定义光标，请在 %s 下存放光标文件。"
 
-#: src/Panes/AppearancePane.vala:72
+#: src/Panes/AppearancePane.vala:104
 msgid "Sound:"
 msgstr "音效："
 
-#. TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:77
+#. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
+#: src/Panes/AppearancePane.vala:109
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr "如果您想在此显示自定义音效，请在 %s 下存放音效文件。"
 
-#: src/Panes/AppearancePane.vala:81
+#: src/Panes/AppearancePane.vala:113
 msgid "Force to use dark stylesheet:"
 msgstr "强制使用暗色样式："
 
-#: src/Panes/AppearancePane.vala:85
+#: src/Panes/AppearancePane.vala:117
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
 msgstr ""
 "强制对应用使用暗色风格（即使应用程序不支持）。需要重新启动应用程序才能生效。"
 
-#: src/Panes/AppearancePane.vala:88
+#: src/Panes/AppearancePane.vala:120
 msgid "Window Controls"
 msgstr "窗口控制"
 
-#: src/Panes/AppearancePane.vala:90
+#: src/Panes/AppearancePane.vala:122
 msgid "Layout:"
 msgstr "布局："
 
-#: src/Panes/AppearancePane.vala:93
+#: src/Panes/AppearancePane.vala:125
 msgid "Changes button layout of the window."
 msgstr "修改窗口按钮布局。"
 
-#: src/Panes/AppearancePane.vala:95
+#: src/Panes/AppearancePane.vala:127
 msgid "Show GNOME menu:"
 msgstr "显示 GNOME 菜单："
 
-#: src/Panes/AppearancePane.vala:97
+#: src/Panes/AppearancePane.vala:129
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "决定是否在 GNOME 应用程序中展示 GNOME 菜单。"
 
-#: src/Panes/AppearancePane.vala:169
+#: src/Panes/AppearancePane.vala:222
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:170
+#: src/Panes/AppearancePane.vala:223
 msgid "elementary Reversed"
 msgstr "elementary（反向）"
 
-#: src/Panes/AppearancePane.vala:171
+#: src/Panes/AppearancePane.vala:224
 msgid "Close Only Right"
 msgstr "仅左侧关闭按钮"
 
-#: src/Panes/AppearancePane.vala:172
+#: src/Panes/AppearancePane.vala:225
 msgid "Close Only Left"
 msgstr "仅右侧关闭按钮"
 
-#: src/Panes/AppearancePane.vala:173
+#: src/Panes/AppearancePane.vala:226
 msgid "Add Minimize Left"
 msgstr "在左侧添加最小化"
 
-#: src/Panes/AppearancePane.vala:174
+#: src/Panes/AppearancePane.vala:227
 msgid "Add Minimize Right"
 msgstr "在右侧添加最小化"
 
-#: src/Panes/AppearancePane.vala:175
+#: src/Panes/AppearancePane.vala:228
 msgid "Replace Maximize to Minimize"
 msgstr "将最大化替换为最小化"
 
-#: src/Panes/AppearancePane.vala:176
+#: src/Panes/AppearancePane.vala:229
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:177
+#: src/Panes/AppearancePane.vala:230
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:178
+#: src/Panes/AppearancePane.vala:231
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
@@ -355,41 +395,54 @@ msgid ""
 "are either no or multiple possible completions."
 msgstr "触发行尾或在 Tab 自动填充提示时没有可行填充的提示音效。"
 
-#: src/Panes/VideosPane.vala:24
-msgid "Videos"
-msgstr "视频"
+#. Right: Add Pane itself to Stack
+#: src/Widgets/Categories.vala:43
+msgid "Reset settings successfully"
+msgstr ""
 
-#: src/Panes/VideosPane.vala:34
-msgid "Stay on top while playing:"
-msgstr "播放时置顶："
-
-#: src/Panes/VideosPane.vala:37
-msgid "Move window from video canvas:"
-msgstr "在视频区域移动窗口："
-
-#: src/Panes/VideosPane.vala:39
-msgid "If enabled, the window can be dragged by clicking anywhere on it."
-msgstr "启用后，您点击窗口的任何地方都将可以拖动窗口。"
-
-#: src/Panes/VideosPane.vala:41
-msgid "Don't instantly start video playback:"
-msgstr "不立即播放视频："
-
-#: src/Panes/VideosPane.vala:43
-msgid "If enabled, opening a video will not auto play it."
-msgstr "启用后，打开视频将不会自动播放。"
-
-#: src/Widgets/Categories.vala:66
+#: src/Widgets/Categories.vala:69
 msgid "General"
 msgstr "常规"
 
-#: src/Widgets/Categories.vala:68
+#: src/Widgets/Categories.vala:71
 msgid "Applications"
 msgstr "应用程序"
 
-#: src/Widgets/Categories.vala:120
+#: src/Widgets/Categories.vala:125
 msgid "Reset to default"
 msgstr "恢复默认"
+
+#: src/Widgets/Categories.vala:130
+msgid "Are you sure you want to reset personalization?"
+msgstr ""
+
+#: src/Widgets/Categories.vala:131
+msgid ""
+"All settings in this pane will be restored to the factory defaults. This "
+"action can't be undone."
+msgstr ""
+
+#: src/Widgets/Categories.vala:136
+msgid "Reset"
+msgstr ""
+
+#~ msgid "Videos"
+#~ msgstr "视频"
+
+#~ msgid "Stay on top while playing:"
+#~ msgstr "播放时置顶："
+
+#~ msgid "Move window from video canvas:"
+#~ msgstr "在视频区域移动窗口："
+
+#~ msgid "If enabled, the window can be dragged by clicking anywhere on it."
+#~ msgstr "启用后，您点击窗口的任何地方都将可以拖动窗口。"
+
+#~ msgid "Don't instantly start video playback:"
+#~ msgstr "不立即播放视频："
+
+#~ msgid "If enabled, opening a video will not auto play it."
+#~ msgstr "启用后，打开视频将不会自动播放。"
 
 #~ msgid "Shadows"
 #~ msgstr "阴影"

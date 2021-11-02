@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-11 07:38+0900\n"
+"POT-Creation-Date: 2021-11-02 19:42+0900\n"
 "PO-Revision-Date: 2021-08-14 16:37+0200\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Pantheon Tweaks"
 msgstr "Pantheon trükkök"
 
-#: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:41
+#: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:40
 msgid "Tweak Pantheon settings"
 msgstr "Pantheon-beállítások módosítása"
 
@@ -35,23 +35,63 @@ msgstr ""
 "biztonságosan testreszabhatja az asztali felület megjelenését."
 
 #: data/pantheon-tweaks.appdata.xml.in:18
-msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
+msgid "Sync selected elementary stylesheet variant with Desktop Plug"
 msgstr ""
 
 #: data/pantheon-tweaks.appdata.xml.in:19
-msgid "Support accessing to panes with settings paths"
+msgid "Improves reliability of restoring visually"
 msgstr ""
 
 #: data/pantheon-tweaks.appdata.xml.in:20
-msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
+msgid ""
+"Prevent System Settings from crashing due to the removal of preferences in "
+"upstream Videos"
 msgstr ""
 
 #: data/pantheon-tweaks.appdata.xml.in:21
+msgid "Correct cursor and icon theme dir copies"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:23
+msgid "Translation updates:"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:25
+#, fuzzy
+msgid "Update French translation (thanks to @roxfr)"
+msgstr "Frissített fordítások"
+
+#: data/pantheon-tweaks.appdata.xml.in:26
+msgid "Update Russian translation (thanks to @camellan)"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:27
+msgid "Update Portuguese translation (thanks to @hugok79)"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:28
+#, fuzzy
+msgid "Update Japanese translation"
+msgstr "Frissített fordítások"
+
 #: data/pantheon-tweaks.appdata.xml.in:35
+msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:36
+msgid "Support accessing to panes with settings paths"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:37
+msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:38
+#: data/pantheon-tweaks.appdata.xml.in:52
 msgid "Update translations"
 msgstr "Frissített fordítások"
 
-#: data/pantheon-tweaks.appdata.xml.in:27
+#: data/pantheon-tweaks.appdata.xml.in:44
 msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
@@ -59,35 +99,35 @@ msgstr ""
 "Az elementary Tweaks át lett nevezve Pantheon trükkökre és kapott pár új "
 "funkciót és javítást:"
 
-#: data/pantheon-tweaks.appdata.xml.in:29
+#: data/pantheon-tweaks.appdata.xml.in:46
 msgid "Remove preferences now supported in Pantheon officially"
 msgstr "A Pantheon által már támogatott beállítások eltávolítva"
 
-#: data/pantheon-tweaks.appdata.xml.in:30
+#: data/pantheon-tweaks.appdata.xml.in:47
 msgid "Remove preferences causing the plug crash"
 msgstr "Az összeomlást okozó beállítások eltávolítva"
 
-#: data/pantheon-tweaks.appdata.xml.in:31
+#: data/pantheon-tweaks.appdata.xml.in:48
 msgid "Fully redesigned plug"
 msgstr "Teljes redizájn"
 
-#: data/pantheon-tweaks.appdata.xml.in:32
+#: data/pantheon-tweaks.appdata.xml.in:49
 msgid "Support changing sound theme (thanks to @pongloongyeat)"
 msgstr "Hangtéma változtatásának támogatása (köszönet @pongloongyeat)"
 
-#: data/pantheon-tweaks.appdata.xml.in:33
+#: data/pantheon-tweaks.appdata.xml.in:50
 msgid "Add new window controls layout"
 msgstr "Új ablakvezérlő-elrendezések"
 
-#: data/pantheon-tweaks.appdata.xml.in:34
+#: data/pantheon-tweaks.appdata.xml.in:51
 msgid "Fix deprecations"
 msgstr "Elavulások javítva"
 
-#: data/pantheon-tweaks.appdata.xml.in:42
+#: data/pantheon-tweaks.appdata.xml.in:59
 msgid "Appearance pane"
 msgstr "Megjelenés"
 
-#: src/Tweaks.vala:40
+#: src/Tweaks.vala:39
 msgid "Tweaks"
 msgstr "Trükkök"
 
@@ -107,9 +147,9 @@ msgstr "Megnyitás:"
 msgid "Close:"
 msgstr "Bezárás:"
 
-#. TRANSLATORS: The word "snap" refers to a feature of Pantheon that allows you to resize a window
-#. into the half size of your screen automatically. So this string means the length of animation
-#. when you "snap" a window.
+#. / TRANSLATORS: The word "snap" refers to a feature of Pantheon that allows you to resize a window
+#. / into the half size of your screen automatically. So this string means the length of animation
+#. / when you "snap" a window.
 #: src/Panes/AnimationsPane.vala:48
 msgid "Snap:"
 msgstr "Kitűzés:"
@@ -122,11 +162,11 @@ msgstr "Lekicsinyítés:"
 msgid "Workspace switch:"
 msgstr "Munkaterület váltása:"
 
-#: src/Panes/AppearancePane.vala:30
+#: src/Panes/AppearancePane.vala:34
 msgid "Appearance"
 msgstr "Megjelenés"
 
-#: src/Panes/AppearancePane.vala:31
+#: src/Panes/AppearancePane.vala:35
 msgid ""
 "Change the theme and button layout of windows. Changing theme may cause "
 "visibility issue."
@@ -134,60 +174,60 @@ msgstr ""
 "Az ablakok témájának és gombelrendezésének megváltoztatása. A téma cseréje "
 "megjelenési problémákat okozhat."
 
-#: src/Panes/AppearancePane.vala:43
+#: src/Panes/AppearancePane.vala:75
 msgid "Theme Settings"
 msgstr "Témabeállítások"
 
-#: src/Panes/AppearancePane.vala:45
+#: src/Panes/AppearancePane.vala:77
 msgid "GTK:"
 msgstr "GTK:"
 
-#. TRANSLATORS: The "%s" represents the path where custom themes are installed
-#: src/Panes/AppearancePane.vala:50
+#. / TRANSLATORS: The "%s" represents the path where custom themes are installed
+#: src/Panes/AppearancePane.vala:82
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr "Az egyéni témák megjelenítéséhez helyezze őket ide: %s."
 
-#: src/Panes/AppearancePane.vala:51 src/Panes/AppearancePane.vala:60
-#: src/Panes/AppearancePane.vala:69 src/Panes/AppearancePane.vala:78
+#: src/Panes/AppearancePane.vala:83 src/Panes/AppearancePane.vala:92
+#: src/Panes/AppearancePane.vala:101 src/Panes/AppearancePane.vala:110
 msgid "theme-name"
 msgstr "téma-neve"
 
-#: src/Panes/AppearancePane.vala:54
+#: src/Panes/AppearancePane.vala:86
 msgid "Icons:"
 msgstr "Ikonok:"
 
-#. TRANSLATORS: The "%s" represents the path where custom icons are installed
-#: src/Panes/AppearancePane.vala:59
+#. / TRANSLATORS: The "%s" represents the path where custom icons are installed
+#: src/Panes/AppearancePane.vala:91
 #, c-format
 msgid "To show custom icons here, put them in %s."
 msgstr "Az egyéni ikonok megjelenítéséhez helyezze őket ide: %s."
 
-#: src/Panes/AppearancePane.vala:63
+#: src/Panes/AppearancePane.vala:95
 msgid "Cursor:"
 msgstr "Kurzor:"
 
-#. TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:68
+#. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
+#: src/Panes/AppearancePane.vala:100
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr "Az egyéni kurzorok megjelenítéséhez helyezze őket ide: %s."
 
-#: src/Panes/AppearancePane.vala:72
+#: src/Panes/AppearancePane.vala:104
 msgid "Sound:"
 msgstr "Hang:"
 
-#. TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:77
+#. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
+#: src/Panes/AppearancePane.vala:109
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr "Az egyéni hangok megjelenítéséhez helyezze őket ide: %s."
 
-#: src/Panes/AppearancePane.vala:81
+#: src/Panes/AppearancePane.vala:113
 msgid "Force to use dark stylesheet:"
 msgstr "Sötét színséma használatának kényszerítése:"
 
-#: src/Panes/AppearancePane.vala:85
+#: src/Panes/AppearancePane.vala:117
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
@@ -195,63 +235,63 @@ msgstr ""
 "Rákényszeríti a sötét témát az összes alkalmazásra, akkor is, ha azok nem "
 "támogatják. Az alkalmazások újraindítását igényli."
 
-#: src/Panes/AppearancePane.vala:88
+#: src/Panes/AppearancePane.vala:120
 msgid "Window Controls"
 msgstr "Ablakvezérlők"
 
-#: src/Panes/AppearancePane.vala:90
+#: src/Panes/AppearancePane.vala:122
 msgid "Layout:"
 msgstr "Elrendezés:"
 
-#: src/Panes/AppearancePane.vala:93
+#: src/Panes/AppearancePane.vala:125
 msgid "Changes button layout of the window."
 msgstr "Megváltoztatja az ablakok gombjainak elrendezését."
 
-#: src/Panes/AppearancePane.vala:95
+#: src/Panes/AppearancePane.vala:127
 msgid "Show GNOME menu:"
 msgstr "GNOME menü megjelenítése:"
 
-#: src/Panes/AppearancePane.vala:97
+#: src/Panes/AppearancePane.vala:129
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "Megjelenítésre kerüljön-e a GNOME menüje a GNOME alkalmazásokban."
 
-#: src/Panes/AppearancePane.vala:169
+#: src/Panes/AppearancePane.vala:222
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:170
+#: src/Panes/AppearancePane.vala:223
 msgid "elementary Reversed"
 msgstr "Fordított elementary"
 
-#: src/Panes/AppearancePane.vala:171
+#: src/Panes/AppearancePane.vala:224
 msgid "Close Only Right"
 msgstr "Csak bezárás gomb jobb oldalt"
 
-#: src/Panes/AppearancePane.vala:172
+#: src/Panes/AppearancePane.vala:225
 msgid "Close Only Left"
 msgstr "Csak bezárás gomb bal oldalt"
 
-#: src/Panes/AppearancePane.vala:173
+#: src/Panes/AppearancePane.vala:226
 msgid "Add Minimize Left"
 msgstr "Lekicsinyítő gomb bal oldalon"
 
-#: src/Panes/AppearancePane.vala:174
+#: src/Panes/AppearancePane.vala:227
 msgid "Add Minimize Right"
 msgstr "Lekicsinyítő gomb jobb oldalon"
 
-#: src/Panes/AppearancePane.vala:175
+#: src/Panes/AppearancePane.vala:228
 msgid "Replace Maximize to Minimize"
 msgstr "Maximalizálás helyett lekicsinyítés"
 
-#: src/Panes/AppearancePane.vala:176
+#: src/Panes/AppearancePane.vala:229
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:177
+#: src/Panes/AppearancePane.vala:230
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:178
+#: src/Panes/AppearancePane.vala:231
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
@@ -365,41 +405,54 @@ msgstr ""
 "Hangjelzés sorvégbe ütközéskor és tab-kiegészítéskor, ha nincsenek, vagy "
 "pedig több javaslat van."
 
-#: src/Panes/VideosPane.vala:24
-msgid "Videos"
-msgstr "Videók"
+#. Right: Add Pane itself to Stack
+#: src/Widgets/Categories.vala:43
+msgid "Reset settings successfully"
+msgstr ""
 
-#: src/Panes/VideosPane.vala:34
-msgid "Stay on top while playing:"
-msgstr "Felülmaradás lejátszás közben:"
-
-#: src/Panes/VideosPane.vala:37
-msgid "Move window from video canvas:"
-msgstr "Az ablak mozgatása a videóvászonról:"
-
-#: src/Panes/VideosPane.vala:39
-msgid "If enabled, the window can be dragged by clicking anywhere on it."
-msgstr "Az ablak elmozgatható lesz, akárhol is kattint rá és ragadja meg."
-
-#: src/Panes/VideosPane.vala:41
-msgid "Don't instantly start video playback:"
-msgstr "Ne induljon el azonnal a videólejátszás:"
-
-#: src/Panes/VideosPane.vala:43
-msgid "If enabled, opening a video will not auto play it."
-msgstr "A videók nem fognak automatikusan elindulni megnyitás után."
-
-#: src/Widgets/Categories.vala:66
+#: src/Widgets/Categories.vala:69
 msgid "General"
 msgstr "Általános"
 
-#: src/Widgets/Categories.vala:68
+#: src/Widgets/Categories.vala:71
 msgid "Applications"
 msgstr "Alkalmazások"
 
-#: src/Widgets/Categories.vala:120
+#: src/Widgets/Categories.vala:125
 msgid "Reset to default"
 msgstr "Visszaállítás alapértelmezettre"
+
+#: src/Widgets/Categories.vala:130
+msgid "Are you sure you want to reset personalization?"
+msgstr ""
+
+#: src/Widgets/Categories.vala:131
+msgid ""
+"All settings in this pane will be restored to the factory defaults. This "
+"action can't be undone."
+msgstr ""
+
+#: src/Widgets/Categories.vala:136
+msgid "Reset"
+msgstr ""
+
+#~ msgid "Videos"
+#~ msgstr "Videók"
+
+#~ msgid "Stay on top while playing:"
+#~ msgstr "Felülmaradás lejátszás közben:"
+
+#~ msgid "Move window from video canvas:"
+#~ msgstr "Az ablak mozgatása a videóvászonról:"
+
+#~ msgid "If enabled, the window can be dragged by clicking anywhere on it."
+#~ msgstr "Az ablak elmozgatható lesz, akárhol is kattint rá és ragadja meg."
+
+#~ msgid "Don't instantly start video playback:"
+#~ msgstr "Ne induljon el azonnal a videólejátszás:"
+
+#~ msgid "If enabled, opening a video will not auto play it."
+#~ msgstr "A videók nem fognak automatikusan elindulni megnyitás után."
 
 #~ msgid "Shadows"
 #~ msgstr "Árnyékok"
