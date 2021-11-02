@@ -36,7 +36,6 @@ plug_files = files(
     'src/Panes/MiscPane.vala',
     'src/Panes/FilesPane.vala',
     'src/Panes/TerminalPane.vala',
-    'src/Panes/VideosPane.vala',
     'src/Widgets/Categories.vala',
 )
 
