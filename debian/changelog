@@ -1,3 +1,13 @@
+pantheon-tweaks (1.0.2) focal; urgency=medium
+
+  * Sync selected elementary stylesheet variant with Desktop Plug
+  * Improves reliability of restoring visually
+  * Prevent System Settings from crashing due to the removal of preferences in upstream Videos
+  * Correct cursor and icon theme dir copies
+  * Update translations
+
+ -- Ryo Nakano <ryonakaknock3@gmail.com>  Tue, 02 Nov 2021 19:24:56 +0900
+
 pantheon-tweaks (1.0.1) focal; urgency=low
 
   * Exclude Adwaita/gnome/hicolor themes from theme selections
@@ -5,7 +15,7 @@ pantheon-tweaks (1.0.1) focal; urgency=low
   * Make sure the plug works on NixOS (thanks to @bobby285271)
   * Update translations
 
- -- Ryo Nakano <ryonakano@ryonakano-desktop>  Tue, 24 Aug 2021 18:53:12 +0900
+ -- Ryo Nakano <ryonakaknock3@gmail.com>  Tue, 24 Aug 2021 18:53:12 +0900
 
 pantheon-tweaks (1.0.0) focal; urgency=medium
 
