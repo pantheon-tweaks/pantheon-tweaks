@@ -32,7 +32,6 @@ public class PantheonTweaks.TweaksPlug : Switchboard.Plug {
         settings.set ("tweaks/misc", "misc");
         settings.set ("tweaks/files", "files");
         settings.set ("tweaks/terminal", "terminal");
-        settings.set ("tweaks/videos", "videos");
 
         Object (
             category: Category.PERSONAL,

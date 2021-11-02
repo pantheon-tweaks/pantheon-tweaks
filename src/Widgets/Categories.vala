@@ -17,7 +17,7 @@
  */
 
 public class PantheonTweaks.Categories : Gtk.Paned {
-    private const string[] PANE_NAME = { "appearance", "fonts", "animations", "misc", "files", "terminal", "videos" };
+    private const string[] PANE_NAME = { "appearance", "fonts", "animations", "misc", "files", "terminal" };
 
     private Gtk.ListBox pane_list;
 
@@ -32,7 +32,6 @@ public class PantheonTweaks.Categories : Gtk.Paned {
         panes.add (new Panes.MiscPane ());
         panes.add (files_pane);
         panes.add (new Panes.TerminalPane ());
-        panes.add (new Panes.VideosPane ());
 
         // Left: Add PaneListItems to PaneList
         pane_list = new Gtk.ListBox ();
