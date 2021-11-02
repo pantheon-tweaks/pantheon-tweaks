@@ -12,6 +12,23 @@
   <icon type="stock">preferences-desktop-tweaks</icon>
   <translation type="gettext">pantheon-tweaks-plug</translation>
   <releases>
+    <release version="1.0.2" date="2021-11-02" urgency="medium">
+      <description>
+        <ul>
+          <li>Sync selected elementary stylesheet variant with Desktop Plug</li>
+          <li>Improves reliability of restoring visually</li>
+          <li>Prevent System Settings from crashing due to the removal of preferences in upstream Videos</li>
+          <li>Correct cursor and icon theme dir copies</li>
+        </ul>
+        <p>Translation updates:</p>
+        <ul>
+          <li>Update French translation (thanks to @roxfr)</li>
+          <li>Update Russian translation (thanks to @camellan)</li>
+          <li>Update Portuguese translation (thanks to @hugok79)</li>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.1" date="2021-08-24" urgency="low">
       <description>
         <ul>
