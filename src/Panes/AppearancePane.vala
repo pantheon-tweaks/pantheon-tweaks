@@ -89,7 +89,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
         /// TRANSLATORS: The "%s" represents the path where custom icons are installed
         var icon_info = new DimLabel (_("To show custom icons here, put them in %s.").printf (
-            "~/.local/share/icons/<%s>".printf (_("theme-name"))
+            "~/.icons/<%s>".printf (_("theme-name"))
         ));
 
         var cursor_label = new SummaryLabel (_("Cursor:"));
@@ -98,7 +98,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
         /// TRANSLATORS: The "%s" represents the path where custom cursors are installed
         var cursor_info = new DimLabel (_("To show custom cursors here, put them in %s.").printf (
-            "~/.local/share/icons/<%s>/cursors".printf (_("theme-name"))
+            "~/.icons/<%s>/cursors".printf (_("theme-name"))
         ));
 
         var sound_label = new SummaryLabel (_("Sound:"));
