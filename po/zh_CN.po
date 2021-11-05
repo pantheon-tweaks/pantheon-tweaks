@@ -259,11 +259,11 @@ msgstr "elementary（反向）"
 
 #: src/Panes/AppearancePane.vala:224
 msgid "Close Only Right"
-msgstr "仅左侧关闭按钮"
+msgstr "仅右侧关闭按钮"
 
 #: src/Panes/AppearancePane.vala:225
 msgid "Close Only Left"
-msgstr "仅右侧关闭按钮"
+msgstr "仅左侧关闭按钮"
 
 #: src/Panes/AppearancePane.vala:226
 msgid "Add Minimize Left"
@@ -414,7 +414,7 @@ msgstr "恢复默认"
 
 #: src/Widgets/Categories.vala:130
 msgid "Are you sure you want to reset personalization?"
-msgstr ""
+msgstr "你确定要重置所有个性化选项吗？"
 
 #: src/Widgets/Categories.vala:131
 msgid ""
@@ -424,7 +424,7 @@ msgstr ""
 
 #: src/Widgets/Categories.vala:136
 msgid "Reset"
-msgstr ""
+msgstr "重置"
 
 #~ msgid "Videos"
 #~ msgstr "视频"
