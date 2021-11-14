@@ -8,120 +8,129 @@ msgstr ""
 "Project-Id-Version: pantheon-tweaks-plug\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-02 19:42+0900\n"
-"PO-Revision-Date: 2021-06-23 17:08+0200\n"
+"PO-Revision-Date: 2021-11-13 22:05+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/pantheon-tweaks.appdata.xml.in:5
 msgid "Pantheon Tweaks"
-msgstr ""
+msgstr "Pantheon Tweaks"
 
 #: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:40
-#, fuzzy
 msgid "Tweak Pantheon settings"
-msgstr "Einstellungen von elementary OS optimieren"
+msgstr "Pantheons Einstellungen optimieren"
 
 #: data/pantheon-tweaks.appdata.xml.in:8
 msgid ""
 "A system settings panel for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr ""
+"Ein Systemeinstellungsmodul für die Arbeitsumgebung »Pantheon«, mit die "
+"Erscheinung  der Arbeitsumgebung sicher und einfach angepasst werden kann."
 
 #: data/pantheon-tweaks.appdata.xml.in:18
 msgid "Sync selected elementary stylesheet variant with Desktop Plug"
 msgstr ""
+"Gewähltes Elementary-Stylesheet wird mit dem Modul »Arbeitsumgebung« "
+"synchronisiert"
 
 #: data/pantheon-tweaks.appdata.xml.in:19
 msgid "Improves reliability of restoring visually"
-msgstr ""
+msgstr "Zuverlässigkeit der Wiederherstellung erhöht"
 
 #: data/pantheon-tweaks.appdata.xml.in:20
 msgid ""
 "Prevent System Settings from crashing due to the removal of preferences in "
 "upstream Videos"
 msgstr ""
+"Systemeinstellungen stürzen nicht länger ab, weil in der Upstream-Version "
+"von Videos Einstellungen entfernt wurden"
 
 #: data/pantheon-tweaks.appdata.xml.in:21
 msgid "Correct cursor and icon theme dir copies"
-msgstr ""
+msgstr "Verzeichniskopien der Zeiger- und Symbolthemen korrigiert"
 
 #: data/pantheon-tweaks.appdata.xml.in:23
 msgid "Translation updates:"
-msgstr ""
+msgstr "Übersetzungsaktualisierungen:"
 
 #: data/pantheon-tweaks.appdata.xml.in:25
 msgid "Update French translation (thanks to @roxfr)"
-msgstr ""
+msgstr "Französische Übersetzung aktualisiert (Dank an @roxfr)"
 
 #: data/pantheon-tweaks.appdata.xml.in:26
 msgid "Update Russian translation (thanks to @camellan)"
-msgstr ""
+msgstr "Russische Übersetzung aktualisiert (Dank an @camellan)"
 
 #: data/pantheon-tweaks.appdata.xml.in:27
 msgid "Update Portuguese translation (thanks to @hugok79)"
-msgstr ""
+msgstr "Portugiesische Übersetzung aktualisiert (Dank an @hugok79)"
 
 #: data/pantheon-tweaks.appdata.xml.in:28
 msgid "Update Japanese translation"
-msgstr ""
+msgstr "Japanische Übersetzung aktualisiert"
 
 #: data/pantheon-tweaks.appdata.xml.in:35
 msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
-msgstr ""
+msgstr "Themen Adwaita/gnome/hicolor von Themenauswahl ausgeschlossen"
 
 #: data/pantheon-tweaks.appdata.xml.in:36
 msgid "Support accessing to panes with settings paths"
-msgstr ""
+msgstr "Zugriff auf Module mit Einstellungspfaden unterstützt"
 
 #: data/pantheon-tweaks.appdata.xml.in:37
 msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
 msgstr ""
+"Es wurde dafür gesorgt, dass das Modul unter NixOS funktioniert (Dank an "
+"@bobby285271)"
 
 #: data/pantheon-tweaks.appdata.xml.in:38
 #: data/pantheon-tweaks.appdata.xml.in:52
 msgid "Update translations"
-msgstr ""
+msgstr "Übersetzungen aktualisiert"
 
 #: data/pantheon-tweaks.appdata.xml.in:44
 msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
 msgstr ""
+"elementary Tweaks heißt jetzt Pantheon Tweaks und hat sowohl einige neue "
+"Funktionen erhalten als auch Fehlerbehebungen erfahren:"
 
 #: data/pantheon-tweaks.appdata.xml.in:46
 msgid "Remove preferences now supported in Pantheon officially"
 msgstr ""
+"Einstellungen entfernt, die jetzt direkt von Pantheon unterstützt werden"
 
 #: data/pantheon-tweaks.appdata.xml.in:47
 msgid "Remove preferences causing the plug crash"
-msgstr ""
+msgstr "Einstellungen entfernt, die zum Absturz des Moduls führten"
 
 #: data/pantheon-tweaks.appdata.xml.in:48
 msgid "Fully redesigned plug"
-msgstr ""
+msgstr "Vollständig neu gestaltetes Modul"
 
 #: data/pantheon-tweaks.appdata.xml.in:49
 msgid "Support changing sound theme (thanks to @pongloongyeat)"
-msgstr ""
+msgstr "Änderung des Audiothemas unterstützt (Dank an @pongloongyeat)"
 
 #: data/pantheon-tweaks.appdata.xml.in:50
 msgid "Add new window controls layout"
-msgstr ""
+msgstr "Weitere Fenstersteuerungsgestaltung hinzugefügt"
 
 #: data/pantheon-tweaks.appdata.xml.in:51
 msgid "Fix deprecations"
-msgstr ""
+msgstr "Abkündigungen behoben"
 
 #: data/pantheon-tweaks.appdata.xml.in:59
-#, fuzzy
 msgid "Appearance pane"
-msgstr "Erscheinungsbild"
+msgstr "Modul »Erscheinungsbild«"
 
 #: src/Tweaks.vala:39
 msgid "Tweaks"
@@ -178,7 +187,7 @@ msgstr "Themaeinstellungen"
 
 #: src/Panes/AppearancePane.vala:77
 msgid "GTK:"
-msgstr ""
+msgstr "GTK:"
 
 #. / TRANSLATORS: The "%s" represents the path where custom themes are installed
 #: src/Panes/AppearancePane.vala:82
@@ -219,11 +228,11 @@ msgstr ""
 
 #: src/Panes/AppearancePane.vala:104
 msgid "Sound:"
-msgstr ""
+msgstr "Audio:"
 
 #. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
 #: src/Panes/AppearancePane.vala:109
-#, fuzzy, c-format
+#, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr ""
 "Eigene Symbole, die hier angezeigt werden sollen, müssen in %s gespeichert "
@@ -266,9 +275,8 @@ msgid "elementary"
 msgstr "elementary"
 
 #: src/Panes/AppearancePane.vala:223
-#, fuzzy
 msgid "elementary Reversed"
-msgstr "elementary"
+msgstr "elementary umgekehrt"
 
 #: src/Panes/AppearancePane.vala:224
 msgid "Close Only Right"
@@ -279,22 +287,20 @@ msgid "Close Only Left"
 msgstr "Nur Schließen links"
 
 #: src/Panes/AppearancePane.vala:226
-#, fuzzy
 msgid "Add Minimize Left"
-msgstr "Minimieren links"
+msgstr "Minimieren links hinzufügen"
 
 #: src/Panes/AppearancePane.vala:227
-#, fuzzy
 msgid "Add Minimize Right"
-msgstr "Minimieren rechts"
+msgstr "Minimieren rechts hinzufügen"
 
 #: src/Panes/AppearancePane.vala:228
 msgid "Replace Maximize to Minimize"
-msgstr ""
+msgstr "Maximieren durch Minimieren ersetzen"
 
 #: src/Panes/AppearancePane.vala:229
 msgid "Windows"
-msgstr "Fenster"
+msgstr "Windows"
 
 #: src/Panes/AppearancePane.vala:230
 msgid "macOS"
@@ -422,7 +428,7 @@ msgstr ""
 #. Right: Add Pane itself to Stack
 #: src/Widgets/Categories.vala:43
 msgid "Reset settings successfully"
-msgstr ""
+msgstr "Einstellungen erfolgreich zurückgesetzt"
 
 #: src/Widgets/Categories.vala:69
 msgid "General"
@@ -438,17 +444,19 @@ msgstr "Auf Standardwerte setzen"
 
 #: src/Widgets/Categories.vala:130
 msgid "Are you sure you want to reset personalization?"
-msgstr ""
+msgstr "Möchten Sie die Personalisierung wirklich zurücksetzen?"
 
 #: src/Widgets/Categories.vala:131
 msgid ""
 "All settings in this pane will be restored to the factory defaults. This "
 "action can't be undone."
 msgstr ""
+"Alle Einstellungen in diesem Modul werden auf die Grundeinstellungen "
+"zurückgesetzt. Dies kann nicht rückgängig gemacht werden."
 
 #: src/Widgets/Categories.vala:136
 msgid "Reset"
-msgstr ""
+msgstr "Zurücksetzen"
 
 #~ msgid "Videos"
 #~ msgstr "Videos"
