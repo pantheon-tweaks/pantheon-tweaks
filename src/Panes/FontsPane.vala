@@ -20,7 +20,7 @@
 public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
     public FontsPane () {
         base (
-            _("Fonts"), "applications-fonts",
+            _("Fonts"), "preferences-desktop-font",
             _("Change the fonts used in your system and documents by default.")
         );
     }
