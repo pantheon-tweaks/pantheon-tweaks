@@ -76,9 +76,6 @@ public class PantheonTweaks.ThemeSettings {
      */
     public static Gee.List<string> get_themes (string path, string condition) {
         var themes = new Gee.ArrayList<string> ();
-        themes.sort ((a, b) => {
-            return a.collate (b);
-        });
 
         string[] dirs = {
             "/usr/share/" + path + "/",
@@ -110,6 +107,10 @@ public class PantheonTweaks.ThemeSettings {
                 warning (e.message);
             }
         }
+
+        themes.sort ((a, b) => {
+            return a.collate (b);
+        });
 
         return themes;
     }
