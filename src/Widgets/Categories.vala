@@ -207,6 +207,15 @@ public class PantheonTweaks.Categories : Gtk.Paned {
                     append (item.key, item.value);
                 }
             }
+
+            public ComboBoxText.from_list (Gee.List<string> items) {
+                set_size_request (180, 0);
+                halign = Gtk.Align.START;
+
+                for (int i = 0; i < items.size; i++) {
+                    append (items.get (i), items.get (i));
+                }
+            }
         }
 
         protected class SummaryLabel : Gtk.Label {
