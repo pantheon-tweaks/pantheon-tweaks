@@ -131,7 +131,8 @@ public class PantheonTweaks.Categories : Gtk.Paned {
                     _("All settings in this pane will be restored to the factory defaults. This action can't be undone."),
                     "dialog-warning", Gtk.ButtonsType.CANCEL
                 ) {
-                    modal = true
+                    modal = true,
+                    transient_for = (Gtk.Window) get_toplevel ()
                 };
                 var reset_button = reset_confirm_dialog.add_button (_("Reset"), Gtk.ResponseType.ACCEPT);
                 reset_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
