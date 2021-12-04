@@ -71,9 +71,6 @@ public class PantheonTweaks.ThemeSettings {
         "Adwaita", "Emacs", "Default", "default", "gnome", "hicolor"
     };
 
-    /**
-     * Gets and returns a list of the current themes by path and condition.
-     */
     public static Gee.List<string> get_themes (string path, string condition) {
         var themes = new Gee.ArrayList<string> ();
 
