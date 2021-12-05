@@ -61,6 +61,14 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
             _("Sound when hitting the end of a line and also for tab-completion when there are either no or multiple possible completions.") // vala-lint=line-length
         );
 
+        var tab_bar_map = new Gee.HashMap<string, string> ();
+        tab_bar_map.set ("Always Show Tabs", _("Always"));
+        tab_bar_map.set ("Hide When Single Tab", _("Hide when single tab"));
+        tab_bar_map.set ("Never Show Tabs", _("Never"));
+
+        var tab_bar_label = new SummaryLabel (_("Show tabs:"));
+        var tab_bar_combo = new ComboBoxText (tab_bar_map);
+
         content_area.attach (background_color_label, 0, 0, 1, 1);
         content_area.attach (background_color_button, 1, 0, 1, 1);
         content_area.attach (follow_last_tab_label, 0, 1, 1, 1);
@@ -75,6 +83,8 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         content_area.attach (term_bell_label, 0, 7, 1, 1);
         content_area.attach (term_bell_switch, 1, 7, 1, 1);
         content_area.attach (term_bell_info, 1, 8, 1, 1);
+        content_area.attach (tab_bar_label, 0, 9, 1, 1);
+        content_area.attach (tab_bar_combo, 1, 9, 1, 1);
 
         show_all ();
 
@@ -88,10 +98,11 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         settings.bind ("unsafe-paste-alert", unsafe_paste_alert_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("remember-tabs", rem_tabs_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("audible-bell", term_bell_switch, "active", SettingsBindFlags.DEFAULT);
+        settings.bind ("tab-bar-behavior", tab_bar_combo, "active_id", SettingsBindFlags.DEFAULT);
 
         on_click_reset (() => {
             string[] keys = {"background", "unsafe-paste-alert", "natural-copy-paste",
-                                "follow-last-tab", "audible-bell", "remember-tabs"};
+                             "follow-last-tab", "audible-bell", "remember-tabs", "tab-bar-behavior"};
 
             foreach (string key in keys) {
                 settings.reset (key);
