@@ -219,12 +219,12 @@ public class PantheonTweaks.Categories : Gtk.Paned {
         }
 
         protected class DestinationButton : Gtk.Button {
-            public string destination_path { private get; construct; }
+            public string destination_uri { private get; construct; }
 
             public DestinationButton (string destination) {
                 Object (
                     image: new Gtk.Image.from_icon_name ("folder-open", Gtk.IconSize.BUTTON),
-                    destination_path: Path.build_filename (Environment.get_home_dir (), destination),
+                    destination_uri: "file://%s/%s".printf (Environment.get_home_dir (), destination),
                     valign: Gtk.Align.START,
                     tooltip_text: _("Open destination folder")
                 );
@@ -232,7 +232,7 @@ public class PantheonTweaks.Categories : Gtk.Paned {
 
             construct {
                 clicked.connect (() => {
-                    var dir = File.new_for_path (destination_path);
+                    var dir = File.new_for_uri (destination_uri);
                     if (!dir.query_exists ()) {
                         try {
                             dir.make_directory_with_parents ();
@@ -242,7 +242,7 @@ public class PantheonTweaks.Categories : Gtk.Paned {
                     }
 
                     try {
-                        GLib.AppInfo.launch_default_for_uri ("file://%s".printf (destination_path), null);
+                        GLib.AppInfo.launch_default_for_uri (destination_uri, null);
                     } catch (Error e) {
                         warning (e.message);
                     }
