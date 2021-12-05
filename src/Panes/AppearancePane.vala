@@ -75,8 +75,8 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         var theme_label = new Granite.HeaderLabel (_("Theme Settings"));
 
         var gtk_label = new SummaryLabel (_("GTK:"));
-        var gtk_map = ThemeSettings.get_themes_map ("themes", "gtk-3.0");
-        gtk_combobox = new ComboBoxText (gtk_map);
+        var gtk_list = ThemeSettings.get_themes ("themes", "gtk-3.0");
+        gtk_combobox = new ComboBoxText.from_list (gtk_list);
 
         /// TRANSLATORS: The "%s" represents the path where custom themes are installed
         var gtk_info = new DimLabel (_("To show custom themes here, put them in %s.").printf (
@@ -84,8 +84,8 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         ));
 
         var icon_label = new SummaryLabel (_("Icons:"));
-        var icon_map = ThemeSettings.get_themes_map ("icons", "index.theme");
-        var icon_combobox = new ComboBoxText (icon_map);
+        var icon_list = ThemeSettings.get_themes ("icons", "index.theme");
+        var icon_combobox = new ComboBoxText.from_list (icon_list);
 
         /// TRANSLATORS: The "%s" represents the path where custom icons are installed
         var icon_info = new DimLabel (_("To show custom icons here, put them in %s.").printf (
@@ -93,8 +93,8 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         ));
 
         var cursor_label = new SummaryLabel (_("Cursor:"));
-        var cursor_map = ThemeSettings.get_themes_map ("icons", "cursors");
-        var cursor_combobox = new ComboBoxText (cursor_map);
+        var cursor_list = ThemeSettings.get_themes ("icons", "cursors");
+        var cursor_combobox = new ComboBoxText.from_list (cursor_list);
 
         /// TRANSLATORS: The "%s" represents the path where custom cursors are installed
         var cursor_info = new DimLabel (_("To show custom cursors here, put them in %s.").printf (
@@ -102,8 +102,8 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         ));
 
         var sound_label = new SummaryLabel (_("Sound:"));
-        var sound_map = ThemeSettings.get_themes_map ("sounds", "index.theme");
-        var sound_combobox = new ComboBoxText (sound_map);
+        var sound_list = ThemeSettings.get_themes ("sounds", "index.theme");
+        var sound_combobox = new ComboBoxText.from_list (sound_list);
 
         /// TRANSLATORS: The "%s" represents the path where custom sounds are installed
         var sound_info = new DimLabel (_("To show custom sounds here, put them in %s.").printf (

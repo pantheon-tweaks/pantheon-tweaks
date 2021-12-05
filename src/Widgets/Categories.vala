@@ -201,12 +201,20 @@ public class PantheonTweaks.Categories : Gtk.Paned {
 
         protected class ComboBoxText : Gtk.ComboBoxText {
             public ComboBoxText (Gee.HashMap<string, string> items) {
-                set_size_request (180, 0);
-                halign = Gtk.Align.START;
-
                 foreach (var item in items.entries) {
                     append (item.key, item.value);
                 }
+            }
+
+            public ComboBoxText.from_list (Gee.List<string> items) {
+                for (int i = 0; i < items.size; i++) {
+                    append (items.get (i), items.get (i));
+                }
+            }
+
+            construct {
+                set_size_request (180, 0);
+                halign = Gtk.Align.START;
             }
         }
 

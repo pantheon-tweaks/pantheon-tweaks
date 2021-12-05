@@ -71,10 +71,7 @@ public class PantheonTweaks.ThemeSettings {
         "Adwaita", "Emacs", "Default", "default", "gnome", "hicolor"
     };
 
-    /**
-     * Gets and returns a list of the current themes by path and condition.
-     */
-    private static Gee.List<string> get_themes (string path, string condition) {
+    public static Gee.List<string> get_themes (string path, string condition) {
         var themes = new Gee.ArrayList<string> ();
 
         string[] dirs = {
@@ -108,17 +105,10 @@ public class PantheonTweaks.ThemeSettings {
             }
         }
 
+        themes.sort ((a, b) => {
+            return a.collate (b);
+        });
+
         return themes;
-    }
-
-    public static Gee.HashMap<string, string> get_themes_map (string path, string condition) {
-        var themes = get_themes (path, condition);
-        var map = new Gee.HashMap<string, string> ();
-
-        foreach (string theme in themes) {
-            map.set (theme, theme);
-        }
-
-        return map;
     }
 }
