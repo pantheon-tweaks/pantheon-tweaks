@@ -218,6 +218,38 @@ public class PantheonTweaks.Categories : Gtk.Paned {
             }
         }
 
+        protected class DestinationButton : Gtk.Button {
+            public string destination_path { private get; construct; }
+
+            public DestinationButton (string destination) {
+                Object (
+                    image: new Gtk.Image.from_icon_name ("folder-open", Gtk.IconSize.BUTTON),
+                    destination_path: Path.build_filename (Environment.get_home_dir (), destination),
+                    valign: Gtk.Align.START,
+                    tooltip_text: _("Open destination folder")
+                );
+            }
+
+            construct {
+                clicked.connect (() => {
+                    var dir = File.new_for_path (destination_path);
+                    if (!dir.query_exists ()) {
+                        try {
+                            dir.make_directory_with_parents ();
+                        } catch (Error e) {
+                            warning (e.message);
+                        }
+                    }
+
+                    try {
+                        GLib.AppInfo.launch_default_for_uri ("file://%s".printf (destination_path), null);
+                    } catch (Error e) {
+                        warning (e.message);
+                    }
+                });
+            }
+        }
+
         protected class SummaryLabel : Gtk.Label {
             public SummaryLabel (string label) {
                 Object (label: label);
