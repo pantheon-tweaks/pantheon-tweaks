@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 19:42+0900\n"
+"POT-Creation-Date: 2021-12-06 09:34+0900\n"
 "PO-Revision-Date: 2021-11-02 19:51+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -33,64 +33,98 @@ msgstr ""
 "けのシステム設定パネルです。"
 
 #: data/pantheon-tweaks.appdata.xml.in:18
+msgid "FontsPane: Fix icon missing with the latest icons update"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:19
+msgid ""
+"Make sure dimming feature that is introduced in the latest version of Gala "
+"work for the reset dialog"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:20
+msgid "AppearancePane: Sort theme namaes alphabetically"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:21
+msgid "TerminalPane: Support changing tab bar behavior"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:22
+msgid "AppearancePane: Add buttons to open the theme locations"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:24
+#: data/pantheon-tweaks.appdata.xml.in:40
+msgid "Translation updates:"
+msgstr "翻訳の更新:"
+
+#: data/pantheon-tweaks.appdata.xml.in:26
+#, fuzzy
+msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
+msgstr "ロシア語翻訳を更新 (貢献者: @camellan)"
+
+#: data/pantheon-tweaks.appdata.xml.in:27
+#, fuzzy
+msgid "Update German translation (thanks to @uwe-ss)"
+msgstr "フランス語翻訳を更新 (貢献者: @roxfr)"
+
+#: data/pantheon-tweaks.appdata.xml.in:28
+#: data/pantheon-tweaks.appdata.xml.in:45
+msgid "Update Japanese translation"
+msgstr "日本語翻訳を更新"
+
+#: data/pantheon-tweaks.appdata.xml.in:35
 msgid "Sync selected elementary stylesheet variant with Desktop Plug"
 msgstr ""
 "選択された elementary スタイルシートの色がデスクトッププラグの設定と同期する"
 "ように修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:19
+#: data/pantheon-tweaks.appdata.xml.in:36
 msgid "Improves reliability of restoring visually"
 msgstr "設定をリセットしたことが視覚的わかるように修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:20
+#: data/pantheon-tweaks.appdata.xml.in:37
 msgid ""
 "Prevent System Settings from crashing due to the removal of preferences in "
 "upstream Videos"
 msgstr ""
 "“ビデオ”での設定項目の削除が原因で“システム設定”がクラッシュする不具合を修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:21
+#: data/pantheon-tweaks.appdata.xml.in:38
 msgid "Correct cursor and icon theme dir copies"
 msgstr "カーソルとアイコンテーマのディレクトリのテキストを修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:23
-msgid "Translation updates:"
-msgstr "翻訳の更新:"
-
-#: data/pantheon-tweaks.appdata.xml.in:25
+#: data/pantheon-tweaks.appdata.xml.in:42
 msgid "Update French translation (thanks to @roxfr)"
 msgstr "フランス語翻訳を更新 (貢献者: @roxfr)"
 
-#: data/pantheon-tweaks.appdata.xml.in:26
+#: data/pantheon-tweaks.appdata.xml.in:43
 msgid "Update Russian translation (thanks to @camellan)"
 msgstr "ロシア語翻訳を更新 (貢献者: @camellan)"
 
-#: data/pantheon-tweaks.appdata.xml.in:27
+#: data/pantheon-tweaks.appdata.xml.in:44
 msgid "Update Portuguese translation (thanks to @hugok79)"
 msgstr "ポルトガル語翻訳を更新 (貢献者: @hugok79)"
 
-#: data/pantheon-tweaks.appdata.xml.in:28
-msgid "Update Japanese translation"
-msgstr "日本語翻訳を更新"
-
-#: data/pantheon-tweaks.appdata.xml.in:35
+#: data/pantheon-tweaks.appdata.xml.in:52
 msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
 msgstr "テーマの選択肢から Adwaita/gnome/hicolor を除外するように修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:36
+#: data/pantheon-tweaks.appdata.xml.in:53
 msgid "Support accessing to panes with settings paths"
 msgstr "設定パスを使用してペインにアクセスできる機能を追加"
 
-#: data/pantheon-tweaks.appdata.xml.in:37
+#: data/pantheon-tweaks.appdata.xml.in:54
 msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
 msgstr "NixOS でプラグが動作するように修正 (貢献者: @bobby285271)"
 
-#: data/pantheon-tweaks.appdata.xml.in:38
-#: data/pantheon-tweaks.appdata.xml.in:52
+#: data/pantheon-tweaks.appdata.xml.in:55
+#: data/pantheon-tweaks.appdata.xml.in:69
 msgid "Update translations"
 msgstr "翻訳の更新"
 
-#: data/pantheon-tweaks.appdata.xml.in:44
+#: data/pantheon-tweaks.appdata.xml.in:61
 msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
@@ -98,31 +132,31 @@ msgstr ""
 "elementary Tweaks から Pantheon Tweaks に名称変更し、以下の新機能と修正が追加"
 "されました:"
 
-#: data/pantheon-tweaks.appdata.xml.in:46
+#: data/pantheon-tweaks.appdata.xml.in:63
 msgid "Remove preferences now supported in Pantheon officially"
 msgstr "Pantheon に正式に追加された設定項目を削除"
 
-#: data/pantheon-tweaks.appdata.xml.in:47
+#: data/pantheon-tweaks.appdata.xml.in:64
 msgid "Remove preferences causing the plug crash"
 msgstr "クラッシュを引き起こす設定項目を削除"
 
-#: data/pantheon-tweaks.appdata.xml.in:48
+#: data/pantheon-tweaks.appdata.xml.in:65
 msgid "Fully redesigned plug"
 msgstr "抜本的なデザイン変更"
 
-#: data/pantheon-tweaks.appdata.xml.in:49
+#: data/pantheon-tweaks.appdata.xml.in:66
 msgid "Support changing sound theme (thanks to @pongloongyeat)"
 msgstr "サウンドテーマの変更に対応 (貢献者: @pongloongyeat)"
 
-#: data/pantheon-tweaks.appdata.xml.in:50
+#: data/pantheon-tweaks.appdata.xml.in:67
 msgid "Add new window controls layout"
 msgstr "新しいウィンドウコントロールのレイアウトを追加"
 
-#: data/pantheon-tweaks.appdata.xml.in:51
+#: data/pantheon-tweaks.appdata.xml.in:68
 msgid "Fix deprecations"
 msgstr "非推奨のコードを修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:59
+#: data/pantheon-tweaks.appdata.xml.in:76
 msgid "Appearance pane"
 msgstr "“外観”ペイン"
 
@@ -147,9 +181,9 @@ msgstr "開く:"
 msgid "Close:"
 msgstr "閉じる:"
 
-#. / TRANSLATORS: The word "snap" refers to a feature of Pantheon that allows you to resize a window
-#. / into the half size of your screen automatically. So this string means the length of animation
-#. / when you "snap" a window.
+#. TRANSLATORS: The word "snap" refers to a feature of Pantheon that allows you to resize a window
+#. into the half size of your screen automatically. So this string means the length of animation
+#. when you "snap" a window.
 #: src/Panes/AnimationsPane.vala:48
 msgid "Snap:"
 msgstr "スナップ:"
@@ -182,52 +216,52 @@ msgstr "テーマの設定"
 msgid "GTK:"
 msgstr "GTK:"
 
-#. / TRANSLATORS: The "%s" represents the path where custom themes are installed
+#. TRANSLATORS: The "%s" represents the path where custom themes are installed
 #: src/Panes/AppearancePane.vala:82
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr "カスタムテーマをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:83 src/Panes/AppearancePane.vala:92
-#: src/Panes/AppearancePane.vala:101 src/Panes/AppearancePane.vala:110
+#: src/Panes/AppearancePane.vala:83 src/Panes/AppearancePane.vala:94
+#: src/Panes/AppearancePane.vala:105 src/Panes/AppearancePane.vala:116
 msgid "theme-name"
 msgstr "テーマ名"
 
-#: src/Panes/AppearancePane.vala:86
+#: src/Panes/AppearancePane.vala:88
 msgid "Icons:"
 msgstr "アイコン:"
 
-#. / TRANSLATORS: The "%s" represents the path where custom icons are installed
-#: src/Panes/AppearancePane.vala:91
+#. TRANSLATORS: The "%s" represents the path where custom icons are installed
+#: src/Panes/AppearancePane.vala:93
 #, c-format
 msgid "To show custom icons here, put them in %s."
 msgstr "カスタムアイコンをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:95
+#: src/Panes/AppearancePane.vala:99
 msgid "Cursor:"
 msgstr "カーソル:"
 
-#. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:100
+#. TRANSLATORS: The "%s" represents the path where custom cursors are installed
+#: src/Panes/AppearancePane.vala:104
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr "カスタムカーソルをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:104
+#: src/Panes/AppearancePane.vala:110
 msgid "Sound:"
 msgstr "サウンド:"
 
-#. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:109
+#. TRANSLATORS: The "%s" represents the path where custom sounds are installed
+#: src/Panes/AppearancePane.vala:115
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr "カスタムサウンドをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:113
+#: src/Panes/AppearancePane.vala:121
 msgid "Force to use dark stylesheet:"
 msgstr "ダークスタイルシートを強制的に適用:"
 
-#: src/Panes/AppearancePane.vala:117
+#: src/Panes/AppearancePane.vala:125
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
@@ -235,63 +269,63 @@ msgstr ""
 "対応していないアプリに対しても、ダークモードを強制します。アプリケーションの"
 "再起動が必要です。"
 
-#: src/Panes/AppearancePane.vala:120
+#: src/Panes/AppearancePane.vala:128
 msgid "Window Controls"
 msgstr "ウィンドウコントロール"
 
-#: src/Panes/AppearancePane.vala:122
+#: src/Panes/AppearancePane.vala:130
 msgid "Layout:"
 msgstr "レイアウト:"
 
-#: src/Panes/AppearancePane.vala:125
+#: src/Panes/AppearancePane.vala:133
 msgid "Changes button layout of the window."
 msgstr "ウィンドウのボタンレイアウトを変更します。"
 
-#: src/Panes/AppearancePane.vala:127
+#: src/Panes/AppearancePane.vala:135
 msgid "Show GNOME menu:"
 msgstr "GNOME メニューを表示:"
 
-#: src/Panes/AppearancePane.vala:129
+#: src/Panes/AppearancePane.vala:137
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "GNOME アプリで GNOME メニューを表示するかどうかを設定します。"
 
-#: src/Panes/AppearancePane.vala:222
+#: src/Panes/AppearancePane.vala:234
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:223
+#: src/Panes/AppearancePane.vala:235
 msgid "elementary Reversed"
 msgstr "elementary Reversed"
 
-#: src/Panes/AppearancePane.vala:224
+#: src/Panes/AppearancePane.vala:236
 msgid "Close Only Right"
 msgstr "閉じるボタンのみを右に表示"
 
-#: src/Panes/AppearancePane.vala:225
+#: src/Panes/AppearancePane.vala:237
 msgid "Close Only Left"
 msgstr "閉じるボタンのみを左に表示"
 
-#: src/Panes/AppearancePane.vala:226
+#: src/Panes/AppearancePane.vala:238
 msgid "Add Minimize Left"
 msgstr "最小化ボタンを左に追加"
 
-#: src/Panes/AppearancePane.vala:227
+#: src/Panes/AppearancePane.vala:239
 msgid "Add Minimize Right"
 msgstr "最小化ボタンを右に追加"
 
-#: src/Panes/AppearancePane.vala:228
+#: src/Panes/AppearancePane.vala:240
 msgid "Replace Maximize to Minimize"
 msgstr "最大化ボタンを最小化ボタンに置き換え"
 
-#: src/Panes/AppearancePane.vala:229
+#: src/Panes/AppearancePane.vala:241
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:230
+#: src/Panes/AppearancePane.vala:242
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:231
+#: src/Panes/AppearancePane.vala:243
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
@@ -407,7 +441,23 @@ msgstr ""
 "行の最後に到達した場合や、入力補完の候補がない、または1つしかない場合に、音を"
 "鳴らします。"
 
-#. Right: Add Pane itself to Stack
+#: src/Panes/TerminalPane.vala:65
+msgid "Always"
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:66
+msgid "Hide when single tab"
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:67
+msgid "Never"
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:69
+#, fuzzy
+msgid "Show tabs:"
+msgstr "タブを復元:"
+
 #: src/Widgets/Categories.vala:43
 msgid "Reset settings successfully"
 msgstr "設定を正常にリセットしました"
@@ -436,6 +486,10 @@ msgstr ""
 "このペインにあるすべての設定が出荷時のデフォルトに復元されます。この操作はや"
 "り直せません。"
 
-#: src/Widgets/Categories.vala:136
+#: src/Widgets/Categories.vala:137
 msgid "Reset"
 msgstr "リセット"
+
+#: src/Widgets/Categories.vala:229
+msgid "Open destination folder"
+msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 19:42+0900\n"
+"POT-Creation-Date: 2021-12-06 09:34+0900\n"
 "PO-Revision-Date: 2021-08-26 19:05+0200\n"
 "Last-Translator: Roxfr <roxfr@outlook.fr>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -35,64 +35,98 @@ msgstr ""
 "de personnaliser facilement et en toute sécurité l’apparence de votre bureau."
 
 #: data/pantheon-tweaks.appdata.xml.in:18
-msgid "Sync selected elementary stylesheet variant with Desktop Plug"
+msgid "FontsPane: Fix icon missing with the latest icons update"
 msgstr ""
 
 #: data/pantheon-tweaks.appdata.xml.in:19
-msgid "Improves reliability of restoring visually"
+msgid ""
+"Make sure dimming feature that is introduced in the latest version of Gala "
+"work for the reset dialog"
 msgstr ""
 
 #: data/pantheon-tweaks.appdata.xml.in:20
-msgid ""
-"Prevent System Settings from crashing due to the removal of preferences in "
-"upstream Videos"
+msgid "AppearancePane: Sort theme namaes alphabetically"
 msgstr ""
 
 #: data/pantheon-tweaks.appdata.xml.in:21
-msgid "Correct cursor and icon theme dir copies"
+msgid "TerminalPane: Support changing tab bar behavior"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:23
+#: data/pantheon-tweaks.appdata.xml.in:22
+msgid "AppearancePane: Add buttons to open the theme locations"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:24
+#: data/pantheon-tweaks.appdata.xml.in:40
 msgid "Translation updates:"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:25
+#: data/pantheon-tweaks.appdata.xml.in:26
 #, fuzzy
-msgid "Update French translation (thanks to @roxfr)"
+msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
 msgstr "Mettre à jour les traductions"
 
-#: data/pantheon-tweaks.appdata.xml.in:26
-msgid "Update Russian translation (thanks to @camellan)"
-msgstr ""
-
 #: data/pantheon-tweaks.appdata.xml.in:27
-msgid "Update Portuguese translation (thanks to @hugok79)"
-msgstr ""
+#, fuzzy
+msgid "Update German translation (thanks to @uwe-ss)"
+msgstr "Mettre à jour les traductions"
 
 #: data/pantheon-tweaks.appdata.xml.in:28
+#: data/pantheon-tweaks.appdata.xml.in:45
 #, fuzzy
 msgid "Update Japanese translation"
 msgstr "Mettre à jour les traductions"
 
 #: data/pantheon-tweaks.appdata.xml.in:35
+msgid "Sync selected elementary stylesheet variant with Desktop Plug"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:36
+msgid "Improves reliability of restoring visually"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:37
+msgid ""
+"Prevent System Settings from crashing due to the removal of preferences in "
+"upstream Videos"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:38
+msgid "Correct cursor and icon theme dir copies"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:42
+#, fuzzy
+msgid "Update French translation (thanks to @roxfr)"
+msgstr "Mettre à jour les traductions"
+
+#: data/pantheon-tweaks.appdata.xml.in:43
+msgid "Update Russian translation (thanks to @camellan)"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:44
+msgid "Update Portuguese translation (thanks to @hugok79)"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:52
 msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
 msgstr "Exclure les thèmes Adwaita/gnome/hicolor des sélections de thèmes"
 
-#: data/pantheon-tweaks.appdata.xml.in:36
+#: data/pantheon-tweaks.appdata.xml.in:53
 msgid "Support accessing to panes with settings paths"
 msgstr "Prise en charge de l'accès aux volets avec les chemins de paramètres"
 
-#: data/pantheon-tweaks.appdata.xml.in:37
+#: data/pantheon-tweaks.appdata.xml.in:54
 msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
 msgstr ""
 "Assurez-vous que le programme fonctionne sur NixOS (merci à @bobby285271)"
 
-#: data/pantheon-tweaks.appdata.xml.in:38
-#: data/pantheon-tweaks.appdata.xml.in:52
+#: data/pantheon-tweaks.appdata.xml.in:55
+#: data/pantheon-tweaks.appdata.xml.in:69
 msgid "Update translations"
 msgstr "Mettre à jour les traductions"
 
-#: data/pantheon-tweaks.appdata.xml.in:44
+#: data/pantheon-tweaks.appdata.xml.in:61
 msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
@@ -100,33 +134,33 @@ msgstr ""
 "Elementary Tweaks est désormais renommé Pantheon Tweaks et bénéficie de "
 "nouvelles fonctionnalités et correctifs :"
 
-#: data/pantheon-tweaks.appdata.xml.in:46
+#: data/pantheon-tweaks.appdata.xml.in:63
 msgid "Remove preferences now supported in Pantheon officially"
 msgstr ""
 "Supprimer les préférences désormais prises en charge dans Pantheon "
 "officiellement"
 
-#: data/pantheon-tweaks.appdata.xml.in:47
+#: data/pantheon-tweaks.appdata.xml.in:64
 msgid "Remove preferences causing the plug crash"
 msgstr "Supprimer les préférences à l’origine du blocage de la fiche"
 
-#: data/pantheon-tweaks.appdata.xml.in:48
+#: data/pantheon-tweaks.appdata.xml.in:65
 msgid "Fully redesigned plug"
 msgstr "Fiche entièrement redessinée"
 
-#: data/pantheon-tweaks.appdata.xml.in:49
+#: data/pantheon-tweaks.appdata.xml.in:66
 msgid "Support changing sound theme (thanks to @pongloongyeat)"
 msgstr "Prise en charge du changement de thème sonore (grâce à @pongloongyeat)"
 
-#: data/pantheon-tweaks.appdata.xml.in:50
+#: data/pantheon-tweaks.appdata.xml.in:67
 msgid "Add new window controls layout"
 msgstr "Ajouter une nouvelle disposition des contrôles de fenêtre"
 
-#: data/pantheon-tweaks.appdata.xml.in:51
+#: data/pantheon-tweaks.appdata.xml.in:68
 msgid "Fix deprecations"
 msgstr "Corriger les dépréciations"
 
-#: data/pantheon-tweaks.appdata.xml.in:59
+#: data/pantheon-tweaks.appdata.xml.in:76
 msgid "Appearance pane"
 msgstr "Volet d'apparence"
 
@@ -152,9 +186,9 @@ msgstr "Ouvrir :"
 msgid "Close:"
 msgstr "Fermer :"
 
-#. / TRANSLATORS: The word "snap" refers to a feature of Pantheon that allows you to resize a window
-#. / into the half size of your screen automatically. So this string means the length of animation
-#. / when you "snap" a window.
+#. TRANSLATORS: The word "snap" refers to a feature of Pantheon that allows you to resize a window
+#. into the half size of your screen automatically. So this string means the length of animation
+#. when you "snap" a window.
 #: src/Panes/AnimationsPane.vala:48
 msgid "Snap:"
 msgstr "Accrocher :"
@@ -187,52 +221,52 @@ msgstr "Réglage des thèmes"
 msgid "GTK:"
 msgstr "GTK :"
 
-#. / TRANSLATORS: The "%s" represents the path where custom themes are installed
+#. TRANSLATORS: The "%s" represents the path where custom themes are installed
 #: src/Panes/AppearancePane.vala:82
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr "Pour afficher les thèmes personnalisés ici, placez-les dans %s."
 
-#: src/Panes/AppearancePane.vala:83 src/Panes/AppearancePane.vala:92
-#: src/Panes/AppearancePane.vala:101 src/Panes/AppearancePane.vala:110
+#: src/Panes/AppearancePane.vala:83 src/Panes/AppearancePane.vala:94
+#: src/Panes/AppearancePane.vala:105 src/Panes/AppearancePane.vala:116
 msgid "theme-name"
 msgstr "nom-thème"
 
-#: src/Panes/AppearancePane.vala:86
+#: src/Panes/AppearancePane.vala:88
 msgid "Icons:"
 msgstr "Icônes :"
 
-#. / TRANSLATORS: The "%s" represents the path where custom icons are installed
-#: src/Panes/AppearancePane.vala:91
+#. TRANSLATORS: The "%s" represents the path where custom icons are installed
+#: src/Panes/AppearancePane.vala:93
 #, c-format
 msgid "To show custom icons here, put them in %s."
 msgstr "Pour afficher les icônes personnalisées ici, placez-les dans %s."
 
-#: src/Panes/AppearancePane.vala:95
+#: src/Panes/AppearancePane.vala:99
 msgid "Cursor:"
 msgstr "Curseur :"
 
-#. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:100
+#. TRANSLATORS: The "%s" represents the path where custom cursors are installed
+#: src/Panes/AppearancePane.vala:104
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr "Pour afficher les curseurs personnalisés ici, placez-les dans %s."
 
-#: src/Panes/AppearancePane.vala:104
+#: src/Panes/AppearancePane.vala:110
 msgid "Sound:"
 msgstr "Son :"
 
-#. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:109
+#. TRANSLATORS: The "%s" represents the path where custom sounds are installed
+#: src/Panes/AppearancePane.vala:115
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr "Pour afficher les sons personnalisés ici, placez-les dans %s."
 
-#: src/Panes/AppearancePane.vala:113
+#: src/Panes/AppearancePane.vala:121
 msgid "Force to use dark stylesheet:"
 msgstr "Forcer l'utilisation d'une feuille de style sombre :"
 
-#: src/Panes/AppearancePane.vala:117
+#: src/Panes/AppearancePane.vala:125
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
@@ -240,63 +274,63 @@ msgstr ""
 "Force le style sombre sur toutes les applications, même s'il n'est pas pris "
 "en charge. Nécessite le redémarrage de l'application."
 
-#: src/Panes/AppearancePane.vala:120
+#: src/Panes/AppearancePane.vala:128
 msgid "Window Controls"
 msgstr "Contrôles de fenêtre"
 
-#: src/Panes/AppearancePane.vala:122
+#: src/Panes/AppearancePane.vala:130
 msgid "Layout:"
 msgstr "Disposition :"
 
-#: src/Panes/AppearancePane.vala:125
+#: src/Panes/AppearancePane.vala:133
 msgid "Changes button layout of the window."
 msgstr "Modifie la disposition des boutons de la fenêtre."
 
-#: src/Panes/AppearancePane.vala:127
+#: src/Panes/AppearancePane.vala:135
 msgid "Show GNOME menu:"
 msgstr "Afficher le menu GNOME :"
 
-#: src/Panes/AppearancePane.vala:129
+#: src/Panes/AppearancePane.vala:137
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "S'il faut afficher le menu GNOME dans les applications GNOME."
 
-#: src/Panes/AppearancePane.vala:222
+#: src/Panes/AppearancePane.vala:234
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:223
+#: src/Panes/AppearancePane.vala:235
 msgid "elementary Reversed"
 msgstr "Inversé elementary"
 
-#: src/Panes/AppearancePane.vala:224
+#: src/Panes/AppearancePane.vala:236
 msgid "Close Only Right"
 msgstr "Fermer uniquement à droite"
 
-#: src/Panes/AppearancePane.vala:225
+#: src/Panes/AppearancePane.vala:237
 msgid "Close Only Left"
 msgstr "Fermer uniquement à gauche"
 
-#: src/Panes/AppearancePane.vala:226
+#: src/Panes/AppearancePane.vala:238
 msgid "Add Minimize Left"
 msgstr "Ajouter réduire à gauche"
 
-#: src/Panes/AppearancePane.vala:227
+#: src/Panes/AppearancePane.vala:239
 msgid "Add Minimize Right"
 msgstr "Ajouter réduire à droite"
 
-#: src/Panes/AppearancePane.vala:228
+#: src/Panes/AppearancePane.vala:240
 msgid "Replace Maximize to Minimize"
 msgstr "Remplacer agrandir par réduire"
 
-#: src/Panes/AppearancePane.vala:229
+#: src/Panes/AppearancePane.vala:241
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:230
+#: src/Panes/AppearancePane.vala:242
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:231
+#: src/Panes/AppearancePane.vala:243
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
@@ -414,7 +448,23 @@ msgstr ""
 "Son lorsque vous frappez la fin d’une ligne et également pour la complétion "
 "par tabulation lorsqu’il n’y a pas ou plusieurs achèvements possibles."
 
-#. Right: Add Pane itself to Stack
+#: src/Panes/TerminalPane.vala:65
+msgid "Always"
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:66
+msgid "Hide when single tab"
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:67
+msgid "Never"
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:69
+#, fuzzy
+msgid "Show tabs:"
+msgstr "Onglets de restauration :"
+
 #: src/Widgets/Categories.vala:43
 msgid "Reset settings successfully"
 msgstr ""
@@ -441,8 +491,12 @@ msgid ""
 "action can't be undone."
 msgstr ""
 
-#: src/Widgets/Categories.vala:136
+#: src/Widgets/Categories.vala:137
 msgid "Reset"
+msgstr ""
+
+#: src/Widgets/Categories.vala:229
+msgid "Open destination folder"
 msgstr ""
 
 #~ msgid "Videos"
