@@ -12,6 +12,23 @@
   <icon type="stock">preferences-desktop-tweaks</icon>
   <translation type="gettext">pantheon-tweaks-plug</translation>
   <releases>
+    <release version="1.0.3" date="2021-12-06" urgency="low">
+      <description>
+        <ul>
+          <li>FontsPane: Fix icon missing with the latest icons update</li>
+          <li>Make sure dimming feature that is introduced in the latest version of Gala work for the reset dialog</li>
+          <li>AppearancePane: Sort theme namaes alphabetically</li>
+          <li>TerminalPane: Support changing tab bar behavior</li>
+          <li>AppearancePane: Add buttons to open the theme locations</li>
+        </ul>
+        <p>Translation updates:</p>
+        <ul>
+          <li>Update Chinese Simplified translation (thanks to @imgradeone)</li>
+          <li>Update German translation (thanks to @uwe-ss)</li>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.2" date="2021-11-02" urgency="medium">
       <description>
         <ul>
