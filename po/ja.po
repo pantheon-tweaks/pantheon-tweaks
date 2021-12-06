@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-06 09:34+0900\n"
-"PO-Revision-Date: 2021-11-02 19:51+0900\n"
+"PO-Revision-Date: 2021-12-06 09:40+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -35,24 +35,28 @@ msgstr ""
 #: data/pantheon-tweaks.appdata.xml.in:18
 msgid "FontsPane: Fix icon missing with the latest icons update"
 msgstr ""
+"フォントペイン: 最近のアイコンのアップデートによって、ペインのアイコンが表示"
+"されなくなっていた不具合を修正"
 
 #: data/pantheon-tweaks.appdata.xml.in:19
 msgid ""
 "Make sure dimming feature that is introduced in the latest version of Gala "
 "work for the reset dialog"
 msgstr ""
+"最新バージョンの Gala で導入された親ウィンドウを薄暗くする機能がリセットダイ"
+"アログに対して動作するように修正"
 
 #: data/pantheon-tweaks.appdata.xml.in:20
 msgid "AppearancePane: Sort theme namaes alphabetically"
-msgstr ""
+msgstr "外観ペイン: テーマ名をアルファベット順で表示するように修正"
 
 #: data/pantheon-tweaks.appdata.xml.in:21
 msgid "TerminalPane: Support changing tab bar behavior"
-msgstr ""
+msgstr "ターミナルペイン: タブバーの挙動の変更に対応"
 
 #: data/pantheon-tweaks.appdata.xml.in:22
 msgid "AppearancePane: Add buttons to open the theme locations"
-msgstr ""
+msgstr "外観ペイン: テーマの保存先を開くボタンを追加"
 
 #: data/pantheon-tweaks.appdata.xml.in:24
 #: data/pantheon-tweaks.appdata.xml.in:40
@@ -60,14 +64,12 @@ msgid "Translation updates:"
 msgstr "翻訳の更新:"
 
 #: data/pantheon-tweaks.appdata.xml.in:26
-#, fuzzy
 msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
-msgstr "ロシア語翻訳を更新 (貢献者: @camellan)"
+msgstr "簡体字中国語語翻訳を更新 (貢献者: @imgradeone)"
 
 #: data/pantheon-tweaks.appdata.xml.in:27
-#, fuzzy
 msgid "Update German translation (thanks to @uwe-ss)"
-msgstr "フランス語翻訳を更新 (貢献者: @roxfr)"
+msgstr "ドイツ語翻訳を更新 (貢献者: @uwe-ss)"
 
 #: data/pantheon-tweaks.appdata.xml.in:28
 #: data/pantheon-tweaks.appdata.xml.in:45
@@ -443,20 +445,19 @@ msgstr ""
 
 #: src/Panes/TerminalPane.vala:65
 msgid "Always"
-msgstr ""
+msgstr "常に表示"
 
 #: src/Panes/TerminalPane.vala:66
 msgid "Hide when single tab"
-msgstr ""
+msgstr "タブが一つの場合は表示しない"
 
 #: src/Panes/TerminalPane.vala:67
 msgid "Never"
-msgstr ""
+msgstr "表示しない"
 
 #: src/Panes/TerminalPane.vala:69
-#, fuzzy
 msgid "Show tabs:"
-msgstr "タブを復元:"
+msgstr "タブを表示:"
 
 #: src/Widgets/Categories.vala:43
 msgid "Reset settings successfully"
@@ -492,4 +493,4 @@ msgstr "リセット"
 
 #: src/Widgets/Categories.vala:229
 msgid "Open destination folder"
-msgstr ""
+msgstr "保存先を開く"
