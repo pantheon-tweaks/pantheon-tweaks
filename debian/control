@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 10.5.1),
                libgee-0.8-dev,
                libswitchboard-2.0-dev,
                meson,
-               valac (>= 0.49.0)
+               valac (>= 0.30)
 Standards-Version: 4.5.0
 Homepage: https://github.com/pantheon-tweaks/pantheon-tweaks
 
