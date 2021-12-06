@@ -1,3 +1,14 @@
+pantheon-tweaks (1.0.3) focal; urgency=low
+
+  * FontsPane: Fix icon missing with the latest icons update
+  * Make sure dimming feature that is introduced in the latest version of Gala work for the reset dialog
+  * AppearancePane: Sort theme namaes alphabetically
+  * TerminalPane: Support changing tab bar behavior
+  * AppearancePane: Add buttons to open the theme locations
+  * Update translations
+
+ -- Ryo Nakano <ryonakaknock3@gmail.com>  Mon, 06 Dec 2021 09:51:10 +0900
+
 pantheon-tweaks (1.0.2) focal; urgency=medium
 
   * Sync selected elementary stylesheet variant with Desktop Plug
