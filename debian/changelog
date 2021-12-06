@@ -5,12 +5,7 @@ pantheon-tweaks (1.0.3) focal; urgency=low
   * AppearancePane: Sort theme namaes alphabetically
   * TerminalPane: Support changing tab bar behavior
   * AppearancePane: Add buttons to open the theme locations
-
-Translation updates:
-
-  * Update Chinese Simplified translation (thanks to @imgradeone)
-  * Update German translation (thanks to @uwe-ss)
-  * Update Japanese translation
+  * Update translations
 
  -- Ryo Nakano <ryonakaknock3@gmail.com>  Mon, 06 Dec 2021 09:51:10 +0900
 
