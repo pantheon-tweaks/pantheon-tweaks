@@ -1,9 +1,14 @@
-project('pantheon-tweaks', 'vala', 'c', version: '1.0.2')
+project(
+    'pantheon-tweaks',
+    'vala', 'c',
+    version: '1.0.2',
+    meson_version: '>= 0.49.0'
+)
 
 switchboard_dep = dependency('switchboard-2.0')
 gettext_name = meson.project_name() + '-plug'
-libdir = join_paths(get_option('prefix'), get_option('libdir'))
-pkgdatadir = join_paths(switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir]), 'personal')
+libdir = get_option('prefix') / get_option('libdir')
+pkgdatadir = switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir]) / 'personal'
 
 i18n = import('i18n')
 
@@ -13,10 +18,10 @@ add_global_arguments(
 )
 
 config_data = configuration_data()
-config_data.set_quoted('LOCALEDIR', join_paths(get_option('prefix'), get_option('localedir')))
+config_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
 config_data.set_quoted('GETTEXT_PACKAGE', gettext_name)
 config_file = configure_file(
-    input: 'src/Config.vala.in',
+    input: 'src' / 'Config.vala.in',
     output: '@BASENAME@',
     configuration: config_data
 )
@@ -25,18 +30,18 @@ subdir('data')
 subdir('po')
 
 plug_files = files(
-    'src/Tweaks.vala',
-    'src/Settings/AccountsService.vala',
-    'src/Settings/GtkSettings.vala',
-    'src/Settings/ThemeSettings.vala',
-    'src/Settings/XSettings.vala',
-    'src/Panes/AnimationsPane.vala',
-    'src/Panes/AppearancePane.vala',
-    'src/Panes/FontsPane.vala',
-    'src/Panes/MiscPane.vala',
-    'src/Panes/FilesPane.vala',
-    'src/Panes/TerminalPane.vala',
-    'src/Widgets/Categories.vala',
+    'src' / 'Tweaks.vala',
+    'src' / 'Settings' / 'AccountsService.vala',
+    'src' / 'Settings' / 'GtkSettings.vala',
+    'src' / 'Settings' / 'ThemeSettings.vala',
+    'src' / 'Settings' / 'XSettings.vala',
+    'src' / 'Panes' / 'AnimationsPane.vala',
+    'src' / 'Panes' / 'AppearancePane.vala',
+    'src' / 'Panes' / 'FontsPane.vala',
+    'src' / 'Panes' / 'MiscPane.vala',
+    'src' / 'Panes' / 'FilesPane.vala',
+    'src' / 'Panes' / 'TerminalPane.vala',
+    'src' / 'Widgets' / 'Categories.vala'
 )
 
 shared_module(
@@ -55,4 +60,4 @@ shared_module(
     install_dir: pkgdatadir
 )
 
-meson.add_install_script('meson/post_install.py')
+meson.add_install_script('meson' / 'post_install.py')
