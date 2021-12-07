@@ -269,7 +269,7 @@ msgstr "Audio:"
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr ""
-"Eigene Symbole, die hier angezeigt werden sollen, müssen in %s gespeichert "
+"Eigene Klänge, die hier angezeigt werden sollen, müssen in %s gespeichert "
 "werden."
 
 #: src/Panes/AppearancePane.vala:121
