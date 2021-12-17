@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-06 09:34+0900\n"
-"PO-Revision-Date: 2021-08-14 16:37+0200\n"
+"PO-Revision-Date: 2021-12-17 19:37+0200\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "Language: hu\n"
@@ -36,89 +36,89 @@ msgstr ""
 
 #: data/pantheon-tweaks.appdata.xml.in:18
 msgid "FontsPane: Fix icon missing with the latest icons update"
-msgstr ""
+msgstr "Betűtípusok: A legutóbbi frissítés óta hiányzó ikon javítva"
 
 #: data/pantheon-tweaks.appdata.xml.in:19
 msgid ""
 "Make sure dimming feature that is introduced in the latest version of Gala "
 "work for the reset dialog"
 msgstr ""
+"A Gala legújabb frissítésében bevezetett elhalványítás működésének biztosítása "
+"az alaphelyzetbe állítás párbeszédablakon"
 
 #: data/pantheon-tweaks.appdata.xml.in:20
 msgid "AppearancePane: Sort theme namaes alphabetically"
-msgstr ""
+msgstr "Megjelenés: témanevek rendezése ábécésorrendben"
 
 #: data/pantheon-tweaks.appdata.xml.in:21
 msgid "TerminalPane: Support changing tab bar behavior"
-msgstr ""
+msgstr "Terminál: Tab viselkedésének megváltoztatása"
 
 #: data/pantheon-tweaks.appdata.xml.in:22
 msgid "AppearancePane: Add buttons to open the theme locations"
-msgstr ""
+msgstr "Megjelenés: Gombok a témák helyeinek megnyitásához"
 
 #: data/pantheon-tweaks.appdata.xml.in:24
 #: data/pantheon-tweaks.appdata.xml.in:40
 msgid "Translation updates:"
-msgstr ""
+msgstr "Frissített fordítások:"
 
 #: data/pantheon-tweaks.appdata.xml.in:26
-#, fuzzy
 msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
-msgstr "Frissített fordítások"
+msgstr "Egyszerűsített kínai fordítás frissítve (köszönet @imgradeone)"
 
 #: data/pantheon-tweaks.appdata.xml.in:27
-#, fuzzy
 msgid "Update German translation (thanks to @uwe-ss)"
-msgstr "Frissített fordítások"
+msgstr "Német fordítás frissítve (köszönet @uwe-ss)"
 
 #: data/pantheon-tweaks.appdata.xml.in:28
 #: data/pantheon-tweaks.appdata.xml.in:45
-#, fuzzy
 msgid "Update Japanese translation"
-msgstr "Frissített fordítások"
+msgstr "Japán fordítás frissítve"
 
 #: data/pantheon-tweaks.appdata.xml.in:35
 msgid "Sync selected elementary stylesheet variant with Desktop Plug"
 msgstr ""
+"A kiválasztott elementary stíluslap szinkronban tartása az Asztal "
+"beállításszekcióval"
 
 #: data/pantheon-tweaks.appdata.xml.in:36
 msgid "Improves reliability of restoring visually"
-msgstr ""
+msgstr "Visszaállítás megbízhatóságának javítása"
 
 #: data/pantheon-tweaks.appdata.xml.in:37
 msgid ""
 "Prevent System Settings from crashing due to the removal of preferences in "
 "upstream Videos"
-msgstr ""
+msgstr "A Videók beállításainak eltávolítása okozta összeomlás megelőzése"
 
 #: data/pantheon-tweaks.appdata.xml.in:38
 msgid "Correct cursor and icon theme dir copies"
-msgstr ""
+msgstr "Helyes kurzor- és ikontéma mappák"
 
 #: data/pantheon-tweaks.appdata.xml.in:42
-#, fuzzy
 msgid "Update French translation (thanks to @roxfr)"
-msgstr "Frissített fordítások"
+msgstr "Francia fordítás frissítve (köszönet @roxfr)"
 
 #: data/pantheon-tweaks.appdata.xml.in:43
 msgid "Update Russian translation (thanks to @camellan)"
-msgstr ""
+msgstr "Orosz fordítás frissítve (köszönet @camellan)"
 
 #: data/pantheon-tweaks.appdata.xml.in:44
 msgid "Update Portuguese translation (thanks to @hugok79)"
-msgstr ""
+msgstr "Portugál fordítás frissítve (köszönet @hugok79)"
 
 #: data/pantheon-tweaks.appdata.xml.in:52
 msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
-msgstr ""
+msgstr "Adwaita/gnome/hicolor témák kizárása a témaválasztóból"
 
 #: data/pantheon-tweaks.appdata.xml.in:53
 msgid "Support accessing to panes with settings paths"
-msgstr ""
+msgstr "Az albeállítások elérhetők beállítások-útvonalakkal"
 
 #: data/pantheon-tweaks.appdata.xml.in:54
 msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
-msgstr ""
+msgstr "Működés biztosítása NixOS-en (köszönet @bobby285271)"
 
 #: data/pantheon-tweaks.appdata.xml.in:55
 #: data/pantheon-tweaks.appdata.xml.in:69
@@ -186,7 +186,7 @@ msgstr "Bezárás:"
 #. when you "snap" a window.
 #: src/Panes/AnimationsPane.vala:48
 msgid "Snap:"
-msgstr "Kitűzés:"
+msgstr "Felosztás:"
 
 #: src/Panes/AnimationsPane.vala:52
 msgid "Minimize:"
@@ -441,24 +441,23 @@ msgstr ""
 
 #: src/Panes/TerminalPane.vala:65
 msgid "Always"
-msgstr ""
+msgstr "Mindig"
 
 #: src/Panes/TerminalPane.vala:66
 msgid "Hide when single tab"
-msgstr ""
+msgstr "Elrejtés egy tabnál"
 
 #: src/Panes/TerminalPane.vala:67
 msgid "Never"
-msgstr ""
+msgstr "Soha"
 
 #: src/Panes/TerminalPane.vala:69
-#, fuzzy
 msgid "Show tabs:"
-msgstr "Lapok visszaállítása:"
+msgstr "Tabok kijelzése:"
 
 #: src/Widgets/Categories.vala:43
 msgid "Reset settings successfully"
-msgstr ""
+msgstr "Beállítások sikeresen visszaállítva"
 
 #: src/Widgets/Categories.vala:69
 msgid "General"
@@ -474,21 +473,23 @@ msgstr "Visszaállítás alapértelmezettre"
 
 #: src/Widgets/Categories.vala:130
 msgid "Are you sure you want to reset personalization?"
-msgstr ""
+msgstr "Biztosan vissza szeretné állítani a személyre szabott beállításokat?"
 
 #: src/Widgets/Categories.vala:131
 msgid ""
 "All settings in this pane will be restored to the factory defaults. This "
 "action can't be undone."
 msgstr ""
+"Az oldalon található összes beállítás a gyári alapértelmezett értékre fog "
+"visszaállni. A művelet nem vonható vissza."
 
 #: src/Widgets/Categories.vala:137
 msgid "Reset"
-msgstr ""
+msgstr "Visszaállítás"
 
 #: src/Widgets/Categories.vala:229
 msgid "Open destination folder"
-msgstr ""
+msgstr "Célmappa megnyitása"
 
 #~ msgid "Videos"
 #~ msgstr "Videók"
