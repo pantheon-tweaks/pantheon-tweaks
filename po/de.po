@@ -461,20 +461,19 @@ msgstr ""
 
 #: src/Panes/TerminalPane.vala:65
 msgid "Always"
-msgstr ""
+msgstr "Immer"
 
 #: src/Panes/TerminalPane.vala:66
 msgid "Hide when single tab"
-msgstr ""
+msgstr "Ausblenden bei einzelnem Tab"
 
 #: src/Panes/TerminalPane.vala:67
 msgid "Never"
-msgstr ""
+msgstr "Nie"
 
 #: src/Panes/TerminalPane.vala:69
-#, fuzzy
 msgid "Show tabs:"
-msgstr "Tabs wiederherstellen:"
+msgstr "Tabs anzeigen:"
 
 #: src/Widgets/Categories.vala:43
 msgid "Reset settings successfully"
