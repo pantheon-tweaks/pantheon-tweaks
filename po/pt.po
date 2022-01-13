@@ -1,23 +1,23 @@
-# Portuguese translation for elementary-community
-# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
-# This file is distributed under the same license as the elementary-community package.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
+# Portuguese translation for pantheon-tweaks-plug
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the pantheon-tweaks-plug package.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-06 09:34+0900\n"
-"PO-Revision-Date: 2021-09-15 15:13+0100\n"
+"PO-Revision-Date: 2022-01-13 16:12+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-30 08:41+0000\n"
-"X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Launchpad-Export-Date: 2014-08-30 08:41+0000\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: data/pantheon-tweaks.appdata.xml.in:5
 msgid "Pantheon Tweaks"
@@ -39,76 +39,80 @@ msgstr ""
 #: data/pantheon-tweaks.appdata.xml.in:18
 msgid "FontsPane: Fix icon missing with the latest icons update"
 msgstr ""
+"Painel Fontes: correção do ícone em falta com a última atualização de ícones"
 
 #: data/pantheon-tweaks.appdata.xml.in:19
 msgid ""
 "Make sure dimming feature that is introduced in the latest version of Gala "
 "work for the reset dialog"
 msgstr ""
+"Certifica-se de que a funcionalidade de escurecimento que é introduzida na "
+"última versão do Gala funciona para a caixa de diálogo do repor"
 
 #: data/pantheon-tweaks.appdata.xml.in:20
 msgid "AppearancePane: Sort theme namaes alphabetically"
-msgstr ""
+msgstr "Painel Aparência: ordenar alfabeticamente os nomes dos temas"
 
 #: data/pantheon-tweaks.appdata.xml.in:21
 msgid "TerminalPane: Support changing tab bar behavior"
 msgstr ""
+"Painel Terminal: Suporte de mudança de comportamento da barra de separadores"
 
 #: data/pantheon-tweaks.appdata.xml.in:22
 msgid "AppearancePane: Add buttons to open the theme locations"
-msgstr ""
+msgstr "Painel Aparência: adiciona botões para abrir as localizações do tema"
 
 #: data/pantheon-tweaks.appdata.xml.in:24
 #: data/pantheon-tweaks.appdata.xml.in:40
 msgid "Translation updates:"
-msgstr ""
+msgstr "Atualizações de tradução:"
 
 #: data/pantheon-tweaks.appdata.xml.in:26
-#, fuzzy
 msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
-msgstr "Atualização de traduções"
+msgstr "Tradução do Chinês Simplificado atualizada (obrigado a @imgradeone)"
 
 #: data/pantheon-tweaks.appdata.xml.in:27
-#, fuzzy
 msgid "Update German translation (thanks to @uwe-ss)"
-msgstr "Atualização de traduções"
+msgstr "Tradução do Alemão atualizada (obrigado a @uwe-ss)"
 
 #: data/pantheon-tweaks.appdata.xml.in:28
 #: data/pantheon-tweaks.appdata.xml.in:45
-#, fuzzy
 msgid "Update Japanese translation"
-msgstr "Atualização de traduções"
+msgstr "Tradução do Japonês atualizada"
 
 #: data/pantheon-tweaks.appdata.xml.in:35
 msgid "Sync selected elementary stylesheet variant with Desktop Plug"
 msgstr ""
+"Sincroniza a variante da folha de estilo do elementary selecionada com o "
+"\"plug\" do Ambiente de trabalho"
 
 #: data/pantheon-tweaks.appdata.xml.in:36
 msgid "Improves reliability of restoring visually"
-msgstr ""
+msgstr "Melhora a fiabilidade do restauro visual"
 
 #: data/pantheon-tweaks.appdata.xml.in:37
 msgid ""
 "Prevent System Settings from crashing due to the removal of preferences in "
 "upstream Videos"
 msgstr ""
+"Impede que ocorram falhas nas definições do sistema devido à remoção das "
+"preferências nos vídeos upstream"
 
 #: data/pantheon-tweaks.appdata.xml.in:38
 msgid "Correct cursor and icon theme dir copies"
-msgstr ""
+msgstr "Cópias corretas do diretório do tema do cursor e dos ícones"
 
 #: data/pantheon-tweaks.appdata.xml.in:42
-#, fuzzy
 msgid "Update French translation (thanks to @roxfr)"
-msgstr "Atualização de traduções"
+msgstr "Tradução do Francês atualizada (obrigado a @roxfr)"
 
 #: data/pantheon-tweaks.appdata.xml.in:43
 msgid "Update Russian translation (thanks to @camellan)"
-msgstr ""
+msgstr "Tradução do Russo atualizada (obrigado a @camellan)"
 
 #: data/pantheon-tweaks.appdata.xml.in:44
 msgid "Update Portuguese translation (thanks to @hugok79)"
-msgstr ""
+msgstr "Tradução do Português atualizada (obrigado a @hugok79)"
 
 #: data/pantheon-tweaks.appdata.xml.in:52
 msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
@@ -133,8 +137,8 @@ msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
 msgstr ""
-"O Ajustes do elementary agora é renomeado para Ajustes do Pantheon e obtém "
-"novas funcionalidades e correções:"
+"elementary Tweaks é agora renomeado para Ajustes do Pantheon e obtém novas "
+"funcionalidades e correções:"
 
 #: data/pantheon-tweaks.appdata.xml.in:63
 msgid "Remove preferences now supported in Pantheon officially"
@@ -446,24 +450,23 @@ msgstr ""
 
 #: src/Panes/TerminalPane.vala:65
 msgid "Always"
-msgstr ""
+msgstr "Sempre"
 
 #: src/Panes/TerminalPane.vala:66
 msgid "Hide when single tab"
-msgstr ""
+msgstr "Ocultar quando em separador único"
 
 #: src/Panes/TerminalPane.vala:67
 msgid "Never"
-msgstr ""
+msgstr "Nunca"
 
 #: src/Panes/TerminalPane.vala:69
-#, fuzzy
 msgid "Show tabs:"
-msgstr "Restaurar separadores:"
+msgstr "Mostrar separadores:"
 
 #: src/Widgets/Categories.vala:43
 msgid "Reset settings successfully"
-msgstr ""
+msgstr "Definições repostas com sucessso"
 
 #: src/Widgets/Categories.vala:69
 msgid "General"
@@ -479,21 +482,23 @@ msgstr "Repor predefinição"
 
 #: src/Widgets/Categories.vala:130
 msgid "Are you sure you want to reset personalization?"
-msgstr ""
+msgstr "Repor a personalização?"
 
 #: src/Widgets/Categories.vala:131
 msgid ""
 "All settings in this pane will be restored to the factory defaults. This "
 "action can't be undone."
 msgstr ""
+"Todos os ajustes neste painel serão restaurados às predefinições de fábrica. "
+"Esta ação não pode ser anulada."
 
 #: src/Widgets/Categories.vala:137
 msgid "Reset"
-msgstr ""
+msgstr "Repor"
 
 #: src/Widgets/Categories.vala:229
 msgid "Open destination folder"
-msgstr ""
+msgstr "Abrir pasta de destino"
 
 #~ msgid "Videos"
 #~ msgstr "Vídeos"
