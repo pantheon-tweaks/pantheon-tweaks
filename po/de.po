@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-tweaks-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-06 09:34+0900\n"
+"POT-Creation-Date: 2022-01-14 09:20+0900\n"
 "PO-Revision-Date: 2021-11-13 22:05+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -45,7 +45,7 @@ msgid ""
 msgstr ""
 
 #: data/pantheon-tweaks.appdata.xml.in:20
-msgid "AppearancePane: Sort theme namaes alphabetically"
+msgid "AppearancePane: Sort theme names alphabetically"
 msgstr ""
 
 #: data/pantheon-tweaks.appdata.xml.in:21
@@ -188,9 +188,9 @@ msgstr "Öffnen:"
 msgid "Close:"
 msgstr "Schließen:"
 
-#. TRANSLATORS: The word "snap" refers to a feature of Pantheon that allows you to resize a window
-#. into the half size of your screen automatically. So this string means the length of animation
-#. when you "snap" a window.
+#. / TRANSLATORS: The word "snap" refers to a feature of Pantheon that allows you to resize a window
+#. / into the half size of your screen automatically. So this string means the length of animation
+#. / when you "snap" a window.
 #: src/Panes/AnimationsPane.vala:48
 msgid "Snap:"
 msgstr "Einrasten:"
@@ -223,7 +223,7 @@ msgstr "Themaeinstellungen"
 msgid "GTK:"
 msgstr "GTK:"
 
-#. TRANSLATORS: The "%s" represents the path where custom themes are installed
+#. / TRANSLATORS: The "%s" represents the path where custom themes are installed
 #: src/Panes/AppearancePane.vala:82
 #, c-format
 msgid "To show custom themes here, put them in %s."
@@ -240,7 +240,7 @@ msgstr "theme-name"
 msgid "Icons:"
 msgstr "Symbole:"
 
-#. TRANSLATORS: The "%s" represents the path where custom icons are installed
+#. / TRANSLATORS: The "%s" represents the path where custom icons are installed
 #: src/Panes/AppearancePane.vala:93
 #, c-format
 msgid "To show custom icons here, put them in %s."
@@ -252,7 +252,7 @@ msgstr ""
 msgid "Cursor:"
 msgstr "Zeiger:"
 
-#. TRANSLATORS: The "%s" represents the path where custom cursors are installed
+#. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
 #: src/Panes/AppearancePane.vala:104
 #, c-format
 msgid "To show custom cursors here, put them in %s."
@@ -264,7 +264,7 @@ msgstr ""
 msgid "Sound:"
 msgstr "Audio:"
 
-#. TRANSLATORS: The "%s" represents the path where custom sounds are installed
+#. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
 #: src/Panes/AppearancePane.vala:115
 #, c-format
 msgid "To show custom sounds here, put them in %s."
@@ -475,6 +475,7 @@ msgstr "Nie"
 msgid "Show tabs:"
 msgstr "Tabs anzeigen:"
 
+#. Right: Add Pane itself to Stack
 #: src/Widgets/Categories.vala:43
 msgid "Reset settings successfully"
 msgstr "Einstellungen erfolgreich zurückgesetzt"

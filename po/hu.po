@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-06 09:34+0900\n"
+"POT-Creation-Date: 2022-01-14 09:20+0900\n"
 "PO-Revision-Date: 2021-12-17 19:37+0200\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -43,11 +43,12 @@ msgid ""
 "Make sure dimming feature that is introduced in the latest version of Gala "
 "work for the reset dialog"
 msgstr ""
-"A Gala legújabb frissítésében bevezetett elhalványítás működésének biztosítása "
-"az alaphelyzetbe állítás párbeszédablakon"
+"A Gala legújabb frissítésében bevezetett elhalványítás működésének "
+"biztosítása az alaphelyzetbe állítás párbeszédablakon"
 
 #: data/pantheon-tweaks.appdata.xml.in:20
-msgid "AppearancePane: Sort theme namaes alphabetically"
+#, fuzzy
+msgid "AppearancePane: Sort theme names alphabetically"
 msgstr "Megjelenés: témanevek rendezése ábécésorrendben"
 
 #: data/pantheon-tweaks.appdata.xml.in:21
@@ -181,9 +182,9 @@ msgstr "Megnyitás:"
 msgid "Close:"
 msgstr "Bezárás:"
 
-#. TRANSLATORS: The word "snap" refers to a feature of Pantheon that allows you to resize a window
-#. into the half size of your screen automatically. So this string means the length of animation
-#. when you "snap" a window.
+#. / TRANSLATORS: The word "snap" refers to a feature of Pantheon that allows you to resize a window
+#. / into the half size of your screen automatically. So this string means the length of animation
+#. / when you "snap" a window.
 #: src/Panes/AnimationsPane.vala:48
 msgid "Snap:"
 msgstr "Felosztás:"
@@ -216,7 +217,7 @@ msgstr "Témabeállítások"
 msgid "GTK:"
 msgstr "GTK:"
 
-#. TRANSLATORS: The "%s" represents the path where custom themes are installed
+#. / TRANSLATORS: The "%s" represents the path where custom themes are installed
 #: src/Panes/AppearancePane.vala:82
 #, c-format
 msgid "To show custom themes here, put them in %s."
@@ -231,7 +232,7 @@ msgstr "téma-neve"
 msgid "Icons:"
 msgstr "Ikonok:"
 
-#. TRANSLATORS: The "%s" represents the path where custom icons are installed
+#. / TRANSLATORS: The "%s" represents the path where custom icons are installed
 #: src/Panes/AppearancePane.vala:93
 #, c-format
 msgid "To show custom icons here, put them in %s."
@@ -241,7 +242,7 @@ msgstr "Az egyéni ikonok megjelenítéséhez helyezze őket ide: %s."
 msgid "Cursor:"
 msgstr "Kurzor:"
 
-#. TRANSLATORS: The "%s" represents the path where custom cursors are installed
+#. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
 #: src/Panes/AppearancePane.vala:104
 #, c-format
 msgid "To show custom cursors here, put them in %s."
@@ -251,7 +252,7 @@ msgstr "Az egyéni kurzorok megjelenítéséhez helyezze őket ide: %s."
 msgid "Sound:"
 msgstr "Hang:"
 
-#. TRANSLATORS: The "%s" represents the path where custom sounds are installed
+#. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
 #: src/Panes/AppearancePane.vala:115
 #, c-format
 msgid "To show custom sounds here, put them in %s."
@@ -455,6 +456,7 @@ msgstr "Soha"
 msgid "Show tabs:"
 msgstr "Tabok kijelzése:"
 
+#. Right: Add Pane itself to Stack
 #: src/Widgets/Categories.vala:43
 msgid "Reset settings successfully"
 msgstr "Beállítások sikeresen visszaállítva"

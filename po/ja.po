@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-06 09:34+0900\n"
+"POT-Creation-Date: 2022-01-14 09:20+0900\n"
 "PO-Revision-Date: 2021-12-06 09:40+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -47,7 +47,8 @@ msgstr ""
 "アログに対して動作するように修正"
 
 #: data/pantheon-tweaks.appdata.xml.in:20
-msgid "AppearancePane: Sort theme namaes alphabetically"
+#, fuzzy
+msgid "AppearancePane: Sort theme names alphabetically"
 msgstr "外観ペイン: テーマ名をアルファベット順で表示するように修正"
 
 #: data/pantheon-tweaks.appdata.xml.in:21
@@ -183,9 +184,9 @@ msgstr "開く:"
 msgid "Close:"
 msgstr "閉じる:"
 
-#. TRANSLATORS: The word "snap" refers to a feature of Pantheon that allows you to resize a window
-#. into the half size of your screen automatically. So this string means the length of animation
-#. when you "snap" a window.
+#. / TRANSLATORS: The word "snap" refers to a feature of Pantheon that allows you to resize a window
+#. / into the half size of your screen automatically. So this string means the length of animation
+#. / when you "snap" a window.
 #: src/Panes/AnimationsPane.vala:48
 msgid "Snap:"
 msgstr "スナップ:"
@@ -218,7 +219,7 @@ msgstr "テーマの設定"
 msgid "GTK:"
 msgstr "GTK:"
 
-#. TRANSLATORS: The "%s" represents the path where custom themes are installed
+#. / TRANSLATORS: The "%s" represents the path where custom themes are installed
 #: src/Panes/AppearancePane.vala:82
 #, c-format
 msgid "To show custom themes here, put them in %s."
@@ -233,7 +234,7 @@ msgstr "テーマ名"
 msgid "Icons:"
 msgstr "アイコン:"
 
-#. TRANSLATORS: The "%s" represents the path where custom icons are installed
+#. / TRANSLATORS: The "%s" represents the path where custom icons are installed
 #: src/Panes/AppearancePane.vala:93
 #, c-format
 msgid "To show custom icons here, put them in %s."
@@ -243,7 +244,7 @@ msgstr "カスタムアイコンをここに表示させるには、%s 以下に
 msgid "Cursor:"
 msgstr "カーソル:"
 
-#. TRANSLATORS: The "%s" represents the path where custom cursors are installed
+#. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
 #: src/Panes/AppearancePane.vala:104
 #, c-format
 msgid "To show custom cursors here, put them in %s."
@@ -253,7 +254,7 @@ msgstr "カスタムカーソルをここに表示させるには、%s 以下に
 msgid "Sound:"
 msgstr "サウンド:"
 
-#. TRANSLATORS: The "%s" represents the path where custom sounds are installed
+#. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
 #: src/Panes/AppearancePane.vala:115
 #, c-format
 msgid "To show custom sounds here, put them in %s."
@@ -459,6 +460,7 @@ msgstr "表示しない"
 msgid "Show tabs:"
 msgstr "タブを表示:"
 
+#. Right: Add Pane itself to Stack
 #: src/Widgets/Categories.vala:43
 msgid "Reset settings successfully"
 msgstr "設定を正常にリセットしました"
