@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-14 09:20+0900\n"
-"PO-Revision-Date: 2021-11-07 11:07+0800\n"
+"PO-Revision-Date: 2022-02-09 15:09+0800\n"
 "Last-Translator: imgradeone <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "Language: zh_CN\n"
@@ -34,25 +34,25 @@ msgstr "专为 Pantheon 设计的系统设置面板，帮助您简便、安全�
 
 #: data/pantheon-tweaks.appdata.xml.in:18
 msgid "FontsPane: Fix icon missing with the latest icons update"
-msgstr ""
+msgstr "字体面板：修复图标包更新导致图标缺失的问题"
 
 #: data/pantheon-tweaks.appdata.xml.in:19
 msgid ""
 "Make sure dimming feature that is introduced in the latest version of Gala "
 "work for the reset dialog"
-msgstr ""
+msgstr "在 Gala 最新版本引入的主窗口变暗效果现在已对重置对话框生效"
 
 #: data/pantheon-tweaks.appdata.xml.in:20
 msgid "AppearancePane: Sort theme names alphabetically"
-msgstr ""
+msgstr "外观面板：按字母顺序排序主题"
 
 #: data/pantheon-tweaks.appdata.xml.in:21
 msgid "TerminalPane: Support changing tab bar behavior"
-msgstr ""
+msgstr "终端面板：支持修改标签行为"
 
 #: data/pantheon-tweaks.appdata.xml.in:22
 msgid "AppearancePane: Add buttons to open the theme locations"
-msgstr ""
+msgstr "外观面板：增加打开主题目录的按钮"
 
 #: data/pantheon-tweaks.appdata.xml.in:24
 #: data/pantheon-tweaks.appdata.xml.in:40
@@ -61,16 +61,16 @@ msgstr "翻译更新："
 
 #: data/pantheon-tweaks.appdata.xml.in:26
 msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
-msgstr ""
+msgstr "更新简体中文翻译（由 @imgradeone 贡献）"
 
 #: data/pantheon-tweaks.appdata.xml.in:27
 msgid "Update German translation (thanks to @uwe-ss)"
-msgstr ""
+msgstr "更新德语翻译（由 @uwe-ss 贡献）"
 
 #: data/pantheon-tweaks.appdata.xml.in:28
 #: data/pantheon-tweaks.appdata.xml.in:45
 msgid "Update Japanese translation"
-msgstr ""
+msgstr "更新日语翻译"
 
 #: data/pantheon-tweaks.appdata.xml.in:35
 msgid "Sync selected elementary stylesheet variant with Desktop Plug"
@@ -92,27 +92,27 @@ msgstr "修正光标和图标主题文件夹地址的复制"
 
 #: data/pantheon-tweaks.appdata.xml.in:42
 msgid "Update French translation (thanks to @roxfr)"
-msgstr ""
+msgstr "更新法语翻译（由 @roxfr 贡献）"
 
 #: data/pantheon-tweaks.appdata.xml.in:43
 msgid "Update Russian translation (thanks to @camellan)"
-msgstr ""
+msgstr "更新俄罗斯语翻译（由 @camellan 贡献）"
 
 #: data/pantheon-tweaks.appdata.xml.in:44
 msgid "Update Portuguese translation (thanks to @hugok79)"
-msgstr ""
+msgstr "更新葡萄牙语翻译（由 @hugok79 贡献）"
 
 #: data/pantheon-tweaks.appdata.xml.in:52
 msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
-msgstr ""
+msgstr "在主题选项中排除 Adwaita/gnome/hicolor 主题"
 
 #: data/pantheon-tweaks.appdata.xml.in:53
 msgid "Support accessing to panes with settings paths"
-msgstr ""
+msgstr "支持通过设置路径访问面板"
 
 #: data/pantheon-tweaks.appdata.xml.in:54
 msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
-msgstr ""
+msgstr "修复插件以在 NixOS 上正常运行（由 @bobby285271 贡献）"
 
 #: data/pantheon-tweaks.appdata.xml.in:55
 #: data/pantheon-tweaks.appdata.xml.in:69
@@ -427,20 +427,19 @@ msgstr "触发行尾或在 Tab 自动填充提示时没有可行填充的提示�
 
 #: src/Panes/TerminalPane.vala:65
 msgid "Always"
-msgstr ""
+msgstr "一直显示"
 
 #: src/Panes/TerminalPane.vala:66
 msgid "Hide when single tab"
-msgstr ""
+msgstr "只有单个标签时隐藏"
 
 #: src/Panes/TerminalPane.vala:67
 msgid "Never"
-msgstr ""
+msgstr "不显示"
 
 #: src/Panes/TerminalPane.vala:69
-#, fuzzy
 msgid "Show tabs:"
-msgstr "恢复标签："
+msgstr "显示标签栏："
 
 #. Right: Add Pane itself to Stack
 #: src/Widgets/Categories.vala:43
@@ -475,7 +474,7 @@ msgstr "重置"
 
 #: src/Widgets/Categories.vala:229
 msgid "Open destination folder"
-msgstr ""
+msgstr "打开目标文件夹"
 
 #~ msgid "Videos"
 #~ msgstr "视频"
