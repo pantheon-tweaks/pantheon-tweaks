@@ -17,7 +17,7 @@
  */
 
 public class PantheonTweaks.Categories : Gtk.Paned {
-    private const string[] PANE_NAME = { "appearance", "fonts", "animations", "misc", "files", "terminal" };
+    private const string[] PANE_NAME = { "appearance", "fonts", "misc", "files", "terminal" };
 
     private Gtk.ListBox pane_list;
 
@@ -28,7 +28,6 @@ public class PantheonTweaks.Categories : Gtk.Paned {
         var panes = new Gee.ArrayList<Categories.Pane> ();
         panes.add (appearance_pane);
         panes.add (new Panes.FontsPane ());
-        panes.add (new Panes.AnimationsPane ());
         panes.add (new Panes.MiscPane ());
         panes.add (files_pane);
         panes.add (new Panes.TerminalPane ());

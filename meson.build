@@ -34,7 +34,6 @@ plug_files = files(
     'src/Settings/GtkSettings.vala',
     'src/Settings/ThemeSettings.vala',
     'src/Settings/XSettings.vala',
-    'src/Panes/AnimationsPane.vala',
     'src/Panes/AppearancePane.vala',
     'src/Panes/FontsPane.vala',
     'src/Panes/MiscPane.vala',
