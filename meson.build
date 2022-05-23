@@ -1,7 +1,7 @@
 project(
     'pantheon-tweaks',
     'vala', 'c',
-    version: '1.0.3'
+    version: '1.0.4'
 )
 
 switchboard_dep = dependency('switchboard-2.0')

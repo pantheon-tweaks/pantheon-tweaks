@@ -1,3 +1,11 @@
+pantheon-tweaks (1.0.4) focal; urgency=low
+
+  * Remove AnimationsPane which no longer take effect due to the removal of tweaking animations functions on Gala side
+  * DestinationButton: Show an error dialog when creating/opening the destination folder being failed
+  * Update translations
+
+ -- Ryo Nakano <ryonakaknock3@gmail.com>  Mon, 23 May 2022 21:27:45 +0900
+
 pantheon-tweaks (1.0.3) focal; urgency=low
 
   * FontsPane: Fix icon missing with the latest icons update
