@@ -233,19 +233,41 @@ public class PantheonTweaks.Categories : Gtk.Paned {
                 clicked.connect (() => {
                     var dir = File.new_for_uri (destination_uri);
                     if (!dir.query_exists ()) {
-                        try {
-                            dir.make_directory_with_parents ();
+                    try {
+                        dir.make_directory_with_parents ();
                         } catch (Error e) {
-                            warning (e.message);
+                            show_folder_action_error (
+                                _("Failed to create the destination folder"),
+                                _("The destination folder doesn't exist and tried to create new but failed. The following error message might be helpful:"),
+                                e.message
+                            );
                         }
                     }
 
                     try {
                         GLib.AppInfo.launch_default_for_uri (destination_uri, null);
                     } catch (Error e) {
-                        warning (e.message);
+                        show_folder_action_error (
+                            _("Failed to open the destination folder"),
+                            _("Tried to open the destination folder but failed. The following error message might be helpful:"),
+                            e.message
+                        );
                     }
                 });
+            }
+
+            private void show_folder_action_error (string primary_text, string secondary_text, string error_message) {
+                var error_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+                    primary_text, secondary_text, "dialog-error", Gtk.ButtonsType.CLOSE
+                ) {
+                    modal = true,
+                    transient_for = (Gtk.Window) get_toplevel ()
+                };
+                error_dialog.show_error_details (error_message);
+                error_dialog.response.connect ((response_id) => {
+                    error_dialog.destroy ();
+                });
+                error_dialog.show ();
             }
         }
 
