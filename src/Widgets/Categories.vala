@@ -233,8 +233,8 @@ public class PantheonTweaks.Categories : Gtk.Paned {
                 clicked.connect (() => {
                     var dir = File.new_for_uri (destination_uri);
                     if (!dir.query_exists ()) {
-                    try {
-                        dir.make_directory_with_parents ();
+                        try {
+                            dir.make_directory_with_parents ();
                         } catch (Error e) {
                             show_folder_action_error (
                                 _("Failed to create the destination folder"),
