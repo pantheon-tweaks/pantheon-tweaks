@@ -12,6 +12,22 @@
   <icon type="stock">preferences-desktop-tweaks</icon>
   <translation type="gettext">pantheon-tweaks-plug</translation>
   <releases>
+    <release version="1.0.4" date="2022-05-23" urgency="low">
+      <description>
+        <ul>
+          <li>Remove AnimationsPane which no longer take effect due to the removal of tweaking animations functions on Gala side</li>
+          <li>DestinationButton: Show an error dialog when creating/opening the destination folder being failed</li>
+        </ul>
+        <p>Translation updates:</p>
+        <ul>
+          <li>Update German translation (thanks to @uwe-ss)</li>
+          <li>Update Hungarian translation (thanks to @TomiOhl)</li>
+          <li>Update Portuguese translation (thanks to @hugok79)</li>
+          <li>Update Chinese Simplified translation (thanks to @imgradeone)</li>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.3" date="2021-12-06" urgency="low">
       <description>
         <ul>
