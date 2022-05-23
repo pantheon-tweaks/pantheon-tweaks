@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-14 09:20+0900\n"
+"POT-Creation-Date: 2022-05-23 21:11+0900\n"
 "PO-Revision-Date: 2021-12-06 09:40+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -33,12 +33,56 @@ msgstr ""
 "けのシステム設定パネルです。"
 
 #: data/pantheon-tweaks.appdata.xml.in:18
+msgid ""
+"Remove AnimationsPane which no longer take effect due to the removal of "
+"tweaking animations functions on Gala side"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:19
+msgid ""
+"DestinationButton: Show an error dialog when creating/opening the "
+"destination folder being failed"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:21
+#: data/pantheon-tweaks.appdata.xml.in:40
+#: data/pantheon-tweaks.appdata.xml.in:56
+msgid "Translation updates:"
+msgstr "翻訳の更新:"
+
+#: data/pantheon-tweaks.appdata.xml.in:23
+#: data/pantheon-tweaks.appdata.xml.in:43
+msgid "Update German translation (thanks to @uwe-ss)"
+msgstr "ドイツ語翻訳を更新 (貢献者: @uwe-ss)"
+
+#: data/pantheon-tweaks.appdata.xml.in:24
+#, fuzzy
+msgid "Update Hungarian translation (thanks to @TomiOhl)"
+msgstr "ロシア語翻訳を更新 (貢献者: @camellan)"
+
+#: data/pantheon-tweaks.appdata.xml.in:25
+#: data/pantheon-tweaks.appdata.xml.in:60
+msgid "Update Portuguese translation (thanks to @hugok79)"
+msgstr "ポルトガル語翻訳を更新 (貢献者: @hugok79)"
+
+#: data/pantheon-tweaks.appdata.xml.in:26
+#: data/pantheon-tweaks.appdata.xml.in:42
+msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
+msgstr "簡体字中国語語翻訳を更新 (貢献者: @imgradeone)"
+
+#: data/pantheon-tweaks.appdata.xml.in:27
+#: data/pantheon-tweaks.appdata.xml.in:44
+#: data/pantheon-tweaks.appdata.xml.in:61
+msgid "Update Japanese translation"
+msgstr "日本語翻訳を更新"
+
+#: data/pantheon-tweaks.appdata.xml.in:34
 msgid "FontsPane: Fix icon missing with the latest icons update"
 msgstr ""
 "フォントペイン: 最近のアイコンのアップデートによって、ペインのアイコンが表示"
 "されなくなっていた不具合を修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:19
+#: data/pantheon-tweaks.appdata.xml.in:35
 msgid ""
 "Make sure dimming feature that is introduced in the latest version of Gala "
 "work for the reset dialog"
@@ -46,88 +90,66 @@ msgstr ""
 "最新バージョンの Gala で導入された親ウィンドウを薄暗くする機能がリセットダイ"
 "アログに対して動作するように修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:20
+#: data/pantheon-tweaks.appdata.xml.in:36
 #, fuzzy
 msgid "AppearancePane: Sort theme names alphabetically"
 msgstr "外観ペイン: テーマ名をアルファベット順で表示するように修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:21
+#: data/pantheon-tweaks.appdata.xml.in:37
 msgid "TerminalPane: Support changing tab bar behavior"
 msgstr "ターミナルペイン: タブバーの挙動の変更に対応"
 
-#: data/pantheon-tweaks.appdata.xml.in:22
+#: data/pantheon-tweaks.appdata.xml.in:38
 msgid "AppearancePane: Add buttons to open the theme locations"
 msgstr "外観ペイン: テーマの保存先を開くボタンを追加"
 
-#: data/pantheon-tweaks.appdata.xml.in:24
-#: data/pantheon-tweaks.appdata.xml.in:40
-msgid "Translation updates:"
-msgstr "翻訳の更新:"
-
-#: data/pantheon-tweaks.appdata.xml.in:26
-msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
-msgstr "簡体字中国語語翻訳を更新 (貢献者: @imgradeone)"
-
-#: data/pantheon-tweaks.appdata.xml.in:27
-msgid "Update German translation (thanks to @uwe-ss)"
-msgstr "ドイツ語翻訳を更新 (貢献者: @uwe-ss)"
-
-#: data/pantheon-tweaks.appdata.xml.in:28
-#: data/pantheon-tweaks.appdata.xml.in:45
-msgid "Update Japanese translation"
-msgstr "日本語翻訳を更新"
-
-#: data/pantheon-tweaks.appdata.xml.in:35
+#: data/pantheon-tweaks.appdata.xml.in:51
 msgid "Sync selected elementary stylesheet variant with Desktop Plug"
 msgstr ""
 "選択された elementary スタイルシートの色がデスクトッププラグの設定と同期する"
 "ように修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:36
+#: data/pantheon-tweaks.appdata.xml.in:52
 msgid "Improves reliability of restoring visually"
 msgstr "設定をリセットしたことが視覚的わかるように修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:37
+#: data/pantheon-tweaks.appdata.xml.in:53
 msgid ""
 "Prevent System Settings from crashing due to the removal of preferences in "
 "upstream Videos"
 msgstr ""
 "“ビデオ”での設定項目の削除が原因で“システム設定”がクラッシュする不具合を修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:38
+#: data/pantheon-tweaks.appdata.xml.in:54
 msgid "Correct cursor and icon theme dir copies"
 msgstr "カーソルとアイコンテーマのディレクトリのテキストを修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:42
+#: data/pantheon-tweaks.appdata.xml.in:58
 msgid "Update French translation (thanks to @roxfr)"
 msgstr "フランス語翻訳を更新 (貢献者: @roxfr)"
 
-#: data/pantheon-tweaks.appdata.xml.in:43
+#: data/pantheon-tweaks.appdata.xml.in:59
 msgid "Update Russian translation (thanks to @camellan)"
 msgstr "ロシア語翻訳を更新 (貢献者: @camellan)"
 
-#: data/pantheon-tweaks.appdata.xml.in:44
-msgid "Update Portuguese translation (thanks to @hugok79)"
-msgstr "ポルトガル語翻訳を更新 (貢献者: @hugok79)"
-
-#: data/pantheon-tweaks.appdata.xml.in:52
+#: data/pantheon-tweaks.appdata.xml.in:68
 msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
 msgstr "テーマの選択肢から Adwaita/gnome/hicolor を除外するように修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:53
+#: data/pantheon-tweaks.appdata.xml.in:69
 msgid "Support accessing to panes with settings paths"
 msgstr "設定パスを使用してペインにアクセスできる機能を追加"
 
-#: data/pantheon-tweaks.appdata.xml.in:54
+#: data/pantheon-tweaks.appdata.xml.in:70
 msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
 msgstr "NixOS でプラグが動作するように修正 (貢献者: @bobby285271)"
 
-#: data/pantheon-tweaks.appdata.xml.in:55
-#: data/pantheon-tweaks.appdata.xml.in:69
+#: data/pantheon-tweaks.appdata.xml.in:71
+#: data/pantheon-tweaks.appdata.xml.in:85
 msgid "Update translations"
 msgstr "翻訳の更新"
 
-#: data/pantheon-tweaks.appdata.xml.in:61
+#: data/pantheon-tweaks.appdata.xml.in:77
 msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
@@ -135,69 +157,37 @@ msgstr ""
 "elementary Tweaks から Pantheon Tweaks に名称変更し、以下の新機能と修正が追加"
 "されました:"
 
-#: data/pantheon-tweaks.appdata.xml.in:63
+#: data/pantheon-tweaks.appdata.xml.in:79
 msgid "Remove preferences now supported in Pantheon officially"
 msgstr "Pantheon に正式に追加された設定項目を削除"
 
-#: data/pantheon-tweaks.appdata.xml.in:64
+#: data/pantheon-tweaks.appdata.xml.in:80
 msgid "Remove preferences causing the plug crash"
 msgstr "クラッシュを引き起こす設定項目を削除"
 
-#: data/pantheon-tweaks.appdata.xml.in:65
+#: data/pantheon-tweaks.appdata.xml.in:81
 msgid "Fully redesigned plug"
 msgstr "抜本的なデザイン変更"
 
-#: data/pantheon-tweaks.appdata.xml.in:66
+#: data/pantheon-tweaks.appdata.xml.in:82
 msgid "Support changing sound theme (thanks to @pongloongyeat)"
 msgstr "サウンドテーマの変更に対応 (貢献者: @pongloongyeat)"
 
-#: data/pantheon-tweaks.appdata.xml.in:67
+#: data/pantheon-tweaks.appdata.xml.in:83
 msgid "Add new window controls layout"
 msgstr "新しいウィンドウコントロールのレイアウトを追加"
 
-#: data/pantheon-tweaks.appdata.xml.in:68
+#: data/pantheon-tweaks.appdata.xml.in:84
 msgid "Fix deprecations"
 msgstr "非推奨のコードを修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:76
+#: data/pantheon-tweaks.appdata.xml.in:92
 msgid "Appearance pane"
 msgstr "“外観”ペイン"
 
 #: src/Tweaks.vala:39
 msgid "Tweaks"
 msgstr "Tweaks"
-
-#: src/Panes/AnimationsPane.vala:25
-msgid "Animations"
-msgstr "アニメーション"
-
-#: src/Panes/AnimationsPane.vala:26
-msgid "Adjust the animation length used for window management or multitasking."
-msgstr ""
-"ウィンドウ管理やマルチタスクに使用されるアニメーションの長さを調節します。"
-
-#: src/Panes/AnimationsPane.vala:37
-msgid "Open:"
-msgstr "開く:"
-
-#: src/Panes/AnimationsPane.vala:41
-msgid "Close:"
-msgstr "閉じる:"
-
-#. / TRANSLATORS: The word "snap" refers to a feature of Pantheon that allows you to resize a window
-#. / into the half size of your screen automatically. So this string means the length of animation
-#. / when you "snap" a window.
-#: src/Panes/AnimationsPane.vala:48
-msgid "Snap:"
-msgstr "スナップ:"
-
-#: src/Panes/AnimationsPane.vala:52
-msgid "Minimize:"
-msgstr "最小化:"
-
-#: src/Panes/AnimationsPane.vala:56
-msgid "Workspace switch:"
-msgstr "ワークスペースの切り替え:"
 
 #: src/Panes/AppearancePane.vala:34
 msgid "Appearance"
@@ -219,7 +209,7 @@ msgstr "テーマの設定"
 msgid "GTK:"
 msgstr "GTK:"
 
-#. / TRANSLATORS: The "%s" represents the path where custom themes are installed
+#. TRANSLATORS: The "%s" represents the path where custom themes are installed
 #: src/Panes/AppearancePane.vala:82
 #, c-format
 msgid "To show custom themes here, put them in %s."
@@ -234,7 +224,7 @@ msgstr "テーマ名"
 msgid "Icons:"
 msgstr "アイコン:"
 
-#. / TRANSLATORS: The "%s" represents the path where custom icons are installed
+#. TRANSLATORS: The "%s" represents the path where custom icons are installed
 #: src/Panes/AppearancePane.vala:93
 #, c-format
 msgid "To show custom icons here, put them in %s."
@@ -244,7 +234,7 @@ msgstr "カスタムアイコンをここに表示させるには、%s 以下に
 msgid "Cursor:"
 msgstr "カーソル:"
 
-#. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
+#. TRANSLATORS: The "%s" represents the path where custom cursors are installed
 #: src/Panes/AppearancePane.vala:104
 #, c-format
 msgid "To show custom cursors here, put them in %s."
@@ -254,7 +244,7 @@ msgstr "カスタムカーソルをここに表示させるには、%s 以下に
 msgid "Sound:"
 msgstr "サウンド:"
 
-#. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
+#. TRANSLATORS: The "%s" represents the path where custom sounds are installed
 #: src/Panes/AppearancePane.vala:115
 #, c-format
 msgid "To show custom sounds here, put them in %s."
@@ -460,28 +450,27 @@ msgstr "表示しない"
 msgid "Show tabs:"
 msgstr "タブを表示:"
 
-#. Right: Add Pane itself to Stack
-#: src/Widgets/Categories.vala:43
+#: src/Widgets/Categories.vala:42
 msgid "Reset settings successfully"
 msgstr "設定を正常にリセットしました"
 
-#: src/Widgets/Categories.vala:69
+#: src/Widgets/Categories.vala:68
 msgid "General"
 msgstr "一般"
 
-#: src/Widgets/Categories.vala:71
+#: src/Widgets/Categories.vala:70
 msgid "Applications"
 msgstr "アプリケーション"
 
-#: src/Widgets/Categories.vala:125
+#: src/Widgets/Categories.vala:124
 msgid "Reset to default"
 msgstr "デフォルトにリセット"
 
-#: src/Widgets/Categories.vala:130
+#: src/Widgets/Categories.vala:129
 msgid "Are you sure you want to reset personalization?"
 msgstr "個人設定をリセットしてもよろしいですか？"
 
-#: src/Widgets/Categories.vala:131
+#: src/Widgets/Categories.vala:130
 msgid ""
 "All settings in this pane will be restored to the factory defaults. This "
 "action can't be undone."
@@ -489,10 +478,55 @@ msgstr ""
 "このペインにあるすべての設定が出荷時のデフォルトに復元されます。この操作はや"
 "り直せません。"
 
-#: src/Widgets/Categories.vala:137
+#: src/Widgets/Categories.vala:136
 msgid "Reset"
 msgstr "リセット"
 
-#: src/Widgets/Categories.vala:229
+#: src/Widgets/Categories.vala:228
 msgid "Open destination folder"
 msgstr "保存先を開く"
+
+#: src/Widgets/Categories.vala:240
+#, fuzzy
+msgid "Failed to create the destination folder"
+msgstr "保存先を開く"
+
+#: src/Widgets/Categories.vala:241
+msgid ""
+"The destination folder doesn't exist and tried to create new but failed. The "
+"following error message might be helpful:"
+msgstr ""
+
+#: src/Widgets/Categories.vala:251
+#, fuzzy
+msgid "Failed to open the destination folder"
+msgstr "保存先を開く"
+
+#: src/Widgets/Categories.vala:252
+msgid ""
+"Tried to open the destination folder but failed. The following error message "
+"might be helpful:"
+msgstr ""
+
+#~ msgid "Animations"
+#~ msgstr "アニメーション"
+
+#~ msgid ""
+#~ "Adjust the animation length used for window management or multitasking."
+#~ msgstr ""
+#~ "ウィンドウ管理やマルチタスクに使用されるアニメーションの長さを調節します。"
+
+#~ msgid "Open:"
+#~ msgstr "開く:"
+
+#~ msgid "Close:"
+#~ msgstr "閉じる:"
+
+#~ msgid "Snap:"
+#~ msgstr "スナップ:"
+
+#~ msgid "Minimize:"
+#~ msgstr "最小化:"
+
+#~ msgid "Workspace switch:"
+#~ msgstr "ワークスペースの切り替え:"

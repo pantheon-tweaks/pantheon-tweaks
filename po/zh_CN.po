@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-14 09:20+0900\n"
+"POT-Creation-Date: 2022-05-23 21:11+0900\n"
 "PO-Revision-Date: 2022-02-09 15:09+0800\n"
 "Last-Translator: imgradeone <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -33,161 +33,152 @@ msgid ""
 msgstr "专为 Pantheon 设计的系统设置面板，帮助您简便、安全地修改桌面外观。"
 
 #: data/pantheon-tweaks.appdata.xml.in:18
+msgid ""
+"Remove AnimationsPane which no longer take effect due to the removal of "
+"tweaking animations functions on Gala side"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:19
+msgid ""
+"DestinationButton: Show an error dialog when creating/opening the "
+"destination folder being failed"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:21
+#: data/pantheon-tweaks.appdata.xml.in:40
+#: data/pantheon-tweaks.appdata.xml.in:56
+msgid "Translation updates:"
+msgstr "翻译更新："
+
+#: data/pantheon-tweaks.appdata.xml.in:23
+#: data/pantheon-tweaks.appdata.xml.in:43
+msgid "Update German translation (thanks to @uwe-ss)"
+msgstr "更新德语翻译（由 @uwe-ss 贡献）"
+
+#: data/pantheon-tweaks.appdata.xml.in:24
+#, fuzzy
+msgid "Update Hungarian translation (thanks to @TomiOhl)"
+msgstr "更新俄罗斯语翻译（由 @camellan 贡献）"
+
+#: data/pantheon-tweaks.appdata.xml.in:25
+#: data/pantheon-tweaks.appdata.xml.in:60
+msgid "Update Portuguese translation (thanks to @hugok79)"
+msgstr "更新葡萄牙语翻译（由 @hugok79 贡献）"
+
+#: data/pantheon-tweaks.appdata.xml.in:26
+#: data/pantheon-tweaks.appdata.xml.in:42
+msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
+msgstr "更新简体中文翻译（由 @imgradeone 贡献）"
+
+#: data/pantheon-tweaks.appdata.xml.in:27
+#: data/pantheon-tweaks.appdata.xml.in:44
+#: data/pantheon-tweaks.appdata.xml.in:61
+msgid "Update Japanese translation"
+msgstr "更新日语翻译"
+
+#: data/pantheon-tweaks.appdata.xml.in:34
 msgid "FontsPane: Fix icon missing with the latest icons update"
 msgstr "字体面板：修复图标包更新导致图标缺失的问题"
 
-#: data/pantheon-tweaks.appdata.xml.in:19
+#: data/pantheon-tweaks.appdata.xml.in:35
 msgid ""
 "Make sure dimming feature that is introduced in the latest version of Gala "
 "work for the reset dialog"
 msgstr "在 Gala 最新版本引入的主窗口变暗效果现在已对重置对话框生效"
 
-#: data/pantheon-tweaks.appdata.xml.in:20
+#: data/pantheon-tweaks.appdata.xml.in:36
 msgid "AppearancePane: Sort theme names alphabetically"
 msgstr "外观面板：按字母顺序排序主题"
 
-#: data/pantheon-tweaks.appdata.xml.in:21
+#: data/pantheon-tweaks.appdata.xml.in:37
 msgid "TerminalPane: Support changing tab bar behavior"
 msgstr "终端面板：支持修改标签行为"
 
-#: data/pantheon-tweaks.appdata.xml.in:22
+#: data/pantheon-tweaks.appdata.xml.in:38
 msgid "AppearancePane: Add buttons to open the theme locations"
 msgstr "外观面板：增加打开主题目录的按钮"
 
-#: data/pantheon-tweaks.appdata.xml.in:24
-#: data/pantheon-tweaks.appdata.xml.in:40
-msgid "Translation updates:"
-msgstr "翻译更新："
-
-#: data/pantheon-tweaks.appdata.xml.in:26
-msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
-msgstr "更新简体中文翻译（由 @imgradeone 贡献）"
-
-#: data/pantheon-tweaks.appdata.xml.in:27
-msgid "Update German translation (thanks to @uwe-ss)"
-msgstr "更新德语翻译（由 @uwe-ss 贡献）"
-
-#: data/pantheon-tweaks.appdata.xml.in:28
-#: data/pantheon-tweaks.appdata.xml.in:45
-msgid "Update Japanese translation"
-msgstr "更新日语翻译"
-
-#: data/pantheon-tweaks.appdata.xml.in:35
+#: data/pantheon-tweaks.appdata.xml.in:51
 msgid "Sync selected elementary stylesheet variant with Desktop Plug"
 msgstr "同步桌面插件中选择的 elementary 样式"
 
-#: data/pantheon-tweaks.appdata.xml.in:36
+#: data/pantheon-tweaks.appdata.xml.in:52
 msgid "Improves reliability of restoring visually"
 msgstr "改进恢复功能的可用性"
 
-#: data/pantheon-tweaks.appdata.xml.in:37
+#: data/pantheon-tweaks.appdata.xml.in:53
 msgid ""
 "Prevent System Settings from crashing due to the removal of preferences in "
 "upstream Videos"
 msgstr "防止系统设置因上游视频中的首选项被删除而崩溃"
 
-#: data/pantheon-tweaks.appdata.xml.in:38
+#: data/pantheon-tweaks.appdata.xml.in:54
 msgid "Correct cursor and icon theme dir copies"
 msgstr "修正光标和图标主题文件夹地址的复制"
 
-#: data/pantheon-tweaks.appdata.xml.in:42
+#: data/pantheon-tweaks.appdata.xml.in:58
 msgid "Update French translation (thanks to @roxfr)"
 msgstr "更新法语翻译（由 @roxfr 贡献）"
 
-#: data/pantheon-tweaks.appdata.xml.in:43
+#: data/pantheon-tweaks.appdata.xml.in:59
 msgid "Update Russian translation (thanks to @camellan)"
 msgstr "更新俄罗斯语翻译（由 @camellan 贡献）"
 
-#: data/pantheon-tweaks.appdata.xml.in:44
-msgid "Update Portuguese translation (thanks to @hugok79)"
-msgstr "更新葡萄牙语翻译（由 @hugok79 贡献）"
-
-#: data/pantheon-tweaks.appdata.xml.in:52
+#: data/pantheon-tweaks.appdata.xml.in:68
 msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
 msgstr "在主题选项中排除 Adwaita/gnome/hicolor 主题"
 
-#: data/pantheon-tweaks.appdata.xml.in:53
+#: data/pantheon-tweaks.appdata.xml.in:69
 msgid "Support accessing to panes with settings paths"
 msgstr "支持通过设置路径访问面板"
 
-#: data/pantheon-tweaks.appdata.xml.in:54
+#: data/pantheon-tweaks.appdata.xml.in:70
 msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
 msgstr "修复插件以在 NixOS 上正常运行（由 @bobby285271 贡献）"
 
-#: data/pantheon-tweaks.appdata.xml.in:55
-#: data/pantheon-tweaks.appdata.xml.in:69
+#: data/pantheon-tweaks.appdata.xml.in:71
+#: data/pantheon-tweaks.appdata.xml.in:85
 msgid "Update translations"
 msgstr "翻译更新"
 
-#: data/pantheon-tweaks.appdata.xml.in:61
+#: data/pantheon-tweaks.appdata.xml.in:77
 msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
 msgstr ""
 "elementary 优化现已更名为 Pantheon 优化，同时也获得了一些新功能和修复："
 
-#: data/pantheon-tweaks.appdata.xml.in:63
+#: data/pantheon-tweaks.appdata.xml.in:79
 msgid "Remove preferences now supported in Pantheon officially"
 msgstr "删除 Pantheon 目前官方支持的设置项"
 
-#: data/pantheon-tweaks.appdata.xml.in:64
+#: data/pantheon-tweaks.appdata.xml.in:80
 msgid "Remove preferences causing the plug crash"
 msgstr "删除导致插件崩溃的设置项"
 
-#: data/pantheon-tweaks.appdata.xml.in:65
+#: data/pantheon-tweaks.appdata.xml.in:81
 msgid "Fully redesigned plug"
 msgstr "完全重新设计的插件"
 
-#: data/pantheon-tweaks.appdata.xml.in:66
+#: data/pantheon-tweaks.appdata.xml.in:82
 msgid "Support changing sound theme (thanks to @pongloongyeat)"
 msgstr "支持修改音效主题（特别感谢 @pongloongyeat）"
 
-#: data/pantheon-tweaks.appdata.xml.in:67
+#: data/pantheon-tweaks.appdata.xml.in:83
 msgid "Add new window controls layout"
 msgstr "增加新的窗口控制布局"
 
-#: data/pantheon-tweaks.appdata.xml.in:68
+#: data/pantheon-tweaks.appdata.xml.in:84
 msgid "Fix deprecations"
 msgstr "弃用修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:76
+#: data/pantheon-tweaks.appdata.xml.in:92
 msgid "Appearance pane"
 msgstr "外观面板"
 
 #: src/Tweaks.vala:39
 msgid "Tweaks"
 msgstr "优化"
-
-#: src/Panes/AnimationsPane.vala:25
-msgid "Animations"
-msgstr "动画"
-
-#: src/Panes/AnimationsPane.vala:26
-msgid "Adjust the animation length used for window management or multitasking."
-msgstr "修改窗口管理器 / 多任务视图的动画长度。"
-
-#: src/Panes/AnimationsPane.vala:37
-msgid "Open:"
-msgstr "打开："
-
-#: src/Panes/AnimationsPane.vala:41
-msgid "Close:"
-msgstr "关闭："
-
-#. / TRANSLATORS: The word "snap" refers to a feature of Pantheon that allows you to resize a window
-#. / into the half size of your screen automatically. So this string means the length of animation
-#. / when you "snap" a window.
-#: src/Panes/AnimationsPane.vala:48
-msgid "Snap:"
-msgstr "分屏："
-
-#: src/Panes/AnimationsPane.vala:52
-msgid "Minimize:"
-msgstr "最小化："
-
-#: src/Panes/AnimationsPane.vala:56
-msgid "Workspace switch:"
-msgstr "切换工作区："
 
 #: src/Panes/AppearancePane.vala:34
 msgid "Appearance"
@@ -207,7 +198,7 @@ msgstr "主题设置"
 msgid "GTK:"
 msgstr "GTK："
 
-#. / TRANSLATORS: The "%s" represents the path where custom themes are installed
+#. TRANSLATORS: The "%s" represents the path where custom themes are installed
 #: src/Panes/AppearancePane.vala:82
 #, c-format
 msgid "To show custom themes here, put them in %s."
@@ -222,7 +213,7 @@ msgstr "theme-name"
 msgid "Icons:"
 msgstr "图标："
 
-#. / TRANSLATORS: The "%s" represents the path where custom icons are installed
+#. TRANSLATORS: The "%s" represents the path where custom icons are installed
 #: src/Panes/AppearancePane.vala:93
 #, c-format
 msgid "To show custom icons here, put them in %s."
@@ -232,7 +223,7 @@ msgstr "如果您想在此显示自定义图标，请在 %s 下存放图标文�
 msgid "Cursor:"
 msgstr "光标："
 
-#. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
+#. TRANSLATORS: The "%s" represents the path where custom cursors are installed
 #: src/Panes/AppearancePane.vala:104
 #, c-format
 msgid "To show custom cursors here, put them in %s."
@@ -242,7 +233,7 @@ msgstr "如果您想在此显示自定义光标，请在 %s 下存放光标文�
 msgid "Sound:"
 msgstr "音效："
 
-#. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
+#. TRANSLATORS: The "%s" represents the path where custom sounds are installed
 #: src/Panes/AppearancePane.vala:115
 #, c-format
 msgid "To show custom sounds here, put them in %s."
@@ -441,40 +432,83 @@ msgstr "不显示"
 msgid "Show tabs:"
 msgstr "显示标签栏："
 
-#. Right: Add Pane itself to Stack
-#: src/Widgets/Categories.vala:43
+#: src/Widgets/Categories.vala:42
 msgid "Reset settings successfully"
 msgstr "设置重置成功"
 
-#: src/Widgets/Categories.vala:69
+#: src/Widgets/Categories.vala:68
 msgid "General"
 msgstr "常规"
 
-#: src/Widgets/Categories.vala:71
+#: src/Widgets/Categories.vala:70
 msgid "Applications"
 msgstr "应用程序"
 
-#: src/Widgets/Categories.vala:125
+#: src/Widgets/Categories.vala:124
 msgid "Reset to default"
 msgstr "恢复默认"
 
-#: src/Widgets/Categories.vala:130
+#: src/Widgets/Categories.vala:129
 msgid "Are you sure you want to reset personalization?"
 msgstr "你确定要重置所有个性化选项吗？"
 
-#: src/Widgets/Categories.vala:131
+#: src/Widgets/Categories.vala:130
 msgid ""
 "All settings in this pane will be restored to the factory defaults. This "
 "action can't be undone."
 msgstr "本页面中的所有设置将被恢复为出厂默认值。该操作无法撤销。"
 
-#: src/Widgets/Categories.vala:137
+#: src/Widgets/Categories.vala:136
 msgid "Reset"
 msgstr "重置"
 
-#: src/Widgets/Categories.vala:229
+#: src/Widgets/Categories.vala:228
 msgid "Open destination folder"
 msgstr "打开目标文件夹"
+
+#: src/Widgets/Categories.vala:240
+#, fuzzy
+msgid "Failed to create the destination folder"
+msgstr "打开目标文件夹"
+
+#: src/Widgets/Categories.vala:241
+msgid ""
+"The destination folder doesn't exist and tried to create new but failed. The "
+"following error message might be helpful:"
+msgstr ""
+
+#: src/Widgets/Categories.vala:251
+#, fuzzy
+msgid "Failed to open the destination folder"
+msgstr "打开目标文件夹"
+
+#: src/Widgets/Categories.vala:252
+msgid ""
+"Tried to open the destination folder but failed. The following error message "
+"might be helpful:"
+msgstr ""
+
+#~ msgid "Animations"
+#~ msgstr "动画"
+
+#~ msgid ""
+#~ "Adjust the animation length used for window management or multitasking."
+#~ msgstr "修改窗口管理器 / 多任务视图的动画长度。"
+
+#~ msgid "Open:"
+#~ msgstr "打开："
+
+#~ msgid "Close:"
+#~ msgstr "关闭："
+
+#~ msgid "Snap:"
+#~ msgstr "分屏："
+
+#~ msgid "Minimize:"
+#~ msgstr "最小化："
+
+#~ msgid "Workspace switch:"
+#~ msgstr "切换工作区："
 
 #~ msgid "Videos"
 #~ msgstr "视频"

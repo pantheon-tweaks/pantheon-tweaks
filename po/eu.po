@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-14 09:20+0900\n"
+"POT-Creation-Date: 2022-05-23 21:11+0900\n"
 "PO-Revision-Date: 2014-08-19 07:14+0000\n"
 "Last-Translator: Michael P. Starkweather <Mpstark@gmail.com>\n"
 "Language-Team: Basque <eu@li.org>\n"
@@ -33,123 +33,144 @@ msgid ""
 msgstr ""
 
 #: data/pantheon-tweaks.appdata.xml.in:18
-msgid "FontsPane: Fix icon missing with the latest icons update"
+msgid ""
+"Remove AnimationsPane which no longer take effect due to the removal of "
+"tweaking animations functions on Gala side"
 msgstr ""
 
 #: data/pantheon-tweaks.appdata.xml.in:19
+msgid ""
+"DestinationButton: Show an error dialog when creating/opening the "
+"destination folder being failed"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:21
+#: data/pantheon-tweaks.appdata.xml.in:40
+#: data/pantheon-tweaks.appdata.xml.in:56
+msgid "Translation updates:"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:23
+#: data/pantheon-tweaks.appdata.xml.in:43
+msgid "Update German translation (thanks to @uwe-ss)"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:24
+msgid "Update Hungarian translation (thanks to @TomiOhl)"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:25
+#: data/pantheon-tweaks.appdata.xml.in:60
+msgid "Update Portuguese translation (thanks to @hugok79)"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:26
+#: data/pantheon-tweaks.appdata.xml.in:42
+msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:27
+#: data/pantheon-tweaks.appdata.xml.in:44
+#: data/pantheon-tweaks.appdata.xml.in:61
+msgid "Update Japanese translation"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:34
+msgid "FontsPane: Fix icon missing with the latest icons update"
+msgstr ""
+
+#: data/pantheon-tweaks.appdata.xml.in:35
 msgid ""
 "Make sure dimming feature that is introduced in the latest version of Gala "
 "work for the reset dialog"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:20
+#: data/pantheon-tweaks.appdata.xml.in:36
 msgid "AppearancePane: Sort theme names alphabetically"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:21
+#: data/pantheon-tweaks.appdata.xml.in:37
 msgid "TerminalPane: Support changing tab bar behavior"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:22
+#: data/pantheon-tweaks.appdata.xml.in:38
 msgid "AppearancePane: Add buttons to open the theme locations"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:24
-#: data/pantheon-tweaks.appdata.xml.in:40
-msgid "Translation updates:"
-msgstr ""
-
-#: data/pantheon-tweaks.appdata.xml.in:26
-msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
-msgstr ""
-
-#: data/pantheon-tweaks.appdata.xml.in:27
-msgid "Update German translation (thanks to @uwe-ss)"
-msgstr ""
-
-#: data/pantheon-tweaks.appdata.xml.in:28
-#: data/pantheon-tweaks.appdata.xml.in:45
-msgid "Update Japanese translation"
-msgstr ""
-
-#: data/pantheon-tweaks.appdata.xml.in:35
+#: data/pantheon-tweaks.appdata.xml.in:51
 msgid "Sync selected elementary stylesheet variant with Desktop Plug"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:36
+#: data/pantheon-tweaks.appdata.xml.in:52
 msgid "Improves reliability of restoring visually"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:37
+#: data/pantheon-tweaks.appdata.xml.in:53
 msgid ""
 "Prevent System Settings from crashing due to the removal of preferences in "
 "upstream Videos"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:38
+#: data/pantheon-tweaks.appdata.xml.in:54
 msgid "Correct cursor and icon theme dir copies"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:42
+#: data/pantheon-tweaks.appdata.xml.in:58
 msgid "Update French translation (thanks to @roxfr)"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:43
+#: data/pantheon-tweaks.appdata.xml.in:59
 msgid "Update Russian translation (thanks to @camellan)"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:44
-msgid "Update Portuguese translation (thanks to @hugok79)"
-msgstr ""
-
-#: data/pantheon-tweaks.appdata.xml.in:52
+#: data/pantheon-tweaks.appdata.xml.in:68
 msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:53
+#: data/pantheon-tweaks.appdata.xml.in:69
 msgid "Support accessing to panes with settings paths"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:54
+#: data/pantheon-tweaks.appdata.xml.in:70
 msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:55
-#: data/pantheon-tweaks.appdata.xml.in:69
+#: data/pantheon-tweaks.appdata.xml.in:71
+#: data/pantheon-tweaks.appdata.xml.in:85
 msgid "Update translations"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:61
+#: data/pantheon-tweaks.appdata.xml.in:77
 msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:63
+#: data/pantheon-tweaks.appdata.xml.in:79
 msgid "Remove preferences now supported in Pantheon officially"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:64
+#: data/pantheon-tweaks.appdata.xml.in:80
 msgid "Remove preferences causing the plug crash"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:65
+#: data/pantheon-tweaks.appdata.xml.in:81
 msgid "Fully redesigned plug"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:66
+#: data/pantheon-tweaks.appdata.xml.in:82
 msgid "Support changing sound theme (thanks to @pongloongyeat)"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:67
+#: data/pantheon-tweaks.appdata.xml.in:83
 msgid "Add new window controls layout"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:68
+#: data/pantheon-tweaks.appdata.xml.in:84
 msgid "Fix deprecations"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:76
+#: data/pantheon-tweaks.appdata.xml.in:92
 #, fuzzy
 msgid "Appearance pane"
 msgstr "Itxura"
@@ -157,40 +178,6 @@ msgstr "Itxura"
 #: src/Tweaks.vala:39
 msgid "Tweaks"
 msgstr ""
-
-#: src/Panes/AnimationsPane.vala:25
-msgid "Animations"
-msgstr "Animazioak"
-
-#: src/Panes/AnimationsPane.vala:26
-msgid "Adjust the animation length used for window management or multitasking."
-msgstr ""
-
-#: src/Panes/AnimationsPane.vala:37
-msgid "Open:"
-msgstr ""
-
-#: src/Panes/AnimationsPane.vala:41
-#, fuzzy
-msgid "Close:"
-msgstr "Ixtekoa soilik"
-
-#. / TRANSLATORS: The word "snap" refers to a feature of Pantheon that allows you to resize a window
-#. / into the half size of your screen automatically. So this string means the length of animation
-#. / when you "snap" a window.
-#: src/Panes/AnimationsPane.vala:48
-msgid "Snap:"
-msgstr ""
-
-#: src/Panes/AnimationsPane.vala:52
-#, fuzzy
-msgid "Minimize:"
-msgstr "Ikonotzekoa ezkerrean"
-
-#: src/Panes/AnimationsPane.vala:56
-#, fuzzy
-msgid "Workspace switch:"
-msgstr "Lan-eremuz aldatzeko denbora:"
 
 #: src/Panes/AppearancePane.vala:34
 msgid "Appearance"
@@ -210,7 +197,7 @@ msgstr ""
 msgid "GTK:"
 msgstr ""
 
-#. / TRANSLATORS: The "%s" represents the path where custom themes are installed
+#. TRANSLATORS: The "%s" represents the path where custom themes are installed
 #: src/Panes/AppearancePane.vala:82
 #, c-format
 msgid "To show custom themes here, put them in %s."
@@ -226,7 +213,7 @@ msgstr ""
 msgid "Icons:"
 msgstr "Ikonoen tamaina:"
 
-#. / TRANSLATORS: The "%s" represents the path where custom icons are installed
+#. TRANSLATORS: The "%s" represents the path where custom icons are installed
 #: src/Panes/AppearancePane.vala:93
 #, c-format
 msgid "To show custom icons here, put them in %s."
@@ -237,7 +224,7 @@ msgstr ""
 msgid "Cursor:"
 msgstr "Kurtsorearen gaia:"
 
-#. / TRANSLATORS: The "%s" represents the path where custom cursors are installed
+#. TRANSLATORS: The "%s" represents the path where custom cursors are installed
 #: src/Panes/AppearancePane.vala:104
 #, c-format
 msgid "To show custom cursors here, put them in %s."
@@ -247,7 +234,7 @@ msgstr ""
 msgid "Sound:"
 msgstr ""
 
-#. / TRANSLATORS: The "%s" represents the path where custom sounds are installed
+#. TRANSLATORS: The "%s" represents the path where custom sounds are installed
 #: src/Panes/AppearancePane.vala:115
 #, c-format
 msgid "To show custom sounds here, put them in %s."
@@ -455,41 +442,75 @@ msgstr ""
 msgid "Show tabs:"
 msgstr ""
 
-#. Right: Add Pane itself to Stack
-#: src/Widgets/Categories.vala:43
+#: src/Widgets/Categories.vala:42
 msgid "Reset settings successfully"
 msgstr ""
 
-#: src/Widgets/Categories.vala:69
+#: src/Widgets/Categories.vala:68
 msgid "General"
 msgstr "Orokorra"
 
-#: src/Widgets/Categories.vala:71
+#: src/Widgets/Categories.vala:70
 msgid "Applications"
 msgstr "Aplikazioak"
 
-#: src/Widgets/Categories.vala:125
+#: src/Widgets/Categories.vala:124
 #, fuzzy
 msgid "Reset to default"
 msgstr "Berrezarri lehenetsiak"
 
-#: src/Widgets/Categories.vala:130
+#: src/Widgets/Categories.vala:129
 msgid "Are you sure you want to reset personalization?"
 msgstr ""
 
-#: src/Widgets/Categories.vala:131
+#: src/Widgets/Categories.vala:130
 msgid ""
 "All settings in this pane will be restored to the factory defaults. This "
 "action can't be undone."
 msgstr ""
 
-#: src/Widgets/Categories.vala:137
+#: src/Widgets/Categories.vala:136
 msgid "Reset"
 msgstr ""
 
-#: src/Widgets/Categories.vala:229
+#: src/Widgets/Categories.vala:228
 msgid "Open destination folder"
 msgstr ""
+
+#: src/Widgets/Categories.vala:240
+msgid "Failed to create the destination folder"
+msgstr ""
+
+#: src/Widgets/Categories.vala:241
+msgid ""
+"The destination folder doesn't exist and tried to create new but failed. The "
+"following error message might be helpful:"
+msgstr ""
+
+#: src/Widgets/Categories.vala:251
+msgid "Failed to open the destination folder"
+msgstr ""
+
+#: src/Widgets/Categories.vala:252
+msgid ""
+"Tried to open the destination folder but failed. The following error message "
+"might be helpful:"
+msgstr ""
+
+#~ msgid "Animations"
+#~ msgstr "Animazioak"
+
+#, fuzzy
+#~ msgid "Close:"
+#~ msgstr "Ixtekoa soilik"
+
+#, fuzzy
+#~ msgid "Minimize:"
+#~ msgstr "Ikonotzekoa ezkerrean"
+
+#, fuzzy
+#~ msgid "Workspace switch:"
+#~ msgstr "Lan-eremuz aldatzeko denbora:"
 
 #~ msgid "Shadows"
 #~ msgstr "Itzalak"
