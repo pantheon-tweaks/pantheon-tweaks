@@ -1,13 +1,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# ryonakano <ryonakaknock3@gmail.com>, 2018, 2020-2021.
+# ryonakano <ryonakaknock3@gmail.com>, 2018, 2020-2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-23 21:11+0900\n"
-"PO-Revision-Date: 2021-12-06 09:40+0900\n"
+"PO-Revision-Date: 2022-05-23 21:16+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -37,12 +37,16 @@ msgid ""
 "Remove AnimationsPane which no longer take effect due to the removal of "
 "tweaking animations functions on Gala side"
 msgstr ""
+"Gala 側のアニメーション調整機能の削除に伴い、設定が反映されなくなったアニメー"
+"ションペインを削除"
 
 #: data/pantheon-tweaks.appdata.xml.in:19
 msgid ""
 "DestinationButton: Show an error dialog when creating/opening the "
 "destination folder being failed"
 msgstr ""
+"保存先ボタン: 保存先を作成したり開いたりできなかった場合、エラーダイアログを"
+"表示するように修正"
 
 #: data/pantheon-tweaks.appdata.xml.in:21
 #: data/pantheon-tweaks.appdata.xml.in:40
@@ -56,9 +60,8 @@ msgid "Update German translation (thanks to @uwe-ss)"
 msgstr "ドイツ語翻訳を更新 (貢献者: @uwe-ss)"
 
 #: data/pantheon-tweaks.appdata.xml.in:24
-#, fuzzy
 msgid "Update Hungarian translation (thanks to @TomiOhl)"
-msgstr "ロシア語翻訳を更新 (貢献者: @camellan)"
+msgstr "ハンガリー語翻訳を更新 (貢献者: @TomiOhl)"
 
 #: data/pantheon-tweaks.appdata.xml.in:25
 #: data/pantheon-tweaks.appdata.xml.in:60
@@ -91,7 +94,6 @@ msgstr ""
 "アログに対して動作するように修正"
 
 #: data/pantheon-tweaks.appdata.xml.in:36
-#, fuzzy
 msgid "AppearancePane: Sort theme names alphabetically"
 msgstr "外観ペイン: テーマ名をアルファベット順で表示するように修正"
 
@@ -487,46 +489,25 @@ msgid "Open destination folder"
 msgstr "保存先を開く"
 
 #: src/Widgets/Categories.vala:240
-#, fuzzy
 msgid "Failed to create the destination folder"
-msgstr "保存先を開く"
+msgstr "保存先を作成できませんでした"
 
 #: src/Widgets/Categories.vala:241
 msgid ""
 "The destination folder doesn't exist and tried to create new but failed. The "
 "following error message might be helpful:"
 msgstr ""
+"保存先のフォルダーが存在せず新規作成しようとしましたが、できませんでした。以"
+"下のエラーメッセージが役立つ可能性があります:"
 
 #: src/Widgets/Categories.vala:251
-#, fuzzy
 msgid "Failed to open the destination folder"
-msgstr "保存先を開く"
+msgstr "保存先を開けませんでした"
 
 #: src/Widgets/Categories.vala:252
 msgid ""
 "Tried to open the destination folder but failed. The following error message "
 "might be helpful:"
 msgstr ""
-
-#~ msgid "Animations"
-#~ msgstr "アニメーション"
-
-#~ msgid ""
-#~ "Adjust the animation length used for window management or multitasking."
-#~ msgstr ""
-#~ "ウィンドウ管理やマルチタスクに使用されるアニメーションの長さを調節します。"
-
-#~ msgid "Open:"
-#~ msgstr "開く:"
-
-#~ msgid "Close:"
-#~ msgstr "閉じる:"
-
-#~ msgid "Snap:"
-#~ msgstr "スナップ:"
-
-#~ msgid "Minimize:"
-#~ msgstr "最小化:"
-
-#~ msgid "Workspace switch:"
-#~ msgstr "ワークスペースの切り替え:"
+"保存先のフォルダーを開こうとしましたが、できませんでした。以下のエラーメッ"
+"セージが役立つ可能性があります:"
