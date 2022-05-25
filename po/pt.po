@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-23 21:11+0900\n"
-"PO-Revision-Date: 2022-01-13 16:12+0000\n"
+"PO-Revision-Date: 2022-05-24 14:45+0100\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "Language: pt\n"
@@ -41,12 +41,16 @@ msgid ""
 "Remove AnimationsPane which no longer take effect due to the removal of "
 "tweaking animations functions on Gala side"
 msgstr ""
+"Remove o Painel Animações visto que não tem mais efeito devido à remoção das "
+"funções de ajustes de animações em Gala"
 
 #: data/pantheon-tweaks.appdata.xml.in:19
 msgid ""
 "DestinationButton: Show an error dialog when creating/opening the "
 "destination folder being failed"
 msgstr ""
+"DestinationButton: mostra uma caixa de diálogo de erro ao criar/abrir a "
+"pasta de destino com falha"
 
 #: data/pantheon-tweaks.appdata.xml.in:21
 #: data/pantheon-tweaks.appdata.xml.in:40
@@ -60,9 +64,8 @@ msgid "Update German translation (thanks to @uwe-ss)"
 msgstr "Tradução do Alemão atualizada (obrigado a @uwe-ss)"
 
 #: data/pantheon-tweaks.appdata.xml.in:24
-#, fuzzy
 msgid "Update Hungarian translation (thanks to @TomiOhl)"
-msgstr "Tradução do Russo atualizada (obrigado a @camellan)"
+msgstr "Tradução do Húngaro atualizada (obrigado a @TomiOhl)"
 
 #: data/pantheon-tweaks.appdata.xml.in:25
 #: data/pantheon-tweaks.appdata.xml.in:60
@@ -491,26 +494,28 @@ msgid "Open destination folder"
 msgstr "Abrir pasta de destino"
 
 #: src/Widgets/Categories.vala:240
-#, fuzzy
 msgid "Failed to create the destination folder"
-msgstr "Abrir pasta de destino"
+msgstr "Falha ao criar a pasta de destino"
 
 #: src/Widgets/Categories.vala:241
 msgid ""
 "The destination folder doesn't exist and tried to create new but failed. The "
 "following error message might be helpful:"
 msgstr ""
+"A pasta de destino não existe e ocorreu uma falha ao tentar criar uma nova. "
+"A seguinte mensagem de erro pode ser útil:"
 
 #: src/Widgets/Categories.vala:251
-#, fuzzy
 msgid "Failed to open the destination folder"
-msgstr "Abrir pasta de destino"
+msgstr "Falha ao abrir a pasta de destino"
 
 #: src/Widgets/Categories.vala:252
 msgid ""
 "Tried to open the destination folder but failed. The following error message "
 "might be helpful:"
 msgstr ""
+"Falha ao tentar abrir a pasta de destino. A seguinte mensagem de erro pode "
+"ser útil:"
 
 #~ msgid "Animations"
 #~ msgstr "Animações"
