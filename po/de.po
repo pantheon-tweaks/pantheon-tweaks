@@ -31,20 +31,24 @@ msgid ""
 "A system settings panel for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr ""
-"Ein Systemeinstellungsmodul für die Arbeitsumgebung »Pantheon«, mit die "
-"Erscheinung  der Arbeitsumgebung sicher und einfach angepasst werden kann."
+"Ein Systemeinstellungsmodul für die Arbeitsumgebung »Pantheon«, mit der "
+"die Erscheinung der Arbeitsumgebung sicher und einfach angepasst werden kann."
 
 #: data/pantheon-tweaks.appdata.xml.in:18
 msgid ""
 "Remove AnimationsPane which no longer take effect due to the removal of "
 "tweaking animations functions on Gala side"
 msgstr ""
+"Entferne Animation, die aufgrund der Entfernung der Tweaking-Animations"
+"Funktionen auf der Gala nicht mehr wirksam sind"
 
 #: data/pantheon-tweaks.appdata.xml.in:19
 msgid ""
 "DestinationButton: Show an error dialog when creating/opening the "
 "destination folder being failed"
 msgstr ""
+"ZielSchaltfläche: Anzeige eines Fehlerdialogs beim Erstellen/Öffnen des"
+"des Zielordners fehlgeschlagen ist"
 
 #: data/pantheon-tweaks.appdata.xml.in:21
 #: data/pantheon-tweaks.appdata.xml.in:40
