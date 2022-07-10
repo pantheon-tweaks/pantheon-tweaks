@@ -148,7 +148,7 @@ msgstr ""
 #: data/pantheon-tweaks.appdata.xml.in:71
 #: data/pantheon-tweaks.appdata.xml.in:85
 msgid "Update translations"
-msgstr Aggiornato le traduzioni""
+msgstr "Aggiornato le traduzioni"
 
 #: data/pantheon-tweaks.appdata.xml.in:77
 msgid ""
@@ -156,11 +156,11 @@ msgid ""
 "features and fixes:"
 msgstr ""
 "Elementary Tweaks è ora rinominato in Pantheon Tweaks e ne avrai nuove "
-"caratteristiche e correzioni:
+"caratteristiche e correzioni:"
 
 #: data/pantheon-tweaks.appdata.xml.in:79
 msgid "Remove preferences now supported in Pantheon officially"
-msgstr "Rimuove le preferenze ora supportate ufficialmente in Pantheon"
+msgstr "Rimosso le preferenze ora supportate ufficialmente in Pantheon"
 
 #: data/pantheon-tweaks.appdata.xml.in:80
 msgid "Remove preferences causing the plug crash"
@@ -200,7 +200,7 @@ msgid ""
 "visibility issue."
 msgstr ""
 "Modificare il tema e la disposizione dei pulsanti della finstra. La modifica del tema potrebbe causare "
-"problema di visibilità".
+"problema di visibilità."
 
 #: src/Panes/AppearancePane.vala:75
 msgid "Theme Settings"
@@ -233,7 +233,7 @@ msgstr "Per mostrare le icone personalizzate qui, inseriscile in %s."
 
 #: src/Panes/AppearancePane.vala:99
 msgid "Cursor:"
-msgstr "Cursore"
+msgstr "Cursore:"
 
 #. TRANSLATORS: The "%s" represents the path where custom cursors are installed
 #: src/Panes/AppearancePane.vala:104
@@ -724,7 +724,7 @@ msgstr ""
 #~ msgstr "L'allineamento di Plank sul bordo dello schermo"
 
 #~ msgid "Item Alignment:"
-#~ msgstr "Allineamento"
+#~ msgstr Allineamento dell'oggetto:"
 
 #~ msgid "Offset:"
 #~ msgstr "Scostamento:"
@@ -761,13 +761,13 @@ msgstr ""
 #~ msgstr "Motore di rendering per le finestre che non usano GTK+"
 
 #~ msgid "GTK+ Theme:"
-#~ msgstr "Tema GTK+"
+#~ msgstr "Tema GTK+:"
 
 #~ msgid "Used to render GTK+ windows like Switchboard"
 #~ msgstr "Motore di rendering per le finestre GTK+ come Switchboard"
 
 #~ msgid "Icon Theme:"
-#~ msgstr "Icone"
+#~ msgstr "Tema dell'icona:"
 
 #~ msgid "Used to theme the icon set, including application icons"
 #~ msgstr "Tema di icone"
@@ -788,7 +788,7 @@ msgstr ""
 #~ msgstr "Poterebbe non fare niente"
 
 #~ msgid "Unfocused Windows:"
-#~ msgstr "Finestra inattiva"
+#~ msgstr "Finestre sfocate:"
 
 #~ msgid "Name"
 #~ msgstr "Descrizione"
