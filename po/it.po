@@ -724,7 +724,7 @@ msgstr ""
 #~ msgstr "L'allineamento di Plank sul bordo dello schermo"
 
 #~ msgid "Item Alignment:"
-#~ msgstr Allineamento dell'oggetto:"
+#~ msgstr "Allineamento dell'oggetto:"
 
 #~ msgid "Offset:"
 #~ msgstr "Scostamento:"
