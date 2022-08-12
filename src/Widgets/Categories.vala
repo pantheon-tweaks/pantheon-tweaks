@@ -189,45 +189,6 @@ public class PantheonTweaks.Categories : Gtk.Box {
             }
         }
 
-        protected Gtk.SpinButton spin_button_new (Gtk.Adjustment adjustment) {
-            var spin_button = new Gtk.SpinButton (adjustment, 1, 0);
-            spin_button.set_size_request (150, 0);
-            return spin_button;
-        }
-
-        protected Gtk.Switch switch_new () {
-            var switch = new Gtk.Switch () {
-                halign = Gtk.Align.START
-            };
-            return switch;
-        }
-
-        protected Gtk.ComboBoxText combobox_text_new (Gee.HashMap<string, string> items) {
-            var combobox_text = new Gtk.ComboBoxText () {
-                halign = Gtk.Align.START
-            };
-
-            foreach (var item in items.entries) {
-                combobox_text.append (item.key, item.value);
-            }
-
-            combobox_text.set_size_request (180, 0);
-            return combobox_text;
-        }
-
-        protected Gtk.ComboBoxText combobox_text_new_from_list (Gee.List<string> items) {
-            var combobox_text = new Gtk.ComboBoxText () {
-                halign = Gtk.Align.START
-            };
-
-            for (int i = 0; i < items.size; i++) {
-                combobox_text.append (items.get (i), items.get (i));
-            }
-
-            combobox_text.set_size_request (180, 0);
-            return combobox_text;
-        }
-
         protected class DestinationButton : Gtk.Button {
             public string destination_uri { private get; construct; }
 
@@ -280,6 +241,45 @@ public class PantheonTweaks.Categories : Gtk.Box {
                 });
                 error_dialog.show ();
             }
+        }
+
+        protected Gtk.SpinButton spin_button_new (Gtk.Adjustment adjustment) {
+            var spin_button = new Gtk.SpinButton (adjustment, 1, 0);
+            spin_button.set_size_request (150, 0);
+            return spin_button;
+        }
+
+        protected Gtk.Switch switch_new () {
+            var switch = new Gtk.Switch () {
+                halign = Gtk.Align.START
+            };
+            return switch;
+        }
+
+        protected Gtk.ComboBoxText combobox_text_new (Gee.HashMap<string, string> items) {
+            var combobox_text = new Gtk.ComboBoxText () {
+                halign = Gtk.Align.START
+            };
+
+            foreach (var item in items.entries) {
+                combobox_text.append (item.key, item.value);
+            }
+
+            combobox_text.set_size_request (180, 0);
+            return combobox_text;
+        }
+
+        protected Gtk.ComboBoxText combobox_text_new_from_list (Gee.List<string> items) {
+            var combobox_text = new Gtk.ComboBoxText () {
+                halign = Gtk.Align.START
+            };
+
+            for (int i = 0; i < items.size; i++) {
+                combobox_text.append (items.get (i), items.get (i));
+            }
+
+            combobox_text.set_size_request (180, 0);
+            return combobox_text;
         }
 
         protected Gtk.Label summary_label_new (string text) {
