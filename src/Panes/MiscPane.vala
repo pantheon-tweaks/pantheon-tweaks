@@ -36,15 +36,13 @@ public class PantheonTweaks.Panes.MiscPane : Categories.Pane {
 
         var indicator_sound_label = new Granite.HeaderLabel (_("Sound Indicator"));
 
-        var max_volume_label = new SummaryLabel (_("Max volume:"));
+        var max_volume_label = summary_label_new (_("Max volume:"));
         var max_volume_adj = new Gtk.Adjustment (0, 10, 160, 5, 10, 10);
-        var max_volume_spinbutton = new SpinButton (max_volume_adj);
+        var max_volume_spinbutton = spin_button_new (max_volume_adj);
 
         content_area.attach (indicator_sound_label, 0, 0, 1, 1);
         content_area.attach (max_volume_label, 0, 1, 1, 1);
         content_area.attach (max_volume_spinbutton, 1, 1, 1, 1);
-
-        show_all ();
 
         sound_settings.bind ("max-volume", max_volume_spinbutton, "value", SettingsBindFlags.DEFAULT);
 

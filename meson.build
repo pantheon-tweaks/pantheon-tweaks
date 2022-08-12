@@ -4,7 +4,7 @@ project(
     version: '1.0.4'
 )
 
-switchboard_dep = dependency('switchboard-2.0')
+switchboard_dep = dependency('switchboard-3')
 gettext_name = meson.project_name() + '-plug'
 libdir = join_paths(get_option('prefix'), get_option('libdir'))
 pkgdatadir = join_paths(switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir]), 'personal')
@@ -49,8 +49,8 @@ shared_module(
     dependencies: [
         dependency('gee-0.8'),
         dependency('glib-2.0'),
-        dependency('granite', version: '>= 6.0.0'),
-        dependency('gtk+-3.0'),
+        dependency('granite-7'),
+        dependency('gtk4'),
         meson.get_compiler('vala').find_library('posix'),
         switchboard_dep
     ],

@@ -49,7 +49,6 @@ public class PantheonTweaks.TweaksPlug : Switchboard.Plug {
     public override Gtk.Widget get_widget () {
         if (categories == null) {
             categories = new Categories ();
-            categories.show_all ();
         }
 
         return categories;
