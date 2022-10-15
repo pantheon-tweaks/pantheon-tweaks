@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 21:11+0900\n"
+"POT-Creation-Date: 2022-10-15 20:11+0900\n"
 "PO-Revision-Date: 2014-12-11 05:32+0000\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician <gl@li.org>\n"
@@ -175,10 +175,6 @@ msgstr ""
 msgid "Appearance pane"
 msgstr "Aparencia"
 
-#: src/Tweaks.vala:39
-msgid "Tweaks"
-msgstr ""
-
 #: src/Panes/AppearancePane.vala:34
 msgid "Appearance"
 msgstr "Aparencia"
@@ -316,6 +312,31 @@ msgstr ""
 msgid "Ubuntu"
 msgstr ""
 
+#: src/Panes/FilesPane.vala:24
+msgid "Files"
+msgstr "Arquivos"
+
+#: src/Panes/FilesPane.vala:34
+msgid "Restore tabs:"
+msgstr ""
+
+#: src/Panes/FilesPane.vala:38
+msgid "Locale"
+msgstr "Local"
+
+#: src/Panes/FilesPane.vala:39
+msgid "ISO"
+msgstr ""
+
+#: src/Panes/FilesPane.vala:40
+msgid "Informal"
+msgstr "Informal"
+
+#: src/Panes/FilesPane.vala:42
+#, fuzzy
+msgid "Date format:"
+msgstr "Formato da data:"
+
 #: src/Panes/FontsPane.vala:23
 msgid "Fonts"
 msgstr "Tipos de letra"
@@ -356,31 +377,6 @@ msgstr ""
 #: src/Panes/MiscPane.vala:39
 msgid "Max volume:"
 msgstr ""
-
-#: src/Panes/FilesPane.vala:24
-msgid "Files"
-msgstr "Arquivos"
-
-#: src/Panes/FilesPane.vala:34
-msgid "Restore tabs:"
-msgstr ""
-
-#: src/Panes/FilesPane.vala:38
-msgid "Locale"
-msgstr "Local"
-
-#: src/Panes/FilesPane.vala:39
-msgid "ISO"
-msgstr ""
-
-#: src/Panes/FilesPane.vala:40
-msgid "Informal"
-msgstr "Informal"
-
-#: src/Panes/FilesPane.vala:42
-#, fuzzy
-msgid "Date format:"
-msgstr "Formato da data:"
 
 #: src/Panes/TerminalPane.vala:28
 msgid "Terminal"
@@ -439,6 +435,10 @@ msgstr ""
 
 #: src/Panes/TerminalPane.vala:69
 msgid "Show tabs:"
+msgstr ""
+
+#: src/Tweaks.vala:39
+msgid "Tweaks"
 msgstr ""
 
 #: src/Widgets/Categories.vala:42

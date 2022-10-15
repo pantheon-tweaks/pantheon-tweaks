@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 21:11+0900\n"
+"POT-Creation-Date: 2022-10-15 20:11+0900\n"
 "PO-Revision-Date: 2020-10-09 13:55+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -182,10 +182,6 @@ msgstr ""
 msgid "Appearance pane"
 msgstr "Uiterlijk"
 
-#: src/Tweaks.vala:39
-msgid "Tweaks"
-msgstr "Tweaks"
-
 #: src/Panes/AppearancePane.vala:34
 msgid "Appearance"
 msgstr "Uiterlijk"
@@ -322,6 +318,30 @@ msgstr "macOS"
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
+#: src/Panes/FilesPane.vala:24
+msgid "Files"
+msgstr "Bestanden"
+
+#: src/Panes/FilesPane.vala:34
+msgid "Restore tabs:"
+msgstr "Tabbladen herstellen:"
+
+#: src/Panes/FilesPane.vala:38
+msgid "Locale"
+msgstr "Taal"
+
+#: src/Panes/FilesPane.vala:39
+msgid "ISO"
+msgstr "ISO"
+
+#: src/Panes/FilesPane.vala:40
+msgid "Informal"
+msgstr "Informeel"
+
+#: src/Panes/FilesPane.vala:42
+msgid "Date format:"
+msgstr "Datumopmaak:"
+
 #: src/Panes/FontsPane.vala:23
 msgid "Fonts"
 msgstr "Lettertypen"
@@ -362,30 +382,6 @@ msgstr "Geluidsindicator"
 #: src/Panes/MiscPane.vala:39
 msgid "Max volume:"
 msgstr "Max. volume:"
-
-#: src/Panes/FilesPane.vala:24
-msgid "Files"
-msgstr "Bestanden"
-
-#: src/Panes/FilesPane.vala:34
-msgid "Restore tabs:"
-msgstr "Tabbladen herstellen:"
-
-#: src/Panes/FilesPane.vala:38
-msgid "Locale"
-msgstr "Taal"
-
-#: src/Panes/FilesPane.vala:39
-msgid "ISO"
-msgstr "ISO"
-
-#: src/Panes/FilesPane.vala:40
-msgid "Informal"
-msgstr "Informeel"
-
-#: src/Panes/FilesPane.vala:42
-msgid "Date format:"
-msgstr "Datumopmaak:"
 
 #: src/Panes/TerminalPane.vala:28
 msgid "Terminal"
@@ -449,6 +445,10 @@ msgstr ""
 #, fuzzy
 msgid "Show tabs:"
 msgstr "Tabbladen herstellen:"
+
+#: src/Tweaks.vala:39
+msgid "Tweaks"
+msgstr "Tweaks"
 
 #: src/Widgets/Categories.vala:42
 msgid "Reset settings successfully"

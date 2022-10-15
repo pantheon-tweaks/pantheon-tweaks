@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 21:11+0900\n"
+"POT-Creation-Date: 2022-10-15 20:11+0900\n"
 "PO-Revision-Date: 2022-02-09 15:09+0800\n"
 "Last-Translator: imgradeone <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -176,10 +176,6 @@ msgstr "弃用修正"
 msgid "Appearance pane"
 msgstr "外观面板"
 
-#: src/Tweaks.vala:39
-msgid "Tweaks"
-msgstr "优化"
-
 #: src/Panes/AppearancePane.vala:34
 msgid "Appearance"
 msgstr "外观"
@@ -310,6 +306,30 @@ msgstr "macOS"
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
+#: src/Panes/FilesPane.vala:24
+msgid "Files"
+msgstr "文件"
+
+#: src/Panes/FilesPane.vala:34
+msgid "Restore tabs:"
+msgstr "恢复标签："
+
+#: src/Panes/FilesPane.vala:38
+msgid "Locale"
+msgstr "区域"
+
+#: src/Panes/FilesPane.vala:39
+msgid "ISO"
+msgstr "ISO"
+
+#: src/Panes/FilesPane.vala:40
+msgid "Informal"
+msgstr "非正式"
+
+#: src/Panes/FilesPane.vala:42
+msgid "Date format:"
+msgstr "日期格式："
+
 #: src/Panes/FontsPane.vala:23
 msgid "Fonts"
 msgstr "字体"
@@ -349,30 +369,6 @@ msgstr "声音托盘图标"
 #: src/Panes/MiscPane.vala:39
 msgid "Max volume:"
 msgstr "最大音量："
-
-#: src/Panes/FilesPane.vala:24
-msgid "Files"
-msgstr "文件"
-
-#: src/Panes/FilesPane.vala:34
-msgid "Restore tabs:"
-msgstr "恢复标签："
-
-#: src/Panes/FilesPane.vala:38
-msgid "Locale"
-msgstr "区域"
-
-#: src/Panes/FilesPane.vala:39
-msgid "ISO"
-msgstr "ISO"
-
-#: src/Panes/FilesPane.vala:40
-msgid "Informal"
-msgstr "非正式"
-
-#: src/Panes/FilesPane.vala:42
-msgid "Date format:"
-msgstr "日期格式："
 
 #: src/Panes/TerminalPane.vala:28
 msgid "Terminal"
@@ -431,6 +427,10 @@ msgstr "不显示"
 #: src/Panes/TerminalPane.vala:69
 msgid "Show tabs:"
 msgstr "显示标签栏："
+
+#: src/Tweaks.vala:39
+msgid "Tweaks"
+msgstr "优化"
 
 #: src/Widgets/Categories.vala:42
 msgid "Reset settings successfully"

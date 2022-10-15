@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 21:11+0900\n"
+"POT-Creation-Date: 2022-10-15 20:11+0900\n"
 "PO-Revision-Date: 2018-10-14 23:20-0300\n"
 "Last-Translator: Helder Bertoldo <helder.bertoldo@gmail.com>\n"
 "Language-Team: Portuguese Brazilian <LL@li.org>\n"
@@ -181,10 +181,6 @@ msgstr ""
 msgid "Appearance pane"
 msgstr "Aparência"
 
-#: src/Tweaks.vala:39
-msgid "Tweaks"
-msgstr "Ajustes"
-
 #: src/Panes/AppearancePane.vala:34
 msgid "Appearance"
 msgstr "Aparência"
@@ -321,6 +317,32 @@ msgstr ""
 msgid "Ubuntu"
 msgstr ""
 
+#: src/Panes/FilesPane.vala:24
+msgid "Files"
+msgstr "Arquivos"
+
+#: src/Panes/FilesPane.vala:34
+#, fuzzy
+msgid "Restore tabs:"
+msgstr "Restaurar Abas"
+
+#: src/Panes/FilesPane.vala:38
+msgid "Locale"
+msgstr "Localidade"
+
+#: src/Panes/FilesPane.vala:39
+msgid "ISO"
+msgstr "ISO"
+
+#: src/Panes/FilesPane.vala:40
+msgid "Informal"
+msgstr "Informal"
+
+#: src/Panes/FilesPane.vala:42
+#, fuzzy
+msgid "Date format:"
+msgstr "Formato da data"
+
 #: src/Panes/FontsPane.vala:23
 msgid "Fonts"
 msgstr "Fontes"
@@ -365,32 +387,6 @@ msgstr "Indicador de Som"
 #, fuzzy
 msgid "Max volume:"
 msgstr "Volume máximo"
-
-#: src/Panes/FilesPane.vala:24
-msgid "Files"
-msgstr "Arquivos"
-
-#: src/Panes/FilesPane.vala:34
-#, fuzzy
-msgid "Restore tabs:"
-msgstr "Restaurar Abas"
-
-#: src/Panes/FilesPane.vala:38
-msgid "Locale"
-msgstr "Localidade"
-
-#: src/Panes/FilesPane.vala:39
-msgid "ISO"
-msgstr "ISO"
-
-#: src/Panes/FilesPane.vala:40
-msgid "Informal"
-msgstr "Informal"
-
-#: src/Panes/FilesPane.vala:42
-#, fuzzy
-msgid "Date format:"
-msgstr "Formato da data"
 
 #: src/Panes/TerminalPane.vala:28
 msgid "Terminal"
@@ -455,6 +451,10 @@ msgstr ""
 #, fuzzy
 msgid "Show tabs:"
 msgstr "Restaurar Abas"
+
+#: src/Tweaks.vala:39
+msgid "Tweaks"
+msgstr "Ajustes"
 
 #: src/Widgets/Categories.vala:42
 msgid "Reset settings successfully"

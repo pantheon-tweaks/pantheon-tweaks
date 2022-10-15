@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 21:11+0900\n"
+"POT-Creation-Date: 2022-10-15 20:11+0900\n"
 "PO-Revision-Date: 2021-12-17 19:37+0200\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -184,10 +184,6 @@ msgstr "Elavulások javítva"
 msgid "Appearance pane"
 msgstr "Megjelenés"
 
-#: src/Tweaks.vala:39
-msgid "Tweaks"
-msgstr "Trükkök"
-
 #: src/Panes/AppearancePane.vala:34
 msgid "Appearance"
 msgstr "Megjelenés"
@@ -321,6 +317,30 @@ msgstr "macOS"
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
+#: src/Panes/FilesPane.vala:24
+msgid "Files"
+msgstr "Fájlkezelő"
+
+#: src/Panes/FilesPane.vala:34
+msgid "Restore tabs:"
+msgstr "Lapok visszaállítása:"
+
+#: src/Panes/FilesPane.vala:38
+msgid "Locale"
+msgstr "Területi beállítások"
+
+#: src/Panes/FilesPane.vala:39
+msgid "ISO"
+msgstr "ISO"
+
+#: src/Panes/FilesPane.vala:40
+msgid "Informal"
+msgstr "Informális"
+
+#: src/Panes/FilesPane.vala:42
+msgid "Date format:"
+msgstr "Dátumformátum:"
+
 #: src/Panes/FontsPane.vala:23
 msgid "Fonts"
 msgstr "Betűtípusok"
@@ -360,30 +380,6 @@ msgstr "Hangindikátor"
 #: src/Panes/MiscPane.vala:39
 msgid "Max volume:"
 msgstr "Maximális hangerő:"
-
-#: src/Panes/FilesPane.vala:24
-msgid "Files"
-msgstr "Fájlkezelő"
-
-#: src/Panes/FilesPane.vala:34
-msgid "Restore tabs:"
-msgstr "Lapok visszaállítása:"
-
-#: src/Panes/FilesPane.vala:38
-msgid "Locale"
-msgstr "Területi beállítások"
-
-#: src/Panes/FilesPane.vala:39
-msgid "ISO"
-msgstr "ISO"
-
-#: src/Panes/FilesPane.vala:40
-msgid "Informal"
-msgstr "Informális"
-
-#: src/Panes/FilesPane.vala:42
-msgid "Date format:"
-msgstr "Dátumformátum:"
 
 #: src/Panes/TerminalPane.vala:28
 msgid "Terminal"
@@ -446,6 +442,10 @@ msgstr "Soha"
 #: src/Panes/TerminalPane.vala:69
 msgid "Show tabs:"
 msgstr "Tabok kijelzése:"
+
+#: src/Tweaks.vala:39
+msgid "Tweaks"
+msgstr "Trükkök"
 
 #: src/Widgets/Categories.vala:42
 msgid "Reset settings successfully"
