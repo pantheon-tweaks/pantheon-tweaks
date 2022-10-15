@@ -1,11 +1,8 @@
 data/pantheon-tweaks.appdata.xml.in
-src/Tweaks.vala
-src/Settings/GtkSettings.vala
-src/Settings/ThemeSettings.vala
-src/Settings/XSettings.vala
 src/Panes/AppearancePane.vala
+src/Panes/FilesPane.vala
 src/Panes/FontsPane.vala
 src/Panes/MiscPane.vala
-src/Panes/FilesPane.vala
 src/Panes/TerminalPane.vala
+src/Tweaks.vala
 src/Widgets/Categories.vala
