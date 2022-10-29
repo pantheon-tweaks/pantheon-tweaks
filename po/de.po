@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-tweaks-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 21:11+0900\n"
+"POT-Creation-Date: 2022-10-15 20:11+0900\n"
 "PO-Revision-Date: 2021-11-13 22:05+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -31,24 +31,24 @@ msgid ""
 "A system settings panel for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr ""
-"Ein Systemeinstellungsmodul für die Arbeitsumgebung »Pantheon«, mit der "
-"die Erscheinung der Arbeitsumgebung sicher und einfach angepasst werden kann."
+"Ein Systemeinstellungsmodul für die Arbeitsumgebung »Pantheon«, mit der die "
+"Erscheinung der Arbeitsumgebung sicher und einfach angepasst werden kann."
 
 #: data/pantheon-tweaks.appdata.xml.in:18
 msgid ""
 "Remove AnimationsPane which no longer take effect due to the removal of "
 "tweaking animations functions on Gala side"
 msgstr ""
-"Entferne Animation, die aufgrund der Entfernung der Tweaking-Animations"
-"Funktionen auf der Gala nicht mehr wirksam sind"
+"Entferne Animation, die aufgrund der Entfernung der Tweaking-"
+"AnimationsFunktionen auf der Gala nicht mehr wirksam sind"
 
 #: data/pantheon-tweaks.appdata.xml.in:19
 msgid ""
 "DestinationButton: Show an error dialog when creating/opening the "
 "destination folder being failed"
 msgstr ""
-"ZielSchaltfläche: Anzeige eines Fehlerdialogs beim Erstellen/Öffnen des"
-"des Zielordners fehlgeschlagen ist"
+"ZielSchaltfläche: Anzeige eines Fehlerdialogs beim Erstellen/Öffnen desdes "
+"Zielordners fehlgeschlagen ist"
 
 #: data/pantheon-tweaks.appdata.xml.in:21
 #: data/pantheon-tweaks.appdata.xml.in:40
@@ -192,10 +192,6 @@ msgstr "Abkündigungen behoben"
 msgid "Appearance pane"
 msgstr "Modul »Erscheinungsbild«"
 
-#: src/Tweaks.vala:39
-msgid "Tweaks"
-msgstr "Tweaks"
-
 #: src/Panes/AppearancePane.vala:34
 msgid "Appearance"
 msgstr "Erscheinungsbild"
@@ -337,6 +333,30 @@ msgstr "macOS"
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
+#: src/Panes/FilesPane.vala:24
+msgid "Files"
+msgstr "Dateien"
+
+#: src/Panes/FilesPane.vala:34
+msgid "Restore tabs:"
+msgstr "Tabs wiederherstellen:"
+
+#: src/Panes/FilesPane.vala:38
+msgid "Locale"
+msgstr "Gewählte Sprache/Region"
+
+#: src/Panes/FilesPane.vala:39
+msgid "ISO"
+msgstr "ISO"
+
+#: src/Panes/FilesPane.vala:40
+msgid "Informal"
+msgstr "Informell"
+
+#: src/Panes/FilesPane.vala:42
+msgid "Date format:"
+msgstr "Datumsformat:"
+
 #: src/Panes/FontsPane.vala:23
 msgid "Fonts"
 msgstr "Schriften"
@@ -378,30 +398,6 @@ msgstr "Audioindikator"
 #: src/Panes/MiscPane.vala:39
 msgid "Max volume:"
 msgstr "Maximale Lautstärke:"
-
-#: src/Panes/FilesPane.vala:24
-msgid "Files"
-msgstr "Dateien"
-
-#: src/Panes/FilesPane.vala:34
-msgid "Restore tabs:"
-msgstr "Tabs wiederherstellen:"
-
-#: src/Panes/FilesPane.vala:38
-msgid "Locale"
-msgstr "Gewählte Sprache/Region"
-
-#: src/Panes/FilesPane.vala:39
-msgid "ISO"
-msgstr "ISO"
-
-#: src/Panes/FilesPane.vala:40
-msgid "Informal"
-msgstr "Informell"
-
-#: src/Panes/FilesPane.vala:42
-msgid "Date format:"
-msgstr "Datumsformat:"
 
 #: src/Panes/TerminalPane.vala:28
 msgid "Terminal"
@@ -467,6 +463,10 @@ msgstr "Nie"
 #: src/Panes/TerminalPane.vala:69
 msgid "Show tabs:"
 msgstr "Tabs anzeigen:"
+
+#: src/Tweaks.vala:39
+msgid "Tweaks"
+msgstr "Tweaks"
 
 #: src/Widgets/Categories.vala:42
 msgid "Reset settings successfully"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 21:11+0900\n"
+"POT-Creation-Date: 2022-10-15 20:11+0900\n"
 "PO-Revision-Date: 2021-08-21 10:42+0200\n"
 "Last-Translator: Bartek <blogowanie.xyz@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -183,10 +183,6 @@ msgstr "Naprawa przestarzałych funkcji"
 msgid "Appearance pane"
 msgstr "Wygląd"
 
-#: src/Tweaks.vala:39
-msgid "Tweaks"
-msgstr "Usprawnienia"
-
 #: src/Panes/AppearancePane.vala:34
 msgid "Appearance"
 msgstr "Wygląd"
@@ -320,6 +316,30 @@ msgstr "macOS"
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
+#: src/Panes/FilesPane.vala:24
+msgid "Files"
+msgstr "Pliki"
+
+#: src/Panes/FilesPane.vala:34
+msgid "Restore tabs:"
+msgstr "Przywróć karty:"
+
+#: src/Panes/FilesPane.vala:38
+msgid "Locale"
+msgstr "Język"
+
+#: src/Panes/FilesPane.vala:39
+msgid "ISO"
+msgstr "ISO"
+
+#: src/Panes/FilesPane.vala:40
+msgid "Informal"
+msgstr "Nieformalny"
+
+#: src/Panes/FilesPane.vala:42
+msgid "Date format:"
+msgstr "Format daty:"
+
 #: src/Panes/FontsPane.vala:23
 msgid "Fonts"
 msgstr "Czcionki"
@@ -359,30 +379,6 @@ msgstr "Wskaźnik dźwięku"
 #: src/Panes/MiscPane.vala:39
 msgid "Max volume:"
 msgstr "Maksymalna głośność:"
-
-#: src/Panes/FilesPane.vala:24
-msgid "Files"
-msgstr "Pliki"
-
-#: src/Panes/FilesPane.vala:34
-msgid "Restore tabs:"
-msgstr "Przywróć karty:"
-
-#: src/Panes/FilesPane.vala:38
-msgid "Locale"
-msgstr "Język"
-
-#: src/Panes/FilesPane.vala:39
-msgid "ISO"
-msgstr "ISO"
-
-#: src/Panes/FilesPane.vala:40
-msgid "Informal"
-msgstr "Nieformalny"
-
-#: src/Panes/FilesPane.vala:42
-msgid "Date format:"
-msgstr "Format daty:"
 
 #: src/Panes/TerminalPane.vala:28
 msgid "Terminal"
@@ -449,6 +445,10 @@ msgstr ""
 #, fuzzy
 msgid "Show tabs:"
 msgstr "Przywróć karty:"
+
+#: src/Tweaks.vala:39
+msgid "Tweaks"
+msgstr "Usprawnienia"
 
 #: src/Widgets/Categories.vala:42
 msgid "Reset settings successfully"

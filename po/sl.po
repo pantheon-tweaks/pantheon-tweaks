@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 21:11+0900\n"
+"POT-Creation-Date: 2022-10-15 20:11+0900\n"
 "PO-Revision-Date: 2014-08-30 11:33+0000\n"
 "Last-Translator: Blaž Mežnaršič <blazingeek@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -172,10 +172,6 @@ msgstr ""
 msgid "Appearance pane"
 msgstr "Videz"
 
-#: src/Tweaks.vala:39
-msgid "Tweaks"
-msgstr "Prilagoditve"
-
 #: src/Panes/AppearancePane.vala:34
 msgid "Appearance"
 msgstr "Videz"
@@ -315,6 +311,31 @@ msgstr ""
 msgid "Ubuntu"
 msgstr ""
 
+#: src/Panes/FilesPane.vala:24
+msgid "Files"
+msgstr "Datoteke"
+
+#: src/Panes/FilesPane.vala:34
+msgid "Restore tabs:"
+msgstr ""
+
+#: src/Panes/FilesPane.vala:38
+msgid "Locale"
+msgstr "Jezikovne nastavitve"
+
+#: src/Panes/FilesPane.vala:39
+msgid "ISO"
+msgstr "ISO"
+
+#: src/Panes/FilesPane.vala:40
+msgid "Informal"
+msgstr "Neformalno"
+
+#: src/Panes/FilesPane.vala:42
+#, fuzzy
+msgid "Date format:"
+msgstr "Oblika datuma:"
+
 #: src/Panes/FontsPane.vala:23
 msgid "Fonts"
 msgstr "Pisave"
@@ -357,31 +378,6 @@ msgstr ""
 #: src/Panes/MiscPane.vala:39
 msgid "Max volume:"
 msgstr ""
-
-#: src/Panes/FilesPane.vala:24
-msgid "Files"
-msgstr "Datoteke"
-
-#: src/Panes/FilesPane.vala:34
-msgid "Restore tabs:"
-msgstr ""
-
-#: src/Panes/FilesPane.vala:38
-msgid "Locale"
-msgstr "Jezikovne nastavitve"
-
-#: src/Panes/FilesPane.vala:39
-msgid "ISO"
-msgstr "ISO"
-
-#: src/Panes/FilesPane.vala:40
-msgid "Informal"
-msgstr "Neformalno"
-
-#: src/Panes/FilesPane.vala:42
-#, fuzzy
-msgid "Date format:"
-msgstr "Oblika datuma:"
 
 #: src/Panes/TerminalPane.vala:28
 msgid "Terminal"
@@ -441,6 +437,10 @@ msgstr ""
 #: src/Panes/TerminalPane.vala:69
 msgid "Show tabs:"
 msgstr ""
+
+#: src/Tweaks.vala:39
+msgid "Tweaks"
+msgstr "Prilagoditve"
 
 #: src/Widgets/Categories.vala:42
 msgid "Reset settings successfully"

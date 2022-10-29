@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 21:11+0900\n"
+"POT-Creation-Date: 2022-10-15 20:11+0900\n"
 "PO-Revision-Date: 2014-11-08 17:35+0000\n"
 "Last-Translator: George Chalkitis <chalkitisge@gmail.com>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -176,10 +176,6 @@ msgstr ""
 msgid "Appearance pane"
 msgstr "Εμφάνιση"
 
-#: src/Tweaks.vala:39
-msgid "Tweaks"
-msgstr "Προσαρμογές"
-
 #: src/Panes/AppearancePane.vala:34
 msgid "Appearance"
 msgstr "Εμφάνιση"
@@ -316,6 +312,31 @@ msgstr ""
 msgid "Ubuntu"
 msgstr ""
 
+#: src/Panes/FilesPane.vala:24
+msgid "Files"
+msgstr "Αρχεία"
+
+#: src/Panes/FilesPane.vala:34
+msgid "Restore tabs:"
+msgstr ""
+
+#: src/Panes/FilesPane.vala:38
+msgid "Locale"
+msgstr "Γλώσσα"
+
+#: src/Panes/FilesPane.vala:39
+msgid "ISO"
+msgstr "ISO"
+
+#: src/Panes/FilesPane.vala:40
+msgid "Informal"
+msgstr "Ανεπίσημος"
+
+#: src/Panes/FilesPane.vala:42
+#, fuzzy
+msgid "Date format:"
+msgstr "Μορφή Ημερομηνίας:"
+
 #: src/Panes/FontsPane.vala:23
 msgid "Fonts"
 msgstr "Γραμματοσειρές"
@@ -356,31 +377,6 @@ msgstr ""
 #: src/Panes/MiscPane.vala:39
 msgid "Max volume:"
 msgstr ""
-
-#: src/Panes/FilesPane.vala:24
-msgid "Files"
-msgstr "Αρχεία"
-
-#: src/Panes/FilesPane.vala:34
-msgid "Restore tabs:"
-msgstr ""
-
-#: src/Panes/FilesPane.vala:38
-msgid "Locale"
-msgstr "Γλώσσα"
-
-#: src/Panes/FilesPane.vala:39
-msgid "ISO"
-msgstr "ISO"
-
-#: src/Panes/FilesPane.vala:40
-msgid "Informal"
-msgstr "Ανεπίσημος"
-
-#: src/Panes/FilesPane.vala:42
-#, fuzzy
-msgid "Date format:"
-msgstr "Μορφή Ημερομηνίας:"
 
 #: src/Panes/TerminalPane.vala:28
 msgid "Terminal"
@@ -440,6 +436,10 @@ msgstr ""
 #: src/Panes/TerminalPane.vala:69
 msgid "Show tabs:"
 msgstr ""
+
+#: src/Tweaks.vala:39
+msgid "Tweaks"
+msgstr "Προσαρμογές"
 
 #: src/Widgets/Categories.vala:42
 msgid "Reset settings successfully"

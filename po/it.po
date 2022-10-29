@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 21:11+0900\n"
+"POT-Creation-Date: 2022-10-15 20:11+0900\n"
 "PO-Revision-Date: 2022-07-09 10:27+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
@@ -31,24 +31,24 @@ msgid ""
 "A system settings panel for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr ""
-"Un pannello delle impostazioni di sistema per Pantheon Desktop che ti consente di "
-"personalizzare in modo sicuro l'aspetto del tuo desktop."
+"Un pannello delle impostazioni di sistema per Pantheon Desktop che ti "
+"consente di personalizzare in modo sicuro l'aspetto del tuo desktop."
 
 #: data/pantheon-tweaks.appdata.xml.in:18
 msgid ""
 "Remove AnimationsPane which no longer take effect due to the removal of "
 "tweaking animations functions on Gala side"
 msgstr ""
-"Rimuove il riquadro di animazione che non ha più effetto a causa della rimozione di "
-"modifiche alle funzioni di animazione sul lato Gala"
+"Rimuove il riquadro di animazione che non ha più effetto a causa della "
+"rimozione di modifiche alle funzioni di animazione sul lato Gala"
 
 #: data/pantheon-tweaks.appdata.xml.in:19
 msgid ""
 "DestinationButton: Show an error dialog when creating/opening the "
 "destination folder being failed"
 msgstr ""
-"Pulsante di destinazione: mostra una finestra di dialogo di errore durante la creazione/apertura della "
-"cartella di destinazione non riuscita"
+"Pulsante di destinazione: mostra una finestra di dialogo di errore durante "
+"la creazione/apertura della cartella di destinazione non riuscita"
 
 #: data/pantheon-tweaks.appdata.xml.in:21
 #: data/pantheon-tweaks.appdata.xml.in:40
@@ -83,15 +83,17 @@ msgstr "Aggiornata la traduzione giapponese"
 
 #: data/pantheon-tweaks.appdata.xml.in:34
 msgid "FontsPane: Fix icon missing with the latest icons update"
-msgstr "Riquadro dei caratteri: correzione dell'icona mancante con l'ultimo aggiornamento delle icone"
+msgstr ""
+"Riquadro dei caratteri: correzione dell'icona mancante con l'ultimo "
+"aggiornamento delle icone"
 
 #: data/pantheon-tweaks.appdata.xml.in:35
 msgid ""
 "Make sure dimming feature that is introduced in the latest version of Gala "
 "work for the reset dialog"
 msgstr ""
-"Assicurati che la funzione di attenuazione introdotta nell'ultima versione di Gala "
-"lavora per la finestra di dialogo di ripristino"
+"Assicurati che la funzione di attenuazione introdotta nell'ultima versione "
+"di Gala lavora per la finestra di dialogo di ripristino"
 
 #: data/pantheon-tweaks.appdata.xml.in:36
 msgid "AppearancePane: Sort theme names alphabetically"
@@ -99,15 +101,20 @@ msgstr "Aspetto del pannello: ordina i nomi dei temi in ordine alfabetico"
 
 #: data/pantheon-tweaks.appdata.xml.in:37
 msgid "TerminalPane: Support changing tab bar behavior"
-msgstr "Riquadro Terminale: supporta la modifica del comportamento della barra delle schede"
+msgstr ""
+"Riquadro Terminale: supporta la modifica del comportamento della barra delle "
+"schede"
 
 #: data/pantheon-tweaks.appdata.xml.in:38
 msgid "AppearancePane: Add buttons to open the theme locations"
-msgstr "Aspetto del pannello: aggiunto pulsanti per aprire le posizioni dei temi"
+msgstr ""
+"Aspetto del pannello: aggiunto pulsanti per aprire le posizioni dei temi"
 
 #: data/pantheon-tweaks.appdata.xml.in:51
 msgid "Sync selected elementary stylesheet variant with Desktop Plug"
-msgstr "Sincronizza la variante del foglio di stile elementary selezionata con Desktop Plug"
+msgstr ""
+"Sincronizza la variante del foglio di stile elementary selezionata con "
+"Desktop Plug"
 
 #: data/pantheon-tweaks.appdata.xml.in:52
 msgid "Improves reliability of restoring visually"
@@ -118,8 +125,8 @@ msgid ""
 "Prevent System Settings from crashing due to the removal of preferences in "
 "upstream Videos"
 msgstr ""
-"Impedisci l'arresto anomalo delle impostazioni di sistema a causa della rimozione delle preferenze in "
-"Video upstream"
+"Impedisci l'arresto anomalo delle impostazioni di sistema a causa della "
+"rimozione delle preferenze in Video upstream"
 
 #: data/pantheon-tweaks.appdata.xml.in:54
 msgid "Correct cursor and icon theme dir copies"
@@ -186,10 +193,6 @@ msgstr ""
 msgid "Appearance pane"
 msgstr "Aspetto del pannello"
 
-#: src/Tweaks.vala:39
-msgid "Tweaks"
-msgstr "Tweaks"
-
 #: src/Panes/AppearancePane.vala:34
 msgid "Appearance"
 msgstr "Aspetto"
@@ -199,8 +202,8 @@ msgid ""
 "Change the theme and button layout of windows. Changing theme may cause "
 "visibility issue."
 msgstr ""
-"Modificare il tema e la disposizione dei pulsanti della finstra. La modifica del tema potrebbe causare "
-"problema di visibilità."
+"Modificare il tema e la disposizione dei pulsanti della finstra. La modifica "
+"del tema potrebbe causare problema di visibilità."
 
 #: src/Panes/AppearancePane.vala:75
 msgid "Theme Settings"
@@ -323,13 +326,39 @@ msgstr ""
 msgid "Ubuntu"
 msgstr ""
 
+#: src/Panes/FilesPane.vala:24
+msgid "Files"
+msgstr "File"
+
+#: src/Panes/FilesPane.vala:34
+msgid "Restore tabs:"
+msgstr "Ripristina schede:"
+
+#: src/Panes/FilesPane.vala:38
+msgid "Locale"
+msgstr "Lingua"
+
+#: src/Panes/FilesPane.vala:39
+msgid "ISO"
+msgstr "ISO"
+
+#: src/Panes/FilesPane.vala:40
+msgid "Informal"
+msgstr "Informale"
+
+#: src/Panes/FilesPane.vala:42
+msgid "Date format:"
+msgstr "Formato data:"
+
 #: src/Panes/FontsPane.vala:23
 msgid "Fonts"
 msgstr "Tipi di carattere"
 
 #: src/Panes/FontsPane.vala:24
 msgid "Change the fonts used in your system and documents by default."
-msgstr "Modifica i caratteri utilizzati nel sistema e nei documenti per impostazione predefinita."
+msgstr ""
+"Modifica i caratteri utilizzati nel sistema e nei documenti per impostazione "
+"predefinita."
 
 #: src/Panes/FontsPane.vala:32
 msgid "Default Font:"
@@ -363,30 +392,6 @@ msgstr "Indicatore sonoro"
 msgid "Max volume:"
 msgstr "Volume massimo:"
 
-#: src/Panes/FilesPane.vala:24
-msgid "Files"
-msgstr "File"
-
-#: src/Panes/FilesPane.vala:34
-msgid "Restore tabs:"
-msgstr "Ripristina schede:"
-
-#: src/Panes/FilesPane.vala:38
-msgid "Locale"
-msgstr "Lingua"
-
-#: src/Panes/FilesPane.vala:39
-msgid "ISO"
-msgstr "ISO"
-
-#: src/Panes/FilesPane.vala:40
-msgid "Informal"
-msgstr "Informale"
-
-#: src/Panes/FilesPane.vala:42
-msgid "Date format:"
-msgstr "Formato data:"
-
 #: src/Panes/TerminalPane.vala:28
 msgid "Terminal"
 msgstr "Terminale"
@@ -401,7 +406,9 @@ msgstr "Segui l'ultima scheda:"
 
 #: src/Panes/TerminalPane.vala:47
 msgid "Creating a new tab sets the working directory of the last opened tab."
-msgstr "La creazione di una nuova scheda imposta la directory di lavoro dell'ultima scheda aperta."
+msgstr ""
+"La creazione di una nuova scheda imposta la directory di lavoro dell'ultima "
+"scheda aperta."
 
 #: src/Panes/TerminalPane.vala:50
 msgid "Unsafe paste alert:"
@@ -409,7 +416,8 @@ msgstr ""
 
 #: src/Panes/TerminalPane.vala:52
 msgid "Show a warning dialog when a pasted command contains 'sudo'."
-msgstr "Mostra una finestra di avviso quando un comando incollato contiene 'sudo'."
+msgstr ""
+"Mostra una finestra di avviso quando un comando incollato contiene 'sudo'."
 
 #: src/Panes/TerminalPane.vala:54
 msgid "Remember tabs:"
@@ -428,8 +436,9 @@ msgid ""
 "Sound when hitting the end of a line and also for tab-completion when there "
 "are either no or multiple possible completions."
 msgstr ""
-"Il suono quando si raggiunge la fine di una riga e anche per il completamento delle tabulazioni quando è presente "
-"o nessuno o più possibili completamenti."
+"Il suono quando si raggiunge la fine di una riga e anche per il "
+"completamento delle tabulazioni quando è presente o nessuno o più possibili "
+"completamenti."
 
 #: src/Panes/TerminalPane.vala:65
 msgid "Always"
@@ -446,6 +455,10 @@ msgstr "Mai"
 #: src/Panes/TerminalPane.vala:69
 msgid "Show tabs:"
 msgstr "Mostra schede:"
+
+#: src/Tweaks.vala:39
+msgid "Tweaks"
+msgstr "Tweaks"
 
 #: src/Widgets/Categories.vala:42
 msgid "Reset settings successfully"
@@ -472,8 +485,8 @@ msgid ""
 "All settings in this pane will be restored to the factory defaults. This "
 "action can't be undone."
 msgstr ""
-"Tutte le impostazioni in questo riquadro verranno ripristinate alle impostazioni di fabbrica. Questa "
-"azione non può essere annullata."
+"Tutte le impostazioni in questo riquadro verranno ripristinate alle "
+"impostazioni di fabbrica. Questa azione non può essere annullata."
 
 #: src/Widgets/Categories.vala:136
 msgid "Reset"
@@ -492,8 +505,9 @@ msgid ""
 "The destination folder doesn't exist and tried to create new but failed. The "
 "following error message might be helpful:"
 msgstr ""
-"La cartella di destinazione non esiste e ho provato a crearne una nuova ma l'oprazione non è riuscita. Il "
-"seguente messaggio di errore potrebbe essere utile:"
+"La cartella di destinazione non esiste e ho provato a crearne una nuova ma "
+"l'oprazione non è riuscita. Il seguente messaggio di errore potrebbe essere "
+"utile:"
 
 #: src/Widgets/Categories.vala:251
 msgid "Failed to open the destination folder"
@@ -504,8 +518,8 @@ msgid ""
 "Tried to open the destination folder but failed. The following error message "
 "might be helpful:"
 msgstr ""
-"Ho provato ad aprire la cartella di destinazione ma l'operazione non è riuscita. Il seguente messaggio di errore "
-"potrebbe essere utile:"
+"Ho provato ad aprire la cartella di destinazione ma l'operazione non è "
+"riuscita. Il seguente messaggio di errore potrebbe essere utile:"
 
 #~ msgid "Animations"
 #~ msgstr "Animazioni"
