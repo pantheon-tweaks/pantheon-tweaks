@@ -1,22 +1,23 @@
-# Russian translation for elementary-community
+# Russian translation for pantheon-tweaks-plug
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
-# This file is distributed under the same license as the elementary-community package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# This file is distributed under the same license as the pantheon-tweaks-plug package.
+# Andrey Kultyapov <camellan@yandex.ru>, 2021.
+# lenemter <lenemter@gmail.com>, 2022.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: elementary-community\n"
+"Project-Id-Version: pantheon-tweaks-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-15 20:11+0900\n"
-"PO-Revision-Date: 2021-08-27 18:13+0400\n"
-"Last-Translator: Andrey Kultyapov <camellan@yandex.ru>\n"
+"POT-Creation-Date: 2022-11-13 19:31+0900\n"
+"PO-Revision-Date: 2022-11-13 19:30+0900\n"
+"Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-30 08:41+0000\n"
-"X-Generator: Poedit 2.3\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: data/pantheon-tweaks.appdata.xml.in:5
 msgid "Pantheon Tweaks"
@@ -31,153 +32,154 @@ msgid ""
 "A system settings panel for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr ""
-"A system settings panel for the Pantheon Desktop that lets you easily and "
-"safely customise your desktop's appearance."
+"Панель параметров для Pantheon, которая позволяет вам просто и безопасно "
+"кастомизировать ваш рабочий стол."
 
 #: data/pantheon-tweaks.appdata.xml.in:18
 msgid ""
 "Remove AnimationsPane which no longer take effect due to the removal of "
 "tweaking animations functions on Gala side"
 msgstr ""
+"Убраны настройки анимаций, так как она больше не работала из-за того, что из "
+"Gala были удалены настройки анимаций"
 
 #: data/pantheon-tweaks.appdata.xml.in:19
 msgid ""
 "DestinationButton: Show an error dialog when creating/opening the "
 "destination folder being failed"
 msgstr ""
+"DestinationButton: Отображение диалога с ошибкой при ошибке создания/"
+"открытия папки назначения"
 
 #: data/pantheon-tweaks.appdata.xml.in:21
 #: data/pantheon-tweaks.appdata.xml.in:40
 #: data/pantheon-tweaks.appdata.xml.in:56
 msgid "Translation updates:"
-msgstr ""
+msgstr "Обновления переводов:"
 
 #: data/pantheon-tweaks.appdata.xml.in:23
 #: data/pantheon-tweaks.appdata.xml.in:43
-#, fuzzy
 msgid "Update German translation (thanks to @uwe-ss)"
-msgstr "Обновление переводов"
+msgstr "Обновлён немецкий перевод (спасибо @uwe-ss)"
 
 #: data/pantheon-tweaks.appdata.xml.in:24
-#, fuzzy
 msgid "Update Hungarian translation (thanks to @TomiOhl)"
-msgstr "Обновление переводов"
+msgstr "Обновлён венгерский перевод (спасибо @TomiOhl)"
 
 #: data/pantheon-tweaks.appdata.xml.in:25
 #: data/pantheon-tweaks.appdata.xml.in:60
 msgid "Update Portuguese translation (thanks to @hugok79)"
-msgstr ""
+msgstr "Обновлён португальский перевод (спасибо @hugok79)"
 
 #: data/pantheon-tweaks.appdata.xml.in:26
 #: data/pantheon-tweaks.appdata.xml.in:42
-#, fuzzy
 msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
-msgstr "Обновление переводов"
+msgstr "Обновлён перевод на упрощённый китайский язык (спасибо @imgradeone)"
 
 #: data/pantheon-tweaks.appdata.xml.in:27
 #: data/pantheon-tweaks.appdata.xml.in:44
 #: data/pantheon-tweaks.appdata.xml.in:61
-#, fuzzy
 msgid "Update Japanese translation"
-msgstr "Обновление переводов"
+msgstr "Обновлён японский первод"
 
 #: data/pantheon-tweaks.appdata.xml.in:34
 msgid "FontsPane: Fix icon missing with the latest icons update"
 msgstr ""
+"FontsPane: Исправлена отсутствовавшая иконка с последним обновлением иконок"
 
 #: data/pantheon-tweaks.appdata.xml.in:35
 msgid ""
 "Make sure dimming feature that is introduced in the latest version of Gala "
 "work for the reset dialog"
-msgstr ""
+msgstr "Исправлено затемнение в последней версии Gala для диалога сброса"
 
 #: data/pantheon-tweaks.appdata.xml.in:36
 msgid "AppearancePane: Sort theme names alphabetically"
-msgstr ""
+msgstr "AppearancePane: Сортировать названия тем по алфавиту"
 
 #: data/pantheon-tweaks.appdata.xml.in:37
 msgid "TerminalPane: Support changing tab bar behavior"
-msgstr ""
+msgstr "TerminalPane: Поддержка изменения поведения вкладок"
 
 #: data/pantheon-tweaks.appdata.xml.in:38
 msgid "AppearancePane: Add buttons to open the theme locations"
-msgstr ""
+msgstr "AppearancePane: Добавлены кнопки для открытия папки с темами"
 
 #: data/pantheon-tweaks.appdata.xml.in:51
 msgid "Sync selected elementary stylesheet variant with Desktop Plug"
-msgstr ""
+msgstr "Синхронизация выбранной темы elementary с настройками рабочего стола"
 
 #: data/pantheon-tweaks.appdata.xml.in:52
 msgid "Improves reliability of restoring visually"
-msgstr ""
+msgstr "Улучшена надёжность восстановления визуально"
 
 #: data/pantheon-tweaks.appdata.xml.in:53
 msgid ""
 "Prevent System Settings from crashing due to the removal of preferences in "
 "upstream Videos"
 msgstr ""
+"Исправлено падение Параметров системы из-за удаления параметров в Видео"
 
 #: data/pantheon-tweaks.appdata.xml.in:54
 msgid "Correct cursor and icon theme dir copies"
-msgstr ""
+msgstr "Исправлены копии курсора и темы иконок"
 
 #: data/pantheon-tweaks.appdata.xml.in:58
-#, fuzzy
 msgid "Update French translation (thanks to @roxfr)"
-msgstr "Обновление переводов"
+msgstr "Обновлён французский перевод (спасибо @roxfr)"
 
 #: data/pantheon-tweaks.appdata.xml.in:59
 msgid "Update Russian translation (thanks to @camellan)"
-msgstr ""
+msgstr "Обновлён русский перевод (спасибо @camellan)"
 
 #: data/pantheon-tweaks.appdata.xml.in:68
 msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
-msgstr "Exclude Adwaita/gnome/hicolor themes from theme selections"
+msgstr "Исключены темы Adwaita/gnome/hicolor из списка тем"
 
 #: data/pantheon-tweaks.appdata.xml.in:69
 msgid "Support accessing to panes with settings paths"
-msgstr "Support accessing to panes with settings paths"
+msgstr "Поддержка доступа к панелям через путь"
 
 #: data/pantheon-tweaks.appdata.xml.in:70
 msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
-msgstr ""
+msgstr "Исправлена работа на NixOS (спасибо @bobby285271)"
 
 #: data/pantheon-tweaks.appdata.xml.in:71
 #: data/pantheon-tweaks.appdata.xml.in:85
 msgid "Update translations"
-msgstr "Обновление переводов"
+msgstr "Обновлены переводы"
 
 #: data/pantheon-tweaks.appdata.xml.in:77
 msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
 msgstr ""
-"elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
-"features and fixes:"
+"elementary Tweaks были переименованы в Pantheon Tweaks и получили немного "
+"новых функций и исправлений:"
 
 #: data/pantheon-tweaks.appdata.xml.in:79
 msgid "Remove preferences now supported in Pantheon officially"
-msgstr "Remove preferences now supported in Pantheon officially"
+msgstr "Убраны настройки, которые теперь официально поддерживаются в Pantheon"
 
 #: data/pantheon-tweaks.appdata.xml.in:80
 msgid "Remove preferences causing the plug crash"
-msgstr "Remove preferences causing the plug crash"
+msgstr "Убраны настройки, из-за которых параметры падали"
 
 #: data/pantheon-tweaks.appdata.xml.in:81
 msgid "Fully redesigned plug"
-msgstr "Fully redesigned plug"
+msgstr "Параметры были полностью переработаны"
 
 #: data/pantheon-tweaks.appdata.xml.in:82
 msgid "Support changing sound theme (thanks to @pongloongyeat)"
-msgstr "Support changing sound theme (thanks to @pongloongyeat)"
+msgstr "Поддержка выбора звуковой темы (спасибо @pongloongyeat)"
 
 #: data/pantheon-tweaks.appdata.xml.in:83
 msgid "Add new window controls layout"
-msgstr "Add new window controls layout"
+msgstr "Добавлены новые раскладки кнопок управления окнами"
 
 #: data/pantheon-tweaks.appdata.xml.in:84
 msgid "Fix deprecations"
-msgstr "Fix deprecations"
+msgstr "Исправлены устаревания"
 
 #: data/pantheon-tweaks.appdata.xml.in:92
 msgid "Appearance pane"
@@ -192,8 +194,8 @@ msgid ""
 "Change the theme and button layout of windows. Changing theme may cause "
 "visibility issue."
 msgstr ""
-"Измените тему и расположение кнопок в окнах. Изменение темы может вызвать "
-"проблему с отображением."
+"Меняйте темы и расположение кнопок окон. Изменение темы может вызвать "
+"проблемы с отображением."
 
 #: src/Panes/AppearancePane.vala:75
 msgid "Theme Settings"
@@ -207,12 +209,12 @@ msgstr "GTK:"
 #: src/Panes/AppearancePane.vala:82
 #, c-format
 msgid "To show custom themes here, put them in %s."
-msgstr "Чтобы показать здесь пользовательские темы, поместите их в %s."
+msgstr "Для отображения пользовательских тем, поместите их в %s."
 
 #: src/Panes/AppearancePane.vala:83 src/Panes/AppearancePane.vala:94
 #: src/Panes/AppearancePane.vala:105 src/Panes/AppearancePane.vala:116
 msgid "theme-name"
-msgstr "имя темы"
+msgstr "имя-темы"
 
 #: src/Panes/AppearancePane.vala:88
 msgid "Icons:"
@@ -222,7 +224,7 @@ msgstr "Иконки:"
 #: src/Panes/AppearancePane.vala:93
 #, c-format
 msgid "To show custom icons here, put them in %s."
-msgstr "Чтобы показать здесь пользовательские значки, поместите их в %s."
+msgstr "Для отображения пользовательских иконок, поместите их в %s."
 
 #: src/Panes/AppearancePane.vala:99
 msgid "Cursor:"
@@ -232,7 +234,7 @@ msgstr "Курсор:"
 #: src/Panes/AppearancePane.vala:104
 #, c-format
 msgid "To show custom cursors here, put them in %s."
-msgstr "Чтобы показать здесь пользовательские курсоры, поместите их в %s."
+msgstr "Для отображения пользовательских курсоров, поместите их в %s."
 
 #: src/Panes/AppearancePane.vala:110
 msgid "Sound:"
@@ -242,23 +244,23 @@ msgstr "Звуки:"
 #: src/Panes/AppearancePane.vala:115
 #, c-format
 msgid "To show custom sounds here, put them in %s."
-msgstr "Чтобы показать здесь пользовательские звуки, поместите их в %s."
+msgstr "Для отображения пользовательских звуков, поместите их в %s."
 
 #: src/Panes/AppearancePane.vala:121
 msgid "Force to use dark stylesheet:"
-msgstr "Принудительное использование темного стиля оформления:"
+msgstr "Принудительно использовать тёмный стиль:"
 
 #: src/Panes/AppearancePane.vala:125
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
 msgstr ""
-"Устанавливает темный стиль всем приложениям, даже если он не поддерживается. "
+"Устанавливает тёмный стиль всем приложениям, даже если он не поддерживается. "
 "Требуется перезапуск приложения."
 
 #: src/Panes/AppearancePane.vala:128
 msgid "Window Controls"
-msgstr "Кнопки управления окном"
+msgstr "Кнопки управления окнами"
 
 #: src/Panes/AppearancePane.vala:130
 msgid "Layout:"
@@ -266,7 +268,7 @@ msgstr "Расположение:"
 
 #: src/Panes/AppearancePane.vala:133
 msgid "Changes button layout of the window."
-msgstr "Изменяет расположение кнопок в окне."
+msgstr "Изменяет расположение кнопок окна."
 
 #: src/Panes/AppearancePane.vala:135
 msgid "Show GNOME menu:"
@@ -282,7 +284,7 @@ msgstr "elementary"
 
 #: src/Panes/AppearancePane.vala:235
 msgid "elementary Reversed"
-msgstr "elementary реверс"
+msgstr "elementary наоборот"
 
 #: src/Panes/AppearancePane.vala:236
 msgid "Close Only Right"
@@ -294,11 +296,11 @@ msgstr "Только «Закрыть» слева"
 
 #: src/Panes/AppearancePane.vala:238
 msgid "Add Minimize Left"
-msgstr "«Свернуть» слева"
+msgstr "Добавить «Свернуть» слева"
 
 #: src/Panes/AppearancePane.vala:239
 msgid "Add Minimize Right"
-msgstr "«Свернуть» справа"
+msgstr "«Добавить Свернуть» справа"
 
 #: src/Panes/AppearancePane.vala:240
 msgid "Replace Maximize to Minimize"
@@ -346,7 +348,7 @@ msgstr "Шрифты"
 
 #: src/Panes/FontsPane.vala:24
 msgid "Change the fonts used in your system and documents by default."
-msgstr "Измените шрифты, используемые в системе и документах по умолчанию."
+msgstr "Меняйте шрифты, используемые в системе и документах по умолчанию."
 
 #: src/Panes/FontsPane.vala:32
 msgid "Default Font:"
@@ -370,7 +372,7 @@ msgstr "Прочее"
 
 #: src/Panes/MiscPane.vala:26
 msgid "Configure some other hidden settings."
-msgstr "Настройте некоторые другие скрытые параметры."
+msgstr "Настраивайте некоторые другие скрытые параметры."
 
 #: src/Panes/MiscPane.vala:37
 msgid "Sound Indicator"
@@ -404,8 +406,7 @@ msgstr "Предупреждение о небезопасной вставке:
 
 #: src/Panes/TerminalPane.vala:52
 msgid "Show a warning dialog when a pasted command contains 'sudo'."
-msgstr ""
-"Показывать диалог предупреждения, когда вставленная команда содержит 'sudo'."
+msgstr "Показывать предупреждение, когда вставленная команда содержит «sudo»."
 
 #: src/Panes/TerminalPane.vala:54
 msgid "Remember tabs:"
@@ -418,32 +419,31 @@ msgstr ""
 
 #: src/Panes/TerminalPane.vala:58
 msgid "Terminal bell:"
-msgstr "Звуковое уведомление в терминале:"
+msgstr "Звуковое уведомление:"
 
 #: src/Panes/TerminalPane.vala:61
 msgid ""
 "Sound when hitting the end of a line and also for tab-completion when there "
 "are either no or multiple possible completions."
 msgstr ""
-"Звук при попадании в конец строки, а также для завершения табуляции, когда "
-"нет или несколько возможных завершений."
+"Звук при попадании в конец строки, а также для предложений на Tab, когда нет "
+"или есть несколько предложений."
 
 #: src/Panes/TerminalPane.vala:65
 msgid "Always"
-msgstr ""
+msgstr "Всегда"
 
 #: src/Panes/TerminalPane.vala:66
 msgid "Hide when single tab"
-msgstr ""
+msgstr "Прятать при одной вкладке"
 
 #: src/Panes/TerminalPane.vala:67
 msgid "Never"
-msgstr ""
+msgstr "Никогда"
 
 #: src/Panes/TerminalPane.vala:69
-#, fuzzy
 msgid "Show tabs:"
-msgstr "Восстанавливать вкладки:"
+msgstr "Показывать вкладки:"
 
 #: src/Tweaks.vala:39
 msgid "Tweaks"
@@ -451,7 +451,7 @@ msgstr "Твики"
 
 #: src/Widgets/Categories.vala:42
 msgid "Reset settings successfully"
-msgstr ""
+msgstr "Настройки успешно сброшены"
 
 #: src/Widgets/Categories.vala:68
 msgid "General"
@@ -463,376 +463,49 @@ msgstr "Приложения"
 
 #: src/Widgets/Categories.vala:124
 msgid "Reset to default"
-msgstr "Сбросить по умолчанию"
+msgstr "Восстановить значения по умолчанию"
 
 #: src/Widgets/Categories.vala:129
 msgid "Are you sure you want to reset personalization?"
-msgstr ""
+msgstr "Вы уверены, что хотите сбросить персонализацию?"
 
 #: src/Widgets/Categories.vala:130
 msgid ""
 "All settings in this pane will be restored to the factory defaults. This "
 "action can't be undone."
 msgstr ""
+"Все настройки в этой панели будут сброшены до настроек по умолчанию. Это "
+"действие не может быть отменено."
 
 #: src/Widgets/Categories.vala:136
 msgid "Reset"
-msgstr ""
+msgstr "Сбросить"
 
 #: src/Widgets/Categories.vala:228
 msgid "Open destination folder"
-msgstr ""
+msgstr "Открыть папку назначения"
 
 #: src/Widgets/Categories.vala:240
 msgid "Failed to create the destination folder"
-msgstr ""
+msgstr "Не удалось создать папку назначения"
 
 #: src/Widgets/Categories.vala:241
 msgid ""
 "The destination folder doesn't exist and tried to create new but failed. The "
 "following error message might be helpful:"
 msgstr ""
+"Папка назначения не существует, поэтому была предпринята попытка её "
+"создания, но она провалилась. Следующее сообщение об ошибке может оказаться "
+"полезным:"
 
 #: src/Widgets/Categories.vala:251
 msgid "Failed to open the destination folder"
-msgstr ""
+msgstr "Не удалось открыть папку назначения"
 
 #: src/Widgets/Categories.vala:252
 msgid ""
 "Tried to open the destination folder but failed. The following error message "
 "might be helpful:"
 msgstr ""
-
-#~ msgid "Animations"
-#~ msgstr "Анимации"
-
-#~ msgid ""
-#~ "Adjust the animation length used for window management or multitasking."
-#~ msgstr ""
-#~ "Настройка длительности анимации, используемой для управления окнами или "
-#~ "многозадачностью."
-
-#~ msgid "Open:"
-#~ msgstr "Открытие:"
-
-#~ msgid "Close:"
-#~ msgstr "Закрытие:"
-
-#~ msgid "Snap:"
-#~ msgstr "Разворачивание:"
-
-#~ msgid "Minimize:"
-#~ msgstr "Сворачивание:"
-
-#~ msgid "Workspace switch:"
-#~ msgstr "Переключение рабочих столов:"
-
-#~ msgid "Videos"
-#~ msgstr "Видео"
-
-#~ msgid "Stay on top while playing:"
-#~ msgstr "Поверх всех окон во время проигрывания:"
-
-#~ msgid "Move window from video canvas:"
-#~ msgstr "Перемещение окна путём перетаскивания за холст:"
-
-#~ msgid "If enabled, the window can be dragged by clicking anywhere on it."
-#~ msgstr ""
-#~ "Если эта функция включена, окно можно перетащить, щелкнув в любом его "
-#~ "месте."
-
-#~ msgid "Don't instantly start video playback:"
-#~ msgstr "Не начинать проигрывание мгновенно:"
-
-#~ msgid "If enabled, opening a video will not auto play it."
-#~ msgstr ""
-#~ "Если эта функция включена, открытие видео не приведет к его "
-#~ "автоматическому воспроизведению."
-
-#~ msgid "OS X"
-#~ msgstr "OS X"
-
-#~ msgid "Custom"
-#~ msgstr "Своё"
-
-#~ msgid "Disabled"
-#~ msgstr "Отключено"
-
-#~ msgid "Duration"
-#~ msgstr "Длительность"
-
-#~ msgid "Launcher"
-#~ msgstr "Лаунчер"
-
-#~ msgid "Rows"
-#~ msgstr "Строки"
-
-#~ msgid "Columns"
-#~ msgstr "Столбцы"
-
-#~ msgid "Show category switch"
-#~ msgstr "Показывать переключатель"
-
-#~ msgid "Show category view by default"
-#~ msgstr "Вид категорий по умолчанию"
-
-#~ msgid "Font Settings"
-#~ msgstr "Настройки шрифтов"
-
-#~ msgid "Default font"
-#~ msgstr "Шрифт по умолчанию"
-
-#~ msgid "Dock"
-#~ msgstr "Док"
-
-#~ msgid "Behavior"
-#~ msgstr "Поведение"
-
-#~ msgid "Lock items"
-#~ msgstr "Заблокировать элементы"
-
-#~ msgid "Show Unpinned"
-#~ msgstr "Показывать незакреплённые"
-
-#~ msgid "Restrict to Workpace"
-#~ msgstr "Ограничить рабочим столом"
-
-#~ msgid "Hide mode"
-#~ msgstr "Режим скрытия"
-
-#~ msgid "Hide delay"
-#~ msgstr "Задержка скрытия"
-
-#~ msgid "Theme"
-#~ msgstr "Тема"
-
-#~ msgid "Icon size"
-#~ msgstr "Размер иконок"
-
-#~ msgid "Monitor"
-#~ msgstr "Экран"
-
-#~ msgid "Screen position"
-#~ msgstr "Позиция"
-
-#~ msgid "Alignment"
-#~ msgstr "Выравнивание"
-
-#~ msgid "Item alignment"
-#~ msgstr "Выравнивание элементов"
-
-#~ msgid "Offset"
-#~ msgstr "Смещение"
-
-#~ msgid "GTK+"
-#~ msgstr "Тема GTK+"
-
-#~ msgid "Prefer dark variant"
-#~ msgstr "Предпочитать тёмный вариант"
-
-#~ msgid "Cerbere"
-#~ msgstr "Сервис Cerbere"
-
-#~ msgid "Custom command"
-#~ msgstr "Своя команда"
-
-#~ msgid "Keep these applications open:"
-#~ msgstr "Отслеживаемые приложения:"
-
-#~ msgid "Add watched app…"
-#~ msgstr "Добавить отслеживаемое приложение…"
-
-#~ msgid "Remove selected app"
-#~ msgstr "Удалить выбранное приложение"
-
-#~ msgid "Search Applications"
-#~ msgstr "Поиск приложений"
-
-#~ msgid "Single click"
-#~ msgstr "Одиночный клик"
-
-#~ msgid "Natural copy paste"
-#~ msgstr "Натуральные копирование/вставка"
-
-#~ msgid "Shadows"
-#~ msgstr "Тени"
-
-#~ msgid "Plank"
-#~ msgstr "Панель Plank"
-
-#~ msgid "Slingshot"
-#~ msgstr "Меню приложений Slingshot"
-
-#~ msgid "Watched Processes"
-#~ msgstr "Наблюдаемые процессы"
-
-#~ msgid "Add..."
-#~ msgstr "Добавить..."
-
-#~ msgid "Remove"
-#~ msgstr "Удалить"
-
-#~ msgid "Revert to Default"
-#~ msgstr "Значение по-умолчанию"
-
-#~ msgid "Animations:"
-#~ msgstr "Анимации:"
-
-#~ msgid "Open Duration:"
-#~ msgstr "Длительность открытия:"
-
-#~ msgid "Close Duration:"
-#~ msgstr "Длительность закрытия:"
-
-#~ msgid "Snap Duration:"
-#~ msgstr "Длительность максимизирования:"
-
-#~ msgid "Minimize Duration:"
-#~ msgstr "Длительность уменьшения:"
-
-#~ msgid "Workspace Switch Duration:"
-#~ msgstr "Длительность переключения рабочих столов:"
-
-#~ msgid "Single Click:"
-#~ msgstr "Одиночный клик:"
-
-#~ msgid "Date Format:"
-#~ msgstr "Формат даты:"
-
-#~ msgid "Smallest"
-#~ msgstr "Наименьший"
-
-#~ msgid "Smaller"
-#~ msgstr "Меньше"
-
-#~ msgid "Small"
-#~ msgstr "Маленький"
-
-#~ msgid "Normal"
-#~ msgstr "Нормальный"
-
-#~ msgid "Large"
-#~ msgstr "Большой"
-
-#~ msgid "Larger"
-#~ msgstr "Больше"
-
-#~ msgid "Largest"
-#~ msgstr "Наибольший"
-
-#~ msgid "Sidebar Icon Size:"
-#~ msgstr "Размер значков боковой панели:"
-
-#~ msgid "Document Font:"
-#~ msgstr "Шрифт документов:"
-
-#~ msgid "Monospace Font:"
-#~ msgstr "Моноширийный шрифт:"
-
-#~ msgid "Rows:"
-#~ msgstr "Строк:"
-
-#~ msgid "Columns:"
-#~ msgstr "Столбцов:"
-
-#~ msgid "Lock Items:"
-#~ msgstr "Закрепить объекты:"
-
-#~ msgid "Icon Size:"
-#~ msgstr "Размер иконок:"
-
-#~ msgid "Don't hide"
-#~ msgstr "Не скрывать"
-
-#~ msgid "Intelligent hide"
-#~ msgstr "Интеллектуальное скрытие"
-
-#~ msgid "Auto hide"
-#~ msgstr "Автоматическое скрытие"
-
-#~ msgid "Hide on maximize"
-#~ msgstr "Скрывать при окне на весь экран"
-
-#~ msgid "Hide Mode:"
-#~ msgstr "Режим скрытия:"
-
-#~ msgid "Theme:"
-#~ msgstr "Тема:"
-
-#~ msgid "Primary Monitor"
-#~ msgstr "Основной монитор"
-
-#~ msgid "Monitor %d"
-#~ msgstr "%d монитор"
-
-#~ msgid "Monitor:"
-#~ msgstr "Монитор:"
-
-#~ msgid "Left"
-#~ msgstr "Слева"
-
-#~ msgid "Right"
-#~ msgstr "Справа"
-
-#~ msgid "Top"
-#~ msgstr "Сверху"
-
-#~ msgid "Bottom"
-#~ msgstr "Снизу"
-
-#~ msgid "Panel"
-#~ msgstr "Панель"
-
-#~ msgid "Alignment:"
-#~ msgstr "Выравнивание:"
-
-#~ msgid "Item Alignment:"
-#~ msgstr "Выравнивание элементов:"
-
-#~ msgid "Offset:"
-#~ msgstr "Смещение:"
-
-#~ msgid "Opacity:"
-#~ msgstr "Непрозрачность:"
-
-#~ msgid "Icon Theme:"
-#~ msgstr "Тема иконок:"
-
-#~ msgid "Cursor Theme:"
-#~ msgstr "Тема курсора:"
-
-#~ msgid "Custom Layout:"
-#~ msgstr "Своё расположение:"
-
-#~ msgid "Audible Bell:"
-#~ msgstr "Звуковой сигнал:"
-
-#~ msgid "Focused Windows:"
-#~ msgstr "Активные окна:"
-
-#~ msgid "Unfocused Windows:"
-#~ msgstr "Неактивные окна:"
-
-#~ msgid "Name"
-#~ msgstr "Название"
-
-#~ msgid "Shortcut"
-#~ msgstr "Сочетание клавиш"
-
-#~ msgid "Command"
-#~ msgstr "Команда"
-
-#~ msgid "Every field must be filled!"
-#~ msgstr "Каждое поле должно быть заполнено!"
-
-#~ msgid "Name:"
-#~ msgstr "Название:"
-
-#~ msgid "Shortcut:"
-#~ msgstr "Сочетание клавиш:"
-
-#~ msgid "Command:"
-#~ msgstr "Команда:"
-
-#~ msgid "Close Only"
-#~ msgstr "Только \"Закрыть\""
+"Произошла ошибка при открытии папки назначения. Следующее сообщение об "
+"ошибке может оказаться полезным:"
