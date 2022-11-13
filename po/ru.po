@@ -214,7 +214,7 @@ msgstr "Для отображения пользовательских тем, �
 #: src/Panes/AppearancePane.vala:83 src/Panes/AppearancePane.vala:94
 #: src/Panes/AppearancePane.vala:105 src/Panes/AppearancePane.vala:116
 msgid "theme-name"
-msgstr "theme-name"
+msgstr "имя-темы"
 
 #: src/Panes/AppearancePane.vala:88
 msgid "Icons:"
