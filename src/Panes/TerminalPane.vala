@@ -22,8 +22,6 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
 
     private GLib.Settings settings;
 
-    private Gtk.ColorButton background_color_button;
-
     public TerminalPane () {
         base (_("Terminal"), "utilities-terminal");
     }
@@ -34,12 +32,6 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         }
 
         settings = new GLib.Settings (TERMINAL_SCHEMA);
-
-        var background_color_label = summary_label_new (_("Background color:"));
-        background_color_button = new Gtk.ColorButton () {
-            halign = Gtk.Align.START,
-            use_alpha = true
-        };
 
         var follow_last_tab_label = summary_label_new (_("Follow last tab:"));
         var follow_last_tab_switch = switch_new ();
@@ -69,28 +61,20 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         var tab_bar_label = summary_label_new (_("Show tabs:"));
         var tab_bar_combo = combobox_text_new (tab_bar_map);
 
-        content_area.attach (background_color_label, 0, 0, 1, 1);
-        content_area.attach (background_color_button, 1, 0, 1, 1);
-        content_area.attach (follow_last_tab_label, 0, 1, 1, 1);
-        content_area.attach (follow_last_tab_switch, 1, 1, 1, 1);
-        content_area.attach (follow_last_tab_info, 1, 2, 1, 1);
-        content_area.attach (unsafe_paste_alert_label, 0, 3, 1, 1);
-        content_area.attach (unsafe_paste_alert_switch, 1, 3, 1, 1);
-        content_area.attach (unsafe_paste_alert_info, 1, 4, 1, 1);
-        content_area.attach (rem_tabs_label, 0, 5, 1, 1);
-        content_area.attach (rem_tabs_switch, 1, 5, 1, 1);
-        content_area.attach (rem_tabs_info, 1, 6, 1, 1);
-        content_area.attach (term_bell_label, 0, 7, 1, 1);
-        content_area.attach (term_bell_switch, 1, 7, 1, 1);
-        content_area.attach (term_bell_info, 1, 8, 1, 1);
-        content_area.attach (tab_bar_label, 0, 9, 1, 1);
-        content_area.attach (tab_bar_combo, 1, 9, 1, 1);
-
-        update_background_value ();
-
-        background_color_button.color_set.connect (() => {
-            settings.set_string ("background", background_color_button.rgba.to_string ());
-        });
+        content_area.attach (follow_last_tab_label, 0, 0, 1, 1);
+        content_area.attach (follow_last_tab_switch, 1, 0, 1, 1);
+        content_area.attach (follow_last_tab_info, 1, 1, 1, 1);
+        content_area.attach (unsafe_paste_alert_label, 0, 2, 1, 1);
+        content_area.attach (unsafe_paste_alert_switch, 1, 2, 1, 1);
+        content_area.attach (unsafe_paste_alert_info, 1, 3, 1, 1);
+        content_area.attach (rem_tabs_label, 0, 4, 1, 1);
+        content_area.attach (rem_tabs_switch, 1, 4, 1, 1);
+        content_area.attach (rem_tabs_info, 1, 5, 1, 1);
+        content_area.attach (term_bell_label, 0, 6, 1, 1);
+        content_area.attach (term_bell_switch, 1, 6, 1, 1);
+        content_area.attach (term_bell_info, 1, 7, 1, 1);
+        content_area.attach (tab_bar_label, 0, 8, 1, 1);
+        content_area.attach (tab_bar_combo, 1, 8, 1, 1);
 
         settings.bind ("follow-last-tab", follow_last_tab_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("unsafe-paste-alert", unsafe_paste_alert_switch, "active", SettingsBindFlags.DEFAULT);
@@ -99,20 +83,12 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         settings.bind ("tab-bar-behavior", tab_bar_combo, "active_id", SettingsBindFlags.DEFAULT);
 
         on_click_reset (() => {
-            string[] keys = {"background", "unsafe-paste-alert", "natural-copy-paste",
+            string[] keys = {"unsafe-paste-alert", "natural-copy-paste",
                              "follow-last-tab", "audible-bell", "remember-tabs", "tab-bar-behavior"};
 
             foreach (string key in keys) {
                 settings.reset (key);
             }
-
-            update_background_value ();
         });
-    }
-
-    private void update_background_value () {
-        var rgba = Gdk.RGBA ();
-        rgba.parse (settings.get_string ("background"));
-        background_color_button.rgba = rgba;
     }
 }
