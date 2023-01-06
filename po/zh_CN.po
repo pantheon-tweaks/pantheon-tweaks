@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-15 20:11+0900\n"
+"POT-Creation-Date: 2023-01-06 22:23+0900\n"
 "PO-Revision-Date: 2022-02-09 15:09+0800\n"
 "Last-Translator: imgradeone <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -18,161 +18,185 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-08-30 08:42+0000\n"
 "X-Generator: Poedit 3.0\n"
 
-#: data/pantheon-tweaks.appdata.xml.in:5
+#: data/pantheon-tweaks.metainfo.xml.in:5
 msgid "Pantheon Tweaks"
 msgstr "Pantheon 优化"
 
-#: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:40
+#: data/pantheon-tweaks.metainfo.xml.in:6 src/Tweaks.vala:40
 msgid "Tweak Pantheon settings"
 msgstr "修改 Pantheon 桌面环境设置"
 
-#: data/pantheon-tweaks.appdata.xml.in:8
+#: data/pantheon-tweaks.metainfo.xml.in:8
 msgid ""
 "A system settings panel for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr "专为 Pantheon 设计的系统设置面板，帮助您简便、安全地修改桌面外观。"
 
-#: data/pantheon-tweaks.appdata.xml.in:18
+#: data/pantheon-tweaks.metainfo.xml.in:18
+msgid ""
+"TerminalPane: Remove background color preference which no longer take effect "
+"due to changes on Terminal side"
+msgstr ""
+
+#: data/pantheon-tweaks.metainfo.xml.in:20
+#: data/pantheon-tweaks.metainfo.xml.in:36
+#: data/pantheon-tweaks.metainfo.xml.in:55
+#: data/pantheon-tweaks.metainfo.xml.in:71
+msgid "Translation updates:"
+msgstr "翻译更新："
+
+#: data/pantheon-tweaks.metainfo.xml.in:22
+#: data/pantheon-tweaks.metainfo.xml.in:40
+#: data/pantheon-tweaks.metainfo.xml.in:75
+msgid "Update Portuguese translation (thanks to @hugok79)"
+msgstr "更新葡萄牙语翻译（由 @hugok79 贡献）"
+
+#: data/pantheon-tweaks.metainfo.xml.in:23
+#, fuzzy
+msgid "Update German translation (thanks to @skalski)"
+msgstr "更新德语翻译（由 @uwe-ss 贡献）"
+
+#: data/pantheon-tweaks.metainfo.xml.in:24
+#, fuzzy
+msgid "Update Italian translation (thanks to @albanobattistella)"
+msgstr "更新俄罗斯语翻译（由 @camellan 贡献）"
+
+#: data/pantheon-tweaks.metainfo.xml.in:25
+#, fuzzy
+msgid "Update Russian translation (thanks to @lenemter)"
+msgstr "更新俄罗斯语翻译（由 @camellan 贡献）"
+
+#: data/pantheon-tweaks.metainfo.xml.in:26
+#: data/pantheon-tweaks.metainfo.xml.in:42
+#: data/pantheon-tweaks.metainfo.xml.in:59
+#: data/pantheon-tweaks.metainfo.xml.in:76
+msgid "Update Japanese translation"
+msgstr "更新日语翻译"
+
+#: data/pantheon-tweaks.metainfo.xml.in:33
 msgid ""
 "Remove AnimationsPane which no longer take effect due to the removal of "
 "tweaking animations functions on Gala side"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:19
+#: data/pantheon-tweaks.metainfo.xml.in:34
 msgid ""
 "DestinationButton: Show an error dialog when creating/opening the "
 "destination folder being failed"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:21
-#: data/pantheon-tweaks.appdata.xml.in:40
-#: data/pantheon-tweaks.appdata.xml.in:56
-msgid "Translation updates:"
-msgstr "翻译更新："
-
-#: data/pantheon-tweaks.appdata.xml.in:23
-#: data/pantheon-tweaks.appdata.xml.in:43
+#: data/pantheon-tweaks.metainfo.xml.in:38
+#: data/pantheon-tweaks.metainfo.xml.in:58
 msgid "Update German translation (thanks to @uwe-ss)"
 msgstr "更新德语翻译（由 @uwe-ss 贡献）"
 
-#: data/pantheon-tweaks.appdata.xml.in:24
+#: data/pantheon-tweaks.metainfo.xml.in:39
 #, fuzzy
 msgid "Update Hungarian translation (thanks to @TomiOhl)"
 msgstr "更新俄罗斯语翻译（由 @camellan 贡献）"
 
-#: data/pantheon-tweaks.appdata.xml.in:25
-#: data/pantheon-tweaks.appdata.xml.in:60
-msgid "Update Portuguese translation (thanks to @hugok79)"
-msgstr "更新葡萄牙语翻译（由 @hugok79 贡献）"
-
-#: data/pantheon-tweaks.appdata.xml.in:26
-#: data/pantheon-tweaks.appdata.xml.in:42
+#: data/pantheon-tweaks.metainfo.xml.in:41
+#: data/pantheon-tweaks.metainfo.xml.in:57
 msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
 msgstr "更新简体中文翻译（由 @imgradeone 贡献）"
 
-#: data/pantheon-tweaks.appdata.xml.in:27
-#: data/pantheon-tweaks.appdata.xml.in:44
-#: data/pantheon-tweaks.appdata.xml.in:61
-msgid "Update Japanese translation"
-msgstr "更新日语翻译"
-
-#: data/pantheon-tweaks.appdata.xml.in:34
+#: data/pantheon-tweaks.metainfo.xml.in:49
 msgid "FontsPane: Fix icon missing with the latest icons update"
 msgstr "字体面板：修复图标包更新导致图标缺失的问题"
 
-#: data/pantheon-tweaks.appdata.xml.in:35
+#: data/pantheon-tweaks.metainfo.xml.in:50
 msgid ""
 "Make sure dimming feature that is introduced in the latest version of Gala "
 "work for the reset dialog"
 msgstr "在 Gala 最新版本引入的主窗口变暗效果现在已对重置对话框生效"
 
-#: data/pantheon-tweaks.appdata.xml.in:36
+#: data/pantheon-tweaks.metainfo.xml.in:51
 msgid "AppearancePane: Sort theme names alphabetically"
 msgstr "外观面板：按字母顺序排序主题"
 
-#: data/pantheon-tweaks.appdata.xml.in:37
+#: data/pantheon-tweaks.metainfo.xml.in:52
 msgid "TerminalPane: Support changing tab bar behavior"
 msgstr "终端面板：支持修改标签行为"
 
-#: data/pantheon-tweaks.appdata.xml.in:38
+#: data/pantheon-tweaks.metainfo.xml.in:53
 msgid "AppearancePane: Add buttons to open the theme locations"
 msgstr "外观面板：增加打开主题目录的按钮"
 
-#: data/pantheon-tweaks.appdata.xml.in:51
+#: data/pantheon-tweaks.metainfo.xml.in:66
 msgid "Sync selected elementary stylesheet variant with Desktop Plug"
 msgstr "同步桌面插件中选择的 elementary 样式"
 
-#: data/pantheon-tweaks.appdata.xml.in:52
+#: data/pantheon-tweaks.metainfo.xml.in:67
 msgid "Improves reliability of restoring visually"
 msgstr "改进恢复功能的可用性"
 
-#: data/pantheon-tweaks.appdata.xml.in:53
+#: data/pantheon-tweaks.metainfo.xml.in:68
 msgid ""
 "Prevent System Settings from crashing due to the removal of preferences in "
 "upstream Videos"
 msgstr "防止系统设置因上游视频中的首选项被删除而崩溃"
 
-#: data/pantheon-tweaks.appdata.xml.in:54
+#: data/pantheon-tweaks.metainfo.xml.in:69
 msgid "Correct cursor and icon theme dir copies"
 msgstr "修正光标和图标主题文件夹地址的复制"
 
-#: data/pantheon-tweaks.appdata.xml.in:58
+#: data/pantheon-tweaks.metainfo.xml.in:73
 msgid "Update French translation (thanks to @roxfr)"
 msgstr "更新法语翻译（由 @roxfr 贡献）"
 
-#: data/pantheon-tweaks.appdata.xml.in:59
+#: data/pantheon-tweaks.metainfo.xml.in:74
 msgid "Update Russian translation (thanks to @camellan)"
 msgstr "更新俄罗斯语翻译（由 @camellan 贡献）"
 
-#: data/pantheon-tweaks.appdata.xml.in:68
+#: data/pantheon-tweaks.metainfo.xml.in:83
 msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
 msgstr "在主题选项中排除 Adwaita/gnome/hicolor 主题"
 
-#: data/pantheon-tweaks.appdata.xml.in:69
+#: data/pantheon-tweaks.metainfo.xml.in:84
 msgid "Support accessing to panes with settings paths"
 msgstr "支持通过设置路径访问面板"
 
-#: data/pantheon-tweaks.appdata.xml.in:70
+#: data/pantheon-tweaks.metainfo.xml.in:85
 msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
 msgstr "修复插件以在 NixOS 上正常运行（由 @bobby285271 贡献）"
 
-#: data/pantheon-tweaks.appdata.xml.in:71
-#: data/pantheon-tweaks.appdata.xml.in:85
+#: data/pantheon-tweaks.metainfo.xml.in:86
+#: data/pantheon-tweaks.metainfo.xml.in:100
 msgid "Update translations"
 msgstr "翻译更新"
 
-#: data/pantheon-tweaks.appdata.xml.in:77
+#: data/pantheon-tweaks.metainfo.xml.in:92
 msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
 msgstr ""
 "elementary 优化现已更名为 Pantheon 优化，同时也获得了一些新功能和修复："
 
-#: data/pantheon-tweaks.appdata.xml.in:79
+#: data/pantheon-tweaks.metainfo.xml.in:94
 msgid "Remove preferences now supported in Pantheon officially"
 msgstr "删除 Pantheon 目前官方支持的设置项"
 
-#: data/pantheon-tweaks.appdata.xml.in:80
+#: data/pantheon-tweaks.metainfo.xml.in:95
 msgid "Remove preferences causing the plug crash"
 msgstr "删除导致插件崩溃的设置项"
 
-#: data/pantheon-tweaks.appdata.xml.in:81
+#: data/pantheon-tweaks.metainfo.xml.in:96
 msgid "Fully redesigned plug"
 msgstr "完全重新设计的插件"
 
-#: data/pantheon-tweaks.appdata.xml.in:82
+#: data/pantheon-tweaks.metainfo.xml.in:97
 msgid "Support changing sound theme (thanks to @pongloongyeat)"
 msgstr "支持修改音效主题（特别感谢 @pongloongyeat）"
 
-#: data/pantheon-tweaks.appdata.xml.in:83
+#: data/pantheon-tweaks.metainfo.xml.in:98
 msgid "Add new window controls layout"
 msgstr "增加新的窗口控制布局"
 
-#: data/pantheon-tweaks.appdata.xml.in:84
+#: data/pantheon-tweaks.metainfo.xml.in:99
 msgid "Fix deprecations"
 msgstr "弃用修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:92
+#: data/pantheon-tweaks.metainfo.xml.in:107
 msgid "Appearance pane"
 msgstr "外观面板"
 
@@ -370,61 +394,57 @@ msgstr "声音托盘图标"
 msgid "Max volume:"
 msgstr "最大音量："
 
-#: src/Panes/TerminalPane.vala:28
+#: src/Panes/TerminalPane.vala:26
 msgid "Terminal"
 msgstr "终端"
 
-#: src/Panes/TerminalPane.vala:38
-msgid "Background color:"
-msgstr "背景色："
-
-#: src/Panes/TerminalPane.vala:44
+#: src/Panes/TerminalPane.vala:36
 msgid "Follow last tab:"
 msgstr "跟随上一个标签："
 
-#: src/Panes/TerminalPane.vala:47
+#: src/Panes/TerminalPane.vala:39
 msgid "Creating a new tab sets the working directory of the last opened tab."
 msgstr "新建标签时，将工作目录自动设为与上一个标签一致的目录。"
 
-#: src/Panes/TerminalPane.vala:50
+#: src/Panes/TerminalPane.vala:42
 msgid "Unsafe paste alert:"
 msgstr "危险粘贴警告："
 
-#: src/Panes/TerminalPane.vala:52
+#: src/Panes/TerminalPane.vala:44
 msgid "Show a warning dialog when a pasted command contains 'sudo'."
 msgstr "粘贴的命令包含“sudo”时显示警告。"
 
-#: src/Panes/TerminalPane.vala:54
+#: src/Panes/TerminalPane.vala:46
 msgid "Remember tabs:"
 msgstr "保留标签："
 
-#: src/Panes/TerminalPane.vala:56
+#: src/Panes/TerminalPane.vala:48
 msgid "If enabled, last opened tabs are restored on start."
 msgstr "启用后，打开终端将自动恢复上次的标签。"
 
-#: src/Panes/TerminalPane.vala:58
+#: src/Panes/TerminalPane.vala:50
 msgid "Terminal bell:"
 msgstr "终端提示音："
 
-#: src/Panes/TerminalPane.vala:61
+#: src/Panes/TerminalPane.vala:53
 msgid ""
 "Sound when hitting the end of a line and also for tab-completion when there "
 "are either no or multiple possible completions."
 msgstr "触发行尾或在 Tab 自动填充提示时没有可行填充的提示音效。"
 
-#: src/Panes/TerminalPane.vala:65
+#: src/Panes/TerminalPane.vala:57
 msgid "Always"
 msgstr "一直显示"
 
-#: src/Panes/TerminalPane.vala:66
+#: src/Panes/TerminalPane.vala:58
 msgid "Hide when single tab"
 msgstr "只有单个标签时隐藏"
 
-#: src/Panes/TerminalPane.vala:67
+#: src/Panes/TerminalPane.vala:59
 msgid "Never"
 msgstr "不显示"
 
-#: src/Panes/TerminalPane.vala:69
+#: src/Panes/TerminalPane.vala:61
 msgid "Show tabs:"
 msgstr "显示标签栏："
 
@@ -487,6 +507,9 @@ msgid ""
 "Tried to open the destination folder but failed. The following error message "
 "might be helpful:"
 msgstr ""
+
+#~ msgid "Background color:"
+#~ msgstr "背景色："
 
 #~ msgid "Animations"
 #~ msgstr "动画"
