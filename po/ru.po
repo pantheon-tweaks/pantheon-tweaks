@@ -2,7 +2,7 @@
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the pantheon-tweaks-plug package.
 # Andrey Kultyapov <camellan@yandex.ru>, 2021.
-# lenemter <lenemter@gmail.com>, 2022.
+# lenemter <lenemter@gmail.com>, 2022-2023.
 #
 msgid ""
 msgstr ""
