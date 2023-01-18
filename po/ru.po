@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-tweaks-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-06 22:23+0900\n"
-"PO-Revision-Date: 2022-11-13 19:30+0900\n"
+"POT-Creation-Date: 2023-01-18 19:39+0900\n"
+"PO-Revision-Date: 2023-01-18 19:37+0900\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "Language: ru\n"
@@ -40,6 +40,8 @@ msgid ""
 "TerminalPane: Remove background color preference which no longer take effect "
 "due to changes on Terminal side"
 msgstr ""
+"TerminalPane: Удалён нерабочий параметр цветовой схемы, из-за изменений в "
+"Терминале"
 
 #: data/pantheon-tweaks.metainfo.xml.in:20
 #: data/pantheon-tweaks.metainfo.xml.in:36
@@ -55,33 +57,30 @@ msgid "Update Portuguese translation (thanks to @hugok79)"
 msgstr "Обновлён португальский перевод (спасибо @hugok79)"
 
 #: data/pantheon-tweaks.metainfo.xml.in:23
-#, fuzzy
 msgid "Update German translation (thanks to @skalski)"
-msgstr "Обновлён немецкий перевод (спасибо @uwe-ss)"
+msgstr "Обновлён немецкий перевод (спасибо @skalski)"
 
 #: data/pantheon-tweaks.metainfo.xml.in:24
-#, fuzzy
 msgid "Update Italian translation (thanks to @albanobattistella)"
-msgstr "Обновлён русский перевод (спасибо @camellan)"
+msgstr "Обновлён итальянский перевод (спасибо @albanobattistella)"
 
 #: data/pantheon-tweaks.metainfo.xml.in:25
-#, fuzzy
 msgid "Update Russian translation (thanks to @lenemter)"
-msgstr "Обновлён русский перевод (спасибо @camellan)"
+msgstr "Обновлён русский перевод (спасибо @lenemter)"
 
 #: data/pantheon-tweaks.metainfo.xml.in:26
 #: data/pantheon-tweaks.metainfo.xml.in:42
 #: data/pantheon-tweaks.metainfo.xml.in:59
 #: data/pantheon-tweaks.metainfo.xml.in:76
 msgid "Update Japanese translation"
-msgstr "Обновлён японский первод"
+msgstr "Обновлён японский перевод"
 
 #: data/pantheon-tweaks.metainfo.xml.in:33
 msgid ""
 "Remove AnimationsPane which no longer take effect due to the removal of "
 "tweaking animations functions on Gala side"
 msgstr ""
-"Убраны настройки анимаций, так как она больше не работала из-за того, что из "
+"Убраны настройки анимаций, так как они больше не работали из-за того, что из "
 "Gala были удалены настройки анимаций"
 
 #: data/pantheon-tweaks.metainfo.xml.in:34
@@ -324,7 +323,7 @@ msgstr "Добавить «Свернуть» слева"
 
 #: src/Panes/AppearancePane.vala:239
 msgid "Add Minimize Right"
-msgstr "«Добавить Свернуть» справа"
+msgstr "Добавить «Свернуть» справа"
 
 #: src/Panes/AppearancePane.vala:240
 msgid "Replace Maximize to Minimize"
@@ -412,7 +411,7 @@ msgstr "Терминал"
 
 #: src/Panes/TerminalPane.vala:36
 msgid "Follow last tab:"
-msgstr "Придеживаться последней вкладки:"
+msgstr "Придерживаться последней вкладки:"
 
 #: src/Panes/TerminalPane.vala:39
 msgid "Creating a new tab sets the working directory of the last opened tab."
@@ -529,6 +528,3 @@ msgid ""
 msgstr ""
 "Произошла ошибка при открытии папки назначения. Следующее сообщение об "
 "ошибке может оказаться полезным:"
-
-#~ msgid "Background color:"
-#~ msgstr "Цвет фона:"
