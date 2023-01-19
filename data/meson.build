@@ -6,7 +6,7 @@ install_data(
 i18n.merge_file(
     input: meson.project_name() + '.metainfo.xml.in',
     output: meson.project_name() + '.metainfo.xml',
-    po_dir: meson.project_source_root () / 'po',
+    po_dir: meson.source_root () / 'po',
     install_dir: get_option('prefix') / get_option('datadir') / 'metainfo',
     install: true
 )

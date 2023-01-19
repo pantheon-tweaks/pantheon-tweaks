@@ -2,7 +2,7 @@ project(
     'pantheon-tweaks',
     'vala', 'c',
     version: '1.0.4',
-    meson_version: '>= 0.57.0'
+    meson_version: '>= 0.51.0'
 )
 
 switchboard_dep = dependency('switchboard-2.0')
@@ -10,7 +10,6 @@ gettext_name = meson.project_name() + '-plug'
 libdir = get_option('prefix') / get_option('libdir')
 pkgdatadir = switchboard_dep.get_variable(pkgconfig: 'plugsdir', pkgconfig_define: ['libdir', libdir]) / 'personal'
 
-gnome = import('gnome')
 i18n = import('i18n')
 
 add_global_arguments(
@@ -25,10 +24,6 @@ config_file = configure_file(
     input: 'src/Config.vala.in',
     output: '@BASENAME@',
     configuration: config_data
-)
-
-gnome.post_install(
-    gtk_update_icon_cache: true
 )
 
 subdir('data')
@@ -63,3 +58,5 @@ shared_module(
     install: true,
     install_dir: pkgdatadir
 )
+
+meson.add_install_script('meson/post_install.py')

@@ -9,7 +9,7 @@ Build-Depends: appstream,
                libglib2.0-dev,
                libgee-0.8-dev,
                libswitchboard-2.0-dev,
-               meson (>= 0.57.0),
+               meson (>= 0.51.0),
                valac (>= 0.30)
 Standards-Version: 4.5.0
 Homepage: https://github.com/pantheon-tweaks/pantheon-tweaks
