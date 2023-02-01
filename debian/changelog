@@ -1,4 +1,4 @@
-pantheon-tweaks (1.1.0) focal jammy; urgency=medium
+pantheon-tweaks (1.1.0) jammy; urgency=medium
 
   * TerminalPane: Remove background color preference which no longer take effect due to changes on Terminal side
   * Update translations
