@@ -12,6 +12,21 @@
   <icon type="stock">preferences-desktop-tweaks</icon>
   <translation type="gettext">pantheon-tweaks-plug</translation>
   <releases>
+    <release version="1.1.0" date="2023-02-01" urgency="medium">
+      <description>
+        <ul>
+          <li>TerminalPane: Remove background color preference which no longer take effect due to changes on Terminal side</li>
+        </ul>
+        <p>Translation updates:</p>
+        <ul>
+          <li>Update Portuguese translation (thanks to @hugok79)</li>
+          <li>Update German translation (thanks to @skalski)</li>
+          <li>Update Italian translation (thanks to @albanobattistella)</li>
+          <li>Update Russian translation (thanks to @lenemter)</li>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.4" date="2022-05-23" urgency="low">
       <description>
         <ul>
@@ -90,7 +105,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>Appearance pane</caption>
-      <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/main/data/screenshot.png</image>
+      <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/1.0.4/data/screenshot.png</image>
     </screenshot>
   </screenshots>
   <url type="homepage">https://github.com/pantheon-tweaks/pantheon-tweaks</url>

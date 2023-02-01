@@ -15,7 +15,7 @@ jobs:
     - name: Install Dependencies
       run: |
         apt update
-        apt install -y libgranite-7-dev libgtk-4-dev libswitchboard-3-dev meson valac
+        apt install -y appstream libgranite-7-dev libgtk-4-dev libswitchboard-3-dev meson valac
     - name: Build
       env:
         DESTDIR: out

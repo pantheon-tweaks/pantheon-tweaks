@@ -1,13 +1,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# ryonakano <ryonakaknock3@gmail.com>, 2018, 2020-2022.
+# ryonakano <ryonakaknock3@gmail.com>, 2018, 2020-2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-15 20:11+0900\n"
-"PO-Revision-Date: 2022-05-23 21:16+0900\n"
+"POT-Creation-Date: 2023-01-06 22:23+0900\n"
+"PO-Revision-Date: 2023-01-06 22:25+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -16,15 +16,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: data/pantheon-tweaks.appdata.xml.in:5
+#: data/pantheon-tweaks.metainfo.xml.in:5
 msgid "Pantheon Tweaks"
 msgstr "Pantheon Tweaks"
 
-#: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:40
+#: data/pantheon-tweaks.metainfo.xml.in:6 src/Tweaks.vala:40
 msgid "Tweak Pantheon settings"
 msgstr "Pantheon の設定を微調整します"
 
-#: data/pantheon-tweaks.appdata.xml.in:8
+#: data/pantheon-tweaks.metainfo.xml.in:8
 msgid ""
 "A system settings panel for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
@@ -32,7 +32,47 @@ msgstr ""
 "簡単かつ安全にデスクトップの外観をカスタマイズできる、Pantheon デスクトップ向"
 "けのシステム設定パネルです。"
 
-#: data/pantheon-tweaks.appdata.xml.in:18
+#: data/pantheon-tweaks.metainfo.xml.in:18
+msgid ""
+"TerminalPane: Remove background color preference which no longer take effect "
+"due to changes on Terminal side"
+msgstr ""
+"TerminalPane: “ターミナル”側の変更に伴い、設定が反映されなくなった背景色の設"
+"定を削除"
+
+#: data/pantheon-tweaks.metainfo.xml.in:20
+#: data/pantheon-tweaks.metainfo.xml.in:36
+#: data/pantheon-tweaks.metainfo.xml.in:55
+#: data/pantheon-tweaks.metainfo.xml.in:71
+msgid "Translation updates:"
+msgstr "翻訳の更新:"
+
+#: data/pantheon-tweaks.metainfo.xml.in:22
+#: data/pantheon-tweaks.metainfo.xml.in:40
+#: data/pantheon-tweaks.metainfo.xml.in:75
+msgid "Update Portuguese translation (thanks to @hugok79)"
+msgstr "ポルトガル語翻訳を更新 (貢献者: @hugok79)"
+
+#: data/pantheon-tweaks.metainfo.xml.in:23
+msgid "Update German translation (thanks to @skalski)"
+msgstr "ドイツ語翻訳を更新 (貢献者: @skalski)"
+
+#: data/pantheon-tweaks.metainfo.xml.in:24
+msgid "Update Italian translation (thanks to @albanobattistella)"
+msgstr "イタリア語翻訳を更新 (貢献者: @albanobattistella)"
+
+#: data/pantheon-tweaks.metainfo.xml.in:25
+msgid "Update Russian translation (thanks to @lenemter)"
+msgstr "ロシア語翻訳を更新 (貢献者: @lenemter)"
+
+#: data/pantheon-tweaks.metainfo.xml.in:26
+#: data/pantheon-tweaks.metainfo.xml.in:42
+#: data/pantheon-tweaks.metainfo.xml.in:59
+#: data/pantheon-tweaks.metainfo.xml.in:76
+msgid "Update Japanese translation"
+msgstr "日本語翻訳を更新"
+
+#: data/pantheon-tweaks.metainfo.xml.in:33
 msgid ""
 "Remove AnimationsPane which no longer take effect due to the removal of "
 "tweaking animations functions on Gala side"
@@ -40,7 +80,7 @@ msgstr ""
 "Gala 側のアニメーション調整機能の削除に伴い、設定が反映されなくなったアニメー"
 "ションペインを削除"
 
-#: data/pantheon-tweaks.appdata.xml.in:19
+#: data/pantheon-tweaks.metainfo.xml.in:34
 msgid ""
 "DestinationButton: Show an error dialog when creating/opening the "
 "destination folder being failed"
@@ -48,44 +88,27 @@ msgstr ""
 "保存先ボタン: 保存先を作成したり開いたりできなかった場合、エラーダイアログを"
 "表示するように修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:21
-#: data/pantheon-tweaks.appdata.xml.in:40
-#: data/pantheon-tweaks.appdata.xml.in:56
-msgid "Translation updates:"
-msgstr "翻訳の更新:"
-
-#: data/pantheon-tweaks.appdata.xml.in:23
-#: data/pantheon-tweaks.appdata.xml.in:43
+#: data/pantheon-tweaks.metainfo.xml.in:38
+#: data/pantheon-tweaks.metainfo.xml.in:58
 msgid "Update German translation (thanks to @uwe-ss)"
 msgstr "ドイツ語翻訳を更新 (貢献者: @uwe-ss)"
 
-#: data/pantheon-tweaks.appdata.xml.in:24
+#: data/pantheon-tweaks.metainfo.xml.in:39
 msgid "Update Hungarian translation (thanks to @TomiOhl)"
 msgstr "ハンガリー語翻訳を更新 (貢献者: @TomiOhl)"
 
-#: data/pantheon-tweaks.appdata.xml.in:25
-#: data/pantheon-tweaks.appdata.xml.in:60
-msgid "Update Portuguese translation (thanks to @hugok79)"
-msgstr "ポルトガル語翻訳を更新 (貢献者: @hugok79)"
-
-#: data/pantheon-tweaks.appdata.xml.in:26
-#: data/pantheon-tweaks.appdata.xml.in:42
+#: data/pantheon-tweaks.metainfo.xml.in:41
+#: data/pantheon-tweaks.metainfo.xml.in:57
 msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
 msgstr "簡体字中国語語翻訳を更新 (貢献者: @imgradeone)"
 
-#: data/pantheon-tweaks.appdata.xml.in:27
-#: data/pantheon-tweaks.appdata.xml.in:44
-#: data/pantheon-tweaks.appdata.xml.in:61
-msgid "Update Japanese translation"
-msgstr "日本語翻訳を更新"
-
-#: data/pantheon-tweaks.appdata.xml.in:34
+#: data/pantheon-tweaks.metainfo.xml.in:49
 msgid "FontsPane: Fix icon missing with the latest icons update"
 msgstr ""
 "フォントペイン: 最近のアイコンのアップデートによって、ペインのアイコンが表示"
 "されなくなっていた不具合を修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:35
+#: data/pantheon-tweaks.metainfo.xml.in:50
 msgid ""
 "Make sure dimming feature that is introduced in the latest version of Gala "
 "work for the reset dialog"
@@ -93,65 +116,65 @@ msgstr ""
 "最新バージョンの Gala で導入された親ウィンドウを薄暗くする機能がリセットダイ"
 "アログに対して動作するように修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:36
+#: data/pantheon-tweaks.metainfo.xml.in:51
 msgid "AppearancePane: Sort theme names alphabetically"
 msgstr "外観ペイン: テーマ名をアルファベット順で表示するように修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:37
+#: data/pantheon-tweaks.metainfo.xml.in:52
 msgid "TerminalPane: Support changing tab bar behavior"
 msgstr "ターミナルペイン: タブバーの挙動の変更に対応"
 
-#: data/pantheon-tweaks.appdata.xml.in:38
+#: data/pantheon-tweaks.metainfo.xml.in:53
 msgid "AppearancePane: Add buttons to open the theme locations"
 msgstr "外観ペイン: テーマの保存先を開くボタンを追加"
 
-#: data/pantheon-tweaks.appdata.xml.in:51
+#: data/pantheon-tweaks.metainfo.xml.in:66
 msgid "Sync selected elementary stylesheet variant with Desktop Plug"
 msgstr ""
 "選択された elementary スタイルシートの色がデスクトッププラグの設定と同期する"
 "ように修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:52
+#: data/pantheon-tweaks.metainfo.xml.in:67
 msgid "Improves reliability of restoring visually"
 msgstr "設定をリセットしたことが視覚的わかるように修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:53
+#: data/pantheon-tweaks.metainfo.xml.in:68
 msgid ""
 "Prevent System Settings from crashing due to the removal of preferences in "
 "upstream Videos"
 msgstr ""
 "“ビデオ”での設定項目の削除が原因で“システム設定”がクラッシュする不具合を修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:54
+#: data/pantheon-tweaks.metainfo.xml.in:69
 msgid "Correct cursor and icon theme dir copies"
 msgstr "カーソルとアイコンテーマのディレクトリのテキストを修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:58
+#: data/pantheon-tweaks.metainfo.xml.in:73
 msgid "Update French translation (thanks to @roxfr)"
 msgstr "フランス語翻訳を更新 (貢献者: @roxfr)"
 
-#: data/pantheon-tweaks.appdata.xml.in:59
+#: data/pantheon-tweaks.metainfo.xml.in:74
 msgid "Update Russian translation (thanks to @camellan)"
 msgstr "ロシア語翻訳を更新 (貢献者: @camellan)"
 
-#: data/pantheon-tweaks.appdata.xml.in:68
+#: data/pantheon-tweaks.metainfo.xml.in:83
 msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
 msgstr "テーマの選択肢から Adwaita/gnome/hicolor を除外するように修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:69
+#: data/pantheon-tweaks.metainfo.xml.in:84
 msgid "Support accessing to panes with settings paths"
 msgstr "設定パスを使用してペインにアクセスできる機能を追加"
 
-#: data/pantheon-tweaks.appdata.xml.in:70
+#: data/pantheon-tweaks.metainfo.xml.in:85
 msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
 msgstr "NixOS でプラグが動作するように修正 (貢献者: @bobby285271)"
 
-#: data/pantheon-tweaks.appdata.xml.in:71
-#: data/pantheon-tweaks.appdata.xml.in:85
+#: data/pantheon-tweaks.metainfo.xml.in:86
+#: data/pantheon-tweaks.metainfo.xml.in:100
 msgid "Update translations"
 msgstr "翻訳の更新"
 
-#: data/pantheon-tweaks.appdata.xml.in:77
+#: data/pantheon-tweaks.metainfo.xml.in:92
 msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
@@ -159,31 +182,31 @@ msgstr ""
 "elementary Tweaks から Pantheon Tweaks に名称変更し、以下の新機能と修正が追加"
 "されました:"
 
-#: data/pantheon-tweaks.appdata.xml.in:79
+#: data/pantheon-tweaks.metainfo.xml.in:94
 msgid "Remove preferences now supported in Pantheon officially"
 msgstr "Pantheon に正式に追加された設定項目を削除"
 
-#: data/pantheon-tweaks.appdata.xml.in:80
+#: data/pantheon-tweaks.metainfo.xml.in:95
 msgid "Remove preferences causing the plug crash"
 msgstr "クラッシュを引き起こす設定項目を削除"
 
-#: data/pantheon-tweaks.appdata.xml.in:81
+#: data/pantheon-tweaks.metainfo.xml.in:96
 msgid "Fully redesigned plug"
 msgstr "抜本的なデザイン変更"
 
-#: data/pantheon-tweaks.appdata.xml.in:82
+#: data/pantheon-tweaks.metainfo.xml.in:97
 msgid "Support changing sound theme (thanks to @pongloongyeat)"
 msgstr "サウンドテーマの変更に対応 (貢献者: @pongloongyeat)"
 
-#: data/pantheon-tweaks.appdata.xml.in:83
+#: data/pantheon-tweaks.metainfo.xml.in:98
 msgid "Add new window controls layout"
 msgstr "新しいウィンドウコントロールのレイアウトを追加"
 
-#: data/pantheon-tweaks.appdata.xml.in:84
+#: data/pantheon-tweaks.metainfo.xml.in:99
 msgid "Fix deprecations"
 msgstr "非推奨のコードを修正"
 
-#: data/pantheon-tweaks.appdata.xml.in:92
+#: data/pantheon-tweaks.metainfo.xml.in:107
 msgid "Appearance pane"
 msgstr "“外観”ペイン"
 
@@ -384,47 +407,43 @@ msgstr "サウンドインジケーター"
 msgid "Max volume:"
 msgstr "最大音量:"
 
-#: src/Panes/TerminalPane.vala:28
+#: src/Panes/TerminalPane.vala:26
 msgid "Terminal"
 msgstr "ターミナル"
 
-#: src/Panes/TerminalPane.vala:38
-msgid "Background color:"
-msgstr "背景色:"
-
-#: src/Panes/TerminalPane.vala:44
+#: src/Panes/TerminalPane.vala:36
 msgid "Follow last tab:"
 msgstr "最後のタブに従う:"
 
-#: src/Panes/TerminalPane.vala:47
+#: src/Panes/TerminalPane.vala:39
 msgid "Creating a new tab sets the working directory of the last opened tab."
 msgstr ""
 "新しいタブのカレントディレクトリを、最後に開いたタブのカレントディレクトリに"
 "設定します。"
 
-#: src/Panes/TerminalPane.vala:50
+#: src/Panes/TerminalPane.vala:42
 msgid "Unsafe paste alert:"
 msgstr "安全でないペーストを警告:"
 
-#: src/Panes/TerminalPane.vala:52
+#: src/Panes/TerminalPane.vala:44
 msgid "Show a warning dialog when a pasted command contains 'sudo'."
 msgstr ""
 "貼り付けされたコマンドに 'sudo' というキーワードが含まれている場合に、警告ダ"
 "イアログを表示します。"
 
-#: src/Panes/TerminalPane.vala:54
+#: src/Panes/TerminalPane.vala:46
 msgid "Remember tabs:"
 msgstr "タブを保存:"
 
-#: src/Panes/TerminalPane.vala:56
+#: src/Panes/TerminalPane.vala:48
 msgid "If enabled, last opened tabs are restored on start."
 msgstr "有効にすると、最後に開いたタブが起動時に復元されます。"
 
-#: src/Panes/TerminalPane.vala:58
+#: src/Panes/TerminalPane.vala:50
 msgid "Terminal bell:"
 msgstr "ターミナルの通知音:"
 
-#: src/Panes/TerminalPane.vala:61
+#: src/Panes/TerminalPane.vala:53
 msgid ""
 "Sound when hitting the end of a line and also for tab-completion when there "
 "are either no or multiple possible completions."
@@ -432,19 +451,19 @@ msgstr ""
 "行の最後に到達した場合や、入力補完の候補がない、または1つしかない場合に、音を"
 "鳴らします。"
 
-#: src/Panes/TerminalPane.vala:65
+#: src/Panes/TerminalPane.vala:57
 msgid "Always"
 msgstr "常に表示"
 
-#: src/Panes/TerminalPane.vala:66
+#: src/Panes/TerminalPane.vala:58
 msgid "Hide when single tab"
 msgstr "タブが一つの場合は表示しない"
 
-#: src/Panes/TerminalPane.vala:67
+#: src/Panes/TerminalPane.vala:59
 msgid "Never"
 msgstr "表示しない"
 
-#: src/Panes/TerminalPane.vala:69
+#: src/Panes/TerminalPane.vala:61
 msgid "Show tabs:"
 msgstr "タブを表示:"
 
@@ -511,3 +530,6 @@ msgid ""
 msgstr ""
 "保存先のフォルダーを開こうとしましたが、できませんでした。以下のエラーメッ"
 "セージが役立つ可能性があります:"
+
+#~ msgid "Background color:"
+#~ msgstr "背景色:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-15 20:11+0900\n"
+"POT-Creation-Date: 2023-01-06 22:23+0900\n"
 "PO-Revision-Date: 2021-08-21 10:42+0200\n"
 "Last-Translator: Bartek <blogowanie.xyz@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "X-Launchpad-Export-Date: 2015-01-15 06:10+0000\n"
 "X-Generator: Poedit 3.0\n"
 
-#: data/pantheon-tweaks.appdata.xml.in:5
+#: data/pantheon-tweaks.metainfo.xml.in:5
 msgid "Pantheon Tweaks"
 msgstr "Usprawnienia Pantheon"
 
-#: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:40
+#: data/pantheon-tweaks.metainfo.xml.in:6 src/Tweaks.vala:40
 msgid "Tweak Pantheon settings"
 msgstr "Dostosuj usprawnienia Panteon"
 
-#: data/pantheon-tweaks.appdata.xml.in:8
+#: data/pantheon-tweaks.metainfo.xml.in:8
 msgid ""
 "A system settings panel for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
@@ -34,120 +34,144 @@ msgstr ""
 "Panel ustawień systemowych dla pulpitu Pantheon, który pozwala łatwo i "
 "bezpiecznie dostosować wygląd pulpitu."
 
-#: data/pantheon-tweaks.appdata.xml.in:18
+#: data/pantheon-tweaks.metainfo.xml.in:18
+msgid ""
+"TerminalPane: Remove background color preference which no longer take effect "
+"due to changes on Terminal side"
+msgstr ""
+
+#: data/pantheon-tweaks.metainfo.xml.in:20
+#: data/pantheon-tweaks.metainfo.xml.in:36
+#: data/pantheon-tweaks.metainfo.xml.in:55
+#: data/pantheon-tweaks.metainfo.xml.in:71
+msgid "Translation updates:"
+msgstr ""
+
+#: data/pantheon-tweaks.metainfo.xml.in:22
+#: data/pantheon-tweaks.metainfo.xml.in:40
+#: data/pantheon-tweaks.metainfo.xml.in:75
+msgid "Update Portuguese translation (thanks to @hugok79)"
+msgstr ""
+
+#: data/pantheon-tweaks.metainfo.xml.in:23
+#, fuzzy
+msgid "Update German translation (thanks to @skalski)"
+msgstr "Aktualizowanie tłumaczeń"
+
+#: data/pantheon-tweaks.metainfo.xml.in:24
+#, fuzzy
+msgid "Update Italian translation (thanks to @albanobattistella)"
+msgstr "Aktualizowanie tłumaczeń"
+
+#: data/pantheon-tweaks.metainfo.xml.in:25
+#, fuzzy
+msgid "Update Russian translation (thanks to @lenemter)"
+msgstr "Aktualizowanie tłumaczeń"
+
+#: data/pantheon-tweaks.metainfo.xml.in:26
+#: data/pantheon-tweaks.metainfo.xml.in:42
+#: data/pantheon-tweaks.metainfo.xml.in:59
+#: data/pantheon-tweaks.metainfo.xml.in:76
+#, fuzzy
+msgid "Update Japanese translation"
+msgstr "Aktualizowanie tłumaczeń"
+
+#: data/pantheon-tweaks.metainfo.xml.in:33
 msgid ""
 "Remove AnimationsPane which no longer take effect due to the removal of "
 "tweaking animations functions on Gala side"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:19
+#: data/pantheon-tweaks.metainfo.xml.in:34
 msgid ""
 "DestinationButton: Show an error dialog when creating/opening the "
 "destination folder being failed"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:21
-#: data/pantheon-tweaks.appdata.xml.in:40
-#: data/pantheon-tweaks.appdata.xml.in:56
-msgid "Translation updates:"
-msgstr ""
-
-#: data/pantheon-tweaks.appdata.xml.in:23
-#: data/pantheon-tweaks.appdata.xml.in:43
+#: data/pantheon-tweaks.metainfo.xml.in:38
+#: data/pantheon-tweaks.metainfo.xml.in:58
 #, fuzzy
 msgid "Update German translation (thanks to @uwe-ss)"
 msgstr "Aktualizowanie tłumaczeń"
 
-#: data/pantheon-tweaks.appdata.xml.in:24
+#: data/pantheon-tweaks.metainfo.xml.in:39
 #, fuzzy
 msgid "Update Hungarian translation (thanks to @TomiOhl)"
 msgstr "Aktualizowanie tłumaczeń"
 
-#: data/pantheon-tweaks.appdata.xml.in:25
-#: data/pantheon-tweaks.appdata.xml.in:60
-msgid "Update Portuguese translation (thanks to @hugok79)"
-msgstr ""
-
-#: data/pantheon-tweaks.appdata.xml.in:26
-#: data/pantheon-tweaks.appdata.xml.in:42
+#: data/pantheon-tweaks.metainfo.xml.in:41
+#: data/pantheon-tweaks.metainfo.xml.in:57
 #, fuzzy
 msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
 msgstr "Aktualizowanie tłumaczeń"
 
-#: data/pantheon-tweaks.appdata.xml.in:27
-#: data/pantheon-tweaks.appdata.xml.in:44
-#: data/pantheon-tweaks.appdata.xml.in:61
-#, fuzzy
-msgid "Update Japanese translation"
-msgstr "Aktualizowanie tłumaczeń"
-
-#: data/pantheon-tweaks.appdata.xml.in:34
+#: data/pantheon-tweaks.metainfo.xml.in:49
 msgid "FontsPane: Fix icon missing with the latest icons update"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:35
+#: data/pantheon-tweaks.metainfo.xml.in:50
 msgid ""
 "Make sure dimming feature that is introduced in the latest version of Gala "
 "work for the reset dialog"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:36
+#: data/pantheon-tweaks.metainfo.xml.in:51
 msgid "AppearancePane: Sort theme names alphabetically"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:37
+#: data/pantheon-tweaks.metainfo.xml.in:52
 msgid "TerminalPane: Support changing tab bar behavior"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:38
+#: data/pantheon-tweaks.metainfo.xml.in:53
 msgid "AppearancePane: Add buttons to open the theme locations"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:51
+#: data/pantheon-tweaks.metainfo.xml.in:66
 msgid "Sync selected elementary stylesheet variant with Desktop Plug"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:52
+#: data/pantheon-tweaks.metainfo.xml.in:67
 msgid "Improves reliability of restoring visually"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:53
+#: data/pantheon-tweaks.metainfo.xml.in:68
 msgid ""
 "Prevent System Settings from crashing due to the removal of preferences in "
 "upstream Videos"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:54
+#: data/pantheon-tweaks.metainfo.xml.in:69
 msgid "Correct cursor and icon theme dir copies"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:58
+#: data/pantheon-tweaks.metainfo.xml.in:73
 #, fuzzy
 msgid "Update French translation (thanks to @roxfr)"
 msgstr "Aktualizowanie tłumaczeń"
 
-#: data/pantheon-tweaks.appdata.xml.in:59
+#: data/pantheon-tweaks.metainfo.xml.in:74
 msgid "Update Russian translation (thanks to @camellan)"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:68
+#: data/pantheon-tweaks.metainfo.xml.in:83
 msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:69
+#: data/pantheon-tweaks.metainfo.xml.in:84
 msgid "Support accessing to panes with settings paths"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:70
+#: data/pantheon-tweaks.metainfo.xml.in:85
 msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
 msgstr ""
 
-#: data/pantheon-tweaks.appdata.xml.in:71
-#: data/pantheon-tweaks.appdata.xml.in:85
+#: data/pantheon-tweaks.metainfo.xml.in:86
+#: data/pantheon-tweaks.metainfo.xml.in:100
 msgid "Update translations"
 msgstr "Aktualizowanie tłumaczeń"
 
-#: data/pantheon-tweaks.appdata.xml.in:77
+#: data/pantheon-tweaks.metainfo.xml.in:92
 msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
@@ -155,31 +179,31 @@ msgstr ""
 "elementary Tweaks jest teraz przemianowany na Pantheon Tweaks i zyskuje nowe "
 "funkcje i poprawki:"
 
-#: data/pantheon-tweaks.appdata.xml.in:79
+#: data/pantheon-tweaks.metainfo.xml.in:94
 msgid "Remove preferences now supported in Pantheon officially"
 msgstr "Usunięto preferencje, które teraz oficjalnie są obsługiwane w Pantheon"
 
-#: data/pantheon-tweaks.appdata.xml.in:80
+#: data/pantheon-tweaks.metainfo.xml.in:95
 msgid "Remove preferences causing the plug crash"
 msgstr "Usunięto preferencje powodujące awarię wtyczki"
 
-#: data/pantheon-tweaks.appdata.xml.in:81
+#: data/pantheon-tweaks.metainfo.xml.in:96
 msgid "Fully redesigned plug"
 msgstr "Całkowicie przeprojektowana wtyczka"
 
-#: data/pantheon-tweaks.appdata.xml.in:82
+#: data/pantheon-tweaks.metainfo.xml.in:97
 msgid "Support changing sound theme (thanks to @pongloongyeat)"
 msgstr "Obsługa zmiany motywu dźwięku (dzięki @pongloongyeat)"
 
-#: data/pantheon-tweaks.appdata.xml.in:83
+#: data/pantheon-tweaks.metainfo.xml.in:98
 msgid "Add new window controls layout"
 msgstr "Dodano nowy układ kontrolek okna"
 
-#: data/pantheon-tweaks.appdata.xml.in:84
+#: data/pantheon-tweaks.metainfo.xml.in:99
 msgid "Fix deprecations"
 msgstr "Naprawa przestarzałych funkcji"
 
-#: data/pantheon-tweaks.appdata.xml.in:92
+#: data/pantheon-tweaks.metainfo.xml.in:107
 msgid "Appearance pane"
 msgstr "Wygląd"
 
@@ -380,48 +404,44 @@ msgstr "Wskaźnik dźwięku"
 msgid "Max volume:"
 msgstr "Maksymalna głośność:"
 
-#: src/Panes/TerminalPane.vala:28
+#: src/Panes/TerminalPane.vala:26
 msgid "Terminal"
 msgstr "Terminal"
 
-#: src/Panes/TerminalPane.vala:38
-msgid "Background color:"
-msgstr "Kolor tła:"
-
-#: src/Panes/TerminalPane.vala:44
+#: src/Panes/TerminalPane.vala:36
 msgid "Follow last tab:"
 msgstr "Podążaj za ostatnią kartą:"
 
-#: src/Panes/TerminalPane.vala:47
+#: src/Panes/TerminalPane.vala:39
 msgid "Creating a new tab sets the working directory of the last opened tab."
 msgstr ""
 "Utworzenie nowej karty powoduje ustawienie katalogu roboczego ostatnio "
 "otwartej karty."
 
-#: src/Panes/TerminalPane.vala:50
+#: src/Panes/TerminalPane.vala:42
 msgid "Unsafe paste alert:"
 msgstr "Alert niebezpiecznego wklejania:"
 
-#: src/Panes/TerminalPane.vala:52
+#: src/Panes/TerminalPane.vala:44
 msgid "Show a warning dialog when a pasted command contains 'sudo'."
 msgstr ""
 "Pokaż okno dialogowe z ostrzeżeniem, gdy wklejone polecenie zawiera \"sudo\"."
 
-#: src/Panes/TerminalPane.vala:54
+#: src/Panes/TerminalPane.vala:46
 msgid "Remember tabs:"
 msgstr "Zapamiętaj karty:"
 
-#: src/Panes/TerminalPane.vala:56
+#: src/Panes/TerminalPane.vala:48
 msgid "If enabled, last opened tabs are restored on start."
 msgstr ""
 "Jeśli ta opcja jest włączona, ostatnio otwarte karty są przywracane podczas "
 "uruchamiania."
 
-#: src/Panes/TerminalPane.vala:58
+#: src/Panes/TerminalPane.vala:50
 msgid "Terminal bell:"
 msgstr "Dzwonek terminala:"
 
-#: src/Panes/TerminalPane.vala:61
+#: src/Panes/TerminalPane.vala:53
 msgid ""
 "Sound when hitting the end of a line and also for tab-completion when there "
 "are either no or multiple possible completions."
@@ -429,19 +449,19 @@ msgstr ""
 "Dźwięk po najechaniu na koniec linii, a także przy uzupełnianiu tabulacji, "
 "gdy nie ma żadnych lub jest wiele możliwych uzupełnień."
 
-#: src/Panes/TerminalPane.vala:65
+#: src/Panes/TerminalPane.vala:57
 msgid "Always"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:66
+#: src/Panes/TerminalPane.vala:58
 msgid "Hide when single tab"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:67
+#: src/Panes/TerminalPane.vala:59
 msgid "Never"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:69
+#: src/Panes/TerminalPane.vala:61
 #, fuzzy
 msgid "Show tabs:"
 msgstr "Przywróć karty:"
@@ -503,6 +523,9 @@ msgid ""
 "Tried to open the destination folder but failed. The following error message "
 "might be helpful:"
 msgstr ""
+
+#~ msgid "Background color:"
+#~ msgstr "Kolor tła:"
 
 #~ msgid "Animations"
 #~ msgstr "Animacje"

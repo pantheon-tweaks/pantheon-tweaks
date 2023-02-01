@@ -2,13 +2,14 @@ Source: pantheon-tweaks
 Section: x11
 Priority: optional
 Maintainer: Felipe Escoto. <felescoto95@hotmail.com>
-Build-Depends: debhelper (>= 10.5.1),
+Build-Depends: appstream,
+               debhelper (>= 10.5.1),
                libgranite-dev (>= 6.0.0),
                libgtk-3-dev (>= 3.10),
                libglib2.0-dev,
                libgee-0.8-dev,
                libswitchboard-2.0-dev,
-               meson,
+               meson (>= 0.51.0),
                valac (>= 0.30)
 Standards-Version: 4.5.0
 Homepage: https://github.com/pantheon-tweaks/pantheon-tweaks

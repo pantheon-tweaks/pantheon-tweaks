@@ -1,4 +1,4 @@
-data/pantheon-tweaks.appdata.xml.in
+data/pantheon-tweaks.metainfo.xml.in
 src/Panes/AppearancePane.vala
 src/Panes/FilesPane.vala
 src/Panes/FontsPane.vala

@@ -2,14 +2,14 @@
 # Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the pantheon-tweaks-plug package.
 # Andrey Kultyapov <camellan@yandex.ru>, 2021.
-# lenemter <lenemter@gmail.com>, 2022.
+# lenemter <lenemter@gmail.com>, 2022-2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-tweaks-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-13 19:31+0900\n"
-"PO-Revision-Date: 2022-11-13 19:30+0900\n"
+"POT-Creation-Date: 2023-01-18 19:39+0900\n"
+"PO-Revision-Date: 2023-01-18 19:37+0900\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "Language: ru\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: data/pantheon-tweaks.appdata.xml.in:5
+#: data/pantheon-tweaks.metainfo.xml.in:5
 msgid "Pantheon Tweaks"
 msgstr "Pantheon Tweaks"
 
-#: data/pantheon-tweaks.appdata.xml.in:6 src/Tweaks.vala:40
+#: data/pantheon-tweaks.metainfo.xml.in:6 src/Tweaks.vala:40
 msgid "Tweak Pantheon settings"
 msgstr "Тонкая настройка elementary OS"
 
-#: data/pantheon-tweaks.appdata.xml.in:8
+#: data/pantheon-tweaks.metainfo.xml.in:8
 msgid ""
 "A system settings panel for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
@@ -35,15 +35,55 @@ msgstr ""
 "Панель параметров для Pantheon, которая позволяет вам просто и безопасно "
 "кастомизировать ваш рабочий стол."
 
-#: data/pantheon-tweaks.appdata.xml.in:18
+#: data/pantheon-tweaks.metainfo.xml.in:18
+msgid ""
+"TerminalPane: Remove background color preference which no longer take effect "
+"due to changes on Terminal side"
+msgstr ""
+"TerminalPane: Удалён нерабочий параметр цветовой схемы, из-за изменений в "
+"Терминале"
+
+#: data/pantheon-tweaks.metainfo.xml.in:20
+#: data/pantheon-tweaks.metainfo.xml.in:36
+#: data/pantheon-tweaks.metainfo.xml.in:55
+#: data/pantheon-tweaks.metainfo.xml.in:71
+msgid "Translation updates:"
+msgstr "Обновления переводов:"
+
+#: data/pantheon-tweaks.metainfo.xml.in:22
+#: data/pantheon-tweaks.metainfo.xml.in:40
+#: data/pantheon-tweaks.metainfo.xml.in:75
+msgid "Update Portuguese translation (thanks to @hugok79)"
+msgstr "Обновлён португальский перевод (спасибо @hugok79)"
+
+#: data/pantheon-tweaks.metainfo.xml.in:23
+msgid "Update German translation (thanks to @skalski)"
+msgstr "Обновлён немецкий перевод (спасибо @skalski)"
+
+#: data/pantheon-tweaks.metainfo.xml.in:24
+msgid "Update Italian translation (thanks to @albanobattistella)"
+msgstr "Обновлён итальянский перевод (спасибо @albanobattistella)"
+
+#: data/pantheon-tweaks.metainfo.xml.in:25
+msgid "Update Russian translation (thanks to @lenemter)"
+msgstr "Обновлён русский перевод (спасибо @lenemter)"
+
+#: data/pantheon-tweaks.metainfo.xml.in:26
+#: data/pantheon-tweaks.metainfo.xml.in:42
+#: data/pantheon-tweaks.metainfo.xml.in:59
+#: data/pantheon-tweaks.metainfo.xml.in:76
+msgid "Update Japanese translation"
+msgstr "Обновлён японский перевод"
+
+#: data/pantheon-tweaks.metainfo.xml.in:33
 msgid ""
 "Remove AnimationsPane which no longer take effect due to the removal of "
 "tweaking animations functions on Gala side"
 msgstr ""
-"Убраны настройки анимаций, так как она больше не работала из-за того, что из "
+"Убраны настройки анимаций, так как они больше не работали из-за того, что из "
 "Gala были удалены настройки анимаций"
 
-#: data/pantheon-tweaks.appdata.xml.in:19
+#: data/pantheon-tweaks.metainfo.xml.in:34
 msgid ""
 "DestinationButton: Show an error dialog when creating/opening the "
 "destination folder being failed"
@@ -51,105 +91,88 @@ msgstr ""
 "DestinationButton: Отображение диалога с ошибкой при ошибке создания/"
 "открытия папки назначения"
 
-#: data/pantheon-tweaks.appdata.xml.in:21
-#: data/pantheon-tweaks.appdata.xml.in:40
-#: data/pantheon-tweaks.appdata.xml.in:56
-msgid "Translation updates:"
-msgstr "Обновления переводов:"
-
-#: data/pantheon-tweaks.appdata.xml.in:23
-#: data/pantheon-tweaks.appdata.xml.in:43
+#: data/pantheon-tweaks.metainfo.xml.in:38
+#: data/pantheon-tweaks.metainfo.xml.in:58
 msgid "Update German translation (thanks to @uwe-ss)"
 msgstr "Обновлён немецкий перевод (спасибо @uwe-ss)"
 
-#: data/pantheon-tweaks.appdata.xml.in:24
+#: data/pantheon-tweaks.metainfo.xml.in:39
 msgid "Update Hungarian translation (thanks to @TomiOhl)"
 msgstr "Обновлён венгерский перевод (спасибо @TomiOhl)"
 
-#: data/pantheon-tweaks.appdata.xml.in:25
-#: data/pantheon-tweaks.appdata.xml.in:60
-msgid "Update Portuguese translation (thanks to @hugok79)"
-msgstr "Обновлён португальский перевод (спасибо @hugok79)"
-
-#: data/pantheon-tweaks.appdata.xml.in:26
-#: data/pantheon-tweaks.appdata.xml.in:42
+#: data/pantheon-tweaks.metainfo.xml.in:41
+#: data/pantheon-tweaks.metainfo.xml.in:57
 msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
 msgstr "Обновлён перевод на упрощённый китайский язык (спасибо @imgradeone)"
 
-#: data/pantheon-tweaks.appdata.xml.in:27
-#: data/pantheon-tweaks.appdata.xml.in:44
-#: data/pantheon-tweaks.appdata.xml.in:61
-msgid "Update Japanese translation"
-msgstr "Обновлён японский первод"
-
-#: data/pantheon-tweaks.appdata.xml.in:34
+#: data/pantheon-tweaks.metainfo.xml.in:49
 msgid "FontsPane: Fix icon missing with the latest icons update"
 msgstr ""
 "FontsPane: Исправлена отсутствовавшая иконка с последним обновлением иконок"
 
-#: data/pantheon-tweaks.appdata.xml.in:35
+#: data/pantheon-tweaks.metainfo.xml.in:50
 msgid ""
 "Make sure dimming feature that is introduced in the latest version of Gala "
 "work for the reset dialog"
 msgstr "Исправлено затемнение в последней версии Gala для диалога сброса"
 
-#: data/pantheon-tweaks.appdata.xml.in:36
+#: data/pantheon-tweaks.metainfo.xml.in:51
 msgid "AppearancePane: Sort theme names alphabetically"
 msgstr "AppearancePane: Сортировать названия тем по алфавиту"
 
-#: data/pantheon-tweaks.appdata.xml.in:37
+#: data/pantheon-tweaks.metainfo.xml.in:52
 msgid "TerminalPane: Support changing tab bar behavior"
 msgstr "TerminalPane: Поддержка изменения поведения вкладок"
 
-#: data/pantheon-tweaks.appdata.xml.in:38
+#: data/pantheon-tweaks.metainfo.xml.in:53
 msgid "AppearancePane: Add buttons to open the theme locations"
 msgstr "AppearancePane: Добавлены кнопки для открытия папки с темами"
 
-#: data/pantheon-tweaks.appdata.xml.in:51
+#: data/pantheon-tweaks.metainfo.xml.in:66
 msgid "Sync selected elementary stylesheet variant with Desktop Plug"
 msgstr "Синхронизация выбранной темы elementary с настройками рабочего стола"
 
-#: data/pantheon-tweaks.appdata.xml.in:52
+#: data/pantheon-tweaks.metainfo.xml.in:67
 msgid "Improves reliability of restoring visually"
 msgstr "Улучшена надёжность восстановления визуально"
 
-#: data/pantheon-tweaks.appdata.xml.in:53
+#: data/pantheon-tweaks.metainfo.xml.in:68
 msgid ""
 "Prevent System Settings from crashing due to the removal of preferences in "
 "upstream Videos"
 msgstr ""
 "Исправлено падение Параметров системы из-за удаления параметров в Видео"
 
-#: data/pantheon-tweaks.appdata.xml.in:54
+#: data/pantheon-tweaks.metainfo.xml.in:69
 msgid "Correct cursor and icon theme dir copies"
 msgstr "Исправлены копии курсора и темы иконок"
 
-#: data/pantheon-tweaks.appdata.xml.in:58
+#: data/pantheon-tweaks.metainfo.xml.in:73
 msgid "Update French translation (thanks to @roxfr)"
 msgstr "Обновлён французский перевод (спасибо @roxfr)"
 
-#: data/pantheon-tweaks.appdata.xml.in:59
+#: data/pantheon-tweaks.metainfo.xml.in:74
 msgid "Update Russian translation (thanks to @camellan)"
 msgstr "Обновлён русский перевод (спасибо @camellan)"
 
-#: data/pantheon-tweaks.appdata.xml.in:68
+#: data/pantheon-tweaks.metainfo.xml.in:83
 msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
 msgstr "Исключены темы Adwaita/gnome/hicolor из списка тем"
 
-#: data/pantheon-tweaks.appdata.xml.in:69
+#: data/pantheon-tweaks.metainfo.xml.in:84
 msgid "Support accessing to panes with settings paths"
 msgstr "Поддержка доступа к панелям через путь"
 
-#: data/pantheon-tweaks.appdata.xml.in:70
+#: data/pantheon-tweaks.metainfo.xml.in:85
 msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
 msgstr "Исправлена работа на NixOS (спасибо @bobby285271)"
 
-#: data/pantheon-tweaks.appdata.xml.in:71
-#: data/pantheon-tweaks.appdata.xml.in:85
+#: data/pantheon-tweaks.metainfo.xml.in:86
+#: data/pantheon-tweaks.metainfo.xml.in:100
 msgid "Update translations"
 msgstr "Обновлены переводы"
 
-#: data/pantheon-tweaks.appdata.xml.in:77
+#: data/pantheon-tweaks.metainfo.xml.in:92
 msgid ""
 "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
 "features and fixes:"
@@ -157,31 +180,31 @@ msgstr ""
 "elementary Tweaks были переименованы в Pantheon Tweaks и получили немного "
 "новых функций и исправлений:"
 
-#: data/pantheon-tweaks.appdata.xml.in:79
+#: data/pantheon-tweaks.metainfo.xml.in:94
 msgid "Remove preferences now supported in Pantheon officially"
 msgstr "Убраны настройки, которые теперь официально поддерживаются в Pantheon"
 
-#: data/pantheon-tweaks.appdata.xml.in:80
+#: data/pantheon-tweaks.metainfo.xml.in:95
 msgid "Remove preferences causing the plug crash"
 msgstr "Убраны настройки, из-за которых параметры падали"
 
-#: data/pantheon-tweaks.appdata.xml.in:81
+#: data/pantheon-tweaks.metainfo.xml.in:96
 msgid "Fully redesigned plug"
 msgstr "Параметры были полностью переработаны"
 
-#: data/pantheon-tweaks.appdata.xml.in:82
+#: data/pantheon-tweaks.metainfo.xml.in:97
 msgid "Support changing sound theme (thanks to @pongloongyeat)"
 msgstr "Поддержка выбора звуковой темы (спасибо @pongloongyeat)"
 
-#: data/pantheon-tweaks.appdata.xml.in:83
+#: data/pantheon-tweaks.metainfo.xml.in:98
 msgid "Add new window controls layout"
 msgstr "Добавлены новые раскладки кнопок управления окнами"
 
-#: data/pantheon-tweaks.appdata.xml.in:84
+#: data/pantheon-tweaks.metainfo.xml.in:99
 msgid "Fix deprecations"
 msgstr "Исправлены устаревания"
 
-#: data/pantheon-tweaks.appdata.xml.in:92
+#: data/pantheon-tweaks.metainfo.xml.in:107
 msgid "Appearance pane"
 msgstr "Панель внешнего вида"
 
@@ -300,7 +323,7 @@ msgstr "Добавить «Свернуть» слева"
 
 #: src/Panes/AppearancePane.vala:239
 msgid "Add Minimize Right"
-msgstr "«Добавить Свернуть» справа"
+msgstr "Добавить «Свернуть» справа"
 
 #: src/Panes/AppearancePane.vala:240
 msgid "Replace Maximize to Minimize"
@@ -382,46 +405,42 @@ msgstr "Индикатор звука"
 msgid "Max volume:"
 msgstr "Максимальная громкость:"
 
-#: src/Panes/TerminalPane.vala:28
+#: src/Panes/TerminalPane.vala:26
 msgid "Terminal"
 msgstr "Терминал"
 
-#: src/Panes/TerminalPane.vala:38
-msgid "Background color:"
-msgstr "Цвет фона:"
-
-#: src/Panes/TerminalPane.vala:44
+#: src/Panes/TerminalPane.vala:36
 msgid "Follow last tab:"
-msgstr "Придеживаться последней вкладки:"
+msgstr "Придерживаться последней вкладки:"
 
-#: src/Panes/TerminalPane.vala:47
+#: src/Panes/TerminalPane.vala:39
 msgid "Creating a new tab sets the working directory of the last opened tab."
 msgstr ""
 "При создании новой вкладки устанавливается рабочий каталог последней "
 "открытой вкладки."
 
-#: src/Panes/TerminalPane.vala:50
+#: src/Panes/TerminalPane.vala:42
 msgid "Unsafe paste alert:"
 msgstr "Предупреждение о небезопасной вставке:"
 
-#: src/Panes/TerminalPane.vala:52
+#: src/Panes/TerminalPane.vala:44
 msgid "Show a warning dialog when a pasted command contains 'sudo'."
 msgstr "Показывать предупреждение, когда вставленная команда содержит «sudo»."
 
-#: src/Panes/TerminalPane.vala:54
+#: src/Panes/TerminalPane.vala:46
 msgid "Remember tabs:"
 msgstr "Запоминать вкладки:"
 
-#: src/Panes/TerminalPane.vala:56
+#: src/Panes/TerminalPane.vala:48
 msgid "If enabled, last opened tabs are restored on start."
 msgstr ""
 "Если включено, при запуске восстанавливаются последние открытые вкладки."
 
-#: src/Panes/TerminalPane.vala:58
+#: src/Panes/TerminalPane.vala:50
 msgid "Terminal bell:"
 msgstr "Звуковое уведомление:"
 
-#: src/Panes/TerminalPane.vala:61
+#: src/Panes/TerminalPane.vala:53
 msgid ""
 "Sound when hitting the end of a line and also for tab-completion when there "
 "are either no or multiple possible completions."
@@ -429,19 +448,19 @@ msgstr ""
 "Звук при попадании в конец строки, а также для предложений на Tab, когда нет "
 "или есть несколько предложений."
 
-#: src/Panes/TerminalPane.vala:65
+#: src/Panes/TerminalPane.vala:57
 msgid "Always"
 msgstr "Всегда"
 
-#: src/Panes/TerminalPane.vala:66
+#: src/Panes/TerminalPane.vala:58
 msgid "Hide when single tab"
 msgstr "Прятать при одной вкладке"
 
-#: src/Panes/TerminalPane.vala:67
+#: src/Panes/TerminalPane.vala:59
 msgid "Never"
 msgstr "Никогда"
 
-#: src/Panes/TerminalPane.vala:69
+#: src/Panes/TerminalPane.vala:61
 msgid "Show tabs:"
 msgstr "Показывать вкладки:"
 
