@@ -1,3 +1,10 @@
+pantheon-tweaks (1.1.0) jammy; urgency=medium
+
+  * TerminalPane: Remove background color preference which no longer take effect due to changes on Terminal side
+  * Update translations
+
+ -- Ryo Nakano <ryonakaknock3@gmail.com>  Wed, 01 Feb 2023 21:55:11 +0900
+
 pantheon-tweaks (1.0.4) focal; urgency=low
 
   * Remove AnimationsPane which no longer take effect due to the removal of tweaking animations functions on Gala side
