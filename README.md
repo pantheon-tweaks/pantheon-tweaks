@@ -1,11 +1,22 @@
 # Pantheon Tweaks
 A system settings panel for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance.
 
-Pantheon Tweaks is currently only supported on elementary OS **Odin**. For users on elementary OS **Hera** or below, please instead use [elementary Tweaks](https://github.com/elementary-tweaks/elementary-tweaks).
-
 ![sample](data/screenshot.png)
 
 ## Installation
+Pantheon Tweaks supports the following versions of elementary OS:
+
+  elementary OS Version | Supported?      |
+  --------------------- | --------------- |
+  0.4 Loki              | ❌
+  5 Juno                | ❌
+  5.1 Hera              | ❌
+  6 Odin                | ✅
+  6.1 Jólnir            | ✅
+  7.0 Horus             | ✅
+
+For users on elementary OS Hera or below, please use [elementary Tweaks](https://github.com/elementary-tweaks/elementary-tweaks) instead.
+
 ### For Users
 If you have never added a PPA on your system before, you might need to run this command first:
 
