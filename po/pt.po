@@ -1,14 +1,14 @@
 # Portuguese translation for pantheon-tweaks-plug
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the pantheon-tweaks-plug package.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021, 2022.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-06 22:23+0900\n"
-"PO-Revision-Date: 2022-05-24 14:45+0100\n"
+"PO-Revision-Date: 2023-03-27 16:02+0100\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "Language: pt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Launchpad-Export-Date: 2014-08-30 08:41+0000\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: data/pantheon-tweaks.metainfo.xml.in:5
 msgid "Pantheon Tweaks"
@@ -41,6 +41,8 @@ msgid ""
 "TerminalPane: Remove background color preference which no longer take effect "
 "due to changes on Terminal side"
 msgstr ""
+"Painel do Terminal: Remove a preferência de cor de fundo que não tem mais "
+"efeito devido a alterações no lado do Terminal"
 
 #: data/pantheon-tweaks.metainfo.xml.in:20
 #: data/pantheon-tweaks.metainfo.xml.in:36
@@ -56,19 +58,16 @@ msgid "Update Portuguese translation (thanks to @hugok79)"
 msgstr "Tradução do Português atualizada (obrigado a @hugok79)"
 
 #: data/pantheon-tweaks.metainfo.xml.in:23
-#, fuzzy
 msgid "Update German translation (thanks to @skalski)"
-msgstr "Tradução do Alemão atualizada (obrigado a @uwe-ss)"
+msgstr "Tradução do Alemão atualizada (obrigado a @skalski)"
 
 #: data/pantheon-tweaks.metainfo.xml.in:24
-#, fuzzy
 msgid "Update Italian translation (thanks to @albanobattistella)"
-msgstr "Tradução do Russo atualizada (obrigado a @camellan)"
+msgstr "Tradução do Italiano atualizada (obrigado a @albanobattistella)"
 
 #: data/pantheon-tweaks.metainfo.xml.in:25
-#, fuzzy
 msgid "Update Russian translation (thanks to @lenemter)"
-msgstr "Tradução do Russo atualizada (obrigado a @camellan)"
+msgstr "Tradução do Russo atualizada (obrigado a @lenemter)"
 
 #: data/pantheon-tweaks.metainfo.xml.in:26
 #: data/pantheon-tweaks.metainfo.xml.in:42
