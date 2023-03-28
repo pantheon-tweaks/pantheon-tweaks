@@ -1,7 +1,7 @@
 # Portuguese translation for pantheon-tweaks-plug
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the pantheon-tweaks-plug package.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021, 2022, 2023.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021-2023.
 #
 msgid ""
 msgstr ""
