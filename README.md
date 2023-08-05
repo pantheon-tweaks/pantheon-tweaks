@@ -38,10 +38,9 @@ If you would contribute to the project and want to install Pantheon Tweaks from 
 
 ```
 sudo apt install -y elementary-sdk libswitchboard-3-dev
-meson build --prefix=/usr
-cd build
-ninja
-ninja install
+meson setup builddir --prefix=/usr
+ninja -C builddir
+ninja install -C builddir
 ```
 
 Open System Settings and there should be a new Plug named "Tweaks".
