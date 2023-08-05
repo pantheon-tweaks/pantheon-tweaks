@@ -12,6 +12,7 @@ public class PantheonTweaks.Categories : Gtk.Paned {
         panes = new Gee.ArrayList<Categories.Pane> ();
         panes.add (new Panes.AppearancePane ());
         panes.add (new Panes.FontsPane ());
+        panes.add (new Panes.KeyboardPane ());
         panes.add (new Panes.MiscPane ());
         panes.add (new Panes.FilesPane ());
         panes.add (new Panes.TerminalPane ());

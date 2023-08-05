@@ -37,6 +37,7 @@ plug_files = files(
     'src/Settings/XSettings.vala',
     'src/Panes/AppearancePane.vala',
     'src/Panes/FontsPane.vala',
+    'src/Panes/KeyboardPane.vala',
     'src/Panes/MiscPane.vala',
     'src/Panes/FilesPane.vala',
     'src/Panes/TerminalPane.vala',
