@@ -5,19 +5,15 @@
  */
 
 public class PantheonTweaks.Categories : Gtk.Paned {
-    private const string[] PANE_NAME = { "appearance", "fonts", "misc", "files", "terminal" };
-
+    private Gee.ArrayList<Categories.Pane> panes;
     private Gtk.ListBox pane_list;
 
     construct {
-        var appearance_pane = new Panes.AppearancePane ();
-        var files_pane = new Panes.FilesPane ();
-
-        var panes = new Gee.ArrayList<Categories.Pane> ();
-        panes.add (appearance_pane);
+        panes = new Gee.ArrayList<Categories.Pane> ();
+        panes.add (new Panes.AppearancePane ());
         panes.add (new Panes.FontsPane ());
         panes.add (new Panes.MiscPane ());
-        panes.add (files_pane);
+        panes.add (new Panes.FilesPane ());
         panes.add (new Panes.TerminalPane ());
 
         // Left: Add PaneListItems to PaneList
@@ -52,23 +48,28 @@ public class PantheonTweaks.Categories : Gtk.Paned {
         pane_list.set_header_func ((row, before) => {
             var list_item = ((Categories.Pane.PaneListItem) row);
 
-            if (list_item.pane == appearance_pane) {
-                list_item.set_header (new Granite.HeaderLabel (_("General")));
-            } else if (list_item.pane == files_pane) {
-                list_item.set_header (new Granite.HeaderLabel (_("Applications")));
+            switch (list_item.pane.name) {
+                case "appearance":
+                    list_item.set_header (new Granite.HeaderLabel (_("General")));
+                    break;
+                case "files":
+                    list_item.set_header (new Granite.HeaderLabel (_("Applications")));
+                    break;
+                default:
+                    break;
             }
         });
     }
 
     public void set_visible_view (string location) {
-        int index;
-        for (index = 0; index < PANE_NAME.length; index++) {
-            if (PANE_NAME[index] == location) {
-                break;
+        panes.foreach ((pane) => {
+            if (pane.name == location) {
+                pane_list.select_row (pane.pane_list_item);
+                return false;
             }
-        }
 
-        pane_list.select_row (pane_list.get_row_at_index (index));
+            return true;
+        });
     }
 
     public abstract class Pane : Granite.SimpleSettingsPage {
@@ -78,8 +79,9 @@ public class PantheonTweaks.Categories : Gtk.Paned {
 
         public PaneListItem pane_list_item { get; private set; }
 
-        protected Pane (string title, string icon_name, string? description = null) {
+        protected Pane (string name, string title, string icon_name, string? description = null) {
             Object (
+                name: name,
                 title: title,
                 icon_name: icon_name,
                 description: description
