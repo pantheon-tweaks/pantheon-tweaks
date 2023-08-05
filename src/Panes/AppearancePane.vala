@@ -19,7 +19,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
     public AppearancePane () {
         base (
-            _("Appearance"), "applications-graphics",
+            "appearance", _("Appearance"), "applications-graphics",
             _("Change the theme and button layout of windows. Changing theme may cause visibility issue.")
         );
     }

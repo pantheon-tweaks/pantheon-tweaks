@@ -10,7 +10,7 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
     private GLib.Settings settings;
 
     public TerminalPane () {
-        base (_("Terminal"), "utilities-terminal");
+        base ("terminal", _("Terminal"), "utilities-terminal");
     }
 
     construct {
