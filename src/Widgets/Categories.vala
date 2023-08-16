@@ -290,7 +290,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
             return label;
         }
 
-        private Gtk.FontButton font_button_new () {
+        protected Gtk.FontButton font_button_new () {
             var font_button = new Gtk.FontButton () {
                 halign = Gtk.Align.START,
                 use_font = true
