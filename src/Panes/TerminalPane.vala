@@ -10,7 +10,7 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
     private GLib.Settings settings;
 
     public TerminalPane () {
-        base (_("Terminal"), "utilities-terminal");
+        base ("terminal", _("Terminal"), "utilities-terminal");
     }
 
     construct {
@@ -48,6 +48,9 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         var tab_bar_label = summary_label_new (_("Show tabs:"));
         var tab_bar_combo = combobox_text_new (tab_bar_map);
 
+        var term_font_label = new SummaryLabel (_("Terminal font:"));
+        var term_font_button = new font_button_new ();
+
         content_area.attach (follow_last_tab_label, 0, 0, 1, 1);
         content_area.attach (follow_last_tab_switch, 1, 0, 1, 1);
         content_area.attach (follow_last_tab_info, 1, 1, 1, 1);
@@ -62,16 +65,19 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         content_area.attach (term_bell_info, 1, 7, 1, 1);
         content_area.attach (tab_bar_label, 0, 8, 1, 1);
         content_area.attach (tab_bar_combo, 1, 8, 1, 1);
+        content_area.attach (term_font_label, 0, 9, 1, 1);
+        content_area.attach (term_font_button, 1, 9, 1, 1);
 
         settings.bind ("follow-last-tab", follow_last_tab_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("unsafe-paste-alert", unsafe_paste_alert_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("remember-tabs", rem_tabs_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("audible-bell", term_bell_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("tab-bar-behavior", tab_bar_combo, "active_id", SettingsBindFlags.DEFAULT);
+        settings.bind ("font", term_font_button, "font-name", SettingsBindFlags.DEFAULT);
 
         on_click_reset (() => {
             string[] keys = {"unsafe-paste-alert", "natural-copy-paste",
-                             "follow-last-tab", "audible-bell", "remember-tabs", "tab-bar-behavior"};
+                             "follow-last-tab", "audible-bell", "remember-tabs", "tab-bar-behavior", "font"};
 
             foreach (string key in keys) {
                 settings.reset (key);

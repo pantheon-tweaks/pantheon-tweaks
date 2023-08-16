@@ -7,7 +7,7 @@
 public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
     public FontsPane () {
         base (
-            _("Fonts"), "preferences-desktop-font",
+            "fonts", _("Fonts"), "preferences-desktop-font",
             _("Change the fonts used in your system and documents by default.")
         );
     }
@@ -51,13 +51,5 @@ public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
 
             window_settings.reset ("titlebar-font");
         });
-    }
-
-    private Gtk.FontButton font_button_new () {
-        var font_button = new Gtk.FontButton () {
-            halign = Gtk.Align.START,
-            use_font = true
-        };
-        return font_button;
     }
 }

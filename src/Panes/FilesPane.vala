@@ -8,7 +8,7 @@ public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
     private const string FILES_SCHEMA = "io.elementary.files.preferences";
 
     public FilesPane () {
-        base (_("Files"), "system-file-manager");
+        base ("files", _("Files"), "system-file-manager");
     }
 
     construct {
