@@ -15,7 +15,6 @@ public class PantheonTweaks.TweaksPlug : Switchboard.Plug {
         settings.set ("tweaks", null);
         settings.set ("tweaks/appearance", "appearance");
         settings.set ("tweaks/fonts", "fonts");
-        settings.set ("tweaks/animations", "animations");
         settings.set ("tweaks/misc", "misc");
         settings.set ("tweaks/files", "files");
         settings.set ("tweaks/terminal", "terminal");
