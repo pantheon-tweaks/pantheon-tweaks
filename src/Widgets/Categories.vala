@@ -297,5 +297,12 @@ public class PantheonTweaks.Categories : Gtk.Box {
             };
             return font_button;
         }
+
+        protected class FontButton : Gtk.FontButton {
+            construct {
+                halign = Gtk.Align.START;
+                use_font = true;
+            }
+        }
     }
 }

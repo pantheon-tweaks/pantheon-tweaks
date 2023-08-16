@@ -51,6 +51,9 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         var term_font_label = new SummaryLabel (_("Terminal font:"));
         var term_font_button = new font_button_new ();
 
+        var term_font_label = new SummaryLabel (_("Terminal font:"));
+        var term_font_button = new FontButton ();
+
         content_area.attach (follow_last_tab_label, 0, 0, 1, 1);
         content_area.attach (follow_last_tab_switch, 1, 0, 1, 1);
         content_area.attach (follow_last_tab_info, 1, 1, 1, 1);
