@@ -285,5 +285,12 @@ public class PantheonTweaks.Categories : Gtk.Paned {
                 get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
             }
         }
+
+        protected class FontButton : Gtk.FontButton {
+            construct {
+                halign = Gtk.Align.START;
+                use_font = true;
+            }
+        }
     }
 }

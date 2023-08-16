@@ -48,6 +48,9 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         var tab_bar_label = new SummaryLabel (_("Show tabs:"));
         var tab_bar_combo = new ComboBoxText (tab_bar_map);
 
+        var term_font_label = new SummaryLabel (_("Terminal font:"));
+        var term_font_button = new FontButton ();
+
         content_area.attach (follow_last_tab_label, 0, 0, 1, 1);
         content_area.attach (follow_last_tab_switch, 1, 0, 1, 1);
         content_area.attach (follow_last_tab_info, 1, 1, 1, 1);
@@ -62,6 +65,8 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         content_area.attach (term_bell_info, 1, 7, 1, 1);
         content_area.attach (tab_bar_label, 0, 8, 1, 1);
         content_area.attach (tab_bar_combo, 1, 8, 1, 1);
+        content_area.attach (term_font_label, 0, 9, 1, 1);
+        content_area.attach (term_font_button, 1, 9, 1, 1);
 
         show_all ();
 
@@ -70,10 +75,11 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         settings.bind ("remember-tabs", rem_tabs_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("audible-bell", term_bell_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("tab-bar-behavior", tab_bar_combo, "active_id", SettingsBindFlags.DEFAULT);
+        settings.bind ("font", term_font_button, "font-name", SettingsBindFlags.DEFAULT);
 
         on_click_reset (() => {
             string[] keys = {"unsafe-paste-alert", "natural-copy-paste",
-                             "follow-last-tab", "audible-bell", "remember-tabs", "tab-bar-behavior"};
+                             "follow-last-tab", "audible-bell", "remember-tabs", "tab-bar-behavior", "font"};
 
             foreach (string key in keys) {
                 settings.reset (key);

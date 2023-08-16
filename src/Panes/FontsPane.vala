@@ -54,11 +54,4 @@ public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
             window_settings.reset ("titlebar-font");
         });
     }
-
-    private class FontButton : Gtk.FontButton {
-        construct {
-            halign = Gtk.Align.START;
-            use_font = true;
-        }
-    }
 }
