@@ -4,7 +4,11 @@
  */
 
 public class PantheonTweaks.Panes.KeyboardPane : Categories.Pane {
-    private const string INPUT_SOURCES_SCHEMA = "org.gnome.desktop.input-sources";
+    private const string SCREENSHOT_ACCEL = "<Super><Shift>3";
+    private const string AREA_SCREENSHOT_ACCEL = "<Super><Shift>4";
+    private const string WINDOW_SCREENSHOT_ACCEL = "<Super><Shift>6";
+
+    private GLib.Settings keybindings_settings;
 
     public KeyboardPane () {
         base (
@@ -14,11 +18,9 @@ public class PantheonTweaks.Panes.KeyboardPane : Categories.Pane {
     }
 
     construct {
-        if (!if_show_pane ({ INPUT_SOURCES_SCHEMA })) {
-            return;
-        }
+        var input_sources_settings = new GLib.Settings ("org.gnome.desktop.input-sources");
+        keybindings_settings = new GLib.Settings ("org.pantheon.desktop.gala.keybindings");
 
-        var input_sources_settings = new GLib.Settings (INPUT_SOURCES_SCHEMA);
         var altwin_items = new Gee.HashMap<string, string> ();
         altwin_items["default"] = _("Default");
         altwin_items["altwin:menu"] = _("Add the standard behavior to Menu key");
@@ -45,13 +47,13 @@ public class PantheonTweaks.Panes.KeyboardPane : Categories.Pane {
             _("Useful if your keyboard has no PrtSc key. If enabled, the following shortcut keys are assigned:")
         );
 
-        var screenshot_accel = new Granite.AccelLabel (gettext_kbd("Grab the whole screen"), "<Super><Shift>3") {
+        var screenshot_accel = new Granite.AccelLabel (gettext_kbd ("Grab the whole screen"), SCREENSHOT_ACCEL) {
             halign = Gtk.Align.START
         };
-        var area_screenshot_accel = new Granite.AccelLabel (gettext_kbd("Select an area to grab"), "<Super><Shift>4") {
+        var area_screenshot_accel = new Granite.AccelLabel (gettext_kbd ("Select an area to grab"), AREA_SCREENSHOT_ACCEL) {
             halign = Gtk.Align.START
         };
-        var window_screenshot_accel = new Granite.AccelLabel (gettext_kbd("Grab the current window"), "<Super><Shift>6") {
+        var window_screenshot_accel = new Granite.AccelLabel (gettext_kbd ("Grab the current window"), WINDOW_SCREENSHOT_ACCEL) {
             halign = Gtk.Align.START
         };
 
@@ -66,10 +68,29 @@ public class PantheonTweaks.Panes.KeyboardPane : Categories.Pane {
 
         show_all ();
 
-        on_click_reset (() => {});
+        change_screenshot_key_switch.notify["active"].connect (() => {
+            if (change_screenshot_key_switch.active) {
+                keybindings_settings.set_strv ("screenshot", { SCREENSHOT_ACCEL });
+                keybindings_settings.set_strv ("area-screenshot", { AREA_SCREENSHOT_ACCEL });
+                keybindings_settings.set_strv ("window-screenshot", { WINDOW_SCREENSHOT_ACCEL });
+            } else {
+                reset_keybindings_settings ();
+            }
+        });
+
+        on_click_reset (() => {
+            reset_keybindings_settings ();
+            change_screenshot_key_switch.active = false;
+        });
     }
 
     private string gettext_kbd (string msgid) {
         return dgettext ("keyboard-plug", msgid);
+    }
+
+    private void reset_keybindings_settings () {
+        keybindings_settings.reset ("screenshot");
+        keybindings_settings.reset ("area-screenshot");
+        keybindings_settings.reset ("window-screenshot");
     }
 }
