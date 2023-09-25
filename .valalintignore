@@ -1,0 +1,9 @@
+# build dirs
+build*
+
+# translations and metainfo
+po
+data
+
+# subprojects
+subprojects
