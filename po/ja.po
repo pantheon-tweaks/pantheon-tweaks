@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-03 21:58+0900\n"
-"PO-Revision-Date: 2023-01-06 22:25+0900\n"
+"PO-Revision-Date: 2023-10-03 22:04+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -294,9 +294,8 @@ msgid "Show tabs:"
 msgstr "タブを表示:"
 
 #: src/Panes/TerminalPane.vala:51
-#, fuzzy
 msgid "Terminal font:"
-msgstr "ターミナル"
+msgstr "ターミナルのフォント:"
 
 #: src/Tweaks.vala:25
 msgid "Tweaks"
