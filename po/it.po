@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-06 22:23+0900\n"
+"POT-Creation-Date: 2023-10-03 21:58+0900\n"
 "PO-Revision-Date: 2023-02-01 20:27+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Pantheon Tweaks"
 msgstr "Pantheon Tweaks"
 
-#: data/pantheon-tweaks.metainfo.xml.in:6 src/Tweaks.vala:40
+#: data/pantheon-tweaks.metainfo.xml.in:6 src/Tweaks.vala:26
 msgid "Tweak Pantheon settings"
 msgstr "Modifica le impostazioni di Pantheon"
 
@@ -34,193 +34,15 @@ msgstr ""
 "Un pannello delle impostazioni di sistema per Pantheon Desktop che ti "
 "consente di personalizzare in modo sicuro l'aspetto del tuo desktop."
 
-#: data/pantheon-tweaks.metainfo.xml.in:18
-msgid ""
-"TerminalPane: Remove background color preference which no longer take effect "
-"due to changes on Terminal side"
-msgstr ""
-"Riquadro terminale: Rimuovi la preferenza del colore di sfondo che non ha più effetto "
-"a causa di modifiche sul lato Terminale"
-
-#: data/pantheon-tweaks.metainfo.xml.in:20
-#: data/pantheon-tweaks.metainfo.xml.in:36
-#: data/pantheon-tweaks.metainfo.xml.in:55
-#: data/pantheon-tweaks.metainfo.xml.in:71
-msgid "Translation updates:"
-msgstr "Aggiornamenti di traduzione:"
-
-#: data/pantheon-tweaks.metainfo.xml.in:22
-#: data/pantheon-tweaks.metainfo.xml.in:40
-#: data/pantheon-tweaks.metainfo.xml.in:75
-msgid "Update Portuguese translation (thanks to @hugok79)"
-msgstr "Aggiornata la traduzione in portoghese (grazie a @hugok79)"
-
-#: data/pantheon-tweaks.metainfo.xml.in:23
-msgid "Update German translation (thanks to @skalski)"
-msgstr "Aggiornata la traduzione tedesca (grazie a @skalski)"
-
-#: data/pantheon-tweaks.metainfo.xml.in:24
-msgid "Update Italian translation (thanks to @albanobattistella)"
-msgstr "Aggiorna la traduzione russa (grazie a @albanobattistella)"
-
-#: data/pantheon-tweaks.metainfo.xml.in:25
-msgid "Update Russian translation (thanks to @lenemter)"
-msgstr "Aggiorna la traduzione russa (grazie a @lenemter)"
-
-#: data/pantheon-tweaks.metainfo.xml.in:26
-#: data/pantheon-tweaks.metainfo.xml.in:42
-#: data/pantheon-tweaks.metainfo.xml.in:59
-#: data/pantheon-tweaks.metainfo.xml.in:76
-msgid "Update Japanese translation"
-msgstr "Aggiornata la traduzione giapponese"
-
-#: data/pantheon-tweaks.metainfo.xml.in:33
-msgid ""
-"Remove AnimationsPane which no longer take effect due to the removal of "
-"tweaking animations functions on Gala side"
-msgstr ""
-"Rimuove il riquadro di animazione che non ha più effetto a causa della "
-"rimozione di modifiche alle funzioni di animazione sul lato Gala"
-
-#: data/pantheon-tweaks.metainfo.xml.in:34
-msgid ""
-"DestinationButton: Show an error dialog when creating/opening the "
-"destination folder being failed"
-msgstr ""
-"Pulsante di destinazione: mostra una finestra di dialogo di errore durante "
-"la creazione/apertura della cartella di destinazione non riuscita"
-
-#: data/pantheon-tweaks.metainfo.xml.in:38
-#: data/pantheon-tweaks.metainfo.xml.in:58
-msgid "Update German translation (thanks to @uwe-ss)"
-msgstr "Aggiornata la traduzione tedesca (grazie a @uwe-ss)"
-
-#: data/pantheon-tweaks.metainfo.xml.in:39
-msgid "Update Hungarian translation (thanks to @TomiOhl)"
-msgstr "Aggiornata la traduzione ungherese (grazie a @TomiOhl)"
-
-#: data/pantheon-tweaks.metainfo.xml.in:41
-#: data/pantheon-tweaks.metainfo.xml.in:57
-msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
-msgstr "Aggiornata la traduzione cinese semplificata (grazie a @imgradeone)"
-
-#: data/pantheon-tweaks.metainfo.xml.in:49
-msgid "FontsPane: Fix icon missing with the latest icons update"
-msgstr ""
-"Riquadro dei caratteri: correzione dell'icona mancante con l'ultimo "
-"aggiornamento delle icone"
-
-#: data/pantheon-tweaks.metainfo.xml.in:50
-msgid ""
-"Make sure dimming feature that is introduced in the latest version of Gala "
-"work for the reset dialog"
-msgstr ""
-"Assicurati che la funzione di attenuazione introdotta nell'ultima versione "
-"di Gala lavora per la finestra di dialogo di ripristino"
-
-#: data/pantheon-tweaks.metainfo.xml.in:51
-msgid "AppearancePane: Sort theme names alphabetically"
-msgstr "Aspetto del pannello: ordina i nomi dei temi in ordine alfabetico"
-
-#: data/pantheon-tweaks.metainfo.xml.in:52
-msgid "TerminalPane: Support changing tab bar behavior"
-msgstr ""
-"Riquadro Terminale: supporta la modifica del comportamento della barra delle "
-"schede"
-
-#: data/pantheon-tweaks.metainfo.xml.in:53
-msgid "AppearancePane: Add buttons to open the theme locations"
-msgstr ""
-"Aspetto del pannello: aggiunto pulsanti per aprire le posizioni dei temi"
-
-#: data/pantheon-tweaks.metainfo.xml.in:66
-msgid "Sync selected elementary stylesheet variant with Desktop Plug"
-msgstr ""
-"Sincronizza la variante del foglio di stile elementary selezionata con "
-"Desktop Plug"
-
-#: data/pantheon-tweaks.metainfo.xml.in:67
-msgid "Improves reliability of restoring visually"
-msgstr "Migliorata l'affidabilità del ripristino a livello visivo"
-
-#: data/pantheon-tweaks.metainfo.xml.in:68
-msgid ""
-"Prevent System Settings from crashing due to the removal of preferences in "
-"upstream Videos"
-msgstr ""
-"Impedisci l'arresto anomalo delle impostazioni di sistema a causa della "
-"rimozione delle preferenze in Video upstream"
-
-#: data/pantheon-tweaks.metainfo.xml.in:69
-msgid "Correct cursor and icon theme dir copies"
-msgstr "Corretto le copie della directory del tema del cursore e dell'icona"
-
-#: data/pantheon-tweaks.metainfo.xml.in:73
-msgid "Update French translation (thanks to @roxfr)"
-msgstr "Aggiornata la traduzione francese (grazie a @roxfr)"
-
-#: data/pantheon-tweaks.metainfo.xml.in:74
-msgid "Update Russian translation (thanks to @camellan)"
-msgstr "Aggiorna la traduzione russa (grazie a @camellan)"
-
-#: data/pantheon-tweaks.metainfo.xml.in:83
-msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
-msgstr "Esclude i temi Adwaita/gnomo/hicolor dalle selezioni dei temi"
-
-#: data/pantheon-tweaks.metainfo.xml.in:84
-msgid "Support accessing to panes with settings paths"
-msgstr "Supporta l'accesso ai riquadri con i percorsi delle impostazioni"
-
-#: data/pantheon-tweaks.metainfo.xml.in:85
-msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
-msgstr "Assicurati che il plug funzioni su NixOS (grazie a @ bobby285271)"
-
-#: data/pantheon-tweaks.metainfo.xml.in:86
-#: data/pantheon-tweaks.metainfo.xml.in:100
-msgid "Update translations"
-msgstr "Aggiornato le traduzioni"
-
-#: data/pantheon-tweaks.metainfo.xml.in:92
-msgid ""
-"elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
-"features and fixes:"
-msgstr ""
-"Elementary Tweaks è ora rinominato in Pantheon Tweaks e ne avrai nuove "
-"caratteristiche e correzioni:"
-
-#: data/pantheon-tweaks.metainfo.xml.in:94
-msgid "Remove preferences now supported in Pantheon officially"
-msgstr "Rimosso le preferenze ora supportate ufficialmente in Pantheon"
-
-#: data/pantheon-tweaks.metainfo.xml.in:95
-msgid "Remove preferences causing the plug crash"
-msgstr "Rimuovi le preferenze che causano il crash del plug"
-
-#: data/pantheon-tweaks.metainfo.xml.in:96
-msgid "Fully redesigned plug"
-msgstr "Plug completamente ridisegnato"
-
-#: data/pantheon-tweaks.metainfo.xml.in:97
-msgid "Support changing sound theme (thanks to @pongloongyeat)"
-msgstr "Supporta la modifica del tema del suono (grazie a @pongloongyeat)"
-
-#: data/pantheon-tweaks.metainfo.xml.in:98
-msgid "Add new window controls layout"
-msgstr "Aggiunto un nuovo layout dei controlli della finestra"
-
-#: data/pantheon-tweaks.metainfo.xml.in:99
-msgid "Fix deprecations"
-msgstr "Corretto le deprecazioni"
-
 #: data/pantheon-tweaks.metainfo.xml.in:107
 msgid "Appearance pane"
 msgstr "Aspetto del pannello"
 
-#: src/Panes/AppearancePane.vala:34
+#: src/Panes/AppearancePane.vala:22
 msgid "Appearance"
 msgstr "Aspetto"
 
-#: src/Panes/AppearancePane.vala:35
+#: src/Panes/AppearancePane.vala:23
 msgid ""
 "Change the theme and button layout of windows. Changing theme may cause "
 "visibility issue."
@@ -228,60 +50,60 @@ msgstr ""
 "Modificare il tema e la disposizione dei pulsanti della finstra. La modifica "
 "del tema potrebbe causare problema di visibilità."
 
-#: src/Panes/AppearancePane.vala:75
+#: src/Panes/AppearancePane.vala:63
 msgid "Theme Settings"
 msgstr "Impostazioni del tema"
 
-#: src/Panes/AppearancePane.vala:77
+#: src/Panes/AppearancePane.vala:65
 msgid "GTK:"
 msgstr "GTK:"
 
 #. TRANSLATORS: The "%s" represents the path where custom themes are installed
-#: src/Panes/AppearancePane.vala:82
+#: src/Panes/AppearancePane.vala:70
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr "Per mostrare qui i temi personalizzati, inseriscili in %s."
 
-#: src/Panes/AppearancePane.vala:83 src/Panes/AppearancePane.vala:94
-#: src/Panes/AppearancePane.vala:105 src/Panes/AppearancePane.vala:116
+#: src/Panes/AppearancePane.vala:71 src/Panes/AppearancePane.vala:82
+#: src/Panes/AppearancePane.vala:93 src/Panes/AppearancePane.vala:104
 msgid "theme-name"
 msgstr "nome-tema"
 
-#: src/Panes/AppearancePane.vala:88
+#: src/Panes/AppearancePane.vala:76
 msgid "Icons:"
 msgstr "Icone:"
 
 #. TRANSLATORS: The "%s" represents the path where custom icons are installed
-#: src/Panes/AppearancePane.vala:93
+#: src/Panes/AppearancePane.vala:81
 #, c-format
 msgid "To show custom icons here, put them in %s."
 msgstr "Per mostrare le icone personalizzate qui, inseriscile in %s."
 
-#: src/Panes/AppearancePane.vala:99
+#: src/Panes/AppearancePane.vala:87
 msgid "Cursor:"
 msgstr "Cursore:"
 
 #. TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:104
+#: src/Panes/AppearancePane.vala:92
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr "Per mostrare qui i cursori personalizzati, inseriscili in %s."
 
-#: src/Panes/AppearancePane.vala:110
+#: src/Panes/AppearancePane.vala:98
 msgid "Sound:"
 msgstr "Suono:"
 
 #. TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:115
+#: src/Panes/AppearancePane.vala:103
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr "Per mostrare qui i suoni personalizzati, inseriscili in %s."
 
-#: src/Panes/AppearancePane.vala:121
+#: src/Panes/AppearancePane.vala:109
 msgid "Force to use dark stylesheet:"
 msgstr "Forza l'uso del foglio di stile scuro:"
 
-#: src/Panes/AppearancePane.vala:125
+#: src/Panes/AppearancePane.vala:113
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
@@ -289,168 +111,168 @@ msgstr ""
 "Forza lo stile scuro su tutte le app, anche se non è supportato. Richiede "
 "riavvio dell'applicazione."
 
-#: src/Panes/AppearancePane.vala:128
+#: src/Panes/AppearancePane.vala:116
 msgid "Window Controls"
 msgstr "Controlli della finestra"
 
-#: src/Panes/AppearancePane.vala:130
+#: src/Panes/AppearancePane.vala:118
 msgid "Layout:"
 msgstr "Layout:"
 
-#: src/Panes/AppearancePane.vala:133
+#: src/Panes/AppearancePane.vala:121
 msgid "Changes button layout of the window."
 msgstr "Modifica la disposizione dei pulsanti della finestra."
 
-#: src/Panes/AppearancePane.vala:135
+#: src/Panes/AppearancePane.vala:123
 msgid "Show GNOME menu:"
 msgstr "Mostra menu GNOME:"
 
-#: src/Panes/AppearancePane.vala:137
+#: src/Panes/AppearancePane.vala:125
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "Se mostrare il menu GNOME nelle app GNOME."
 
-#: src/Panes/AppearancePane.vala:234
+#: src/Panes/AppearancePane.vala:222
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:235
+#: src/Panes/AppearancePane.vala:223
 msgid "elementary Reversed"
 msgstr "elementary invertito"
 
-#: src/Panes/AppearancePane.vala:236
+#: src/Panes/AppearancePane.vala:224
 msgid "Close Only Right"
 msgstr "Chiudi solo a destra"
 
-#: src/Panes/AppearancePane.vala:237
+#: src/Panes/AppearancePane.vala:225
 msgid "Close Only Left"
 msgstr "Chiudi solo a sinistra"
 
-#: src/Panes/AppearancePane.vala:238
+#: src/Panes/AppearancePane.vala:226
 msgid "Add Minimize Left"
 msgstr "Aggingi minimizza a sinistra"
 
-#: src/Panes/AppearancePane.vala:239
+#: src/Panes/AppearancePane.vala:227
 msgid "Add Minimize Right"
 msgstr "Aggiungi minimizza a destra"
 
-#: src/Panes/AppearancePane.vala:240
+#: src/Panes/AppearancePane.vala:228
 msgid "Replace Maximize to Minimize"
 msgstr "Sostituisci massimizza a minimizza"
 
-#: src/Panes/AppearancePane.vala:241
+#: src/Panes/AppearancePane.vala:229
 msgid "Windows"
 msgstr "Finestre"
 
-#: src/Panes/AppearancePane.vala:242
+#: src/Panes/AppearancePane.vala:230
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:243
+#: src/Panes/AppearancePane.vala:231
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
-#: src/Panes/FilesPane.vala:24
+#: src/Panes/FilesPane.vala:11
 msgid "Files"
 msgstr "File"
 
-#: src/Panes/FilesPane.vala:34
+#: src/Panes/FilesPane.vala:21
 msgid "Restore tabs:"
 msgstr "Ripristina schede:"
 
-#: src/Panes/FilesPane.vala:38
+#: src/Panes/FilesPane.vala:25
 msgid "Locale"
 msgstr "Lingua"
 
-#: src/Panes/FilesPane.vala:39
+#: src/Panes/FilesPane.vala:26
 msgid "ISO"
 msgstr "ISO"
 
-#: src/Panes/FilesPane.vala:40
+#: src/Panes/FilesPane.vala:27
 msgid "Informal"
 msgstr "Informale"
 
-#: src/Panes/FilesPane.vala:42
+#: src/Panes/FilesPane.vala:29
 msgid "Date format:"
 msgstr "Formato data:"
 
-#: src/Panes/FontsPane.vala:23
+#: src/Panes/FontsPane.vala:10
 msgid "Fonts"
 msgstr "Tipi di carattere"
 
-#: src/Panes/FontsPane.vala:24
+#: src/Panes/FontsPane.vala:11
 msgid "Change the fonts used in your system and documents by default."
 msgstr ""
 "Modifica i caratteri utilizzati nel sistema e nei documenti per impostazione "
 "predefinita."
 
-#: src/Panes/FontsPane.vala:32
+#: src/Panes/FontsPane.vala:19
 msgid "Default Font:"
 msgstr "Font di default"
 
-#: src/Panes/FontsPane.vala:35
+#: src/Panes/FontsPane.vala:22
 msgid "Document font:"
 msgstr "Font per i documenti:"
 
-#: src/Panes/FontsPane.vala:38
+#: src/Panes/FontsPane.vala:25
 msgid "Monospace font:"
 msgstr "Font monospace:"
 
-#: src/Panes/FontsPane.vala:41
+#: src/Panes/FontsPane.vala:28
 msgid "Titlebar font:"
 msgstr "Font per la barra del titolo:"
 
-#: src/Panes/MiscPane.vala:25
+#: src/Panes/MiscPane.vala:12
 msgid "Miscellaneous"
 msgstr "Varie"
 
-#: src/Panes/MiscPane.vala:26
+#: src/Panes/MiscPane.vala:13
 msgid "Configure some other hidden settings."
 msgstr "Configura altre impostazioni nascoste."
 
-#: src/Panes/MiscPane.vala:37
+#: src/Panes/MiscPane.vala:24
 msgid "Sound Indicator"
 msgstr "Indicatore sonoro"
 
-#: src/Panes/MiscPane.vala:39
+#: src/Panes/MiscPane.vala:26
 msgid "Max volume:"
 msgstr "Volume massimo:"
 
-#: src/Panes/TerminalPane.vala:26
+#: src/Panes/TerminalPane.vala:13
 msgid "Terminal"
 msgstr "Terminale"
 
-#: src/Panes/TerminalPane.vala:36
+#: src/Panes/TerminalPane.vala:23
 msgid "Follow last tab:"
 msgstr "Segui l'ultima scheda:"
 
-#: src/Panes/TerminalPane.vala:39
+#: src/Panes/TerminalPane.vala:26
 msgid "Creating a new tab sets the working directory of the last opened tab."
 msgstr ""
 "La creazione di una nuova scheda imposta la directory di lavoro dell'ultima "
 "scheda aperta."
 
-#: src/Panes/TerminalPane.vala:42
+#: src/Panes/TerminalPane.vala:29
 msgid "Unsafe paste alert:"
 msgstr "Avviso di incolla non sicuro:"
 
-#: src/Panes/TerminalPane.vala:44
+#: src/Panes/TerminalPane.vala:31
 msgid "Show a warning dialog when a pasted command contains 'sudo'."
 msgstr ""
 "Mostra una finestra di avviso quando un comando incollato contiene 'sudo'."
 
-#: src/Panes/TerminalPane.vala:46
+#: src/Panes/TerminalPane.vala:33
 msgid "Remember tabs:"
 msgstr "Ricorda schede:"
 
-#: src/Panes/TerminalPane.vala:48
+#: src/Panes/TerminalPane.vala:35
 msgid "If enabled, last opened tabs are restored on start."
 msgstr "Se abilitato, le ultime schede aperte vengono ripristinate all'avvio."
 
-#: src/Panes/TerminalPane.vala:50
+#: src/Panes/TerminalPane.vala:37
 msgid "Terminal bell:"
 msgstr "Campanello del terminale:"
 
-#: src/Panes/TerminalPane.vala:53
+#: src/Panes/TerminalPane.vala:40
 msgid ""
 "Sound when hitting the end of a line and also for tab-completion when there "
 "are either no or multiple possible completions."
@@ -459,47 +281,52 @@ msgstr ""
 "completamento delle tabulazioni quando è presente o nessuno o più possibili "
 "completamenti."
 
-#: src/Panes/TerminalPane.vala:57
+#: src/Panes/TerminalPane.vala:44
 msgid "Always"
 msgstr "Sempre"
 
-#: src/Panes/TerminalPane.vala:58
+#: src/Panes/TerminalPane.vala:45
 msgid "Hide when single tab"
 msgstr "Nascondi quando scheda singola"
 
-#: src/Panes/TerminalPane.vala:59
+#: src/Panes/TerminalPane.vala:46
 msgid "Never"
 msgstr "Mai"
 
-#: src/Panes/TerminalPane.vala:61
+#: src/Panes/TerminalPane.vala:48
 msgid "Show tabs:"
 msgstr "Mostra schede:"
 
-#: src/Tweaks.vala:39
+#: src/Panes/TerminalPane.vala:51
+#, fuzzy
+msgid "Terminal font:"
+msgstr "Terminale"
+
+#: src/Tweaks.vala:25
 msgid "Tweaks"
 msgstr "Tweaks"
 
-#: src/Widgets/Categories.vala:42
+#: src/Widgets/Categories.vala:26
 msgid "Reset settings successfully"
 msgstr "Ripristinato le impostazioni con successo"
 
-#: src/Widgets/Categories.vala:68
+#: src/Widgets/Categories.vala:53
 msgid "General"
 msgstr "Impostazioni generali"
 
-#: src/Widgets/Categories.vala:70
+#: src/Widgets/Categories.vala:56
 msgid "Applications"
 msgstr "Applicazioni"
 
-#: src/Widgets/Categories.vala:124
+#: src/Widgets/Categories.vala:114
 msgid "Reset to default"
 msgstr "Ripristina al valore Predefinito"
 
-#: src/Widgets/Categories.vala:129
+#: src/Widgets/Categories.vala:119
 msgid "Are you sure you want to reset personalization?"
 msgstr "Sei sicuro di voler ripristinare la personalizzazione?"
 
-#: src/Widgets/Categories.vala:130
+#: src/Widgets/Categories.vala:120
 msgid ""
 "All settings in this pane will be restored to the factory defaults. This "
 "action can't be undone."
@@ -507,19 +334,19 @@ msgstr ""
 "Tutte le impostazioni in questo riquadro verranno ripristinate alle "
 "impostazioni di fabbrica. Questa azione non può essere annullata."
 
-#: src/Widgets/Categories.vala:136
+#: src/Widgets/Categories.vala:126
 msgid "Reset"
 msgstr "Ripristina"
 
-#: src/Widgets/Categories.vala:228
+#: src/Widgets/Categories.vala:218
 msgid "Open destination folder"
 msgstr "Apri la cartella di destinazione"
 
-#: src/Widgets/Categories.vala:240
+#: src/Widgets/Categories.vala:230
 msgid "Failed to create the destination folder"
 msgstr "Impossibile creare la cartella di destinazione"
 
-#: src/Widgets/Categories.vala:241
+#: src/Widgets/Categories.vala:231
 msgid ""
 "The destination folder doesn't exist and tried to create new but failed. The "
 "following error message might be helpful:"
@@ -528,17 +355,150 @@ msgstr ""
 "l'oprazione non è riuscita. Il seguente messaggio di errore potrebbe essere "
 "utile:"
 
-#: src/Widgets/Categories.vala:251
+#: src/Widgets/Categories.vala:241
 msgid "Failed to open the destination folder"
 msgstr "Impossibile aprire la cartella di destinazione"
 
-#: src/Widgets/Categories.vala:252
+#: src/Widgets/Categories.vala:242
 msgid ""
 "Tried to open the destination folder but failed. The following error message "
 "might be helpful:"
 msgstr ""
 "Ho provato ad aprire la cartella di destinazione ma l'operazione non è "
 "riuscita. Il seguente messaggio di errore potrebbe essere utile:"
+
+#~ msgid ""
+#~ "TerminalPane: Remove background color preference which no longer take "
+#~ "effect due to changes on Terminal side"
+#~ msgstr ""
+#~ "Riquadro terminale: Rimuovi la preferenza del colore di sfondo che non ha "
+#~ "più effetto a causa di modifiche sul lato Terminale"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Aggiornamenti di traduzione:"
+
+#~ msgid "Update Portuguese translation (thanks to @hugok79)"
+#~ msgstr "Aggiornata la traduzione in portoghese (grazie a @hugok79)"
+
+#~ msgid "Update German translation (thanks to @skalski)"
+#~ msgstr "Aggiornata la traduzione tedesca (grazie a @skalski)"
+
+#~ msgid "Update Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Aggiorna la traduzione russa (grazie a @albanobattistella)"
+
+#~ msgid "Update Russian translation (thanks to @lenemter)"
+#~ msgstr "Aggiorna la traduzione russa (grazie a @lenemter)"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "Aggiornata la traduzione giapponese"
+
+#~ msgid ""
+#~ "Remove AnimationsPane which no longer take effect due to the removal of "
+#~ "tweaking animations functions on Gala side"
+#~ msgstr ""
+#~ "Rimuove il riquadro di animazione che non ha più effetto a causa della "
+#~ "rimozione di modifiche alle funzioni di animazione sul lato Gala"
+
+#~ msgid ""
+#~ "DestinationButton: Show an error dialog when creating/opening the "
+#~ "destination folder being failed"
+#~ msgstr ""
+#~ "Pulsante di destinazione: mostra una finestra di dialogo di errore "
+#~ "durante la creazione/apertura della cartella di destinazione non riuscita"
+
+#~ msgid "Update German translation (thanks to @uwe-ss)"
+#~ msgstr "Aggiornata la traduzione tedesca (grazie a @uwe-ss)"
+
+#~ msgid "Update Hungarian translation (thanks to @TomiOhl)"
+#~ msgstr "Aggiornata la traduzione ungherese (grazie a @TomiOhl)"
+
+#~ msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
+#~ msgstr "Aggiornata la traduzione cinese semplificata (grazie a @imgradeone)"
+
+#~ msgid "FontsPane: Fix icon missing with the latest icons update"
+#~ msgstr ""
+#~ "Riquadro dei caratteri: correzione dell'icona mancante con l'ultimo "
+#~ "aggiornamento delle icone"
+
+#~ msgid ""
+#~ "Make sure dimming feature that is introduced in the latest version of "
+#~ "Gala work for the reset dialog"
+#~ msgstr ""
+#~ "Assicurati che la funzione di attenuazione introdotta nell'ultima "
+#~ "versione di Gala lavora per la finestra di dialogo di ripristino"
+
+#~ msgid "AppearancePane: Sort theme names alphabetically"
+#~ msgstr "Aspetto del pannello: ordina i nomi dei temi in ordine alfabetico"
+
+#~ msgid "TerminalPane: Support changing tab bar behavior"
+#~ msgstr ""
+#~ "Riquadro Terminale: supporta la modifica del comportamento della barra "
+#~ "delle schede"
+
+#~ msgid "AppearancePane: Add buttons to open the theme locations"
+#~ msgstr ""
+#~ "Aspetto del pannello: aggiunto pulsanti per aprire le posizioni dei temi"
+
+#~ msgid "Sync selected elementary stylesheet variant with Desktop Plug"
+#~ msgstr ""
+#~ "Sincronizza la variante del foglio di stile elementary selezionata con "
+#~ "Desktop Plug"
+
+#~ msgid "Improves reliability of restoring visually"
+#~ msgstr "Migliorata l'affidabilità del ripristino a livello visivo"
+
+#~ msgid ""
+#~ "Prevent System Settings from crashing due to the removal of preferences "
+#~ "in upstream Videos"
+#~ msgstr ""
+#~ "Impedisci l'arresto anomalo delle impostazioni di sistema a causa della "
+#~ "rimozione delle preferenze in Video upstream"
+
+#~ msgid "Correct cursor and icon theme dir copies"
+#~ msgstr "Corretto le copie della directory del tema del cursore e dell'icona"
+
+#~ msgid "Update French translation (thanks to @roxfr)"
+#~ msgstr "Aggiornata la traduzione francese (grazie a @roxfr)"
+
+#~ msgid "Update Russian translation (thanks to @camellan)"
+#~ msgstr "Aggiorna la traduzione russa (grazie a @camellan)"
+
+#~ msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
+#~ msgstr "Esclude i temi Adwaita/gnomo/hicolor dalle selezioni dei temi"
+
+#~ msgid "Support accessing to panes with settings paths"
+#~ msgstr "Supporta l'accesso ai riquadri con i percorsi delle impostazioni"
+
+#~ msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
+#~ msgstr "Assicurati che il plug funzioni su NixOS (grazie a @ bobby285271)"
+
+#~ msgid "Update translations"
+#~ msgstr "Aggiornato le traduzioni"
+
+#~ msgid ""
+#~ "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
+#~ "features and fixes:"
+#~ msgstr ""
+#~ "Elementary Tweaks è ora rinominato in Pantheon Tweaks e ne avrai nuove "
+#~ "caratteristiche e correzioni:"
+
+#~ msgid "Remove preferences now supported in Pantheon officially"
+#~ msgstr "Rimosso le preferenze ora supportate ufficialmente in Pantheon"
+
+#~ msgid "Remove preferences causing the plug crash"
+#~ msgstr "Rimuovi le preferenze che causano il crash del plug"
+
+#~ msgid "Fully redesigned plug"
+#~ msgstr "Plug completamente ridisegnato"
+
+#~ msgid "Support changing sound theme (thanks to @pongloongyeat)"
+#~ msgstr "Supporta la modifica del tema del suono (grazie a @pongloongyeat)"
+
+#~ msgid "Add new window controls layout"
+#~ msgstr "Aggiunto un nuovo layout dei controlli della finestra"
+
+#~ msgid "Fix deprecations"
+#~ msgstr "Corretto le deprecazioni"
 
 #~ msgid "Background color:"
 #~ msgstr "Colore di sfondo:"
