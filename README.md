@@ -13,7 +13,7 @@ Pantheon Tweaks supports the following versions of elementary OS:
   5.1 Hera              | ❌
   6 Odin                | ✅
   6.1 Jólnir            | ✅
-  7.0 Horus             | ✅
+  7.0 / 7.1 Horus       | ✅
 
 For users on elementary OS Hera or below, please use [elementary Tweaks](https://github.com/elementary-tweaks/elementary-tweaks) instead.
 
