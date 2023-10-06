@@ -1,15 +1,13 @@
 name: CI
 
-on: [push, pull_request]
+on: pull_request
 
 jobs:
-  build:
-    name: Build
+  build_next:
+    name: Build (next)
     runs-on: ubuntu-22.04
-    
     container:
-      image: ghcr.io/elementary/docker:next-unstable
-    
+      image: ghcr.io/elementary/docker:next-stable
     steps:
     - uses: actions/checkout@v4
     - name: Install Dependencies
