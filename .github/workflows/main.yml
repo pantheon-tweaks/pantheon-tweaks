@@ -6,10 +6,8 @@ jobs:
   build_odin:
     name: Build (6.x)
     runs-on: ubuntu-20.04
-
     container:
       image: ghcr.io/elementary/docker:odin-stable
-
     steps:
     - uses: actions/checkout@v4
     - name: Install Dependencies
@@ -27,10 +25,8 @@ jobs:
   build_horus:
     name: Build (7.x)
     runs-on: ubuntu-22.04
-
     container:
       image: ghcr.io/elementary/docker:horus-stable
-
     steps:
     - uses: actions/checkout@v4
     - name: Install Dependencies
