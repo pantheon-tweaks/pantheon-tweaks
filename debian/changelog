@@ -1,3 +1,14 @@
+pantheon-tweaks (1.1.1) jammy; urgency=low
+
+  * Efficiently find and match pane name
+  * TerminalPane: Allow font configuration
+  * Remove URI of dropped pane
+  * Metainfo: Mark release descriptions as untranslatable
+  * Update pane icons
+  * Update translations
+
+ -- Ryo Nakano <ryonakaknock3@gmail.com>  Wed, 18 Oct 2023 21:48:27 +0900
+
 pantheon-tweaks (1.1.0) jammy; urgency=medium
 
   * TerminalPane: Remove background color preference which no longer take effect due to changes on Terminal side
