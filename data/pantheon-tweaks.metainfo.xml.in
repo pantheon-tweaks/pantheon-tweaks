@@ -12,6 +12,23 @@
   <icon type="stock">preferences-desktop-tweaks</icon>
   <translation type="gettext">pantheon-tweaks-plug</translation>
   <releases>
+    <release version="1.1.1" date="2023-10-26" urgency="low">
+      <description translatable="no">
+        <ul>
+          <li>Efficiently find and match pane name</li>
+          <li>TerminalPane: Allow font configuration</li>
+          <li>Remove URI of dropped pane</li>
+          <li>Metainfo: Mark release descriptions as untranslatable</li>
+          <li>Update pane icons</li>
+        </ul>
+        <p>Translation updates:</p>
+        <ul>
+          <li>Update Italian translation (thanks to @albanobattistella)</li>
+          <li>Update Portuguese translation (thanks to @hugok79)</li>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1.0" date="2023-02-01" urgency="medium">
       <description translatable="no">
         <ul>
@@ -105,7 +122,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>Appearance pane</caption>
-      <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/1.0.4/data/screenshot.png</image>
+      <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/1.1.1/data/screenshot.png</image>
     </screenshot>
   </screenshots>
   <url type="homepage">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
