@@ -37,7 +37,7 @@ Open System Settings and there should be a new Plug named "Tweaks".
 If you would contribute to the project and want to install Pantheon Tweaks from source code, clone this repository and then run the following commands:
 
 ```
-sudo apt install -y elementary-sdk
+sudo apt install -y elementary-sdk libswitchboard-3-dev
 meson setup builddir --prefix=/usr
 ninja -C builddir
 ninja install -C builddir
