@@ -9,7 +9,7 @@ public class PantheonTweaks.Panes.MiscPane : Categories.Pane {
 
     public MiscPane () {
         base (
-            "misc", _("Miscellaneous"), "applications-utilities",
+            "misc", _("Miscellaneous"), "application-x-addon",
             _("Configure some other hidden settings.")
         );
     }
