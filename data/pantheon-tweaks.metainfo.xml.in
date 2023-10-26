@@ -12,7 +12,7 @@
   <icon type="stock">preferences-desktop-tweaks</icon>
   <translation type="gettext">pantheon-tweaks-plug</translation>
   <releases>
-    <release version="1.1.1" date="2023-10-18" urgency="low">
+    <release version="1.1.1" date="2023-10-26" urgency="low">
       <description translatable="no">
         <ul>
           <li>Efficiently find and match pane name</li>
