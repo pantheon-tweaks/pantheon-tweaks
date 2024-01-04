@@ -4,58 +4,40 @@
  *                         Pantheon Tweaks Developers, 2020-2023
  */
 
-public class PantheonTweaks.TweaksPlug : Switchboard.Plug {
-    private PantheonTweaks.Categories categories;
+public class PantheonTweaks.Tweaks : Gtk.Application {
+    private Gtk.ApplicationWindow window;
 
-    public TweaksPlug () {
+    public Tweaks () {
         GLib.Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
         GLib.Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 
-        var settings = new Gee.TreeMap<string, string?> (null, null);
-        settings.set ("tweaks", null);
-        settings.set ("tweaks/appearance", "appearance");
-        settings.set ("tweaks/fonts", "fonts");
-        settings.set ("tweaks/misc", "misc");
-        settings.set ("tweaks/files", "files");
-        settings.set ("tweaks/terminal", "terminal");
-
         Object (
-            category: Category.PERSONAL,
-            code_name: "pantheon-tweaks",
-            display_name: _("Tweaks"),
-            description: _("Tweak Pantheon settings"),
-            icon: "preferences-desktop-tweaks",
-            supported_settings: settings
+            application_id: "com.github.pantheon-tweaks.pantheon-tweaks",
+            flags: ApplicationFlags.FLAGS_NONE
         );
     }
 
-    /**
-     * Returns the main Gtk.Widget that contains all of our UI for Switchboard.
-     */
-    public override Gtk.Widget get_widget () {
-        if (categories == null) {
-            categories = new Categories ();
-            categories.show_all ();
+    protected override void activate () {
+        if (window != null) {
+            window.present ();
+            return;
         }
 
-        return categories;
+        var headerbar = new Gtk.HeaderBar () {
+            show_close_button = true,
+            title = _("Tweaks")
+        };
+
+        var categories = new Categories ();
+
+        window = new Gtk.ApplicationWindow (this);
+        window.set_titlebar (headerbar);
+        window.add (categories);
+        window.show_all ();
     }
 
-    public override void shown () { }
-
-    public override void hidden () { }
-
-    public override void search_callback (string location) {
-        categories.set_visible_view (location);
+    public static int main (string[] args) {
+        var app = new Tweaks ();
+        return app.run (args);
     }
-
-    public override async Gee.TreeMap<string, string> search (string search) {
-        return new Gee.TreeMap<string, string> (null, null);
-    }
-}
-
-public Switchboard.Plug get_plug (Module module) {
-    info ("Activating tweaks plug");
-    var plug = new PantheonTweaks.TweaksPlug ();
-    return plug;
 }

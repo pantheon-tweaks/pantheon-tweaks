@@ -5,10 +5,7 @@ project(
     meson_version: '>= 0.51.0'
 )
 
-switchboard_dep = dependency('switchboard-2.0')
 gettext_name = meson.project_name() + '-plug'
-libdir = get_option('prefix') / get_option('libdir')
-pkgdatadir = switchboard_dep.get_variable(pkgconfig: 'plugsdir', pkgconfig_define: ['libdir', libdir]) / 'personal'
 
 i18n = import('i18n')
 
@@ -43,7 +40,7 @@ plug_files = files(
     'src/Widgets/Categories.vala',
 )
 
-shared_module(
+executable(
     meson.project_name(),
     plug_files,
     config_file,
@@ -52,11 +49,9 @@ shared_module(
         dependency('glib-2.0'),
         dependency('granite', version: '>= 6.0.0'),
         dependency('gtk+-3.0'),
-        meson.get_compiler('vala').find_library('posix'),
-        switchboard_dep
+        meson.get_compiler('vala').find_library('posix')
     ],
-    install: true,
-    install_dir: pkgdatadir
+    install: true
 )
 
 meson.add_install_script('meson/post_install.py')
