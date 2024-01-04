@@ -23,6 +23,8 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
             return;
         }
 
+        // TODO: If we really switch to an independent app, we should create a MainWindow class
+        // and move these UI related codes there
         var headerbar = new Gtk.HeaderBar () {
             show_close_button = true,
             title = _("Tweaks")
@@ -31,6 +33,7 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
         var categories = new Categories ();
 
         window = new Gtk.ApplicationWindow (this);
+        window.set_default_size (1080, 600);
         window.set_titlebar (headerbar);
         window.add (categories);
         window.show_all ();
