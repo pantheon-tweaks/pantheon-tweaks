@@ -1,0 +1,52 @@
+app-id: com.github.pantheon_tweaks.pantheon-tweaks
+runtime: io.elementary.Platform
+runtime-version: '7.3'
+sdk: io.elementary.Sdk
+command: start-pantheon-tweaks
+finish-args:
+  - '--share=ipc'
+  - '--socket=wayland'
+  - '--socket=fallback-x11'
+  - '--own-name=com.github.pantheon-tweaks.pantheon-tweaks'
+  - '--talk-name=ca.desrt.dconf'
+  - '--filesystem=xdg-run/dconf'
+  - '--filesystem=host:ro'
+  - '--env=DCONF_USER_CONFIG_DIR=.config/dconf'
+  - '--env=GIO_EXTRA_MODULES=/app/lib/gio/modules/'
+  - '--talk-name=org.freedesktop.Flatpak'
+  # needed for perfers-color-scheme
+  - '--system-talk-name=org.freedesktop.Accounts'
+modules:
+  - name: dconf
+    buildsystem: meson
+    config-opts:
+    - '-Dbash_completion=false'
+    - '-Dman=false'
+    - '-Dsystemduserunitdir=/app/lib/systemd/user'
+    cleanup:
+    - '/include'
+    - '/lib/pkgconfig'
+    - '/libexec'
+    - '/share/dbus-1'
+    sources:
+    - type: archive
+      url: https://download.gnome.org/sources/dconf/0.40/dconf-0.40.0.tar.xz
+      sha256: cf7f22a4c9200421d8d3325c5c1b8b93a36843650c9f95d6451e20f0bcb24533
+    - type: patch
+      path: dconf-override.patch
+
+  - name: pantheon-tweaks
+    buildsystem: meson
+    sources:
+      - type: dir
+        path: .
+    post-install:
+      - "sed -i 's,^Exec=com.github.pantheon-tweaks.pantheon-tweaks$,Exec=start-pantheon-tweaks,g' /app/share/applications/com.github.pantheon_tweaks.pantheon-tweaks.desktop"
+
+  - name: script
+    buildsystem: simple
+    sources:
+      - type: file
+        path: start-pantheon-tweaks.sh
+    build-commands:
+      - install -Dm 755 start-pantheon-tweaks.sh /app/bin/start-pantheon-tweaks
