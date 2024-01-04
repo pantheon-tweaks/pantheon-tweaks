@@ -10,6 +10,7 @@ finish-args:
   - '--own-name=com.github.pantheon-tweaks.pantheon-tweaks'
   - '--talk-name=ca.desrt.dconf'
   - '--filesystem=xdg-run/dconf'
+  - '--filesystem=home/.config'
   - '--filesystem=host:ro'
   - '--env=DCONF_USER_CONFIG_DIR=.config/dconf'
   - '--env=GIO_EXTRA_MODULES=/app/lib/gio/modules/'
