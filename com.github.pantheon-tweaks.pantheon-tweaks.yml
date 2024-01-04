@@ -7,10 +7,12 @@ finish-args:
   - '--share=ipc'
   - '--socket=wayland'
   - '--socket=fallback-x11'
+  # grant R/W access to create theme dirs if not exists and read/write settings.ini of GTK
+  - '--filesystem=home'
+  # needed to read/write GSettings of the host
   - '--own-name=com.github.pantheon-tweaks.pantheon-tweaks'
   - '--talk-name=ca.desrt.dconf'
   - '--filesystem=xdg-run/dconf'
-  - '--filesystem=home/.config'
   - '--filesystem=host:ro'
   - '--env=DCONF_USER_CONFIG_DIR=.config/dconf'
   - '--env=GIO_EXTRA_MODULES=/app/lib/gio/modules/'
@@ -18,6 +20,7 @@ finish-args:
   # needed for perfers-color-scheme
   - '--system-talk-name=org.freedesktop.Accounts'
 modules:
+  # patch dconf to read/write GSettings of the host
   - name: dconf
     buildsystem: meson
     config-opts:
