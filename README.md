@@ -1,5 +1,5 @@
 # Pantheon Tweaks
-A system settings panel for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance.
+A system settings app for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance.
 
 ![sample](data/screenshot.png)
 
