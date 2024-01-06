@@ -1,10 +1,12 @@
-# FIXME: We need more size variants (48px, 64px, and 128px) if we want to publish to AppCenter:
-# https://docs.elementary.io/develop/appcenter/publishing-requirements#icons
-install_data(
-    'preferences-desktop-tweaks.svg',
-    rename: 'com.github.pantheon_tweaks.pantheon-tweaks.svg',
-    install_dir: get_option('datadir') / 'icons' / 'hicolor' / '32x32' / 'apps'
-)
+icon_sizes = ['32', '48', '64', '128']
+
+foreach i : icon_sizes
+    install_data(
+        'icons' / i / meson.project_name() + '.svg',
+        rename: 'com.github.pantheon_tweaks.pantheon-tweaks.svg',
+        install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i / 'apps'
+    )
+endforeach
 
 i18n.merge_file(
     input: meson.project_name() + '.desktop.in',
