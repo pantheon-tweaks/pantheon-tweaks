@@ -27,6 +27,7 @@ subdir('data')
 subdir('po')
 
 plug_files = files(
+    'src/MainWindow.vala',
     'src/Tweaks.vala',
     'src/Settings/AccountsService.vala',
     'src/Settings/GtkSettings.vala',

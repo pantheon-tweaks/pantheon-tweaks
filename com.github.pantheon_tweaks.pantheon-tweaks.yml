@@ -17,7 +17,7 @@ finish-args:
   - '--env=DCONF_USER_CONFIG_DIR=.config/dconf'
   - '--env=GIO_EXTRA_MODULES=/app/lib/gio/modules/'
   - '--talk-name=org.freedesktop.Flatpak'
-  # needed for perfers-color-scheme
+  # needed for PrefersAccentColor
   - '--system-talk-name=org.freedesktop.Accounts'
 modules:
   # patch dconf to read/write GSettings of the host
@@ -45,9 +45,10 @@ modules:
       - type: dir
         path: .
     post-install:
+      # Run the wrapper script instead of the executable
       - "sed -i 's,^Exec=com.github.pantheon-tweaks.pantheon-tweaks$,Exec=start-pantheon-tweaks,g' /app/share/applications/com.github.pantheon_tweaks.pantheon-tweaks.desktop"
 
-  - name: script
+  - name: wrapper-script
     buildsystem: simple
     sources:
       - type: file

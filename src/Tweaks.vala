@@ -5,7 +5,7 @@
  */
 
 public class PantheonTweaks.Tweaks : Gtk.Application {
-    private Gtk.ApplicationWindow window;
+    private MainWindow window;
 
     public Tweaks () {
         GLib.Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
@@ -23,26 +23,15 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
             return;
         }
 
-        // TODO: If we really switch to an independent app, we should create a MainWindow class
-        // and move these UI related codes there
-        var headerbar = new Gtk.HeaderBar () {
-            show_close_button = true,
-            title = _("Tweaks")
-        };
-
-        var categories = new Categories ();
-
-        window = new Gtk.ApplicationWindow (this);
-        window.set_default_size (1080, 600);
-        window.set_titlebar (headerbar);
-        window.add (categories);
+        window = new MainWindow (this);
         window.show_all ();
     }
 
     public static int main (string[] args) {
+        // Prevent Tweaks from launching and breaking preferences on other DEs
         string desktop_environment = GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP");
         if (desktop_environment != "Pantheon") {
-            warning ("Tweaks made for and only run on Pantheon. Your desktop environment \"%s\" is not supported.",
+            warning ("Tweaks is made for and only runs on Pantheon. Your desktop environment \"%s\" is not supported.",
                      desktop_environment);
             return -1;
         }
