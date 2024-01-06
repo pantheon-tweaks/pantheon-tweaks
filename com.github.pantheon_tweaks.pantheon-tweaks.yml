@@ -10,7 +10,6 @@ finish-args:
   # grant R/W access to create theme dirs if not exists and read/write settings.ini of GTK
   - '--filesystem=home'
   # needed to read/write GSettings of the host
-  - '--own-name=com.github.pantheon-tweaks.pantheon-tweaks'
   - '--talk-name=ca.desrt.dconf'
   - '--filesystem=xdg-run/dconf'
   - '--filesystem=host:ro'
