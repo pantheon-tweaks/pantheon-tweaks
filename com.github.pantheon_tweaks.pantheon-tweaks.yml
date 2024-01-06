@@ -46,7 +46,7 @@ modules:
         path: .
     post-install:
       # Run the wrapper script instead of the executable
-      - "sed -i 's,^Exec=com.github.pantheon-tweaks.pantheon-tweaks$,Exec=start-pantheon-tweaks,g' /app/share/applications/com.github.pantheon_tweaks.pantheon-tweaks.desktop"
+      - "sed -i 's,^Exec=pantheon-tweaks$,Exec=start-pantheon-tweaks,g' /app/share/applications/com.github.pantheon_tweaks.pantheon-tweaks.desktop"
 
   - name: wrapper-script
     buildsystem: simple
