@@ -20,6 +20,7 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
         var categories = new Categories ();
 
         // TODO Remember size
+        // APIs completely changed between GTK 3.0 and 4, so leaving it until we port Tweaks to GTK 4
         set_default_size (1080, 600);
 
         set_titlebar (headerbar);

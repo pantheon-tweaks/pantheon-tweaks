@@ -25,6 +25,15 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
 
         window = new MainWindow (this);
         window.show_all ();
+
+        var quit_action = new GLib.SimpleAction ("quit", null);
+        add_action (quit_action);
+        set_accels_for_action ("app.quit", {"<Control>q"});
+        quit_action.activate.connect (() => {
+            if (window != null) {
+                window.destroy ();
+            }
+        });
     }
 
     public static int main (string[] args) {
