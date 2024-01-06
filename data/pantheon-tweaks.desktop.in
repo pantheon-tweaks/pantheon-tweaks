@@ -9,3 +9,4 @@ Terminal=false
 Type=Application
 Keywords=Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;
 OnlyShowIn=Pantheon;
+StartupWMClass=com.github.pantheon_tweaks.pantheon-tweaks
