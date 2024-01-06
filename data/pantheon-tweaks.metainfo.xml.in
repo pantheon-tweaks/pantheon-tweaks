@@ -5,10 +5,10 @@
   <summary>Tweak Pantheon settings</summary>
   <description>
     <p>
-      A system settings panel for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance.
+      A system settings app for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance.
     </p>
   </description>
-  <translation type="gettext">pantheon-tweaks-plug</translation>
+  <translation type="gettext">pantheon-tweaks</translation>
   <releases>
     <release version="1.1.1" date="2023-10-26" urgency="low">
       <description translatable="no">
