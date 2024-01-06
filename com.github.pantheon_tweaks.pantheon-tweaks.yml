@@ -47,6 +47,8 @@ modules:
     post-install:
       # Run the wrapper script instead of the executable
       - "sed -i 's,^Exec=pantheon-tweaks$,Exec=start-pantheon-tweaks,g' /app/share/applications/com.github.pantheon_tweaks.pantheon-tweaks.desktop"
+      # Tell the real executable name to the WM to prevent duplicated dock icons
+      - "echo 'StartupWMClass=pantheon-tweaks' >> /app/share/applications/com.github.pantheon_tweaks.pantheon-tweaks.desktop"
 
   - name: wrapper-script
     buildsystem: simple
