@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>com.github.pantheon-tweaks.pantheon-tweaks</id>
+  <id>io.github.pantheon_tweaks.pantheon-tweaks</id>
   <name>Pantheon Tweaks</name>
   <summary>Tweak Pantheon settings</summary>
   <description>

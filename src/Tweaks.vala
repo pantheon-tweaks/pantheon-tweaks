@@ -12,7 +12,7 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
         GLib.Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 
         Object (
-            application_id: "com.github.pantheon_tweaks.pantheon-tweaks",
+            application_id: "io.github.pantheon_tweaks.pantheon-tweaks",
             flags: ApplicationFlags.FLAGS_NONE
         );
     }
