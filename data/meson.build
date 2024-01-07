@@ -3,14 +3,14 @@ icon_sizes = ['32', '48', '64', '128']
 foreach i : icon_sizes
     install_data(
         'icons' / i / meson.project_name() + '.svg',
-        rename: 'io.github.pantheon_tweaks.pantheon-tweaks.svg',
+        rename: application_id + '.svg',
         install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i / 'apps'
     )
 endforeach
 
 i18n.merge_file(
     input: meson.project_name() + '.desktop.in',
-    output: 'io.github.pantheon_tweaks.pantheon-tweaks.desktop',
+    output: application_id + '.desktop',
     po_dir: meson.source_root () / 'po',
     type: 'desktop',
     install_dir: get_option('prefix') / get_option('datadir') / 'applications',
@@ -19,7 +19,7 @@ i18n.merge_file(
 
 i18n.merge_file(
     input: meson.project_name() + '.metainfo.xml.in',
-    output: 'io.github.pantheon_tweaks.pantheon-tweaks.metainfo.xml',
+    output: application_id + '.metainfo.xml',
     po_dir: meson.source_root () / 'po',
     install_dir: get_option('prefix') / get_option('datadir') / 'metainfo',
     install: true

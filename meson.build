@@ -5,6 +5,8 @@ project(
     meson_version: '>= 0.51.0'
 )
 
+# Use this when reverse-DNS format is required
+application_id = 'io.github.pantheon_tweaks.' + meson.project_name()
 i18n = import('i18n')
 
 add_global_arguments(
