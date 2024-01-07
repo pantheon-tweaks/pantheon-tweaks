@@ -2,7 +2,7 @@
 Name=Pantheon Tweaks
 GenericName=Customization Tool
 Comment=Tweak Pantheon settings
-Categories=GTK;Settings;
+Categories=GTK;System;
 Exec=pantheon-tweaks
 Icon=io.github.pantheon_tweaks.pantheon-tweaks
 Terminal=false
