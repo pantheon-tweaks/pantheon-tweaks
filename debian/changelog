@@ -1,3 +1,9 @@
+pantheon-tweaks (1.1.2) jammy; urgency=low
+
+  * Add an infobar about migration to an independent dekstop app
+
+ -- Ryo Nakano <ryonakaknock3@gmail.com>  Sun, 07 Jan 2024 19:49:56 +0900
+
 pantheon-tweaks (1.1.1) jammy; urgency=low
 
   * Efficiently find and match pane name
