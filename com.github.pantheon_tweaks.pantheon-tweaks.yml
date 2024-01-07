@@ -7,15 +7,25 @@ finish-args:
   - '--share=ipc'
   - '--socket=wayland'
   - '--socket=fallback-x11'
-  # grant R/W access to create theme dirs if not exists and read/write settings.ini of GTK
-  - '--filesystem=home'
+
+  # grant read, write, and create access for settings.ini of GTK and theme dirs
+  - '--filesystem=home/.config/gtk-3.0:create'
+  - '--filesystem=home/.icons:create'
+  - '--filesystem=home/.local/share/sounds:create'
+  - '--filesystem=home/.local/share/themes:create'
+
   # needed to read/write GSettings of the host
   - '--talk-name=ca.desrt.dconf'
   - '--filesystem=xdg-run/dconf'
   - '--filesystem=host:ro'
   - '--env=DCONF_USER_CONFIG_DIR=.config/dconf'
   - '--env=GIO_EXTRA_MODULES=/app/lib/gio/modules/'
+  # This is not recommended by Flathub though, we need it to access host GSettings.
+  # From https://docs.flathub.org/docs/for-app-authors/requirements/?manifest-language=yml#talk:
+  #   Talk permissions are largely unrestricted, with the exception of org.freedesktop.Flatpak
+  #   but always try to use the minimum subset needed.
   - '--talk-name=org.freedesktop.Flatpak'
+
   # needed for PrefersAccentColor
   - '--system-talk-name=org.freedesktop.Accounts'
 modules:
