@@ -14,11 +14,16 @@ jobs:
       fail-fast: false
 
     container:
-      image: ghcr.io/elementary/flatpak-platform/runtime:7.3-${{ matrix.arch }}
+      image: bilelmoussaoui/flatpak-github-actions:gnome-45
       options: --privileged
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Install QEMU
+        if: ${{ matrix.arch != 'x86_64' }}
+        run: |
+          dnf -y install docker
 
       - name: Set up QEMU for aarch64 emulation
         if: ${{ matrix.arch != 'x86_64' }}
@@ -32,8 +37,6 @@ jobs:
           bundle: pantheon-tweaks.flatpak
           manifest-path: io.github.pantheon_tweaks.pantheon-tweaks.yml
           run-tests: true
-          repository-name: appcenter
-          repository-url: https://flatpak.elementary.io/repo.flatpakrepo
           cache-key: "flatpak-builder-${{ github.sha }}"
           arch: ${{ matrix.arch }}
 
