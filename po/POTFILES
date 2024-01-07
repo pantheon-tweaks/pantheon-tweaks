@@ -6,4 +6,5 @@ src/Panes/FontsPane.vala
 src/Panes/MiscPane.vala
 src/Panes/TerminalPane.vala
 src/Tweaks.vala
+src/MainWindow.vala
 src/Widgets/Categories.vala
