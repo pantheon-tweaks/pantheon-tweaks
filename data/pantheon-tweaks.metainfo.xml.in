@@ -12,6 +12,13 @@
   <icon type="stock">preferences-desktop-tweaks</icon>
   <translation type="gettext">pantheon-tweaks-plug</translation>
   <releases>
+    <release version="1.1.2" date="2024-01-07" urgency="low">
+      <description translatable="no">
+        <ul>
+          <li>Add an infobar about migration to an independent dekstop app</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1.1" date="2023-10-26" urgency="low">
       <description translatable="no">
         <ul>
@@ -122,7 +129,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>Appearance pane</caption>
-      <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/1.1.1/data/screenshot.png</image>
+      <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/1.1.2/data/screenshot.png</image>
     </screenshot>
   </screenshots>
   <url type="homepage">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
