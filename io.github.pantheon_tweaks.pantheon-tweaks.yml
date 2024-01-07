@@ -36,20 +36,20 @@ modules:
   - name: dconf
     buildsystem: meson
     config-opts:
-    - '-Dbash_completion=false'
-    - '-Dman=false'
-    - '-Dsystemduserunitdir=/app/lib/systemd/user'
+      - '-Dbash_completion=false'
+      - '-Dman=false'
+      - '-Dsystemduserunitdir=/app/lib/systemd/user'
     cleanup:
-    - '/include'
-    - '/lib/pkgconfig'
-    - '/libexec'
-    - '/share/dbus-1'
+      - '/include'
+      - '/lib/pkgconfig'
+      - '/libexec'
+      - '/share/dbus-1'
     sources:
-    - type: archive
-      url: https://download.gnome.org/sources/dconf/0.40/dconf-0.40.0.tar.xz
-      sha256: cf7f22a4c9200421d8d3325c5c1b8b93a36843650c9f95d6451e20f0bcb24533
-    - type: patch
-      path: dconf-override.patch
+      - type: archive
+        url: https://download.gnome.org/sources/dconf/0.40/dconf-0.40.0.tar.xz
+        sha256: cf7f22a4c9200421d8d3325c5c1b8b93a36843650c9f95d6451e20f0bcb24533
+      - type: patch
+        path: dconf-override.patch
 
   - name: elementary-stylesheet
     buildsystem: meson
@@ -58,31 +58,31 @@ modules:
         url: https://github.com/elementary/stylesheet/archive/refs/tags/7.3.0.tar.gz
         sha256: 2fa0428a53ff79a67e518a5883ecfe4e0a7944ad79b3ae070567aad1ea2f459b
     modules:
-    - name: sassc
-      cleanup:
-        - '*'
-      buildsystem: autotools
-      sources:
-        - type: archive
-          url: https://github.com/sass/sassc/archive/refs/tags/3.6.2.tar.gz
-          sha256: 608dc9002b45a91d11ed59e352469ecc05e4f58fc1259fc9a9f5b8f0f8348a03
-        - type: script
-          dest-filename: autogen.sh
-          commands:
-            - autoreconf -si
-      modules:
-        - name: libsass
-          cleanup:
-            - '*'
-          buildsystem: autotools
-          sources:
-            - type: archive
-              url: https://github.com/sass/libsass/archive/refs/tags/3.6.5.tar.gz
-              sha256: 89d8f2c46ae2b1b826b58ce7dde966a176bac41975b82e84ad46b01a55080582
-            - type: script
-              dest-filename: autogen.sh
-              commands:
-                - autoreconf -si
+      - name: sassc
+        cleanup:
+          - '*'
+        buildsystem: autotools
+        sources:
+          - type: archive
+            url: https://github.com/sass/sassc/archive/refs/tags/3.6.2.tar.gz
+            sha256: 608dc9002b45a91d11ed59e352469ecc05e4f58fc1259fc9a9f5b8f0f8348a03
+          - type: script
+            dest-filename: autogen.sh
+            commands:
+              - autoreconf -si
+        modules:
+          - name: libsass
+            cleanup:
+              - '*'
+            buildsystem: autotools
+            sources:
+              - type: archive
+                url: https://github.com/sass/libsass/archive/refs/tags/3.6.5.tar.gz
+                sha256: 89d8f2c46ae2b1b826b58ce7dde966a176bac41975b82e84ad46b01a55080582
+              - type: script
+                dest-filename: autogen.sh
+                commands:
+                  - autoreconf -si
 
   - name: granite
     buildsystem: meson
