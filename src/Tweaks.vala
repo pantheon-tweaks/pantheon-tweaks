@@ -6,6 +6,7 @@
 
 public class PantheonTweaks.TweaksPlug : Switchboard.Plug {
     private PantheonTweaks.Categories categories;
+    private Gtk.Grid grid;
 
     public TweaksPlug () {
         GLib.Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
@@ -33,12 +34,33 @@ public class PantheonTweaks.TweaksPlug : Switchboard.Plug {
      * Returns the main Gtk.Widget that contains all of our UI for Switchboard.
      */
     public override Gtk.Widget get_widget () {
-        if (categories == null) {
-            categories = new Categories ();
-            categories.show_all ();
+        if (grid == null) {
+            var info_title = _("Pantheon Tweaks is now an independent desktop app!");
+            var info_details = _("You can download it from <a href=\"https://flathub.org/\">Flathub</a> when it's ready.");
+
+            var info_label = new Gtk.Label ("<b>%s</b> %s".printf (info_title, info_details)) {
+                use_markup = true,
+                wrap = true,
+                xalign = 0
+            };
+
+            var infobar = new Gtk.InfoBar ();
+            var infobar_box = (Gtk.Box) infobar.get_content_area ();
+            infobar_box.pack_start (info_label);
+
+            var categories = new Categories ();
+
+            grid = new Gtk.Grid () {
+                orientation = Gtk.Orientation.VERTICAL
+            };
+
+            grid.add (infobar);
+            grid.add (categories);
+
+            grid.show_all ();
         }
 
-        return categories;
+        return grid;
     }
 
     public override void shown () { }
