@@ -38,9 +38,9 @@ You can launch it from the app launcher after installation.
 If you would like to install Pantheon Tweaks from source code, clone this repository and then run the following command:
 
 ```
-sudo apt install flatpak-builder
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak-builder build --user --install --force-clean --install-deps-from=flathub io.github.pantheon_tweaks.pantheon-tweaks.yml
+flatpak install -y --user flathub org.flatpak.Builder
+flatpak run org.flatpak.Builder build --user --install --force-clean --install-deps-from=flathub io.github.pantheon_tweaks.pantheon-tweaks.yml
 ```
 
 ## Special Thanks
