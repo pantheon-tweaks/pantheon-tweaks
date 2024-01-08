@@ -2,6 +2,17 @@
 # Wrapper script to get/set GSettings from the host in the sandboxed Pantheon Tweaks.
 # Originally from https://github.com/flathub/ca.desrt.dconf-editor/blob/master/start-dconf-editor.sh
 
+finalize()
+{
+  for dir in "${HOST_XDG_DATA_DIRS//:/ }"; do
+    unlink $dir/glib-2.0/schemas
+    rmdir $dir/glib-2.0
+    rmdir $dir
+  done
+
+  rmdir "$bridge_dir"
+}
+
 IFS=: read -ra host_data_dirs < <(flatpak-spawn --host sh -c 'echo "$XDG_DATA_DIRS"')
 
 # To avoid potentially muddying up $XDG_DATA_DIRS too much, we link the schema paths
@@ -33,4 +44,6 @@ if [[ ! -z "${HOST_XDG_DATA_DIRS}" ]]; then
 fi
 
 export XDG_DATA_DIRS
-exec pantheon-tweaks "$@"
+trap finalize SIGINT
+
+pantheon-tweaks "$@" && finalize
