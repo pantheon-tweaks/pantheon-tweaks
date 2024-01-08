@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>io.github.pantheon_tweaks.pantheon-tweaks</id>
+  <launchable type="desktop-id">io.github.pantheon_tweaks.pantheon-tweaks.desktop</launchable>
   <name>Pantheon Tweaks</name>
   <summary>Tweak Pantheon settings</summary>
   <description>
@@ -130,6 +131,8 @@
       <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/1.1.2/data/screenshot.png</image>
     </screenshot>
   </screenshots>
+  <content_rating type="oars-1.1" />
+  <developer_name>Pantheon Tweaks Developers</developer_name>
   <url type="homepage">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
   <url type="bugtracker">https://github.com/pantheon-tweaks/pantheon-tweaks/issues</url>
   <metadata_license>CC0-1.0</metadata_license>
