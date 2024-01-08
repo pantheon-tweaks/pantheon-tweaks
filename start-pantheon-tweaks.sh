@@ -44,6 +44,10 @@ if [[ ! -z "${HOST_XDG_DATA_DIRS}" ]]; then
 fi
 
 export XDG_DATA_DIRS
-trap finalize SIGINT
+trap "finalize; exit 1" SIGINT
 
-pantheon-tweaks "$@" && finalize
+pantheon-tweaks "$@"
+RET=$?
+
+finalize
+exit $RET
