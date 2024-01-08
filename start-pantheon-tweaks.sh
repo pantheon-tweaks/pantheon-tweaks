@@ -2,6 +2,8 @@
 # Wrapper script to get/set GSettings from the host in the sandboxed Pantheon Tweaks.
 # Originally from https://github.com/flathub/ca.desrt.dconf-editor/blob/master/start-dconf-editor.sh
 
+trap "finalize; exit 1" SIGINT
+
 finalize()
 {
   for dir in "${HOST_XDG_DATA_DIRS//:/ }"; do
@@ -44,7 +46,6 @@ if [[ ! -z "${HOST_XDG_DATA_DIRS}" ]]; then
 fi
 
 export XDG_DATA_DIRS
-trap "finalize; exit 1" SIGINT
 
 pantheon-tweaks "$@"
 RET=$?
