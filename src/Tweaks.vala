@@ -42,7 +42,7 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
         if (desktop_environment != "Pantheon") {
             warning ("Tweaks is made for and only runs on Pantheon. Your desktop environment \"%s\" is not supported.",
                      desktop_environment);
-            return -1;
+            return 1;
         }
 
         var app = new Tweaks ();
