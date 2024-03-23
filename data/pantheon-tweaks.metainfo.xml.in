@@ -132,7 +132,11 @@
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1" />
+  <!-- developer_name has deprecated since AppStream 1.0 -->
   <developer_name>Pantheon Tweaks Developers</developer_name>
+  <developer id="io.github.pantheon_tweaks">
+    <name>Pantheon Tweaks Developers</name>
+  </developer>
   <url type="homepage">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
   <url type="bugtracker">https://github.com/pantheon-tweaks/pantheon-tweaks/issues</url>
   <metadata_license>CC0-1.0</metadata_license>
