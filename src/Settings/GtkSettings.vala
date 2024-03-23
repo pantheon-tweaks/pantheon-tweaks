@@ -28,7 +28,7 @@ public class PantheonTweaks.GtkSettings : GLib.Object {
     public GtkSettings () {
         keyfile = new GLib.KeyFile ();
 
-        path = GLib.Environment.get_user_config_dir () + "/gtk-3.0/settings.ini";
+        path = GLib.Environment.get_home_dir () + "/.config/gtk-3.0/settings.ini";
 
         if (!(File.new_for_path (path).query_exists ())) {
             return;

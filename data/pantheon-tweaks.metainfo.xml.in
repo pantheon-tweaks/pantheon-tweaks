@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="addon">
-  <id>com.github.pantheon-tweaks.pantheon-tweaks</id>
-  <extends>io.elementary.switchboard</extends>
+<component type="desktop-application">
+  <id>io.github.pantheon_tweaks.pantheon-tweaks</id>
+  <launchable type="desktop-id">io.github.pantheon_tweaks.pantheon-tweaks.desktop</launchable>
   <name>Pantheon Tweaks</name>
   <summary>Tweak Pantheon settings</summary>
   <description>
     <p>
-      A system settings panel for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance.
+      A system settings app for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance.
     </p>
   </description>
-  <icon type="stock">preferences-desktop-tweaks</icon>
-  <translation type="gettext">pantheon-tweaks-plug</translation>
+  <translation type="gettext">pantheon-tweaks</translation>
   <releases>
     <release version="1.1.2" date="2024-01-07" urgency="low">
       <description translatable="no">
@@ -132,6 +131,12 @@
       <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/1.1.2/data/screenshot.png</image>
     </screenshot>
   </screenshots>
+  <content_rating type="oars-1.1" />
+  <!-- developer_name has deprecated since AppStream 1.0 -->
+  <developer_name>Pantheon Tweaks Developers</developer_name>
+  <developer id="io.github.pantheon_tweaks">
+    <name>Pantheon Tweaks Developers</name>
+  </developer>
   <url type="homepage">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
   <url type="bugtracker">https://github.com/pantheon-tweaks/pantheon-tweaks/issues</url>
   <metadata_license>CC0-1.0</metadata_license>

@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the pantheon-tweaks-plug package.
+# This file is distributed under the same license as the pantheon-tweaks package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: pantheon-tweaks-plug\n"
+"Project-Id-Version: pantheon-tweaks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-03 21:58+0900\n"
+"POT-Creation-Date: 2024-01-07 13:23+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,21 +17,29 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/pantheon-tweaks.metainfo.xml.in:5
+#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in:4
 msgid "Pantheon Tweaks"
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in:6 src/Tweaks.vala:26
+#: data/pantheon-tweaks.desktop.in:4
+msgid "Customization Tool"
+msgstr ""
+
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in:5
 msgid "Tweak Pantheon settings"
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in:8
+#: data/pantheon-tweaks.desktop.in:11
+msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
+msgstr ""
+
+#: data/pantheon-tweaks.metainfo.xml.in:7
 msgid ""
-"A system settings panel for the Pantheon Desktop that lets you easily and "
+"A system settings app for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in:107
+#: data/pantheon-tweaks.metainfo.xml.in:122
 msgid "Appearance pane"
 msgstr ""
 
@@ -286,7 +294,7 @@ msgstr ""
 msgid "Terminal font:"
 msgstr ""
 
-#: src/Tweaks.vala:25
+#: src/MainWindow.vala:17
 msgid "Tweaks"
 msgstr ""
 
