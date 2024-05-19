@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-tweaks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-07 13:23+0900\n"
+"POT-Creation-Date: 2024-05-19 01:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in:4
+#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in:5
 msgid "Pantheon Tweaks"
 msgstr ""
 
@@ -25,7 +25,7 @@ msgstr ""
 msgid "Customization Tool"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in:5
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in:6
 msgid "Tweak Pantheon settings"
 msgstr ""
 
@@ -33,14 +33,19 @@ msgstr ""
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in:7
+#: data/pantheon-tweaks.metainfo.xml.in:8
 msgid ""
 "A system settings app for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in:122
+#: data/pantheon-tweaks.metainfo.xml.in:130
 msgid "Appearance pane"
+msgstr ""
+
+#. developer_name has deprecated since AppStream 1.0
+#: data/pantheon-tweaks.metainfo.xml.in:136
+msgid "Pantheon Tweaks Developers"
 msgstr ""
 
 #: src/Panes/AppearancePane.vala:22
