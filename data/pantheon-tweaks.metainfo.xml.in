@@ -11,6 +11,17 @@
   </description>
   <translation type="gettext">pantheon-tweaks</translation>
   <releases>
+    <release version="2.0.0" date="2024-05-19" urgency="medium">
+      <description translatable="no">
+        <ul>
+          <li>Pantheon Tweaks is now an independent desktop app instead of a plug in System Settings</li>
+        </ul>
+        <p>Translation updates:</p>
+        <ul>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1.2" date="2024-01-07" urgency="low">
       <description translatable="no">
         <ul>
@@ -128,7 +139,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>Appearance pane</caption>
-      <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/1.1.2/data/screenshot.png</image>
+      <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/2.0.0/data/screenshot.png</image>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1" />
