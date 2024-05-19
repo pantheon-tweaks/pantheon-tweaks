@@ -9,7 +9,7 @@ finish-args:
   - '--socket=wayland'
   - '--socket=fallback-x11'
 
-  # grant read, write, and create access for settings.ini of GTK and theme dirs
+  # Grant read, write, and create access for settings.ini of GTK and theme dirs
   - '--filesystem=home/.config/gtk-3.0:create'
   - '--filesystem=home/.icons:create'
   - '--filesystem=home/.local/share/sounds:create'
@@ -17,22 +17,22 @@ finish-args:
   # Pass the directory where the host's /usr is mounted under, so that we can load system theme files
   - '--env=USR_DIR_PREFIX=/var/run/host'
 
-  # needed to read/write GSettings of the host
+  # Needed to read/write GSettings of the host
   - '--talk-name=ca.desrt.dconf'
   - '--filesystem=xdg-run/dconf'
   - '--filesystem=host:ro'
   - '--env=DCONF_USER_CONFIG_DIR=.config/dconf'
   - '--env=GIO_EXTRA_MODULES=/app/lib/gio/modules/'
-  # This is not recommended by Flathub though, we need it to access host GSettings.
-  # From https://docs.flathub.org/docs/for-app-authors/requirements/?manifest-language=yml#talk:
-  #   Talk permissions are largely unrestricted, with the exception of org.freedesktop.Flatpak
-  #   but always try to use the minimum subset needed.
+  # This is not recommended by Flathub though, we need it to access host's GSettings.
+  # From https://docs.flathub.org/docs/for-app-authors/linter/#finish-args-flatpak-spawn-access
+  #   This allows applications to launch arbitrary commands on the host and is restricted and granted on a case-by-case basis.
+  #   This must not be used unless absolutely necessary and when no existing solutions using Flatpak or portals exist.
   - '--talk-name=org.freedesktop.Flatpak'
 
-  # needed for PrefersAccentColor
+  # Needed for PrefersAccentColor
   - '--system-talk-name=org.freedesktop.Accounts'
 modules:
-  # patch dconf to read/write GSettings of the host
+  # Patch dconf to read/write GSettings of the host
   - name: dconf
     buildsystem: meson
     config-opts:
