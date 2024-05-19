@@ -6,7 +6,7 @@ Upstream-Contact: Felipe Escoto <felescoto95@hotmail.com>
 Files:
  *
 Copyright: 2014-2020 elementary Tweaks Developers
-           2020-2023 Pantheon Tweaks Developers
+           2020-2024 Pantheon Tweaks Developers
 License: GPL-3.0+
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -27,5 +27,5 @@ Comment:
 Files:
  data/pantheon-tweaks.metainfo.xml.in
 Copyright: 2014-2020 elementary Tweaks Developers
-           2020-2023 Pantheon Tweaks Developers
+           2020-2024 Pantheon Tweaks Developers
 License: CC0-1.0
