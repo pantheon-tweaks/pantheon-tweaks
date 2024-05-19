@@ -1,3 +1,4 @@
+data/pantheon-tweaks.desktop.in
 data/pantheon-tweaks.metainfo.xml.in
 src/Panes/AppearancePane.vala
 src/Panes/FilesPane.vala
@@ -5,4 +6,5 @@ src/Panes/FontsPane.vala
 src/Panes/MiscPane.vala
 src/Panes/TerminalPane.vala
 src/Tweaks.vala
+src/MainWindow.vala
 src/Widgets/Categories.vala

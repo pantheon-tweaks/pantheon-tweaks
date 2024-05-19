@@ -37,7 +37,7 @@ public class PantheonTweaks.Categories : Gtk.Paned {
             });
         }
 
-        pack1 (pane_list, false, false);
+        add1 (pane_list);
         add2 (overlay);
 
         pane_list.row_selected.connect ((row) => {

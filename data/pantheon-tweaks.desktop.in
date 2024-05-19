@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Pantheon Tweaks
+GenericName=Customization Tool
+Comment=Tweak Pantheon settings
+Categories=GTK;System;
+Exec=pantheon-tweaks
+Icon=io.github.pantheon_tweaks.pantheon-tweaks
+Terminal=false
+Type=Application
+Keywords=Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;
+OnlyShowIn=Pantheon;

@@ -5,10 +5,9 @@ project(
     meson_version: '>= 0.51.0'
 )
 
-switchboard_dep = dependency('switchboard-2.0')
-gettext_name = meson.project_name() + '-plug'
-libdir = get_option('prefix') / get_option('libdir')
-pkgdatadir = switchboard_dep.get_variable(pkgconfig: 'plugsdir', pkgconfig_define: ['libdir', libdir]) / 'personal'
+gettext_name = meson.project_name()
+# Use this when reverse-DNS format is required
+application_id = 'io.github.pantheon_tweaks.' + meson.project_name()
 
 i18n = import('i18n')
 
@@ -29,7 +28,8 @@ config_file = configure_file(
 subdir('data')
 subdir('po')
 
-plug_files = files(
+source_files = files(
+    'src/MainWindow.vala',
     'src/Tweaks.vala',
     'src/Settings/AccountsService.vala',
     'src/Settings/GtkSettings.vala',
@@ -43,20 +43,18 @@ plug_files = files(
     'src/Widgets/Categories.vala',
 )
 
-shared_module(
+executable(
     meson.project_name(),
-    plug_files,
+    source_files,
     config_file,
     dependencies: [
         dependency('gee-0.8'),
         dependency('glib-2.0'),
         dependency('granite', version: '>= 6.0.0'),
         dependency('gtk+-3.0'),
-        meson.get_compiler('vala').find_library('posix'),
-        switchboard_dep
+        meson.get_compiler('vala').find_library('posix')
     ],
-    install: true,
-    install_dir: pkgdatadir
+    install: true
 )
 
 meson.add_install_script('meson/post_install.py')
