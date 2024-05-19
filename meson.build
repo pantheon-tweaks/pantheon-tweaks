@@ -1,7 +1,7 @@
 project(
     'pantheon-tweaks',
     'vala', 'c',
-    version: '1.1.2',
+    version: '2.0.0',
     meson_version: '>= 0.51.0'
 )
 
