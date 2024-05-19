@@ -5,18 +5,20 @@ project(
     meson_version: '>= 0.51.0'
 )
 
+gettext_name = meson.project_name()
 # Use this when reverse-DNS format is required
 application_id = 'io.github.pantheon_tweaks.' + meson.project_name()
+
 i18n = import('i18n')
 
 add_global_arguments(
-    '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
+    '-DGETTEXT_PACKAGE="@0@"'.format(gettext_name),
     language:'c'
 )
 
 config_data = configuration_data()
 config_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
-config_data.set_quoted('GETTEXT_PACKAGE', meson.project_name())
+config_data.set_quoted('GETTEXT_PACKAGE', gettext_name)
 config_file = configure_file(
     input: 'src/Config.vala.in',
     output: '@BASENAME@',
