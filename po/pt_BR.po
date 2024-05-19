@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-19 02:08+0000\n"
+"POT-Creation-Date: 2024-05-19 05:34+0000\n"
 "PO-Revision-Date: 2018-10-14 23:20-0300\n"
 "Last-Translator: Helder Bertoldo <helder.bertoldo@gmail.com>\n"
 "Language-Team: Portuguese Brazilian <LL@li.org>\n"
@@ -36,7 +36,7 @@ msgstr ""
 
 #: data/pantheon-tweaks.metainfo.xml.in:8
 msgid ""
-"A system settings app for the Pantheon Desktop that lets you easily and "
+"A system customization app for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr ""
 
