@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-03 21:58+0900\n"
+"POT-Creation-Date: 2024-05-19 02:08+0000\n"
 "PO-Revision-Date: 2023-02-01 20:27+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
@@ -18,25 +18,40 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-10-28 07:58+0000\n"
 "X-Generator: Launchpad (build 17203)\n"
 
-#: data/pantheon-tweaks.metainfo.xml.in:5
+#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in:5
 msgid "Pantheon Tweaks"
 msgstr "Pantheon Tweaks"
 
-#: data/pantheon-tweaks.metainfo.xml.in:6 src/Tweaks.vala:26
+#: data/pantheon-tweaks.desktop.in:4
+msgid "Customization Tool"
+msgstr ""
+
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in:6
 msgid "Tweak Pantheon settings"
 msgstr "Modifica le impostazioni di Pantheon"
 
+#: data/pantheon-tweaks.desktop.in:11
+msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
+msgstr ""
+
 #: data/pantheon-tweaks.metainfo.xml.in:8
+#, fuzzy
 msgid ""
-"A system settings panel for the Pantheon Desktop that lets you easily and "
+"A system settings app for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr ""
 "Un pannello delle impostazioni di sistema per Pantheon Desktop che ti "
 "consente di personalizzare in modo sicuro l'aspetto del tuo desktop."
 
-#: data/pantheon-tweaks.metainfo.xml.in:107
+#: data/pantheon-tweaks.metainfo.xml.in:130
 msgid "Appearance pane"
 msgstr "Aspetto del pannello"
+
+#. developer_name has deprecated since AppStream 1.0
+#: data/pantheon-tweaks.metainfo.xml.in:136
+#, fuzzy
+msgid "Pantheon Tweaks Developers"
+msgstr "Pantheon Tweaks"
 
 #: src/Panes/AppearancePane.vala:22
 msgid "Appearance"
@@ -302,7 +317,7 @@ msgstr "Mostra schede:"
 msgid "Terminal font:"
 msgstr "Terminale"
 
-#: src/Tweaks.vala:25
+#: src/MainWindow.vala:17
 msgid "Tweaks"
 msgstr "Tweaks"
 

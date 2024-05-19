@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-03 21:58+0900\n"
+"POT-Creation-Date: 2024-05-19 02:08+0000\n"
 "PO-Revision-Date: 2022-02-09 15:09+0800\n"
 "Last-Translator: imgradeone <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -18,23 +18,38 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-08-30 08:42+0000\n"
 "X-Generator: Poedit 3.0\n"
 
-#: data/pantheon-tweaks.metainfo.xml.in:5
+#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in:5
 msgid "Pantheon Tweaks"
 msgstr "Pantheon 优化"
 
-#: data/pantheon-tweaks.metainfo.xml.in:6 src/Tweaks.vala:26
+#: data/pantheon-tweaks.desktop.in:4
+msgid "Customization Tool"
+msgstr ""
+
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in:6
 msgid "Tweak Pantheon settings"
 msgstr "修改 Pantheon 桌面环境设置"
 
+#: data/pantheon-tweaks.desktop.in:11
+msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
+msgstr ""
+
 #: data/pantheon-tweaks.metainfo.xml.in:8
+#, fuzzy
 msgid ""
-"A system settings panel for the Pantheon Desktop that lets you easily and "
+"A system settings app for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr "专为 Pantheon 设计的系统设置面板，帮助您简便、安全地修改桌面外观。"
 
-#: data/pantheon-tweaks.metainfo.xml.in:107
+#: data/pantheon-tweaks.metainfo.xml.in:130
 msgid "Appearance pane"
 msgstr "外观面板"
+
+#. developer_name has deprecated since AppStream 1.0
+#: data/pantheon-tweaks.metainfo.xml.in:136
+#, fuzzy
+msgid "Pantheon Tweaks Developers"
+msgstr "Pantheon 优化"
 
 #: src/Panes/AppearancePane.vala:22
 msgid "Appearance"
@@ -289,7 +304,7 @@ msgstr "显示标签栏："
 msgid "Terminal font:"
 msgstr "终端"
 
-#: src/Tweaks.vala:25
+#: src/MainWindow.vala:17
 msgid "Tweaks"
 msgstr "优化"
 
