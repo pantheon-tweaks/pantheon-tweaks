@@ -1,13 +1,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# ryonakano <ryonakaknock3@gmail.com>, 2018, 2020-2023.
+# ryonakano <ryonakaknock3@gmail.com>, 2018, 2020-2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-19 02:08+0000\n"
-"PO-Revision-Date: 2023-10-03 22:04+0900\n"
+"PO-Revision-Date: 2024-05-19 11:12+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -22,7 +22,7 @@ msgstr "Pantheon Tweaks"
 
 #: data/pantheon-tweaks.desktop.in:4
 msgid "Customization Tool"
-msgstr ""
+msgstr "カスタマイズツール"
 
 #: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in:6
 msgid "Tweak Pantheon settings"
@@ -31,15 +31,16 @@ msgstr "Pantheon の設定を微調整します"
 #: data/pantheon-tweaks.desktop.in:11
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
+"Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;高度;設定;フォント;"
+"テーマ;音量;ファイル;ターミナル;端末;"
 
 #: data/pantheon-tweaks.metainfo.xml.in:8
-#, fuzzy
 msgid ""
 "A system settings app for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr ""
 "簡単かつ安全にデスクトップの外観をカスタマイズできる、Pantheon デスクトップ向"
-"けのシステム設定パネルです。"
+"けのシステム設定アプリです。"
 
 #: data/pantheon-tweaks.metainfo.xml.in:130
 msgid "Appearance pane"
@@ -47,9 +48,8 @@ msgstr "“外観”ペイン"
 
 #. developer_name has deprecated since AppStream 1.0
 #: data/pantheon-tweaks.metainfo.xml.in:136
-#, fuzzy
 msgid "Pantheon Tweaks Developers"
-msgstr "Pantheon Tweaks"
+msgstr "Pantheon Tweaks の開発者"
 
 #: src/Panes/AppearancePane.vala:22
 msgid "Appearance"
@@ -334,7 +334,7 @@ msgstr "デフォルトにリセット"
 
 #: src/Widgets/Categories.vala:119
 msgid "Are you sure you want to reset personalization?"
-msgstr "個人設定をリセットしてもよろしいですか？"
+msgstr "個人設定をリセットしてもよろしいですか?"
 
 #: src/Widgets/Categories.vala:120
 msgid ""
