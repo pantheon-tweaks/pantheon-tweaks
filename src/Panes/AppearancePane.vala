@@ -71,8 +71,6 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
             "~/.local/share/themes/<%s>/gtk-3.0".printf (_("theme-name"))
         ));
 
-        var gtk_dir_button = new DestinationButton (".local/share/themes");
-
         var icon_label = new SummaryLabel (_("Icons:"));
         var icon_list = ThemeSettings.get_themes ("icons", "index.theme");
         var icon_combobox = new ComboBoxText.from_list (icon_list);
@@ -81,8 +79,6 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         var icon_info = new DimLabel (_("To show custom icons here, put them in %s.").printf (
             "~/.icons/<%s>".printf (_("theme-name"))
         ));
-
-        var icon_dir_button = new DestinationButton (".icons");
 
         var cursor_label = new SummaryLabel (_("Cursor:"));
         var cursor_list = ThemeSettings.get_themes ("icons", "cursors");
@@ -93,8 +89,6 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
             "~/.icons/<%s>/cursors".printf (_("theme-name"))
         ));
 
-        var cursor_dir_button = new DestinationButton (".icons");
-
         var sound_label = new SummaryLabel (_("Sound:"));
         var sound_list = ThemeSettings.get_themes ("sounds", "index.theme");
         var sound_combobox = new ComboBoxText.from_list (sound_list);
@@ -103,8 +97,6 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         var sound_info = new DimLabel (_("To show custom sounds here, put them in %s.").printf (
             "~/.local/share/sounds/<%s>".printf (_("theme-name"))
         ));
-
-        var sound_dir_button = new DestinationButton (".local/share/sounds");
 
         var dark_style_label = new SummaryLabel (_("Force to use dark stylesheet:"));
         var dark_style_switch = new Switch ();
@@ -130,19 +122,15 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         content_area.attach (gtk_label, 0, 1, 1, 1);
         content_area.attach (gtk_combobox, 1, 1, 1, 1);
         content_area.attach (gtk_info, 1, 2, 1, 1);
-        content_area.attach (gtk_dir_button, 2, 2, 1, 1);
         content_area.attach (icon_label, 0, 3, 1, 1);
         content_area.attach (icon_combobox, 1, 3, 1, 1);
         content_area.attach (icon_info, 1, 4, 1, 1);
-        content_area.attach (icon_dir_button, 2, 4, 1, 1);
         content_area.attach (cursor_label, 0, 5, 1, 1);
         content_area.attach (cursor_combobox, 1, 5, 1, 1);
         content_area.attach (cursor_info, 1, 6, 1, 1);
-        content_area.attach (cursor_dir_button, 2, 6, 1, 1);
         content_area.attach (sound_label, 0, 7, 1, 1);
         content_area.attach (sound_combobox, 1, 7, 1, 1);
         content_area.attach (sound_info, 1, 8, 1, 1);
-        content_area.attach (sound_dir_button, 2, 8, 1, 1);
         content_area.attach (dark_style_label, 0, 9, 1, 1);
         content_area.attach (dark_style_switch, 1, 9, 1, 1);
         content_area.attach (prefer_dark_info, 1, 10, 1, 1);

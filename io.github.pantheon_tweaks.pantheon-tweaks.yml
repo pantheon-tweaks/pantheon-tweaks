@@ -9,11 +9,12 @@ finish-args:
   - '--socket=wayland'
   - '--socket=fallback-x11'
 
-  # Grant read, write, and create access for settings.ini of GTK and theme dirs
-  - '--filesystem=home/.config/gtk-3.0:create'
-  - '--filesystem=home/.icons:create'
-  - '--filesystem=home/.local/share/sounds:create'
-  - '--filesystem=home/.local/share/themes:create'
+  # Grant read and write access for settings.ini of GTK
+  - '--filesystem=home/.config/gtk-3.0:rw'
+  # Grant read access for theme dirs
+  - '--filesystem=home/.icons:ro'
+  - '--filesystem=home/.local/share/sounds:ro'
+  - '--filesystem=home/.local/share/themes:ro'
   # Pass the directory where the host's /usr is mounted under, so that we can load system theme files
   - '--env=USR_DIR_PREFIX=/var/run/host'
 
