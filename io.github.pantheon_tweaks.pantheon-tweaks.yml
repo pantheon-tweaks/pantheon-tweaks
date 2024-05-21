@@ -38,10 +38,10 @@ modules:
     config-opts:
       - '-Dbash_completion=false'
       - '-Dman=false'
-      - '-Dsystemduserunitdir=/app/lib/systemd/user'
     cleanup:
       - '/include'
       - '/lib/pkgconfig'
+      - '/lib/systemd'
       - '/libexec'
       - '/share/dbus-1'
     sources:
@@ -96,16 +96,12 @@ modules:
     sources:
       - type: dir
         path: .
+      - type: file
+        path: start-pantheon-tweaks.sh
     post-install:
+      # Install wrapper script
+      - install -Dm 755 $FLATPAK_BUILDER_BUILDDIR/start-pantheon-tweaks.sh /app/bin/start-pantheon-tweaks
       # Run the wrapper script instead of the executable
       - 'desktop-file-edit --set-key=Exec --set-value=start-pantheon-tweaks /app/share/applications/io.github.pantheon_tweaks.pantheon-tweaks.desktop'
       # Tell the real executable name to the WM to prevent duplicated dock icons
       - 'desktop-file-edit --set-key=StartupWMClass --set-value=pantheon-tweaks /app/share/applications/io.github.pantheon_tweaks.pantheon-tweaks.desktop'
-
-  - name: wrapper-script
-    buildsystem: simple
-    sources:
-      - type: file
-        path: start-pantheon-tweaks.sh
-    build-commands:
-      - install -Dm 755 start-pantheon-tweaks.sh /app/bin/start-pantheon-tweaks
