@@ -231,6 +231,8 @@ public class PantheonTweaks.Categories : Gtk.Paned {
                                 _("The destination folder doesn't exist and tried to create new but failed. The following error message might be helpful:"),
                                 e.message
                             );
+
+                            return;
                         }
                     }
 
