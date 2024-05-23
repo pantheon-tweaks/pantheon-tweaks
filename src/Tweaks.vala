@@ -37,14 +37,6 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
     }
 
     public static int main (string[] args) {
-        // Prevent Tweaks from launching and breaking preferences on other DEs
-        string desktop_environment = GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP");
-        if (desktop_environment != "Pantheon") {
-            warning ("Tweaks is made for and only runs on Pantheon. Your desktop environment \"%s\" is not supported.",
-                     desktop_environment);
-            return 1;
-        }
-
         var app = new Tweaks ();
         return app.run (args);
     }
