@@ -11,6 +11,13 @@
   </description>
   <translation type="gettext">pantheon-tweaks</translation>
   <releases>
+    <release version="2.0.2" date="2024-05-23" urgency="low">
+      <description translatable="no">
+        <ul>
+          <li>Show an alert view if launched on unsupported desktop environments</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.0.1" date="2024-05-22" urgency="low">
       <description translatable="no">
         <ul>
