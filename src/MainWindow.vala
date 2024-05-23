@@ -28,7 +28,7 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
         if (desktop_environment != "Pantheon") {
             var unsupported_view = new Granite.Widgets.AlertView (
                 _("Your Desktop Environment Is Not Supported"),
-                _("Tweaks is made for and only runs on Pantheon. Your desktop environment \"%s\" is not supported.").printf (desktop_environment),
+                _("Tweaks is a system customization tool for Pantheon. Your desktop environment \"%s\" is not supported.").printf (desktop_environment),
                 "dialog-warning"
             );
             add (unsupported_view);
