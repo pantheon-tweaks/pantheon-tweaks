@@ -24,6 +24,8 @@ You can download and install Pantheon Tweaks from Flathub:
 
 [<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/io.github.pantheon_tweaks.pantheon-tweaks)
 
+You can launch it from the app launcher after installation.
+
 > [!TIP]
 > Pantheon Tweaks (and its ancestor, elementary Tweaks) was a plug of System Setting and has been provided through PPA for a long time, but it's an independent Flatpak app since 2.0.0.
 
