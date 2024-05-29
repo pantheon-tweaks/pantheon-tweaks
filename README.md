@@ -17,13 +17,9 @@ Pantheon Tweaks supports the following versions of elementary OS:
 
 For users on elementary OS Hera or below, please use [elementary Tweaks](https://github.com/elementary-tweaks/elementary-tweaks) instead.
 
-It should also work on other distirbutions using Pantheon, thanks to Flatpak.
+Pantheon Tweaks should also work on other distirbutions using Pantheon, thanks to Flatpak.
 
 ### For Users
-We're working on submitting Pantheon Tweaks to Flathub for easier installation. You wll be able to download and install Pantheon Tweaks from Flathub soon, hold on!
-
-<!-- TODO Replace with these lines when it's available on Flathub -->
-<!--
 You can download and install Pantheon Tweaks from Flathub:
 
 [<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/io.github.pantheon_tweaks.pantheon-tweaks)
@@ -31,8 +27,7 @@ You can download and install Pantheon Tweaks from Flathub:
 You can launch it from the app launcher after installation.
 
 > [!TIP]
-> Pantheon Tweaks (and its ancestor, elementary Tweaks) was a plug of System Setting and we'd provided it through PPA for a long time, but it's an independent Flatpak app since 2.0.0.
--->
+> Pantheon Tweaks (and its ancestor, elementary Tweaks) was a plug of System Setting and has been provided through PPA for a long time, but it's an independent Flatpak app since 2.0.0.
 
 ### For Developers
 If you would like to install Pantheon Tweaks from source code, clone this repository and then run the following commands:
