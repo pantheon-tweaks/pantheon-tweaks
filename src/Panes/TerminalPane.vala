@@ -49,7 +49,7 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         var tab_bar_combo = combobox_text_new (tab_bar_map);
 
         var term_font_label = summary_label_new (_("Terminal font:"));
-        var term_font_button = font_button_new  ();
+        var term_font_button = font_button_new ();
 
         content_area.attach (follow_last_tab_label, 0, 0, 1, 1);
         content_area.attach (follow_last_tab_switch, 1, 0, 1, 1);

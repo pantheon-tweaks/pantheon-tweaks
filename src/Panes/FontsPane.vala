@@ -20,13 +20,13 @@ public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
         var default_font_button = font_button_new ();
 
         var document_font_label = summary_label_new (_("Document font:"));
-        var document_font_button = font_button_new  ();
+        var document_font_button = font_button_new ();
 
         var mono_font_label = summary_label_new (_("Monospace font:"));
-        var mono_font_button = font_button_new  ();
+        var mono_font_button = font_button_new ();
 
         var titlebar_font_label = summary_label_new (_("Titlebar font:"));
-        var titlebar_font_button = font_button_new  ();
+        var titlebar_font_button = font_button_new ();
 
         content_area.attach (default_font_label, 0, 0, 1, 1);
         content_area.attach (default_font_button, 1, 0, 1, 1);
