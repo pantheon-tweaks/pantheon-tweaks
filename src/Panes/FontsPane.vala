@@ -37,10 +37,10 @@ public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
         content_area.attach (titlebar_font_label, 0, 3, 1, 1);
         content_area.attach (titlebar_font_button, 1, 3, 1, 1);
 
-        interface_settings.bind ("font-name", default_font_button, "font-name", SettingsBindFlags.DEFAULT);
-        interface_settings.bind ("document-font-name", document_font_button, "font-name", SettingsBindFlags.DEFAULT);
-        interface_settings.bind ("monospace-font-name", mono_font_button, "font-name", SettingsBindFlags.DEFAULT);
-        window_settings.bind ("titlebar-font", titlebar_font_button, "font-name", SettingsBindFlags.DEFAULT);
+        interface_settings.bind ("font-name", default_font_button, "font", SettingsBindFlags.DEFAULT);
+        interface_settings.bind ("document-font-name", document_font_button, "font", SettingsBindFlags.DEFAULT);
+        interface_settings.bind ("monospace-font-name", mono_font_button, "font", SettingsBindFlags.DEFAULT);
+        window_settings.bind ("titlebar-font", titlebar_font_button, "font", SettingsBindFlags.DEFAULT);
 
         on_click_reset (() => {
             string[] keys = {"font-name", "document-font-name", "monospace-font-name"};
