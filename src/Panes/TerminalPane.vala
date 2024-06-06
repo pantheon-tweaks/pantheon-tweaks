@@ -73,7 +73,7 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         settings.bind ("remember-tabs", rem_tabs_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("audible-bell", term_bell_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("tab-bar-behavior", tab_bar_combo, "active_id", SettingsBindFlags.DEFAULT);
-        settings.bind ("font", term_font_button, "font-name", SettingsBindFlags.DEFAULT);
+        settings.bind ("font", term_font_button, "font", SettingsBindFlags.DEFAULT);
 
         on_click_reset (() => {
             string[] keys = {"unsafe-paste-alert", "natural-copy-paste",
