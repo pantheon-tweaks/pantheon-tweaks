@@ -108,7 +108,6 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
         var dark_style_label = new SummaryLabel (_("Force to use dark stylesheet:"));
         var dark_style_switch = new Switch ();
-        dark_style_switch.state = gtk_settings.prefer_dark_theme;
         var prefer_dark_info = new DimLabel (
             _("Forces dark style on all apps, even if it's not supported. Requires restarting the application.")
         );
@@ -159,7 +158,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         interface_settings.bind ("icon-theme", icon_combobox, "active_id", SettingsBindFlags.DEFAULT);
         interface_settings.bind ("cursor-theme", cursor_combobox, "active_id", SettingsBindFlags.DEFAULT);
         sound_settings.bind ("theme-name", sound_combobox, "active_id", SettingsBindFlags.DEFAULT);
-        dark_style_switch.bind_property ("active", gtk_settings, "prefer-dark-theme", BindingFlags.BIDIRECTIONAL);
+        dark_style_switch.bind_property ("active", gtk_settings, "prefer-dark-theme", BindingFlags.SYNC_CREATE | BindingFlags.BIDIRECTIONAL);
 
         if (((GLib.DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
             ((GLib.DBusProxy) pantheon_act).g_properties_changed.connect ((changed, invalid) => {
