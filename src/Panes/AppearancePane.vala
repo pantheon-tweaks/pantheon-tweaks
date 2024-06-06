@@ -108,7 +108,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
         var dark_style_label = new SummaryLabel (_("Force to use dark stylesheet:"));
         var dark_style_switch = new Switch ();
-        dark_style_switch.state = gtk_settings.prefer_dark_theme;
+        dark_style_switch.active = gtk_settings.prefer_dark_theme;
         var prefer_dark_info = new DimLabel (
             _("Forces dark style on all apps, even if it's not supported. Requires restarting the application.")
         );
@@ -182,7 +182,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
             string new_layout = controls_combobox.active_id;
             appearance_settings.set_string ("button-layout", new_layout);
             gnome_wm_settings.set_string ("button-layout", new_layout);
-            x_settings.set_gnome_menu (gnome_menu.state, new_layout);
+            x_settings.set_gnome_menu (gnome_menu.active, new_layout);
         });
 
         gnome_menu.notify["active"].connect (() => {
@@ -213,7 +213,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
     private void init_data () {
         gtk_combobox.active_id = interface_settings.get_string ("gtk-theme");
         controls_combobox.active_id = appearance_settings.get_string ("button-layout");
-        gnome_menu.state = x_settings.has_gnome_menu ();
+        gnome_menu.active = x_settings.has_gnome_menu ();
     }
 
     private Gee.HashMap<string, string> get_preset_button_layouts () {
