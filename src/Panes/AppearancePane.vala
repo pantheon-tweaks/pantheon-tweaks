@@ -108,7 +108,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
         var dark_style_label = new SummaryLabel (_("Force to use dark stylesheet:"));
         var dark_style_switch = new Switch ();
-        dark_style_switch.active = gtk_settings.prefer_dark_theme;
+        dark_style_switch.state = gtk_settings.prefer_dark_theme;
         var prefer_dark_info = new DimLabel (
             _("Forces dark style on all apps, even if it's not supported. Requires restarting the application.")
         );
