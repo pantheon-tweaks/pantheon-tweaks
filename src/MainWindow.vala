@@ -12,29 +12,25 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        var headerbar = new Gtk.HeaderBar () {
-            show_close_button = true,
-            title = _("Tweaks")
-        };
+        title = _("Tweaks");
 
         // TODO Remember size
         // APIs completely changed between GTK 3.0 and 4, so leaving it until we port Tweaks to GTK 4
         set_default_size (1080, 600);
 
-        set_titlebar (headerbar);
-
         string desktop_environment = GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP");
         // Prevent Tweaks from launching and breaking preferences on other DEs
         if (desktop_environment != "Pantheon") {
-            var unsupported_view = new Granite.Widgets.AlertView (
-                _("Your Desktop Environment Is Not Supported"),
-                _("Pantheon Tweaks is a customization tool for Pantheon. Your desktop environment \"%s\" is not supported.").printf (desktop_environment),
-                "dialog-warning"
-            );
-            add (unsupported_view);
+            var unsupported_view = new Granite.Placeholder (
+                _("Your Desktop Environment Is Not Supported")
+            ) {
+                description = _("Pantheon Tweaks is a customization tool for Pantheon. Your desktop environment \"%s\" is not supported.").printf (desktop_environment),
+                icon = new ThemedIcon ("dialog-warning")
+            };
+            child = unsupported_view;
         } else {
             var categories = new Categories ();
-            add (categories);
+            child = categories;
         }
 
         // Follow OS-wide dark preference

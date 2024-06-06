@@ -88,8 +88,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://github.com/elementary/granite/archive/refs/tags/6.2.0.tar.gz
-        sha256: 067d31445da9808a802fca523630c3e4b84d2d7c78ae547ced017cb7f3b9c6b5
+        url: https://github.com/elementary/granite/archive/refs/tags/7.5.0.tar.gz
+        sha256: 9439733169c07cfc658144ceef90bebac5f024ffda4bbb65e8c1ab68e5580908
 
   - name: pantheon-tweaks
     buildsystem: meson

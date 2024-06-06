@@ -20,23 +20,23 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
 
         settings = new GLib.Settings (TERMINAL_SCHEMA);
 
-        var follow_last_tab_label = new SummaryLabel (_("Follow last tab:"));
-        var follow_last_tab_switch = new Switch ();
-        var follow_last_tab_info = new DimLabel (
+        var follow_last_tab_label = summary_label_new (_("Follow last tab:"));
+        var follow_last_tab_switch = switch_new ();
+        var follow_last_tab_info = dim_label_new (
             _("Creating a new tab sets the working directory of the last opened tab.")
         );
 
-        var unsafe_paste_alert_label = new SummaryLabel (_("Unsafe paste alert:"));
-        var unsafe_paste_alert_switch = new Switch ();
-        var unsafe_paste_alert_info = new DimLabel (_("Show a warning dialog when a pasted command contains 'sudo'."));
+        var unsafe_paste_alert_label = summary_label_new (_("Unsafe paste alert:"));
+        var unsafe_paste_alert_switch = switch_new ();
+        var unsafe_paste_alert_info = dim_label_new (_("Show a warning dialog when a pasted command contains 'sudo'."));
 
-        var rem_tabs_label = new SummaryLabel (_("Remember tabs:"));
-        var rem_tabs_switch = new Switch ();
-        var rem_tabs_info = new DimLabel (_("If enabled, last opened tabs are restored on start."));
+        var rem_tabs_label = summary_label_new (_("Remember tabs:"));
+        var rem_tabs_switch = switch_new ();
+        var rem_tabs_info = dim_label_new (_("If enabled, last opened tabs are restored on start."));
 
-        var term_bell_label = new SummaryLabel (_("Terminal bell:"));
-        var term_bell_switch = new Switch ();
-        var term_bell_info = new DimLabel (
+        var term_bell_label = summary_label_new (_("Terminal bell:"));
+        var term_bell_switch = switch_new ();
+        var term_bell_info = dim_label_new (
             _("Sound when hitting the end of a line and also for tab-completion when there are either no or multiple possible completions.") // vala-lint=line-length
         );
 
@@ -45,11 +45,11 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         tab_bar_map.set ("Hide When Single Tab", _("Hide when single tab"));
         tab_bar_map.set ("Never Show Tabs", _("Never"));
 
-        var tab_bar_label = new SummaryLabel (_("Show tabs:"));
-        var tab_bar_combo = new ComboBoxText (tab_bar_map);
+        var tab_bar_label = summary_label_new (_("Show tabs:"));
+        var tab_bar_combo = combobox_text_new (tab_bar_map);
 
-        var term_font_label = new SummaryLabel (_("Terminal font:"));
-        var term_font_button = new FontButton ();
+        var term_font_label = summary_label_new (_("Terminal font:"));
+        var term_font_button = font_button_new  ();
 
         content_area.attach (follow_last_tab_label, 0, 0, 1, 1);
         content_area.attach (follow_last_tab_switch, 1, 0, 1, 1);
@@ -67,8 +67,6 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         content_area.attach (tab_bar_combo, 1, 8, 1, 1);
         content_area.attach (term_font_label, 0, 9, 1, 1);
         content_area.attach (term_font_button, 1, 9, 1, 1);
-
-        show_all ();
 
         settings.bind ("follow-last-tab", follow_last_tab_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("unsafe-paste-alert", unsafe_paste_alert_switch, "active", SettingsBindFlags.DEFAULT);

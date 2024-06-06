@@ -13,9 +13,9 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
     private GLib.Settings interface_settings;
     private GLib.Settings appearance_settings;
 
-    private Categories.Pane.ComboBoxText gtk_combobox;
-    private Categories.Pane.ComboBoxText controls_combobox;
-    private Categories.Pane.Switch gnome_menu;
+    private Gtk.ComboBoxText gtk_combobox;
+    private Gtk.ComboBoxText controls_combobox;
+    private Gtk.Switch gnome_menu;
 
     public AppearancePane () {
         base (
@@ -62,67 +62,67 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
         var theme_label = new Granite.HeaderLabel (_("Theme Settings"));
 
-        var gtk_label = new SummaryLabel (_("GTK:"));
+        var gtk_label = summary_label_new (_("GTK:"));
         var gtk_list = ThemeSettings.get_themes ("themes", "gtk-3.0");
-        gtk_combobox = new ComboBoxText.from_list (gtk_list);
+        gtk_combobox = combobox_text_new_from_list (gtk_list);
 
         /// TRANSLATORS: The "%s" represents the path where custom themes are installed
-        var gtk_info = new DimLabel (_("To show custom themes here, put them in %s.").printf (
+        var gtk_info = dim_label_new (_("To show custom themes here, put them in %s.").printf (
             "~/.local/share/themes/<%s>/gtk-3.0".printf (_("theme-name"))
         ));
 
         var gtk_dir_button = new DestinationButton (".local/share/themes");
 
-        var icon_label = new SummaryLabel (_("Icons:"));
+        var icon_label = summary_label_new (_("Icons:"));
         var icon_list = ThemeSettings.get_themes ("icons", "index.theme");
-        var icon_combobox = new ComboBoxText.from_list (icon_list);
+        var icon_combobox = combobox_text_new_from_list (icon_list);
 
         /// TRANSLATORS: The "%s" represents the path where custom icons are installed
-        var icon_info = new DimLabel (_("To show custom icons here, put them in %s.").printf (
+        var icon_info = dim_label_new (_("To show custom icons here, put them in %s.").printf (
             "~/.icons/<%s>".printf (_("theme-name"))
         ));
 
         var icon_dir_button = new DestinationButton (".icons");
 
-        var cursor_label = new SummaryLabel (_("Cursor:"));
+        var cursor_label = summary_label_new (_("Cursor:"));
         var cursor_list = ThemeSettings.get_themes ("icons", "cursors");
-        var cursor_combobox = new ComboBoxText.from_list (cursor_list);
+        var cursor_combobox = combobox_text_new_from_list (cursor_list);
 
         /// TRANSLATORS: The "%s" represents the path where custom cursors are installed
-        var cursor_info = new DimLabel (_("To show custom cursors here, put them in %s.").printf (
+        var cursor_info = dim_label_new (_("To show custom cursors here, put them in %s.").printf (
             "~/.icons/<%s>/cursors".printf (_("theme-name"))
         ));
 
         var cursor_dir_button = new DestinationButton (".icons");
 
-        var sound_label = new SummaryLabel (_("Sound:"));
+        var sound_label = summary_label_new (_("Sound:"));
         var sound_list = ThemeSettings.get_themes ("sounds", "index.theme");
-        var sound_combobox = new ComboBoxText.from_list (sound_list);
+        var sound_combobox = combobox_text_new_from_list (sound_list);
 
         /// TRANSLATORS: The "%s" represents the path where custom sounds are installed
-        var sound_info = new DimLabel (_("To show custom sounds here, put them in %s.").printf (
+        var sound_info = dim_label_new (_("To show custom sounds here, put them in %s.").printf (
             "~/.local/share/sounds/<%s>".printf (_("theme-name"))
         ));
 
         var sound_dir_button = new DestinationButton (".local/share/sounds");
 
-        var dark_style_label = new SummaryLabel (_("Force to use dark stylesheet:"));
-        var dark_style_switch = new Switch ();
+        var dark_style_label = summary_label_new (_("Force to use dark stylesheet:"));
+        var dark_style_switch = switch_new ();
         dark_style_switch.state = gtk_settings.prefer_dark_theme;
-        var prefer_dark_info = new DimLabel (
+        var prefer_dark_info = dim_label_new (
             _("Forces dark style on all apps, even if it's not supported. Requires restarting the application.")
         );
 
         var layout_label = new Granite.HeaderLabel (_("Window Controls"));
 
-        var controls_label = new SummaryLabel (_("Layout:"));
+        var controls_label = summary_label_new (_("Layout:"));
         var controls_map = get_preset_button_layouts ();
-        controls_combobox = new ComboBoxText (controls_map);
-        var controls_info = new DimLabel (_("Changes button layout of the window."));
+        controls_combobox = combobox_text_new (controls_map);
+        var controls_info = dim_label_new (_("Changes button layout of the window."));
 
-        var gnome_menu_label = new SummaryLabel (_("Show GNOME menu:"));
-        gnome_menu = new Switch ();
-        var gnome_menu_info = new DimLabel (_("Whether to show GNOME menu in GNOME apps."));
+        var gnome_menu_label = summary_label_new (_("Show GNOME menu:"));
+        gnome_menu = switch_new ();
+        var gnome_menu_info = dim_label_new (_("Whether to show GNOME menu in GNOME apps."));
 
         init_data ();
 
@@ -153,8 +153,6 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         content_area.attach (gnome_menu_label, 0, 14, 1, 1);
         content_area.attach (gnome_menu, 1, 14, 1, 1);
         content_area.attach (gnome_menu_info, 1, 15, 1, 1);
-
-        show_all ();
 
         interface_settings.bind ("icon-theme", icon_combobox, "active_id", SettingsBindFlags.DEFAULT);
         interface_settings.bind ("cursor-theme", cursor_combobox, "active_id", SettingsBindFlags.DEFAULT);

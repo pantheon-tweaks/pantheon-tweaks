@@ -50,8 +50,8 @@ executable(
     dependencies: [
         dependency('gee-0.8'),
         dependency('glib-2.0'),
-        dependency('granite', version: '>= 6.0.0'),
-        dependency('gtk+-3.0'),
+        dependency('granite-7'),
+        dependency('gtk4'),
         meson.get_compiler('vala').find_library('posix')
     ],
     install: true

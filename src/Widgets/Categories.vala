@@ -4,7 +4,7 @@
  *                         Pantheon Tweaks Developers, 2020-2024
  */
 
-public class PantheonTweaks.Categories : Gtk.Paned {
+public class PantheonTweaks.Categories : Gtk.Box {
     private Gee.ArrayList<Categories.Pane> panes;
     private Gtk.ListBox pane_list;
 
@@ -23,22 +23,28 @@ public class PantheonTweaks.Categories : Gtk.Paned {
         // Right: Add Pane itself to Stack
         var stack = new Gtk.Stack ();
 
-        var toast = new Granite.Widgets.Toast (_("Reset settings successfully"));
+        var toast = new Granite.Toast (_("Reset settings successfully"));
 
-        var overlay = new Gtk.Overlay ();
-        overlay.add (stack);
+        var overlay = new Gtk.Overlay () {
+            child = stack
+        };
         overlay.add_overlay (toast);
 
         foreach (var pane in panes) {
-            pane_list.add (pane.pane_list_item);
-            stack.add (pane);
+            pane_list.append (pane.pane_list_item);
+            stack.add_child (pane);
             pane.restored.connect (() => {
                 toast.send_notification ();
             });
         }
 
-        add1 (pane_list);
-        add2 (overlay);
+        var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
+        paned.resize_start_child = false;
+        paned.shrink_start_child = false;
+        paned.set_start_child (pane_list);
+        paned.set_end_child (overlay);
+
+        append (paned);
 
         pane_list.row_selected.connect ((row) => {
             var list_item = ((Categories.Pane.PaneListItem) row);
@@ -91,7 +97,8 @@ public class PantheonTweaks.Categories : Gtk.Paned {
         construct {
             pane_list_item = new PaneListItem (this);
 
-            content_area.expand = true;
+            content_area.vexpand = true;
+            content_area.hexpand = true;
             content_area.margin_start = 60;
         }
 
@@ -102,7 +109,7 @@ public class PantheonTweaks.Categories : Gtk.Paned {
                 }
             }
 
-            pane_list_item.no_show_all = true;
+            pane_list_item.visible = false;
             return false;
         }
 
@@ -121,10 +128,10 @@ public class PantheonTweaks.Categories : Gtk.Paned {
                     "dialog-warning", Gtk.ButtonsType.CANCEL
                 ) {
                     modal = true,
-                    transient_for = (Gtk.Window) get_toplevel ()
+                    transient_for = (Gtk.Window) get_root ()
                 };
                 var reset_button = reset_confirm_dialog.add_button (_("Reset"), Gtk.ResponseType.ACCEPT);
-                reset_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+                reset_button.get_style_context ().add_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 reset_confirm_dialog.response.connect ((response_id) => {
                     if (response_id == Gtk.ResponseType.ACCEPT) {
                         reset_func ();
@@ -138,8 +145,7 @@ public class PantheonTweaks.Categories : Gtk.Paned {
                 return true;
             });
 
-            action_area.add (reset);
-            show_all ();
+            action_area.append (reset);
         }
 
         protected class PaneListItem : Gtk.ListBoxRow {
@@ -156,55 +162,59 @@ public class PantheonTweaks.Categories : Gtk.Paned {
                 label.hexpand = true;
                 label.halign = Gtk.Align.START;
 
-                var image = new Gtk.Image.from_icon_name (pane.icon_name, Gtk.IconSize.DND);
+                var image = new Gtk.Image.from_icon_name (pane.icon_name) {
+                    icon_size = Gtk.IconSize.LARGE
+                };
 
-                var rowgrid = new Gtk.Grid ();
-                rowgrid.orientation = Gtk.Orientation.HORIZONTAL;
-                rowgrid.column_spacing = 6;
-                rowgrid.margin = 3;
-                rowgrid.margin_start = 12;
-                rowgrid.add (image);
-                rowgrid.add (label);
+                var row_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+                row_box.margin_top = 3;
+                row_box.margin_bottom = 3;
+                row_box.margin_start = 12;
+                row_box.margin_end = 3;
+                row_box.append (image);
+                row_box.append (label);
 
-                add (rowgrid);
+                child = row_box;
             }
         }
 
-        protected class SpinButton : Gtk.SpinButton {
-            public SpinButton (Gtk.Adjustment adjustment) {
-                Object (adjustment: adjustment);
-            }
-
-            construct {
-                climb_rate = 1;
-                digits = 0;
-                set_size_request (150, 0);
-            }
+        protected Gtk.SpinButton spin_button_new (Gtk.Adjustment adjustment) {
+            var spin_button = new Gtk.SpinButton (adjustment, 1, 0);
+            spin_button.set_size_request (150, 0);
+            return spin_button;
         }
 
-        protected class Switch : Gtk.Switch {
-            construct {
-                halign = Gtk.Align.START;
-            }
+        protected Gtk.Switch switch_new () {
+            var switch = new Gtk.Switch () {
+                halign = Gtk.Align.START
+            };
+            return switch;
         }
 
-        protected class ComboBoxText : Gtk.ComboBoxText {
-            public ComboBoxText (Gee.HashMap<string, string> items) {
-                foreach (var item in items.entries) {
-                    append (item.key, item.value);
-                }
+                protected Gtk.ComboBoxText combobox_text_new (Gee.HashMap<string, string> items) {
+            var combobox_text = new Gtk.ComboBoxText () {
+                halign = Gtk.Align.START
+            };
+
+            foreach (var item in items.entries) {
+                combobox_text.append (item.key, item.value);
             }
 
-            public ComboBoxText.from_list (Gee.List<string> items) {
-                for (int i = 0; i < items.size; i++) {
-                    append (items.get (i), items.get (i));
-                }
+            combobox_text.set_size_request (180, 0);
+            return combobox_text;
+        }
+
+        protected Gtk.ComboBoxText combobox_text_new_from_list (Gee.List<string> items) {
+            var combobox_text = new Gtk.ComboBoxText () {
+                halign = Gtk.Align.START
+            };
+
+            for (int i = 0; i < items.size; i++) {
+                combobox_text.append (items.get (i), items.get (i));
             }
 
-            construct {
-                set_size_request (180, 0);
-                halign = Gtk.Align.START;
-            }
+            combobox_text.set_size_request (180, 0);
+            return combobox_text;
         }
 
         protected class DestinationButton : Gtk.Button {
@@ -212,7 +222,7 @@ public class PantheonTweaks.Categories : Gtk.Paned {
 
             public DestinationButton (string destination) {
                 Object (
-                    image: new Gtk.Image.from_icon_name ("folder-open", Gtk.IconSize.BUTTON),
+                    icon_name: "folder-open",
                     destination_uri: "file://%s/%s".printf (Environment.get_home_dir (), destination),
                     valign: Gtk.Align.START,
                     tooltip_text: _("Open destination folder")
@@ -253,7 +263,7 @@ public class PantheonTweaks.Categories : Gtk.Paned {
                     primary_text, secondary_text, "dialog-error", Gtk.ButtonsType.CLOSE
                 ) {
                     modal = true,
-                    transient_for = (Gtk.Window) get_toplevel ()
+                    transient_for = (Gtk.Window) get_root ()
                 };
                 error_dialog.show_error_details (error_message);
                 error_dialog.response.connect ((response_id) => {
@@ -263,35 +273,30 @@ public class PantheonTweaks.Categories : Gtk.Paned {
             }
         }
 
-        protected class SummaryLabel : Gtk.Label {
-            public SummaryLabel (string label) {
-                Object (label: label);
-            }
-
-            construct {
-                halign = Gtk.Align.END;
-            }
+        protected Gtk.Label summary_label_new (string text) {
+            var label = new Gtk.Label (text) {
+                halign = Gtk.Align.END
+            };
+            return label;
         }
 
-        protected class DimLabel : Gtk.Label {
-            public DimLabel (string label) {
-                Object (label: label);
-            }
-
-            construct {
-                max_width_chars = 60;
-                margin_bottom = 18;
-                wrap = true;
-                xalign = 0;
-                get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
-            }
+        protected Gtk.Label dim_label_new (string text) {
+            var label = new Gtk.Label (text) {
+                max_width_chars = 60,
+                margin_bottom = 18,
+                wrap = true,
+                xalign = 0
+            };
+            label.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
+            return label;
         }
 
-        protected class FontButton : Gtk.FontButton {
-            construct {
-                halign = Gtk.Align.START;
-                use_font = true;
-            }
+        protected Gtk.FontButton font_button_new () {
+            var font_button = new Gtk.FontButton () {
+                halign = Gtk.Align.START,
+                use_font = true
+            };
+            return font_button;
         }
     }
 }
