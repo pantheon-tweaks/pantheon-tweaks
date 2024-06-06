@@ -158,7 +158,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         interface_settings.bind ("icon-theme", icon_combobox, "active_id", SettingsBindFlags.DEFAULT);
         interface_settings.bind ("cursor-theme", cursor_combobox, "active_id", SettingsBindFlags.DEFAULT);
         sound_settings.bind ("theme-name", sound_combobox, "active_id", SettingsBindFlags.DEFAULT);
-        dark_style_switch.bind_property ("active", gtk_settings, "prefer-dark-theme", BindingFlags.SYNC_CREATE | BindingFlags.BIDIRECTIONAL);
+        gtk_settings.bind_property ("prefer-dark-theme", dark_style_switch, "active", BindingFlags.SYNC_CREATE | BindingFlags.BIDIRECTIONAL);
 
         if (((GLib.DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
             ((GLib.DBusProxy) pantheon_act).g_properties_changed.connect ((changed, invalid) => {
