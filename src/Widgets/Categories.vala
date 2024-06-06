@@ -131,7 +131,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
                     transient_for = (Gtk.Window) get_root ()
                 };
                 var reset_button = reset_confirm_dialog.add_button (_("Reset"), Gtk.ResponseType.ACCEPT);
-                reset_button.get_style_context ().add_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
+                reset_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
                 reset_confirm_dialog.response.connect ((response_id) => {
                     if (response_id == Gtk.ResponseType.ACCEPT) {
                         reset_func ();
@@ -191,7 +191,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
             return switch;
         }
 
-                protected Gtk.ComboBoxText combobox_text_new (Gee.HashMap<string, string> items) {
+        protected Gtk.ComboBoxText combobox_text_new (Gee.HashMap<string, string> items) {
             var combobox_text = new Gtk.ComboBoxText () {
                 halign = Gtk.Align.START
             };
@@ -287,7 +287,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
                 wrap = true,
                 xalign = 0
             };
-            label.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
+            label.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
             return label;
         }
 
