@@ -12,11 +12,16 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        title = _("Tweaks");
+        var headerbar = new Gtk.HeaderBar () {
+            show_title_buttons = true,
+            title_widget = new Gtk.Label (_("Tweaks"))
+        };
 
         // TODO Remember size
         // APIs completely changed between GTK 3.0 and 4, so leaving it until we port Tweaks to GTK 4
         set_default_size (1080, 600);
+
+        set_titlebar (headerbar);
 
         string desktop_environment = GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP");
         // Prevent Tweaks from launching and breaking preferences on other DEs
