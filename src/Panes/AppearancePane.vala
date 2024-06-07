@@ -108,7 +108,6 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
         var dark_style_label = summary_label_new (_("Force to use dark stylesheet:"));
         var dark_style_switch = switch_new ();
-        dark_style_switch.state = gtk_settings.prefer_dark_theme;
         var prefer_dark_info = dim_label_new (
             _("Forces dark style on all apps, even if it's not supported. Requires restarting the application.")
         );
@@ -157,7 +156,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         interface_settings.bind ("icon-theme", icon_combobox, "active_id", SettingsBindFlags.DEFAULT);
         interface_settings.bind ("cursor-theme", cursor_combobox, "active_id", SettingsBindFlags.DEFAULT);
         sound_settings.bind ("theme-name", sound_combobox, "active_id", SettingsBindFlags.DEFAULT);
-        dark_style_switch.bind_property ("active", gtk_settings, "prefer-dark-theme", BindingFlags.BIDIRECTIONAL);
+        gtk_settings.bind_property ("prefer-dark-theme", dark_style_switch, "active", BindingFlags.SYNC_CREATE | BindingFlags.BIDIRECTIONAL);
 
         if (((GLib.DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
             ((GLib.DBusProxy) pantheon_act).g_properties_changed.connect ((changed, invalid) => {
@@ -180,7 +179,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
             string new_layout = controls_combobox.active_id;
             appearance_settings.set_string ("button-layout", new_layout);
             gnome_wm_settings.set_string ("button-layout", new_layout);
-            x_settings.set_gnome_menu (gnome_menu.state, new_layout);
+            x_settings.set_gnome_menu (gnome_menu.active, new_layout);
         });
 
         gnome_menu.notify["active"].connect (() => {
@@ -211,7 +210,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
     private void init_data () {
         gtk_combobox.active_id = interface_settings.get_string ("gtk-theme");
         controls_combobox.active_id = appearance_settings.get_string ("button-layout");
-        gnome_menu.state = x_settings.has_gnome_menu ();
+        gnome_menu.active = x_settings.has_gnome_menu ();
     }
 
     private Gee.HashMap<string, string> get_preset_button_layouts () {
