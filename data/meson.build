@@ -11,7 +11,7 @@ endforeach
 i18n.merge_file(
     input: meson.project_name() + '.desktop.in',
     output: application_id + '.desktop',
-    po_dir: meson.source_root () / 'po',
+    po_dir: meson.project_source_root () / 'po',
     type: 'desktop',
     install_dir: get_option('prefix') / get_option('datadir') / 'applications',
     install: true
@@ -20,7 +20,7 @@ i18n.merge_file(
 i18n.merge_file(
     input: meson.project_name() + '.metainfo.xml.in',
     output: application_id + '.metainfo.xml',
-    po_dir: meson.source_root () / 'po',
+    po_dir: meson.project_source_root () / 'po',
     install_dir: get_option('prefix') / get_option('datadir') / 'metainfo',
     install: true
 )
