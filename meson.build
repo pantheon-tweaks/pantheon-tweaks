@@ -2,7 +2,7 @@ project(
     'pantheon-tweaks',
     'vala', 'c',
     version: '2.0.2',
-    meson_version: '>= 0.51.0'
+    meson_version: '>= 0.56.0'
 )
 
 gettext_name = meson.project_name()
