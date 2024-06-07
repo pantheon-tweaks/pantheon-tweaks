@@ -2,13 +2,14 @@ project(
     'pantheon-tweaks',
     'vala', 'c',
     version: '2.0.2',
-    meson_version: '>= 0.51.0'
+    meson_version: '>= 0.57.0'
 )
 
 gettext_name = meson.project_name()
 # Use this when reverse-DNS format is required
 application_id = 'io.github.pantheon_tweaks.' + meson.project_name()
 
+gnome = import('gnome')
 i18n = import('i18n')
 
 add_global_arguments(
@@ -57,4 +58,6 @@ executable(
     install: true
 )
 
-meson.add_install_script('meson/post_install.py')
+gnome.post_install(
+    gtk_update_icon_cache: true
+)
