@@ -24,3 +24,8 @@ i18n.merge_file(
     install_dir: get_option('prefix') / get_option('datadir') / 'metainfo',
     install: true
 )
+
+install_data(
+    'pantheon-tweaks.gschema.xml',
+    install_dir: get_option('datadir') / 'glib-2.0' / 'schemas'
+)
