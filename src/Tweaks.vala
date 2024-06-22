@@ -5,6 +5,8 @@
  */
 
 public class PantheonTweaks.Tweaks : Gtk.Application {
+    private static Settings settings;
+
     private MainWindow window;
 
     public Tweaks () {
@@ -17,6 +19,10 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
         );
     }
 
+    static construct {
+        settings = new Settings ("io.github.pantheon_tweaks.pantheon-tweaks");
+    }
+
     protected override void activate () {
         if (window != null) {
             window.present ();
@@ -24,7 +30,19 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
         }
 
         window = new MainWindow (this);
+        // The window seems to need showing before restoring its size in Gtk4
         window.present ();
+
+        settings.bind ("window-height", window, "default-height", SettingsBindFlags.DEFAULT);
+        settings.bind ("window-width", window, "default-width", SettingsBindFlags.DEFAULT);
+
+        // Binding of window maximization with "SettingsBindFlags.DEFAULT" results the window getting bigger and bigger on open.
+        // So we use the prepared binding only for setting.
+        if (settings.get_boolean ("window-maximized")) {
+            window.maximize ();
+        }
+
+        settings.bind ("window-maximized", window, "maximized", SettingsBindFlags.SET);
 
         var quit_action = new GLib.SimpleAction ("quit", null);
         add_action (quit_action);
