@@ -99,6 +99,22 @@ modules:
         url: https://github.com/elementary/granite/archive/refs/tags/7.5.0.tar.gz
         sha256: 9439733169c07cfc658144ceef90bebac5f024ffda4bbb65e8c1ab68e5580908
 
+  - name: switchboard
+    buildsystem: meson
+    cleanup:
+      # We use switchboard as a widget library; cleanup the unnecessary system settings app
+      - '/share/applications'
+      - '/share/metainfo'
+      - '/bin'
+      - '/share/glib-2.0/schemas/io.elementary.settings.gschema.xml'
+      - '/share/icons'
+    sources:
+      - type: archive
+        url: https://github.com/elementary/switchboard/archive/refs/tags/8.0.0.tar.gz
+        sha256: 99bf58f47b5cbdcfaf0415ff6ff5661fd4b18d779432884b6a62ef71f54be098
+      - type: patch
+        path: 0001-lib-Include-stylesheet-in-the-library.patch
+
   - name: pantheon-tweaks
     buildsystem: meson
     sources:
