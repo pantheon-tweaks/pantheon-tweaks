@@ -39,6 +39,7 @@ modules:
       - '-Dbash_completion=false'
       - '-Dman=false'
     cleanup:
+      - '/bin'
       - '/include'
       - '/lib/pkgconfig'
       - '/lib/systemd'
@@ -53,6 +54,8 @@ modules:
 
   - name: elementary-stylesheet
     buildsystem: meson
+    cleanup:
+      - '/share/metainfo'
     sources:
       - type: archive
         url: https://github.com/elementary/stylesheet/archive/refs/tags/7.3.0.tar.gz
@@ -86,6 +89,11 @@ modules:
 
   - name: granite
     buildsystem: meson
+    config-opts:
+      - '-Ddemo=false'
+    cleanup:
+      - '/share/icons'
+      - '/share/metainfo'
     sources:
       - type: archive
         url: https://github.com/elementary/granite/archive/refs/tags/7.5.0.tar.gz
