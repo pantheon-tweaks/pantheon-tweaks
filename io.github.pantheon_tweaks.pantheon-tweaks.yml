@@ -101,6 +101,13 @@ modules:
 
   - name: switchboard
     buildsystem: meson
+    cleanup:
+      # We use switchboard as a widget library; cleanup the unnecessary system settings app
+      - '/share/applications'
+      - '/share/metainfo'
+      - '/bin'
+      - '/share/glib-2.0/schemas/io.elementary.settings.gschema.xml'
+      - '/share/icons'
     sources:
       - type: archive
         url: https://github.com/elementary/switchboard/archive/refs/tags/8.0.0.tar.gz
