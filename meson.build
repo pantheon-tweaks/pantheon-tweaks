@@ -53,6 +53,7 @@ executable(
         dependency('glib-2.0'),
         dependency('granite-7'),
         dependency('gtk4'),
+        dependency('switchboard-3'),
         meson.get_compiler('vala').find_library('posix')
     ],
     install: true

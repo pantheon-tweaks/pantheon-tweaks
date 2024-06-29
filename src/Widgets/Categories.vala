@@ -38,7 +38,9 @@ public class PantheonTweaks.Categories : Gtk.Box {
             });
         }
 
-        var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
+        var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL) {
+            hexpand = true
+        };
         paned.resize_start_child = false;
         paned.shrink_start_child = false;
         paned.set_start_child (pane_list);
@@ -78,18 +80,19 @@ public class PantheonTweaks.Categories : Gtk.Box {
         });
     }
 
-    public abstract class Pane : Granite.SimpleSettingsPage {
+    public abstract class Pane : Switchboard.SettingsPage {
         public signal void restored ();
 
         protected delegate void Reset ();
 
         public PaneListItem pane_list_item { get; private set; }
+        protected Gtk.Grid content_area;
 
         protected Pane (string name, string title, string icon_name, string? description = null) {
             Object (
                 name: name,
                 title: title,
-                icon_name: icon_name,
+                icon: new ThemedIcon (icon_name),
                 description: description
             );
         }
@@ -97,9 +100,13 @@ public class PantheonTweaks.Categories : Gtk.Box {
         construct {
             pane_list_item = new PaneListItem (this);
 
-            content_area.vexpand = true;
-            content_area.hexpand = true;
-            content_area.margin_start = 60;
+            content_area = new Gtk.Grid () {
+                column_spacing = 12,
+                row_spacing = 12,
+                vexpand = true,
+                hexpand = true
+            };
+            child = content_area;
         }
 
         protected bool if_show_pane (string[] schemas) {
@@ -118,10 +125,9 @@ public class PantheonTweaks.Categories : Gtk.Box {
         }
 
         protected void on_click_reset (owned Reset reset_func) {
-            var reset = new Gtk.LinkButton (_("Reset to default"));
-            reset.can_focus = false;
+            var reset = add_button (_("Reset to default"));
 
-            reset.activate_link.connect (() => {
+            reset.clicked.connect (() => {
                 var reset_confirm_dialog = new Granite.MessageDialog.with_image_from_icon_name (
                     _("Are you sure you want to reset personalization?"),
                     _("All settings in this pane will be restored to the factory defaults. This action can't be undone."),
@@ -141,11 +147,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
                     reset_confirm_dialog.destroy ();
                 });
                 reset_confirm_dialog.show ();
-
-                return true;
             });
-
-            action_area.append (reset);
         }
 
         protected class PaneListItem : Gtk.ListBoxRow {
@@ -162,7 +164,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
                 label.hexpand = true;
                 label.halign = Gtk.Align.START;
 
-                var image = new Gtk.Image.from_icon_name (pane.icon_name) {
+                var image = new Gtk.Image.from_gicon (pane.icon) {
                     icon_size = Gtk.IconSize.LARGE
                 };
 
