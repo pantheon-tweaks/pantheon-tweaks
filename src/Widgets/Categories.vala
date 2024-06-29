@@ -34,18 +34,6 @@ public class PantheonTweaks.Categories : Gtk.Box {
             });
         }
 
-        /*
-        var headerbar = new Adw.HeaderBar () {
-            show_start_title_buttons = false,
-            show_title = false
-        };
-
-        var view = new Adw.ToolbarView () {
-            content = overlay
-        };
-        view.add_top_bar (headerbar);
-        */
-
         var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL) {
             hexpand = true
         };
@@ -53,7 +41,6 @@ public class PantheonTweaks.Categories : Gtk.Box {
         paned.shrink_start_child = false;
         paned.set_start_child (pane_list);
         paned.set_end_child (overlay);
-        //paned.set_end_child (view);
 
         append (paned);
     }

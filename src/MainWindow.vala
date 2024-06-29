@@ -12,11 +12,13 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        titlebar = new Gtk.Label (null) {
-            visible = false
+        var headerbar = new Gtk.HeaderBar () {
+            show_title_buttons = true,
+            title_widget = new Gtk.Label (_("Tweaks"))
         };
 
-/*
+        set_titlebar (headerbar);
+
         string desktop_environment = GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP");
         // Prevent Tweaks from launching and breaking preferences on other DEs
         if (desktop_environment != "Pantheon") {
@@ -27,14 +29,13 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
                 icon = new ThemedIcon ("dialog-warning")
             };
             child = unsupported_view;
+            headerbar.visible = true;
         } else {
             var categories = new Categories ();
             child = categories;
+            // Hide the headerbar in favor of SettingsPage and SettingsSidebar
+            headerbar.visible = false;
         }
-        */
-
-        var categories = new Categories ();
-        child = categories;
 
         // Follow OS-wide dark preference
         var granite_settings = Granite.Settings.get_default ();
