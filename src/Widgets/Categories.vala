@@ -6,7 +6,6 @@
 
 public class PantheonTweaks.Categories : Gtk.Box {
     private Gee.ArrayList<Categories.Pane> panes;
-    private Gtk.ListBox pane_list;
 
     construct {
         panes = new Gee.ArrayList<Categories.Pane> ();
@@ -16,12 +15,8 @@ public class PantheonTweaks.Categories : Gtk.Box {
         panes.add (new Panes.FilesPane ());
         panes.add (new Panes.TerminalPane ());
 
-        // Left: Add PaneListItems to PaneList
-        pane_list = new Gtk.ListBox ();
-        pane_list.set_size_request (176, 10);
-
-        // Right: Add Pane itself to Stack
         var stack = new Gtk.Stack ();
+        var pane_list = new Switchboard.SettingsSidebar (stack);
 
         var toast = new Granite.Toast (_("Reset settings successfully"));
 
@@ -31,8 +26,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
         overlay.add_overlay (toast);
 
         foreach (var pane in panes) {
-            pane_list.append (pane.pane_list_item);
-            stack.add_child (pane);
+            stack.add_titled (pane, pane.name, pane.title);
             pane.restored.connect (() => {
                 toast.send_notification ();
             });
@@ -47,37 +41,6 @@ public class PantheonTweaks.Categories : Gtk.Box {
         paned.set_end_child (overlay);
 
         append (paned);
-
-        pane_list.row_selected.connect ((row) => {
-            var list_item = ((Categories.Pane.PaneListItem) row);
-            stack.visible_child = list_item.pane;
-        });
-
-        pane_list.set_header_func ((row, before) => {
-            var list_item = ((Categories.Pane.PaneListItem) row);
-
-            switch (list_item.pane.name) {
-                case "appearance":
-                    list_item.set_header (new Granite.HeaderLabel (_("General")));
-                    break;
-                case "files":
-                    list_item.set_header (new Granite.HeaderLabel (_("Applications")));
-                    break;
-                default:
-                    break;
-            }
-        });
-    }
-
-    public void set_visible_view (string location) {
-        panes.foreach ((pane) => {
-            if (pane.name == location) {
-                pane_list.select_row (pane.pane_list_item);
-                return false;
-            }
-
-            return true;
-        });
     }
 
     public abstract class Pane : Switchboard.SettingsPage {
@@ -85,7 +48,6 @@ public class PantheonTweaks.Categories : Gtk.Box {
 
         protected delegate void Reset ();
 
-        public PaneListItem pane_list_item { get; private set; }
         protected Gtk.Grid content_area;
 
         protected Pane (string name, string title, string icon_name, string? description = null) {
@@ -98,8 +60,6 @@ public class PantheonTweaks.Categories : Gtk.Box {
         }
 
         construct {
-            pane_list_item = new PaneListItem (this);
-
             content_area = new Gtk.Grid () {
                 column_spacing = 12,
                 row_spacing = 12,
@@ -116,7 +76,6 @@ public class PantheonTweaks.Categories : Gtk.Box {
                 }
             }
 
-            pane_list_item.visible = false;
             return false;
         }
 
@@ -148,36 +107,6 @@ public class PantheonTweaks.Categories : Gtk.Box {
                 });
                 reset_confirm_dialog.show ();
             });
-        }
-
-        protected class PaneListItem : Gtk.ListBoxRow {
-            public unowned Pane pane { get; construct; }
-
-            public PaneListItem (Pane pane) {
-                Object (
-                    pane: pane
-                );
-            }
-
-            construct {
-                var label = new Gtk.Label (pane.title);
-                label.hexpand = true;
-                label.halign = Gtk.Align.START;
-
-                var image = new Gtk.Image.from_gicon (pane.icon) {
-                    icon_size = Gtk.IconSize.LARGE
-                };
-
-                var row_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-                row_box.margin_top = 3;
-                row_box.margin_bottom = 3;
-                row_box.margin_start = 12;
-                row_box.margin_end = 3;
-                row_box.append (image);
-                row_box.append (label);
-
-                child = row_box;
-            }
         }
 
         protected Gtk.SpinButton spin_button_new (Gtk.Adjustment adjustment) {
