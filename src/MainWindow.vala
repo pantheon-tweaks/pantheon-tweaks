@@ -29,7 +29,6 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
                 icon = new ThemedIcon ("dialog-warning")
             };
             child = unsupported_view;
-            headerbar.visible = true;
         } else {
             var categories = new Categories ();
             child = categories;
