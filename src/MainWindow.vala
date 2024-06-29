@@ -32,6 +32,8 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
         } else {
             var categories = new Categories ();
             child = categories;
+            // Hide the headerbar in favor of SettingsPage and SettingsSidebar
+            headerbar.visible = false;
         }
 
         // Follow OS-wide dark preference

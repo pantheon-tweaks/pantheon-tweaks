@@ -16,7 +16,9 @@ public class PantheonTweaks.Categories : Gtk.Box {
         panes.add (new Panes.TerminalPane ());
 
         var stack = new Gtk.Stack ();
-        var pane_list = new Switchboard.SettingsSidebar (stack);
+        var pane_list = new Switchboard.SettingsSidebar (stack) {
+            show_title_buttons = true
+        };
 
         var toast = new Granite.Toast (_("Reset settings successfully"));
 
@@ -60,6 +62,8 @@ public class PantheonTweaks.Categories : Gtk.Box {
         }
 
         construct {
+            show_end_title_buttons = true;
+
             content_area = new Gtk.Grid () {
                 column_spacing = 12,
                 row_spacing = 12,
