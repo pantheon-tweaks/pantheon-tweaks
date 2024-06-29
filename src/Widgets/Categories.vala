@@ -16,7 +16,9 @@ public class PantheonTweaks.Categories : Gtk.Box {
         panes.add (new Panes.TerminalPane ());
 
         var stack = new Gtk.Stack ();
-        var pane_list = new Switchboard.SettingsSidebar (stack);
+        var pane_list = new Switchboard.SettingsSidebar (stack) {
+            show_title_buttons = true
+        };
 
         var toast = new Granite.Toast (_("Reset settings successfully"));
 
@@ -32,6 +34,18 @@ public class PantheonTweaks.Categories : Gtk.Box {
             });
         }
 
+        /*
+        var headerbar = new Adw.HeaderBar () {
+            show_start_title_buttons = false,
+            show_title = false
+        };
+
+        var view = new Adw.ToolbarView () {
+            content = overlay
+        };
+        view.add_top_bar (headerbar);
+        */
+
         var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL) {
             hexpand = true
         };
@@ -39,6 +53,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
         paned.shrink_start_child = false;
         paned.set_start_child (pane_list);
         paned.set_end_child (overlay);
+        //paned.set_end_child (view);
 
         append (paned);
     }
@@ -60,6 +75,8 @@ public class PantheonTweaks.Categories : Gtk.Box {
         }
 
         construct {
+            show_end_title_buttons = true;
+
             content_area = new Gtk.Grid () {
                 column_spacing = 12,
                 row_spacing = 12,

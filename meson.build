@@ -53,6 +53,7 @@ executable(
         dependency('glib-2.0'),
         dependency('granite-7'),
         dependency('gtk4'),
+        dependency('libadwaita-1'),
         dependency('switchboard-3', version: '>= 8.0.0'),
         meson.get_compiler('vala').find_library('posix')
     ],

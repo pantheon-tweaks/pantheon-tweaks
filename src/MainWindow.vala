@@ -12,13 +12,11 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        var headerbar = new Gtk.HeaderBar () {
-            show_title_buttons = true,
-            title_widget = new Gtk.Label (_("Tweaks"))
+        titlebar = new Gtk.Label (null) {
+            visible = false
         };
 
-        set_titlebar (headerbar);
-
+/*
         string desktop_environment = GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP");
         // Prevent Tweaks from launching and breaking preferences on other DEs
         if (desktop_environment != "Pantheon") {
@@ -33,6 +31,10 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
             var categories = new Categories ();
             child = categories;
         }
+        */
+
+        var categories = new Categories ();
+        child = categories;
 
         // Follow OS-wide dark preference
         var granite_settings = Granite.Settings.get_default ();
