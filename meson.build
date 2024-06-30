@@ -52,7 +52,8 @@ executable(
         dependency('gee-0.8'),
         dependency('glib-2.0'),
         dependency('granite-7'),
-        dependency('gtk4'),
+        dependency('gtk4', version: '>= 4.10'),
+        dependency('pango'),
         dependency('switchboard-3', version: '>= 8.0.0'),
         meson.get_compiler('vala').find_library('posix')
     ],

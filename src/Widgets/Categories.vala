@@ -226,12 +226,39 @@ public class PantheonTweaks.Categories : Gtk.Box {
             return label;
         }
 
-        protected Gtk.FontButton font_button_new () {
-            var font_button = new Gtk.FontButton () {
+        protected Gtk.FontDialogButton font_button_new () {
+            var font_dialog = new Gtk.FontDialog ();
+
+            var font_button = new Gtk.FontDialogButton (font_dialog) {
                 halign = Gtk.Align.START,
                 use_font = true
             };
             return font_button;
+        }
+
+        /**
+         * Convert string representation of font to Pango.FontDescription.
+         *
+         * Note: String format is described at https://docs.gtk.org/Pango/type_func.FontDescription.from_string.html
+         * @see SettingsBindGetMappingShared
+         */
+        protected static bool font_button_bind_get (Value value, Variant variant, void* user_data) {
+            string font = variant.get_string ();
+            var desc = Pango.FontDescription.from_string (font);
+            value.set_boxed (desc);
+            return true;
+        }
+
+        /**
+         * Convert Pango.FontDescription to string representation of font.
+         *
+         * Note: String format is described at https://docs.gtk.org/Pango/type_func.FontDescription.from_string.html
+         * @see SettingsBindSetMappingShared
+         */
+        protected static Variant font_button_bind_set (Value value, VariantType expected_type, void* user_data) {
+            var desc = (Pango.FontDescription) value.get_boxed ();
+            string font = desc.to_string ();
+            return new Variant.string (font);
         }
     }
 }
