@@ -10,8 +10,12 @@
 public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
     private Gee.HashMap<string, string> preset_button_layouts;
     private XSettings x_settings;
+    private GtkSettings gtk_settings;
     private GLib.Settings interface_settings;
+    private GLib.Settings sound_settings;
     private GLib.Settings appearance_settings;
+    private GLib.Settings gnome_wm_settings;
+    private Pantheon.AccountsService? pantheon_act = null;
 
     private Gtk.ComboBoxText gtk_combobox;
     private Gtk.ComboBoxText controls_combobox;
@@ -26,13 +30,11 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
     construct {
         interface_settings = new GLib.Settings ("org.gnome.desktop.interface");
-        var sound_settings = new GLib.Settings ("org.gnome.desktop.sound");
+        sound_settings = new GLib.Settings ("org.gnome.desktop.sound");
         x_settings = new XSettings ();
-        var gtk_settings = new GtkSettings ();
+        gtk_settings = new GtkSettings ();
         appearance_settings = new GLib.Settings ("org.pantheon.desktop.gala.appearance");
-        var gnome_wm_settings = new GLib.Settings ("org.gnome.desktop.wm.preferences");
-
-        Pantheon.AccountsService? pantheon_act = null;
+        gnome_wm_settings = new GLib.Settings ("org.gnome.desktop.wm.preferences");
 
         string? user_path = null;
         try {
@@ -185,26 +187,28 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         gnome_menu.notify["active"].connect (() => {
             controls_combobox.changed ();
         });
+    }
 
-        on_click_reset (()=> {
-            string[] keys = {"gtk-theme", "icon-theme", "cursor-theme"};
+    protected override bool do_reset () {
+        string[] keys = {"gtk-theme", "icon-theme", "cursor-theme"};
 
-            foreach (var key in keys) {
-                interface_settings.reset (key);
-            }
+        foreach (var key in keys) {
+            interface_settings.reset (key);
+        }
 
-            if (((GLib.DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
-                pantheon_act.prefers_accent_color = ThemeSettings.AccentColor.BLUE;
-            }
+        if (((GLib.DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
+            pantheon_act.prefers_accent_color = ThemeSettings.AccentColor.BLUE;
+        }
 
-            sound_settings.reset ("theme-name");
-            appearance_settings.reset ("button-layout");
-            gnome_wm_settings.reset ("button-layout");
-            x_settings.reset ();
+        sound_settings.reset ("theme-name");
+        appearance_settings.reset ("button-layout");
+        gnome_wm_settings.reset ("button-layout");
+        x_settings.reset ();
 
-            gtk_settings.prefer_dark_theme = false;
-            init_data ();
-        });
+        gtk_settings.prefer_dark_theme = false;
+        init_data ();
+
+        return true;
     }
 
     private void init_data () {

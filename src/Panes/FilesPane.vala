@@ -7,6 +7,8 @@
 public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
     private const string FILES_SCHEMA = "io.elementary.files.preferences";
 
+    private GLib.Settings settings;
+
     public FilesPane () {
         base ("files", _("Files"), "system-file-manager");
     }
@@ -16,7 +18,7 @@ public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
             return;
         }
 
-        var settings = new GLib.Settings (FILES_SCHEMA);
+        settings = new GLib.Settings (FILES_SCHEMA);
 
         /*************************************************/
         /* Restore Tabs                                  */
@@ -57,12 +59,15 @@ public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
         settings.bind ("restore-tabs", restore_tabs_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("date-format", date_format_combo, "active_id", SettingsBindFlags.DEFAULT);
 
-        on_click_reset (() => {
-            string[] keys = {"restore-tabs", "date-format"};
+    }
 
-            foreach (var key in keys) {
-                settings.reset (key);
-            }
-        });
+    protected override bool do_reset () {
+        string[] keys = {"restore-tabs", "date-format"};
+
+        foreach (var key in keys) {
+            settings.reset (key);
+        }
+
+        return true;
     }
 }
