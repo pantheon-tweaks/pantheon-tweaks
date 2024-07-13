@@ -16,26 +16,66 @@ public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
         var interface_settings = new GLib.Settings ("org.gnome.desktop.interface");
         var window_settings = new GLib.Settings ("org.gnome.desktop.wm.preferences");
 
-        var default_font_label = summary_label_new (_("Default Font:"));
-        var default_font_button = font_button_new ();
+        /*************************************************/
+        /* Default Font                                  */
+        /*************************************************/
+        var default_font_label = new Granite.HeaderLabel (_("Default Font")) {
+            hexpand = true
+        };
+        var default_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
+            valign = Gtk.Align.START,
+            use_font = true
+        };
+        var default_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        default_font_box.append (default_font_label);
+        default_font_box.append (default_font_button);
 
-        var document_font_label = summary_label_new (_("Document font:"));
-        var document_font_button = font_button_new ();
+        /*************************************************/
+        /* Docuemnt Font                                 */
+        /*************************************************/
+        var document_font_label = new Granite.HeaderLabel (_("Document Font")) {
+            hexpand = true
+        };
+        var document_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
+            valign = Gtk.Align.START,
+            use_font = true
+        };
+        var document_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        document_font_box.append (document_font_label);
+        document_font_box.append (document_font_button);
 
-        var mono_font_label = summary_label_new (_("Monospace font:"));
-        var mono_font_button = font_button_new ();
+        /*************************************************/
+        /* Monospace Font                                */
+        /*************************************************/
+        var mono_font_label = new Granite.HeaderLabel (_("Monospace Font")) {
+            hexpand = true
+        };
+        var mono_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
+            valign = Gtk.Align.START,
+            use_font = true,
+        };
+        var mono_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        mono_font_box.append (mono_font_label);
+        mono_font_box.append (mono_font_button);
 
-        var titlebar_font_label = summary_label_new (_("Titlebar font:"));
-        var titlebar_font_button = font_button_new ();
+        /*************************************************/
+        /* Titlebar Font                                 */
+        /*************************************************/
+        var titlebar_font_label = new Granite.HeaderLabel (_("Titlebar Font")) {
+            hexpand = true
+        };
+        var titlebar_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
+            valign = Gtk.Align.START,
+            use_font = true
+        };
+        var titlebar_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        titlebar_font_box.append (titlebar_font_label);
+        titlebar_font_box.append (titlebar_font_button);
 
-        content_area.attach (default_font_label, 0, 0, 1, 1);
-        content_area.attach (default_font_button, 1, 0, 1, 1);
-        content_area.attach (document_font_label, 0, 1, 1, 1);
-        content_area.attach (document_font_button, 1, 1, 1, 1);
-        content_area.attach (mono_font_label, 0, 2, 1, 1);
-        content_area.attach (mono_font_button, 1, 2, 1, 1);
-        content_area.attach (titlebar_font_label, 0, 3, 1, 1);
-        content_area.attach (titlebar_font_button, 1, 3, 1, 1);
+        content_area.attach (default_font_box, 0, 0, 1, 1);
+        content_area.attach (document_font_box, 0, 1, 1, 1);
+        content_area.attach (mono_font_box, 0, 2, 1, 1);
+        content_area.attach (titlebar_font_box, 0, 3, 1, 1);
 
         interface_settings.bind_with_mapping ("font-name", default_font_button, "font-desc", SettingsBindFlags.DEFAULT,
                 font_button_bind_get, font_button_bind_set, null, null);
