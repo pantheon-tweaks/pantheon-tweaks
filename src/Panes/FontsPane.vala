@@ -5,6 +5,9 @@
  */
 
 public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
+    private GLib.Settings interface_settings;
+    private GLib.Settings window_settings;
+
     public FontsPane () {
         base (
             "fonts", _("Fonts"), "preferences-desktop-font",
@@ -13,8 +16,8 @@ public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
     }
 
     construct {
-        var interface_settings = new GLib.Settings ("org.gnome.desktop.interface");
-        var window_settings = new GLib.Settings ("org.gnome.desktop.wm.preferences");
+        interface_settings = new GLib.Settings ("org.gnome.desktop.interface");
+        window_settings = new GLib.Settings ("org.gnome.desktop.wm.preferences");
 
         /*************************************************/
         /* Default Font                                  */
@@ -85,15 +88,15 @@ public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
                 font_button_bind_get, font_button_bind_set, null, null);
         window_settings.bind_with_mapping ("titlebar-font", titlebar_font_button, "font-desc", SettingsBindFlags.DEFAULT,
                 font_button_bind_get, font_button_bind_set, null, null);
+    }
 
-        on_click_reset (() => {
-            string[] keys = {"font-name", "document-font-name", "monospace-font-name"};
+    protected override void do_reset () {
+        string[] keys = {"font-name", "document-font-name", "monospace-font-name"};
 
-            foreach (var key in keys) {
-                interface_settings.reset (key);
-            }
+        foreach (var key in keys) {
+            interface_settings.reset (key);
+        }
 
-            window_settings.reset ("titlebar-font");
-        });
+        window_settings.reset ("titlebar-font");
     }
 }
