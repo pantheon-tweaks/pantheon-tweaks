@@ -22,7 +22,7 @@ public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
         /* Restore Tabs                                  */
         /*************************************************/
         var restore_tabs_label = new Granite.HeaderLabel (_("Restore Tabs")) {
-            secondary_text = _("Restore tabs from previous session when launched"),
+            secondary_text = _("Restore tabs from previous session when launched."),
             hexpand = true
         };
         var restore_tabs_switch = new Gtk.Switch () {
@@ -41,7 +41,7 @@ public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
         date_format_map.set ("informal", _("Informal"));
 
         var date_format_label = new Granite.HeaderLabel (_("Date Format")) {
-            secondary_text = _("Date format used in the properties dialog or the list view"),
+            secondary_text = _("Date format used in the properties dialog or the list view."),
             hexpand = true
         };
         var date_format_combo = combobox_text_new (date_format_map);

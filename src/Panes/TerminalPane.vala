@@ -24,7 +24,7 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         /* Follow Last Tab                               */
         /*************************************************/
         var follow_last_tab_label = new Granite.HeaderLabel (_("Follow Last Tab")) {
-            secondary_text = _("Creating a new tab sets the working directory of the last opened tab"),
+            secondary_text = _("Creating a new tab sets the working directory of the last opened tab."),
             hexpand = true
         };
         var follow_last_tab_switch = new Gtk.Switch () {
@@ -38,7 +38,7 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         /* Unsafe Paste Alert                            */
         /*************************************************/
         var unsafe_paste_alert_label = new Granite.HeaderLabel (_("Unsafe Paste Alert")) {
-            secondary_text = _("Show a warning dialog when a pasted command contains 'sudo'"),
+            secondary_text = _("Show a warning dialog when a pasted command contains 'sudo'."),
             hexpand = true
         };
         var unsafe_paste_alert_switch = new Gtk.Switch () {
@@ -52,7 +52,7 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         /* Remember Tabs                                 */
         /*************************************************/
         var rem_tabs_label = new Granite.HeaderLabel (_("Remember Tabs")) {
-            secondary_text = _("If enabled, last opened tabs are restored on start"),
+            secondary_text = _("If enabled, last opened tabs are restored on start."),
             hexpand = true
         };
         var rem_tabs_switch = new Gtk.Switch () {
@@ -66,7 +66,7 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         /* Terminal Bell                                 */
         /*************************************************/
         var term_bell_label = new Granite.HeaderLabel (_("Terminal Bell")) {
-            secondary_text = _("Sound when hitting the end of a line and also for tab-completion when there are either no or multiple possible completions"), // vala-lint=line-length
+            secondary_text = _("Sound when hitting the end of a line and also for tab-completion when there are either no or multiple possible completions."), // vala-lint=line-length
             hexpand = true
         };
         var term_bell_switch = new Gtk.Switch () {
