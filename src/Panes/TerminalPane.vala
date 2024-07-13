@@ -20,53 +20,100 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
 
         settings = new GLib.Settings (TERMINAL_SCHEMA);
 
-        var follow_last_tab_label = summary_label_new (_("Follow last tab:"));
-        var follow_last_tab_switch = switch_new ();
-        var follow_last_tab_info = dim_label_new (
-            _("Creating a new tab sets the working directory of the last opened tab.")
-        );
+        /*************************************************/
+        /* Follow Last Tab                               */
+        /*************************************************/
+        var follow_last_tab_label = new Granite.HeaderLabel (_("Follow Last Tab")) {
+            secondary_text = _("Creating a new tab sets the working directory of the last opened tab"),
+            hexpand = true
+        };
+        var follow_last_tab_switch = new Gtk.Switch () {
+            valign = Gtk.Align.START
+        };
+        var follow_last_tab_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        follow_last_tab_box.append (follow_last_tab_label);
+        follow_last_tab_box.append (follow_last_tab_switch);
 
-        var unsafe_paste_alert_label = summary_label_new (_("Unsafe paste alert:"));
-        var unsafe_paste_alert_switch = switch_new ();
-        var unsafe_paste_alert_info = dim_label_new (_("Show a warning dialog when a pasted command contains 'sudo'."));
+        /*************************************************/
+        /* Unsafe Paste Alert                            */
+        /*************************************************/
+        var unsafe_paste_alert_label = new Granite.HeaderLabel (_("Unsafe Paste Alert")) {
+            secondary_text = _("Show a warning dialog when a pasted command contains 'sudo'"),
+            hexpand = true
+        };
+        var unsafe_paste_alert_switch = new Gtk.Switch () {
+            valign = Gtk.Align.START
+        };
+        var unsafe_paste_alert_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        unsafe_paste_alert_box.append (unsafe_paste_alert_label);
+        unsafe_paste_alert_box.append (unsafe_paste_alert_switch);
 
-        var rem_tabs_label = summary_label_new (_("Remember tabs:"));
-        var rem_tabs_switch = switch_new ();
-        var rem_tabs_info = dim_label_new (_("If enabled, last opened tabs are restored on start."));
+        /*************************************************/
+        /* Remember Tabs                                 */
+        /*************************************************/
+        var rem_tabs_label = new Granite.HeaderLabel (_("Remember Tabs")) {
+            secondary_text = _("If enabled, last opened tabs are restored on start"),
+            hexpand = true
+        };
+        var rem_tabs_switch = new Gtk.Switch () {
+            valign = Gtk.Align.START
+        };
+        var rem_tabs_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        rem_tabs_box.append (rem_tabs_label);
+        rem_tabs_box.append (rem_tabs_switch);
 
-        var term_bell_label = summary_label_new (_("Terminal bell:"));
-        var term_bell_switch = switch_new ();
-        var term_bell_info = dim_label_new (
-            _("Sound when hitting the end of a line and also for tab-completion when there are either no or multiple possible completions.") // vala-lint=line-length
-        );
+        /*************************************************/
+        /* Terminal Bell                                 */
+        /*************************************************/
+        var term_bell_label = new Granite.HeaderLabel (_("Terminal Bell")) {
+            secondary_text = _("Sound when hitting the end of a line and also for tab-completion when there are either no or multiple possible completions"), // vala-lint=line-length
+            hexpand = true
+        };
+        var term_bell_switch = new Gtk.Switch () {
+            valign = Gtk.Align.START
+        };
+        var term_bell_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        term_bell_box.append (term_bell_label);
+        term_bell_box.append (term_bell_switch);
 
+        /*************************************************/
+        /* Show Tabs                                     */
+        /*************************************************/
         var tab_bar_map = new Gee.HashMap<string, string> ();
         tab_bar_map.set ("Always Show Tabs", _("Always"));
         tab_bar_map.set ("Hide When Single Tab", _("Hide when single tab"));
         tab_bar_map.set ("Never Show Tabs", _("Never"));
 
-        var tab_bar_label = summary_label_new (_("Show tabs:"));
+        var tab_bar_label = new Granite.HeaderLabel (_("Show Tabs")) {
+            hexpand = true
+        };
         var tab_bar_combo = combobox_text_new (tab_bar_map);
+        tab_bar_combo.valign = Gtk.Align.START;
 
-        var term_font_label = summary_label_new (_("Terminal font:"));
-        var term_font_button = font_button_new ();
+        var tab_bar_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        tab_bar_box.append (tab_bar_label);
+        tab_bar_box.append (tab_bar_combo);
 
-        content_area.attach (follow_last_tab_label, 0, 0, 1, 1);
-        content_area.attach (follow_last_tab_switch, 1, 0, 1, 1);
-        content_area.attach (follow_last_tab_info, 1, 1, 1, 1);
-        content_area.attach (unsafe_paste_alert_label, 0, 2, 1, 1);
-        content_area.attach (unsafe_paste_alert_switch, 1, 2, 1, 1);
-        content_area.attach (unsafe_paste_alert_info, 1, 3, 1, 1);
-        content_area.attach (rem_tabs_label, 0, 4, 1, 1);
-        content_area.attach (rem_tabs_switch, 1, 4, 1, 1);
-        content_area.attach (rem_tabs_info, 1, 5, 1, 1);
-        content_area.attach (term_bell_label, 0, 6, 1, 1);
-        content_area.attach (term_bell_switch, 1, 6, 1, 1);
-        content_area.attach (term_bell_info, 1, 7, 1, 1);
-        content_area.attach (tab_bar_label, 0, 8, 1, 1);
-        content_area.attach (tab_bar_combo, 1, 8, 1, 1);
-        content_area.attach (term_font_label, 0, 9, 1, 1);
-        content_area.attach (term_font_button, 1, 9, 1, 1);
+        /*************************************************/
+        /* Terminal Font                                 */
+        /*************************************************/
+        var term_font_label = new Granite.HeaderLabel (_("Terminal Font")) {
+            hexpand = true
+        };
+        var term_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
+            valign = Gtk.Align.START,
+            use_font = true
+        };
+        var term_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        term_font_box.append (term_font_label);
+        term_font_box.append (term_font_button);
+
+        content_area.attach (follow_last_tab_box, 0, 0, 1, 1);
+        content_area.attach (unsafe_paste_alert_box, 0, 1, 1, 1);
+        content_area.attach (rem_tabs_box, 0, 2, 1, 1);
+        content_area.attach (term_bell_box, 0, 3, 1, 1);
+        content_area.attach (tab_bar_box, 0, 4, 1, 1);
+        content_area.attach (term_font_box, 0, 5, 1, 1);
 
         settings.bind ("follow-last-tab", follow_last_tab_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("unsafe-paste-alert", unsafe_paste_alert_switch, "active", SettingsBindFlags.DEFAULT);
