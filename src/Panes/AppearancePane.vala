@@ -15,7 +15,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
     private Gtk.ComboBoxText gtk_combobox;
     private Gtk.ComboBoxText controls_combobox;
-    private Gtk.Switch gnome_menu;
+    private Gtk.Switch gnome_menu_switch;
 
     public AppearancePane () {
         base (
@@ -60,98 +60,144 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
             }
         }
 
-        var theme_label = new Granite.HeaderLabel (_("Theme Settings"));
-
-        var gtk_label = summary_label_new (_("GTK:"));
+        /*************************************************/
+        /* GTK Theme                                     */
+        /*************************************************/
+        var gtk_label = new Granite.HeaderLabel (_("GTK Theme")) {
+            /// TRANSLATORS: The "%s" represents the path where custom themes are installed
+            secondary_text = _("To show custom themes here, put them in %s.").printf (
+                "~/.local/share/themes/\"%s\"/gtk-3.0".printf (_("theme-name"))
+            ),
+            hexpand = true
+        };
         var gtk_list = ThemeSettings.get_themes ("themes", "gtk-3.0");
         gtk_combobox = combobox_text_new_from_list (gtk_list);
-
-        /// TRANSLATORS: The "%s" represents the path where custom themes are installed
-        var gtk_info = dim_label_new (_("To show custom themes here, put them in %s.").printf (
-            "~/.local/share/themes/<%s>/gtk-3.0".printf (_("theme-name"))
-        ));
+        gtk_combobox.valign = Gtk.Align.START;
 
         var gtk_dir_button = new DestinationButton (".local/share/themes");
 
-        var icon_label = summary_label_new (_("Icons:"));
+        var gtk_theme_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        gtk_theme_box.append (gtk_label);
+        gtk_theme_box.append (gtk_combobox);
+        gtk_theme_box.append (gtk_dir_button);
+
+        /*************************************************/
+        /* Icons                                         */
+        /*************************************************/
+        var icon_label = new Granite.HeaderLabel (_("Icons")) {
+            /// TRANSLATORS: The "%s" represents the path where custom icons are installed
+            secondary_text = _("To show custom icons here, put them in %s.").printf (
+                "~/.icons/\"%s\"".printf (_("theme-name"))
+            ),
+            hexpand = true
+        };
         var icon_list = ThemeSettings.get_themes ("icons", "index.theme");
         var icon_combobox = combobox_text_new_from_list (icon_list);
-
-        /// TRANSLATORS: The "%s" represents the path where custom icons are installed
-        var icon_info = dim_label_new (_("To show custom icons here, put them in %s.").printf (
-            "~/.icons/<%s>".printf (_("theme-name"))
-        ));
+        icon_combobox.valign = Gtk.Align.START;
 
         var icon_dir_button = new DestinationButton (".icons");
 
-        var cursor_label = summary_label_new (_("Cursor:"));
+        var icon_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        icon_box.append (icon_label);
+        icon_box.append (icon_combobox);
+        icon_box.append (icon_dir_button);
+
+        /*************************************************/
+        /* Cursor                                        */
+        /*************************************************/
+        var cursor_label = new Granite.HeaderLabel (_("Cursor")) {
+            /// TRANSLATORS: The "%s" represents the path where custom cursors are installed
+            secondary_text = _("To show custom cursors here, put them in %s.").printf (
+                "~/.icons/\"%s\"/cursors".printf (_("theme-name"))
+            ),
+            hexpand = true
+        };
         var cursor_list = ThemeSettings.get_themes ("icons", "cursors");
         var cursor_combobox = combobox_text_new_from_list (cursor_list);
-
-        /// TRANSLATORS: The "%s" represents the path where custom cursors are installed
-        var cursor_info = dim_label_new (_("To show custom cursors here, put them in %s.").printf (
-            "~/.icons/<%s>/cursors".printf (_("theme-name"))
-        ));
+        cursor_combobox.valign = Gtk.Align.START;
 
         var cursor_dir_button = new DestinationButton (".icons");
 
-        var sound_label = summary_label_new (_("Sound:"));
+        var cursor_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        cursor_box.append (cursor_label);
+        cursor_box.append (cursor_combobox);
+        cursor_box.append (cursor_dir_button);
+
+        /*************************************************/
+        /* Sound                                         */
+        /*************************************************/
+        var sound_label = new Granite.HeaderLabel (_("Sound")) {
+            /// TRANSLATORS: The "%s" represents the path where custom sounds are installed
+            secondary_text = _("To show custom sounds here, put them in %s.").printf (
+                "~/.local/share/sounds/\"%s\"".printf (_("theme-name"))
+            ),
+            hexpand = true
+        };
         var sound_list = ThemeSettings.get_themes ("sounds", "index.theme");
         var sound_combobox = combobox_text_new_from_list (sound_list);
-
-        /// TRANSLATORS: The "%s" represents the path where custom sounds are installed
-        var sound_info = dim_label_new (_("To show custom sounds here, put them in %s.").printf (
-            "~/.local/share/sounds/<%s>".printf (_("theme-name"))
-        ));
+        sound_combobox.valign = Gtk.Align.START;
 
         var sound_dir_button = new DestinationButton (".local/share/sounds");
 
-        var dark_style_label = summary_label_new (_("Force to use dark stylesheet:"));
-        var dark_style_switch = switch_new ();
-        var prefer_dark_info = dim_label_new (
-            _("Forces dark style on all apps, even if it's not supported. Requires restarting the application.")
-        );
+        var sound_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        sound_box.append (sound_label);
+        sound_box.append (sound_combobox);
+        sound_box.append (sound_dir_button);
 
-        var layout_label = new Granite.HeaderLabel (_("Window Controls"));
+        /*************************************************/
+        /* Force Dark Style                              */
+        /*************************************************/
+        var dark_style_label = new Granite.HeaderLabel (_("Force Dark Style")) {
+            secondary_text = _("Forces dark style on all apps, even if it's not supported. Requires restarting the application."),
+            hexpand = true
+        };
+        var dark_style_switch = new Gtk.Switch () {
+            valign = Gtk.Align.START
+        };
 
-        var controls_label = summary_label_new (_("Layout:"));
+        var dark_style_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        dark_style_box.append (dark_style_label);
+        dark_style_box.append (dark_style_switch);
+
+        /*************************************************/
+        /* Window Control Layout                         */
+        /*************************************************/
+        var controls_label = new Granite.HeaderLabel (_("Window Control Layout")) {
+            secondary_text = _("Changes button layout of the window."),
+            hexpand = true
+        };
         var controls_map = get_preset_button_layouts ();
         controls_combobox = combobox_text_new (controls_map);
-        var controls_info = dim_label_new (_("Changes button layout of the window."));
+        controls_combobox.valign = Gtk.Align.START;
 
-        var gnome_menu_label = summary_label_new (_("Show GNOME menu:"));
-        gnome_menu = switch_new ();
-        var gnome_menu_info = dim_label_new (_("Whether to show GNOME menu in GNOME apps."));
+        var controls_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        controls_box.append (controls_label);
+        controls_box.append (controls_combobox);
+
+        /*************************************************/
+        /* Show GNOME Menu                               */
+        /*************************************************/
+        var gnome_menu_switch_label = new Granite.HeaderLabel (_("Show GNOME Menu")) {
+            secondary_text = _("Whether to show GNOME menu in GNOME apps."),
+            hexpand = true
+        };
+        gnome_menu_switch = new Gtk.Switch () {
+            valign = Gtk.Align.START
+        };
+
+        var gnome_menu_switch_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        gnome_menu_switch_box.append (gnome_menu_switch_label);
+        gnome_menu_switch_box.append (gnome_menu_switch);
 
         init_data ();
 
-        content_area.attach (theme_label, 0, 0, 1, 1);
-        content_area.attach (gtk_label, 0, 1, 1, 1);
-        content_area.attach (gtk_combobox, 1, 1, 1, 1);
-        content_area.attach (gtk_info, 1, 2, 1, 1);
-        content_area.attach (gtk_dir_button, 2, 2, 1, 1);
-        content_area.attach (icon_label, 0, 3, 1, 1);
-        content_area.attach (icon_combobox, 1, 3, 1, 1);
-        content_area.attach (icon_info, 1, 4, 1, 1);
-        content_area.attach (icon_dir_button, 2, 4, 1, 1);
-        content_area.attach (cursor_label, 0, 5, 1, 1);
-        content_area.attach (cursor_combobox, 1, 5, 1, 1);
-        content_area.attach (cursor_info, 1, 6, 1, 1);
-        content_area.attach (cursor_dir_button, 2, 6, 1, 1);
-        content_area.attach (sound_label, 0, 7, 1, 1);
-        content_area.attach (sound_combobox, 1, 7, 1, 1);
-        content_area.attach (sound_info, 1, 8, 1, 1);
-        content_area.attach (sound_dir_button, 2, 8, 1, 1);
-        content_area.attach (dark_style_label, 0, 9, 1, 1);
-        content_area.attach (dark_style_switch, 1, 9, 1, 1);
-        content_area.attach (prefer_dark_info, 1, 10, 1, 1);
-        content_area.attach (layout_label, 0, 11, 1, 1);
-        content_area.attach (controls_label, 0, 12, 1, 1);
-        content_area.attach (controls_combobox, 1, 12, 1, 1);
-        content_area.attach (controls_info, 1, 13, 1, 1);
-        content_area.attach (gnome_menu_label, 0, 14, 1, 1);
-        content_area.attach (gnome_menu, 1, 14, 1, 1);
-        content_area.attach (gnome_menu_info, 1, 15, 1, 1);
+        content_area.attach (gtk_theme_box, 0, 0, 1, 1);
+        content_area.attach (icon_box, 0, 1, 1, 1);
+        content_area.attach (cursor_box, 0, 2, 1, 1);
+        content_area.attach (sound_box, 0, 3, 1, 1);
+        content_area.attach (dark_style_box, 0, 4, 1, 1);
+        content_area.attach (controls_box, 0, 5, 1, 1);
+        content_area.attach (gnome_menu_switch_box, 0, 6, 1, 1);
 
         interface_settings.bind ("icon-theme", icon_combobox, "active_id", SettingsBindFlags.DEFAULT);
         interface_settings.bind ("cursor-theme", cursor_combobox, "active_id", SettingsBindFlags.DEFAULT);
@@ -179,10 +225,10 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
             string new_layout = controls_combobox.active_id;
             appearance_settings.set_string ("button-layout", new_layout);
             gnome_wm_settings.set_string ("button-layout", new_layout);
-            x_settings.set_gnome_menu (gnome_menu.active, new_layout);
+            x_settings.set_gnome_menu (gnome_menu_switch.active, new_layout);
         });
 
-        gnome_menu.notify["active"].connect (() => {
+        gnome_menu_switch.notify["active"].connect (() => {
             controls_combobox.changed ();
         });
 
@@ -210,7 +256,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
     private void init_data () {
         gtk_combobox.active_id = interface_settings.get_string ("gtk-theme");
         controls_combobox.active_id = appearance_settings.get_string ("button-layout");
-        gnome_menu.active = x_settings.has_gnome_menu ();
+        gnome_menu_switch.active = x_settings.has_gnome_menu ();
     }
 
     private Gee.HashMap<string, string> get_preset_button_layouts () {
