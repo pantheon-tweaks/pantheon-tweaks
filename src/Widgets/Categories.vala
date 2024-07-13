@@ -71,6 +71,10 @@ public class PantheonTweaks.Categories : Gtk.Box {
                 hexpand = true
             };
             child = content_area;
+
+            var reset = add_button (_("Reset to Default"));
+
+            reset.clicked.connect (on_click_reset);
         }
 
         protected bool if_show_pane (string[] schemas) {
@@ -87,30 +91,38 @@ public class PantheonTweaks.Categories : Gtk.Box {
             return (SettingsSchemaSource.get_default ().lookup (schema, true) != null);
         }
 
-        protected void on_click_reset (owned Reset reset_func) {
-            var reset = add_button (_("Reset to default"));
+        protected virtual bool do_reset () {
+            // NOP
+            return false;
+        }
 
-            reset.clicked.connect (() => {
-                var reset_confirm_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-                    _("Are you sure you want to reset personalization?"),
-                    _("All settings in this pane will be restored to the factory defaults. This action can't be undone."),
-                    "dialog-warning", Gtk.ButtonsType.CANCEL
-                ) {
-                    modal = true,
-                    transient_for = (Gtk.Window) get_root ()
-                };
-                var reset_button = reset_confirm_dialog.add_button (_("Reset"), Gtk.ResponseType.ACCEPT);
-                reset_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
-                reset_confirm_dialog.response.connect ((response_id) => {
-                    if (response_id == Gtk.ResponseType.ACCEPT) {
-                        reset_func ();
-                        restored ();
-                    }
-
+        private void on_click_reset () {
+            var reset_confirm_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+                _("Are you sure you want to reset personalization?"),
+                _("All settings in this pane will be restored to the factory defaults. This action can't be undone."),
+                "dialog-warning", Gtk.ButtonsType.CANCEL
+            ) {
+                modal = true,
+                transient_for = (Gtk.Window) get_root ()
+            };
+            var reset_button = reset_confirm_dialog.add_button (_("Reset"), Gtk.ResponseType.ACCEPT);
+            reset_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
+            reset_confirm_dialog.response.connect ((response_id) => {
+                if (response_id != Gtk.ResponseType.ACCEPT) {
                     reset_confirm_dialog.destroy ();
-                });
-                reset_confirm_dialog.show ();
+                    return;
+                }
+
+                bool is_success = do_reset ();
+                if (!is_success) {
+                    reset_confirm_dialog.destroy ();
+                    return;
+                }
+
+                reset_confirm_dialog.destroy ();
+                restored ();
             });
+            reset_confirm_dialog.show ();
         }
 
         protected Gtk.SpinButton spin_button_new (Gtk.Adjustment adjustment) {
