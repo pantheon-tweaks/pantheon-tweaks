@@ -51,7 +51,7 @@ executable(
     dependencies: [
         dependency('gee-0.8'),
         dependency('glib-2.0'),
-        dependency('granite-7'),
+        dependency('granite-7', version: '>= 7.1.0'),
         dependency('gtk4', version: '>= 4.10'),
         dependency('pango'),
         dependency('switchboard-3', version: '>= 8.0.0'),
