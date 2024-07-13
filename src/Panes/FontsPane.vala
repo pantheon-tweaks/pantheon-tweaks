@@ -88,10 +88,9 @@ public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
                 font_button_bind_get, font_button_bind_set, null, null);
         window_settings.bind_with_mapping ("titlebar-font", titlebar_font_button, "font-desc", SettingsBindFlags.DEFAULT,
                 font_button_bind_get, font_button_bind_set, null, null);
-
     }
 
-    protected override bool do_reset () {
+    protected override void do_reset () {
         string[] keys = {"font-name", "document-font-name", "monospace-font-name"};
 
         foreach (var key in keys) {
@@ -99,7 +98,5 @@ public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
         }
 
         window_settings.reset ("titlebar-font");
-
-        return true;
     }
 }

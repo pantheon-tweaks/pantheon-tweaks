@@ -48,7 +48,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
     public abstract class Pane : Switchboard.SettingsPage {
         public signal void restored ();
 
-        protected delegate void Reset ();
+        protected abstract void do_reset ();
 
         protected Gtk.Grid content_area;
 
@@ -91,11 +91,6 @@ public class PantheonTweaks.Categories : Gtk.Box {
             return (SettingsSchemaSource.get_default ().lookup (schema, true) != null);
         }
 
-        protected virtual bool do_reset () {
-            // NOP
-            return false;
-        }
-
         private void on_click_reset () {
             var reset_confirm_dialog = new Granite.MessageDialog.with_image_from_icon_name (
                 _("Are you sure you want to reset personalization?"),
@@ -113,12 +108,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
                     return;
                 }
 
-                bool is_success = do_reset ();
-                if (!is_success) {
-                    reset_confirm_dialog.destroy ();
-                    return;
-                }
-
+                do_reset ();
                 reset_confirm_dialog.destroy ();
                 restored ();
             });

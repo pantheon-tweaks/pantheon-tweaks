@@ -235,7 +235,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         });
     }
 
-    protected override bool do_reset () {
+    protected override void do_reset () {
         string[] keys = {"gtk-theme", "icon-theme", "cursor-theme"};
 
         foreach (var key in keys) {
@@ -253,8 +253,6 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
         gtk_settings.prefer_dark_theme = false;
         init_data ();
-
-        return true;
     }
 
     private void init_data () {

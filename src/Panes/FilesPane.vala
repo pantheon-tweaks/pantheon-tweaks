@@ -58,16 +58,13 @@ public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
 
         settings.bind ("restore-tabs", restore_tabs_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("date-format", date_format_combo, "active_id", SettingsBindFlags.DEFAULT);
-
     }
 
-    protected override bool do_reset () {
+    protected override void do_reset () {
         string[] keys = {"restore-tabs", "date-format"};
 
         foreach (var key in keys) {
             settings.reset (key);
         }
-
-        return true;
     }
 }

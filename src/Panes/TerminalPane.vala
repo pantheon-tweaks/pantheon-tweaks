@@ -122,17 +122,14 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         settings.bind ("tab-bar-behavior", tab_bar_combo, "active_id", SettingsBindFlags.DEFAULT);
         settings.bind_with_mapping ("font", term_font_button, "font-desc", SettingsBindFlags.DEFAULT,
                                     font_button_bind_get, font_button_bind_set, null, null);
-
     }
 
-    protected override bool do_reset () {
+    protected override void do_reset () {
         string[] keys = {"unsafe-paste-alert", "natural-copy-paste",
                          "follow-last-tab", "audible-bell", "remember-tabs", "tab-bar-behavior", "font"};
 
         foreach (string key in keys) {
             settings.reset (key);
         }
-
-        return true;
     }
 }

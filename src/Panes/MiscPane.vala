@@ -45,9 +45,7 @@ public class PantheonTweaks.Panes.MiscPane : Categories.Pane {
         sound_settings.bind ("max-volume", max_volume_spinbutton, "value", SettingsBindFlags.DEFAULT);
     }
 
-    protected override bool do_reset () {
+    protected override void do_reset () {
         sound_settings.reset ("max-volume");
-
-        return true;
     }
 }
