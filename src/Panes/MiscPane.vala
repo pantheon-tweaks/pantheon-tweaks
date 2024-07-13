@@ -46,7 +46,7 @@ public class PantheonTweaks.Panes.MiscPane : Categories.Pane {
     }
 
     protected override bool do_reset () {
-        sound_settings.reset ("max-volume");;
+        sound_settings.reset ("max-volume");
 
         return true;
     }
