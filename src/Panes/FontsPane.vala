@@ -36,7 +36,7 @@ public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
         var document_font_label = new Granite.HeaderLabel (_("Document Font")) {
             hexpand = true
         };
-        var document_font_button  = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
+        var document_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
             valign = Gtk.Align.START,
             use_font = true
         };
@@ -50,7 +50,7 @@ public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
         var mono_font_label = new Granite.HeaderLabel (_("Monospace Font")) {
             hexpand = true
         };
-        var mono_font_button  = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
+        var mono_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
             valign = Gtk.Align.START,
             use_font = true,
         };
@@ -64,7 +64,7 @@ public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
         var titlebar_font_label = new Granite.HeaderLabel (_("Titlebar Font")) {
             hexpand = true
         };
-        var titlebar_font_button  = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
+        var titlebar_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
             valign = Gtk.Align.START,
             use_font = true
         };
