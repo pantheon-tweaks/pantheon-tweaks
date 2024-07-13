@@ -113,19 +113,6 @@ public class PantheonTweaks.Categories : Gtk.Box {
             });
         }
 
-        protected Gtk.SpinButton spin_button_new (Gtk.Adjustment adjustment) {
-            var spin_button = new Gtk.SpinButton (adjustment, 1, 0);
-            spin_button.set_size_request (150, 0);
-            return spin_button;
-        }
-
-        protected Gtk.Switch switch_new () {
-            var switch = new Gtk.Switch () {
-                halign = Gtk.Align.START
-            };
-            return switch;
-        }
-
         protected Gtk.ComboBoxText combobox_text_new (Gee.HashMap<string, string> items) {
             var combobox_text = new Gtk.ComboBoxText () {
                 halign = Gtk.Align.START
@@ -206,34 +193,6 @@ public class PantheonTweaks.Categories : Gtk.Box {
                 });
                 error_dialog.show ();
             }
-        }
-
-        protected Gtk.Label summary_label_new (string text) {
-            var label = new Gtk.Label (text) {
-                halign = Gtk.Align.END
-            };
-            return label;
-        }
-
-        protected Gtk.Label dim_label_new (string text) {
-            var label = new Gtk.Label (text) {
-                max_width_chars = 60,
-                margin_bottom = 18,
-                wrap = true,
-                xalign = 0
-            };
-            label.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
-            return label;
-        }
-
-        protected Gtk.FontDialogButton font_button_new () {
-            var font_dialog = new Gtk.FontDialog ();
-
-            var font_button = new Gtk.FontDialogButton (font_dialog) {
-                halign = Gtk.Align.START,
-                use_font = true
-            };
-            return font_button;
         }
 
         /**
