@@ -28,7 +28,7 @@ public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
             hexpand = true
         };
         var restore_tabs_switch = new Gtk.Switch () {
-            valign = Gtk.Align.START
+            valign = Gtk.Align.CENTER
         };
         var restore_tabs_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         restore_tabs_box.append (restore_tabs_label);
@@ -47,7 +47,7 @@ public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
             hexpand = true
         };
         var date_format_combo = combobox_text_new (date_format_map);
-        date_format_combo.valign = Gtk.Align.START;
+        date_format_combo.valign = Gtk.Align.CENTER;
 
         var date_format_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         date_format_box.append (date_format_label);

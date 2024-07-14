@@ -66,7 +66,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
 
             content_area = new Gtk.Grid () {
                 column_spacing = 12,
-                row_spacing = 12,
+                row_spacing = 18,
                 vexpand = true,
                 hexpand = true
             };
@@ -148,7 +148,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
                 Object (
                     icon_name: "folder-open",
                     destination_uri: "file://%s/%s".printf (Environment.get_home_dir (), destination),
-                    valign: Gtk.Align.START,
+                    valign: Gtk.Align.CENTER,
                     tooltip_text: _("Open destination folder")
                 );
             }
