@@ -84,9 +84,9 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         gtk_theme_box.append (gtk_dir_button);
 
         /*************************************************/
-        /* Icons                                         */
+        /* Icon Theme                                    */
         /*************************************************/
-        var icon_label = new Granite.HeaderLabel (_("Icons")) {
+        var icon_label = new Granite.HeaderLabel (_("Icon Theme")) {
             /// TRANSLATORS: The "%s" represents the path where custom icons are installed
             secondary_text = _("To show custom icons here, put them in %s.").printf (
                 "~/.icons/\"%s\"".printf (_("theme-name"))
@@ -105,9 +105,9 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         icon_box.append (icon_dir_button);
 
         /*************************************************/
-        /* Cursor                                        */
+        /* Cursor Theme                                  */
         /*************************************************/
-        var cursor_label = new Granite.HeaderLabel (_("Cursor")) {
+        var cursor_label = new Granite.HeaderLabel (_("Cursor Theme")) {
             /// TRANSLATORS: The "%s" represents the path where custom cursors are installed
             secondary_text = _("To show custom cursors here, put them in %s.").printf (
                 "~/.icons/\"%s\"/cursors".printf (_("theme-name"))
@@ -126,9 +126,9 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         cursor_box.append (cursor_dir_button);
 
         /*************************************************/
-        /* Sound                                         */
+        /* Sound Theme                                   */
         /*************************************************/
-        var sound_label = new Granite.HeaderLabel (_("Sound")) {
+        var sound_label = new Granite.HeaderLabel (_("Sound Theme")) {
             /// TRANSLATORS: The "%s" represents the path where custom sounds are installed
             secondary_text = _("To show custom sounds here, put them in %s.").printf (
                 "~/.local/share/sounds/\"%s\"".printf (_("theme-name"))
