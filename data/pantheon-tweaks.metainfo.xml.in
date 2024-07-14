@@ -12,21 +12,21 @@
   <translation type="gettext">pantheon-tweaks</translation>
   <releases>
     <release version="2.0.3" date="2024-05-30" urgency="low">
-      <description translatable="no">
+      <description translatable="no" translate="no">
         <ul>
           <li>metainfo: Replace deprecated license id "GPL-3.0+" with "GPL-3.0-or-later"</li>
         </ul>
       </description>
     </release>
     <release version="2.0.2" date="2024-05-23" urgency="low">
-      <description translatable="no">
+      <description translatable="no" translate="no">
         <ul>
           <li>Show an alert view if launched on unsupported desktop environments</li>
         </ul>
       </description>
     </release>
     <release version="2.0.1" date="2024-05-22" urgency="low">
-      <description translatable="no">
+      <description translatable="no" translate="no">
         <ul>
           <li>Apply suggested changes from Flathub maintainers</li>
           <li>Appearance: Fix double error dialogs when clicking buttons to open theme directories and directory creation failed</li>
@@ -34,7 +34,7 @@
       </description>
     </release>
     <release version="2.0.0" date="2024-05-19" urgency="medium">
-      <description translatable="no">
+      <description translatable="no" translate="no">
         <ul>
           <li>Pantheon Tweaks is now an independent desktop app instead of a plug in System Settings</li>
         </ul>
@@ -45,14 +45,14 @@
       </description>
     </release>
     <release version="1.1.2" date="2024-01-07" urgency="low">
-      <description translatable="no">
+      <description translatable="no" translate="no">
         <ul>
           <li>Add an infobar about migration to an independent dekstop app</li>
         </ul>
       </description>
     </release>
     <release version="1.1.1" date="2023-10-26" urgency="low">
-      <description translatable="no">
+      <description translatable="no" translate="no">
         <ul>
           <li>Efficiently find and match pane name</li>
           <li>TerminalPane: Allow font configuration</li>
@@ -69,7 +69,7 @@
       </description>
     </release>
     <release version="1.1.0" date="2023-02-01" urgency="medium">
-      <description translatable="no">
+      <description translatable="no" translate="no">
         <ul>
           <li>TerminalPane: Remove background color preference which no longer take effect due to changes on Terminal side</li>
         </ul>
@@ -84,7 +84,7 @@
       </description>
     </release>
     <release version="1.0.4" date="2022-05-23" urgency="low">
-      <description translatable="no">
+      <description translatable="no" translate="no">
         <ul>
           <li>Remove AnimationsPane which no longer take effect due to the removal of tweaking animations functions on Gala side</li>
           <li>DestinationButton: Show an error dialog when creating/opening the destination folder being failed</li>
@@ -100,7 +100,7 @@
       </description>
     </release>
     <release version="1.0.3" date="2021-12-06" urgency="low">
-      <description translatable="no">
+      <description translatable="no" translate="no">
         <ul>
           <li>FontsPane: Fix icon missing with the latest icons update</li>
           <li>Make sure dimming feature that is introduced in the latest version of Gala work for the reset dialog</li>
@@ -117,7 +117,7 @@
       </description>
     </release>
     <release version="1.0.2" date="2021-11-02" urgency="medium">
-      <description translatable="no">
+      <description translatable="no" translate="no">
         <ul>
           <li>Sync selected elementary stylesheet variant with Desktop Plug</li>
           <li>Improves reliability of restoring visually</li>
@@ -134,7 +134,7 @@
       </description>
     </release>
     <release version="1.0.1" date="2021-08-24" urgency="low">
-      <description translatable="no">
+      <description translatable="no" translate="no">
         <ul>
           <li>Exclude Adwaita/gnome/hicolor themes from theme selections</li>
           <li>Support accessing to panes with settings paths</li>
@@ -144,7 +144,7 @@
       </description>
     </release>
     <release version="1.0.0" date="2021-08-05" urgency="medium">
-      <description translatable="no">
+      <description translatable="no" translate="no">
         <p>elementary Tweaks is now renamed to Pantheon Tweaks and get some new features and fixes:</p>
         <ul>
           <li>Remove preferences now supported in Pantheon officially</li>
