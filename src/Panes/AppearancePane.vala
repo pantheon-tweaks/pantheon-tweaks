@@ -74,7 +74,6 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         };
         var gtk_list = ThemeSettings.get_themes ("themes", "gtk-3.0");
         gtk_combobox = combobox_text_new_from_list (gtk_list);
-        gtk_combobox.valign = Gtk.Align.CENTER;
 
         var gtk_dir_button = new DestinationButton (".local/share/themes");
 
@@ -95,7 +94,6 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         };
         var icon_list = ThemeSettings.get_themes ("icons", "index.theme");
         var icon_combobox = combobox_text_new_from_list (icon_list);
-        icon_combobox.valign = Gtk.Align.CENTER;
 
         var icon_dir_button = new DestinationButton (".icons");
 
@@ -116,7 +114,6 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         };
         var cursor_list = ThemeSettings.get_themes ("icons", "cursors");
         var cursor_combobox = combobox_text_new_from_list (cursor_list);
-        cursor_combobox.valign = Gtk.Align.CENTER;
 
         var cursor_dir_button = new DestinationButton (".icons");
 
@@ -137,7 +134,6 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         };
         var sound_list = ThemeSettings.get_themes ("sounds", "index.theme");
         var sound_combobox = combobox_text_new_from_list (sound_list);
-        sound_combobox.valign = Gtk.Align.CENTER;
 
         var sound_dir_button = new DestinationButton (".local/share/sounds");
 
@@ -170,7 +166,6 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         };
         var controls_map = get_preset_button_layouts ();
         controls_combobox = combobox_text_new (controls_map);
-        controls_combobox.valign = Gtk.Align.CENTER;
 
         var controls_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
             margin_top = 24

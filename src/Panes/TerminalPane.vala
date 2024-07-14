@@ -88,7 +88,6 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
             hexpand = true
         };
         var tab_bar_combo = combobox_text_new (tab_bar_map);
-        tab_bar_combo.valign = Gtk.Align.CENTER;
 
         var tab_bar_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         tab_bar_box.append (tab_bar_label);

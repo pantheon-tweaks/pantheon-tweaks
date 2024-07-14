@@ -117,7 +117,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
 
         protected Gtk.ComboBoxText combobox_text_new (Gee.HashMap<string, string> items) {
             var combobox_text = new Gtk.ComboBoxText () {
-                halign = Gtk.Align.START
+                valign = Gtk.Align.CENTER
             };
 
             foreach (var item in items.entries) {
@@ -130,7 +130,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
 
         protected Gtk.ComboBoxText combobox_text_new_from_list (Gee.List<string> items) {
             var combobox_text = new Gtk.ComboBoxText () {
-                halign = Gtk.Align.START
+                valign = Gtk.Align.CENTER
             };
 
             for (int i = 0; i < items.size; i++) {

@@ -47,7 +47,6 @@ public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
             hexpand = true
         };
         var date_format_combo = combobox_text_new (date_format_map);
-        date_format_combo.valign = Gtk.Align.CENTER;
 
         var date_format_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         date_format_box.append (date_format_label);
