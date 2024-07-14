@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-19 05:34+0000\n"
+"POT-Creation-Date: 2024-07-14 15:31+0900\n"
 "PO-Revision-Date: 2021-12-17 19:37+0200\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -43,21 +43,22 @@ msgstr ""
 "Egy rendszerbeállítások-komponens a Pantheon számára, amivel egyszerűen és "
 "biztonságosan testreszabhatja az asztali felület megjelenését."
 
-#: data/pantheon-tweaks.metainfo.xml.in:130
+#: data/pantheon-tweaks.metainfo.xml.in:163
 msgid "Appearance pane"
 msgstr "Megjelenés"
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in:136
+#: data/pantheon-tweaks.metainfo.xml.in:169
+#: data/pantheon-tweaks.metainfo.xml.in:171
 #, fuzzy
 msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon trükkök"
 
-#: src/Panes/AppearancePane.vala:22
+#: src/Panes/AppearancePane.vala:26
 msgid "Appearance"
 msgstr "Megjelenés"
 
-#: src/Panes/AppearancePane.vala:23
+#: src/Panes/AppearancePane.vala:27
 msgid ""
 "Change the theme and button layout of windows. Changing theme may cause "
 "visibility issue."
@@ -65,13 +66,10 @@ msgstr ""
 "Az ablakok témájának és gombelrendezésének megváltoztatása. A téma cseréje "
 "megjelenési problémákat okozhat."
 
-#: src/Panes/AppearancePane.vala:63
-msgid "Theme Settings"
-msgstr "Témabeállítások"
-
-#: src/Panes/AppearancePane.vala:65
-msgid "GTK:"
-msgstr "GTK:"
+#: src/Panes/AppearancePane.vala:68
+#, fuzzy
+msgid "GTK Theme"
+msgstr "Téma:"
 
 #. TRANSLATORS: The "%s" represents the path where custom themes are installed
 #: src/Panes/AppearancePane.vala:70
@@ -79,46 +77,50 @@ msgstr "GTK:"
 msgid "To show custom themes here, put them in %s."
 msgstr "Az egyéni témák megjelenítéséhez helyezze őket ide: %s."
 
-#: src/Panes/AppearancePane.vala:71 src/Panes/AppearancePane.vala:82
-#: src/Panes/AppearancePane.vala:93 src/Panes/AppearancePane.vala:104
+#: src/Panes/AppearancePane.vala:71 src/Panes/AppearancePane.vala:91
+#: src/Panes/AppearancePane.vala:111 src/Panes/AppearancePane.vala:131
 msgid "theme-name"
 msgstr "téma-neve"
 
-#: src/Panes/AppearancePane.vala:76
-msgid "Icons:"
-msgstr "Ikonok:"
+#: src/Panes/AppearancePane.vala:88
+#, fuzzy
+msgid "Icon Theme"
+msgstr "Ikontéma:"
 
 #. TRANSLATORS: The "%s" represents the path where custom icons are installed
-#: src/Panes/AppearancePane.vala:81
+#: src/Panes/AppearancePane.vala:90
 #, c-format
 msgid "To show custom icons here, put them in %s."
 msgstr "Az egyéni ikonok megjelenítéséhez helyezze őket ide: %s."
 
-#: src/Panes/AppearancePane.vala:87
-msgid "Cursor:"
+#: src/Panes/AppearancePane.vala:108
+#, fuzzy
+msgid "Cursor Theme"
 msgstr "Kurzor:"
 
 #. TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:92
+#: src/Panes/AppearancePane.vala:110
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr "Az egyéni kurzorok megjelenítéséhez helyezze őket ide: %s."
 
-#: src/Panes/AppearancePane.vala:98
-msgid "Sound:"
-msgstr "Hang:"
+#: src/Panes/AppearancePane.vala:128
+#, fuzzy
+msgid "Sound Theme"
+msgstr "Ikontéma:"
 
 #. TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:103
+#: src/Panes/AppearancePane.vala:130
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr "Az egyéni hangok megjelenítéséhez helyezze őket ide: %s."
 
-#: src/Panes/AppearancePane.vala:109
-msgid "Force to use dark stylesheet:"
+#: src/Panes/AppearancePane.vala:148
+#, fuzzy
+msgid "Force Dark Style"
 msgstr "Sötét színséma használatának kényszerítése:"
 
-#: src/Panes/AppearancePane.vala:113
+#: src/Panes/AppearancePane.vala:149
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
@@ -126,165 +128,181 @@ msgstr ""
 "Rákényszeríti a sötét témát az összes alkalmazásra, akkor is, ha azok nem "
 "támogatják. Az alkalmazások újraindítását igényli."
 
-#: src/Panes/AppearancePane.vala:116
-msgid "Window Controls"
+#: src/Panes/AppearancePane.vala:163
+#, fuzzy
+msgid "Window Control Layout"
 msgstr "Ablakvezérlők"
 
-#: src/Panes/AppearancePane.vala:118
-msgid "Layout:"
-msgstr "Elrendezés:"
-
-#: src/Panes/AppearancePane.vala:121
+#: src/Panes/AppearancePane.vala:164
 msgid "Changes button layout of the window."
 msgstr "Megváltoztatja az ablakok gombjainak elrendezését."
 
-#: src/Panes/AppearancePane.vala:123
-msgid "Show GNOME menu:"
+#: src/Panes/AppearancePane.vala:179
+#, fuzzy
+msgid "Show GNOME Menu"
 msgstr "GNOME menü megjelenítése:"
 
-#: src/Panes/AppearancePane.vala:125
+#: src/Panes/AppearancePane.vala:180
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "Megjelenítésre kerüljön-e a GNOME menüje a GNOME alkalmazásokban."
 
-#: src/Panes/AppearancePane.vala:222
+#: src/Panes/AppearancePane.vala:264
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:223
+#: src/Panes/AppearancePane.vala:265
 msgid "elementary Reversed"
 msgstr "Fordított elementary"
 
-#: src/Panes/AppearancePane.vala:224
+#: src/Panes/AppearancePane.vala:266
 msgid "Close Only Right"
 msgstr "Csak bezárás gomb jobb oldalt"
 
-#: src/Panes/AppearancePane.vala:225
+#: src/Panes/AppearancePane.vala:267
 msgid "Close Only Left"
 msgstr "Csak bezárás gomb bal oldalt"
 
-#: src/Panes/AppearancePane.vala:226
+#: src/Panes/AppearancePane.vala:268
 msgid "Add Minimize Left"
 msgstr "Lekicsinyítő gomb bal oldalon"
 
-#: src/Panes/AppearancePane.vala:227
+#: src/Panes/AppearancePane.vala:269
 msgid "Add Minimize Right"
 msgstr "Lekicsinyítő gomb jobb oldalon"
 
-#: src/Panes/AppearancePane.vala:228
+#: src/Panes/AppearancePane.vala:270
 msgid "Replace Maximize to Minimize"
 msgstr "Maximalizálás helyett lekicsinyítés"
 
-#: src/Panes/AppearancePane.vala:229
+#: src/Panes/AppearancePane.vala:271
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:230
+#: src/Panes/AppearancePane.vala:272
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:231
-msgid "Ubuntu"
-msgstr "Ubuntu"
+#: src/Panes/AppearancePane.vala:273
+#, fuzzy
+msgid "Windows Reversed"
+msgstr "Windows"
 
-#: src/Panes/FilesPane.vala:11
+#: src/Panes/FilesPane.vala:13
 msgid "Files"
 msgstr "Fájlkezelő"
 
-#: src/Panes/FilesPane.vala:21
-msgid "Restore tabs:"
+#: src/Panes/FilesPane.vala:26
+#, fuzzy
+msgid "Restore Tabs"
 msgstr "Lapok visszaállítása:"
 
-#: src/Panes/FilesPane.vala:25
+#: src/Panes/FilesPane.vala:27
+msgid "Restore tabs from previous session when launched."
+msgstr ""
+
+#: src/Panes/FilesPane.vala:41
 msgid "Locale"
 msgstr "Területi beállítások"
 
-#: src/Panes/FilesPane.vala:26
+#: src/Panes/FilesPane.vala:42
 msgid "ISO"
 msgstr "ISO"
 
-#: src/Panes/FilesPane.vala:27
+#: src/Panes/FilesPane.vala:43
 msgid "Informal"
 msgstr "Informális"
 
-#: src/Panes/FilesPane.vala:29
-msgid "Date format:"
+#: src/Panes/FilesPane.vala:45
+#, fuzzy
+msgid "Date Format"
 msgstr "Dátumformátum:"
 
-#: src/Panes/FontsPane.vala:10
+#: src/Panes/FilesPane.vala:46
+msgid "Date format used in the properties dialog or the list view."
+msgstr ""
+
+#: src/Panes/FontsPane.vala:13
 msgid "Fonts"
 msgstr "Betűtípusok"
 
-#: src/Panes/FontsPane.vala:11
+#: src/Panes/FontsPane.vala:14
 msgid "Change the fonts used in your system and documents by default."
 msgstr "A rendszerben és dokumentumokban használt betűtípusok megváltoztatása."
 
-#: src/Panes/FontsPane.vala:19
-msgid "Default Font:"
+#: src/Panes/FontsPane.vala:25
+#, fuzzy
+msgid "Default Font"
 msgstr "Alapértelmezett betűtípus:"
 
-#: src/Panes/FontsPane.vala:22
-msgid "Document font:"
+#: src/Panes/FontsPane.vala:39
+#, fuzzy
+msgid "Document Font"
 msgstr "Dokumentumok betűtípusa:"
 
-#: src/Panes/FontsPane.vala:25
-msgid "Monospace font:"
+#: src/Panes/FontsPane.vala:53
+#, fuzzy
+msgid "Monospace Font"
 msgstr "Monospace betűtípus:"
 
-#: src/Panes/FontsPane.vala:28
-msgid "Titlebar font:"
+#: src/Panes/FontsPane.vala:67
+#, fuzzy
+msgid "Titlebar Font"
 msgstr "Címsor betűtípusa:"
 
-#: src/Panes/MiscPane.vala:12
+#: src/Panes/MiscPane.vala:14
 msgid "Miscellaneous"
 msgstr "Egyéb"
 
-#: src/Panes/MiscPane.vala:13
+#: src/Panes/MiscPane.vala:15
 msgid "Configure some other hidden settings."
 msgstr "További, rejtett beállítások megváltoztatása."
 
-#: src/Panes/MiscPane.vala:24
-msgid "Sound Indicator"
-msgstr "Hangindikátor"
-
 #: src/Panes/MiscPane.vala:26
-msgid "Max volume:"
+#, fuzzy
+msgid "Max Volume"
 msgstr "Maximális hangerő:"
 
 #: src/Panes/TerminalPane.vala:13
 msgid "Terminal"
 msgstr "Terminál"
 
-#: src/Panes/TerminalPane.vala:23
-msgid "Follow last tab:"
+#: src/Panes/TerminalPane.vala:26
+#, fuzzy
+msgid "Follow Last Tab"
 msgstr "A legutóbbi lap követése:"
 
-#: src/Panes/TerminalPane.vala:26
+#: src/Panes/TerminalPane.vala:27
 msgid "Creating a new tab sets the working directory of the last opened tab."
 msgstr ""
 "Az újonnan megnyitott lapok a legutóbb megnyitott lap könyvtárára lesznek "
 "állítva."
 
-#: src/Panes/TerminalPane.vala:29
-msgid "Unsafe paste alert:"
+#: src/Panes/TerminalPane.vala:40
+#, fuzzy
+msgid "Unsafe Paste Alert"
 msgstr "Figyelmeztetés nem biztonságos beillesztésre:"
 
-#: src/Panes/TerminalPane.vala:31
-msgid "Show a warning dialog when a pasted command contains 'sudo'."
+#: src/Panes/TerminalPane.vala:41
+#, fuzzy
+msgid ""
+"Show a warning dialog when pasting a command with 'sudo' or multiple lines."
 msgstr "Figyelmeztetés, ha 'sudo'-t tartalmaz a beillesztendő szöveg."
 
-#: src/Panes/TerminalPane.vala:33
-msgid "Remember tabs:"
+#: src/Panes/TerminalPane.vala:54
+#, fuzzy
+msgid "Remember Tabs"
 msgstr "Lapok megjegyzése:"
 
-#: src/Panes/TerminalPane.vala:35
+#: src/Panes/TerminalPane.vala:55
 msgid "If enabled, last opened tabs are restored on start."
 msgstr "A legutóbb megnyitott lapok visszaállítása megnyitáskor."
 
-#: src/Panes/TerminalPane.vala:37
-msgid "Terminal bell:"
+#: src/Panes/TerminalPane.vala:68
+#, fuzzy
+msgid "Terminal Bell"
 msgstr "Csengő a terminálban:"
 
-#: src/Panes/TerminalPane.vala:40
+#: src/Panes/TerminalPane.vala:69
 msgid ""
 "Sound when hitting the end of a line and also for tab-completion when there "
 "are either no or multiple possible completions."
@@ -292,52 +310,57 @@ msgstr ""
 "Hangjelzés sorvégbe ütközéskor és tab-kiegészítéskor, ha nincsenek, vagy "
 "pedig több javaslat van."
 
-#: src/Panes/TerminalPane.vala:44
+#: src/Panes/TerminalPane.vala:83
 msgid "Always"
 msgstr "Mindig"
 
-#: src/Panes/TerminalPane.vala:45
+#: src/Panes/TerminalPane.vala:84
 msgid "Hide when single tab"
 msgstr "Elrejtés egy tabnál"
 
-#: src/Panes/TerminalPane.vala:46
+#: src/Panes/TerminalPane.vala:85
 msgid "Never"
 msgstr "Soha"
 
-#: src/Panes/TerminalPane.vala:48
-msgid "Show tabs:"
+#: src/Panes/TerminalPane.vala:87
+#, fuzzy
+msgid "Show Tabs"
 msgstr "Tabok kijelzése:"
 
-#: src/Panes/TerminalPane.vala:51
+#: src/Panes/TerminalPane.vala:99
 #, fuzzy
-msgid "Terminal font:"
+msgid "Terminal Font"
 msgstr "Terminál"
 
 #: src/MainWindow.vala:17
 msgid "Tweaks"
 msgstr "Trükkök"
 
-#: src/Widgets/Categories.vala:26
+#: src/MainWindow.vala:26
+msgid "Your Desktop Environment Is Not Supported"
+msgstr ""
+
+#: src/MainWindow.vala:28
+#, c-format
+msgid ""
+"Pantheon Tweaks is a customization tool for Pantheon. Your desktop "
+"environment \"%s\" is not supported."
+msgstr ""
+
+#: src/Widgets/Categories.vala:23
 msgid "Reset settings successfully"
 msgstr "Beállítások sikeresen visszaállítva"
 
-#: src/Widgets/Categories.vala:53
-msgid "General"
-msgstr "Általános"
-
-#: src/Widgets/Categories.vala:56
-msgid "Applications"
-msgstr "Alkalmazások"
-
-#: src/Widgets/Categories.vala:114
-msgid "Reset to default"
+#: src/Widgets/Categories.vala:76
+#, fuzzy
+msgid "Reset to Default"
 msgstr "Visszaállítás alapértelmezettre"
 
-#: src/Widgets/Categories.vala:119
+#: src/Widgets/Categories.vala:97
 msgid "Are you sure you want to reset personalization?"
 msgstr "Biztosan vissza szeretné állítani a személyre szabott beállításokat?"
 
-#: src/Widgets/Categories.vala:120
+#: src/Widgets/Categories.vala:98
 msgid ""
 "All settings in this pane will be restored to the factory defaults. This "
 "action can't be undone."
@@ -345,35 +368,62 @@ msgstr ""
 "Az oldalon található összes beállítás a gyári alapértelmezett értékre fog "
 "visszaállni. A művelet nem vonható vissza."
 
-#: src/Widgets/Categories.vala:126
+#: src/Widgets/Categories.vala:104
 msgid "Reset"
 msgstr "Visszaállítás"
 
-#: src/Widgets/Categories.vala:218
+#: src/Widgets/Categories.vala:153
 msgid "Open destination folder"
 msgstr "Célmappa megnyitása"
 
-#: src/Widgets/Categories.vala:230
+#: src/Widgets/Categories.vala:165
 #, fuzzy
 msgid "Failed to create the destination folder"
 msgstr "Célmappa megnyitása"
 
-#: src/Widgets/Categories.vala:231
+#: src/Widgets/Categories.vala:166
 msgid ""
 "The destination folder doesn't exist and tried to create new but failed. The "
 "following error message might be helpful:"
 msgstr ""
 
-#: src/Widgets/Categories.vala:241
+#: src/Widgets/Categories.vala:178
 #, fuzzy
 msgid "Failed to open the destination folder"
 msgstr "Célmappa megnyitása"
 
-#: src/Widgets/Categories.vala:242
+#: src/Widgets/Categories.vala:179
 msgid ""
 "Tried to open the destination folder but failed. The following error message "
 "might be helpful:"
 msgstr ""
+
+#~ msgid "Theme Settings"
+#~ msgstr "Témabeállítások"
+
+#~ msgid "GTK:"
+#~ msgstr "GTK:"
+
+#~ msgid "Icons:"
+#~ msgstr "Ikonok:"
+
+#~ msgid "Sound:"
+#~ msgstr "Hang:"
+
+#~ msgid "Layout:"
+#~ msgstr "Elrendezés:"
+
+#~ msgid "Ubuntu"
+#~ msgstr "Ubuntu"
+
+#~ msgid "Sound Indicator"
+#~ msgstr "Hangindikátor"
+
+#~ msgid "General"
+#~ msgstr "Általános"
+
+#~ msgid "Applications"
+#~ msgstr "Alkalmazások"
 
 #~ msgid "Translation updates:"
 #~ msgstr "Frissített fordítások:"
@@ -604,9 +654,6 @@ msgstr ""
 #~ msgid "Hide Mode:"
 #~ msgstr "Elrejtési mód:"
 
-#~ msgid "Theme:"
-#~ msgstr "Téma:"
-
 #~ msgid "Primary Monitor"
 #~ msgstr "Elsődleges monitor"
 
@@ -639,9 +686,6 @@ msgstr ""
 
 #~ msgid "Opacity:"
 #~ msgstr "Átlátszatlanság:"
-
-#~ msgid "Icon Theme:"
-#~ msgstr "Ikontéma:"
 
 #~ msgid "Audible Bell:"
 #~ msgstr "Hangjelzés:"

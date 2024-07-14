@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-19 05:34+0000\n"
+"POT-Creation-Date: 2024-07-14 15:31+0900\n"
 "PO-Revision-Date: 2017-07-24 17:58+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: \n"
@@ -38,34 +38,31 @@ msgid ""
 "safely customise your desktop's appearance."
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in:130
+#: data/pantheon-tweaks.metainfo.xml.in:163
 #, fuzzy
 msgid "Appearance pane"
 msgstr "Išvaizda"
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in:136
+#: data/pantheon-tweaks.metainfo.xml.in:169
+#: data/pantheon-tweaks.metainfo.xml.in:171
 msgid "Pantheon Tweaks Developers"
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:22
+#: src/Panes/AppearancePane.vala:26
 msgid "Appearance"
 msgstr "Išvaizda"
 
-#: src/Panes/AppearancePane.vala:23
+#: src/Panes/AppearancePane.vala:27
 msgid ""
 "Change the theme and button layout of windows. Changing theme may cause "
 "visibility issue."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:63
+#: src/Panes/AppearancePane.vala:68
 #, fuzzy
-msgid "Theme Settings"
-msgstr "Derinti elementary OS nustatymus"
-
-#: src/Panes/AppearancePane.vala:65
-msgid "GTK:"
-msgstr ""
+msgid "GTK Theme"
+msgstr "GTK+ tema:"
 
 #. TRANSLATORS: The "%s" represents the path where custom themes are installed
 #: src/Panes/AppearancePane.vala:70
@@ -73,306 +70,330 @@ msgstr ""
 msgid "To show custom themes here, put them in %s."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:71 src/Panes/AppearancePane.vala:82
-#: src/Panes/AppearancePane.vala:93 src/Panes/AppearancePane.vala:104
+#: src/Panes/AppearancePane.vala:71 src/Panes/AppearancePane.vala:91
+#: src/Panes/AppearancePane.vala:111 src/Panes/AppearancePane.vala:131
 msgid "theme-name"
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:76
+#: src/Panes/AppearancePane.vala:88
 #, fuzzy
-msgid "Icons:"
-msgstr "Piktogramų dydis:"
+msgid "Icon Theme"
+msgstr "Piktogramų tema:"
 
 #. TRANSLATORS: The "%s" represents the path where custom icons are installed
-#: src/Panes/AppearancePane.vala:81
+#: src/Panes/AppearancePane.vala:90
 #, c-format
 msgid "To show custom icons here, put them in %s."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:87
+#: src/Panes/AppearancePane.vala:108
 #, fuzzy
-msgid "Cursor:"
+msgid "Cursor Theme"
 msgstr "Žymeklio tema:"
 
 #. TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:92
+#: src/Panes/AppearancePane.vala:110
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:98
-msgid "Sound:"
-msgstr ""
+#: src/Panes/AppearancePane.vala:128
+#, fuzzy
+msgid "Sound Theme"
+msgstr "Piktogramų tema:"
 
 #. TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:103
+#: src/Panes/AppearancePane.vala:130
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:109
-msgid "Force to use dark stylesheet:"
+#: src/Panes/AppearancePane.vala:148
+msgid "Force Dark Style"
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:113
+#: src/Panes/AppearancePane.vala:149
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:116
+#: src/Panes/AppearancePane.vala:163
 #, fuzzy
-msgid "Window Controls"
+msgid "Window Control Layout"
 msgstr "Langų valdikliai:"
 
-#: src/Panes/AppearancePane.vala:118
-#, fuzzy
-msgid "Layout:"
-msgstr "Tinkintas išdėstymas:"
-
-#: src/Panes/AppearancePane.vala:121
+#: src/Panes/AppearancePane.vala:164
 msgid "Changes button layout of the window."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:123
-msgid "Show GNOME menu:"
+#: src/Panes/AppearancePane.vala:179
+msgid "Show GNOME Menu"
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:125
+#: src/Panes/AppearancePane.vala:180
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:222
+#: src/Panes/AppearancePane.vala:264
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:223
+#: src/Panes/AppearancePane.vala:265
 #, fuzzy
 msgid "elementary Reversed"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:224
+#: src/Panes/AppearancePane.vala:266
 #, fuzzy
 msgid "Close Only Right"
 msgstr "Tik užverti"
 
-#: src/Panes/AppearancePane.vala:225
+#: src/Panes/AppearancePane.vala:267
 #, fuzzy
 msgid "Close Only Left"
 msgstr "Tik užverti"
 
-#: src/Panes/AppearancePane.vala:226
+#: src/Panes/AppearancePane.vala:268
 #, fuzzy
 msgid "Add Minimize Left"
 msgstr "Suskleisti kairėje"
 
-#: src/Panes/AppearancePane.vala:227
+#: src/Panes/AppearancePane.vala:269
 #, fuzzy
 msgid "Add Minimize Right"
 msgstr "Suskleisti dešinėje"
 
-#: src/Panes/AppearancePane.vala:228
+#: src/Panes/AppearancePane.vala:270
 msgid "Replace Maximize to Minimize"
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:229
+#: src/Panes/AppearancePane.vala:271
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:230
+#: src/Panes/AppearancePane.vala:272
 msgid "macOS"
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:231
-msgid "Ubuntu"
-msgstr ""
+#: src/Panes/AppearancePane.vala:273
+#, fuzzy
+msgid "Windows Reversed"
+msgstr "Windows"
 
-#: src/Panes/FilesPane.vala:11
+#: src/Panes/FilesPane.vala:13
 msgid "Files"
 msgstr "Failai"
 
-#: src/Panes/FilesPane.vala:21
-msgid "Restore tabs:"
+#: src/Panes/FilesPane.vala:26
+msgid "Restore Tabs"
 msgstr ""
 
-#: src/Panes/FilesPane.vala:25
+#: src/Panes/FilesPane.vala:27
+msgid "Restore tabs from previous session when launched."
+msgstr ""
+
+#: src/Panes/FilesPane.vala:41
 msgid "Locale"
 msgstr "Lokalė"
 
-#: src/Panes/FilesPane.vala:26
+#: src/Panes/FilesPane.vala:42
 msgid "ISO"
 msgstr "ISO"
 
-#: src/Panes/FilesPane.vala:27
+#: src/Panes/FilesPane.vala:43
 msgid "Informal"
 msgstr "Neoficialus"
 
-#: src/Panes/FilesPane.vala:29
+#: src/Panes/FilesPane.vala:45
 #, fuzzy
-msgid "Date format:"
+msgid "Date Format"
 msgstr "Datos formatas:"
 
-#: src/Panes/FontsPane.vala:10
+#: src/Panes/FilesPane.vala:46
+msgid "Date format used in the properties dialog or the list view."
+msgstr ""
+
+#: src/Panes/FontsPane.vala:13
 msgid "Fonts"
 msgstr "Šriftai"
 
-#: src/Panes/FontsPane.vala:11
+#: src/Panes/FontsPane.vala:14
 msgid "Change the fonts used in your system and documents by default."
 msgstr ""
 
-#: src/Panes/FontsPane.vala:19
-msgid "Default Font:"
-msgstr "Numatytasis šriftas:"
-
-#: src/Panes/FontsPane.vala:22
-#, fuzzy
-msgid "Document font:"
-msgstr "Dokumentų šriftas:"
-
 #: src/Panes/FontsPane.vala:25
 #, fuzzy
-msgid "Monospace font:"
+msgid "Default Font"
+msgstr "Numatytasis šriftas:"
+
+#: src/Panes/FontsPane.vala:39
+#, fuzzy
+msgid "Document Font"
+msgstr "Dokumentų šriftas:"
+
+#: src/Panes/FontsPane.vala:53
+#, fuzzy
+msgid "Monospace Font"
 msgstr "Lygiaplotis šriftas:"
 
-#: src/Panes/FontsPane.vala:28
+#: src/Panes/FontsPane.vala:67
 #, fuzzy
-msgid "Titlebar font:"
+msgid "Titlebar Font"
 msgstr "Pavadinimo juostos šriftas:"
 
-#: src/Panes/MiscPane.vala:12
+#: src/Panes/MiscPane.vala:14
 msgid "Miscellaneous"
 msgstr "Įvairūs"
 
-#: src/Panes/MiscPane.vala:13
+#: src/Panes/MiscPane.vala:15
 msgid "Configure some other hidden settings."
 msgstr ""
 
-#: src/Panes/MiscPane.vala:24
-msgid "Sound Indicator"
-msgstr ""
-
 #: src/Panes/MiscPane.vala:26
-msgid "Max volume:"
+msgid "Max Volume"
 msgstr ""
 
 #: src/Panes/TerminalPane.vala:13
 msgid "Terminal"
 msgstr "Terminalas"
 
-#: src/Panes/TerminalPane.vala:23
-msgid "Follow last tab:"
+#: src/Panes/TerminalPane.vala:26
+msgid "Follow Last Tab"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:26
+#: src/Panes/TerminalPane.vala:27
 msgid "Creating a new tab sets the working directory of the last opened tab."
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:29
-msgid "Unsafe paste alert:"
+#: src/Panes/TerminalPane.vala:40
+msgid "Unsafe Paste Alert"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:31
-msgid "Show a warning dialog when a pasted command contains 'sudo'."
+#: src/Panes/TerminalPane.vala:41
+msgid ""
+"Show a warning dialog when pasting a command with 'sudo' or multiple lines."
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:33
-msgid "Remember tabs:"
+#: src/Panes/TerminalPane.vala:54
+msgid "Remember Tabs"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:35
+#: src/Panes/TerminalPane.vala:55
 msgid "If enabled, last opened tabs are restored on start."
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:37
+#: src/Panes/TerminalPane.vala:68
 #, fuzzy
-msgid "Terminal bell:"
+msgid "Terminal Bell"
 msgstr "Terminalas"
 
-#: src/Panes/TerminalPane.vala:40
+#: src/Panes/TerminalPane.vala:69
 msgid ""
 "Sound when hitting the end of a line and also for tab-completion when there "
 "are either no or multiple possible completions."
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:44
+#: src/Panes/TerminalPane.vala:83
 msgid "Always"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:45
+#: src/Panes/TerminalPane.vala:84
 msgid "Hide when single tab"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:46
+#: src/Panes/TerminalPane.vala:85
 msgid "Never"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:48
-msgid "Show tabs:"
+#: src/Panes/TerminalPane.vala:87
+msgid "Show Tabs"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:51
+#: src/Panes/TerminalPane.vala:99
 #, fuzzy
-msgid "Terminal font:"
+msgid "Terminal Font"
 msgstr "Terminalas"
 
 #: src/MainWindow.vala:17
 msgid "Tweaks"
 msgstr "Papildomi nustatymai"
 
-#: src/Widgets/Categories.vala:26
+#: src/MainWindow.vala:26
+msgid "Your Desktop Environment Is Not Supported"
+msgstr ""
+
+#: src/MainWindow.vala:28
+#, c-format
+msgid ""
+"Pantheon Tweaks is a customization tool for Pantheon. Your desktop "
+"environment \"%s\" is not supported."
+msgstr ""
+
+#: src/Widgets/Categories.vala:23
 msgid "Reset settings successfully"
 msgstr ""
 
-#: src/Widgets/Categories.vala:53
-msgid "General"
-msgstr "Bendra"
-
-#: src/Widgets/Categories.vala:56
-msgid "Applications"
-msgstr "Programos"
-
-#: src/Widgets/Categories.vala:114
+#: src/Widgets/Categories.vala:76
 #, fuzzy
-msgid "Reset to default"
+msgid "Reset to Default"
 msgstr "Sugrąžinti į numatytuosius"
 
-#: src/Widgets/Categories.vala:119
+#: src/Widgets/Categories.vala:97
 msgid "Are you sure you want to reset personalization?"
 msgstr ""
 
-#: src/Widgets/Categories.vala:120
+#: src/Widgets/Categories.vala:98
 msgid ""
 "All settings in this pane will be restored to the factory defaults. This "
 "action can't be undone."
 msgstr ""
 
-#: src/Widgets/Categories.vala:126
+#: src/Widgets/Categories.vala:104
 msgid "Reset"
 msgstr ""
 
-#: src/Widgets/Categories.vala:218
+#: src/Widgets/Categories.vala:153
 msgid "Open destination folder"
 msgstr ""
 
-#: src/Widgets/Categories.vala:230
+#: src/Widgets/Categories.vala:165
 msgid "Failed to create the destination folder"
 msgstr ""
 
-#: src/Widgets/Categories.vala:231
+#: src/Widgets/Categories.vala:166
 msgid ""
 "The destination folder doesn't exist and tried to create new but failed. The "
 "following error message might be helpful:"
 msgstr ""
 
-#: src/Widgets/Categories.vala:241
+#: src/Widgets/Categories.vala:178
 msgid "Failed to open the destination folder"
 msgstr ""
 
-#: src/Widgets/Categories.vala:242
+#: src/Widgets/Categories.vala:179
 msgid ""
 "Tried to open the destination folder but failed. The following error message "
 "might be helpful:"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Theme Settings"
+#~ msgstr "Derinti elementary OS nustatymus"
+
+#, fuzzy
+#~ msgid "Icons:"
+#~ msgstr "Piktogramų dydis:"
+
+#, fuzzy
+#~ msgid "Layout:"
+#~ msgstr "Tinkintas išdėstymas:"
+
+#~ msgid "General"
+#~ msgstr "Bendra"
+
+#~ msgid "Applications"
+#~ msgstr "Programos"
 
 #, fuzzy
 #~ msgid "Add new window controls layout"
@@ -648,14 +669,8 @@ msgstr ""
 #~ msgid "Used to render windows that do not use GTK+"
 #~ msgstr "Naudojama atvaizduoti langus, kurie nenaudoja GTK+"
 
-#~ msgid "GTK+ Theme:"
-#~ msgstr "GTK+ tema:"
-
 #~ msgid "Used to render GTK+ windows like Switchboard"
 #~ msgstr "Naudojama atvaizduoti GTK+ langus, tokius kaip Switchboard"
-
-#~ msgid "Icon Theme:"
-#~ msgstr "Piktogramų tema:"
 
 #~ msgid "Used to theme the icon set, including application icons"
 #~ msgstr ""
