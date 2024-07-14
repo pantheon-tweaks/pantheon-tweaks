@@ -270,7 +270,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
             preset_button_layouts["close:minimize"] = _("Replace Maximize to Minimize");
             preset_button_layouts[":minimize,maximize,close"] = _("Windows");
             preset_button_layouts["close,minimize,maximize"] = _("macOS");
-            preset_button_layouts["close,maximize,minimize"] = _("Ubuntu");
+            preset_button_layouts["close,maximize,minimize"] = _("Windows Reversed");
         }
 
         return preset_button_layouts;
