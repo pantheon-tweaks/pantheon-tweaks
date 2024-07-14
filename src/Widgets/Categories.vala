@@ -39,6 +39,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
         };
         paned.resize_start_child = false;
         paned.shrink_start_child = false;
+        paned.shrink_end_child = false;
         paned.set_start_child (pane_list);
         paned.set_end_child (overlay);
 
