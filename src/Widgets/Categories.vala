@@ -66,7 +66,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
 
             content_area = new Gtk.Grid () {
                 column_spacing = 12,
-                row_spacing = 12,
+                row_spacing = 18,
                 vexpand = true,
                 hexpand = true
             };
@@ -117,7 +117,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
 
         protected Gtk.ComboBoxText combobox_text_new (Gee.HashMap<string, string> items) {
             var combobox_text = new Gtk.ComboBoxText () {
-                halign = Gtk.Align.START
+                valign = Gtk.Align.CENTER
             };
 
             foreach (var item in items.entries) {
@@ -130,7 +130,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
 
         protected Gtk.ComboBoxText combobox_text_new_from_list (Gee.List<string> items) {
             var combobox_text = new Gtk.ComboBoxText () {
-                halign = Gtk.Align.START
+                valign = Gtk.Align.CENTER
             };
 
             for (int i = 0; i < items.size; i++) {
@@ -148,7 +148,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
                 Object (
                     icon_name: "folder-open",
                     destination_uri: "file://%s/%s".printf (Environment.get_home_dir (), destination),
-                    valign: Gtk.Align.START,
+                    valign: Gtk.Align.CENTER,
                     tooltip_text: _("Open destination folder")
                 );
             }

@@ -28,7 +28,7 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
             hexpand = true
         };
         var follow_last_tab_switch = new Gtk.Switch () {
-            valign = Gtk.Align.START
+            valign = Gtk.Align.CENTER
         };
         var follow_last_tab_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         follow_last_tab_box.append (follow_last_tab_label);
@@ -42,7 +42,7 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
             hexpand = true
         };
         var unsafe_paste_alert_switch = new Gtk.Switch () {
-            valign = Gtk.Align.START
+            valign = Gtk.Align.CENTER
         };
         var unsafe_paste_alert_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         unsafe_paste_alert_box.append (unsafe_paste_alert_label);
@@ -56,7 +56,7 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
             hexpand = true
         };
         var rem_tabs_switch = new Gtk.Switch () {
-            valign = Gtk.Align.START
+            valign = Gtk.Align.CENTER
         };
         var rem_tabs_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         rem_tabs_box.append (rem_tabs_label);
@@ -70,7 +70,7 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
             hexpand = true
         };
         var term_bell_switch = new Gtk.Switch () {
-            valign = Gtk.Align.START
+            valign = Gtk.Align.CENTER
         };
         var term_bell_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         term_bell_box.append (term_bell_label);
@@ -88,7 +88,6 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
             hexpand = true
         };
         var tab_bar_combo = combobox_text_new (tab_bar_map);
-        tab_bar_combo.valign = Gtk.Align.START;
 
         var tab_bar_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         tab_bar_box.append (tab_bar_label);
@@ -101,7 +100,7 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
             hexpand = true
         };
         var term_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
-            valign = Gtk.Align.START,
+            valign = Gtk.Align.CENTER,
             use_font = true
         };
         var term_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);

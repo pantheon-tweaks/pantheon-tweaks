@@ -26,7 +26,7 @@ public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
             hexpand = true
         };
         var default_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
-            valign = Gtk.Align.START,
+            valign = Gtk.Align.CENTER,
             use_font = true
         };
         var default_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
@@ -40,7 +40,7 @@ public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
             hexpand = true
         };
         var document_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
-            valign = Gtk.Align.START,
+            valign = Gtk.Align.CENTER,
             use_font = true
         };
         var document_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
@@ -54,7 +54,7 @@ public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
             hexpand = true
         };
         var mono_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
-            valign = Gtk.Align.START,
+            valign = Gtk.Align.CENTER,
             use_font = true,
         };
         var mono_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
@@ -68,7 +68,7 @@ public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
             hexpand = true
         };
         var titlebar_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
-            valign = Gtk.Align.START,
+            valign = Gtk.Align.CENTER,
             use_font = true
         };
         var titlebar_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
