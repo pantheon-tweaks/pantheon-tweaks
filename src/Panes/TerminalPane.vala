@@ -124,8 +124,8 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
     }
 
     protected override void do_reset () {
-        string[] keys = {"unsafe-paste-alert", "natural-copy-paste",
-                         "follow-last-tab", "audible-bell", "remember-tabs", "tab-bar-behavior", "font"};
+        string[] keys = {"follow-last-tab", "unsafe-paste-alert", "remember-tabs",
+                         "audible-bell", "tab-bar-behavior", "font"};
 
         foreach (string key in keys) {
             settings.reset (key);
