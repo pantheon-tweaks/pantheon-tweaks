@@ -38,7 +38,7 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
         /* Unsafe Paste Alert                            */
         /*************************************************/
         var unsafe_paste_alert_label = new Granite.HeaderLabel (_("Unsafe Paste Alert")) {
-            secondary_text = _("Show a warning dialog when a pasted command contains 'sudo'."),
+            secondary_text = _("Show a warning dialog when pasting a command with 'sudo' or multiple lines."),
             hexpand = true
         };
         var unsafe_paste_alert_switch = new Gtk.Switch () {
