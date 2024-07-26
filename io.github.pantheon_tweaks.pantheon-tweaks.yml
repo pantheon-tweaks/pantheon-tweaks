@@ -52,6 +52,32 @@ modules:
       - type: patch
         path: dconf-override.patch
 
+  - name: sassc
+    cleanup:
+      - '*'
+    buildsystem: autotools
+    sources:
+      - type: archive
+        url: https://github.com/sass/sassc/archive/refs/tags/3.6.2.tar.gz
+        sha256: 608dc9002b45a91d11ed59e352469ecc05e4f58fc1259fc9a9f5b8f0f8348a03
+      - type: script
+        dest-filename: autogen.sh
+        commands:
+          - autoreconf -si
+    modules:
+      - name: libsass
+        cleanup:
+          - '*'
+        buildsystem: autotools
+        sources:
+          - type: archive
+            url: https://github.com/sass/libsass/archive/refs/tags/3.6.5.tar.gz
+            sha256: 89d8f2c46ae2b1b826b58ce7dde966a176bac41975b82e84ad46b01a55080582
+          - type: script
+            dest-filename: autogen.sh
+            commands:
+              - autoreconf -si
+
   - name: elementary-stylesheet
     buildsystem: meson
     cleanup:
@@ -60,32 +86,6 @@ modules:
       - type: archive
         url: https://github.com/elementary/stylesheet/archive/refs/tags/7.3.0.tar.gz
         sha256: 2fa0428a53ff79a67e518a5883ecfe4e0a7944ad79b3ae070567aad1ea2f459b
-    modules:
-      - name: sassc
-        cleanup:
-          - '*'
-        buildsystem: autotools
-        sources:
-          - type: archive
-            url: https://github.com/sass/sassc/archive/refs/tags/3.6.2.tar.gz
-            sha256: 608dc9002b45a91d11ed59e352469ecc05e4f58fc1259fc9a9f5b8f0f8348a03
-          - type: script
-            dest-filename: autogen.sh
-            commands:
-              - autoreconf -si
-        modules:
-          - name: libsass
-            cleanup:
-              - '*'
-            buildsystem: autotools
-            sources:
-              - type: archive
-                url: https://github.com/sass/libsass/archive/refs/tags/3.6.5.tar.gz
-                sha256: 89d8f2c46ae2b1b826b58ce7dde966a176bac41975b82e84ad46b01a55080582
-              - type: script
-                dest-filename: autogen.sh
-                commands:
-                  - autoreconf -si
 
   - name: granite
     buildsystem: meson
@@ -112,8 +112,6 @@ modules:
       - type: archive
         url: https://github.com/elementary/switchboard/archive/refs/tags/8.0.0.tar.gz
         sha256: 99bf58f47b5cbdcfaf0415ff6ff5661fd4b18d779432884b6a62ef71f54be098
-      - type: patch
-        path: 0001-lib-Include-stylesheet-in-the-library.patch
 
   - name: pantheon-tweaks
     buildsystem: meson

@@ -29,3 +29,5 @@ install_data(
     'pantheon-tweaks.gschema.xml',
     install_dir: get_option('datadir') / 'glib-2.0' / 'schemas'
 )
+
+subdir('styles')
