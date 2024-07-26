@@ -48,6 +48,7 @@ executable(
     meson.project_name(),
     source_files,
     config_file,
+    stylesheet_resource,
     dependencies: [
         dependency('gee-0.8'),
         dependency('glib-2.0'),

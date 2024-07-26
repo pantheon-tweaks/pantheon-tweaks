@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/io/github/pantheon_tweaks/pantheon-tweaks">
+    <file compressed="true">Application.css</file>
+  </gresource>
+</gresources>

@@ -27,14 +27,6 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
         base.startup ();
 
         Granite.init ();
-
-        // Load stylesheet used in libswitchboard
-        unowned var display = Gdk.Display.get_default ();
-        var cssprovider = new Gtk.CssProvider ();
-        cssprovider.load_from_resource ("/io/elementary/settings/Application.css");
-        Gtk.StyleContext.add_provider_for_display (display,
-                cssprovider,
-                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
     }
 
     protected override void activate () {
