@@ -13,7 +13,6 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
     private GtkSettings gtk_settings;
     private GLib.Settings interface_settings;
     private GLib.Settings sound_settings;
-    private GLib.Settings appearance_settings;
     private GLib.Settings gnome_wm_settings;
     private Pantheon.AccountsService? pantheon_act = null;
 
@@ -33,7 +32,6 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         sound_settings = new GLib.Settings ("org.gnome.desktop.sound");
         x_settings = new XSettings ();
         gtk_settings = new GtkSettings ();
-        appearance_settings = new GLib.Settings ("org.pantheon.desktop.gala.appearance");
         gnome_wm_settings = new GLib.Settings ("org.gnome.desktop.wm.preferences");
 
         string? user_path = null;
@@ -222,7 +220,6 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
         controls_combobox.changed.connect (() => {
             string new_layout = controls_combobox.active_id;
-            appearance_settings.set_string ("button-layout", new_layout);
             gnome_wm_settings.set_string ("button-layout", new_layout);
             x_settings.set_gnome_menu (gnome_menu_switch.active, new_layout);
         });
@@ -244,7 +241,6 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         }
 
         sound_settings.reset ("theme-name");
-        appearance_settings.reset ("button-layout");
         gnome_wm_settings.reset ("button-layout");
         x_settings.reset ();
 
@@ -254,7 +250,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
     private void init_data () {
         gtk_combobox.active_id = interface_settings.get_string ("gtk-theme");
-        controls_combobox.active_id = appearance_settings.get_string ("button-layout");
+        controls_combobox.active_id = gnome_wm_settings.get_string ("button-layout");
         gnome_menu_switch.active = x_settings.has_gnome_menu ();
     }
 
