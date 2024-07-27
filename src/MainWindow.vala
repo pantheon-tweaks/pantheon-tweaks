@@ -19,7 +19,7 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
 
         set_titlebar (headerbar);
 
-        string desktop_environment = GLib.Environment.get_variable ("XDG_CURRENT_DESKTOP");
+        string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
         // Prevent Tweaks from launching and breaking preferences on other DEs
         if (desktop_environment != "Pantheon") {
             var unsupported_view = new Granite.Placeholder (

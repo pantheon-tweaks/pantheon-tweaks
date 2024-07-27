@@ -7,7 +7,7 @@
 public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
     private const string TERMINAL_SCHEMA = "io.elementary.terminal.settings";
 
-    private GLib.Settings settings;
+    private Settings settings;
 
     public TerminalPane () {
         base ("terminal", _("Terminal"), "utilities-terminal");
@@ -18,7 +18,7 @@ public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
             return;
         }
 
-        settings = new GLib.Settings (TERMINAL_SCHEMA);
+        settings = new Settings (TERMINAL_SCHEMA);
 
         /*************************************************/
         /* Follow Last Tab                               */

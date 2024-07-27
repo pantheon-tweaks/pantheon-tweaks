@@ -7,7 +7,7 @@
 public class PantheonTweaks.Panes.MiscPane : Categories.Pane {
     private const string SOUND_SCHEMA = "io.elementary.desktop.wingpanel.sound";
 
-    private GLib.Settings sound_settings;
+    private Settings sound_settings;
 
     public MiscPane () {
         base (
@@ -21,7 +21,7 @@ public class PantheonTweaks.Panes.MiscPane : Categories.Pane {
             return;
         }
 
-        sound_settings = new GLib.Settings (SOUND_SCHEMA);
+        sound_settings = new Settings (SOUND_SCHEMA);
 
         var indicator_sound_label = new Granite.HeaderLabel (_("Max Volume"));
 

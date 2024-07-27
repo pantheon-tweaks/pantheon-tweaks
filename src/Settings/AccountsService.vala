@@ -14,5 +14,5 @@ private interface PantheonTweaks.Pantheon.AccountsService : Object {
 
 [DBus (name = "org.freedesktop.Accounts")]
 interface PantheonTweaks.FDO.Accounts : Object {
-    public abstract string find_user_by_name (string username) throws GLib.Error;
+    public abstract string find_user_by_name (string username) throws Error;
 }

@@ -7,8 +7,8 @@
 /**
  * Settings for Gtk; thanks gnome-tweak-tool for the help!
  */
-public class PantheonTweaks.GtkSettings : GLib.Object {
-    private GLib.KeyFile keyfile;
+public class PantheonTweaks.GtkSettings : Object {
+    private KeyFile keyfile;
     private string path;
 
     /**
@@ -26,9 +26,9 @@ public class PantheonTweaks.GtkSettings : GLib.Object {
     }
 
     public GtkSettings () {
-        keyfile = new GLib.KeyFile ();
+        keyfile = new KeyFile ();
 
-        path = GLib.Environment.get_home_dir () + "/.config/gtk-3.0/settings.ini";
+        path = Environment.get_home_dir () + "/.config/gtk-3.0/settings.ini";
 
         if (!(File.new_for_path (path).query_exists ())) {
             return;
@@ -71,8 +71,8 @@ public class PantheonTweaks.GtkSettings : GLib.Object {
     private void save_keyfile () {
         try {
             string data = keyfile.to_data ();
-            GLib.FileUtils.set_contents (path, data);
-        } catch (GLib.FileError e) {
+            FileUtils.set_contents (path, data);
+        } catch (FileError e) {
             warning ("Error saving GTK+ Keyfile settings.ini: " + e.message);
         }
     }

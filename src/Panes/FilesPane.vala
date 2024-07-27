@@ -7,7 +7,7 @@
 public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
     private const string FILES_SCHEMA = "io.elementary.files.preferences";
 
-    private GLib.Settings settings;
+    private Settings settings;
 
     public FilesPane () {
         base ("files", _("Files"), "system-file-manager");
@@ -18,7 +18,7 @@ public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
             return;
         }
 
-        settings = new GLib.Settings (FILES_SCHEMA);
+        settings = new Settings (FILES_SCHEMA);
 
         /*************************************************/
         /* Restore Tabs                                  */

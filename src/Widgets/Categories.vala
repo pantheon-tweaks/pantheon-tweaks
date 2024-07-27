@@ -172,7 +172,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
                     }
 
                     try {
-                        GLib.AppInfo.launch_default_for_uri (destination_uri, null);
+                        AppInfo.launch_default_for_uri (destination_uri, null);
                     } catch (Error e) {
                         show_folder_action_error (
                             _("Failed to open the destination folder"),
