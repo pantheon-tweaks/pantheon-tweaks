@@ -11,9 +11,9 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
     private Gee.HashMap<string, string> preset_button_layouts;
     private XSettings x_settings;
     private GtkSettings gtk_settings;
-    private GLib.Settings interface_settings;
-    private GLib.Settings sound_settings;
-    private GLib.Settings gnome_wm_settings;
+    private Settings interface_settings;
+    private Settings sound_settings;
+    private Settings gnome_wm_settings;
     private Pantheon.AccountsService? pantheon_act = null;
 
     private Gtk.ComboBoxText gtk_combobox;
@@ -28,32 +28,32 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
     }
 
     construct {
-        interface_settings = new GLib.Settings ("org.gnome.desktop.interface");
-        sound_settings = new GLib.Settings ("org.gnome.desktop.sound");
+        interface_settings = new Settings ("org.gnome.desktop.interface");
+        sound_settings = new Settings ("org.gnome.desktop.sound");
         x_settings = new XSettings ();
         gtk_settings = new GtkSettings ();
-        gnome_wm_settings = new GLib.Settings ("org.gnome.desktop.wm.preferences");
+        gnome_wm_settings = new Settings ("org.gnome.desktop.wm.preferences");
 
         string? user_path = null;
         try {
-            FDO.Accounts? accounts_service = GLib.Bus.get_proxy_sync (
-                GLib.BusType.SYSTEM,
+            FDO.Accounts? accounts_service = Bus.get_proxy_sync (
+                BusType.SYSTEM,
                "org.freedesktop.Accounts",
                "/org/freedesktop/Accounts"
             );
 
-            user_path = accounts_service.find_user_by_name (GLib.Environment.get_user_name ());
+            user_path = accounts_service.find_user_by_name (Environment.get_user_name ());
         } catch (Error e) {
             critical (e.message);
         }
 
         if (user_path != null) {
             try {
-                pantheon_act = GLib.Bus.get_proxy_sync (
-                    GLib.BusType.SYSTEM,
+                pantheon_act = Bus.get_proxy_sync (
+                    BusType.SYSTEM,
                     "org.freedesktop.Accounts",
                     user_path,
-                    GLib.DBusProxyFlags.GET_INVALIDATED_PROPERTIES
+                    DBusProxyFlags.GET_INVALIDATED_PROPERTIES
                 );
             } catch (Error e) {
                 warning ("Unable to get AccountsService proxy, color scheme preference may be incorrect");
@@ -201,8 +201,8 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         sound_settings.bind ("theme-name", sound_combobox, "active_id", SettingsBindFlags.DEFAULT);
         gtk_settings.bind_property ("prefer-dark-theme", dark_style_switch, "active", BindingFlags.SYNC_CREATE | BindingFlags.BIDIRECTIONAL);
 
-        if (((GLib.DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
-            ((GLib.DBusProxy) pantheon_act).g_properties_changed.connect ((changed, invalid) => {
+        if (((DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
+            ((DBusProxy) pantheon_act).g_properties_changed.connect ((changed, invalid) => {
                 gtk_combobox.active_id = interface_settings.get_string ("gtk-theme");
             });
         }
@@ -212,7 +212,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
 
             if (gtk_combobox.active_id.has_prefix (ThemeSettings.ELEMENTARY_STYLESHEET_PREFIX)) {
                 ThemeSettings.AccentColor color = ThemeSettings.parse_accent_color (gtk_combobox.active_id);
-                if (((GLib.DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
+                if (((DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
                     pantheon_act.prefers_accent_color = color;
                 }
             }
@@ -236,7 +236,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
             interface_settings.reset (key);
         }
 
-        if (((GLib.DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
+        if (((DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
             pantheon_act.prefers_accent_color = ThemeSettings.AccentColor.BLUE;
         }
 

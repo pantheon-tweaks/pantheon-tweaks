@@ -5,8 +5,8 @@
  */
 
 public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
-    private GLib.Settings interface_settings;
-    private GLib.Settings window_settings;
+    private Settings interface_settings;
+    private Settings window_settings;
 
     public FontsPane () {
         base (
@@ -16,8 +16,8 @@ public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
     }
 
     construct {
-        interface_settings = new GLib.Settings ("org.gnome.desktop.interface");
-        window_settings = new GLib.Settings ("org.gnome.desktop.wm.preferences");
+        interface_settings = new Settings ("org.gnome.desktop.interface");
+        window_settings = new Settings ("org.gnome.desktop.wm.preferences");
 
         /*************************************************/
         /* Default Font                                  */
