@@ -59,7 +59,23 @@ public class PantheonTweaks.ThemeSettings {
         "Adwaita", "Emacs", "Default", "default", "gnome", "hicolor"
     };
 
-    public static Gee.ArrayList<string>? get_themes (string path, string condition) {
+    public static Gee.ArrayList<string>? fetch_gtk_themes () {
+        return fetch_themes ("themes", "gtk-3.0");
+    }
+
+    public static Gee.ArrayList<string>? fetch_icon_themes () {
+        return fetch_themes ("icons", "index.theme");
+    }
+
+    public static Gee.ArrayList<string>? fetch_cursor_themes () {
+        return fetch_themes ("icons", "cursors");
+    }
+
+    public static Gee.ArrayList<string>? fetch_sound_themes () {
+        return fetch_themes ("sounds", "index.theme");
+    }
+
+    private static Gee.ArrayList<string>? fetch_themes (string path, string condition) {
         var themes = new Gee.ArrayList<string> ();
 
         string system_dir = "/usr/share/" + path + "/";
