@@ -59,7 +59,7 @@ public class PantheonTweaks.ThemeSettings {
         "Adwaita", "Emacs", "Default", "default", "gnome", "hicolor"
     };
 
-    public static Gee.List<string> get_themes (string path, string condition) {
+    public static Gee.ArrayList<string>? get_themes (string path, string condition) {
         var themes = new Gee.ArrayList<string> ();
 
         string system_dir = "/usr/share/" + path + "/";
@@ -79,23 +79,45 @@ public class PantheonTweaks.ThemeSettings {
                 continue;
             }
 
+            FileEnumerator enumerator;
             try {
-                var enumerator = file.enumerate_children (FileAttribute.STANDARD_NAME, 0);
-                FileInfo file_info;
-                while ((file_info = enumerator.next_file ()) != null) {
-                    var name = file_info.get_name ();
-                    if (name in IGNORE_LIST) {
-                        continue;
-                    }
-
-                    var checktheme = File.new_for_path (dir + name + "/" + condition);
-                    var checkicons = File.new_for_path (dir + name + "/48x48/" + condition);
-                    if ((checktheme.query_exists () || checkicons.query_exists ()) && !themes.contains (name)) {
-                        themes.add (name);
-                    }
-                }
+                enumerator = file.enumerate_children (FileAttribute.STANDARD_NAME, 0);
             } catch (Error e) {
                 warning (e.message);
+                return null;
+            }
+
+            // Search for directories until reaching end of enumerator
+            var file_info = new FileInfo ();
+            while (file_info != null) {
+                try {
+                    file_info = enumerator.next_file ();
+                } catch (Error e) {
+                    warning (e.message);
+                    return null;
+                }
+
+                // End of enumerator
+                if (file_info == null) {
+                    continue;
+                }
+
+                var name = file_info.get_name ();
+                if (name in IGNORE_LIST) {
+                    continue;
+                }
+
+                var checktheme = File.new_for_path (dir + name + "/" + condition);
+                var checkicons = File.new_for_path (dir + name + "/48x48/" + condition);
+                if (!checktheme.query_exists () && !checkicons.query_exists ()) {
+                    continue;
+                }
+
+                if (themes.contains (name)) {
+                    continue;
+                }
+
+                themes.add (name);
             }
         }
 
