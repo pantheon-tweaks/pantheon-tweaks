@@ -70,7 +70,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
             ),
             hexpand = true
         };
-        var gtk_list = ThemeSettings.get_themes ("themes", "gtk-3.0");
+        var gtk_list = ThemeSettings.fetch_gtk_themes ();
         gtk_combobox = combobox_text_new_from_list (gtk_list);
 
         var gtk_dir_button = new DestinationButton (".local/share/themes");
@@ -90,7 +90,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
             ),
             hexpand = true
         };
-        var icon_list = ThemeSettings.get_themes ("icons", "index.theme");
+        var icon_list = ThemeSettings.fetch_icon_themes ();
         var icon_combobox = combobox_text_new_from_list (icon_list);
 
         var icon_dir_button = new DestinationButton (".icons");
@@ -110,7 +110,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
             ),
             hexpand = true
         };
-        var cursor_list = ThemeSettings.get_themes ("icons", "cursors");
+        var cursor_list = ThemeSettings.fetch_cursor_themes ();
         var cursor_combobox = combobox_text_new_from_list (cursor_list);
 
         var cursor_dir_button = new DestinationButton (".icons");
@@ -130,7 +130,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
             ),
             hexpand = true
         };
-        var sound_list = ThemeSettings.get_themes ("sounds", "index.theme");
+        var sound_list = ThemeSettings.fetch_sound_themes ();
         var sound_combobox = combobox_text_new_from_list (sound_list);
 
         var sound_dir_button = new DestinationButton (".local/share/sounds");
