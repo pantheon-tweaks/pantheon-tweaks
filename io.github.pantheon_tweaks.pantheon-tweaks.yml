@@ -84,8 +84,8 @@ modules:
       - '/share/metainfo'
     sources:
       - type: archive
-        url: https://github.com/elementary/stylesheet/archive/refs/tags/7.3.0.tar.gz
-        sha256: 2fa0428a53ff79a67e518a5883ecfe4e0a7944ad79b3ae070567aad1ea2f459b
+        url: https://github.com/elementary/stylesheet/archive/refs/tags/8.1.0.tar.gz
+        sha256: 9a23f2e7a25993da5d9356e2840c6ce1c9a7c837a024a5a0cc5e3844df6c7901
 
   - name: granite
     buildsystem: meson
