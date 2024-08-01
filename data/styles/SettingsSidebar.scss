@@ -52,7 +52,8 @@ settingssidebar {
 
                 box.start > label {
                     margin: rem(6px);
-                    font-weight: 500;
+                    // Cannot be a number or fonts break in Flatpak
+                    font-weight: bold;
                 }
 
                 box.end > switch {
