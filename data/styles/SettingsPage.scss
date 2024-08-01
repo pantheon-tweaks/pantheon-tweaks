@@ -54,7 +54,8 @@ settingspage {
         }
 
         label.title-2 {
-            font-weight: 600;
+            // Cannot be a number or fonts break in Flatpak
+            font-weight: bold;
             font-size: 2rem;
         }
 
