@@ -172,6 +172,9 @@
   </developer>
   <url type="homepage">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
   <url type="bugtracker">https://github.com/pantheon-tweaks/pantheon-tweaks/issues</url>
+  <url type="help">https://github.com/pantheon-tweaks/pantheon-tweaks/discussions</url>
+  <url type="vcs-browser">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
+  <url type="translate">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
 </component>
