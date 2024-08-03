@@ -17,8 +17,16 @@ i18n.merge_file(
     install: true
 )
 
+metainfo_conf_data = configuration_data()
+metainfo_conf_data.set('VERSION', meson.project_version())
+metainfo_conf_file = configure_file(
+    input: meson.project_name() + '.metainfo.xml.in.in',
+    output: '@BASENAME@',
+    configuration: metainfo_conf_data
+)
+
 i18n.merge_file(
-    input: meson.project_name() + '.metainfo.xml.in',
+    input: metainfo_conf_file,
     output: application_id + '.metainfo.xml',
     po_dir: meson.project_source_root () / 'po',
     install_dir: get_option('prefix') / get_option('datadir') / 'metainfo',
