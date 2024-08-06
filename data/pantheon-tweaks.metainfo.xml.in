@@ -19,9 +19,8 @@
         <ul>
           <li>Support elementary OS 8</li>
           <li>Redesign in accordance with elementary OS 8 UX</li>
-          <li>Save and restore window size</li>
+          <li>Save and restore window size of Pantheon Tweaks itself</li>
           <li>Port to GTK4</li>
-          <li>Lessen Flatpak package size</li>
           <li>Update Japanese translation</li>
         </ul>
         <p>
