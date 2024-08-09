@@ -157,32 +157,34 @@ public class PantheonTweaks.Categories : Gtk.Box {
             }
 
             construct {
-                clicked.connect (() => {
-                    var dir = File.new_for_path (path);
-                    if (!dir.query_exists ()) {
-                        try {
-                            dir.make_directory_with_parents ();
-                        } catch (Error e) {
-                            show_folder_action_error (
-                                _("Failed to create \"%s\"").printf (path),
-                                _("The folder doesn't exist and tried to create new but failed. The following error message might be helpful:"),
-                                e.message
-                            );
+                clicked.connect (on_click);
+            }
 
-                            return;
-                        }
-                    }
-
+            private void on_click () {
+                var dir = File.new_for_path (path);
+                if (!dir.query_exists ()) {
                     try {
-                        AppInfo.launch_default_for_uri (dir.get_uri (), null);
+                        dir.make_directory_with_parents ();
                     } catch (Error e) {
                         show_folder_action_error (
-                            _("Failed to open \"%s\"").printf (path),
-                            _("Tried to open the folder but failed. The following error message might be helpful:"),
+                            _("Failed to create \"%s\"").printf (path),
+                            _("The folder doesn't exist and tried to create new but failed. The following error message might be helpful:"),
                             e.message
                         );
+
+                        return;
                     }
-                });
+                }
+
+                try {
+                    AppInfo.launch_default_for_uri (dir.get_uri (), null);
+                } catch (Error e) {
+                    show_folder_action_error (
+                        _("Failed to open \"%s\"").printf (path),
+                        _("Tried to open the folder but failed. The following error message might be helpful:"),
+                        e.message
+                    );
+                }
             }
 
             private void show_folder_action_error (string primary_text, string secondary_text, string error_message) {
