@@ -177,7 +177,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
                         AppInfo.launch_default_for_uri (dir.get_uri (), null);
                     } catch (Error e) {
                         show_folder_action_error (
-                            _("Failed to open \"%s\""),
+                            _("Failed to open \"%s\"").printf (path),
                             _("Tried to open the folder but failed. The following error message might be helpful:"),
                             e.message
                         );
