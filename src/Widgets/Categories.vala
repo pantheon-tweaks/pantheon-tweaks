@@ -144,15 +144,15 @@ public class PantheonTweaks.Categories : Gtk.Box {
             return combobox_text;
         }
 
-        protected class FolderButton : Gtk.Button {
+        protected class OpenButton : Gtk.Button {
             public string path { get; construct; }
 
-            public FolderButton (string path) {
+            public OpenButton (string path) {
                 Object (
                     icon_name: "folder-open",
                     path: path,
                     valign: Gtk.Align.CENTER,
-                    tooltip_text: _("Open folder \"%s\"").printf (path)
+                    tooltip_text: _("Open \"%s\"").printf (path)
                 );
             }
 

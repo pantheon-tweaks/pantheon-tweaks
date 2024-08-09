@@ -73,7 +73,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         var gtk_list = ThemeSettings.fetch_gtk_themes ();
         gtk_combobox = combobox_text_new_from_list (gtk_list);
 
-        var gtk_dir_button = new FolderButton (
+        var gtk_dir_button = new OpenButton (
             Path.build_filename (Environment.get_home_dir (), ".local", "share", "themes")
         );
 
@@ -95,7 +95,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         var icon_list = ThemeSettings.fetch_icon_themes ();
         var icon_combobox = combobox_text_new_from_list (icon_list);
 
-        var icon_dir_button = new FolderButton (
+        var icon_dir_button = new OpenButton (
             Path.build_filename (Environment.get_home_dir (), ".icons")
         );
 
@@ -117,7 +117,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         var cursor_list = ThemeSettings.fetch_cursor_themes ();
         var cursor_combobox = combobox_text_new_from_list (cursor_list);
 
-        var cursor_dir_button = new FolderButton (
+        var cursor_dir_button = new OpenButton (
             Path.build_filename (Environment.get_home_dir (), ".icons")
         );
 
@@ -139,7 +139,7 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         var sound_list = ThemeSettings.fetch_sound_themes ();
         var sound_combobox = combobox_text_new_from_list (sound_list);
 
-        var sound_dir_button = new FolderButton (
+        var sound_dir_button = new OpenButton (
             Path.build_filename (Environment.get_home_dir (), ".local", "share", "sounds")
         );
 
