@@ -41,7 +41,9 @@ source_files = files(
     'src/Panes/MiscPane.vala',
     'src/Panes/FilesPane.vala',
     'src/Panes/TerminalPane.vala',
+    'src/Widgets/BasePane.vala',
     'src/Widgets/Categories.vala',
+    'src/Widgets/OpenButton.vala',
 )
 
 executable(

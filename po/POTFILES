@@ -7,4 +7,6 @@ src/Panes/MiscPane.vala
 src/Panes/TerminalPane.vala
 src/Tweaks.vala
 src/MainWindow.vala
+src/Widgets/BasePane.vala
 src/Widgets/Categories.vala
+src/Widgets/OpenButton.vala
