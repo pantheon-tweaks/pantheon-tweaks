@@ -144,45 +144,47 @@ public class PantheonTweaks.Categories : Gtk.Box {
             return combobox_text;
         }
 
-        protected class DestinationButton : Gtk.Button {
-            public string destination_uri { private get; construct; }
+        protected class OpenButton : Gtk.Button {
+            public string path { get; construct; }
 
-            public DestinationButton (string destination) {
+            public OpenButton (string path) {
                 Object (
                     icon_name: "folder-open",
-                    destination_uri: "file://%s/%s".printf (Environment.get_home_dir (), destination),
+                    path: path,
                     valign: Gtk.Align.CENTER,
-                    tooltip_text: _("Open destination folder")
+                    tooltip_text: _("Open \"%s\"").printf (path)
                 );
             }
 
             construct {
-                clicked.connect (() => {
-                    var dir = File.new_for_uri (destination_uri);
-                    if (!dir.query_exists ()) {
-                        try {
-                            dir.make_directory_with_parents ();
-                        } catch (Error e) {
-                            show_folder_action_error (
-                                _("Failed to create the destination folder"),
-                                _("The destination folder doesn't exist and tried to create new but failed. The following error message might be helpful:"),
-                                e.message
-                            );
+                clicked.connect (on_click);
+            }
 
-                            return;
-                        }
-                    }
-
+            private void on_click () {
+                var dir = File.new_for_path (path);
+                if (!dir.query_exists ()) {
                     try {
-                        AppInfo.launch_default_for_uri (destination_uri, null);
+                        dir.make_directory_with_parents ();
                     } catch (Error e) {
                         show_folder_action_error (
-                            _("Failed to open the destination folder"),
-                            _("Tried to open the destination folder but failed. The following error message might be helpful:"),
+                            _("Failed to create \"%s\"").printf (path),
+                            _("The folder doesn't exist and tried to create new but failed. The following error message might be helpful:"),
                             e.message
                         );
+
+                        return;
                     }
-                });
+                }
+
+                try {
+                    AppInfo.launch_default_for_uri (dir.get_uri (), null);
+                } catch (Error e) {
+                    show_folder_action_error (
+                        _("Failed to open \"%s\"").printf (path),
+                        _("Tried to open the folder but failed. The following error message might be helpful:"),
+                        e.message
+                    );
+                }
             }
 
             private void show_folder_action_error (string primary_text, string secondary_text, string error_message) {
