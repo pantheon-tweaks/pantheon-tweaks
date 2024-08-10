@@ -4,7 +4,7 @@
  *                         Pantheon Tweaks Developers, 2020-2024
  */
 
-public class PantheonTweaks.Panes.MiscPane : Categories.Pane {
+public class PantheonTweaks.Panes.MiscPane : BasePane {
     private const string SOUND_SCHEMA = "io.elementary.desktop.wingpanel.sound";
 
     private Settings sound_settings;

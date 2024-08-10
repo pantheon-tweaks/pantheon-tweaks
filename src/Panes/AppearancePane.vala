@@ -7,7 +7,7 @@
  * elementary/switchboard-plug-pantheon-shell, src/Views/Appearance.vala
  */
 
-public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
+public class PantheonTweaks.Panes.AppearancePane : BasePane {
     private Gee.HashMap<string, string> preset_button_layouts;
     private XSettings x_settings;
     private GtkSettings gtk_settings;
