@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-14 15:31+0900\n"
+"POT-Creation-Date: 2024-08-12 19:08+0900\n"
 "PO-Revision-Date: 2014-08-19 07:17+0000\n"
 "Last-Translator: Michael P. Starkweather <Mpstark@gmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-08-30 08:42+0000\n"
 "X-Generator: Launchpad (build 17176)\n"
 
-#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in:5
+#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in.in:5
 msgid "Pantheon Tweaks"
 msgstr ""
 
@@ -26,7 +26,7 @@ msgstr ""
 msgid "Customization Tool"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in:6
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:6
 msgid "Tweak Pantheon settings"
 msgstr ""
 
@@ -34,46 +34,46 @@ msgstr ""
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in:8
+#: data/pantheon-tweaks.metainfo.xml.in.in:8
 msgid ""
 "A system customization app for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in:163
+#: data/pantheon-tweaks.metainfo.xml.in.in:163
 #, fuzzy
 msgid "Appearance pane"
 msgstr "Görünüm"
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in:169
-#: data/pantheon-tweaks.metainfo.xml.in:171
+#: data/pantheon-tweaks.metainfo.xml.in.in:169
+#: data/pantheon-tweaks.metainfo.xml.in.in:171
 msgid "Pantheon Tweaks Developers"
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:26
+#: src/Panes/AppearancePane.vala:25
 msgid "Appearance"
 msgstr "Görünüm"
 
-#: src/Panes/AppearancePane.vala:27
+#: src/Panes/AppearancePane.vala:26
 msgid ""
 "Change the theme and button layout of windows. Changing theme may cause "
 "visibility issue."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:68
+#: src/Panes/AppearancePane.vala:66
 #, fuzzy
 msgid "GTK Theme"
 msgstr "Tema:"
 
 #. TRANSLATORS: The "%s" represents the path where custom themes are installed
-#: src/Panes/AppearancePane.vala:70
+#: src/Panes/AppearancePane.vala:68
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:71 src/Panes/AppearancePane.vala:91
-#: src/Panes/AppearancePane.vala:111 src/Panes/AppearancePane.vala:131
+#: src/Panes/AppearancePane.vala:69 src/Panes/AppearancePane.vala:91
+#: src/Panes/AppearancePane.vala:113 src/Panes/AppearancePane.vala:135
 msgid "theme-name"
 msgstr ""
 
@@ -88,96 +88,96 @@ msgstr "Simge Teması"
 msgid "To show custom icons here, put them in %s."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:108
+#: src/Panes/AppearancePane.vala:110
 #, fuzzy
 msgid "Cursor Theme"
 msgstr "İmleç Teması"
 
 #. TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:110
+#: src/Panes/AppearancePane.vala:112
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:128
+#: src/Panes/AppearancePane.vala:132
 #, fuzzy
 msgid "Sound Theme"
 msgstr "Simge Teması"
 
 #. TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:130
+#: src/Panes/AppearancePane.vala:134
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:148
+#: src/Panes/AppearancePane.vala:154
 msgid "Force Dark Style"
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:149
+#: src/Panes/AppearancePane.vala:155
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:163
+#: src/Panes/AppearancePane.vala:169
 #, fuzzy
 msgid "Window Control Layout"
 msgstr "Pencereler"
 
-#: src/Panes/AppearancePane.vala:164
+#: src/Panes/AppearancePane.vala:170
 msgid "Changes button layout of the window."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:179
+#: src/Panes/AppearancePane.vala:185
 msgid "Show GNOME Menu"
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:180
+#: src/Panes/AppearancePane.vala:186
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:264
+#: src/Panes/AppearancePane.vala:268
 msgid "elementary"
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:265
+#: src/Panes/AppearancePane.vala:269
 msgid "elementary Reversed"
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:266
+#: src/Panes/AppearancePane.vala:270
 #, fuzzy
 msgid "Close Only Right"
 msgstr "Sadece Kapatma"
 
-#: src/Panes/AppearancePane.vala:267
+#: src/Panes/AppearancePane.vala:271
 #, fuzzy
 msgid "Close Only Left"
 msgstr "Sadece Kapatma"
 
-#: src/Panes/AppearancePane.vala:268
+#: src/Panes/AppearancePane.vala:272
 #, fuzzy
 msgid "Add Minimize Left"
 msgstr "Küçültme Solda"
 
-#: src/Panes/AppearancePane.vala:269
+#: src/Panes/AppearancePane.vala:273
 #, fuzzy
 msgid "Add Minimize Right"
 msgstr "Küçültme Sağda"
 
-#: src/Panes/AppearancePane.vala:270
+#: src/Panes/AppearancePane.vala:274
 msgid "Replace Maximize to Minimize"
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:271
+#: src/Panes/AppearancePane.vala:275
 msgid "Windows"
 msgstr "Pencereler"
 
-#: src/Panes/AppearancePane.vala:272
+#: src/Panes/AppearancePane.vala:276
 msgid "macOS"
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:273
+#: src/Panes/AppearancePane.vala:277
 #, fuzzy
 msgid "Windows Reversed"
 msgstr "Pencereler"
@@ -330,51 +330,54 @@ msgid ""
 "environment \"%s\" is not supported."
 msgstr ""
 
-#: src/Widgets/Categories.vala:23
-msgid "Reset settings successfully"
-msgstr ""
-
-#: src/Widgets/Categories.vala:76
+#: src/Widgets/BasePane.vala:34
 #, fuzzy
 msgid "Reset to Default"
 msgstr "Varsayılana Dönder"
 
-#: src/Widgets/Categories.vala:97
+#: src/Widgets/BasePane.vala:55
 msgid "Are you sure you want to reset personalization?"
 msgstr ""
 
-#: src/Widgets/Categories.vala:98
+#: src/Widgets/BasePane.vala:56
 msgid ""
 "All settings in this pane will be restored to the factory defaults. This "
 "action can't be undone."
 msgstr ""
 
-#: src/Widgets/Categories.vala:104
+#: src/Widgets/BasePane.vala:62
 msgid "Reset"
 msgstr ""
 
-#: src/Widgets/Categories.vala:153
-msgid "Open destination folder"
+#: src/Widgets/Categories.vala:23
+msgid "Reset settings successfully"
 msgstr ""
 
-#: src/Widgets/Categories.vala:165
-msgid "Failed to create the destination folder"
+#: src/Widgets/OpenButton.vala:15
+#, c-format
+msgid "Open \"%s\""
 msgstr ""
 
-#: src/Widgets/Categories.vala:166
+#: src/Widgets/OpenButton.vala:30
+#, c-format
+msgid "Failed to create \"%s\""
+msgstr ""
+
+#: src/Widgets/OpenButton.vala:31
 msgid ""
-"The destination folder doesn't exist and tried to create new but failed. The "
-"following error message might be helpful:"
+"The folder doesn't exist and tried to create new but failed. The following "
+"error message might be helpful:"
 msgstr ""
 
-#: src/Widgets/Categories.vala:178
-msgid "Failed to open the destination folder"
+#: src/Widgets/OpenButton.vala:43
+#, c-format
+msgid "Failed to open \"%s\""
 msgstr ""
 
-#: src/Widgets/Categories.vala:179
+#: src/Widgets/OpenButton.vala:44
 msgid ""
-"Tried to open the destination folder but failed. The following error message "
-"might be helpful:"
+"Tried to open the folder but failed. The following error message might be "
+"helpful:"
 msgstr ""
 
 #, fuzzy
