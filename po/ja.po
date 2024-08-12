@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-12 19:08+0900\n"
-"PO-Revision-Date: 2024-07-14 15:51+0900\n"
+"PO-Revision-Date: 2024-08-12 19:10+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -354,35 +354,33 @@ msgstr "設定を正常にリセットしました"
 #: src/Widgets/OpenButton.vala:15
 #, c-format
 msgid "Open \"%s\""
-msgstr ""
+msgstr "\"%s\" を開く"
 
 #: src/Widgets/OpenButton.vala:30
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to create \"%s\""
-msgstr "保存先を作成できませんでした"
+msgstr "\"%s\" を作成できませんでした"
 
 #: src/Widgets/OpenButton.vala:31
-#, fuzzy
 msgid ""
 "The folder doesn't exist and tried to create new but failed. The following "
 "error message might be helpful:"
 msgstr ""
-"保存先のフォルダーが存在せず新規作成しようとしましたが、できませんでした。以"
-"下のエラーメッセージが役立つ可能性があります:"
+"フォルダーが存在せず新規作成しようとしましたが、失敗しました。以下のエラー"
+"メッセージが役立つ可能性があります:"
 
 #: src/Widgets/OpenButton.vala:43
 #, c-format
 msgid "Failed to open \"%s\""
-msgstr ""
+msgstr "\"%s\" を開けませんでした"
 
 #: src/Widgets/OpenButton.vala:44
-#, fuzzy
 msgid ""
 "Tried to open the folder but failed. The following error message might be "
 "helpful:"
 msgstr ""
-"保存先のフォルダーを開こうとしましたが、できませんでした。以下のエラーメッ"
-"セージが役立つ可能性があります:"
+"フォルダーを開こうとしましたが、失敗しました。以下のエラーメッセージが役立つ"
+"可能性があります:"
 
 #~ msgid "Open destination folder"
 #~ msgstr "保存先を開く"
