@@ -1,12 +1,8 @@
-icon_sizes = ['32', '48', '64', '128']
-
-foreach i : icon_sizes
-    install_data(
-        'icons' / i / meson.project_name() + '.svg',
-        rename: application_id + '.svg',
-        install_dir: get_option('datadir') / 'icons' / 'hicolor' / i + 'x' + i / 'apps'
-    )
-endforeach
+install_data(
+    'icons' / meson.project_name() + '.svg',
+    rename: application_id + '.svg',
+    install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'scalable' / 'apps'
+)
 
 i18n.merge_file(
     input: meson.project_name() + '.desktop.in',
