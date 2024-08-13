@@ -4,7 +4,7 @@
  *                         Pantheon Tweaks Developers, 2020-2024
  */
 
-public class PantheonTweaks.Panes.FontsPane : Categories.Pane {
+public class PantheonTweaks.Panes.FontsPane : BasePane {
     private Settings interface_settings;
     private Settings window_settings;
 

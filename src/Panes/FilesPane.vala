@@ -4,7 +4,7 @@
  *                         Pantheon Tweaks Developers, 2020-2024
  */
 
-public class PantheonTweaks.Panes.FilesPane : Categories.Pane {
+public class PantheonTweaks.Panes.FilesPane : BasePane {
     private const string FILES_SCHEMA = "io.elementary.files.preferences";
 
     private Settings settings;

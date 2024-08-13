@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-14 15:31+0900\n"
+"POT-Creation-Date: 2024-08-12 19:08+0900\n"
 "PO-Revision-Date: 2022-02-09 15:09+0800\n"
 "Last-Translator: imgradeone <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-08-30 08:42+0000\n"
 "X-Generator: Poedit 3.0\n"
 
-#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in:5
+#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in.in:5
 msgid "Pantheon Tweaks"
 msgstr "Pantheon 优化"
 
@@ -26,7 +26,7 @@ msgstr "Pantheon 优化"
 msgid "Customization Tool"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in:6
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:6
 msgid "Tweak Pantheon settings"
 msgstr "修改 Pantheon 桌面环境设置"
 
@@ -34,47 +34,47 @@ msgstr "修改 Pantheon 桌面环境设置"
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in:8
+#: data/pantheon-tweaks.metainfo.xml.in.in:8
 #, fuzzy
 msgid ""
 "A system customization app for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr "专为 Pantheon 设计的系统设置面板，帮助您简便、安全地修改桌面外观。"
 
-#: data/pantheon-tweaks.metainfo.xml.in:163
+#: data/pantheon-tweaks.metainfo.xml.in.in:163
 msgid "Appearance pane"
 msgstr "外观面板"
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in:169
-#: data/pantheon-tweaks.metainfo.xml.in:171
+#: data/pantheon-tweaks.metainfo.xml.in.in:169
+#: data/pantheon-tweaks.metainfo.xml.in.in:171
 #, fuzzy
 msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon 优化"
 
-#: src/Panes/AppearancePane.vala:26
+#: src/Panes/AppearancePane.vala:25
 msgid "Appearance"
 msgstr "外观"
 
-#: src/Panes/AppearancePane.vala:27
+#: src/Panes/AppearancePane.vala:26
 msgid ""
 "Change the theme and button layout of windows. Changing theme may cause "
 "visibility issue."
 msgstr "修改主题和窗口布局。修改主题可能会出现视觉问题。"
 
-#: src/Panes/AppearancePane.vala:68
+#: src/Panes/AppearancePane.vala:66
 #, fuzzy
 msgid "GTK Theme"
 msgstr "主题："
 
 #. TRANSLATORS: The "%s" represents the path where custom themes are installed
-#: src/Panes/AppearancePane.vala:70
+#: src/Panes/AppearancePane.vala:68
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr "如果您想在此显示自定义主题，请在 %s 下存放主题文件。"
 
-#: src/Panes/AppearancePane.vala:71 src/Panes/AppearancePane.vala:91
-#: src/Panes/AppearancePane.vala:111 src/Panes/AppearancePane.vala:131
+#: src/Panes/AppearancePane.vala:69 src/Panes/AppearancePane.vala:91
+#: src/Panes/AppearancePane.vala:113 src/Panes/AppearancePane.vala:135
 msgid "theme-name"
 msgstr "theme-name"
 
@@ -89,95 +89,95 @@ msgstr "图标主题："
 msgid "To show custom icons here, put them in %s."
 msgstr "如果您想在此显示自定义图标，请在 %s 下存放图标文件。"
 
-#: src/Panes/AppearancePane.vala:108
+#: src/Panes/AppearancePane.vala:110
 #, fuzzy
 msgid "Cursor Theme"
 msgstr "光标："
 
 #. TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:110
+#: src/Panes/AppearancePane.vala:112
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr "如果您想在此显示自定义光标，请在 %s 下存放光标文件。"
 
-#: src/Panes/AppearancePane.vala:128
+#: src/Panes/AppearancePane.vala:132
 #, fuzzy
 msgid "Sound Theme"
 msgstr "图标主题："
 
 #. TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:130
+#: src/Panes/AppearancePane.vala:134
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr "如果您想在此显示自定义音效，请在 %s 下存放音效文件。"
 
-#: src/Panes/AppearancePane.vala:148
+#: src/Panes/AppearancePane.vala:154
 #, fuzzy
 msgid "Force Dark Style"
 msgstr "强制使用暗色样式："
 
-#: src/Panes/AppearancePane.vala:149
+#: src/Panes/AppearancePane.vala:155
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
 msgstr ""
 "强制对应用使用暗色风格（即使应用程序不支持）。需要重新启动应用程序才能生效。"
 
-#: src/Panes/AppearancePane.vala:163
+#: src/Panes/AppearancePane.vala:169
 #, fuzzy
 msgid "Window Control Layout"
 msgstr "窗口控制"
 
-#: src/Panes/AppearancePane.vala:164
+#: src/Panes/AppearancePane.vala:170
 msgid "Changes button layout of the window."
 msgstr "修改窗口按钮布局。"
 
-#: src/Panes/AppearancePane.vala:179
+#: src/Panes/AppearancePane.vala:185
 #, fuzzy
 msgid "Show GNOME Menu"
 msgstr "显示 GNOME 菜单："
 
-#: src/Panes/AppearancePane.vala:180
+#: src/Panes/AppearancePane.vala:186
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "决定是否在 GNOME 应用程序中展示 GNOME 菜单。"
 
-#: src/Panes/AppearancePane.vala:264
+#: src/Panes/AppearancePane.vala:268
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:265
+#: src/Panes/AppearancePane.vala:269
 msgid "elementary Reversed"
 msgstr "elementary（反向）"
 
-#: src/Panes/AppearancePane.vala:266
+#: src/Panes/AppearancePane.vala:270
 msgid "Close Only Right"
 msgstr "仅右侧关闭按钮"
 
-#: src/Panes/AppearancePane.vala:267
+#: src/Panes/AppearancePane.vala:271
 msgid "Close Only Left"
 msgstr "仅左侧关闭按钮"
 
-#: src/Panes/AppearancePane.vala:268
+#: src/Panes/AppearancePane.vala:272
 msgid "Add Minimize Left"
 msgstr "在左侧添加最小化"
 
-#: src/Panes/AppearancePane.vala:269
+#: src/Panes/AppearancePane.vala:273
 msgid "Add Minimize Right"
 msgstr "在右侧添加最小化"
 
-#: src/Panes/AppearancePane.vala:270
+#: src/Panes/AppearancePane.vala:274
 msgid "Replace Maximize to Minimize"
 msgstr "将最大化替换为最小化"
 
-#: src/Panes/AppearancePane.vala:271
+#: src/Panes/AppearancePane.vala:275
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:272
+#: src/Panes/AppearancePane.vala:276
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:273
+#: src/Panes/AppearancePane.vala:277
 #, fuzzy
 msgid "Windows Reversed"
 msgstr "Windows"
@@ -338,54 +338,62 @@ msgid ""
 "environment \"%s\" is not supported."
 msgstr ""
 
-#: src/Widgets/Categories.vala:23
-msgid "Reset settings successfully"
-msgstr "设置重置成功"
-
-#: src/Widgets/Categories.vala:76
+#: src/Widgets/BasePane.vala:34
 #, fuzzy
 msgid "Reset to Default"
 msgstr "恢复默认"
 
-#: src/Widgets/Categories.vala:97
+#: src/Widgets/BasePane.vala:55
 msgid "Are you sure you want to reset personalization?"
 msgstr "你确定要重置所有个性化选项吗？"
 
-#: src/Widgets/Categories.vala:98
+#: src/Widgets/BasePane.vala:56
 msgid ""
 "All settings in this pane will be restored to the factory defaults. This "
 "action can't be undone."
 msgstr "本页面中的所有设置将被恢复为出厂默认值。该操作无法撤销。"
 
-#: src/Widgets/Categories.vala:104
+#: src/Widgets/BasePane.vala:62
 msgid "Reset"
 msgstr "重置"
 
-#: src/Widgets/Categories.vala:153
-msgid "Open destination folder"
-msgstr "打开目标文件夹"
+#: src/Widgets/Categories.vala:23
+msgid "Reset settings successfully"
+msgstr "设置重置成功"
 
-#: src/Widgets/Categories.vala:165
-#, fuzzy
-msgid "Failed to create the destination folder"
-msgstr "打开目标文件夹"
-
-#: src/Widgets/Categories.vala:166
-msgid ""
-"The destination folder doesn't exist and tried to create new but failed. The "
-"following error message might be helpful:"
+#: src/Widgets/OpenButton.vala:15
+#, c-format
+msgid "Open \"%s\""
 msgstr ""
 
-#: src/Widgets/Categories.vala:178
-#, fuzzy
-msgid "Failed to open the destination folder"
+#: src/Widgets/OpenButton.vala:30
+#, fuzzy, c-format
+msgid "Failed to create \"%s\""
 msgstr "打开目标文件夹"
 
-#: src/Widgets/Categories.vala:179
+#: src/Widgets/OpenButton.vala:31
 msgid ""
-"Tried to open the destination folder but failed. The following error message "
-"might be helpful:"
+"The folder doesn't exist and tried to create new but failed. The following "
+"error message might be helpful:"
 msgstr ""
+
+#: src/Widgets/OpenButton.vala:43
+#, c-format
+msgid "Failed to open \"%s\""
+msgstr ""
+
+#: src/Widgets/OpenButton.vala:44
+msgid ""
+"Tried to open the folder but failed. The following error message might be "
+"helpful:"
+msgstr ""
+
+#~ msgid "Open destination folder"
+#~ msgstr "打开目标文件夹"
+
+#, fuzzy
+#~ msgid "Failed to open the destination folder"
+#~ msgstr "打开目标文件夹"
 
 #~ msgid "Theme Settings"
 #~ msgstr "主题设置"

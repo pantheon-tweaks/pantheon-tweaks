@@ -1,5 +1,5 @@
 data/pantheon-tweaks.desktop.in
-data/pantheon-tweaks.metainfo.xml.in
+data/pantheon-tweaks.metainfo.xml.in.in
 src/Panes/AppearancePane.vala
 src/Panes/FilesPane.vala
 src/Panes/FontsPane.vala
@@ -7,4 +7,6 @@ src/Panes/MiscPane.vala
 src/Panes/TerminalPane.vala
 src/Tweaks.vala
 src/MainWindow.vala
+src/Widgets/BasePane.vala
 src/Widgets/Categories.vala
+src/Widgets/OpenButton.vala

@@ -7,7 +7,7 @@
  * elementary/switchboard-plug-pantheon-shell, src/Views/Appearance.vala
  */
 
-public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
+public class PantheonTweaks.Panes.AppearancePane : BasePane {
     private Gee.HashMap<string, string> preset_button_layouts;
     private XSettings x_settings;
     private GtkSettings gtk_settings;
@@ -73,7 +73,9 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         var gtk_list = ThemeSettings.fetch_gtk_themes ();
         gtk_combobox = combobox_text_new_from_list (gtk_list);
 
-        var gtk_dir_button = new DestinationButton (".local/share/themes");
+        var gtk_dir_button = new OpenButton (
+            Path.build_filename (Environment.get_home_dir (), ".local", "share", "themes")
+        );
 
         var gtk_theme_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         gtk_theme_box.append (gtk_label);
@@ -93,7 +95,9 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         var icon_list = ThemeSettings.fetch_icon_themes ();
         var icon_combobox = combobox_text_new_from_list (icon_list);
 
-        var icon_dir_button = new DestinationButton (".icons");
+        var icon_dir_button = new OpenButton (
+            Path.build_filename (Environment.get_home_dir (), ".icons")
+        );
 
         var icon_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         icon_box.append (icon_label);
@@ -113,7 +117,9 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         var cursor_list = ThemeSettings.fetch_cursor_themes ();
         var cursor_combobox = combobox_text_new_from_list (cursor_list);
 
-        var cursor_dir_button = new DestinationButton (".icons");
+        var cursor_dir_button = new OpenButton (
+            Path.build_filename (Environment.get_home_dir (), ".icons")
+        );
 
         var cursor_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         cursor_box.append (cursor_label);
@@ -133,7 +139,9 @@ public class PantheonTweaks.Panes.AppearancePane : Categories.Pane {
         var sound_list = ThemeSettings.fetch_sound_themes ();
         var sound_combobox = combobox_text_new_from_list (sound_list);
 
-        var sound_dir_button = new DestinationButton (".local/share/sounds");
+        var sound_dir_button = new OpenButton (
+            Path.build_filename (Environment.get_home_dir (), ".local", "share", "sounds")
+        );
 
         var sound_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         sound_box.append (sound_label);

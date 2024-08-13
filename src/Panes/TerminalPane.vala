@@ -4,7 +4,7 @@
  *                         Pantheon Tweaks Developers, 2020-2024
  */
 
-public class PantheonTweaks.Panes.TerminalPane : Categories.Pane {
+public class PantheonTweaks.Panes.TerminalPane : BasePane {
     private const string TERMINAL_SCHEMA = "io.elementary.terminal.settings";
 
     private Settings settings;

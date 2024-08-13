@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-tweaks-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-14 15:31+0900\n"
+"POT-Creation-Date: 2024-08-12 19:08+0900\n"
 "PO-Revision-Date: 2023-01-18 19:37+0900\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in:5
+#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in.in:5
 msgid "Pantheon Tweaks"
 msgstr "Pantheon Tweaks"
 
@@ -27,7 +27,7 @@ msgstr "Pantheon Tweaks"
 msgid "Customization Tool"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in:6
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:6
 msgid "Tweak Pantheon settings"
 msgstr "Тонкая настройка elementary OS"
 
@@ -35,7 +35,7 @@ msgstr "Тонкая настройка elementary OS"
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in:8
+#: data/pantheon-tweaks.metainfo.xml.in.in:8
 #, fuzzy
 msgid ""
 "A system customization app for the Pantheon Desktop that lets you easily and "
@@ -44,22 +44,22 @@ msgstr ""
 "Панель параметров для Pantheon, которая позволяет вам просто и безопасно "
 "кастомизировать ваш рабочий стол."
 
-#: data/pantheon-tweaks.metainfo.xml.in:163
+#: data/pantheon-tweaks.metainfo.xml.in.in:163
 msgid "Appearance pane"
 msgstr "Панель внешнего вида"
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in:169
-#: data/pantheon-tweaks.metainfo.xml.in:171
+#: data/pantheon-tweaks.metainfo.xml.in.in:169
+#: data/pantheon-tweaks.metainfo.xml.in.in:171
 #, fuzzy
 msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon Tweaks"
 
-#: src/Panes/AppearancePane.vala:26
+#: src/Panes/AppearancePane.vala:25
 msgid "Appearance"
 msgstr "Оформление"
 
-#: src/Panes/AppearancePane.vala:27
+#: src/Panes/AppearancePane.vala:26
 msgid ""
 "Change the theme and button layout of windows. Changing theme may cause "
 "visibility issue."
@@ -67,18 +67,18 @@ msgstr ""
 "Меняйте темы и расположение кнопок окон. Изменение темы может вызвать "
 "проблемы с отображением."
 
-#: src/Panes/AppearancePane.vala:68
+#: src/Panes/AppearancePane.vala:66
 msgid "GTK Theme"
 msgstr ""
 
 #. TRANSLATORS: The "%s" represents the path where custom themes are installed
-#: src/Panes/AppearancePane.vala:70
+#: src/Panes/AppearancePane.vala:68
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr "Для отображения пользовательских тем, поместите их в %s."
 
-#: src/Panes/AppearancePane.vala:71 src/Panes/AppearancePane.vala:91
-#: src/Panes/AppearancePane.vala:111 src/Panes/AppearancePane.vala:131
+#: src/Panes/AppearancePane.vala:69 src/Panes/AppearancePane.vala:91
+#: src/Panes/AppearancePane.vala:113 src/Panes/AppearancePane.vala:135
 msgid "theme-name"
 msgstr "имя-темы"
 
@@ -92,33 +92,33 @@ msgstr ""
 msgid "To show custom icons here, put them in %s."
 msgstr "Для отображения пользовательских иконок, поместите их в %s."
 
-#: src/Panes/AppearancePane.vala:108
+#: src/Panes/AppearancePane.vala:110
 #, fuzzy
 msgid "Cursor Theme"
 msgstr "Курсор:"
 
 #. TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:110
+#: src/Panes/AppearancePane.vala:112
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr "Для отображения пользовательских курсоров, поместите их в %s."
 
-#: src/Panes/AppearancePane.vala:128
+#: src/Panes/AppearancePane.vala:132
 msgid "Sound Theme"
 msgstr ""
 
 #. TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:130
+#: src/Panes/AppearancePane.vala:134
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr "Для отображения пользовательских звуков, поместите их в %s."
 
-#: src/Panes/AppearancePane.vala:148
+#: src/Panes/AppearancePane.vala:154
 #, fuzzy
 msgid "Force Dark Style"
 msgstr "Принудительно использовать тёмный стиль:"
 
-#: src/Panes/AppearancePane.vala:149
+#: src/Panes/AppearancePane.vala:155
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
@@ -126,61 +126,61 @@ msgstr ""
 "Устанавливает тёмный стиль всем приложениям, даже если он не поддерживается. "
 "Требуется перезапуск приложения."
 
-#: src/Panes/AppearancePane.vala:163
+#: src/Panes/AppearancePane.vala:169
 #, fuzzy
 msgid "Window Control Layout"
 msgstr "Кнопки управления окнами"
 
-#: src/Panes/AppearancePane.vala:164
+#: src/Panes/AppearancePane.vala:170
 msgid "Changes button layout of the window."
 msgstr "Изменяет расположение кнопок окна."
 
-#: src/Panes/AppearancePane.vala:179
+#: src/Panes/AppearancePane.vala:185
 #, fuzzy
 msgid "Show GNOME Menu"
 msgstr "Показывать меню GNOME:"
 
-#: src/Panes/AppearancePane.vala:180
+#: src/Panes/AppearancePane.vala:186
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "Показывать ли меню GNOME в приложениях GNOME."
 
-#: src/Panes/AppearancePane.vala:264
+#: src/Panes/AppearancePane.vala:268
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:265
+#: src/Panes/AppearancePane.vala:269
 msgid "elementary Reversed"
 msgstr "elementary наоборот"
 
-#: src/Panes/AppearancePane.vala:266
+#: src/Panes/AppearancePane.vala:270
 msgid "Close Only Right"
 msgstr "Только «Закрыть» справа"
 
-#: src/Panes/AppearancePane.vala:267
+#: src/Panes/AppearancePane.vala:271
 msgid "Close Only Left"
 msgstr "Только «Закрыть» слева"
 
-#: src/Panes/AppearancePane.vala:268
+#: src/Panes/AppearancePane.vala:272
 msgid "Add Minimize Left"
 msgstr "Добавить «Свернуть» слева"
 
-#: src/Panes/AppearancePane.vala:269
+#: src/Panes/AppearancePane.vala:273
 msgid "Add Minimize Right"
 msgstr "Добавить «Свернуть» справа"
 
-#: src/Panes/AppearancePane.vala:270
+#: src/Panes/AppearancePane.vala:274
 msgid "Replace Maximize to Minimize"
 msgstr "Заменить «Развернуть»  на «Свернуть»"
 
-#: src/Panes/AppearancePane.vala:271
+#: src/Panes/AppearancePane.vala:275
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:272
+#: src/Panes/AppearancePane.vala:276
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:273
+#: src/Panes/AppearancePane.vala:277
 #, fuzzy
 msgid "Windows Reversed"
 msgstr "Windows"
@@ -346,20 +346,16 @@ msgid ""
 "environment \"%s\" is not supported."
 msgstr ""
 
-#: src/Widgets/Categories.vala:23
-msgid "Reset settings successfully"
-msgstr "Настройки успешно сброшены"
-
-#: src/Widgets/Categories.vala:76
+#: src/Widgets/BasePane.vala:34
 #, fuzzy
 msgid "Reset to Default"
 msgstr "Восстановить значения по умолчанию"
 
-#: src/Widgets/Categories.vala:97
+#: src/Widgets/BasePane.vala:55
 msgid "Are you sure you want to reset personalization?"
 msgstr "Вы уверены, что хотите сбросить персонализацию?"
 
-#: src/Widgets/Categories.vala:98
+#: src/Widgets/BasePane.vala:56
 msgid ""
 "All settings in this pane will be restored to the factory defaults. This "
 "action can't be undone."
@@ -367,38 +363,53 @@ msgstr ""
 "Все настройки в этой панели будут сброшены до настроек по умолчанию. Это "
 "действие не может быть отменено."
 
-#: src/Widgets/Categories.vala:104
+#: src/Widgets/BasePane.vala:62
 msgid "Reset"
 msgstr "Сбросить"
 
-#: src/Widgets/Categories.vala:153
-msgid "Open destination folder"
-msgstr "Открыть папку назначения"
+#: src/Widgets/Categories.vala:23
+msgid "Reset settings successfully"
+msgstr "Настройки успешно сброшены"
 
-#: src/Widgets/Categories.vala:165
-msgid "Failed to create the destination folder"
+#: src/Widgets/OpenButton.vala:15
+#, c-format
+msgid "Open \"%s\""
+msgstr ""
+
+#: src/Widgets/OpenButton.vala:30
+#, fuzzy, c-format
+msgid "Failed to create \"%s\""
 msgstr "Не удалось создать папку назначения"
 
-#: src/Widgets/Categories.vala:166
+#: src/Widgets/OpenButton.vala:31
+#, fuzzy
 msgid ""
-"The destination folder doesn't exist and tried to create new but failed. The "
-"following error message might be helpful:"
+"The folder doesn't exist and tried to create new but failed. The following "
+"error message might be helpful:"
 msgstr ""
 "Папка назначения не существует, поэтому была предпринята попытка её "
 "создания, но она провалилась. Следующее сообщение об ошибке может оказаться "
 "полезным:"
 
-#: src/Widgets/Categories.vala:178
-msgid "Failed to open the destination folder"
-msgstr "Не удалось открыть папку назначения"
+#: src/Widgets/OpenButton.vala:43
+#, c-format
+msgid "Failed to open \"%s\""
+msgstr ""
 
-#: src/Widgets/Categories.vala:179
+#: src/Widgets/OpenButton.vala:44
+#, fuzzy
 msgid ""
-"Tried to open the destination folder but failed. The following error message "
-"might be helpful:"
+"Tried to open the folder but failed. The following error message might be "
+"helpful:"
 msgstr ""
 "Произошла ошибка при открытии папки назначения. Следующее сообщение об "
 "ошибке может оказаться полезным:"
+
+#~ msgid "Open destination folder"
+#~ msgstr "Открыть папку назначения"
+
+#~ msgid "Failed to open the destination folder"
+#~ msgstr "Не удалось открыть папку назначения"
 
 #~ msgid "Theme Settings"
 #~ msgstr "Настройки темы"
