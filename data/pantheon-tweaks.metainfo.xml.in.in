@@ -11,14 +11,14 @@
   </description>
   <translation type="gettext">pantheon-tweaks</translation>
   <releases>
-    <release version="2.1.0" date="2024-05-30" urgency="medium">
+    <release version="2.1.0" date="2024-09-22" urgency="medium">
       <description translatable="no" translate="no">
         <p>
           Improvements:
         </p>
         <ul>
           <li>Support elementary OS 8</li>
-          <li>Redesign in accordance with elementary OS 8 UX</li>
+          <li>Redesign in accordance with elementary OS 8 UI</li>
           <li>Save and restore window size of Pantheon Tweaks itself</li>
           <li>Port to GTK4</li>
           <li>Update Japanese translation</li>
