@@ -34,6 +34,7 @@ Pantheon Tweaks supports the following versions of elementary OS:
   6 Odin                | ✅
   6.1 Jólnir            | ✅
   7.0 / 7.1 Horus       | ✅
+  8.0 Circe             | ✅
 
 For users on elementary OS Hera or below, please use [elementary Tweaks](https://github.com/elementary-tweaks/elementary-tweaks) instead.
 
