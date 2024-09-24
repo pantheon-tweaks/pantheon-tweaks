@@ -33,7 +33,9 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
         };
         max_volume_scale.add_mark (100, Gtk.PositionType.BOTTOM, null);
 
-        var max_volume_spinbutton = new Gtk.SpinButton (max_volume_adj, 1, 0);
+        var max_volume_spinbutton = new Gtk.SpinButton (max_volume_adj, 1, 0) {
+            valign = Gtk.Align.CENTER
+        };
 
         var max_volume_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         max_volume_box.append (max_volume_scale);
