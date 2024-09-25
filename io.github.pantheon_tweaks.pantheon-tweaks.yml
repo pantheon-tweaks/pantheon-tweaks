@@ -110,8 +110,8 @@ modules:
       - '/share/icons'
     sources:
       - type: archive
-        url: https://github.com/elementary/switchboard/archive/refs/tags/8.0.0.tar.gz
-        sha256: 99bf58f47b5cbdcfaf0415ff6ff5661fd4b18d779432884b6a62ef71f54be098
+        url: https://github.com/elementary/switchboard/archive/refs/tags/8.0.1.tar.gz
+        sha256: 6e17b9dc612b8f6e7da0cfd73e677d071019d6a2d4b2c2cf5f3c50a4a2f15835
 
   - name: pantheon-tweaks
     buildsystem: meson
