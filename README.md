@@ -1,7 +1,9 @@
 # Pantheon Tweaks
 A system customization app for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance.
 
-![sample](data/screenshot.png)
+![light screenshot](data/screenshot.png#gh-light-mode-only)
+
+![dark screenshot](data/screenshot-dark.png#gh-dark-mode-only)
 
 ## Installation
 ### From Flathub (Recommended)

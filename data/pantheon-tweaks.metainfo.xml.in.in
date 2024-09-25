@@ -175,10 +175,17 @@
     </release>
   </releases>
   <screenshots>
-    <screenshot type="default">
+    <screenshot type="default" environment="pantheon">
       <caption>Appearance pane</caption>
       <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/@VERSION@/data/screenshot.png</image>
     </screenshot>
+    <!-- TODO Uncomment when the supported AppStream is released. This causes linter error on Flathub at the moment. -->
+    <!--
+    <screenshot environment="pantheon:dark">
+      <caption>Appearance pane</caption>
+      <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/@VERSION@/data/screenshot-dark.png</image>
+    </screenshot>
+    -->
   </screenshots>
   <content_rating type="oars-1.1" />
   <!-- developer_name has deprecated since AppStream 1.0 -->
