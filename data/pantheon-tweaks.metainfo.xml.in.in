@@ -11,10 +11,26 @@
   </description>
   <translation type="gettext">pantheon-tweaks</translation>
   <releases>
-    <release version="2.0.3" date="2024-05-30" urgency="low">
+    <release version="2.1.0" date="2024-09-26" urgency="medium">
       <description translatable="no" translate="no">
+        <p>
+          Improvements:
+        </p>
         <ul>
-          <li>metainfo: Replace deprecated license id "GPL-3.0+" with "GPL-3.0-or-later"</li>
+          <li>Support elementary OS 8</li>
+          <li>Redesign in accordance with elementary OS 8 UI</li>
+          <li>Save and restore window size of Pantheon Tweaks itself</li>
+          <li>Port to GTK4</li>
+          <li>Update Japanese translation</li>
+        </ul>
+        <p>
+          Fixes:
+        </p>
+        <ul>
+          <li>Appearance: Correct window control layout name "Ubuntu" to "Windows Reversed"</li>
+          <li>Appearance: Fix incomplete list when failed to fetch themes</li>
+          <li>Terminal: Do not reset "natural-copy-paste" setting</li>
+          <li>Fix window width can be smaller than the view</li>
         </ul>
       </description>
     </release>
