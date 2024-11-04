@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-12 19:08+0900\n"
+"POT-Creation-Date: 2024-11-04 13:36+0000\n"
 "PO-Revision-Date: 2023-03-27 16:02+0100\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
@@ -45,13 +45,13 @@ msgstr ""
 "permite personalizar com facilidade e segurança a aparência do seu ambiente "
 "de trabalho."
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:163
+#: data/pantheon-tweaks.metainfo.xml.in.in:179
 msgid "Appearance pane"
 msgstr "Painel de aparência"
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:169
-#: data/pantheon-tweaks.metainfo.xml.in.in:171
+#: data/pantheon-tweaks.metainfo.xml.in.in:192
+#: data/pantheon-tweaks.metainfo.xml.in.in:194
 #, fuzzy
 msgid "Pantheon Tweaks Developers"
 msgstr "Ajustes do Pantheon"
@@ -285,11 +285,8 @@ msgid "Unsafe Paste Alert"
 msgstr "Alerta de colar inseguro:"
 
 #: src/Panes/TerminalPane.vala:41
-#, fuzzy
-msgid ""
-"Show a warning dialog when pasting a command with 'sudo' or multiple lines."
+msgid "Warn when pasted text contains multiple or administrative commands."
 msgstr ""
-"Mostra uma caixa de diálogo de aviso quando um comando colado contém 'sudo'."
 
 #: src/Panes/TerminalPane.vala:54
 #, fuzzy
@@ -407,6 +404,14 @@ msgid ""
 msgstr ""
 "Falha ao tentar abrir a pasta de destino. A seguinte mensagem de erro pode "
 "ser útil:"
+
+#, fuzzy
+#~ msgid ""
+#~ "Show a warning dialog when pasting a command with 'sudo' or multiple "
+#~ "lines."
+#~ msgstr ""
+#~ "Mostra uma caixa de diálogo de aviso quando um comando colado contém "
+#~ "'sudo'."
 
 #~ msgid "Open destination folder"
 #~ msgstr "Abrir pasta de destino"

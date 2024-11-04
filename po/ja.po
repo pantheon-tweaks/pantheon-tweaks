@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-12 19:08+0900\n"
+"POT-Creation-Date: 2024-11-04 13:36+0000\n"
 "PO-Revision-Date: 2024-08-12 19:10+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -42,13 +42,13 @@ msgstr ""
 "簡単かつ安全にデスクトップの外観をカスタマイズできる、Pantheon デスクトップ向"
 "けのシステムカスタマイズアプリです。"
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:163
+#: data/pantheon-tweaks.metainfo.xml.in.in:179
 msgid "Appearance pane"
 msgstr "“外観”ペイン"
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:169
-#: data/pantheon-tweaks.metainfo.xml.in.in:171
+#: data/pantheon-tweaks.metainfo.xml.in.in:192
+#: data/pantheon-tweaks.metainfo.xml.in.in:194
 msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon Tweaks の開発者"
 
@@ -264,11 +264,8 @@ msgid "Unsafe Paste Alert"
 msgstr "安全でないペーストを警告"
 
 #: src/Panes/TerminalPane.vala:41
-msgid ""
-"Show a warning dialog when pasting a command with 'sudo' or multiple lines."
+msgid "Warn when pasted text contains multiple or administrative commands."
 msgstr ""
-"'sudo' を含むコマンドや複数行のコマンドを貼り付けた場合に、警告ダイアログを表"
-"示します。"
 
 #: src/Panes/TerminalPane.vala:54
 msgid "Remember Tabs"
@@ -381,6 +378,13 @@ msgid ""
 msgstr ""
 "フォルダーを開こうとしましたが、失敗しました。以下のエラーメッセージが役立つ"
 "可能性があります:"
+
+#~ msgid ""
+#~ "Show a warning dialog when pasting a command with 'sudo' or multiple "
+#~ "lines."
+#~ msgstr ""
+#~ "'sudo' を含むコマンドや複数行のコマンドを貼り付けた場合に、警告ダイアログ"
+#~ "を表示します。"
 
 #~ msgid "Open destination folder"
 #~ msgstr "保存先を開く"
