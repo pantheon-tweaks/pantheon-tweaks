@@ -79,7 +79,7 @@ public class PantheonTweaks.ThemeSettings {
         var themes = new Gee.ArrayList<string> ();
 
         string[] dirs = {
-            Config.SYSTHEME_ROOTDIR + path + "/",
+            SYSTHEME_ROOTDIR + "/" + path + "/",
             Environment.get_home_dir () + "/." + path + "/",
             Environment.get_home_dir () + "/.local/share/" + path + "/"};
 
