@@ -10,8 +10,8 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
     private MainWindow window;
 
     public Tweaks () {
-        Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
-        Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+        Intl.bindtextdomain (Config.GETTEXT_PACKAGE, Config.LOCALEDIR);
+        Intl.bind_textdomain_codeset (Config.GETTEXT_PACKAGE, "UTF-8");
 
         Object (
             application_id: "io.github.pantheon_tweaks.pantheon-tweaks",
