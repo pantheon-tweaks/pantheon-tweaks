@@ -78,14 +78,8 @@ public class PantheonTweaks.ThemeSettings {
     private static Gee.ArrayList<string>? fetch_themes (string path, string condition) {
         var themes = new Gee.ArrayList<string> ();
 
-        string system_dir = "/usr/share/" + path + "/";
-        string prefix = Environment.get_variable ("USR_DIR_PREFIX");
-        if (prefix != null) {
-            system_dir = prefix + system_dir;
-        }
-
         string[] dirs = {
-            system_dir,
+            Config.SYSTHEME_ROOTDIR + path + "/",
             Environment.get_home_dir () + "/." + path + "/",
             Environment.get_home_dir () + "/.local/share/" + path + "/"};
 
