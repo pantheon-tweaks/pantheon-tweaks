@@ -14,8 +14,6 @@ finish-args:
   - '--filesystem=~/.icons:create'
   - '--filesystem=~/.local/share/sounds:create'
   - '--filesystem=~/.local/share/themes:create'
-  # Pass the directory where the host's /usr is mounted under, so that we can load system theme files
-  - '--env=USR_DIR_PREFIX=/var/run/host'
 
   # Needed to read/write GSettings of the host
   - '--talk-name=ca.desrt.dconf'
@@ -115,6 +113,9 @@ modules:
 
   - name: pantheon-tweaks
     buildsystem: meson
+    config-opts:
+      # Pass the directory where the host's /usr/share is mounted, so that we can load system theme files
+      - '-Dsystheme_rootdir=/var/run/host/usr/share'
     sources:
       - type: dir
         path: .

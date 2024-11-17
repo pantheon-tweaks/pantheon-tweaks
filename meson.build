@@ -17,9 +17,15 @@ add_global_arguments(
     language:'c'
 )
 
+systheme_rootdir = get_option('systheme_rootdir')
+if (systheme_rootdir == '')
+    systheme_rootdir = get_option('prefix') / get_option('datadir')
+endif
+
 config_data = configuration_data()
 config_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
 config_data.set_quoted('GETTEXT_PACKAGE', gettext_name)
+config_data.set_quoted('SYSTHEME_ROOTDIR', systheme_rootdir)
 config_file = configure_file(
     input: 'src/Config.vala.in',
     output: '@BASENAME@',
