@@ -47,6 +47,9 @@ modules:
       - type: archive
         url: https://download.gnome.org/sources/dconf/0.40/dconf-0.40.0.tar.xz
         sha256: cf7f22a4c9200421d8d3325c5c1b8b93a36843650c9f95d6451e20f0bcb24533
+        x-checker-data:
+          type: gnome
+          name: dconf
       - type: patch
         path: dconf-override.patch
 
@@ -84,6 +87,10 @@ modules:
       - type: archive
         url: https://github.com/elementary/stylesheet/archive/refs/tags/8.1.0.tar.gz
         sha256: 9a23f2e7a25993da5d9356e2840c6ce1c9a7c837a024a5a0cc5e3844df6c7901
+        x-checker-data:
+          type: anitya
+          project-id: 12938
+          url-template: https://github.com/elementary/stylesheet/archive/refs/tags/$version.tar.gz
 
   - name: granite
     buildsystem: meson
@@ -96,6 +103,10 @@ modules:
       - type: archive
         url: https://github.com/elementary/granite/archive/refs/tags/7.5.0.tar.gz
         sha256: 9439733169c07cfc658144ceef90bebac5f024ffda4bbb65e8c1ab68e5580908
+        x-checker-data:
+          type: anitya
+          project-id: 5410
+          url-template: https://github.com/elementary/granite/archive/refs/tags/$version.tar.gz
 
   - name: switchboard
     buildsystem: meson
@@ -110,6 +121,10 @@ modules:
       - type: archive
         url: https://github.com/elementary/switchboard/archive/refs/tags/8.0.1.tar.gz
         sha256: 6e17b9dc612b8f6e7da0cfd73e677d071019d6a2d4b2c2cf5f3c50a4a2f15835
+        x-checker-data:
+          type: anitya
+          project-id: 12873
+          url-template: https://github.com/elementary/switchboard/archive/refs/tags/$version.tar.gz
 
   - name: pantheon-tweaks
     buildsystem: meson
