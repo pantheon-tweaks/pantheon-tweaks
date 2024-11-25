@@ -5,44 +5,44 @@ runtime-version: '47'
 sdk: org.gnome.Sdk
 command: start-pantheon-tweaks
 finish-args:
-  - '--share=ipc'
-  - '--socket=wayland'
-  - '--socket=fallback-x11'
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
 
   # Grant read, write, and create access for settings.ini of GTK and theme dirs
-  - '--filesystem=~/.config/gtk-3.0:create'
-  - '--filesystem=~/.icons:create'
-  - '--filesystem=~/.local/share/sounds:create'
-  - '--filesystem=~/.local/share/themes:create'
+  - --filesystem=~/.config/gtk-3.0:create
+  - --filesystem=~/.icons:create
+  - --filesystem=~/.local/share/sounds:create
+  - --filesystem=~/.local/share/themes:create
 
   # Needed to read/write GSettings of the host
-  - '--talk-name=ca.desrt.dconf'
-  - '--filesystem=xdg-run/dconf'
-  - '--filesystem=host:ro'
-  - '--env=DCONF_USER_CONFIG_DIR=.config/dconf'
-  - '--env=GIO_EXTRA_MODULES=/app/lib/gio/modules/'
+  - --talk-name=ca.desrt.dconf
+  - --filesystem=xdg-run/dconf
+  - --filesystem=host:ro
+  - --env=DCONF_USER_CONFIG_DIR=.config/dconf
+  - --env=GIO_EXTRA_MODULES=/app/lib/gio/modules/
   # This is not recommended by Flathub though, we need it to access host's GSettings.
   # From https://docs.flathub.org/docs/for-app-authors/linter/#finish-args-flatpak-spawn-access
   #   This allows applications to launch arbitrary commands on the host and is restricted and granted on a case-by-case basis.
   #   This must not be used unless absolutely necessary and when no existing solutions using Flatpak or portals exist.
-  - '--talk-name=org.freedesktop.Flatpak'
+  - --talk-name=org.freedesktop.Flatpak
 
   # Needed for PrefersAccentColor
-  - '--system-talk-name=org.freedesktop.Accounts'
+  - --system-talk-name=org.freedesktop.Accounts
 modules:
   # Patch dconf to read/write GSettings of the host
   - name: dconf
     buildsystem: meson
     config-opts:
-      - '-Dbash_completion=false'
-      - '-Dman=false'
+      - -Dbash_completion=false
+      - -Dman=false
     cleanup:
-      - '/bin'
-      - '/include'
-      - '/lib/pkgconfig'
-      - '/lib/systemd'
-      - '/libexec'
-      - '/share/dbus-1'
+      - /bin
+      - /include
+      - /lib/pkgconfig
+      - /lib/systemd
+      - /libexec
+      - /share/dbus-1
     sources:
       - type: archive
         url: https://download.gnome.org/sources/dconf/0.40/dconf-0.40.0.tar.xz
@@ -82,11 +82,11 @@ modules:
   - name: elementary-stylesheet
     buildsystem: meson
     cleanup:
-      - '/share/metainfo'
+      - /share/metainfo
     sources:
       - type: archive
-        url: https://github.com/elementary/stylesheet/archive/refs/tags/8.1.0.tar.gz
-        sha256: 9a23f2e7a25993da5d9356e2840c6ce1c9a7c837a024a5a0cc5e3844df6c7901
+        url: https://github.com/elementary/stylesheet/archive/refs/tags/8.2.0.tar.gz
+        sha256: c63a344a312a72adb20af370d5810d0961b7fbf88c67fc5d08b1226bbcba7dc6
         x-checker-data:
           type: anitya
           project-id: 12938
@@ -95,14 +95,14 @@ modules:
   - name: granite
     buildsystem: meson
     config-opts:
-      - '-Ddemo=false'
+      - -Ddemo=false
     cleanup:
-      - '/share/icons'
-      - '/share/metainfo'
+      - /share/icons
+      - /share/metainfo
     sources:
       - type: archive
-        url: https://github.com/elementary/granite/archive/refs/tags/7.5.0.tar.gz
-        sha256: 9439733169c07cfc658144ceef90bebac5f024ffda4bbb65e8c1ab68e5580908
+        url: https://github.com/elementary/granite/archive/refs/tags/7.6.0.tar.gz
+        sha256: 4b4e4f7f86eb3f55116faec42ebd87e04c3e424d82715ecd967ed39540dca5ef
         x-checker-data:
           type: anitya
           project-id: 5410
@@ -112,15 +112,15 @@ modules:
     buildsystem: meson
     cleanup:
       # We use switchboard as a widget library; cleanup the unnecessary system settings app
-      - '/share/applications'
-      - '/share/metainfo'
-      - '/bin'
-      - '/share/glib-2.0/schemas/io.elementary.settings.gschema.xml'
-      - '/share/icons'
+      - /share/applications
+      - /share/metainfo
+      - /bin
+      - /share/glib-2.0/schemas/io.elementary.settings.gschema.xml
+      - /share/icons
     sources:
       - type: archive
-        url: https://github.com/elementary/switchboard/archive/refs/tags/8.0.1.tar.gz
-        sha256: 6e17b9dc612b8f6e7da0cfd73e677d071019d6a2d4b2c2cf5f3c50a4a2f15835
+        url: https://github.com/elementary/switchboard/archive/refs/tags/8.0.2.tar.gz
+        sha256: 27b42c67eedf2493db4e40c7d238196cb8f0c1d74e41cb81ed1c39b85180da03
         x-checker-data:
           type: anitya
           project-id: 12873
@@ -130,7 +130,7 @@ modules:
     buildsystem: meson
     config-opts:
       # Pass the directory where the host's /usr/share is mounted, so that we can load system theme files
-      - '-Dsystheme_rootdir=/var/run/host/usr/share'
+      - -Dsystheme_rootdir=/var/run/host/usr/share
     sources:
       - type: dir
         path: .
@@ -140,6 +140,6 @@ modules:
       # Install wrapper script
       - install -Dm 755 $FLATPAK_BUILDER_BUILDDIR/start-pantheon-tweaks.sh /app/bin/start-pantheon-tweaks
       # Run the wrapper script instead of the executable
-      - 'desktop-file-edit --set-key=Exec --set-value=start-pantheon-tweaks /app/share/applications/io.github.pantheon_tweaks.pantheon-tweaks.desktop'
+      - desktop-file-edit --set-key=Exec --set-value=start-pantheon-tweaks /app/share/applications/io.github.pantheon_tweaks.pantheon-tweaks.desktop
       # Tell the real executable name to the WM to prevent duplicated dock icons
-      - 'desktop-file-edit --set-key=StartupWMClass --set-value=pantheon-tweaks /app/share/applications/io.github.pantheon_tweaks.pantheon-tweaks.desktop'
+      - desktop-file-edit --set-key=StartupWMClass --set-value=pantheon-tweaks /app/share/applications/io.github.pantheon_tweaks.pantheon-tweaks.desktop
