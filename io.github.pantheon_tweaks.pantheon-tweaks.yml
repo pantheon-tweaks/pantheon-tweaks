@@ -1,4 +1,4 @@
-app-id: io.github.pantheon_tweaks.pantheon-tweaks
+id: io.github.pantheon_tweaks.pantheon-tweaks
 # elementary SDK is not available on Flathub, so use GNOME SDK and install elementary stylesheet and granite as modules
 runtime: org.gnome.Platform
 runtime-version: '47'
