@@ -29,6 +29,8 @@ finish-args:
 
   # Needed for PrefersAccentColor
   - --system-talk-name=org.freedesktop.Accounts
+build-options:
+  libdir: /app/lib
 modules:
   # Patch dconf to read/write GSettings of the host
   - name: dconf
