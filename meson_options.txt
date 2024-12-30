@@ -1,0 +1,1 @@
+option('systheme_rootdir', type: 'string', description: 'Root directory where contains system themes')

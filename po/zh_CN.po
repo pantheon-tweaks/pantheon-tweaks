@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-12 19:08+0900\n"
+"POT-Creation-Date: 2024-11-04 13:36+0000\n"
 "PO-Revision-Date: 2022-02-09 15:09+0800\n"
 "Last-Translator: imgradeone <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -41,13 +41,13 @@ msgid ""
 "safely customise your desktop's appearance."
 msgstr "专为 Pantheon 设计的系统设置面板，帮助您简便、安全地修改桌面外观。"
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:163
+#: data/pantheon-tweaks.metainfo.xml.in.in:179
 msgid "Appearance pane"
 msgstr "外观面板"
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:169
-#: data/pantheon-tweaks.metainfo.xml.in.in:171
+#: data/pantheon-tweaks.metainfo.xml.in.in:192
+#: data/pantheon-tweaks.metainfo.xml.in.in:194
 #, fuzzy
 msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon 优化"
@@ -276,10 +276,8 @@ msgid "Unsafe Paste Alert"
 msgstr "危险粘贴警告："
 
 #: src/Panes/TerminalPane.vala:41
-#, fuzzy
-msgid ""
-"Show a warning dialog when pasting a command with 'sudo' or multiple lines."
-msgstr "粘贴的命令包含“sudo”时显示警告。"
+msgid "Warn when pasted text contains multiple or administrative commands."
+msgstr ""
 
 #: src/Panes/TerminalPane.vala:54
 #, fuzzy
@@ -387,6 +385,12 @@ msgid ""
 "Tried to open the folder but failed. The following error message might be "
 "helpful:"
 msgstr ""
+
+#, fuzzy
+#~ msgid ""
+#~ "Show a warning dialog when pasting a command with 'sudo' or multiple "
+#~ "lines."
+#~ msgstr "粘贴的命令包含“sudo”时显示警告。"
 
 #~ msgid "Open destination folder"
 #~ msgstr "打开目标文件夹"

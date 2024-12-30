@@ -1,7 +1,9 @@
 # Pantheon Tweaks
 A system customization app for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance.
 
-![sample](data/screenshot.png)
+![light screenshot](data/screenshot.png#gh-light-mode-only)
+
+![dark screenshot](data/screenshot-dark.png#gh-dark-mode-only)
 
 ## Installation
 ### From Flathub (Recommended)
@@ -34,6 +36,7 @@ Pantheon Tweaks supports the following versions of elementary OS:
   6 Odin                | ✅
   6.1 Jólnir            | ✅
   7.0 / 7.1 Horus       | ✅
+  8 Circe               | ✅
 
 For users on elementary OS Hera or below, please use [elementary Tweaks](https://github.com/elementary-tweaks/elementary-tweaks) instead.
 

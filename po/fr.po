@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-12 19:08+0900\n"
+"POT-Creation-Date: 2024-11-04 13:36+0000\n"
 "PO-Revision-Date: 2021-08-26 19:05+0200\n"
 "Last-Translator: Roxfr <roxfr@outlook.fr>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -43,13 +43,13 @@ msgstr ""
 "Un panneau de configuration système pour le bureau Pantheon qui vous permet "
 "de personnaliser facilement et en toute sécurité l’apparence de votre bureau."
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:163
+#: data/pantheon-tweaks.metainfo.xml.in.in:179
 msgid "Appearance pane"
 msgstr "Volet d'apparence"
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:169
-#: data/pantheon-tweaks.metainfo.xml.in.in:171
+#: data/pantheon-tweaks.metainfo.xml.in.in:192
+#: data/pantheon-tweaks.metainfo.xml.in.in:194
 #, fuzzy
 msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon Tweaks"
@@ -285,12 +285,8 @@ msgid "Unsafe Paste Alert"
 msgstr "Alerte de collage dangereux :"
 
 #: src/Panes/TerminalPane.vala:41
-#, fuzzy
-msgid ""
-"Show a warning dialog when pasting a command with 'sudo' or multiple lines."
+msgid "Warn when pasted text contains multiple or administrative commands."
 msgstr ""
-"Afficher une boîte de dialogue d'avertissement lorsqu'une commande collée "
-"contient 'sudo'."
 
 #: src/Panes/TerminalPane.vala:54
 #, fuzzy
@@ -400,6 +396,14 @@ msgid ""
 "Tried to open the folder but failed. The following error message might be "
 "helpful:"
 msgstr ""
+
+#, fuzzy
+#~ msgid ""
+#~ "Show a warning dialog when pasting a command with 'sudo' or multiple "
+#~ "lines."
+#~ msgstr ""
+#~ "Afficher une boîte de dialogue d'avertissement lorsqu'une commande collée "
+#~ "contient 'sudo'."
 
 #~ msgid "Theme Settings"
 #~ msgstr "Réglage des thèmes"

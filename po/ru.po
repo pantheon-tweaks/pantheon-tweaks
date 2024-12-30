@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-tweaks-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-12 19:08+0900\n"
+"POT-Creation-Date: 2024-11-04 13:36+0000\n"
 "PO-Revision-Date: 2023-01-18 19:37+0900\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -44,13 +44,13 @@ msgstr ""
 "Панель параметров для Pantheon, которая позволяет вам просто и безопасно "
 "кастомизировать ваш рабочий стол."
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:163
+#: data/pantheon-tweaks.metainfo.xml.in.in:179
 msgid "Appearance pane"
 msgstr "Панель внешнего вида"
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:169
-#: data/pantheon-tweaks.metainfo.xml.in.in:171
+#: data/pantheon-tweaks.metainfo.xml.in.in:192
+#: data/pantheon-tweaks.metainfo.xml.in.in:194
 #, fuzzy
 msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon Tweaks"
@@ -281,10 +281,8 @@ msgid "Unsafe Paste Alert"
 msgstr "Предупреждение о небезопасной вставке:"
 
 #: src/Panes/TerminalPane.vala:41
-#, fuzzy
-msgid ""
-"Show a warning dialog when pasting a command with 'sudo' or multiple lines."
-msgstr "Показывать предупреждение, когда вставленная команда содержит «sudo»."
+msgid "Warn when pasted text contains multiple or administrative commands."
+msgstr ""
 
 #: src/Panes/TerminalPane.vala:54
 #, fuzzy
@@ -404,6 +402,13 @@ msgid ""
 msgstr ""
 "Произошла ошибка при открытии папки назначения. Следующее сообщение об "
 "ошибке может оказаться полезным:"
+
+#, fuzzy
+#~ msgid ""
+#~ "Show a warning dialog when pasting a command with 'sudo' or multiple "
+#~ "lines."
+#~ msgstr ""
+#~ "Показывать предупреждение, когда вставленная команда содержит «sudo»."
 
 #~ msgid "Open destination folder"
 #~ msgstr "Открыть папку назначения"
