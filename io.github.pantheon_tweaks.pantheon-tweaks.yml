@@ -8,6 +8,7 @@ finish-args:
   - --share=ipc
   - --socket=wayland
   - --socket=fallback-x11
+  - --device=dri
 
   # Grant read, write, and create access for settings.ini of GTK and theme dirs
   - --filesystem=~/.config/gtk-3.0:create
