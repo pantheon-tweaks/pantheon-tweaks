@@ -11,6 +11,17 @@
   </description>
   <translation type="gettext">pantheon-tweaks</translation>
   <releases>
+    <release version="2.2.0" date="2025-02-01" urgency="medium">
+      <description translatable="no" translate="no">
+        <p>
+          Improvements:
+        </p>
+        <ul>
+          <li>Redesign the app icon in a square shape for consistency with official apps on Pantheon</li>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.1.0" date="2024-09-26" urgency="medium">
       <description translatable="no" translate="no">
         <p>
