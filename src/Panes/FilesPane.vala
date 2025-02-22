@@ -1,7 +1,7 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText: elementary Tweaks Developers, 2016-2020
- *                         Pantheon Tweaks Developers, 2020-2024
+ *                         Pantheon Tweaks Developers, 2020-2025
  */
 
 public class PantheonTweaks.Panes.FilesPane : BasePane {
