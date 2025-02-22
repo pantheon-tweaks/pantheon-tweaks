@@ -32,7 +32,7 @@ jobs:
           platforms: arm64
 
       - name: Build
-        uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+        uses: flatpak/flatpak-github-actions/flatpak-builder@v6.4
         with:
           bundle: pantheon-tweaks.flatpak
           manifest-path: io.github.pantheon_tweaks.pantheon-tweaks.yml
