@@ -87,13 +87,13 @@ modules:
     cleanup:
       - /share/metainfo
     sources:
-      - type: archive
-        url: https://github.com/elementary/stylesheet/archive/refs/tags/8.2.0.tar.gz
-        sha256: c63a344a312a72adb20af370d5810d0961b7fbf88c67fc5d08b1226bbcba7dc6
+      - type: git
+        url: https://github.com/elementary/stylesheet.git
+        tag: 8.2.0
+        commit: 039492a3b1cfb99524dd2982dd2dc4d3cb9c78d6
         x-checker-data:
-          type: anitya
-          project-id: 12938
-          url-template: https://github.com/elementary/stylesheet/archive/refs/tags/$version.tar.gz
+          type: git
+          tag-pattern: '^([\d.]+)$'
 
   - name: granite
     buildsystem: meson
@@ -103,13 +103,13 @@ modules:
       - /share/icons
       - /share/metainfo
     sources:
-      - type: archive
-        url: https://github.com/elementary/granite/archive/refs/tags/7.6.0.tar.gz
-        sha256: 4b4e4f7f86eb3f55116faec42ebd87e04c3e424d82715ecd967ed39540dca5ef
+      - type: git
+        url: https://github.com/elementary/granite.git
+        tag: 7.6.0
+        commit: 065ba1f245b60ef867a6ca145e0891cf84eddcc7
         x-checker-data:
-          type: anitya
-          project-id: 5410
-          url-template: https://github.com/elementary/granite/archive/refs/tags/$version.tar.gz
+          type: git
+          tag-pattern: '^([\d.]+)$'
 
   - name: switchboard
     buildsystem: meson
@@ -121,13 +121,13 @@ modules:
       - /share/glib-2.0/schemas/io.elementary.settings.gschema.xml
       - /share/icons
     sources:
-      - type: archive
-        url: https://github.com/elementary/switchboard/archive/refs/tags/8.0.2.tar.gz
-        sha256: 27b42c67eedf2493db4e40c7d238196cb8f0c1d74e41cb81ed1c39b85180da03
+      - type: git
+        url: https://github.com/elementary/switchboard.git
+        tag: 8.0.2
+        commit: efd9be85b539f7ff816d5f1e24f1e478b3593e1f
         x-checker-data:
-          type: anitya
-          project-id: 12873
-          url-template: https://github.com/elementary/switchboard/archive/refs/tags/$version.tar.gz
+          type: git
+          tag-pattern: '^([\d.]+)$'
 
   - name: pantheon-tweaks
     buildsystem: meson
