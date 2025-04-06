@@ -1,5 +1,6 @@
 id: io.github.pantheon_tweaks.pantheon-tweaks
-# elementary SDK is not available on Flathub, so use GNOME SDK and install elementary stylesheet and granite as modules
+base: io.elementary.BaseApp
+base-version: 'circe-24.08'
 runtime: org.gnome.Platform
 runtime-version: '47'
 sdk: org.gnome.Sdk
@@ -82,19 +83,7 @@ modules:
             commands:
               - autoreconf -si
 
-  - name: elementary-stylesheet
-    buildsystem: meson
-    cleanup:
-      - /share/metainfo
-    sources:
-      - type: git
-        url: https://github.com/elementary/stylesheet.git
-        tag: 8.2.0
-        commit: 039492a3b1cfb99524dd2982dd2dc4d3cb9c78d6
-        x-checker-data:
-          type: git
-          tag-pattern: '^([\d.]+)$'
-
+  # TODO Remove when https://github.com/flathub/io.elementary.BaseApp/pull/30 is merged
   - name: granite
     buildsystem: meson
     config-opts:
