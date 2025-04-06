@@ -11,7 +11,7 @@
 - Update screenshots if there are visual changes between releases
 - Create a pull request with the following changes and merge it once the build succeeds
     - Write a release note in `data/pantheon-tweaks.metainfo.xml.in.in`
-        - Refer to [the Metainfo guidelines by Flathub](https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines/#release)
+        - Refer to [the Metainfo guidelines by Flathub](https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines)
         - Credits contributors with their GitHub username
     - Bump `version` in `meson.build`  
     ```meson
@@ -27,7 +27,7 @@
     - Release title: `<Project Name> X.Y.Z Released`
     - Publish it when completed
 
-## Work in Flathub repository
+## Work in Flathub Repository
 - Repository URL: https://github.com/flathub/io.github.pantheon_tweaks.pantheon-tweaks
 - Create a new branch named `release-X.Y.Z` from latest `origin/master`
 - Create a pull request with the following changes and merge it once the build succeeds
