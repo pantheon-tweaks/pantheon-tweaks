@@ -11,9 +11,9 @@ jobs:
       matrix:
         include:
           - arch: x86_64
-            runs-on: ubuntu-22.04
+            runs-on: ubuntu-latest
           - arch: aarch64
-            runs-on: ubuntu-22.04-arm
+            runs-on: ubuntu-24.04-arm
       # Don't fail the whole workflow if one architecture fails
       fail-fast: false
 
@@ -35,7 +35,7 @@ jobs:
 
   lint:
     name: Lint
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     container:
       image: valalang/lint
     steps:
