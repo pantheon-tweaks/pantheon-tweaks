@@ -5,11 +5,15 @@ on: pull_request
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-22.04
+    runs-on: ${{ matrix.runs-on }}
 
     strategy:
       matrix:
-        arch: [x86_64, aarch64]
+        include:
+          - arch: x86_64
+            runs-on: ubuntu-22.04
+          - arch: aarch64
+            runs-on: ubuntu-22.04-arm
       # Don't fail the whole workflow if one architecture fails
       fail-fast: false
 
@@ -19,17 +23,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Install QEMU
-        if: ${{ matrix.arch != 'x86_64' }}
-        run: |
-          dnf -y install docker
-
-      - name: Set up QEMU for aarch64 emulation
-        if: ${{ matrix.arch != 'x86_64' }}
-        uses: docker/setup-qemu-action@v3
-        with:
-          platforms: arm64
 
       - name: Build
         uses: flatpak/flatpak-github-actions/flatpak-builder@v6.4
