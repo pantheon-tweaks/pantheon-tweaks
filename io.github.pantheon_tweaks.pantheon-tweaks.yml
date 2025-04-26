@@ -22,15 +22,19 @@ finish-args:
   - --filesystem=host:ro
   - --env=DCONF_USER_CONFIG_DIR=.config/dconf
   - --env=GIO_EXTRA_MODULES=/app/lib/gio/modules/
-  # This is not recommended by Flathub though, we need it to access host's GSettings.
-  # From https://docs.flathub.org/docs/for-app-authors/linter/#finish-args-flatpak-spawn-access
-  #   This allows applications to launch arbitrary commands on the host and is restricted and granted on a case-by-case basis.
-  #   This must not be used unless absolutely necessary and when no existing solutions using Flatpak or portals exist.
+  # WARNING: This allows us to launch arbitrary commands on the host, which is not recommended for security reasons.
+  # We use this to get XDG_DATA_DIRS environment value of the host system with the flatpak-spawn command
+  # to read/write GSettings of the host system, which is not possible with existing solutions using Flatpak or portals.
+  # See start-pantheon-tweaks.sh for implementation details.
+  # We've granted an exception to use this on Flathub in https://github.com/flathub-infra/flatpak-builder-lint/pull/399
+  # WE MUST NOT ABUSE THIS EXCEPTION FOR ANY REASON FOREVER.
   - --talk-name=org.freedesktop.Flatpak
 
   # Needed for PrefersAccentColor
   - --system-talk-name=org.freedesktop.Accounts
 build-options:
+  # Explicit libdir because some dependency libraries are installed under /app/lib64 on some amd64 build environments
+  # and we can't detect them when building our apps
   libdir: /app/lib
 modules:
   # Patch dconf to read/write GSettings of the host
