@@ -14,7 +14,7 @@
     <release version="2.2.1" date="2025-04-28" urgency="low">
       <description translatable="no" translate="no">
         <ul>
-          <li>Update GNOME runtime to 48</li>
+          <li>Flatpak: Update GNOME runtime to 48</li>
         </ul>
       </description>
     </release>
