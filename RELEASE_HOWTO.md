@@ -32,6 +32,6 @@
 - Create a new branch named `release-X.Y.Z` from latest `origin/master`
 - Create a pull request with the following changes and merge it once the build succeeds
     - Sync the content of the manifest file with the upstream except for the project module
-    - Change `url` and `sha256` of the project module in the manifest file
-        - These two parameters should point to the tar.gz of the release assets just we published on the project repository
+    - Change `tag` and `commit` of the project module in the manifest file
+        - These two parameters should point to the tag/revision that we published on the project repository
 - The new release should be available on Flathub after some time
