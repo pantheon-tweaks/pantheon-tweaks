@@ -11,6 +11,13 @@
   </description>
   <translation type="gettext">pantheon-tweaks</translation>
   <releases>
+    <release version="2.2.1" date="2025-04-28" urgency="low">
+      <description translatable="no" translate="no">
+        <ul>
+          <li>Flatpak: Update GNOME runtime to 48</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.2.0" date="2025-02-22" urgency="medium">
       <description translatable="no" translate="no">
         <p>
@@ -187,16 +194,13 @@
   </releases>
   <screenshots>
     <screenshot type="default" environment="pantheon">
-      <caption>Appearance pane</caption>
+      <caption>Appearance pane in the light mode</caption>
       <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/@VERSION@/data/screenshot.png</image>
     </screenshot>
-    <!-- TODO Uncomment when the supported AppStream is released. This causes linter error on Flathub at the moment. -->
-    <!--
     <screenshot environment="pantheon:dark">
-      <caption>Appearance pane</caption>
+      <caption>Appearance pane in the dark mode</caption>
       <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/@VERSION@/data/screenshot-dark.png</image>
     </screenshot>
-    -->
   </screenshots>
   <content_rating type="oars-1.1" />
   <!-- developer_name has deprecated since AppStream 1.0 -->
