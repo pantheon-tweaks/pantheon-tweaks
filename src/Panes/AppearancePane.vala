@@ -16,7 +16,8 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     private Settings gnome_wm_settings;
     private Pantheon.AccountsService? pantheon_act = null;
 
-    private Gtk.ComboBoxText gtk_combobox;
+    private Gtk.StringList gtk_strlist;
+    private Gtk.DropDown gtk_combobox;
     private Gtk.ComboBoxText controls_combobox;
     private Gtk.Switch gnome_menu_switch;
 
@@ -71,7 +72,17 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             hexpand = true
         };
         var gtk_list = ThemeSettings.fetch_gtk_themes ();
-        gtk_combobox = combobox_text_new_from_list (gtk_list);
+        gtk_strlist = new Gtk.StringList (null);
+        gtk_combobox = new Gtk.DropDown (gtk_strlist, null) {
+            valign = Gtk.Align.CENTER,
+            width_request = 180
+        };
+
+        if (gtk_list != null) {
+            gtk_list.foreach ((item) => {
+                gtk_strlist.take (item);
+            });
+        }
 
         var gtk_dir_button = new OpenButton (
             Path.build_filename (Environment.get_home_dir (), ".local", "share", "themes")
@@ -211,15 +222,26 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
         if (((DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
             ((DBusProxy) pantheon_act).g_properties_changed.connect ((changed, invalid) => {
-                gtk_combobox.active_id = interface_settings.get_string ("gtk-theme");
+                string current_theme_name = interface_settings.get_string ("gtk-theme");
+                uint current_theme_pos = strlist_find (gtk_strlist, current_theme_name);
+                if (current_theme_pos == uint.MAX) {
+                    // Unselect if the list does not contain the current theme
+                    current_theme_pos = Gtk.INVALID_LIST_POSITION;
+                }
+
+                gtk_combobox.selected = current_theme_pos;
             });
         }
 
-        gtk_combobox.changed.connect (() => {
-            interface_settings.set_string ("gtk-theme", gtk_combobox.active_id);
+        gtk_combobox.notify["selected-item"].connect ((obj, pspec) => {
+            var _gtk_combobox = (Gtk.DropDown) obj;
+            var _selected_item = (Gtk.StringObject) _gtk_combobox.selected_item;
+            var current_theme_name = _selected_item.string;
 
-            if (gtk_combobox.active_id.has_prefix (ThemeSettings.ELEMENTARY_STYLESHEET_PREFIX)) {
-                ThemeSettings.AccentColor color = ThemeSettings.parse_accent_color (gtk_combobox.active_id);
+            interface_settings.set_string ("gtk-theme", current_theme_name);
+
+            if (current_theme_name.has_prefix (ThemeSettings.ELEMENTARY_STYLESHEET_PREFIX)) {
+                ThemeSettings.AccentColor color = ThemeSettings.parse_accent_color (current_theme_name);
                 if (((DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
                     pantheon_act.prefers_accent_color = color;
                 }
@@ -257,7 +279,14 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     }
 
     private void init_data () {
-        gtk_combobox.active_id = interface_settings.get_string ("gtk-theme");
+        string current_theme_name = interface_settings.get_string ("gtk-theme");
+        uint current_theme_pos = strlist_find (gtk_strlist, current_theme_name);
+        if (current_theme_pos == uint.MAX) {
+            // Unselect if the list does not contain the current theme
+            current_theme_pos = Gtk.INVALID_LIST_POSITION;
+        }
+
+        gtk_combobox.selected = current_theme_pos;
         controls_combobox.active_id = gnome_wm_settings.get_string ("button-layout");
         gnome_menu_switch.active = x_settings.has_gnome_menu ();
     }

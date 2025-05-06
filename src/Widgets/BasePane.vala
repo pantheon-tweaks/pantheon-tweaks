@@ -102,6 +102,22 @@ public abstract class BasePane : Switchboard.SettingsPage {
         return combobox_text;
     }
 
+    // Implement Gtk.StringList.find() by ourselves which is only available on GTK >= 4.18
+    protected static uint strlist_find (Gtk.StringList list, string str) {
+        uint pos = uint.MAX;
+
+        for (int i = 0; i < list.n_items; i++) {
+            unowned var list_str = list.get_string (i);
+
+            if (list_str == str) {
+                pos = i;
+                break;
+            }
+        }
+
+        return pos;
+    }
+
     /**
      * Convert string representation of font to Pango.FontDescription.
      *
