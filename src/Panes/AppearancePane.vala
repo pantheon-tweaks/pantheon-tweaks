@@ -81,6 +81,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         if (gtk_list != null) {
             gtk_list.foreach ((item) => {
                 gtk_strlist.take (item);
+                return true;
             });
         }
 
