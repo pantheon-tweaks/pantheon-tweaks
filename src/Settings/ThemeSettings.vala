@@ -20,6 +20,7 @@ public class PantheonTweaks.ThemeSettings {
         BLUE,
         PURPLE,
         PINK,
+        BEIGE,
         BROWN,
         GRAY;
     }
@@ -43,6 +44,8 @@ public class PantheonTweaks.ThemeSettings {
                 return AccentColor.PURPLE;
             case "bubblegum":
                 return AccentColor.PINK;
+            case "late":
+                return AccentColor.BEIGE;
             case "cocoa":
                 return AccentColor.BROWN;
             case "slate":
@@ -50,7 +53,7 @@ public class PantheonTweaks.ThemeSettings {
             case "auto":
                 return AccentColor.NO_PREFERENCE;
             default:
-                warning ("Unexpected variant of elementary stylesheet, falling back to blueberry");
+                warning ("Unexpected variant of elementary stylesheet '%s', falling back to blueberry", variant_name);
                 return AccentColor.BLUE;
         }
     }
