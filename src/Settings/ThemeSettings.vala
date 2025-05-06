@@ -44,7 +44,7 @@ public class PantheonTweaks.ThemeSettings {
                 return AccentColor.PURPLE;
             case "bubblegum":
                 return AccentColor.PINK;
-            case "late":
+            case "latte":
                 return AccentColor.BEIGE;
             case "cocoa":
                 return AccentColor.BROWN;
