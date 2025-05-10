@@ -45,11 +45,17 @@ public class PantheonTweaks.XSettings {
 
     public void set_gnome_menu (bool set, string new_layout) {
         if (set) {
-            decoration_layout = new_layout + ",menu";
-            if (decoration_layout.contains (":,")) {
-                decoration_layout = decoration_layout.replace (":,", ":");
-            } else if (!decoration_layout.contains (":")) {
-                decoration_layout = new_layout + ":menu";
+            if (new_layout.has_suffix (":")) {
+                // e.g. "close:" → "close:menu"
+                decoration_layout = new_layout + "menu";
+            } else {
+                if (new_layout.contains (":")) {
+                    // e.g. "close:maximize" → "close:maximize,menu"
+                    decoration_layout = new_layout + ",menu";
+                } else {
+                    // e.g. "close,minimize,maximize" → "close,minimize,maximize:menu"
+                    decoration_layout = new_layout + ":menu";
+                }
             }
         } else {
             decoration_layout = new_layout;
