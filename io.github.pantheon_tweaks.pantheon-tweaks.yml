@@ -62,23 +62,6 @@ modules:
       - type: patch
         path: dconf-override.patch
 
-  # TODO Remove when https://github.com/flathub/io.elementary.BaseApp/pull/30 is merged
-  - name: granite
-    buildsystem: meson
-    config-opts:
-      - -Ddemo=false
-    cleanup:
-      - /share/icons
-      - /share/metainfo
-    sources:
-      - type: git
-        url: https://github.com/elementary/granite.git
-        tag: 7.6.0
-        commit: 065ba1f245b60ef867a6ca145e0891cf84eddcc7
-        x-checker-data:
-          type: git
-          tag-pattern: '^([\d.]+)$'
-
   - name: switchboard
     buildsystem: meson
     cleanup:
