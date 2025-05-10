@@ -50,8 +50,8 @@ public class PantheonTweaks.XSettings {
                 decoration_layout = new_layout + "menu";
             } else {
                 if (new_layout.contains (":")) {
-                    // e.g. "close:maximize" → "close:maximize,menu"
-                    decoration_layout = new_layout + ",menu";
+                    // e.g. "close:maximize" → "close:menu,maximize"
+                    decoration_layout = new_layout.replace (":", ":menu,");
                 } else {
                     // e.g. "close,minimize,maximize" → "close,minimize,maximize:menu"
                     decoration_layout = new_layout + ":menu";
