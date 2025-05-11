@@ -21,7 +21,8 @@ public class PantheonTweaks.ThemeSettings {
         PURPLE,
         PINK,
         BROWN,
-        GRAY;
+        GRAY,
+        BEIGE,
     }
 
     public static AccentColor parse_accent_color (string full_style_name) {
@@ -47,10 +48,12 @@ public class PantheonTweaks.ThemeSettings {
                 return AccentColor.BROWN;
             case "slate":
                 return AccentColor.GRAY;
+            case "latte":
+                return AccentColor.BEIGE;
             case "auto":
                 return AccentColor.NO_PREFERENCE;
             default:
-                warning ("Unexpected variant of elementary stylesheet, falling back to blueberry");
+                warning ("Unexpected variant of elementary stylesheet '%s', falling back to blueberry", variant_name);
                 return AccentColor.BLUE;
         }
     }
