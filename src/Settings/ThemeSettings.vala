@@ -50,7 +50,7 @@ public class PantheonTweaks.ThemeSettings {
             case "auto":
                 return AccentColor.NO_PREFERENCE;
             default:
-                warning ("Unexpected variant of elementary stylesheet, falling back to blueberry");
+                warning ("Unexpected variant of elementary stylesheet '%s', falling back to blueberry", variant_name);
                 return AccentColor.BLUE;
         }
     }
@@ -92,8 +92,8 @@ public class PantheonTweaks.ThemeSettings {
             FileEnumerator enumerator;
             try {
                 enumerator = file.enumerate_children (FileAttribute.STANDARD_NAME, 0);
-            } catch (Error e) {
-                warning (e.message);
+            } catch (Error err) {
+                warning ("Failed to enumerate children under '%s': %s", dir, err.message);
                 return null;
             }
 
@@ -102,8 +102,8 @@ public class PantheonTweaks.ThemeSettings {
             while (file_info != null) {
                 try {
                     file_info = enumerator.next_file ();
-                } catch (Error e) {
-                    warning (e.message);
+                } catch (Error err) {
+                    warning ("Failed to refer info of next file under '%s': %s", dir, err.message);
                     return null;
                 }
 
