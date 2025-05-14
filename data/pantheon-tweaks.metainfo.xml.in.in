@@ -11,6 +11,15 @@
   </description>
   <translation type="gettext">pantheon-tweaks</translation>
   <releases>
+    <release version="2.3.0" date="2025-05-14" urgency="low">
+      <description translatable="no" translate="no">
+        <ul>
+          <li>Appearance: Fix the GNOME menu is always appended to all of window controls. It's now prepended to the right half of window controls</li>
+          <li>Add app icons in variety sizes</li>
+          <li>Dark style screenshot in the software centers</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.2.1" date="2025-04-28" urgency="low">
       <description translatable="no" translate="no">
         <ul>
