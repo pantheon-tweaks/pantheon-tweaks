@@ -55,8 +55,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
                     user_path,
                     DBusProxyFlags.GET_INVALIDATED_PROPERTIES
                 );
-            } catch (Error e) {
-                warning ("Unable to get AccountsService proxy, color scheme preference may be incorrect");
+            } catch (Error err) {
+                warning ("Unable to get AccountsService proxy, color scheme preference may be incorrect: %s",
+                        err.message);
             }
         }
 
