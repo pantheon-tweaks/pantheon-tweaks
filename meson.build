@@ -38,6 +38,7 @@ subdir('po')
 source_files = files(
     'src/MainWindow.vala',
     'src/Tweaks.vala',
+    'src/Model/ListItemModel.vala',
     'src/Settings/AccountsService.vala',
     'src/Settings/GtkSettings.vala',
     'src/Settings/ThemeSettings.vala',
@@ -49,6 +50,7 @@ source_files = files(
     'src/Panes/TerminalPane.vala',
     'src/Widgets/BasePane.vala',
     'src/Widgets/Categories.vala',
+    'src/Widgets/DropDownRow.vala',
     'src/Widgets/OpenButton.vala',
 )
 

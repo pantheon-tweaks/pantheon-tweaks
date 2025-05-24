@@ -102,6 +102,36 @@ public abstract class BasePane : Switchboard.SettingsPage {
         return combobox_text;
     }
 
+    private void list_factory_setup (Object object) {
+        var item = object as Gtk.ListItem;
+
+        var row = new DropDownRow ();
+        item.child = row;
+    }
+
+    private void list_factory_bind (Object object) {
+        var item = object as Gtk.ListItem;
+        var model = item.item as ListItemModel;
+        var row = item.child as DropDownRow;
+
+        row.label.label = _(model.display_text);
+    }
+
+    protected Gtk.DropDown dropdown_new (owned ListModel? list_model) {
+        var list_factory = new Gtk.SignalListItemFactory ();
+        list_factory.setup.connect (list_factory_setup);
+        list_factory.bind.connect (list_factory_bind);
+
+        var expression = new Gtk.PropertyExpression (
+            typeof (ListItemModel), null, "display_text"
+        );
+        var dropdown = new Gtk.DropDown (list_model, expression) {
+            list_factory = list_factory
+        };
+
+        return dropdown;
+    }
+
     /**
      * Convert string representation of font to Pango.FontDescription.
      *

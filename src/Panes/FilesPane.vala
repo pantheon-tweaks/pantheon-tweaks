@@ -5,35 +5,6 @@
  */
 
 public class PantheonTweaks.Panes.FilesPane : BasePane {
-    public class ListItemModel : Object {
-        public string value { get; construct; }
-        public string display_text { get; construct; }
-
-        public ListItemModel (string value, string display_text) {
-            Object (
-                value: value,
-                display_text: display_text
-            );
-        }
-    }
-
-public class DropDownRow : Gtk.Box {
-    public Gtk.Label label { get; set; }
-
-    public DropDownRow () {
-    }
-
-    construct {
-        orientation = Gtk.Orientation.VERTICAL;
-
-        label = new Gtk.Label (null) {
-            halign = Gtk.Align.START
-        };
-
-        append (label);
-    }
-}
-
     private const string FILES_SCHEMA = "io.elementary.files.preferences";
 
     private Settings settings;
@@ -88,85 +59,24 @@ public class DropDownRow : Gtk.Box {
 
         settings.bind ("restore-tabs", restore_tabs_switch, "active", SettingsBindFlags.DEFAULT);
 
-        settings.changed["date-format"].connect ((key) => {
-            string selected_value = settings.get_string (key);
-            uint selected_pos = liststore_get_position (date_format_list, selected_value);
-            date_format_combo.selected = selected_pos;
-        });
+        settings.changed["date-format"].connect (date_format_settings_to_combo);
+        date_format_combo.notify["selected"].connect (date_format_combo_to_settings);
 
-        date_format_combo.notify["selected"].connect (() => {
-            uint selected_pos = date_format_combo.selected;
-            string? selected_value = liststore_get_value (date_format_list, selected_pos);
-            if (selected_value != null) {
-                settings.set_string ("date-format", selected_value);
-            }
-        });
+        date_format_settings_to_combo ();
     }
 
-    private uint liststore_get_position (ListStore list, string value) {
-        assert (list.item_type == typeof (ListItemModel));
+    private void date_format_settings_to_combo () {
+        string selected_value = settings.get_string ("date-format");
+        uint selected_pos = ListItemModel.liststore_get_position (date_format_list, selected_value);
+        date_format_combo.selected = selected_pos;
+    }
 
-        uint pos;
-
-        bool found = date_format_list.find_with_equal_func (
-            new ListItemModel (value, ""),
-            (a, b) => {
-                return ((ListItemModel) a).value == ((ListItemModel) b).value;
-            },
-            out pos
-        );
-
-        if (!found) {
-            return Gtk.INVALID_LIST_POSITION;
+    private void date_format_combo_to_settings () {
+        uint selected_pos = date_format_combo.selected;
+        string? selected_value = ListItemModel.liststore_get_value (date_format_list, selected_pos);
+        if (selected_value != null) {
+            settings.set_string ("date-format", selected_value);
         }
-
-        return pos;
-    }
-
-    private string? liststore_get_value (ListStore list, uint position) {
-        assert (list.item_type == typeof (ListItemModel));
-
-        // No item is selected
-        if (position == Gtk.INVALID_LIST_POSITION) {
-            return null;
-        }
-
-        var item = list.get_item (position) as ListItemModel;
-        if (item == null) {
-            return null;
-        }
-
-        return item.value;
-    }
-
-    private void list_factory_setup (Object object) {
-        var item = object as Gtk.ListItem;
-
-        var row = new DropDownRow ();
-        item.child = row;
-    }
-
-    private void list_factory_bind (Object object) {
-        var item = object as Gtk.ListItem;
-        var model = item.item as ListItemModel;
-        var row = item.child as DropDownRow;
-
-        row.label.label = _(model.display_text);
-    }
-
-    protected Gtk.DropDown dropdown_new (owned ListModel? list_model) {
-        var list_factory = new Gtk.SignalListItemFactory ();
-        list_factory.setup.connect (list_factory_setup);
-        list_factory.bind.connect (list_factory_bind);
-
-        var expression = new Gtk.PropertyExpression (
-            typeof (ListItemModel), null, "display_text"
-        );
-        var dropdown = new Gtk.DropDown (list_model, expression) {
-            list_factory = list_factory
-        };
-
-        return dropdown;
     }
 
     protected override void do_reset () {
