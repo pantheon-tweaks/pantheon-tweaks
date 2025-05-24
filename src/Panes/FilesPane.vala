@@ -38,6 +38,8 @@ public class DropDownRow : Gtk.Box {
     private const string FILES_SCHEMA = "io.elementary.files.preferences";
 
     private Settings settings;
+    private ListStore date_format_list;
+    private Gtk.DropDown date_format_combo;
 
     public FilesPane () {
         base ("files", _("Files"), "system-file-manager");
@@ -67,7 +69,7 @@ public class DropDownRow : Gtk.Box {
         /*************************************************/
         /* Date Format                                   */
         /*************************************************/
-        var date_format_list = new ListStore (typeof (ListItemModel));
+        date_format_list = new ListStore (typeof (ListItemModel));
         date_format_list.append (new ListItemModel ("locale", _("Locale")));
         date_format_list.append (new ListItemModel ("iso", _("ISO")));
         date_format_list.append (new ListItemModel ("informal", _("Informal")));
@@ -76,7 +78,7 @@ public class DropDownRow : Gtk.Box {
             secondary_text = _("Date format used in the properties dialog or the list view."),
             hexpand = true
         };
-        var date_format_combo = dropdown_new (date_format_list);
+        date_format_combo = dropdown_new (date_format_list);
 
         var date_format_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         date_format_box.append (date_format_label);
@@ -86,22 +88,16 @@ public class DropDownRow : Gtk.Box {
         content_area.attach (date_format_box, 0, 1, 1, 1);
 
         settings.bind ("restore-tabs", restore_tabs_switch, "active", SettingsBindFlags.DEFAULT);
-        settings.bind_with_mapping ("date-format",
-            date_format_combo, "selected",
-            SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) gsettings_to_selected,
-            (SettingsBindSetMappingShared) selected_to_gsettings,
-            date_format_list,
-            null
-        );
+
+        settings.changed["date-format"].connect (gsettings_to_selected);
+        date_format_combo.notify["selected"].connect (selected_to_gsettings);
     }
 
-    private bool gsettings_to_selected (Value dropdown_selected, Variant gsettings_value, void* user_data) {
-        string val = (string) gsettings_value;
-        var model = (ListStore) user_data;
+    private void gsettings_to_selected (string key) {
+        var val = settings.get_string (key);
         uint pos;
 
-        bool found = model.find_with_equal_func (
+        bool found = date_format_list.find_with_equal_func (
             new ListItemModel ("", val),
             (a, b) => {
                 return ((ListItemModel) a).settings_keyname == ((ListItemModel) b).settings_keyname;
@@ -110,29 +106,30 @@ public class DropDownRow : Gtk.Box {
         );
 
         if (!found) {
-            dropdown_selected = Gtk.INVALID_LIST_POSITION;
-            return true;
+            date_format_combo.selected = Gtk.INVALID_LIST_POSITION;
+            return;
         }
 
-        dropdown_selected = pos;
-        return true;
+        date_format_combo.selected = pos;
+        return;
     }
 
-    private Variant selected_to_gsettings (Value dropdown_selected, VariantType gsettings_type, void* user_data) {
-        uint pos = (uint) dropdown_selected;
-        var model = (ListStore) user_data;
+    private void selected_to_gsettings (Object obj, ParamSpec pspec) {
+        uint pos = (uint) obj;
 
         // No item is selected
         if (pos == Gtk.INVALID_LIST_POSITION) {
-            return new Variant.string ("");
+            settings.set_string ("date-format", "");
+            return;
         }
 
-        var selected_item = model.get_item (pos) as ListItemModel;
+        var selected_item = date_format_list.get_item (pos) as ListItemModel;
         if (selected_item == null) {
-            return new Variant.string ("");
+            settings.set_string ("date-format", "");
+            return;
         }
 
-        return new Variant.string (selected_item.settings_keyname);
+        settings.set_string ("date-format", selected_item.settings_keyname);
     }
 
     private void list_factory_setup (Object object) {
