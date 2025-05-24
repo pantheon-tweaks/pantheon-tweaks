@@ -57,12 +57,12 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
         content_area.attach (restore_tabs_box, 0, 0, 1, 1);
         content_area.attach (date_format_box, 0, 1, 1, 1);
 
+        date_format_settings_to_combo ();
+
         settings.bind ("restore-tabs", restore_tabs_switch, "active", SettingsBindFlags.DEFAULT);
 
         settings.changed["date-format"].connect (date_format_settings_to_combo);
         date_format_combo.notify["selected"].connect (date_format_combo_to_settings);
-
-        date_format_settings_to_combo ();
     }
 
     private void date_format_settings_to_combo () {
