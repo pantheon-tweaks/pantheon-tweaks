@@ -8,6 +8,7 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
     private const string FILES_SCHEMA = "io.elementary.files.preferences";
 
     private Settings settings;
+
     private ListStore date_format_list;
     private Gtk.DropDown date_format_combo;
 
@@ -65,6 +66,14 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
         date_format_combo.notify["selected"].connect (date_format_combo_to_settings);
     }
 
+    protected override void do_reset () {
+        string[] keys = {"restore-tabs", "date-format"};
+
+        foreach (var key in keys) {
+            settings.reset (key);
+        }
+    }
+
     private void date_format_settings_to_combo () {
         string selected_id = settings.get_string ("date-format");
         uint selected_pos = ListItemModel.liststore_get_position (date_format_list, selected_id);
@@ -85,13 +94,5 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
         }
 
         settings.set_string ("date-format", selected_id);
-    }
-
-    protected override void do_reset () {
-        string[] keys = {"restore-tabs", "date-format"};
-
-        foreach (var key in keys) {
-            settings.reset (key);
-        }
     }
 }
