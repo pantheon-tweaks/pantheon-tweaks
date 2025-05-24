@@ -6,13 +6,13 @@
 
 public class PantheonTweaks.Panes.FilesPane : BasePane {
     public class ListItemModel : Object {
-        public string display_text { get; construct; }
         public string settings_keyname { get; construct; }
+        public string display_text { get; construct; }
 
-        public ListItemModel (string display_text, string settings_keyname) {
+        public ListItemModel (string settings_keyname, string display_text) {
             Object (
-                display_text: display_text,
-                settings_keyname: settings_keyname
+                settings_keyname: settings_keyname,
+                display_text: display_text
             );
         }
     }
