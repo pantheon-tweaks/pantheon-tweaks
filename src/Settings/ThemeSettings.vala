@@ -59,23 +59,40 @@ public class PantheonTweaks.ThemeSettings {
         "Adwaita", "Emacs", "Default", "default", "gnome", "hicolor"
     };
 
+    /**
+     * Checks if #dir contains a valid theme.
+     */
+    private delegate bool ValidateThemeFunc (string dir);
+
     public static Gee.ArrayList<string>? fetch_gtk_themes () {
-        return fetch_themes ("themes", "gtk-3.0");
+        return fetch_themes ("themes", (found_dir) => {
+                                var path = File.new_for_path (Path.build_filename (found_dir, "gtk-3.0"));
+                                return path.query_exists ();
+                            });
     }
 
     public static Gee.ArrayList<string>? fetch_icon_themes () {
-        return fetch_themes ("icons", "index.theme");
+        return fetch_themes ("icons", (found_dir) => {
+                                var path = File.new_for_path (Path.build_filename (found_dir, "index.theme"));
+                                return path.query_exists ();
+                            });
     }
 
     public static Gee.ArrayList<string>? fetch_cursor_themes () {
-        return fetch_themes ("icons", "cursors");
+        return fetch_themes ("icons", (found_dir) => {
+                                var path = File.new_for_path (Path.build_filename (found_dir, "cursors"));
+                                return path.query_exists ();
+                            });
     }
 
     public static Gee.ArrayList<string>? fetch_sound_themes () {
-        return fetch_themes ("sounds", "index.theme");
+        return fetch_themes ("sounds", (found_dir) => {
+                                var path = File.new_for_path (Path.build_filename (found_dir, "index.theme"));
+                                return path.query_exists ();
+                            });
     }
 
-    private static Gee.ArrayList<string>? fetch_themes (string path, string condition) {
+    private static Gee.ArrayList<string>? fetch_themes (string path, ValidateThemeFunc valid_func) {
         var themes = new Gee.ArrayList<string> ();
 
         string[] dirs = {
@@ -117,9 +134,8 @@ public class PantheonTweaks.ThemeSettings {
                     continue;
                 }
 
-                var checktheme = File.new_for_path (dir + name + "/" + condition);
-                var checkicons = File.new_for_path (dir + name + "/48x48/" + condition);
-                if (!checktheme.query_exists () && !checkicons.query_exists ()) {
+                bool ret = valid_func (Path.build_filename (dir, name));
+                if (!ret) {
                     continue;
                 }
 
