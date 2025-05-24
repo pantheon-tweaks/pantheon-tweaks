@@ -5,12 +5,12 @@
  */
 
 public class ListItemModel : Object {
-    public string value { get; construct; }
+    public string id { get; construct; }
     public string display_text { get; construct; }
 
-    public ListItemModel (string value, string display_text) {
+    public ListItemModel (string id, string display_text) {
         Object (
-            value: value,
+            id: id,
             display_text: display_text
         );
     }
@@ -19,15 +19,15 @@ public class ListItemModel : Object {
      * Utility methods
      */
 
-    public static uint liststore_get_position (ListStore list, string value) {
+    public static uint liststore_get_position (ListStore list, string id) {
         assert (list.item_type == typeof (ListItemModel));
 
         uint pos;
 
         bool found = list.find_with_equal_func (
-            new ListItemModel (value, ""),
+            new ListItemModel (id, ""),
             (a, b) => {
-                return ((ListItemModel) a).value == ((ListItemModel) b).value;
+                return ((ListItemModel) a).id == ((ListItemModel) b).id;
             },
             out pos
         );
@@ -39,7 +39,7 @@ public class ListItemModel : Object {
         return pos;
     }
 
-    public static string? liststore_get_value (ListStore list, uint position) {
+    public static string? liststore_get_id (ListStore list, uint position) {
         assert (list.item_type == typeof (ListItemModel));
 
         // No item is selected
@@ -52,6 +52,6 @@ public class ListItemModel : Object {
             return null;
         }
 
-        return item.value;
+        return item.id;
     }
 }

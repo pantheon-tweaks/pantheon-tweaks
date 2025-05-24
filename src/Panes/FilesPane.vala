@@ -66,8 +66,8 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
     }
 
     private void date_format_settings_to_combo () {
-        string selected_value = settings.get_string ("date-format");
-        uint selected_pos = ListItemModel.liststore_get_position (date_format_list, selected_value);
+        string selected_id = settings.get_string ("date-format");
+        uint selected_pos = ListItemModel.liststore_get_position (date_format_list, selected_id);
 
         if (date_format_combo.selected == selected_pos) {
             return;
@@ -78,13 +78,13 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
 
     private void date_format_combo_to_settings () {
         uint selected_pos = date_format_combo.selected;
-        string? selected_value = ListItemModel.liststore_get_value (date_format_list, selected_pos);
+        string? selected_id = ListItemModel.liststore_get_id (date_format_list, selected_pos);
 
-        if (selected_value == null) {
+        if (selected_id == null) {
             return;
         }
 
-        settings.set_string ("date-format", selected_value);
+        settings.set_string ("date-format", selected_id);
     }
 
     protected override void do_reset () {
