@@ -92,16 +92,18 @@ public class PantheonTweaks.ThemeSettings {
                             });
     }
 
-    private static Gee.ArrayList<string>? fetch_themes (string path, ValidateThemeFunc valid_func) {
+    private static Gee.ArrayList<string>? fetch_themes (string subdir, ValidateThemeFunc valid_func) {
         var themes = new Gee.ArrayList<string> ();
+        unowned string home_dir = Environment.get_home_dir ();
 
-        string[] dirs = {
-            Config.SYSTHEME_ROOTDIR + "/" + path + "/",
-            Environment.get_home_dir () + "/." + path + "/",
-            Environment.get_home_dir () + "/.local/share/" + path + "/"};
+        string[] theme_dirs = {
+            Path.build_filename (Config.SYSTHEME_ROOTDIR, subdir),
+            Path.build_filename (home_dir, ".%s".printf (subdir)),
+            Path.build_filename (home_dir, ".local", "share", subdir),
+        };
 
-        foreach (string dir in dirs) {
-            var file = File.new_for_path (dir);
+        foreach (unowned string theme_dir in theme_dirs) {
+            var file = File.new_for_path (theme_dir);
             if (!file.query_exists ()) {
                 continue;
             }
@@ -110,7 +112,7 @@ public class PantheonTweaks.ThemeSettings {
             try {
                 enumerator = file.enumerate_children (FileAttribute.STANDARD_NAME, 0);
             } catch (Error err) {
-                warning ("Failed to enumerate children under '%s': %s", dir, err.message);
+                warning ("Failed to enumerate children under '%s': %s", theme_dir, err.message);
                 return null;
             }
 
@@ -120,7 +122,7 @@ public class PantheonTweaks.ThemeSettings {
                 try {
                     file_info = enumerator.next_file ();
                 } catch (Error err) {
-                    warning ("Failed to refer info of next file under '%s': %s", dir, err.message);
+                    warning ("Failed to refer info of next file under '%s': %s", theme_dir, err.message);
                     return null;
                 }
 
@@ -134,7 +136,7 @@ public class PantheonTweaks.ThemeSettings {
                     continue;
                 }
 
-                bool ret = valid_func (Path.build_filename (dir, name));
+                bool ret = valid_func (Path.build_filename (theme_dir, name));
                 if (!ret) {
                     continue;
                 }
