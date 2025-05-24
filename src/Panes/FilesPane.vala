@@ -115,7 +115,8 @@ public class DropDownRow : Gtk.Box {
     }
 
     private void selected_to_gsettings (Object obj, ParamSpec pspec) {
-        uint pos = (uint) obj;
+        uint dropdown = (Gtk.DropDown) obj;
+        uint pos = dropdown.selected;
 
         // No item is selected
         if (pos == Gtk.INVALID_LIST_POSITION) {
