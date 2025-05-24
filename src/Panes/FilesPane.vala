@@ -6,12 +6,12 @@
 
 public class PantheonTweaks.Panes.FilesPane : BasePane {
     public class ListItemModel : Object {
-        public string settings_keyname { get; construct; }
+        public string value { get; construct; }
         public string display_text { get; construct; }
 
-        public ListItemModel (string settings_keyname, string display_text) {
+        public ListItemModel (string value, string display_text) {
             Object (
-                settings_keyname: settings_keyname,
+                value: value,
                 display_text: display_text
             );
         }
@@ -29,7 +29,6 @@ public class DropDownRow : Gtk.Box {
         label = new Gtk.Label (null) {
             halign = Gtk.Align.START
         };
-        label.add_css_class ("heading");
 
         append (label);
     }
@@ -89,48 +88,55 @@ public class DropDownRow : Gtk.Box {
 
         settings.bind ("restore-tabs", restore_tabs_switch, "active", SettingsBindFlags.DEFAULT);
 
-        settings.changed["date-format"].connect (gsettings_to_selected);
-        date_format_combo.notify["selected"].connect (selected_to_gsettings);
+        settings.changed["date-format"].connect ((key) => {
+            string selected_value = settings.get_string (key);
+            uint selected_pos = liststore_get_position (date_format_list, selected_value);
+            date_format_combo.selected = selected_pos;
+        });
+
+        date_format_combo.notify["selected"].connect (() => {
+            uint selected_pos = date_format_combo.selected;
+            string? selected_value = liststore_get_value (date_format_list, selected_pos);
+            if (selected_value != null) {
+                settings.set_string ("date-format", selected_value);
+            }
+        });
     }
 
-    private void gsettings_to_selected (string key) {
-        var val = settings.get_string (key);
+    private uint liststore_get_position (ListStore list, string value) {
+        assert (list.item_type == typeof (ListItemModel));
+
         uint pos;
 
         bool found = date_format_list.find_with_equal_func (
-            new ListItemModel (val, ""),
+            new ListItemModel (value, ""),
             (a, b) => {
-                return ((ListItemModel) a).settings_keyname == ((ListItemModel) b).settings_keyname;
+                return ((ListItemModel) a).value == ((ListItemModel) b).value;
             },
             out pos
         );
 
         if (!found) {
-            date_format_combo.selected = Gtk.INVALID_LIST_POSITION;
-            return;
+            return Gtk.INVALID_LIST_POSITION;
         }
 
-        date_format_combo.selected = pos;
-        return;
+        return pos;
     }
 
-    private void selected_to_gsettings (Object obj, ParamSpec pspec) {
-        var dropdown = (Gtk.DropDown) obj;
-        uint pos = dropdown.selected;
+    private string? liststore_get_value (ListStore list, uint position) {
+        assert (list.item_type == typeof (ListItemModel));
 
         // No item is selected
-        if (pos == Gtk.INVALID_LIST_POSITION) {
-            settings.set_string ("date-format", "");
-            return;
+        if (position == Gtk.INVALID_LIST_POSITION) {
+            return null;
         }
 
-        var selected_item = date_format_list.get_item (pos) as ListItemModel;
-        if (selected_item == null) {
-            settings.set_string ("date-format", "");
-            return;
+        var item = list.get_item (position) as ListItemModel;
+        if (item == null) {
+            return null;
         }
 
-        settings.set_string ("date-format", selected_item.settings_keyname);
+        return item.value;
     }
 
     private void list_factory_setup (Object object) {
