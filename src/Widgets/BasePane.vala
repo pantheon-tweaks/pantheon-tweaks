@@ -114,7 +114,7 @@ public abstract class BasePane : Switchboard.SettingsPage {
         var model = item.item as ListItemModel;
         var row = item.child as DropDownRow;
 
-        row.label.label = _(model.display_text);
+        row.label.label = model.display_text;
     }
 
     protected Gtk.DropDown dropdown_new (owned ListModel? list_model) {
