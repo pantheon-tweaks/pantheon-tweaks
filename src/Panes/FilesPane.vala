@@ -98,7 +98,7 @@ public class DropDownRow : Gtk.Box {
         uint pos;
 
         bool found = date_format_list.find_with_equal_func (
-            new ListItemModel ("", val),
+            new ListItemModel (val, ""),
             (a, b) => {
                 return ((ListItemModel) a).settings_keyname == ((ListItemModel) b).settings_keyname;
             },
