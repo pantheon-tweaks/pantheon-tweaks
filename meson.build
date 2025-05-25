@@ -62,10 +62,14 @@ executable(
     stylesheet_resource,
     dependencies: [
         dependency('gee-0.8'),
-        dependency('glib-2.0'),
-        dependency('granite-7', version: '>= 7.1.0'),
+        # Version limitation for GLib.ApplicationFlags.DEFAULT_FLAGS
+        dependency('glib-2.0', version: '>= 2.74'),
+        # Version limitation for automatic load of Application.css
+        dependency('granite-7', version: '>= 7.3.0'),
+        # Version limitation for Gtk.FontDialogButton
         dependency('gtk4', version: '>= 4.10'),
         dependency('pango'),
+        # Version limitation for GTK4 ported version
         dependency('switchboard-3', version: '>= 8.0.0'),
         meson.get_compiler('vala').find_library('posix')
     ],
