@@ -63,4 +63,3 @@ namespace ListUtil {
         return pos;
     }
 }
-
