@@ -80,14 +80,33 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
         content_area.attach (mono_font_box, 0, 2, 1, 1);
         content_area.attach (titlebar_font_box, 0, 3, 1, 1);
 
-        interface_settings.bind_with_mapping ("font-name", default_font_button, "font-desc", SettingsBindFlags.DEFAULT,
-                font_button_bind_get, font_button_bind_set, null, null);
-        interface_settings.bind_with_mapping ("document-font-name", document_font_button, "font-desc", SettingsBindFlags.DEFAULT,
-                font_button_bind_get, font_button_bind_set, null, null);
-        interface_settings.bind_with_mapping ("monospace-font-name", mono_font_button, "font-desc", SettingsBindFlags.DEFAULT,
-                font_button_bind_get, font_button_bind_set, null, null);
-        window_settings.bind_with_mapping ("titlebar-font", titlebar_font_button, "font-desc", SettingsBindFlags.DEFAULT,
-                font_button_bind_get, font_button_bind_set, null, null);
+        interface_settings.bind_with_mapping ("font-name",
+            default_font_button, "font-desc",
+            SettingsBindFlags.DEFAULT,
+            (SettingsBindGetMappingShared) font_button_bind_get,
+            (SettingsBindSetMappingShared) font_button_bind_set,
+            null, null);
+
+        interface_settings.bind_with_mapping ("document-font-name",
+            document_font_button, "font-desc",
+            SettingsBindFlags.DEFAULT,
+            (SettingsBindGetMappingShared) font_button_bind_get,
+            (SettingsBindSetMappingShared) font_button_bind_set,
+            null, null);
+
+        interface_settings.bind_with_mapping ("monospace-font-name",
+            mono_font_button, "font-desc",
+            SettingsBindFlags.DEFAULT,
+            (SettingsBindGetMappingShared) font_button_bind_get,
+            (SettingsBindSetMappingShared) font_button_bind_set,
+            null, null);
+
+        window_settings.bind_with_mapping ("titlebar-font",
+            titlebar_font_button, "font-desc",
+            SettingsBindFlags.DEFAULT,
+            (SettingsBindGetMappingShared) font_button_bind_get,
+            (SettingsBindSetMappingShared) font_button_bind_set,
+            null, null);
     }
 
     protected override void do_reset () {
