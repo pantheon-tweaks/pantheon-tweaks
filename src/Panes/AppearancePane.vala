@@ -188,17 +188,17 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             hexpand = true
         };
 
-        controls_list = new ListStore (typeof (StringIdListItem));
-        controls_list.append (new StringIdListItem ("close:maximize", _("elementary")));
-        controls_list.append (new StringIdListItem ("maximize:close", _("elementary Reversed")));
-        controls_list.append (new StringIdListItem (":close", _("Close Only Right")));
-        controls_list.append (new StringIdListItem ("close:", _("Close Only Left")));
-        controls_list.append (new StringIdListItem ("close,minimize:maximize", _("Add Minimize Left")));
-        controls_list.append (new StringIdListItem ("close:minimize,maximize", _("Add Minimize Right")));
-        controls_list.append (new StringIdListItem ("close:minimize", _("Replace Maximize to Minimize")));
-        controls_list.append (new StringIdListItem (":minimize,maximize,close", _("Windows")));
-        controls_list.append (new StringIdListItem ("close,minimize,maximize", _("macOS")));
-        controls_list.append (new StringIdListItem ("close,maximize,minimize", _("Windows Reversed")));
+        controls_list = new ListStore (typeof (StringIdObject));
+        controls_list.append (new StringIdObject ("close:maximize", _("elementary")));
+        controls_list.append (new StringIdObject ("maximize:close", _("elementary Reversed")));
+        controls_list.append (new StringIdObject (":close", _("Close Only Right")));
+        controls_list.append (new StringIdObject ("close:", _("Close Only Left")));
+        controls_list.append (new StringIdObject ("close,minimize:maximize", _("Add Minimize Left")));
+        controls_list.append (new StringIdObject ("close:minimize,maximize", _("Add Minimize Right")));
+        controls_list.append (new StringIdObject ("close:minimize", _("Replace Maximize to Minimize")));
+        controls_list.append (new StringIdObject (":minimize,maximize,close", _("Windows")));
+        controls_list.append (new StringIdObject ("close,minimize,maximize", _("macOS")));
+        controls_list.append (new StringIdObject ("close,maximize,minimize", _("Windows Reversed")));
 
         controls_combobox = dropdown_new (controls_list);
 
@@ -383,7 +383,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
     private void controls_settings_to_combo () {
         string selected_id = gnome_wm_settings.get_string ("button-layout");
-        uint selected_pos = ListUtil.liststore_find (controls_list, selected_id);
+        uint selected_pos = ListUtil.stridlist_find (controls_list, selected_id);
 
         if (controls_combobox.selected == selected_pos) {
             return;
@@ -394,7 +394,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
     private void controls_combo_to_settings () {
         uint selected_pos = controls_combobox.selected;
-        string? selected_id = ListUtil.liststore_get_id (controls_list, selected_pos);
+        string? selected_id = ListUtil.stridlist_get_id (controls_list, selected_pos);
 
         if (selected_id == null) {
             return;

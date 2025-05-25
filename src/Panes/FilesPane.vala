@@ -40,10 +40,10 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
         /*************************************************/
         /* Date Format                                   */
         /*************************************************/
-        date_format_list = new ListStore (typeof (StringIdListItem));
-        date_format_list.append (new StringIdListItem ("locale", _("Locale")));
-        date_format_list.append (new StringIdListItem ("iso", _("ISO")));
-        date_format_list.append (new StringIdListItem ("informal", _("Informal")));
+        date_format_list = new ListStore (typeof (StringIdObject));
+        date_format_list.append (new StringIdObject ("locale", _("Locale")));
+        date_format_list.append (new StringIdObject ("iso", _("ISO")));
+        date_format_list.append (new StringIdObject ("informal", _("Informal")));
 
         var date_format_label = new Granite.HeaderLabel (_("Date Format")) {
             secondary_text = _("Date format used in the properties dialog or the list view."),
@@ -63,8 +63,8 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
         settings.bind_with_mapping ("date-format",
             date_format_combo, "selected",
             SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) settings_value_to_selected,
-            (SettingsBindSetMappingShared) selected_to_settings_value,
+            (SettingsBindGetMappingShared) settings_value_to_stridlist_selected,
+            (SettingsBindSetMappingShared) stridlist_selected_to_settings_value,
             date_format_list, null);
     }
 

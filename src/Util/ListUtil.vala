@@ -5,15 +5,15 @@
  */
 
 namespace ListUtil {
-    public static uint liststore_find (ListStore list, string id) {
-        assert (list.item_type == typeof (StringIdListItem));
+    public static uint stridlist_find (ListStore list, string id) {
+        assert (list.item_type == typeof (StringIdObject));
 
         uint pos;
 
         bool found = list.find_with_equal_func (
-            new StringIdListItem (id, ""),
+            new StringIdObject (id, ""),
             (a, b) => {
-                return ((StringIdListItem) a).id == ((StringIdListItem) b).id;
+                return ((StringIdObject) a).id == ((StringIdObject) b).id;
             },
             out pos
         );
@@ -25,8 +25,8 @@ namespace ListUtil {
         return pos;
     }
 
-    public static string? liststore_get_id (ListStore list, uint position) {
-        assert (list.item_type == typeof (StringIdListItem));
+    public static string? stridlist_get_id (ListStore list, uint position) {
+        assert (list.item_type == typeof (StringIdObject));
 
         // No item is selected
         if (position == Gtk.INVALID_LIST_POSITION) {
@@ -37,7 +37,7 @@ namespace ListUtil {
             return null;
         }
 
-        var item = list.get_item (position) as StringIdListItem;
+        var item = list.get_item (position) as StringIdObject;
         if (item == null) {
             // This unlikely happens though, according to Valadoc:
             //     null is never returned for an index that is smaller than the length of the list.

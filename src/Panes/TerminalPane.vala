@@ -82,10 +82,10 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         /*************************************************/
         /* Show Tabs                                     */
         /*************************************************/
-        tab_bar_list = new ListStore (typeof (StringIdListItem));
-        tab_bar_list.append (new StringIdListItem ("Always Show Tabs", _("Always")));
-        tab_bar_list.append (new StringIdListItem ("Hide When Single Tab", _("Hide when single tab")));
-        tab_bar_list.append (new StringIdListItem ("Never Show Tabs", _("Never")));
+        tab_bar_list = new ListStore (typeof (StringIdObject));
+        tab_bar_list.append (new StringIdObject ("Always Show Tabs", _("Always")));
+        tab_bar_list.append (new StringIdObject ("Hide When Single Tab", _("Hide when single tab")));
+        tab_bar_list.append (new StringIdObject ("Never Show Tabs", _("Never")));
 
         var tab_bar_label = new Granite.HeaderLabel (_("Show Tabs")) {
             hexpand = true
@@ -124,8 +124,8 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         settings.bind_with_mapping ("tab-bar-behavior",
             tab_bar_combo, "selected",
             SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) settings_value_to_selected,
-            (SettingsBindSetMappingShared) selected_to_settings_value,
+            (SettingsBindGetMappingShared) settings_value_to_stridlist_selected,
+            (SettingsBindSetMappingShared) stridlist_selected_to_settings_value,
             tab_bar_list, null);
         settings.bind_with_mapping ("font", term_font_button, "font-desc", SettingsBindFlags.DEFAULT,
                                     font_button_bind_get, font_button_bind_set, null, null);
