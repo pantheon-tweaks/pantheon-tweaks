@@ -105,6 +105,30 @@ public abstract class BasePane : Switchboard.SettingsPage {
         return dropdown;
     }
 
+    protected static bool settings_value_to_selected (Value selected, Variant settings_value, void* user_data) {
+        string selected_id = settings_value.get_string ();
+        var list = (ListStore) user_data;
+
+        uint selected_pos = ListItemModel.liststore_get_position (list, selected_id);
+
+        selected.set_uint (selected_pos);
+        return true;
+    }
+
+    protected static Variant selected_to_settings_value (Value selected, VariantType value_type, void* user_data) {
+        uint selected_pos = selected.get_uint ();
+        var list = (ListStore) user_data;
+
+        string? selected_id = ListItemModel.liststore_get_id (list, selected_pos);
+
+        // No selection
+        if (selected_id == null) {
+            return new Variant.string ("");
+        }
+
+        return new Variant.string (selected_id);
+    }
+
     /**
      * Convert string representation of font to Pango.FontDescription.
      *

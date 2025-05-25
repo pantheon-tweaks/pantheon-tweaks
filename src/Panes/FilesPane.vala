@@ -58,12 +58,14 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
         content_area.attach (restore_tabs_box, 0, 0, 1, 1);
         content_area.attach (date_format_box, 0, 1, 1, 1);
 
-        date_format_settings_to_combo ();
-
         settings.bind ("restore-tabs", restore_tabs_switch, "active", SettingsBindFlags.DEFAULT);
 
-        settings.changed["date-format"].connect (date_format_settings_to_combo);
-        date_format_combo.notify["selected"].connect (date_format_combo_to_settings);
+        settings.bind_with_mapping ("date-format",
+            date_format_combo, "selected",
+            SettingsBindFlags.DEFAULT,
+            (SettingsBindGetMappingShared) settings_value_to_selected,
+            (SettingsBindSetMappingShared) selected_to_settings_value,
+            date_format_list, null);
     }
 
     protected override void do_reset () {
@@ -72,27 +74,5 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
         foreach (var key in keys) {
             settings.reset (key);
         }
-    }
-
-    private void date_format_settings_to_combo () {
-        string selected_id = settings.get_string ("date-format");
-        uint selected_pos = ListItemModel.liststore_get_position (date_format_list, selected_id);
-
-        if (date_format_combo.selected == selected_pos) {
-            return;
-        }
-
-        date_format_combo.selected = selected_pos;
-    }
-
-    private void date_format_combo_to_settings () {
-        uint selected_pos = date_format_combo.selected;
-        string? selected_id = ListItemModel.liststore_get_id (date_format_list, selected_pos);
-
-        if (selected_id == null) {
-            return;
-        }
-
-        settings.set_string ("date-format", selected_id);
     }
 }

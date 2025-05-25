@@ -110,8 +110,6 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         term_font_box.append (term_font_label);
         term_font_box.append (term_font_button);
 
-        tab_bar_settings_to_combo ();
-
         content_area.attach (follow_last_tab_box, 0, 0, 1, 1);
         content_area.attach (unsafe_paste_alert_box, 0, 1, 1, 1);
         content_area.attach (rem_tabs_box, 0, 2, 1, 1);
@@ -123,11 +121,14 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         settings.bind ("unsafe-paste-alert", unsafe_paste_alert_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("remember-tabs", rem_tabs_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("audible-bell", term_bell_switch, "active", SettingsBindFlags.DEFAULT);
+        settings.bind_with_mapping ("tab-bar-behavior",
+            tab_bar_combo, "selected",
+            SettingsBindFlags.DEFAULT,
+            (SettingsBindGetMappingShared) settings_value_to_selected,
+            (SettingsBindSetMappingShared) selected_to_settings_value,
+            tab_bar_list, null);
         settings.bind_with_mapping ("font", term_font_button, "font-desc", SettingsBindFlags.DEFAULT,
                                     font_button_bind_get, font_button_bind_set, null, null);
-
-        settings.changed["tab-bar-behavior"].connect (tab_bar_settings_to_combo);
-        tab_bar_combo.notify["selected"].connect (tab_bar_combo_to_settings);
     }
 
     protected override void do_reset () {
@@ -137,27 +138,5 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         foreach (string key in keys) {
             settings.reset (key);
         }
-    }
-
-    private void tab_bar_settings_to_combo () {
-        string selected_id = settings.get_string ("tab-bar-behavior");
-        uint selected_pos = ListItemModel.liststore_get_position (tab_bar_list, selected_id);
-
-        if (tab_bar_combo.selected == selected_pos) {
-            return;
-        }
-
-        tab_bar_combo.selected = selected_pos;
-    }
-
-    private void tab_bar_combo_to_settings () {
-        uint selected_pos = tab_bar_combo.selected;
-        string? selected_id = ListItemModel.liststore_get_id (tab_bar_list, selected_pos);
-
-        if (selected_id == null) {
-            return;
-        }
-
-        settings.set_string ("tab-bar-behavior", selected_id);
     }
 }
