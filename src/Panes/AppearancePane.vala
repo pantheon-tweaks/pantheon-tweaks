@@ -80,7 +80,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             hexpand = true
         };
         gtk_list = ThemeSettings.fetch_gtk_themes ();
-        gtk_combobox = new Gtk.DropDown (gtk_list, null);
+        gtk_combobox = new Gtk.DropDown (gtk_list, null) {
+            valign = Gtk.Align.CENTER
+        };
 
         var gtk_dir_button = new OpenButton (
             Path.build_filename (Environment.get_home_dir (), ".local", "share", "themes")
@@ -102,7 +104,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             hexpand = true
         };
         icon_list = ThemeSettings.fetch_icon_themes ();
-        icon_combobox = new Gtk.DropDown (icon_list, null);
+        icon_combobox = new Gtk.DropDown (icon_list, null) {
+            valign = Gtk.Align.CENTER
+        };
 
         var icon_dir_button = new OpenButton (
             Path.build_filename (Environment.get_home_dir (), ".icons")
@@ -124,7 +128,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             hexpand = true
         };
         cursor_list = ThemeSettings.fetch_cursor_themes ();
-        cursor_combobox = new Gtk.DropDown (cursor_list, null);
+        cursor_combobox = new Gtk.DropDown (cursor_list, null) {
+            valign = Gtk.Align.CENTER
+        };
 
         var cursor_dir_button = new OpenButton (
             Path.build_filename (Environment.get_home_dir (), ".icons")
@@ -146,7 +152,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             hexpand = true
         };
         sound_list = ThemeSettings.fetch_sound_themes ();
-        sound_combobox = new Gtk.DropDown (sound_list, null);
+        sound_combobox = new Gtk.DropDown (sound_list, null) {
+            valign = Gtk.Align.CENTER
+        };
 
         var sound_dir_button = new OpenButton (
             Path.build_filename (Environment.get_home_dir (), ".local", "share", "sounds")

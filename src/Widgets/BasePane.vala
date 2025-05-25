@@ -98,7 +98,8 @@ public abstract class BasePane : Switchboard.SettingsPage {
             typeof (ListItemModel), null, "display_text"
         );
         var dropdown = new Gtk.DropDown (list_model, expression) {
-            list_factory = list_factory
+            list_factory = list_factory,
+            valign = Gtk.Align.CENTER
         };
 
         return dropdown;
