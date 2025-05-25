@@ -82,10 +82,10 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         /*************************************************/
         /* Show Tabs                                     */
         /*************************************************/
-        tab_bar_list = new ListStore (typeof (ListItemModel));
-        tab_bar_list.append (new ListItemModel ("Always Show Tabs", _("Always")));
-        tab_bar_list.append (new ListItemModel ("Hide When Single Tab", _("Hide when single tab")));
-        tab_bar_list.append (new ListItemModel ("Never Show Tabs", _("Never")));
+        tab_bar_list = new ListStore (typeof (StringIdListItem));
+        tab_bar_list.append (new StringIdListItem ("Always Show Tabs", _("Always")));
+        tab_bar_list.append (new StringIdListItem ("Hide When Single Tab", _("Hide when single tab")));
+        tab_bar_list.append (new StringIdListItem ("Never Show Tabs", _("Never")));
 
         var tab_bar_label = new Granite.HeaderLabel (_("Show Tabs")) {
             hexpand = true

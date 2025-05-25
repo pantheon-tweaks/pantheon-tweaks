@@ -83,7 +83,7 @@ public abstract class BasePane : Switchboard.SettingsPage {
 
     private void list_factory_bind (Object object) {
         var item = object as Gtk.ListItem;
-        var model = item.item as ListItemModel;
+        var model = item.item as StringIdListItem;
         var row = item.child as DropDownRow;
 
         row.label.label = model.display_text;
@@ -95,7 +95,7 @@ public abstract class BasePane : Switchboard.SettingsPage {
         list_factory.bind.connect (list_factory_bind);
 
         var expression = new Gtk.PropertyExpression (
-            typeof (ListItemModel), null, "display_text"
+            typeof (StringIdListItem), null, "display_text"
         );
         var dropdown = new Gtk.DropDown (list_model, expression) {
             list_factory = list_factory,
@@ -110,6 +110,11 @@ public abstract class BasePane : Switchboard.SettingsPage {
         var list = (ListStore) user_data;
 
         uint selected_pos = ListUtil.liststore_find (list, selected_id);
+        if (selected_pos == Gtk.INVALID_LIST_POSITION) {
+            selected.set_uint (selected_pos);
+            // Never returns false because it causes intentional crash
+            return true;
+        }
 
         selected.set_uint (selected_pos);
         return true;
@@ -120,8 +125,6 @@ public abstract class BasePane : Switchboard.SettingsPage {
         var list = (ListStore) user_data;
 
         string? selected_id = ListUtil.liststore_get_id (list, selected_pos);
-
-        // No selection
         if (selected_id == null) {
             return new Variant.string ("");
         }

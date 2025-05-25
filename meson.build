@@ -38,7 +38,7 @@ subdir('po')
 source_files = files(
     'src/MainWindow.vala',
     'src/Tweaks.vala',
-    'src/Model/ListItemModel.vala',
+    'src/Model/StringIdListItem.vala',
     'src/Settings/AccountsService.vala',
     'src/Settings/GtkSettings.vala',
     'src/Settings/ThemeSettings.vala',

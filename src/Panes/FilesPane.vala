@@ -40,10 +40,10 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
         /*************************************************/
         /* Date Format                                   */
         /*************************************************/
-        date_format_list = new ListStore (typeof (ListItemModel));
-        date_format_list.append (new ListItemModel ("locale", _("Locale")));
-        date_format_list.append (new ListItemModel ("iso", _("ISO")));
-        date_format_list.append (new ListItemModel ("informal", _("Informal")));
+        date_format_list = new ListStore (typeof (StringIdListItem));
+        date_format_list.append (new StringIdListItem ("locale", _("Locale")));
+        date_format_list.append (new StringIdListItem ("iso", _("ISO")));
+        date_format_list.append (new StringIdListItem ("informal", _("Informal")));
 
         var date_format_label = new Granite.HeaderLabel (_("Date Format")) {
             secondary_text = _("Date format used in the properties dialog or the list view."),

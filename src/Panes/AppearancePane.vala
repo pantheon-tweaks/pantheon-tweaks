@@ -188,17 +188,17 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             hexpand = true
         };
 
-        controls_list = new ListStore (typeof (ListItemModel));
-        controls_list.append (new ListItemModel ("close:maximize", _("elementary")));
-        controls_list.append (new ListItemModel ("maximize:close", _("elementary Reversed")));
-        controls_list.append (new ListItemModel (":close", _("Close Only Right")));
-        controls_list.append (new ListItemModel ("close:", _("Close Only Left")));
-        controls_list.append (new ListItemModel ("close,minimize:maximize", _("Add Minimize Left")));
-        controls_list.append (new ListItemModel ("close:minimize,maximize", _("Add Minimize Right")));
-        controls_list.append (new ListItemModel ("close:minimize", _("Replace Maximize to Minimize")));
-        controls_list.append (new ListItemModel (":minimize,maximize,close", _("Windows")));
-        controls_list.append (new ListItemModel ("close,minimize,maximize", _("macOS")));
-        controls_list.append (new ListItemModel ("close,maximize,minimize", _("Windows Reversed")));
+        controls_list = new ListStore (typeof (StringIdListItem));
+        controls_list.append (new StringIdListItem ("close:maximize", _("elementary")));
+        controls_list.append (new StringIdListItem ("maximize:close", _("elementary Reversed")));
+        controls_list.append (new StringIdListItem (":close", _("Close Only Right")));
+        controls_list.append (new StringIdListItem ("close:", _("Close Only Left")));
+        controls_list.append (new StringIdListItem ("close,minimize:maximize", _("Add Minimize Left")));
+        controls_list.append (new StringIdListItem ("close:minimize,maximize", _("Add Minimize Right")));
+        controls_list.append (new StringIdListItem ("close:minimize", _("Replace Maximize to Minimize")));
+        controls_list.append (new StringIdListItem (":minimize,maximize,close", _("Windows")));
+        controls_list.append (new StringIdListItem ("close,minimize,maximize", _("macOS")));
+        controls_list.append (new StringIdListItem ("close,maximize,minimize", _("Windows Reversed")));
 
         controls_combobox = dropdown_new (controls_list);
 
