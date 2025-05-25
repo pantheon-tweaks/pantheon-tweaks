@@ -284,7 +284,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
     private void gtk_theme_settings_to_combo () {
         string selected_id = interface_settings.get_string ("gtk-theme");
-        uint selected_pos = ListItemModel.strlist_find (gtk_list, selected_id);
+        uint selected_pos = ListUtil.strlist_find (gtk_list, selected_id);
 
         if (selected_pos == uint.MAX) {
             // Unselect if the list does not contain the current theme
@@ -314,7 +314,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
     private void icon_theme_settings_to_combo () {
         string selected_id = interface_settings.get_string ("icon-theme");
-        uint selected_pos = ListItemModel.strlist_find (icon_list, selected_id);
+        uint selected_pos = ListUtil.strlist_find (icon_list, selected_id);
 
         if (selected_pos == uint.MAX) {
             // Unselect if the list does not contain the current theme
@@ -337,7 +337,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
     private void cursor_theme_settings_to_combo () {
         string selected_id = interface_settings.get_string ("cursor-theme");
-        uint selected_pos = ListItemModel.strlist_find (cursor_list, selected_id);
+        uint selected_pos = ListUtil.strlist_find (cursor_list, selected_id);
 
         if (selected_pos == uint.MAX) {
             // Unselect if the list does not contain the current theme
@@ -360,7 +360,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
     private void sound_theme_settings_to_combo () {
         string selected_id = sound_settings.get_string ("theme-name");
-        uint selected_pos = ListItemModel.strlist_find (sound_list, selected_id);
+        uint selected_pos = ListUtil.strlist_find (sound_list, selected_id);
 
         if (selected_pos == uint.MAX) {
             // Unselect if the list does not contain the current theme
@@ -383,7 +383,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
     private void controls_settings_to_combo () {
         string selected_id = gnome_wm_settings.get_string ("button-layout");
-        uint selected_pos = ListItemModel.liststore_get_position (controls_list, selected_id);
+        uint selected_pos = ListUtil.liststore_find (controls_list, selected_id);
 
         if (controls_combobox.selected == selected_pos) {
             return;
@@ -394,7 +394,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
     private void controls_combo_to_settings () {
         uint selected_pos = controls_combobox.selected;
-        string? selected_id = ListItemModel.liststore_get_id (controls_list, selected_pos);
+        string? selected_id = ListUtil.liststore_get_id (controls_list, selected_pos);
 
         if (selected_id == null) {
             return;

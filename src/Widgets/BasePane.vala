@@ -109,7 +109,7 @@ public abstract class BasePane : Switchboard.SettingsPage {
         string selected_id = settings_value.get_string ();
         var list = (ListStore) user_data;
 
-        uint selected_pos = ListItemModel.liststore_get_position (list, selected_id);
+        uint selected_pos = ListUtil.liststore_find (list, selected_id);
 
         selected.set_uint (selected_pos);
         return true;
@@ -119,7 +119,7 @@ public abstract class BasePane : Switchboard.SettingsPage {
         uint selected_pos = selected.get_uint ();
         var list = (ListStore) user_data;
 
-        string? selected_id = ListItemModel.liststore_get_id (list, selected_pos);
+        string? selected_id = ListUtil.liststore_get_id (list, selected_pos);
 
         // No selection
         if (selected_id == null) {
