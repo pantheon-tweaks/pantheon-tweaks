@@ -200,7 +200,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         controls_list.append (new StringIdObject ("close,minimize,maximize", _("macOS")));
         controls_list.append (new StringIdObject ("close,maximize,minimize", _("Windows Reversed")));
 
-        controls_combobox = dropdown_new (controls_list);
+        controls_combobox = dropdown_id_new (controls_list);
 
         var controls_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
             margin_top = 24

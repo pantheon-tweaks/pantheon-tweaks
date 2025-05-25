@@ -89,7 +89,7 @@ public abstract class BasePane : Switchboard.SettingsPage {
         row.label.label = model.display_text;
     }
 
-    protected Gtk.DropDown dropdown_new (owned ListModel? list_model) {
+    protected Gtk.DropDown dropdown_id_new (owned ListModel? list_model) {
         var list_factory = new Gtk.SignalListItemFactory ();
         list_factory.setup.connect (list_factory_setup);
         list_factory.bind.connect (list_factory_bind);

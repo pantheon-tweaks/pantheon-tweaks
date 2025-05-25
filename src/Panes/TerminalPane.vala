@@ -90,7 +90,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         var tab_bar_label = new Granite.HeaderLabel (_("Show Tabs")) {
             hexpand = true
         };
-        tab_bar_combo = dropdown_new (tab_bar_list);
+        tab_bar_combo = dropdown_id_new (tab_bar_list);
 
         var tab_bar_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         tab_bar_box.append (tab_bar_label);
