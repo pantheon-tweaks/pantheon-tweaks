@@ -74,34 +74,6 @@ public abstract class BasePane : Switchboard.SettingsPage {
         reset_confirm_dialog.show ();
     }
 
-    protected Gtk.ComboBoxText combobox_text_new (Gee.HashMap<string, string> items) {
-        var combobox_text = new Gtk.ComboBoxText () {
-            valign = Gtk.Align.CENTER
-        };
-
-        foreach (var item in items.entries) {
-            combobox_text.append (item.key, item.value);
-        }
-
-        combobox_text.set_size_request (180, 0);
-        return combobox_text;
-    }
-
-    protected Gtk.ComboBoxText combobox_text_new_from_list (Gee.List<string>? items) {
-        var combobox_text = new Gtk.ComboBoxText () {
-            valign = Gtk.Align.CENTER
-        };
-
-        if (items != null) {
-            for (int i = 0; i < items.size; i++) {
-                combobox_text.append (items.get (i), items.get (i));
-            }
-        }
-
-        combobox_text.set_size_request (180, 0);
-        return combobox_text;
-    }
-
     private void list_factory_setup (Object object) {
         var item = object as Gtk.ListItem;
 

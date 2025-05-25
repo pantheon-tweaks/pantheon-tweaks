@@ -15,11 +15,18 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     private Settings gnome_wm_settings;
     private Pantheon.AccountsService? pantheon_act = null;
 
-    private Gtk.ComboBoxText gtk_combobox;
-    private Gtk.Switch gnome_menu_switch;
-
+    private Gtk.StringList gtk_list;
+    private Gtk.DropDown gtk_combobox;
+    private Gtk.StringList icon_list;
+    private Gtk.DropDown icon_combobox;
+    private Gtk.StringList cursor_list;
+    private Gtk.DropDown cursor_combobox;
+    private Gtk.StringList sound_list;
+    private Gtk.DropDown sound_combobox;
     private ListStore controls_list;
     private Gtk.DropDown controls_combobox;
+
+    private Gtk.Switch gnome_menu_switch;
 
     public AppearancePane () {
         base (
@@ -72,8 +79,8 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             ),
             hexpand = true
         };
-        var gtk_list = ThemeSettings.fetch_gtk_themes ();
-        gtk_combobox = combobox_text_new_from_list (gtk_list);
+        gtk_list = ThemeSettings.fetch_gtk_themes ();
+        gtk_combobox = new Gtk.DropDown (gtk_list, null);
 
         var gtk_dir_button = new OpenButton (
             Path.build_filename (Environment.get_home_dir (), ".local", "share", "themes")
@@ -94,8 +101,8 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             ),
             hexpand = true
         };
-        var icon_list = ThemeSettings.fetch_icon_themes ();
-        var icon_combobox = combobox_text_new_from_list (icon_list);
+        icon_list = ThemeSettings.fetch_icon_themes ();
+        icon_combobox = new Gtk.DropDown (icon_list, null);
 
         var icon_dir_button = new OpenButton (
             Path.build_filename (Environment.get_home_dir (), ".icons")
@@ -116,8 +123,8 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             ),
             hexpand = true
         };
-        var cursor_list = ThemeSettings.fetch_cursor_themes ();
-        var cursor_combobox = combobox_text_new_from_list (cursor_list);
+        cursor_list = ThemeSettings.fetch_cursor_themes ();
+        cursor_combobox = new Gtk.DropDown (cursor_list, null);
 
         var cursor_dir_button = new OpenButton (
             Path.build_filename (Environment.get_home_dir (), ".icons")
@@ -138,8 +145,8 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             ),
             hexpand = true
         };
-        var sound_list = ThemeSettings.fetch_sound_themes ();
-        var sound_combobox = combobox_text_new_from_list (sound_list);
+        sound_list = ThemeSettings.fetch_sound_themes ();
+        sound_combobox = new Gtk.DropDown (sound_list, null);
 
         var sound_dir_button = new OpenButton (
             Path.build_filename (Environment.get_home_dir (), ".local", "share", "sounds")
@@ -208,8 +215,12 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         gnome_menu_switch_box.append (gnome_menu_switch_label);
         gnome_menu_switch_box.append (gnome_menu_switch);
 
-        init_data ();
+        gtk_theme_settings_to_combo ();
+        icon_theme_settings_to_combo ();
+        cursor_theme_settings_to_combo ();
+        sound_theme_settings_to_combo ();
         controls_settings_to_combo ();
+        gnome_menu_switch.active = x_settings.has_gnome_menu ();
 
         content_area.attach (gtk_theme_box, 0, 0, 1, 1);
         content_area.attach (icon_box, 0, 1, 1, 1);
@@ -219,27 +230,25 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         content_area.attach (controls_box, 0, 5, 1, 1);
         content_area.attach (gnome_menu_switch_box, 0, 6, 1, 1);
 
-        interface_settings.bind ("icon-theme", icon_combobox, "active_id", SettingsBindFlags.DEFAULT);
-        interface_settings.bind ("cursor-theme", cursor_combobox, "active_id", SettingsBindFlags.DEFAULT);
-        sound_settings.bind ("theme-name", sound_combobox, "active_id", SettingsBindFlags.DEFAULT);
         gtk_settings.bind_property ("prefer-dark-theme", dark_style_switch, "active", BindingFlags.SYNC_CREATE | BindingFlags.BIDIRECTIONAL);
 
         if (((DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
             ((DBusProxy) pantheon_act).g_properties_changed.connect ((changed, invalid) => {
-                gtk_combobox.active_id = interface_settings.get_string ("gtk-theme");
+                gtk_theme_settings_to_combo ();
             });
         }
 
-        gtk_combobox.changed.connect (() => {
-            interface_settings.set_string ("gtk-theme", gtk_combobox.active_id);
+        interface_settings.changed["gtk-theme"].connect (gtk_theme_settings_to_combo);
+        gtk_combobox.notify["selected-item"].connect (gtk_theme_combo_to_settings);
 
-            if (gtk_combobox.active_id.has_prefix (ThemeSettings.ELEMENTARY_STYLESHEET_PREFIX)) {
-                ThemeSettings.AccentColor color = ThemeSettings.parse_accent_color (gtk_combobox.active_id);
-                if (((DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
-                    pantheon_act.prefers_accent_color = color;
-                }
-            }
-        });
+        interface_settings.changed["icon-theme"].connect (icon_theme_settings_to_combo);
+        icon_combobox.notify["selected-item"].connect (icon_theme_combo_to_settings);
+
+        interface_settings.changed["cursor-theme"].connect (cursor_theme_settings_to_combo);
+        cursor_combobox.notify["selected-item"].connect (cursor_theme_combo_to_settings);
+
+        sound_settings.changed["theme-name"].connect (sound_theme_settings_to_combo);
+        sound_combobox.notify["selected-item"].connect (sound_theme_combo_to_settings);
 
         gnome_wm_settings.changed["button-layout"].connect (controls_settings_to_combo);
         controls_combobox.notify["selected"].connect (controls_combo_to_settings);
@@ -262,7 +271,106 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         x_settings.reset ();
 
         gtk_settings.prefer_dark_theme = false;
-        init_data ();
+        gnome_menu_switch.active = x_settings.has_gnome_menu ();
+    }
+
+    private void gtk_theme_settings_to_combo () {
+        string selected_id = interface_settings.get_string ("gtk-theme");
+        uint selected_pos = ListItemModel.strlist_find (gtk_list, selected_id);
+
+        if (selected_pos == uint.MAX) {
+            // Unselect if the list does not contain the current theme
+            selected_pos = Gtk.INVALID_LIST_POSITION;
+        }
+
+        if (gtk_combobox.selected == selected_pos) {
+            return;
+        }
+
+        gtk_combobox.selected = selected_pos;
+    }
+
+    private void gtk_theme_combo_to_settings () {
+        var selected_item = (Gtk.StringObject) gtk_combobox.selected_item;
+        string selected_id = selected_item.string;
+
+        interface_settings.set_string ("gtk-theme", selected_id);
+
+        if (selected_id.has_prefix (ThemeSettings.ELEMENTARY_STYLESHEET_PREFIX)) {
+            ThemeSettings.AccentColor color = ThemeSettings.parse_accent_color (selected_id);
+            if (((DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
+                pantheon_act.prefers_accent_color = color;
+            }
+        }
+    }
+
+    private void icon_theme_settings_to_combo () {
+        string selected_id = interface_settings.get_string ("icon-theme");
+        uint selected_pos = ListItemModel.strlist_find (icon_list, selected_id);
+
+        if (selected_pos == uint.MAX) {
+            // Unselect if the list does not contain the current theme
+            selected_pos = Gtk.INVALID_LIST_POSITION;
+        }
+
+        if (icon_combobox.selected == selected_pos) {
+            return;
+        }
+
+        icon_combobox.selected = selected_pos;
+    }
+
+    private void cursor_theme_combo_to_settings () {
+        var selected_item = (Gtk.StringObject) cursor_combobox.selected_item;
+        string selected_id = selected_item.string;
+
+        interface_settings.set_string ("cursor-theme", selected_id);
+    }
+
+    private void cursor_theme_settings_to_combo () {
+        string selected_id = interface_settings.get_string ("cursor-theme");
+        uint selected_pos = ListItemModel.strlist_find (cursor_list, selected_id);
+
+        if (selected_pos == uint.MAX) {
+            // Unselect if the list does not contain the current theme
+            selected_pos = Gtk.INVALID_LIST_POSITION;
+        }
+
+        if (cursor_combobox.selected == selected_pos) {
+            return;
+        }
+
+        cursor_combobox.selected = selected_pos;
+    }
+
+    private void sound_theme_combo_to_settings () {
+        var selected_item = (Gtk.StringObject) sound_combobox.selected_item;
+        string selected_id = selected_item.string;
+
+        sound_settings.set_string ("theme-name", selected_id);
+    }
+
+    private void sound_theme_settings_to_combo () {
+        string selected_id = sound_settings.get_string ("theme-name");
+        uint selected_pos = ListItemModel.strlist_find (sound_list, selected_id);
+
+        if (selected_pos == uint.MAX) {
+            // Unselect if the list does not contain the current theme
+            selected_pos = Gtk.INVALID_LIST_POSITION;
+        }
+
+        if (sound_combobox.selected == selected_pos) {
+            return;
+        }
+
+        sound_combobox.selected = selected_pos;
+    }
+
+    private void icon_theme_combo_to_settings () {
+        var selected_item = (Gtk.StringObject) icon_combobox.selected_item;
+        string selected_id = selected_item.string;
+
+        interface_settings.set_string ("icon-theme", selected_id);
     }
 
     private void controls_settings_to_combo () {
@@ -286,10 +394,5 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
         gnome_wm_settings.set_string ("button-layout", selected_id);
         x_settings.set_gnome_menu (gnome_menu_switch.active, selected_id);
-    }
-
-    private void init_data () {
-        gtk_combobox.active_id = interface_settings.get_string ("gtk-theme");
-        gnome_menu_switch.active = x_settings.has_gnome_menu ();
     }
 }
