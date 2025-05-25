@@ -15,7 +15,7 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
 
         Object (
             application_id: "io.github.pantheon_tweaks.pantheon-tweaks",
-            flags: ApplicationFlags.FLAGS_NONE
+            flags: ApplicationFlags.DEFAULT_FLAGS
         );
     }
 

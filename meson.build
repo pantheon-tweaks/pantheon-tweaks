@@ -59,7 +59,8 @@ executable(
     stylesheet_resource,
     dependencies: [
         dependency('gee-0.8'),
-        dependency('glib-2.0'),
+        # Version limitation for GLib.ApplicationFlags.DEFAULT_FLAGS
+        dependency('glib-2.0', version: '>= 2.74'),
         dependency('granite-7', version: '>= 7.1.0'),
         dependency('gtk4', version: '>= 4.10'),
         dependency('pango'),
