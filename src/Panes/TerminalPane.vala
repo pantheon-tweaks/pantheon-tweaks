@@ -119,8 +119,13 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         settings.bind ("remember-tabs", rem_tabs_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("audible-bell", term_bell_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("tab-bar-behavior", tab_bar_combo, "active_id", SettingsBindFlags.DEFAULT);
-        settings.bind_with_mapping ("font", term_font_button, "font-desc", SettingsBindFlags.DEFAULT,
-                                    font_button_bind_get, font_button_bind_set, null, null);
+
+        settings.bind_with_mapping ("font",
+            term_font_button, "font-desc",
+            SettingsBindFlags.DEFAULT,
+            (SettingsBindGetMappingShared) font_button_bind_get,
+            (SettingsBindSetMappingShared) font_button_bind_set,
+            null, null);
     }
 
     protected override void do_reset () {
