@@ -58,6 +58,6 @@ public class OpenButton : Gtk.Button {
         error_dialog.response.connect ((response_id) => {
             error_dialog.destroy ();
         });
-        error_dialog.show ();
+        error_dialog.present ();
     }
 }

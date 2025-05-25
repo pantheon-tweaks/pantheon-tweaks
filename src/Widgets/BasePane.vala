@@ -71,7 +71,7 @@ public abstract class BasePane : Switchboard.SettingsPage {
             reset_confirm_dialog.destroy ();
             restored ();
         });
-        reset_confirm_dialog.show ();
+        reset_confirm_dialog.present ();
     }
 
     protected Gtk.ComboBoxText combobox_text_new (Gee.HashMap<string, string> items) {
