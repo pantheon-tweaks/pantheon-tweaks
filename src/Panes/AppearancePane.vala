@@ -8,7 +8,6 @@
  */
 
 public class PantheonTweaks.Panes.AppearancePane : BasePane {
-    private Gee.HashMap<string, string> preset_button_layouts;
     private XSettings x_settings;
     private GtkSettings gtk_settings;
     private Settings interface_settings;
@@ -17,8 +16,10 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     private Pantheon.AccountsService? pantheon_act = null;
 
     private Gtk.ComboBoxText gtk_combobox;
-    private Gtk.ComboBoxText controls_combobox;
     private Gtk.Switch gnome_menu_switch;
+
+    private ListStore controls_list;
+    private Gtk.DropDown controls_combobox;
 
     public AppearancePane () {
         base (
@@ -171,8 +172,20 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             secondary_text = _("Changes button layout of the window."),
             hexpand = true
         };
-        var controls_map = get_preset_button_layouts ();
-        controls_combobox = combobox_text_new (controls_map);
+
+        controls_list = new ListStore (typeof (ListItemModel));
+        controls_list.append (new ListItemModel ("close:maximize", _("elementary")));
+        controls_list.append (new ListItemModel ("maximize:close", _("elementary Reversed")));
+        controls_list.append (new ListItemModel (":close", _("Close Only Right")));
+        controls_list.append (new ListItemModel ("close:", _("Close Only Left")));
+        controls_list.append (new ListItemModel ("close,minimize:maximize", _("Add Minimize Left")));
+        controls_list.append (new ListItemModel ("close:minimize,maximize", _("Add Minimize Right")));
+        controls_list.append (new ListItemModel ("close:minimize", _("Replace Maximize to Minimize")));
+        controls_list.append (new ListItemModel (":minimize,maximize,close", _("Windows")));
+        controls_list.append (new ListItemModel ("close,minimize,maximize", _("macOS")));
+        controls_list.append (new ListItemModel ("close,maximize,minimize", _("Windows Reversed")));
+
+        controls_combobox = dropdown_new (controls_list);
 
         var controls_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
             margin_top = 24
@@ -196,6 +209,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         gnome_menu_switch_box.append (gnome_menu_switch);
 
         init_data ();
+        controls_settings_to_combo ();
 
         content_area.attach (gtk_theme_box, 0, 0, 1, 1);
         content_area.attach (icon_box, 0, 1, 1, 1);
@@ -227,15 +241,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             }
         });
 
-        controls_combobox.changed.connect (() => {
-            string new_layout = controls_combobox.active_id;
-            gnome_wm_settings.set_string ("button-layout", new_layout);
-            x_settings.set_gnome_menu (gnome_menu_switch.active, new_layout);
-        });
-
-        gnome_menu_switch.notify["active"].connect (() => {
-            controls_combobox.changed ();
-        });
+        gnome_wm_settings.changed["button-layout"].connect (controls_settings_to_combo);
+        controls_combobox.notify["selected"].connect (controls_combo_to_settings);
+        gnome_menu_switch.notify["active"].connect (controls_combo_to_settings);
     }
 
     protected override void do_reset () {
@@ -257,27 +265,31 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         init_data ();
     }
 
-    private void init_data () {
-        gtk_combobox.active_id = interface_settings.get_string ("gtk-theme");
-        controls_combobox.active_id = gnome_wm_settings.get_string ("button-layout");
-        gnome_menu_switch.active = x_settings.has_gnome_menu ();
-    }
+    private void controls_settings_to_combo () {
+        string selected_id = gnome_wm_settings.get_string ("button-layout");
+        uint selected_pos = ListItemModel.liststore_get_position (controls_list, selected_id);
 
-    private Gee.HashMap<string, string> get_preset_button_layouts () {
-        if (preset_button_layouts == null) {
-            preset_button_layouts = new Gee.HashMap<string, string> ();
-            preset_button_layouts["close:maximize"] = _("elementary");
-            preset_button_layouts["maximize:close"] = _("elementary Reversed");
-            preset_button_layouts[":close"] = _("Close Only Right");
-            preset_button_layouts["close:"] = _("Close Only Left");
-            preset_button_layouts["close,minimize:maximize"] = _("Add Minimize Left");
-            preset_button_layouts["close:minimize,maximize"] = _("Add Minimize Right");
-            preset_button_layouts["close:minimize"] = _("Replace Maximize to Minimize");
-            preset_button_layouts[":minimize,maximize,close"] = _("Windows");
-            preset_button_layouts["close,minimize,maximize"] = _("macOS");
-            preset_button_layouts["close,maximize,minimize"] = _("Windows Reversed");
+        if (controls_combobox.selected == selected_pos) {
+            return;
         }
 
-        return preset_button_layouts;
+        controls_combobox.selected = selected_pos;
+    }
+
+    private void controls_combo_to_settings () {
+        uint selected_pos = controls_combobox.selected;
+        string? selected_id = ListItemModel.liststore_get_id (controls_list, selected_pos);
+
+        if (selected_id == null) {
+            return;
+        }
+
+        gnome_wm_settings.set_string ("button-layout", selected_id);
+        x_settings.set_gnome_menu (gnome_menu_switch.active, selected_id);
+    }
+
+    private void init_data () {
+        gtk_combobox.active_id = interface_settings.get_string ("gtk-theme");
+        gnome_menu_switch.active = x_settings.has_gnome_menu ();
     }
 }
