@@ -61,7 +61,7 @@ executable(
         dependency('gee-0.8'),
         # Version limitation for GLib.ApplicationFlags.DEFAULT_FLAGS
         dependency('glib-2.0', version: '>= 2.74'),
-        # Version limitation for automati load of Application.css
+        # Version limitation for automatic load of Application.css
         dependency('granite-7', version: '>= 7.3.0'),
         # Version limitation for Gtk.FontDialogButton
         dependency('gtk4', version: '>= 4.10'),
