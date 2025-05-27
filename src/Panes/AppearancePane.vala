@@ -17,12 +17,6 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
     private Gtk.StringList gtk_list;
     private Gtk.DropDown gtk_combobox;
-    private Gtk.StringList icon_list;
-    private Gtk.DropDown icon_combobox;
-    private Gtk.StringList cursor_list;
-    private Gtk.DropDown cursor_combobox;
-    private Gtk.StringList sound_list;
-    private Gtk.DropDown sound_combobox;
     private ListStore controls_list;
     private Gtk.DropDown controls_combobox;
 
@@ -103,8 +97,8 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             ),
             hexpand = true
         };
-        icon_list = ThemeSettings.fetch_icon_themes ();
-        icon_combobox = new Gtk.DropDown (icon_list, null) {
+        var icon_list = ThemeSettings.fetch_icon_themes ();
+        var icon_combobox = new Gtk.DropDown (icon_list, null) {
             valign = Gtk.Align.CENTER
         };
 
@@ -127,8 +121,8 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             ),
             hexpand = true
         };
-        cursor_list = ThemeSettings.fetch_cursor_themes ();
-        cursor_combobox = new Gtk.DropDown (cursor_list, null) {
+        var cursor_list = ThemeSettings.fetch_cursor_themes ();
+        var cursor_combobox = new Gtk.DropDown (cursor_list, null) {
             valign = Gtk.Align.CENTER
         };
 
@@ -151,8 +145,8 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             ),
             hexpand = true
         };
-        sound_list = ThemeSettings.fetch_sound_themes ();
-        sound_combobox = new Gtk.DropDown (sound_list, null) {
+        var sound_list = ThemeSettings.fetch_sound_themes ();
+        var sound_combobox = new Gtk.DropDown (sound_list, null) {
             valign = Gtk.Align.CENTER
         };
 

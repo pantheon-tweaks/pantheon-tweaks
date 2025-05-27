@@ -9,9 +9,6 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
 
     private Settings settings;
 
-    private ListStore tab_bar_list;
-    private Gtk.DropDown tab_bar_combo;
-
     public TerminalPane () {
         base ("terminal", _("Terminal"), "utilities-terminal");
     }
@@ -82,7 +79,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         /*************************************************/
         /* Show Tabs                                     */
         /*************************************************/
-        tab_bar_list = new ListStore (typeof (StringIdObject));
+        var tab_bar_list = new ListStore (typeof (StringIdObject));
         tab_bar_list.append (new StringIdObject ("Always Show Tabs", _("Always")));
         tab_bar_list.append (new StringIdObject ("Hide When Single Tab", _("Hide when single tab")));
         tab_bar_list.append (new StringIdObject ("Never Show Tabs", _("Never")));
@@ -90,7 +87,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         var tab_bar_label = new Granite.HeaderLabel (_("Show Tabs")) {
             hexpand = true
         };
-        tab_bar_combo = DropDownUtil.dropdown_id_new (tab_bar_list);
+        var tab_bar_combo = DropDownUtil.dropdown_id_new (tab_bar_list);
 
         var tab_bar_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         tab_bar_box.append (tab_bar_label);
