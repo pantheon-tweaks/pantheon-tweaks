@@ -200,7 +200,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         controls_list.append (new StringIdObject ("close,minimize,maximize", _("macOS")));
         controls_list.append (new StringIdObject ("close,maximize,minimize", _("Windows Reversed")));
 
-        controls_combobox = dropdown_id_new (controls_list);
+        controls_combobox = DropDownUtil.dropdown_id_new (controls_list);
 
         var controls_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
             margin_top = 24
@@ -238,22 +238,22 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         interface_settings.bind_with_mapping ("icon-theme",
             icon_combobox, "selected",
             SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) settings_value_to_strlist_selected,
-            (SettingsBindSetMappingShared) strlist_selected_to_settings_value,
+            (SettingsBindGetMappingShared) DropDownUtil.settings_value_to_strlist_selected,
+            (SettingsBindSetMappingShared) DropDownUtil.strlist_selected_to_settings_value,
             icon_list, null);
 
         interface_settings.bind_with_mapping ("cursor-theme",
             cursor_combobox, "selected",
             SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) settings_value_to_strlist_selected,
-            (SettingsBindSetMappingShared) strlist_selected_to_settings_value,
+            (SettingsBindGetMappingShared) DropDownUtil.settings_value_to_strlist_selected,
+            (SettingsBindSetMappingShared) DropDownUtil.strlist_selected_to_settings_value,
             cursor_list, null);
 
         sound_settings.bind_with_mapping ("theme-name",
             sound_combobox, "selected",
             SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) settings_value_to_strlist_selected,
-            (SettingsBindSetMappingShared) strlist_selected_to_settings_value,
+            (SettingsBindGetMappingShared) DropDownUtil.settings_value_to_strlist_selected,
+            (SettingsBindSetMappingShared) DropDownUtil.strlist_selected_to_settings_value,
             sound_list, null);
 
         gtk_settings.bind_property ("prefer-dark-theme", dark_style_switch, "active", BindingFlags.SYNC_CREATE | BindingFlags.BIDIRECTIONAL);
