@@ -21,18 +21,6 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
         };
 
         set_titlebar (headerbar);
-
-        // Follow OS-wide dark preference
-        var granite_settings = Granite.Settings.get_default ();
-        var gtk_settings = Gtk.Settings.get_default ();
-
-        granite_settings.bind_property ("prefers-color-scheme", gtk_settings, "gtk-application-prefer-dark-theme",
-            BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
-            ((binding, granite_prop, ref gtk_prop) => {
-                gtk_prop.set_boolean ((Granite.Settings.ColorScheme) granite_prop == Granite.Settings.ColorScheme.DARK);
-                return true;
-            })
-        );
     }
 
     public void load () {
