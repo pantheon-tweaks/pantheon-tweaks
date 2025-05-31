@@ -8,6 +8,14 @@
  */
 
 public class PantheonTweaks.Panes.AppearancePane : BasePane {
+    private Gtk.DropDown gtk_dropdown;
+    private Gtk.DropDown icon_dropdown;
+    private Gtk.DropDown cursor_dropdown;
+    private Gtk.DropDown sound_dropdown;
+    private Gtk.DropDown controls_dropdown;
+    private Gtk.Switch dark_style_switch;
+    private Gtk.Switch gnome_menu_switch;
+
     private XSettings x_settings;
     private GtkSettings gtk_settings;
     private Settings interface_settings;
@@ -16,11 +24,10 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     private Pantheon.AccountsService? pantheon_act = null;
 
     private Gtk.StringList gtk_list;
-    private Gtk.DropDown gtk_dropdown;
+    private Gtk.StringList icon_list;
+    private Gtk.StringList cursor_list;
+    private Gtk.StringList sound_list;
     private ListStore controls_list;
-    private Gtk.DropDown controls_dropdown;
-
-    private Gtk.Switch gnome_menu_switch;
 
     public AppearancePane () {
         base (
@@ -30,39 +37,6 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     }
 
     construct {
-        interface_settings = new Settings ("org.gnome.desktop.interface");
-        sound_settings = new Settings ("org.gnome.desktop.sound");
-        x_settings = new XSettings ();
-        gtk_settings = new GtkSettings ();
-        gnome_wm_settings = new Settings ("org.gnome.desktop.wm.preferences");
-
-        string? user_path = null;
-        try {
-            FDO.Accounts? accounts_service = Bus.get_proxy_sync (
-                BusType.SYSTEM,
-               "org.freedesktop.Accounts",
-               "/org/freedesktop/Accounts"
-            );
-
-            user_path = accounts_service.find_user_by_name (Environment.get_user_name ());
-        } catch (Error e) {
-            critical (e.message);
-        }
-
-        if (user_path != null) {
-            try {
-                pantheon_act = Bus.get_proxy_sync (
-                    BusType.SYSTEM,
-                    "org.freedesktop.Accounts",
-                    user_path,
-                    DBusProxyFlags.GET_INVALIDATED_PROPERTIES
-                );
-            } catch (Error err) {
-                warning ("Unable to get AccountsService proxy, color scheme preference may be incorrect: %s",
-                        err.message);
-            }
-        }
-
         /*************************************************/
         /* GTK Theme                                     */
         /*************************************************/
@@ -73,7 +47,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             ),
             hexpand = true
         };
-        gtk_list = ThemeSettings.fetch_gtk_themes ();
+        gtk_list = new Gtk.StringList (null);
         gtk_dropdown = new Gtk.DropDown (gtk_list, null) {
             valign = Gtk.Align.CENTER
         };
@@ -97,8 +71,8 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             ),
             hexpand = true
         };
-        var icon_list = ThemeSettings.fetch_icon_themes ();
-        var icon_dropdown = new Gtk.DropDown (icon_list, null) {
+        icon_list = new Gtk.StringList (null);
+        icon_dropdown = new Gtk.DropDown (icon_list, null) {
             valign = Gtk.Align.CENTER
         };
 
@@ -121,8 +95,8 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             ),
             hexpand = true
         };
-        var cursor_list = ThemeSettings.fetch_cursor_themes ();
-        var cursor_dropdown = new Gtk.DropDown (cursor_list, null) {
+        cursor_list = new Gtk.StringList (null);
+        cursor_dropdown = new Gtk.DropDown (cursor_list, null) {
             valign = Gtk.Align.CENTER
         };
 
@@ -145,8 +119,8 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             ),
             hexpand = true
         };
-        var sound_list = ThemeSettings.fetch_sound_themes ();
-        var sound_dropdown = new Gtk.DropDown (sound_list, null) {
+        sound_list = new Gtk.StringList (null);
+        sound_dropdown = new Gtk.DropDown (sound_list, null) {
             valign = Gtk.Align.CENTER
         };
 
@@ -166,7 +140,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             secondary_text = _("Forces dark style on all apps, even if it's not supported. Requires restarting the application."),
             hexpand = true
         };
-        var dark_style_switch = new Gtk.Switch () {
+        dark_style_switch = new Gtk.Switch () {
             valign = Gtk.Align.CENTER
         };
 
@@ -217,10 +191,6 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         gnome_menu_switch_box.append (gnome_menu_switch_label);
         gnome_menu_switch_box.append (gnome_menu_switch);
 
-        gtk_theme_settings_to_dropdown ();
-        controls_settings_to_dropdown ();
-        gnome_menu_switch.active = x_settings.has_gnome_menu ();
-
         content_area.attach (gtk_theme_box, 0, 0, 1, 1);
         content_area.attach (icon_box, 0, 1, 1, 1);
         content_area.attach (cursor_box, 0, 2, 1, 1);
@@ -228,6 +198,50 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         content_area.attach (dark_style_box, 0, 4, 1, 1);
         content_area.attach (controls_box, 0, 5, 1, 1);
         content_area.attach (gnome_menu_switch_box, 0, 6, 1, 1);
+    }
+
+    public override void load () {
+        interface_settings = new Settings ("org.gnome.desktop.interface");
+        sound_settings = new Settings ("org.gnome.desktop.sound");
+        x_settings = new XSettings ();
+        gtk_settings = new GtkSettings ();
+        gnome_wm_settings = new Settings ("org.gnome.desktop.wm.preferences");
+
+        string? user_path = null;
+        try {
+            FDO.Accounts? accounts_service = Bus.get_proxy_sync (
+                BusType.SYSTEM,
+               "org.freedesktop.Accounts",
+               "/org/freedesktop/Accounts"
+            );
+
+            user_path = accounts_service.find_user_by_name (Environment.get_user_name ());
+        } catch (Error e) {
+            critical (e.message);
+        }
+
+        if (user_path != null) {
+            try {
+                pantheon_act = Bus.get_proxy_sync (
+                    BusType.SYSTEM,
+                    "org.freedesktop.Accounts",
+                    user_path,
+                    DBusProxyFlags.GET_INVALIDATED_PROPERTIES
+                );
+            } catch (Error err) {
+                warning ("Unable to get AccountsService proxy, color scheme preference may be incorrect: %s",
+                        err.message);
+            }
+        }
+
+        ThemeSettings.fetch_gtk_themes (gtk_list);
+        ThemeSettings.fetch_icon_themes (icon_list);
+        ThemeSettings.fetch_cursor_themes (cursor_list);
+        ThemeSettings.fetch_sound_themes (sound_list);
+
+        gtk_theme_settings_to_dropdown ();
+        controls_settings_to_dropdown ();
+        gnome_menu_switch.active = x_settings.has_gnome_menu ();
 
         interface_settings.bind_with_mapping ("icon-theme",
             icon_dropdown, "selected",

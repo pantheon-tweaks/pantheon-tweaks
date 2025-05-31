@@ -32,6 +32,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
             _pane.restored.connect (() => {
                 toast.send_notification ();
             });
+            _pane.load ();
 
             panes.remove_link (pane);
         }

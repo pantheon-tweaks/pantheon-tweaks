@@ -7,19 +7,21 @@
 public class PantheonTweaks.Panes.TerminalPane : BasePane {
     private const string TERMINAL_SCHEMA = "io.elementary.terminal.settings";
 
+    private Gtk.Switch follow_last_tab_switch;
+    private Gtk.Switch unsafe_paste_alert_switch;
+    private Gtk.Switch rem_tabs_switch;
+    private Gtk.Switch term_bell_switch;
+    private Gtk.DropDown tab_bar_dropdown;
+    private Gtk.FontDialogButton term_font_button;
+
     private Settings settings;
+    private ListStore tab_bar_list;
 
     public TerminalPane () {
         base ("terminal", _("Terminal"), "utilities-terminal");
     }
 
     construct {
-        if (!if_show_pane ({ TERMINAL_SCHEMA })) {
-            return;
-        }
-
-        settings = new Settings (TERMINAL_SCHEMA);
-
         /*************************************************/
         /* Follow Last Tab                               */
         /*************************************************/
@@ -27,7 +29,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
             secondary_text = _("Creating a new tab sets the working directory of the last opened tab."),
             hexpand = true
         };
-        var follow_last_tab_switch = new Gtk.Switch () {
+        follow_last_tab_switch = new Gtk.Switch () {
             valign = Gtk.Align.CENTER
         };
         var follow_last_tab_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
@@ -41,7 +43,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
             secondary_text = _("Warn when pasted text contains multiple or administrative commands."),
             hexpand = true
         };
-        var unsafe_paste_alert_switch = new Gtk.Switch () {
+        unsafe_paste_alert_switch = new Gtk.Switch () {
             valign = Gtk.Align.CENTER
         };
         var unsafe_paste_alert_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
@@ -55,7 +57,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
             secondary_text = _("If enabled, last opened tabs are restored on start."),
             hexpand = true
         };
-        var rem_tabs_switch = new Gtk.Switch () {
+        rem_tabs_switch = new Gtk.Switch () {
             valign = Gtk.Align.CENTER
         };
         var rem_tabs_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
@@ -69,7 +71,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
             secondary_text = _("Sound when hitting the end of a line and also for tab-completion when there are either no or multiple possible completions."), // vala-lint=line-length
             hexpand = true
         };
-        var term_bell_switch = new Gtk.Switch () {
+        term_bell_switch = new Gtk.Switch () {
             valign = Gtk.Align.CENTER
         };
         var term_bell_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
@@ -79,7 +81,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         /*************************************************/
         /* Show Tabs                                     */
         /*************************************************/
-        var tab_bar_list = new ListStore (typeof (StringIdObject));
+        tab_bar_list = new ListStore (typeof (StringIdObject));
         tab_bar_list.append (new StringIdObject ("Always Show Tabs", _("Always")));
         tab_bar_list.append (new StringIdObject ("Hide When Single Tab", _("Hide when single tab")));
         tab_bar_list.append (new StringIdObject ("Never Show Tabs", _("Never")));
@@ -87,7 +89,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         var tab_bar_label = new Granite.HeaderLabel (_("Show Tabs")) {
             hexpand = true
         };
-        var tab_bar_dropdown = DropDownId.new (tab_bar_list);
+        tab_bar_dropdown = DropDownId.new (tab_bar_list);
 
         var tab_bar_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         tab_bar_box.append (tab_bar_label);
@@ -99,7 +101,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         var term_font_label = new Granite.HeaderLabel (_("Terminal Font")) {
             hexpand = true
         };
-        var term_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
+        term_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
             valign = Gtk.Align.CENTER,
             use_font = true
         };
@@ -113,6 +115,14 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         content_area.attach (term_bell_box, 0, 3, 1, 1);
         content_area.attach (tab_bar_box, 0, 4, 1, 1);
         content_area.attach (term_font_box, 0, 5, 1, 1);
+    }
+
+    public override void load () {
+        if (!if_show_pane ({ TERMINAL_SCHEMA })) {
+            return;
+        }
+
+        settings = new Settings (TERMINAL_SCHEMA);
 
         settings.bind ("follow-last-tab", follow_last_tab_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("unsafe-paste-alert", unsafe_paste_alert_switch, "active", SettingsBindFlags.DEFAULT);

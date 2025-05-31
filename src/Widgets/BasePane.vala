@@ -7,6 +7,7 @@
 public abstract class BasePane : Switchboard.SettingsPage {
     public signal void restored ();
 
+    public abstract void load ();
     protected abstract void do_reset ();
 
     protected Gtk.Grid content_area;

@@ -7,6 +7,8 @@
 public class PantheonTweaks.Panes.MiscPane : BasePane {
     private const string SOUND_SCHEMA = "io.elementary.desktop.wingpanel.sound";
 
+    private Gtk.SpinButton max_volume_spinbutton;
+
     private Settings sound_settings;
 
     public MiscPane () {
@@ -17,12 +19,6 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
     }
 
     construct {
-        if (!if_show_pane ({ SOUND_SCHEMA })) {
-            return;
-        }
-
-        sound_settings = new Settings (SOUND_SCHEMA);
-
         var indicator_sound_label = new Granite.HeaderLabel (_("Max Volume"));
 
         var max_volume_adj = new Gtk.Adjustment (0, 10, 160, 5, 10, 10);
@@ -33,7 +29,7 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
         };
         max_volume_scale.add_mark (100, Gtk.PositionType.BOTTOM, null);
 
-        var max_volume_spinbutton = new Gtk.SpinButton (max_volume_adj, 1, 0) {
+        max_volume_spinbutton = new Gtk.SpinButton (max_volume_adj, 1, 0) {
             valign = Gtk.Align.CENTER
         };
 
@@ -43,6 +39,14 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
 
         content_area.attach (indicator_sound_label, 0, 0, 1, 1);
         content_area.attach (max_volume_box, 0, 1, 1, 1);
+    }
+
+    public override void load () {
+        if (!if_show_pane ({ SOUND_SCHEMA })) {
+            return;
+        }
+
+        sound_settings = new Settings (SOUND_SCHEMA);
 
         sound_settings.bind ("max-volume", max_volume_spinbutton, "value", SettingsBindFlags.DEFAULT);
     }

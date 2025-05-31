@@ -5,6 +5,11 @@
  */
 
 public class PantheonTweaks.Panes.FontsPane : BasePane {
+    private Gtk.FontDialogButton default_font_button;
+    private Gtk.FontDialogButton document_font_button;
+    private Gtk.FontDialogButton mono_font_button;
+    private Gtk.FontDialogButton titlebar_font_button;
+
     private Settings interface_settings;
     private Settings window_settings;
 
@@ -16,16 +21,13 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
     }
 
     construct {
-        interface_settings = new Settings ("org.gnome.desktop.interface");
-        window_settings = new Settings ("org.gnome.desktop.wm.preferences");
-
         /*************************************************/
         /* Default Font                                  */
         /*************************************************/
         var default_font_label = new Granite.HeaderLabel (_("Default Font")) {
             hexpand = true
         };
-        var default_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
+        default_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
             valign = Gtk.Align.CENTER,
             use_font = true
         };
@@ -39,7 +41,7 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
         var document_font_label = new Granite.HeaderLabel (_("Document Font")) {
             hexpand = true
         };
-        var document_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
+        document_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
             valign = Gtk.Align.CENTER,
             use_font = true
         };
@@ -53,7 +55,7 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
         var mono_font_label = new Granite.HeaderLabel (_("Monospace Font")) {
             hexpand = true
         };
-        var mono_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
+        mono_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
             valign = Gtk.Align.CENTER,
             use_font = true,
         };
@@ -67,7 +69,7 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
         var titlebar_font_label = new Granite.HeaderLabel (_("Titlebar Font")) {
             hexpand = true
         };
-        var titlebar_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
+        titlebar_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
             valign = Gtk.Align.CENTER,
             use_font = true
         };
@@ -79,6 +81,11 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
         content_area.attach (document_font_box, 0, 1, 1, 1);
         content_area.attach (mono_font_box, 0, 2, 1, 1);
         content_area.attach (titlebar_font_box, 0, 3, 1, 1);
+    }
+
+    public override void load () {
+        interface_settings = new Settings ("org.gnome.desktop.interface");
+        window_settings = new Settings ("org.gnome.desktop.wm.preferences");
 
         interface_settings.bind_with_mapping ("font-name",
             default_font_button, "font-desc",
