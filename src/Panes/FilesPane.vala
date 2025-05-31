@@ -7,19 +7,17 @@
 public class PantheonTweaks.Panes.FilesPane : BasePane {
     private const string FILES_SCHEMA = "io.elementary.files.preferences";
 
+    private Gtk.Switch restore_tabs_switch;
+    private Gtk.DropDown date_format_dropdown;
+
     private Settings settings;
+    private ListStore date_format_list;
 
     public FilesPane () {
         base ("files", _("Files"), "system-file-manager");
     }
 
     construct {
-        if (!if_show_pane ({ FILES_SCHEMA })) {
-            return;
-        }
-
-        settings = new Settings (FILES_SCHEMA);
-
         /*************************************************/
         /* Restore Tabs                                  */
         /*************************************************/
@@ -27,7 +25,7 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
             secondary_text = _("Restore tabs from previous session when launched."),
             hexpand = true
         };
-        var restore_tabs_switch = new Gtk.Switch () {
+        restore_tabs_switch = new Gtk.Switch () {
             valign = Gtk.Align.CENTER
         };
         var restore_tabs_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
@@ -37,7 +35,7 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
         /*************************************************/
         /* Date Format                                   */
         /*************************************************/
-        var date_format_list = new ListStore (typeof (StringIdObject));
+        date_format_list = new ListStore (typeof (StringIdObject));
         date_format_list.append (new StringIdObject ("locale", _("Locale")));
         date_format_list.append (new StringIdObject ("iso", _("ISO")));
         date_format_list.append (new StringIdObject ("informal", _("Informal")));
@@ -46,7 +44,7 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
             secondary_text = _("Date format used in the properties dialog or the list view."),
             hexpand = true
         };
-        var date_format_dropdown = DropDownId.new (date_format_list);
+        date_format_dropdown = DropDownId.new (date_format_list);
 
         var date_format_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         date_format_box.append (date_format_label);
@@ -54,6 +52,14 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
 
         content_area.attach (restore_tabs_box, 0, 0, 1, 1);
         content_area.attach (date_format_box, 0, 1, 1, 1);
+    }
+
+    public override void load () {
+        if (!if_show_pane ({ FILES_SCHEMA })) {
+            return;
+        }
+
+        settings = new Settings (FILES_SCHEMA);
 
         settings.bind ("restore-tabs", restore_tabs_switch, "active", SettingsBindFlags.DEFAULT);
 
