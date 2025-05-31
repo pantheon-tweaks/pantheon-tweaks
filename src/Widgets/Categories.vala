@@ -5,8 +5,6 @@
  */
 
 public class PantheonTweaks.Categories : Gtk.Box {
-    private const string BUGTRACKER_URL = "https://github.com/pantheon-tweaks/pantheon-tweaks/issues";
-
     private Gtk.Stack stack;
     private Granite.Toast toast;
 
@@ -51,21 +49,10 @@ public class PantheonTweaks.Categories : Gtk.Box {
 
             bool ret = _pane.load ();
             if (!ret) {
-                var warning_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+                Dialog.show_error_dialog (
                     _("Failed to Load %s Preference").printf (_pane.title),
-                    _("Make sure your Pantheon desktop installation is up to date and not incomplete. Please report this problem on our bugtracker if it persists."),
-                    "dialog-warning", Gtk.ButtonsType.CLOSE
-                ) {
-                    modal = true,
-                    transient_for = (Gtk.Window) get_root (),
-                };
-
-                var report_button = new Gtk.LinkButton.with_label (BUGTRACKER_URL, _("Report Problem…"));
-                warning_dialog.custom_bin.append (report_button);
-
-                warning_dialog.response.connect (warning_dialog.destroy);
-
-                warning_dialog.present ();
+                    _("Make sure your Pantheon desktop installation is up to date and not incomplete.")
+                );
 
                 continue;
             }

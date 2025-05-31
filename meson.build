@@ -54,6 +54,7 @@ source_files = files(
     'src/Util/StringListUtil.vala',
     'src/Widgets/BasePane.vala',
     'src/Widgets/Categories.vala',
+    'src/Widgets/Dialog.vala',
     'src/Widgets/DropDownId.vala',
     'src/Widgets/DropDownRow.vala',
     'src/Widgets/OpenButton.vala',

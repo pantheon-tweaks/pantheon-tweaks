@@ -21,9 +21,9 @@ public class OpenButton : Gtk.Button {
             try {
                 open ();
             } catch (Error err) {
-                show_folder_action_error (
+                Dialog.show_error_dialog (
                     _("Failed To Open \"%s\"").printf (path),
-                    _("Tried to open the folder but failed. The following error message might be helpful:"),
+                    _("There was an error when opening the directory or creating it."),
                     err.message
                 );
             }
@@ -47,19 +47,5 @@ public class OpenButton : Gtk.Button {
             warning ("Failed to open '%s': %s", path, err.message);
             throw err;
         }
-    }
-
-    private void show_folder_action_error (string primary_text, string secondary_text, string error_message) {
-        var error_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-            primary_text, secondary_text, "dialog-error", Gtk.ButtonsType.CLOSE
-        ) {
-            modal = true,
-            transient_for = (Gtk.Window) get_root ()
-        };
-        error_dialog.show_error_details (error_message);
-        error_dialog.response.connect ((response_id) => {
-            error_dialog.destroy ();
-        });
-        error_dialog.present ();
     }
 }
