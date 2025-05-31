@@ -27,7 +27,7 @@ public class OpenButton : Gtk.Button {
                 dir.make_directory_with_parents ();
             } catch (Error e) {
                 show_folder_action_error (
-                    _("Failed to create \"%s\"").printf (path),
+                    _("Failed To Create \"%s\"").printf (path),
                     _("The folder doesn't exist and tried to create new but failed. The following error message might be helpful:"),
                     e.message
                 );
@@ -40,7 +40,7 @@ public class OpenButton : Gtk.Button {
             AppInfo.launch_default_for_uri (dir.get_uri (), null);
         } catch (Error e) {
             show_folder_action_error (
-                _("Failed to open \"%s\"").printf (path),
+                _("Failed To Open \"%s\"").printf (path),
                 _("Tried to open the folder but failed. The following error message might be helpful:"),
                 e.message
             );
