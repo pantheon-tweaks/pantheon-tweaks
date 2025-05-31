@@ -17,33 +17,35 @@ public class OpenButton : Gtk.Button {
     }
 
     construct {
-        clicked.connect (on_click);
+        clicked.connect (() => {
+            try {
+                open ();
+            } catch (Error err) {
+                show_folder_action_error (
+                    _("Failed To Open \"%s\"").printf (path),
+                    _("Tried to open the folder but failed. The following error message might be helpful:"),
+                    err.message
+                );
+            }
+        });
     }
 
-    private void on_click () {
+    private void open () throws Error {
         var dir = File.new_for_path (path);
         if (!dir.query_exists ()) {
             try {
                 dir.make_directory_with_parents ();
-            } catch (Error e) {
-                show_folder_action_error (
-                    _("Failed To Create \"%s\"").printf (path),
-                    _("The folder doesn't exist and tried to create new but failed. The following error message might be helpful:"),
-                    e.message
-                );
-
-                return;
+            } catch (Error err) {
+                warning ("Failed to create '%s': %s", path, err.message);
+                throw err;
             }
         }
 
         try {
             AppInfo.launch_default_for_uri (dir.get_uri (), null);
-        } catch (Error e) {
-            show_folder_action_error (
-                _("Failed To Open \"%s\"").printf (path),
-                _("Tried to open the folder but failed. The following error message might be helpful:"),
-                e.message
-            );
+        } catch (Error err) {
+            warning ("Failed to open '%s': %s", path, err.message);
+            throw err;
         }
     }
 
