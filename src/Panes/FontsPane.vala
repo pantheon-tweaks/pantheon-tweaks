@@ -131,7 +131,7 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
     protected override void do_reset () {
         string[] keys = {"font-name", "document-font-name", "monospace-font-name"};
 
-        foreach (var key in keys) {
+        foreach (unowned var key in keys) {
             interface_settings.reset (key);
         }
 

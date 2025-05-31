@@ -332,7 +332,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     protected override void do_reset () {
         string[] keys = {"gtk-theme", "icon-theme", "cursor-theme"};
 
-        foreach (var key in keys) {
+        foreach (unowned var key in keys) {
             interface_settings.reset (key);
         }
 

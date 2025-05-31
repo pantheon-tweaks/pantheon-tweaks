@@ -149,7 +149,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         string[] keys = {"follow-last-tab", "unsafe-paste-alert", "remember-tabs",
                          "audible-bell", "tab-bar-behavior", "font"};
 
-        foreach (string key in keys) {
+        foreach (unowned var key in keys) {
             settings.reset (key);
         }
     }
