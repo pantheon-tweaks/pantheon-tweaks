@@ -16,9 +16,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     private Pantheon.AccountsService? pantheon_act = null;
 
     private Gtk.StringList gtk_list;
-    private Gtk.DropDown gtk_combobox;
+    private Gtk.DropDown gtk_dropdown;
     private ListStore controls_list;
-    private Gtk.DropDown controls_combobox;
+    private Gtk.DropDown controls_dropdown;
 
     private Gtk.Switch gnome_menu_switch;
 
@@ -74,7 +74,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             hexpand = true
         };
         gtk_list = ThemeSettings.fetch_gtk_themes ();
-        gtk_combobox = new Gtk.DropDown (gtk_list, null) {
+        gtk_dropdown = new Gtk.DropDown (gtk_list, null) {
             valign = Gtk.Align.CENTER
         };
 
@@ -84,7 +84,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
         var gtk_theme_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         gtk_theme_box.append (gtk_label);
-        gtk_theme_box.append (gtk_combobox);
+        gtk_theme_box.append (gtk_dropdown);
         gtk_theme_box.append (gtk_dir_button);
 
         /*************************************************/
@@ -98,7 +98,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             hexpand = true
         };
         var icon_list = ThemeSettings.fetch_icon_themes ();
-        var icon_combobox = new Gtk.DropDown (icon_list, null) {
+        var icon_dropdown = new Gtk.DropDown (icon_list, null) {
             valign = Gtk.Align.CENTER
         };
 
@@ -108,7 +108,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
         var icon_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         icon_box.append (icon_label);
-        icon_box.append (icon_combobox);
+        icon_box.append (icon_dropdown);
         icon_box.append (icon_dir_button);
 
         /*************************************************/
@@ -122,7 +122,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             hexpand = true
         };
         var cursor_list = ThemeSettings.fetch_cursor_themes ();
-        var cursor_combobox = new Gtk.DropDown (cursor_list, null) {
+        var cursor_dropdown = new Gtk.DropDown (cursor_list, null) {
             valign = Gtk.Align.CENTER
         };
 
@@ -132,7 +132,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
         var cursor_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         cursor_box.append (cursor_label);
-        cursor_box.append (cursor_combobox);
+        cursor_box.append (cursor_dropdown);
         cursor_box.append (cursor_dir_button);
 
         /*************************************************/
@@ -146,7 +146,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             hexpand = true
         };
         var sound_list = ThemeSettings.fetch_sound_themes ();
-        var sound_combobox = new Gtk.DropDown (sound_list, null) {
+        var sound_dropdown = new Gtk.DropDown (sound_list, null) {
             valign = Gtk.Align.CENTER
         };
 
@@ -156,7 +156,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
         var sound_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         sound_box.append (sound_label);
-        sound_box.append (sound_combobox);
+        sound_box.append (sound_dropdown);
         sound_box.append (sound_dir_button);
 
         /*************************************************/
@@ -194,13 +194,13 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         controls_list.append (new StringIdObject ("close,minimize,maximize", _("macOS")));
         controls_list.append (new StringIdObject ("close,maximize,minimize", _("Windows Reversed")));
 
-        controls_combobox = DropDownId.new (controls_list);
+        controls_dropdown = DropDownId.new (controls_list);
 
         var controls_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
             margin_top = 24
         };
         controls_box.append (controls_label);
-        controls_box.append (controls_combobox);
+        controls_box.append (controls_dropdown);
 
         /*************************************************/
         /* Show GNOME Menu                               */
@@ -217,8 +217,8 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         gnome_menu_switch_box.append (gnome_menu_switch_label);
         gnome_menu_switch_box.append (gnome_menu_switch);
 
-        gtk_theme_settings_to_combo ();
-        controls_settings_to_combo ();
+        gtk_theme_settings_to_dropdown ();
+        controls_settings_to_dropdown ();
         gnome_menu_switch.active = x_settings.has_gnome_menu ();
 
         content_area.attach (gtk_theme_box, 0, 0, 1, 1);
@@ -230,21 +230,21 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         content_area.attach (gnome_menu_switch_box, 0, 6, 1, 1);
 
         interface_settings.bind_with_mapping ("icon-theme",
-            icon_combobox, "selected",
+            icon_dropdown, "selected",
             SettingsBindFlags.DEFAULT,
             (SettingsBindGetMappingShared) DropDownUtil.settings_value_to_selected,
             (SettingsBindSetMappingShared) DropDownUtil.selected_to_settings_value,
             icon_list, null);
 
         interface_settings.bind_with_mapping ("cursor-theme",
-            cursor_combobox, "selected",
+            cursor_dropdown, "selected",
             SettingsBindFlags.DEFAULT,
             (SettingsBindGetMappingShared) DropDownUtil.settings_value_to_selected,
             (SettingsBindSetMappingShared) DropDownUtil.selected_to_settings_value,
             cursor_list, null);
 
         sound_settings.bind_with_mapping ("theme-name",
-            sound_combobox, "selected",
+            sound_dropdown, "selected",
             SettingsBindFlags.DEFAULT,
             (SettingsBindGetMappingShared) DropDownUtil.settings_value_to_selected,
             (SettingsBindSetMappingShared) DropDownUtil.selected_to_settings_value,
@@ -254,16 +254,16 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
         if (((DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
             ((DBusProxy) pantheon_act).g_properties_changed.connect ((changed, invalid) => {
-                gtk_theme_settings_to_combo ();
+                gtk_theme_settings_to_dropdown ();
             });
         }
 
-        interface_settings.changed["gtk-theme"].connect (gtk_theme_settings_to_combo);
-        gtk_combobox.notify["selected-item"].connect (gtk_theme_combo_to_settings);
+        interface_settings.changed["gtk-theme"].connect (gtk_theme_settings_to_dropdown);
+        gtk_dropdown.notify["selected-item"].connect (gtk_theme_dropdown_to_settings);
 
-        gnome_wm_settings.changed["button-layout"].connect (controls_settings_to_combo);
-        controls_combobox.notify["selected"].connect (controls_combo_to_settings);
-        gnome_menu_switch.notify["active"].connect (controls_combo_to_settings);
+        gnome_wm_settings.changed["button-layout"].connect (controls_settings_to_dropdown);
+        controls_dropdown.notify["selected"].connect (controls_dropdown_to_settings);
+        gnome_menu_switch.notify["active"].connect (controls_dropdown_to_settings);
     }
 
     protected override void do_reset () {
@@ -285,7 +285,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         gnome_menu_switch.active = x_settings.has_gnome_menu ();
     }
 
-    private void gtk_theme_settings_to_combo () {
+    private void gtk_theme_settings_to_dropdown () {
         string selected_id = interface_settings.get_string ("gtk-theme");
         uint selected_pos = StringListUtil.find (gtk_list, selected_id);
 
@@ -294,15 +294,15 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             selected_pos = Gtk.INVALID_LIST_POSITION;
         }
 
-        if (gtk_combobox.selected == selected_pos) {
+        if (gtk_dropdown.selected == selected_pos) {
             return;
         }
 
-        gtk_combobox.selected = selected_pos;
+        gtk_dropdown.selected = selected_pos;
     }
 
-    private void gtk_theme_combo_to_settings () {
-        var selected_item = (Gtk.StringObject) gtk_combobox.selected_item;
+    private void gtk_theme_dropdown_to_settings () {
+        var selected_item = (Gtk.StringObject) gtk_dropdown.selected_item;
         string selected_id = selected_item.string;
 
         interface_settings.set_string ("gtk-theme", selected_id);
@@ -315,19 +315,19 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         }
     }
 
-    private void controls_settings_to_combo () {
+    private void controls_settings_to_dropdown () {
         string selected_id = gnome_wm_settings.get_string ("button-layout");
         uint selected_pos = StringIdListUtil.find (controls_list, selected_id);
 
-        if (controls_combobox.selected == selected_pos) {
+        if (controls_dropdown.selected == selected_pos) {
             return;
         }
 
-        controls_combobox.selected = selected_pos;
+        controls_dropdown.selected = selected_pos;
     }
 
-    private void controls_combo_to_settings () {
-        uint selected_pos = controls_combobox.selected;
+    private void controls_dropdown_to_settings () {
+        uint selected_pos = controls_dropdown.selected;
         string? selected_id = StringIdListUtil.get_id (controls_list, selected_pos);
 
         if (selected_id == null) {

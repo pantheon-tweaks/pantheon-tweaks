@@ -46,11 +46,11 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
             secondary_text = _("Date format used in the properties dialog or the list view."),
             hexpand = true
         };
-        var date_format_combo = DropDownId.new (date_format_list);
+        var date_format_dropdown = DropDownId.new (date_format_list);
 
         var date_format_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         date_format_box.append (date_format_label);
-        date_format_box.append (date_format_combo);
+        date_format_box.append (date_format_dropdown);
 
         content_area.attach (restore_tabs_box, 0, 0, 1, 1);
         content_area.attach (date_format_box, 0, 1, 1, 1);
@@ -58,7 +58,7 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
         settings.bind ("restore-tabs", restore_tabs_switch, "active", SettingsBindFlags.DEFAULT);
 
         settings.bind_with_mapping ("date-format",
-            date_format_combo, "selected",
+            date_format_dropdown, "selected",
             SettingsBindFlags.DEFAULT,
             (SettingsBindGetMappingShared) DropDownId.settings_value_to_selected,
             (SettingsBindSetMappingShared) DropDownId.selected_to_settings_value,

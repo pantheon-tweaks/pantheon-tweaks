@@ -87,11 +87,11 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         var tab_bar_label = new Granite.HeaderLabel (_("Show Tabs")) {
             hexpand = true
         };
-        var tab_bar_combo = DropDownId.new (tab_bar_list);
+        var tab_bar_dropdown = DropDownId.new (tab_bar_list);
 
         var tab_bar_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         tab_bar_box.append (tab_bar_label);
-        tab_bar_box.append (tab_bar_combo);
+        tab_bar_box.append (tab_bar_dropdown);
 
         /*************************************************/
         /* Terminal Font                                 */
@@ -120,7 +120,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         settings.bind ("audible-bell", term_bell_switch, "active", SettingsBindFlags.DEFAULT);
 
         settings.bind_with_mapping ("tab-bar-behavior",
-            tab_bar_combo, "selected",
+            tab_bar_dropdown, "selected",
             SettingsBindFlags.DEFAULT,
             (SettingsBindGetMappingShared) DropDownId.settings_value_to_selected,
             (SettingsBindSetMappingShared) DropDownId.selected_to_settings_value,
