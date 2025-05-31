@@ -39,7 +39,9 @@ public abstract class BasePane : Switchboard.SettingsPage {
 
         reset.clicked.connect (on_click_reset);
 
-        bind_property ("is_load_success", this, "sensitive", BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE);
+        // Can't bind to this's sensitive property because the end title buttons is also included
+        bind_property ("is_load_success", content_area, "sensitive", BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE);
+        bind_property ("is_load_success", reset, "sensitive", BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE);
     }
 
     protected bool if_show_pane (string[] schemas) {
