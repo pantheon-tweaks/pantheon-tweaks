@@ -6,6 +6,8 @@
 
 public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
     private string desktop_environment;
+
+    private Gtk.HeaderBar headerbar;
     private Categories categories;
 
     public MainWindow (Gtk.Application app) {
@@ -16,6 +18,13 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
 
     construct {
         desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
+
+        headerbar = new Gtk.HeaderBar () {
+            show_title_buttons = true,
+            title_widget = new Gtk.Label (_("Tweaks"))
+        };
+
+        set_titlebar (headerbar);
 
         // Follow OS-wide dark preference
         var granite_settings = Granite.Settings.get_default ();
@@ -40,13 +49,6 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
     }
 
     private void load_on_other () {
-        var headerbar = new Gtk.HeaderBar () {
-            show_title_buttons = true,
-            title_widget = new Gtk.Label (_("Tweaks"))
-        };
-
-        set_titlebar (headerbar);
-
         var unsupported_view = new Granite.Placeholder (
             _("Your Desktop Environment Is Not Supported")
         ) {
@@ -60,7 +62,8 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
         categories = new Categories ();
         child = categories;
 
-        // No headerbar in favor of SettingsPage and SettingsSidebar
+        // Hide the headerbar in favor of SettingsPage and SettingsSidebar, otherwise duplicated headerbars are shown
+        headerbar.visible = false;
 
         categories.load ();
     }
