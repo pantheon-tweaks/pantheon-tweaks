@@ -179,6 +179,8 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         /*************************************************/
         /* Show GNOME Menu                               */
         /*************************************************/
+        x_settings = new XSettings ();
+
         var gnome_menu_switch_label = new Granite.HeaderLabel (_("Show GNOME Menu")) {
             secondary_text = _("Whether to show GNOME menu in GNOME apps."),
             hexpand = true
@@ -201,44 +203,87 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     }
 
     public override bool load () {
-        interface_settings = new Settings ("org.gnome.desktop.interface");
-        sound_settings = new Settings ("org.gnome.desktop.sound");
-        x_settings = new XSettings ();
-        gtk_settings = new GtkSettings ();
-        gnome_wm_settings = new Settings ("org.gnome.desktop.wm.preferences");
+        if (!SchemaUtil.schema_exists (SchemaUtil.INTERFACE_SCHEMA)) {
+            warning ("Could not find settings schema %s", SchemaUtil.INTERFACE_SCHEMA);
+            return false;
+        }
+        interface_settings = new Settings (SchemaUtil.INTERFACE_SCHEMA);
 
-        string? user_path = null;
+        if (!SchemaUtil.schema_exists (SchemaUtil.SOUND_SCHEMA)) {
+            warning ("Could not find settings schema %s", SchemaUtil.SOUND_SCHEMA);
+            return false;
+        }
+        sound_settings = new Settings (SchemaUtil.SOUND_SCHEMA);
+
+        bool ret = x_settings.load ();
+        if (!ret) {
+            return false;
+        }
+
+        gtk_settings = new GtkSettings ();
+
+        if (!SchemaUtil.schema_exists (SchemaUtil.GNOME_WM_SCHEMA)) {
+            warning ("Could not find settings schema %s", SchemaUtil.GNOME_WM_SCHEMA);
+            return false;
+        }
+        gnome_wm_settings = new Settings (SchemaUtil.GNOME_WM_SCHEMA);
+
+        FDO.Accounts? accounts_service;
         try {
-            FDO.Accounts? accounts_service = Bus.get_proxy_sync (
+            accounts_service = Bus.get_proxy_sync (
                 BusType.SYSTEM,
                "org.freedesktop.Accounts",
                "/org/freedesktop/Accounts"
             );
-
-            user_path = accounts_service.find_user_by_name (Environment.get_user_name ());
-        } catch (Error e) {
-            critical (e.message);
+        } catch (Error err) {
+            critical ("Failed to get Accounts proxy: %s", err.message);
             return false;
         }
 
-        if (user_path != null) {
-            try {
-                pantheon_act = Bus.get_proxy_sync (
-                    BusType.SYSTEM,
-                    "org.freedesktop.Accounts",
-                    user_path,
-                    DBusProxyFlags.GET_INVALIDATED_PROPERTIES
-                );
-            } catch (Error err) {
-                warning ("Unable to get AccountsService proxy, color scheme preference may be incorrect: %s",
-                        err.message);
-            }
+        string? user_path;
+        string user_name = Environment.get_user_name ();
+        try {
+            user_path = accounts_service.find_user_by_name (user_name);
+        } catch (Error err) {
+            critical ("Failed to find user by name '%s': %s", user_name, err.message);
+            return false;
         }
 
-        ThemeSettings.fetch_gtk_themes (gtk_list);
-        ThemeSettings.fetch_icon_themes (icon_list);
-        ThemeSettings.fetch_cursor_themes (cursor_list);
-        ThemeSettings.fetch_sound_themes (sound_list);
+        try {
+            pantheon_act = Bus.get_proxy_sync (
+                BusType.SYSTEM,
+                "org.freedesktop.Accounts",
+                user_path,
+                DBusProxyFlags.GET_INVALIDATED_PROPERTIES
+            );
+        } catch (Error err) {
+            warning ("Unable to get AccountsService proxy, color scheme preference may be incorrect: %s",
+                    err.message);
+        }
+
+        ret = ThemeSettings.fetch_gtk_themes (gtk_list);
+        if (!ret) {
+            warning ("Failed to fetch GTK themes");
+            return false;
+        }
+
+        ret = ThemeSettings.fetch_icon_themes (icon_list);
+        if (!ret) {
+            warning ("Failed to fetch icon themes");
+            return false;
+        }
+
+        ret = ThemeSettings.fetch_cursor_themes (cursor_list);
+        if (!ret) {
+            warning ("Failed to fetch cursor themes");
+            return false;
+        }
+
+        ret = ThemeSettings.fetch_sound_themes (sound_list);
+        if (!ret) {
+            warning ("Failed to fetch sound themes");
+            return false;
+        }
 
         gtk_theme_settings_to_dropdown ();
         controls_settings_to_dropdown ();

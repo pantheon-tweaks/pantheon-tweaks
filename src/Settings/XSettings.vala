@@ -32,7 +32,16 @@ public class PantheonTweaks.XSettings {
     private Settings settings;
 
     public XSettings () {
-        settings = new Settings ("org.gnome.settings-daemon.plugins.xsettings");
+    }
+
+    public bool load () {
+        if (!SchemaUtil.schema_exists (SchemaUtil.XSETTINGS_SCHEMA)) {
+            warning ("Could not find settings schema %s", SchemaUtil.XSETTINGS_SCHEMA);
+            return false;
+        }
+        settings = new Settings (SchemaUtil.XSETTINGS_SCHEMA);
+
+        return true;
     }
 
     public void reset () {

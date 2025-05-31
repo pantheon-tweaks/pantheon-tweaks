@@ -5,8 +5,6 @@
  */
 
 public class PantheonTweaks.Panes.MiscPane : BasePane {
-    private const string SOUND_SCHEMA = "io.elementary.desktop.wingpanel.sound";
-
     private Gtk.SpinButton max_volume_spinbutton;
 
     private Settings sound_settings;
@@ -42,11 +40,11 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
     }
 
     public override bool load () {
-        if (!if_show_pane ({ SOUND_SCHEMA })) {
+        if (!SchemaUtil.schema_exists (SchemaUtil.PANEL_SOUND_SCHEMA)) {
+            warning ("Could not find settings schema %s", SchemaUtil.PANEL_SOUND_SCHEMA);
             return false;
         }
-
-        sound_settings = new Settings (SOUND_SCHEMA);
+        sound_settings = new Settings (SchemaUtil.PANEL_SOUND_SCHEMA);
 
         sound_settings.bind ("max-volume", max_volume_spinbutton, "value", SettingsBindFlags.DEFAULT);
 

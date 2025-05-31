@@ -50,6 +50,7 @@ source_files = files(
     'src/Panes/TerminalPane.vala',
     'src/Util/DropDownUtil.vala',
     'src/Util/StringIdListUtil.vala',
+    'src/Util/SchemaUtil.vala',
     'src/Util/StringListUtil.vala',
     'src/Widgets/BasePane.vala',
     'src/Widgets/Categories.vala',
