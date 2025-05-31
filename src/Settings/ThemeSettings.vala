@@ -64,36 +64,36 @@ public class PantheonTweaks.ThemeSettings {
      */
     private delegate bool ValidateThemeFunc (string dir);
 
-    public static Gee.ArrayList<string>? fetch_gtk_themes () {
+    public static Gtk.StringList fetch_gtk_themes () {
         return fetch_themes ("themes", (found_dir) => {
                                 var path = File.new_for_path (Path.build_filename (found_dir, "gtk-3.0"));
                                 return path.query_exists ();
                             });
     }
 
-    public static Gee.ArrayList<string>? fetch_icon_themes () {
+    public static Gtk.StringList fetch_icon_themes () {
         return fetch_themes ("icons", (found_dir) => {
                                 var path = File.new_for_path (Path.build_filename (found_dir, "index.theme"));
                                 return path.query_exists ();
                             });
     }
 
-    public static Gee.ArrayList<string>? fetch_cursor_themes () {
+    public static Gtk.StringList fetch_cursor_themes () {
         return fetch_themes ("icons", (found_dir) => {
                                 var path = File.new_for_path (Path.build_filename (found_dir, "cursors"));
                                 return path.query_exists ();
                             });
     }
 
-    public static Gee.ArrayList<string>? fetch_sound_themes () {
+    public static Gtk.StringList fetch_sound_themes () {
         return fetch_themes ("sounds", (found_dir) => {
                                 var path = File.new_for_path (Path.build_filename (found_dir, "index.theme"));
                                 return path.query_exists ();
                             });
     }
 
-    private static Gee.ArrayList<string>? fetch_themes (string subdir, ValidateThemeFunc valid_func) {
-        var themes = new Gee.ArrayList<string> ();
+    private static Gtk.StringList fetch_themes (string subdir, ValidateThemeFunc valid_func) {
+        var themes = new Gtk.StringList (null);
         unowned string home_dir = Environment.get_home_dir ();
 
         string[] theme_dirs = {
@@ -113,7 +113,7 @@ public class PantheonTweaks.ThemeSettings {
                 enumerator = file.enumerate_children (FileAttribute.STANDARD_NAME, 0);
             } catch (Error err) {
                 warning ("Failed to enumerate children under '%s': %s", theme_dir, err.message);
-                return null;
+                return new Gtk.StringList (null);
             }
 
             // Search for directories until reaching end of enumerator
@@ -123,7 +123,7 @@ public class PantheonTweaks.ThemeSettings {
                     file_info = enumerator.next_file ();
                 } catch (Error err) {
                     warning ("Failed to refer info of next file under '%s': %s", theme_dir, err.message);
-                    return null;
+                    return new Gtk.StringList (null);
                 }
 
                 // End of enumerator
@@ -141,17 +141,9 @@ public class PantheonTweaks.ThemeSettings {
                     continue;
                 }
 
-                if (themes.contains (name)) {
-                    continue;
-                }
-
-                themes.add (name);
+                themes.append (name);
             }
         }
-
-        themes.sort ((a, b) => {
-            return a.collate (b);
-        });
 
         return themes;
     }

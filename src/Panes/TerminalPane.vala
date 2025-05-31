@@ -79,19 +79,19 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         /*************************************************/
         /* Show Tabs                                     */
         /*************************************************/
-        var tab_bar_map = new Gee.HashMap<string, string> ();
-        tab_bar_map.set ("Always Show Tabs", _("Always"));
-        tab_bar_map.set ("Hide When Single Tab", _("Hide when single tab"));
-        tab_bar_map.set ("Never Show Tabs", _("Never"));
+        var tab_bar_list = new ListStore (typeof (StringIdObject));
+        tab_bar_list.append (new StringIdObject ("Always Show Tabs", _("Always")));
+        tab_bar_list.append (new StringIdObject ("Hide When Single Tab", _("Hide when single tab")));
+        tab_bar_list.append (new StringIdObject ("Never Show Tabs", _("Never")));
 
         var tab_bar_label = new Granite.HeaderLabel (_("Show Tabs")) {
             hexpand = true
         };
-        var tab_bar_combo = combobox_text_new (tab_bar_map);
+        var tab_bar_dropdown = DropDownId.new (tab_bar_list);
 
         var tab_bar_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         tab_bar_box.append (tab_bar_label);
-        tab_bar_box.append (tab_bar_combo);
+        tab_bar_box.append (tab_bar_dropdown);
 
         /*************************************************/
         /* Terminal Font                                 */
@@ -118,7 +118,13 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         settings.bind ("unsafe-paste-alert", unsafe_paste_alert_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("remember-tabs", rem_tabs_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("audible-bell", term_bell_switch, "active", SettingsBindFlags.DEFAULT);
-        settings.bind ("tab-bar-behavior", tab_bar_combo, "active_id", SettingsBindFlags.DEFAULT);
+
+        settings.bind_with_mapping ("tab-bar-behavior",
+            tab_bar_dropdown, "selected",
+            SettingsBindFlags.DEFAULT,
+            (SettingsBindGetMappingShared) DropDownId.settings_value_to_selected,
+            (SettingsBindSetMappingShared) DropDownId.selected_to_settings_value,
+            tab_bar_list, null);
 
         settings.bind_with_mapping ("font",
             term_font_button, "font-desc",
