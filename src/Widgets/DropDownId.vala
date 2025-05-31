@@ -5,21 +5,6 @@
  */
 
 namespace DropDownId {
-    private static void list_factory_setup (Object object) {
-        var item = object as Gtk.ListItem;
-
-        var row = new DropDownRow ();
-        item.child = row;
-    }
-
-    private static void list_factory_bind (Object object) {
-        var item = object as Gtk.ListItem;
-        var model = item.item as StringIdObject;
-        var row = item.child as DropDownRow;
-
-        row.label.label = model.display_text;
-    }
-
     public static Gtk.DropDown new (owned ListModel? list_model) {
         var list_factory = new Gtk.SignalListItemFactory ();
         list_factory.setup.connect (list_factory_setup);
@@ -61,5 +46,20 @@ namespace DropDownId {
         }
 
         return new Variant.string (selected_id);
+    }
+
+    private static void list_factory_setup (Object object) {
+        var item = object as Gtk.ListItem;
+
+        var row = new DropDownRow ();
+        item.child = row;
+    }
+
+    private static void list_factory_bind (Object object) {
+        var item = object as Gtk.ListItem;
+        var model = item.item as StringIdObject;
+        var row = item.child as DropDownRow;
+
+        row.label.label = model.display_text;
     }
 }
