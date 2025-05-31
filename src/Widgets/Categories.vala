@@ -29,6 +29,8 @@ public class PantheonTweaks.Categories : Gtk.Box {
 
         for (unowned List<BasePane> pane = panes; pane != null; pane = panes.first ()) {
             unowned BasePane _pane = pane.data;
+
+            stack.add_titled (_pane, _pane.name, _pane.title);
             panes.remove_link (pane);
 
             bool ret = _pane.load ();
@@ -52,7 +54,6 @@ public class PantheonTweaks.Categories : Gtk.Box {
                 continue;
             }
 
-            stack.add_titled (_pane, _pane.name, _pane.title);
             _pane.restored.connect (() => {
                 toast.send_notification ();
             });

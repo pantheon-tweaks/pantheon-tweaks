@@ -35,11 +35,11 @@ public abstract class BasePane : Switchboard.SettingsPage {
         };
         child = content_area;
 
-        bind_property ("is_load_success", content_area, "sensitive", BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE);
-
         var reset = add_button (_("Reset to Default"));
 
         reset.clicked.connect (on_click_reset);
+
+        bind_property ("is_load_success", this, "sensitive", BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE);
     }
 
     protected bool if_show_pane (string[] schemas) {
