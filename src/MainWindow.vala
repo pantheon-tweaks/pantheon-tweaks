@@ -36,12 +36,12 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
     }
 
     public void load () {
-        string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
-        // Prevent Tweaks from launching and breaking preferences on other DEs
-        if (desktop_environment != "Pantheon") {
-            load_on_other (desktop_environment);
-        } else {
+        unowned string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
+        if (desktop_environment == "Pantheon") {
             load_on_pantheon ();
+        } else {
+            // Prevent Tweaks from launching and breaking preferences on other DEs
+            load_on_other (desktop_environment);
         }
     }
 
