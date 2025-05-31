@@ -87,7 +87,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         var tab_bar_label = new Granite.HeaderLabel (_("Show Tabs")) {
             hexpand = true
         };
-        var tab_bar_combo = DropDownUtil.dropdown_id_new (tab_bar_list);
+        var tab_bar_combo = DropDownId.new (tab_bar_list);
 
         var tab_bar_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         tab_bar_box.append (tab_bar_label);
@@ -122,8 +122,8 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         settings.bind_with_mapping ("tab-bar-behavior",
             tab_bar_combo, "selected",
             SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) DropDownUtil.settings_value_to_stridlist_selected,
-            (SettingsBindSetMappingShared) DropDownUtil.stridlist_selected_to_settings_value,
+            (SettingsBindGetMappingShared) DropDownId.settings_value_to_selected,
+            (SettingsBindSetMappingShared) DropDownId.selected_to_settings_value,
             tab_bar_list, null);
 
         settings.bind_with_mapping ("font",

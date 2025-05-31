@@ -4,8 +4,8 @@
  *                         Pantheon Tweaks Developers, 2020-2025
  */
 
-namespace ListUtil {
-    public static uint stridlist_find (ListStore list, string id) {
+namespace StringIdListUtil {
+    public static uint find (ListStore list, string id) {
         assert (list.item_type == typeof (StringIdObject));
 
         uint pos;
@@ -25,7 +25,7 @@ namespace ListUtil {
         return pos;
     }
 
-    public static string? stridlist_get_id (ListStore list, uint position) {
+    public static string? get_id (ListStore list, uint position) {
         assert (list.item_type == typeof (StringIdObject));
 
         // No item is selected
@@ -45,21 +45,5 @@ namespace ListUtil {
         }
 
         return item.id;
-    }
-
-    // TODO: Remove in favor of Gtk.StringList.find() which is only available on GTK >= 4.18
-    public static uint strlist_find (Gtk.StringList list, string str) {
-        uint pos = uint.MAX;
-
-        for (int i = 0; i < list.n_items; i++) {
-            unowned var list_str = list.get_string (i);
-
-            if (list_str == str) {
-                pos = i;
-                break;
-            }
-        }
-
-        return pos;
     }
 }

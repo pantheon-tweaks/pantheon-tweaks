@@ -194,7 +194,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         controls_list.append (new StringIdObject ("close,minimize,maximize", _("macOS")));
         controls_list.append (new StringIdObject ("close,maximize,minimize", _("Windows Reversed")));
 
-        controls_combobox = DropDownUtil.dropdown_id_new (controls_list);
+        controls_combobox = DropDownId.new (controls_list);
 
         var controls_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
             margin_top = 24
@@ -232,22 +232,22 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         interface_settings.bind_with_mapping ("icon-theme",
             icon_combobox, "selected",
             SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) DropDownUtil.settings_value_to_strlist_selected,
-            (SettingsBindSetMappingShared) DropDownUtil.strlist_selected_to_settings_value,
+            (SettingsBindGetMappingShared) DropDownUtil.settings_value_to_selected,
+            (SettingsBindSetMappingShared) DropDownUtil.selected_to_settings_value,
             icon_list, null);
 
         interface_settings.bind_with_mapping ("cursor-theme",
             cursor_combobox, "selected",
             SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) DropDownUtil.settings_value_to_strlist_selected,
-            (SettingsBindSetMappingShared) DropDownUtil.strlist_selected_to_settings_value,
+            (SettingsBindGetMappingShared) DropDownUtil.settings_value_to_selected,
+            (SettingsBindSetMappingShared) DropDownUtil.selected_to_settings_value,
             cursor_list, null);
 
         sound_settings.bind_with_mapping ("theme-name",
             sound_combobox, "selected",
             SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) DropDownUtil.settings_value_to_strlist_selected,
-            (SettingsBindSetMappingShared) DropDownUtil.strlist_selected_to_settings_value,
+            (SettingsBindGetMappingShared) DropDownUtil.settings_value_to_selected,
+            (SettingsBindSetMappingShared) DropDownUtil.selected_to_settings_value,
             sound_list, null);
 
         gtk_settings.bind_property ("prefer-dark-theme", dark_style_switch, "active", BindingFlags.SYNC_CREATE | BindingFlags.BIDIRECTIONAL);
@@ -287,7 +287,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
     private void gtk_theme_settings_to_combo () {
         string selected_id = interface_settings.get_string ("gtk-theme");
-        uint selected_pos = ListUtil.strlist_find (gtk_list, selected_id);
+        uint selected_pos = StringListUtil.find (gtk_list, selected_id);
 
         if (selected_pos == uint.MAX) {
             // Unselect if the list does not contain the current theme
@@ -317,7 +317,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
     private void controls_settings_to_combo () {
         string selected_id = gnome_wm_settings.get_string ("button-layout");
-        uint selected_pos = ListUtil.stridlist_find (controls_list, selected_id);
+        uint selected_pos = StringIdListUtil.find (controls_list, selected_id);
 
         if (controls_combobox.selected == selected_pos) {
             return;
@@ -328,7 +328,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
     private void controls_combo_to_settings () {
         uint selected_pos = controls_combobox.selected;
-        string? selected_id = ListUtil.stridlist_get_id (controls_list, selected_pos);
+        string? selected_id = StringIdListUtil.get_id (controls_list, selected_pos);
 
         if (selected_id == null) {
             return;
