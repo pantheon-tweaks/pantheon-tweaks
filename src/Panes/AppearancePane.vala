@@ -47,6 +47,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             ),
             hexpand = true
         };
+        gtk_list = new Gtk.StringList (null);
         gtk_dropdown = new Gtk.DropDown (gtk_list, null) {
             valign = Gtk.Align.CENTER
         };
@@ -70,6 +71,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             ),
             hexpand = true
         };
+        icon_list = new Gtk.StringList (null);
         icon_dropdown = new Gtk.DropDown (icon_list, null) {
             valign = Gtk.Align.CENTER
         };
@@ -93,6 +95,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             ),
             hexpand = true
         };
+        cursor_list = new Gtk.StringList (null);
         cursor_dropdown = new Gtk.DropDown (cursor_list, null) {
             valign = Gtk.Align.CENTER
         };
@@ -116,6 +119,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             ),
             hexpand = true
         };
+        sound_list = new Gtk.StringList (null);
         sound_dropdown = new Gtk.DropDown (sound_list, null) {
             valign = Gtk.Align.CENTER
         };
@@ -151,6 +155,18 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             secondary_text = _("Changes button layout of the window."),
             hexpand = true
         };
+
+        controls_list = new ListStore (typeof (StringIdObject));
+        controls_list.append (new StringIdObject ("close:maximize", _("elementary")));
+        controls_list.append (new StringIdObject ("maximize:close", _("elementary Reversed")));
+        controls_list.append (new StringIdObject (":close", _("Close Only Right")));
+        controls_list.append (new StringIdObject ("close:", _("Close Only Left")));
+        controls_list.append (new StringIdObject ("close,minimize:maximize", _("Add Minimize Left")));
+        controls_list.append (new StringIdObject ("close:minimize,maximize", _("Add Minimize Right")));
+        controls_list.append (new StringIdObject ("close:minimize", _("Replace Maximize to Minimize")));
+        controls_list.append (new StringIdObject (":minimize,maximize,close", _("Windows")));
+        controls_list.append (new StringIdObject ("close,minimize,maximize", _("macOS")));
+        controls_list.append (new StringIdObject ("close,maximize,minimize", _("Windows Reversed")));
 
         controls_dropdown = DropDownId.new (controls_list);
 
@@ -218,22 +234,10 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             }
         }
 
-        gtk_list = ThemeSettings.fetch_gtk_themes ();
-        icon_list = ThemeSettings.fetch_icon_themes ();
-        cursor_list = ThemeSettings.fetch_cursor_themes ();
-        sound_list = ThemeSettings.fetch_sound_themes ();
-
-        controls_list = new ListStore (typeof (StringIdObject));
-        controls_list.append (new StringIdObject ("close:maximize", _("elementary")));
-        controls_list.append (new StringIdObject ("maximize:close", _("elementary Reversed")));
-        controls_list.append (new StringIdObject (":close", _("Close Only Right")));
-        controls_list.append (new StringIdObject ("close:", _("Close Only Left")));
-        controls_list.append (new StringIdObject ("close,minimize:maximize", _("Add Minimize Left")));
-        controls_list.append (new StringIdObject ("close:minimize,maximize", _("Add Minimize Right")));
-        controls_list.append (new StringIdObject ("close:minimize", _("Replace Maximize to Minimize")));
-        controls_list.append (new StringIdObject (":minimize,maximize,close", _("Windows")));
-        controls_list.append (new StringIdObject ("close,minimize,maximize", _("macOS")));
-        controls_list.append (new StringIdObject ("close,maximize,minimize", _("Windows Reversed")));
+        ThemeSettings.fetch_gtk_themes (gtk_list);
+        ThemeSettings.fetch_icon_themes (icon_list);
+        ThemeSettings.fetch_cursor_themes (cursor_list);
+        ThemeSettings.fetch_sound_themes (sound_list);
 
         gtk_theme_settings_to_dropdown ();
         controls_settings_to_dropdown ();
