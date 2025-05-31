@@ -7,25 +7,41 @@
 public class PantheonTweaks.Categories : Gtk.Box {
     private const string BUGTRACKER_URL = "https://github.com/pantheon-tweaks/pantheon-tweaks/issues";
 
+    private Gtk.Stack stack;
+    private Granite.Toast toast;
+
     construct {
+        stack = new Gtk.Stack ();
+        var pane_list = new Switchboard.SettingsSidebar (stack) {
+            show_title_buttons = true
+        };
+
+        toast = new Granite.Toast (_("Reset settings successfully"));
+
+        var overlay = new Gtk.Overlay () {
+            child = stack
+        };
+        overlay.add_overlay (toast);
+
+        var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL) {
+            hexpand = true
+        };
+        paned.resize_start_child = false;
+        paned.shrink_start_child = false;
+        paned.shrink_end_child = false;
+        paned.set_start_child (pane_list);
+        paned.set_end_child (overlay);
+
+        append (paned);
+    }
+
+    public void load () {
         var panes = new List<BasePane> ();
         panes.append (new Panes.AppearancePane ());
         panes.append (new Panes.FontsPane ());
         panes.append (new Panes.MiscPane ());
         panes.append (new Panes.FilesPane ());
         panes.append (new Panes.TerminalPane ());
-
-        var stack = new Gtk.Stack ();
-        var pane_list = new Switchboard.SettingsSidebar (stack) {
-            show_title_buttons = true
-        };
-
-        var toast = new Granite.Toast (_("Reset settings successfully"));
-
-        var overlay = new Gtk.Overlay () {
-            child = stack
-        };
-        overlay.add_overlay (toast);
 
         for (unowned List<BasePane> pane = panes; pane != null; pane = panes.first ()) {
             unowned BasePane _pane = pane.data;
@@ -58,16 +74,5 @@ public class PantheonTweaks.Categories : Gtk.Box {
                 toast.send_notification ();
             });
         }
-
-        var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL) {
-            hexpand = true
-        };
-        paned.resize_start_child = false;
-        paned.shrink_start_child = false;
-        paned.shrink_end_child = false;
-        paned.set_start_child (pane_list);
-        paned.set_end_child (overlay);
-
-        append (paned);
     }
 }
