@@ -5,26 +5,15 @@
  */
 
 public class PantheonTweaks.Categories : Gtk.Box {
-    private Gtk.Stack stack;
-    private List<BasePane> panes;
-
-    ~Categories () {
-        for (unowned List<BasePane> pane = panes; pane != null; pane = panes.first ()) {
-            stack.remove (pane.data);
-            panes.delete_link (pane);
-        }
-        warning ("panes: %u", panes.length ());
-    }
-
     construct {
-        panes = new List<BasePane> ();
+        var panes = new List<BasePane> ();
         panes.append (new Panes.AppearancePane ());
         panes.append (new Panes.FontsPane ());
         panes.append (new Panes.MiscPane ());
         panes.append (new Panes.FilesPane ());
         panes.append (new Panes.TerminalPane ());
 
-        stack = new Gtk.Stack ();
+        var stack = new Gtk.Stack ();
         var pane_list = new Switchboard.SettingsSidebar (stack) {
             show_title_buttons = true
         };
@@ -36,11 +25,15 @@ public class PantheonTweaks.Categories : Gtk.Box {
         };
         overlay.add_overlay (toast);
 
-        foreach (var pane in panes) {
-            stack.add_titled (pane, pane.name, pane.title);
-            pane.restored.connect (() => {
+        for (unowned List<BasePane> pane = panes; pane != null; pane = panes.first ()) {
+            unowned BasePane _pane = pane.data;
+
+            stack.add_titled (_pane, _pane.name, _pane.title);
+            _pane.restored.connect (() => {
                 toast.send_notification ();
             });
+
+            panes.remove_link (pane);
         }
 
         var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL) {
