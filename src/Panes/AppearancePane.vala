@@ -264,9 +264,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             (SettingsBindSetMappingShared) DropDownUtil.selected_to_settings_value,
             sound_list, null);
 
-        gtk_settings.bind_property ("prefer-dark-theme",
-            dark_style_switch, "active",
-            BindingFlags.SYNC_CREATE | BindingFlags.BIDIRECTIONAL);
+        gtk_settings.bind_property ("prefer-dark-theme", dark_style_switch, "active", BindingFlags.SYNC_CREATE | BindingFlags.BIDIRECTIONAL);
 
         if (((DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
             ((DBusProxy) pantheon_act).g_properties_changed.connect ((changed, invalid) => {
