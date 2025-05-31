@@ -36,6 +36,9 @@ public abstract class BasePane : Switchboard.SettingsPage {
         reset.clicked.connect (on_click_reset);
     }
 
+    public virtual void load () {
+    }
+
     protected bool if_show_pane (string[] schemas) {
         foreach (var schema in schemas) {
             if (schema_exists (schema)) {
