@@ -48,6 +48,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
                     valign = Gtk.Align.END
                 };
                 warning_dialog.custom_bin.append (report_button);
+                warning_dialog.present ();
 
                 continue;
             }

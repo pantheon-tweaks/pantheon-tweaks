@@ -10,7 +10,7 @@ public abstract class BasePane : Switchboard.SettingsPage {
     public abstract bool load ();
     protected abstract void do_reset ();
 
-    protected bool is_load_success;
+    protected bool is_load_success { get; protected set; }
     protected Gtk.Grid content_area;
 
     protected BasePane (string name, string title, string icon_name, string? description = null) {
