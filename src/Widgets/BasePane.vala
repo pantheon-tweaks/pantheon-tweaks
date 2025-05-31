@@ -46,7 +46,7 @@ public abstract class BasePane : Switchboard.SettingsPage {
 
     private void on_click_reset () {
         var reset_confirm_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-            _("Are you sure you want to reset personalization?"),
+            _("Reset to Default?"),
             _("All settings in this pane will be restored to the factory defaults. This action can't be undone."),
             "dialog-warning", Gtk.ButtonsType.CANCEL
         ) {
