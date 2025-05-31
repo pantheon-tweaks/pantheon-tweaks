@@ -11,7 +11,7 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
     private Gtk.FontDialogButton titlebar_font_button;
 
     private Settings interface_settings;
-    private Settings window_settings;
+    private Settings gnome_wm_settings;
 
     public FontsPane () {
         base (
@@ -84,8 +84,17 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
     }
 
     public override bool load () {
-        interface_settings = new Settings ("org.gnome.desktop.interface");
-        window_settings = new Settings ("org.gnome.desktop.wm.preferences");
+        if (!SchemaUtil.schema_exists (SchemaUtil.INTERFACE_SCHEMA)) {
+            warning ("Could not find settings schema %s", SchemaUtil.INTERFACE_SCHEMA);
+            return false;
+        }
+        interface_settings = new Settings (SchemaUtil.INTERFACE_SCHEMA);
+
+        if (!SchemaUtil.schema_exists (SchemaUtil.GNOME_WM_SCHEMA)) {
+            warning ("Could not find settings schema %s", SchemaUtil.GNOME_WM_SCHEMA);
+            return false;
+        }
+        gnome_wm_settings = new Settings (SchemaUtil.GNOME_WM_SCHEMA);
 
         interface_settings.bind_with_mapping ("font-name",
             default_font_button, "font-desc",
@@ -108,7 +117,7 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
             (SettingsBindSetMappingShared) font_button_bind_set,
             null, null);
 
-        window_settings.bind_with_mapping ("titlebar-font",
+        gnome_wm_settings.bind_with_mapping ("titlebar-font",
             titlebar_font_button, "font-desc",
             SettingsBindFlags.DEFAULT,
             (SettingsBindGetMappingShared) font_button_bind_get,
@@ -126,6 +135,6 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
             interface_settings.reset (key);
         }
 
-        window_settings.reset ("titlebar-font");
+        gnome_wm_settings.reset ("titlebar-font");
     }
 }

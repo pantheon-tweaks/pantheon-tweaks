@@ -44,20 +44,6 @@ public abstract class BasePane : Switchboard.SettingsPage {
         bind_property ("is_load_success", reset, "sensitive", BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE);
     }
 
-    protected bool if_show_pane (string[] schemas) {
-        foreach (var schema in schemas) {
-            if (schema_exists (schema)) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    protected bool schema_exists (string schema) {
-        return (SettingsSchemaSource.get_default ().lookup (schema, true) != null);
-    }
-
     private void on_click_reset () {
         var reset_confirm_dialog = new Granite.MessageDialog.with_image_from_icon_name (
             _("Are you sure you want to reset personalization?"),
