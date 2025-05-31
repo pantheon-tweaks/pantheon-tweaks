@@ -38,6 +38,8 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
         window = new MainWindow (this);
         // The window seems to need showing before restoring its size in Gtk4
         window.present ();
+
+        // Load after present because this may show warning dialogs on top of main window
         window.load ();
 
         settings.bind ("window-height", window, "default-height", SettingsBindFlags.DEFAULT);
