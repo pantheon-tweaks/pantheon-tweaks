@@ -5,10 +5,12 @@
  */
 
 public class PantheonTweaks.Categories : Gtk.Box {
+    private Gtk.Stack stack;
     private List<BasePane> panes;
 
     ~Categories () {
         for (unowned List<BasePane> pane = panes; pane != null; pane = panes.first ()) {
+            stack.remove (pane.data);
             panes.delete_link (pane);
         }
         warning ("panes: %u", panes.length ());
@@ -22,7 +24,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
         panes.append (new Panes.FilesPane ());
         panes.append (new Panes.TerminalPane ());
 
-        var stack = new Gtk.Stack ();
+        stack = new Gtk.Stack ();
         var pane_list = new Switchboard.SettingsSidebar (stack) {
             show_title_buttons = true
         };
