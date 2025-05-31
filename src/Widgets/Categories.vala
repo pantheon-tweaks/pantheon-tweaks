@@ -5,15 +5,22 @@
  */
 
 public class PantheonTweaks.Categories : Gtk.Box {
-    private Gee.ArrayList<BasePane> panes;
+    private List<BasePane> panes;
+
+    ~Categories () {
+        for (unowned List<BasePane> pane = panes; pane != null; pane = panes.first ()) {
+            panes.delete_link (pane);
+        }
+        warning ("panes: %u", panes.length ());
+    }
 
     construct {
-        panes = new Gee.ArrayList<BasePane> ();
-        panes.add (new Panes.AppearancePane ());
-        panes.add (new Panes.FontsPane ());
-        panes.add (new Panes.MiscPane ());
-        panes.add (new Panes.FilesPane ());
-        panes.add (new Panes.TerminalPane ());
+        panes = new List<BasePane> ();
+        panes.append (new Panes.AppearancePane ());
+        panes.append (new Panes.FontsPane ());
+        panes.append (new Panes.MiscPane ());
+        panes.append (new Panes.FilesPane ());
+        panes.append (new Panes.TerminalPane ());
 
         var stack = new Gtk.Stack ();
         var pane_list = new Switchboard.SettingsSidebar (stack) {

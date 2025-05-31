@@ -64,7 +64,6 @@ executable(
     config_file,
     stylesheet_resource,
     dependencies: [
-        dependency('gee-0.8'),
         # Version limitation for GLib.ApplicationFlags.DEFAULT_FLAGS
         dependency('glib-2.0', version: '>= 2.74'),
         # Version limitation for automatic load of Application.css
