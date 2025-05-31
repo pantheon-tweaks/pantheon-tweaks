@@ -34,20 +34,19 @@ public class PantheonTweaks.Categories : Gtk.Box {
             bool ret = _pane.load ();
             if (!ret) {
                 var warning_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-                    _("Failed to Load %s Preference").printf (_pane.name),
-                    _("Make sure your Pantheon desktop installation is up to date and not incomplete.") + "\n" +
-                    _("You can report this problem on our bugtracker if it persists."),
+                    _("Failed to Load %s Preference").printf (_pane.title),
+                    _("Make sure your Pantheon desktop installation is up to date and not incomplete. Please report this problem on our bugtracker if it persists."),
                     "dialog-warning", Gtk.ButtonsType.CLOSE
                 ) {
                     modal = true,
                     transient_for = (Gtk.Window) get_root (),
                 };
 
-                var report_button = new Gtk.LinkButton.with_label (BUGTRACKER_URL, _("Report Problem…")) {
-                    halign = Gtk.Align.END,
-                    valign = Gtk.Align.END
-                };
+                var report_button = new Gtk.LinkButton.with_label (BUGTRACKER_URL, _("Report Problem…"));
                 warning_dialog.custom_bin.append (report_button);
+
+                warning_dialog.response.connect (warning_dialog.destroy);
+
                 warning_dialog.present ();
 
                 continue;
