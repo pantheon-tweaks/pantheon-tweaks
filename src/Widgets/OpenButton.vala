@@ -23,7 +23,7 @@ public class OpenButton : Gtk.Button {
             } catch (Error err) {
                 Dialog.show_error_dialog (
                     _("Failed To Open \"%s\"").printf (path),
-                    _("Tried to open the folder but failed. The following error message might be helpful:"),
+                    _("There was an error when opening the directory or creating it."),
                     err.message
                 );
             }
