@@ -117,9 +117,9 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         content_area.attach (term_font_box, 0, 5, 1, 1);
     }
 
-    public override void load () {
+    public override bool load () {
         if (!if_show_pane ({ TERMINAL_SCHEMA })) {
-            return;
+            return false;
         }
 
         settings = new Settings (TERMINAL_SCHEMA);
@@ -142,6 +142,9 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
             (SettingsBindGetMappingShared) font_button_bind_get,
             (SettingsBindSetMappingShared) font_button_bind_set,
             null, null);
+
+        is_load_success = true;
+        return true;
     }
 
     protected override void do_reset () {

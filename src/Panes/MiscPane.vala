@@ -41,14 +41,17 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
         content_area.attach (max_volume_box, 0, 1, 1, 1);
     }
 
-    public override void load () {
+    public override bool load () {
         if (!if_show_pane ({ SOUND_SCHEMA })) {
-            return;
+            return false;
         }
 
         sound_settings = new Settings (SOUND_SCHEMA);
 
         sound_settings.bind ("max-volume", max_volume_spinbutton, "value", SettingsBindFlags.DEFAULT);
+
+        is_load_success = true;
+        return true;
     }
 
     protected override void do_reset () {
