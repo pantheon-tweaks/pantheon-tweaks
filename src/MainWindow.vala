@@ -37,7 +37,7 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
         var unsupported_view = new Granite.Placeholder (
             _("Your Desktop Environment Is Not Supported")
         ) {
-            description = _("Pantheon Tweaks is a customization tool for Pantheon. Your desktop environment \"%s\" is not supported.").printf (desktop_environment),
+            description = _("Pantheon Tweaks is a customization tool for Pantheon. Your desktop environment \"%s\" is not supported.").printf (desktop_environment), // vala-lint=line-length
             icon = new ThemedIcon ("dialog-warning")
         };
         child = unsupported_view;

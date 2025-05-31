@@ -137,7 +137,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         /* Force Dark Style                              */
         /*************************************************/
         var dark_style_label = new Granite.HeaderLabel (_("Force Dark Style")) {
-            secondary_text = _("Forces dark style on all apps, even if it's not supported. Requires restarting the application."),
+            secondary_text = _("Forces dark style on all apps, even if it's not supported. Requires restarting the application."), // vala-lint=line-length
             hexpand = true
         };
         dark_style_switch = new Gtk.Switch () {
@@ -310,7 +310,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             (SettingsBindSetMappingShared) DropDownUtil.selected_to_settings_value,
             sound_list, null);
 
-        gtk_settings.bind_property ("prefer-dark-theme", dark_style_switch, "active", BindingFlags.SYNC_CREATE | BindingFlags.BIDIRECTIONAL);
+        gtk_settings.bind_property ("prefer-dark-theme",
+            dark_style_switch, "active",
+            BindingFlags.SYNC_CREATE | BindingFlags.BIDIRECTIONAL);
 
         if (((DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
             ((DBusProxy) pantheon_act).g_properties_changed.connect ((changed, invalid) => {
