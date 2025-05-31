@@ -75,7 +75,7 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
     protected override void do_reset () {
         string[] keys = {"restore-tabs", "date-format"};
 
-        foreach (var key in keys) {
+        foreach (unowned var key in keys) {
             settings.reset (key);
         }
     }
