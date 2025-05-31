@@ -5,8 +5,6 @@
  */
 
 public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
-    private string desktop_environment;
-
     private Gtk.HeaderBar headerbar;
     private Categories categories;
 
@@ -17,8 +15,6 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
-
         headerbar = new Gtk.HeaderBar () {
             show_title_buttons = true,
             title_widget = new Gtk.Label (_("Tweaks"))
@@ -40,15 +36,16 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
     }
 
     public void load () {
+        string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
         // Prevent Tweaks from launching and breaking preferences on other DEs
         if (desktop_environment != "Pantheon") {
-            load_on_other ();
+            load_on_other (desktop_environment);
         } else {
             load_on_pantheon ();
         }
     }
 
-    private void load_on_other () {
+    private void load_on_other (string desktop_environment) {
         var unsupported_view = new Granite.Placeholder (
             _("Your Desktop Environment Is Not Supported")
         ) {
