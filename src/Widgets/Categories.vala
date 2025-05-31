@@ -45,6 +45,10 @@ public class PantheonTweaks.Categories : Gtk.Box {
                 };
 
                 var report_button = new Gtk.LinkButton.with_label (BUGTRACKER_URL, _("Report Problem…"));
+                report_button.clicked.connect (() => {
+                    report_button.visited = true;
+                });
+
                 warning_dialog.custom_bin.append (report_button);
 
                 warning_dialog.response.connect (warning_dialog.destroy);
