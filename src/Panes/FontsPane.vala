@@ -83,7 +83,7 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
         content_area.attach (titlebar_font_box, 0, 3, 1, 1);
     }
 
-    public override void load () {
+    public override bool load () {
         interface_settings = new Settings ("org.gnome.desktop.interface");
         window_settings = new Settings ("org.gnome.desktop.wm.preferences");
 
@@ -114,6 +114,9 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
             (SettingsBindGetMappingShared) font_button_bind_get,
             (SettingsBindSetMappingShared) font_button_bind_set,
             null, null);
+
+        is_load_success = true;
+        return true;
     }
 
     protected override void do_reset () {

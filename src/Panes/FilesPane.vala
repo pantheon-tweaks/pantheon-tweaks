@@ -54,9 +54,9 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
         content_area.attach (date_format_box, 0, 1, 1, 1);
     }
 
-    public override void load () {
+    public override bool load () {
         if (!if_show_pane ({ FILES_SCHEMA })) {
-            return;
+            return false;
         }
 
         settings = new Settings (FILES_SCHEMA);
@@ -69,6 +69,9 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
             (SettingsBindGetMappingShared) DropDownId.settings_value_to_selected,
             (SettingsBindSetMappingShared) DropDownId.selected_to_settings_value,
             date_format_list, null);
+
+        is_load_success = true;
+        return true;
     }
 
     protected override void do_reset () {

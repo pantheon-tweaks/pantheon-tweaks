@@ -5,6 +5,8 @@
  */
 
 public class PantheonTweaks.Categories : Gtk.Box {
+    private const string BUGTRACKER_URL = "https://github.com/pantheon-tweaks/pantheon-tweaks/issues";
+
     construct {
         var panes = new List<BasePane> ();
         panes.append (new Panes.AppearancePane ());
@@ -27,14 +29,33 @@ public class PantheonTweaks.Categories : Gtk.Box {
 
         for (unowned List<BasePane> pane = panes; pane != null; pane = panes.first ()) {
             unowned BasePane _pane = pane.data;
+            panes.remove_link (pane);
+
+            bool ret = _pane.load ();
+            if (!ret) {
+                var warning_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+                    _("Failed to Load %s Preference").printf (_pane.name),
+                    _("Make sure your Pantheon desktop installation is up to date and not incomplete.") + "\n" +
+                    _("You can report this problem on our bugtracker if it persists."),
+                    "dialog-warning", Gtk.ButtonsType.CLOSE
+                ) {
+                    modal = true,
+                    transient_for = (Gtk.Window) get_root (),
+                };
+
+                var report_button = new Gtk.LinkButton.with_label (BUGTRACKER_URL, _("Report Problem…")) {
+                    halign = Gtk.Align.END,
+                    valign = Gtk.Align.END
+                };
+                warning_dialog.custom_bin.append (report_button);
+
+                continue;
+            }
 
             stack.add_titled (_pane, _pane.name, _pane.title);
             _pane.restored.connect (() => {
                 toast.send_notification ();
             });
-            _pane.load ();
-
-            panes.remove_link (pane);
         }
 
         var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL) {

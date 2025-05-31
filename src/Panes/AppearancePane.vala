@@ -200,7 +200,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         content_area.attach (gnome_menu_switch_box, 0, 6, 1, 1);
     }
 
-    public override void load () {
+    public override bool load () {
         interface_settings = new Settings ("org.gnome.desktop.interface");
         sound_settings = new Settings ("org.gnome.desktop.sound");
         x_settings = new XSettings ();
@@ -218,6 +218,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             user_path = accounts_service.find_user_by_name (Environment.get_user_name ());
         } catch (Error e) {
             critical (e.message);
+            return false;
         }
 
         if (user_path != null) {
@@ -278,6 +279,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         gnome_wm_settings.changed["button-layout"].connect (controls_settings_to_dropdown);
         controls_dropdown.notify["selected"].connect (controls_dropdown_to_settings);
         gnome_menu_switch.notify["active"].connect (controls_dropdown_to_settings);
+
+        is_load_success = true;
+        return true;
     }
 
     protected override void do_reset () {

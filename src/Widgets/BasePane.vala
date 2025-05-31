@@ -7,9 +7,10 @@
 public abstract class BasePane : Switchboard.SettingsPage {
     public signal void restored ();
 
-    public abstract void load ();
+    public abstract bool load ();
     protected abstract void do_reset ();
 
+    protected bool is_load_success;
     protected Gtk.Grid content_area;
 
     protected BasePane (string name, string title, string icon_name, string? description = null) {
@@ -24,6 +25,8 @@ public abstract class BasePane : Switchboard.SettingsPage {
     construct {
         show_end_title_buttons = true;
 
+        is_load_success = false;
+
         content_area = new Gtk.Grid () {
             column_spacing = 12,
             row_spacing = 18,
@@ -31,6 +34,8 @@ public abstract class BasePane : Switchboard.SettingsPage {
             hexpand = true
         };
         child = content_area;
+
+        bind_property ("is_load_success", content_area, "sensitive", BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE);
 
         var reset = add_button (_("Reset to Default"));
 
