@@ -7,6 +7,7 @@
 public abstract class BasePane : Switchboard.SettingsPage {
     public signal void restored ();
 
+    public abstract void load ();
     protected abstract void do_reset ();
 
     protected Gtk.Grid content_area;
@@ -34,9 +35,6 @@ public abstract class BasePane : Switchboard.SettingsPage {
         var reset = add_button (_("Reset to Default"));
 
         reset.clicked.connect (on_click_reset);
-    }
-
-    public virtual void load () {
     }
 
     protected bool if_show_pane (string[] schemas) {

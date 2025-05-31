@@ -8,6 +8,14 @@
  */
 
 public class PantheonTweaks.Panes.AppearancePane : BasePane {
+    private Gtk.DropDown gtk_dropdown;
+    private Gtk.DropDown icon_dropdown;
+    private Gtk.DropDown cursor_dropdown;
+    private Gtk.DropDown sound_dropdown;
+    private Gtk.DropDown controls_dropdown;
+    private Gtk.Switch dark_style_switch;
+    private Gtk.Switch gnome_menu_switch;
+
     private XSettings x_settings;
     private GtkSettings gtk_settings;
     private Settings interface_settings;
@@ -16,11 +24,10 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     private Pantheon.AccountsService? pantheon_act = null;
 
     private Gtk.StringList gtk_list;
-    private Gtk.DropDown gtk_dropdown;
+    private Gtk.StringList icon_list;
+    private Gtk.StringList cursor_list;
+    private Gtk.StringList sound_list;
     private ListStore controls_list;
-    private Gtk.DropDown controls_dropdown;
-
-    private Gtk.Switch gnome_menu_switch;
 
     public AppearancePane () {
         base (
@@ -30,6 +37,154 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     }
 
     construct {
+        /*************************************************/
+        /* GTK Theme                                     */
+        /*************************************************/
+        var gtk_label = new Granite.HeaderLabel (_("GTK Theme")) {
+            /// TRANSLATORS: The "%s" represents the path where custom themes are installed
+            secondary_text = _("To show custom themes here, put them in %s.").printf (
+                "~/.local/share/themes/\"%s\"/gtk-3.0".printf (_("theme-name"))
+            ),
+            hexpand = true
+        };
+        gtk_dropdown = new Gtk.DropDown (gtk_list, null) {
+            valign = Gtk.Align.CENTER
+        };
+
+        var gtk_dir_button = new OpenButton (
+            Path.build_filename (Environment.get_home_dir (), ".local", "share", "themes")
+        );
+
+        var gtk_theme_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        gtk_theme_box.append (gtk_label);
+        gtk_theme_box.append (gtk_dropdown);
+        gtk_theme_box.append (gtk_dir_button);
+
+        /*************************************************/
+        /* Icon Theme                                    */
+        /*************************************************/
+        var icon_label = new Granite.HeaderLabel (_("Icon Theme")) {
+            /// TRANSLATORS: The "%s" represents the path where custom icons are installed
+            secondary_text = _("To show custom icons here, put them in %s.").printf (
+                "~/.icons/\"%s\"".printf (_("theme-name"))
+            ),
+            hexpand = true
+        };
+        icon_dropdown = new Gtk.DropDown (icon_list, null) {
+            valign = Gtk.Align.CENTER
+        };
+
+        var icon_dir_button = new OpenButton (
+            Path.build_filename (Environment.get_home_dir (), ".icons")
+        );
+
+        var icon_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        icon_box.append (icon_label);
+        icon_box.append (icon_dropdown);
+        icon_box.append (icon_dir_button);
+
+        /*************************************************/
+        /* Cursor Theme                                  */
+        /*************************************************/
+        var cursor_label = new Granite.HeaderLabel (_("Cursor Theme")) {
+            /// TRANSLATORS: The "%s" represents the path where custom cursors are installed
+            secondary_text = _("To show custom cursors here, put them in %s.").printf (
+                "~/.icons/\"%s\"/cursors".printf (_("theme-name"))
+            ),
+            hexpand = true
+        };
+        cursor_dropdown = new Gtk.DropDown (cursor_list, null) {
+            valign = Gtk.Align.CENTER
+        };
+
+        var cursor_dir_button = new OpenButton (
+            Path.build_filename (Environment.get_home_dir (), ".icons")
+        );
+
+        var cursor_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        cursor_box.append (cursor_label);
+        cursor_box.append (cursor_dropdown);
+        cursor_box.append (cursor_dir_button);
+
+        /*************************************************/
+        /* Sound Theme                                   */
+        /*************************************************/
+        var sound_label = new Granite.HeaderLabel (_("Sound Theme")) {
+            /// TRANSLATORS: The "%s" represents the path where custom sounds are installed
+            secondary_text = _("To show custom sounds here, put them in %s.").printf (
+                "~/.local/share/sounds/\"%s\"".printf (_("theme-name"))
+            ),
+            hexpand = true
+        };
+        sound_dropdown = new Gtk.DropDown (sound_list, null) {
+            valign = Gtk.Align.CENTER
+        };
+
+        var sound_dir_button = new OpenButton (
+            Path.build_filename (Environment.get_home_dir (), ".local", "share", "sounds")
+        );
+
+        var sound_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        sound_box.append (sound_label);
+        sound_box.append (sound_dropdown);
+        sound_box.append (sound_dir_button);
+
+        /*************************************************/
+        /* Force Dark Style                              */
+        /*************************************************/
+        var dark_style_label = new Granite.HeaderLabel (_("Force Dark Style")) {
+            secondary_text = _("Forces dark style on all apps, even if it's not supported. Requires restarting the application."),
+            hexpand = true
+        };
+        dark_style_switch = new Gtk.Switch () {
+            valign = Gtk.Align.CENTER
+        };
+
+        var dark_style_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        dark_style_box.append (dark_style_label);
+        dark_style_box.append (dark_style_switch);
+
+        /*************************************************/
+        /* Window Control Layout                         */
+        /*************************************************/
+        var controls_label = new Granite.HeaderLabel (_("Window Control Layout")) {
+            secondary_text = _("Changes button layout of the window."),
+            hexpand = true
+        };
+
+        controls_dropdown = DropDownId.new (controls_list);
+
+        var controls_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
+            margin_top = 24
+        };
+        controls_box.append (controls_label);
+        controls_box.append (controls_dropdown);
+
+        /*************************************************/
+        /* Show GNOME Menu                               */
+        /*************************************************/
+        var gnome_menu_switch_label = new Granite.HeaderLabel (_("Show GNOME Menu")) {
+            secondary_text = _("Whether to show GNOME menu in GNOME apps."),
+            hexpand = true
+        };
+        gnome_menu_switch = new Gtk.Switch () {
+            valign = Gtk.Align.CENTER
+        };
+
+        var gnome_menu_switch_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        gnome_menu_switch_box.append (gnome_menu_switch_label);
+        gnome_menu_switch_box.append (gnome_menu_switch);
+
+        content_area.attach (gtk_theme_box, 0, 0, 1, 1);
+        content_area.attach (icon_box, 0, 1, 1, 1);
+        content_area.attach (cursor_box, 0, 2, 1, 1);
+        content_area.attach (sound_box, 0, 3, 1, 1);
+        content_area.attach (dark_style_box, 0, 4, 1, 1);
+        content_area.attach (controls_box, 0, 5, 1, 1);
+        content_area.attach (gnome_menu_switch_box, 0, 6, 1, 1);
+    }
+
+    public override void load () {
         interface_settings = new Settings ("org.gnome.desktop.interface");
         sound_settings = new Settings ("org.gnome.desktop.sound");
         x_settings = new XSettings ();
@@ -63,124 +218,10 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             }
         }
 
-        /*************************************************/
-        /* GTK Theme                                     */
-        /*************************************************/
-        var gtk_label = new Granite.HeaderLabel (_("GTK Theme")) {
-            /// TRANSLATORS: The "%s" represents the path where custom themes are installed
-            secondary_text = _("To show custom themes here, put them in %s.").printf (
-                "~/.local/share/themes/\"%s\"/gtk-3.0".printf (_("theme-name"))
-            ),
-            hexpand = true
-        };
         gtk_list = ThemeSettings.fetch_gtk_themes ();
-        gtk_dropdown = new Gtk.DropDown (gtk_list, null) {
-            valign = Gtk.Align.CENTER
-        };
-
-        var gtk_dir_button = new OpenButton (
-            Path.build_filename (Environment.get_home_dir (), ".local", "share", "themes")
-        );
-
-        var gtk_theme_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
-        gtk_theme_box.append (gtk_label);
-        gtk_theme_box.append (gtk_dropdown);
-        gtk_theme_box.append (gtk_dir_button);
-
-        /*************************************************/
-        /* Icon Theme                                    */
-        /*************************************************/
-        var icon_label = new Granite.HeaderLabel (_("Icon Theme")) {
-            /// TRANSLATORS: The "%s" represents the path where custom icons are installed
-            secondary_text = _("To show custom icons here, put them in %s.").printf (
-                "~/.icons/\"%s\"".printf (_("theme-name"))
-            ),
-            hexpand = true
-        };
-        var icon_list = ThemeSettings.fetch_icon_themes ();
-        var icon_dropdown = new Gtk.DropDown (icon_list, null) {
-            valign = Gtk.Align.CENTER
-        };
-
-        var icon_dir_button = new OpenButton (
-            Path.build_filename (Environment.get_home_dir (), ".icons")
-        );
-
-        var icon_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
-        icon_box.append (icon_label);
-        icon_box.append (icon_dropdown);
-        icon_box.append (icon_dir_button);
-
-        /*************************************************/
-        /* Cursor Theme                                  */
-        /*************************************************/
-        var cursor_label = new Granite.HeaderLabel (_("Cursor Theme")) {
-            /// TRANSLATORS: The "%s" represents the path where custom cursors are installed
-            secondary_text = _("To show custom cursors here, put them in %s.").printf (
-                "~/.icons/\"%s\"/cursors".printf (_("theme-name"))
-            ),
-            hexpand = true
-        };
-        var cursor_list = ThemeSettings.fetch_cursor_themes ();
-        var cursor_dropdown = new Gtk.DropDown (cursor_list, null) {
-            valign = Gtk.Align.CENTER
-        };
-
-        var cursor_dir_button = new OpenButton (
-            Path.build_filename (Environment.get_home_dir (), ".icons")
-        );
-
-        var cursor_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
-        cursor_box.append (cursor_label);
-        cursor_box.append (cursor_dropdown);
-        cursor_box.append (cursor_dir_button);
-
-        /*************************************************/
-        /* Sound Theme                                   */
-        /*************************************************/
-        var sound_label = new Granite.HeaderLabel (_("Sound Theme")) {
-            /// TRANSLATORS: The "%s" represents the path where custom sounds are installed
-            secondary_text = _("To show custom sounds here, put them in %s.").printf (
-                "~/.local/share/sounds/\"%s\"".printf (_("theme-name"))
-            ),
-            hexpand = true
-        };
-        var sound_list = ThemeSettings.fetch_sound_themes ();
-        var sound_dropdown = new Gtk.DropDown (sound_list, null) {
-            valign = Gtk.Align.CENTER
-        };
-
-        var sound_dir_button = new OpenButton (
-            Path.build_filename (Environment.get_home_dir (), ".local", "share", "sounds")
-        );
-
-        var sound_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
-        sound_box.append (sound_label);
-        sound_box.append (sound_dropdown);
-        sound_box.append (sound_dir_button);
-
-        /*************************************************/
-        /* Force Dark Style                              */
-        /*************************************************/
-        var dark_style_label = new Granite.HeaderLabel (_("Force Dark Style")) {
-            secondary_text = _("Forces dark style on all apps, even if it's not supported. Requires restarting the application."),
-            hexpand = true
-        };
-        var dark_style_switch = new Gtk.Switch () {
-            valign = Gtk.Align.CENTER
-        };
-
-        var dark_style_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
-        dark_style_box.append (dark_style_label);
-        dark_style_box.append (dark_style_switch);
-
-        /*************************************************/
-        /* Window Control Layout                         */
-        /*************************************************/
-        var controls_label = new Granite.HeaderLabel (_("Window Control Layout")) {
-            secondary_text = _("Changes button layout of the window."),
-            hexpand = true
-        };
+        icon_list = ThemeSettings.fetch_icon_themes ();
+        cursor_list = ThemeSettings.fetch_cursor_themes ();
+        sound_list = ThemeSettings.fetch_sound_themes ();
 
         controls_list = new ListStore (typeof (StringIdObject));
         controls_list.append (new StringIdObject ("close:maximize", _("elementary")));
@@ -194,40 +235,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         controls_list.append (new StringIdObject ("close,minimize,maximize", _("macOS")));
         controls_list.append (new StringIdObject ("close,maximize,minimize", _("Windows Reversed")));
 
-        controls_dropdown = DropDownId.new (controls_list);
-
-        var controls_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
-            margin_top = 24
-        };
-        controls_box.append (controls_label);
-        controls_box.append (controls_dropdown);
-
-        /*************************************************/
-        /* Show GNOME Menu                               */
-        /*************************************************/
-        var gnome_menu_switch_label = new Granite.HeaderLabel (_("Show GNOME Menu")) {
-            secondary_text = _("Whether to show GNOME menu in GNOME apps."),
-            hexpand = true
-        };
-        gnome_menu_switch = new Gtk.Switch () {
-            valign = Gtk.Align.CENTER
-        };
-
-        var gnome_menu_switch_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
-        gnome_menu_switch_box.append (gnome_menu_switch_label);
-        gnome_menu_switch_box.append (gnome_menu_switch);
-
         gtk_theme_settings_to_dropdown ();
         controls_settings_to_dropdown ();
         gnome_menu_switch.active = x_settings.has_gnome_menu ();
-
-        content_area.attach (gtk_theme_box, 0, 0, 1, 1);
-        content_area.attach (icon_box, 0, 1, 1, 1);
-        content_area.attach (cursor_box, 0, 2, 1, 1);
-        content_area.attach (sound_box, 0, 3, 1, 1);
-        content_area.attach (dark_style_box, 0, 4, 1, 1);
-        content_area.attach (controls_box, 0, 5, 1, 1);
-        content_area.attach (gnome_menu_switch_box, 0, 6, 1, 1);
 
         interface_settings.bind_with_mapping ("icon-theme",
             icon_dropdown, "selected",
@@ -250,7 +260,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             (SettingsBindSetMappingShared) DropDownUtil.selected_to_settings_value,
             sound_list, null);
 
-        gtk_settings.bind_property ("prefer-dark-theme", dark_style_switch, "active", BindingFlags.SYNC_CREATE | BindingFlags.BIDIRECTIONAL);
+        gtk_settings.bind_property ("prefer-dark-theme",
+            dark_style_switch, "active",
+            BindingFlags.SYNC_CREATE | BindingFlags.BIDIRECTIONAL);
 
         if (((DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
             ((DBusProxy) pantheon_act).g_properties_changed.connect ((changed, invalid) => {
