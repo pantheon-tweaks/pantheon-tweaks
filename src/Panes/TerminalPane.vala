@@ -118,12 +118,12 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         term_font_box.append (term_font_label);
         term_font_box.append (term_font_button);
 
-        content_area.attach (follow_last_tab_box, 0, 0, 1, 1);
-        content_area.attach (unsafe_paste_alert_box, 0, 1, 1, 1);
-        content_area.attach (rem_tabs_box, 0, 2, 1, 1);
-        content_area.attach (term_bell_box, 0, 3, 1, 1);
-        content_area.attach (tab_bar_box, 0, 4, 1, 1);
-        content_area.attach (term_font_box, 0, 5, 1, 1);
+        content_area.append (follow_last_tab_box);
+        content_area.append (unsafe_paste_alert_box);
+        content_area.append (rem_tabs_box);
+        content_area.append (term_bell_box);
+        content_area.append (tab_bar_box);
+        content_area.append (term_font_box);
     }
 
     public override bool load () {

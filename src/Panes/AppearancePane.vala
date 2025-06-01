@@ -203,13 +203,13 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         gnome_menu_switch_box.append (gnome_menu_switch_label);
         gnome_menu_switch_box.append (gnome_menu_switch);
 
-        content_area.attach (gtk_theme_box, 0, 0, 1, 1);
-        content_area.attach (icon_box, 0, 1, 1, 1);
-        content_area.attach (cursor_box, 0, 2, 1, 1);
-        content_area.attach (sound_box, 0, 3, 1, 1);
-        content_area.attach (dark_style_box, 0, 4, 1, 1);
-        content_area.attach (controls_box, 0, 5, 1, 1);
-        content_area.attach (gnome_menu_switch_box, 0, 6, 1, 1);
+        content_area.append (gtk_theme_box);
+        content_area.append (icon_box);
+        content_area.append (cursor_box);
+        content_area.append (sound_box);
+        content_area.append (dark_style_box);
+        content_area.append (controls_box);
+        content_area.append (gnome_menu_switch_box);
     }
 
     public override bool load () {

@@ -35,8 +35,8 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
         max_volume_box.append (max_volume_scale);
         max_volume_box.append (max_volume_spinbutton);
 
-        content_area.attach (indicator_sound_label, 0, 0, 1, 1);
-        content_area.attach (max_volume_box, 0, 1, 1, 1);
+        content_area.append (indicator_sound_label);
+        content_area.append (max_volume_box);
     }
 
     public override bool load () {
