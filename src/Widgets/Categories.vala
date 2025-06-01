@@ -5,10 +5,25 @@
  */
 
 public class PantheonTweaks.Categories : Gtk.Box {
+    private List<BasePane> panes;
+
     private Gtk.Stack stack;
     private Granite.Toast toast;
 
+    ~Categories () {
+        for (unowned List<BasePane> pane = panes; pane != null; pane = panes.first ()) {
+            panes.delete_link (pane);
+        }
+    }
+
     construct {
+        panes = new List<BasePane> ();
+        panes.append (new Panes.AppearancePane ());
+        panes.append (new Panes.FontsPane ());
+        panes.append (new Panes.MiscPane ());
+        panes.append (new Panes.FilesPane ());
+        panes.append (new Panes.TerminalPane ());
+
         stack = new Gtk.Stack ();
         var pane_list = new Switchboard.SettingsSidebar (stack) {
             show_title_buttons = true
@@ -30,36 +45,29 @@ public class PantheonTweaks.Categories : Gtk.Box {
         paned.set_start_child (pane_list);
         paned.set_end_child (overlay);
 
+        panes.foreach ((pane) => {
+            pane.restored.connect (() => {
+                toast.send_notification ();
+            });
+
+            stack.add_titled (pane, pane.name, pane.title);
+        });
+
         append (paned);
     }
 
     public void load () {
-        var panes = new List<BasePane> ();
-        panes.append (new Panes.AppearancePane ());
-        panes.append (new Panes.FontsPane ());
-        panes.append (new Panes.MiscPane ());
-        panes.append (new Panes.FilesPane ());
-        panes.append (new Panes.TerminalPane ());
-
-        for (unowned List<BasePane> pane = panes; pane != null; pane = panes.first ()) {
-            unowned BasePane _pane = pane.data;
-
-            stack.add_titled (_pane, _pane.name, _pane.title);
-            panes.remove_link (pane);
-
-            bool ret = _pane.load ();
+        panes.foreach ((pane) => {
+            bool ret = pane.load ();
             if (!ret) {
                 Dialog.show_error_dialog (
-                    _("Failed to Load %s Preference").printf (_pane.title),
+                    _("Failed to Load %s Preference").printf (pane.title),
                     _("Make sure your Pantheon desktop installation is up to date and not incomplete.")
                 );
 
-                continue;
+                // continue to the next pane
+                return;
             }
-
-            _pane.restored.connect (() => {
-                toast.send_notification ();
-            });
-        }
+        });
     }
 }
