@@ -85,10 +85,10 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
         titlebar_font_box.append (titlebar_font_label);
         titlebar_font_box.append (titlebar_font_button);
 
-        content_area.attach (default_font_box, 0, 0, 1, 1);
-        content_area.attach (document_font_box, 0, 1, 1, 1);
-        content_area.attach (mono_font_box, 0, 2, 1, 1);
-        content_area.attach (titlebar_font_box, 0, 3, 1, 1);
+        content_area.append (default_font_box);
+        content_area.append (document_font_box);
+        content_area.append (mono_font_box);
+        content_area.append (titlebar_font_box);
     }
 
     public override bool load () {

@@ -11,7 +11,7 @@ public abstract class BasePane : Switchboard.SettingsPage {
     protected abstract void do_reset ();
 
     protected bool is_load_success { get; protected set; }
-    protected Gtk.Grid content_area;
+    protected Gtk.Box content_area;
 
     protected BasePane (string name, string title, string icon_name, string? description = null) {
         Object (
@@ -27,9 +27,7 @@ public abstract class BasePane : Switchboard.SettingsPage {
 
         is_load_success = false;
 
-        content_area = new Gtk.Grid () {
-            column_spacing = 12,
-            row_spacing = 18,
+        content_area = new Gtk.Box (Gtk.Orientation.VERTICAL, 12) {
             vexpand = true,
             hexpand = true
         };

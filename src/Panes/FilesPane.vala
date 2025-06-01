@@ -51,8 +51,8 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
         date_format_box.append (date_format_label);
         date_format_box.append (date_format_dropdown);
 
-        content_area.attach (restore_tabs_box, 0, 0, 1, 1);
-        content_area.attach (date_format_box, 0, 1, 1, 1);
+        content_area.append (restore_tabs_box);
+        content_area.append (date_format_box);
     }
 
     public override bool load () {
