@@ -4,7 +4,7 @@
  *                         Pantheon Tweaks Developers, 2020-2025
  */
 
-namespace DropDownId {
+namespace PantheonTweaks.DropDownId {
     public static Gtk.DropDown new (owned ListModel? list_model) {
         var list_factory = new Gtk.SignalListItemFactory ();
         list_factory.setup.connect (list_factory_setup);

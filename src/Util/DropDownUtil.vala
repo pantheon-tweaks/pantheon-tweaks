@@ -4,7 +4,7 @@
  *                         Pantheon Tweaks Developers, 2020-2025
  */
 
-namespace DropDownUtil {
+namespace PantheonTweaks.DropDownUtil {
     public static bool settings_value_to_selected (Value selected, Variant settings_value, void* user_data) {
         string selected_id = settings_value.get_string ();
         var list = (Gtk.StringList) user_data;

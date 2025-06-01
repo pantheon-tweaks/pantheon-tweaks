@@ -4,7 +4,7 @@
  *                         Pantheon Tweaks Developers, 2020-2025
  */
 
-namespace SchemaUtil {
+namespace PantheonTweaks.SchemaUtil {
     public const string INTERFACE_SCHEMA = "org.gnome.desktop.interface";
     public const string SOUND_SCHEMA = "org.gnome.desktop.sound";
     public const string GNOME_WM_SCHEMA = "org.gnome.desktop.wm.preferences";

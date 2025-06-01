@@ -4,7 +4,7 @@
  *                         Pantheon Tweaks Developers, 2020-2025
  */
 
-public abstract class BasePane : Switchboard.SettingsPage {
+public abstract class PantheonTweaks.BasePane : Switchboard.SettingsPage {
     public signal void restored ();
 
     public abstract bool load ();

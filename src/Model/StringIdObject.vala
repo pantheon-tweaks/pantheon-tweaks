@@ -4,7 +4,7 @@
  *                         Pantheon Tweaks Developers, 2020-2025
  */
 
-public class StringIdObject : Object {
+public class PantheonTweaks.StringIdObject : Object {
     public string id { get; construct; }
     public string display_text { get; construct; }
 
