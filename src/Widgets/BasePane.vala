@@ -27,7 +27,7 @@ public abstract class BasePane : Switchboard.SettingsPage {
 
         is_load_success = false;
 
-        content_area = new Gtk.Box (Gtk.Orientation.VERTICAL, 12) {
+        content_area = new Gtk.Box (Gtk.Orientation.VERTICAL, 18) {
             vexpand = true,
             hexpand = true
         };
