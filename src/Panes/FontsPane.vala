@@ -27,10 +27,12 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
         var default_font_label = new Granite.HeaderLabel (_("Default Font")) {
             hexpand = true
         };
+
         default_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
             valign = Gtk.Align.CENTER,
             use_font = true
         };
+
         var default_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         default_font_box.append (default_font_label);
         default_font_box.append (default_font_button);
@@ -41,10 +43,12 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
         var document_font_label = new Granite.HeaderLabel (_("Document Font")) {
             hexpand = true
         };
+
         document_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
             valign = Gtk.Align.CENTER,
             use_font = true
         };
+
         var document_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         document_font_box.append (document_font_label);
         document_font_box.append (document_font_button);
@@ -55,10 +59,12 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
         var mono_font_label = new Granite.HeaderLabel (_("Monospace Font")) {
             hexpand = true
         };
+
         mono_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
             valign = Gtk.Align.CENTER,
             use_font = true,
         };
+
         var mono_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         mono_font_box.append (mono_font_label);
         mono_font_box.append (mono_font_button);
@@ -69,10 +75,12 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
         var titlebar_font_label = new Granite.HeaderLabel (_("Titlebar Font")) {
             hexpand = true
         };
+
         titlebar_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
             valign = Gtk.Align.CENTER,
             use_font = true
         };
+
         var titlebar_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         titlebar_font_box.append (titlebar_font_label);
         titlebar_font_box.append (titlebar_font_button);

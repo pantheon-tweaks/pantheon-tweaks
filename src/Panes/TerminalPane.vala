@@ -27,9 +27,11 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
             secondary_text = _("Creating a new tab sets the working directory of the last opened tab."),
             hexpand = true
         };
+
         follow_last_tab_switch = new Gtk.Switch () {
             valign = Gtk.Align.CENTER
         };
+
         var follow_last_tab_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         follow_last_tab_box.append (follow_last_tab_label);
         follow_last_tab_box.append (follow_last_tab_switch);
@@ -41,9 +43,11 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
             secondary_text = _("Warn when pasted text contains multiple or administrative commands."),
             hexpand = true
         };
+
         unsafe_paste_alert_switch = new Gtk.Switch () {
             valign = Gtk.Align.CENTER
         };
+
         var unsafe_paste_alert_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         unsafe_paste_alert_box.append (unsafe_paste_alert_label);
         unsafe_paste_alert_box.append (unsafe_paste_alert_switch);
@@ -55,9 +59,11 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
             secondary_text = _("If enabled, last opened tabs are restored on start."),
             hexpand = true
         };
+
         rem_tabs_switch = new Gtk.Switch () {
             valign = Gtk.Align.CENTER
         };
+
         var rem_tabs_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         rem_tabs_box.append (rem_tabs_label);
         rem_tabs_box.append (rem_tabs_switch);
@@ -69,9 +75,11 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
             secondary_text = _("Sound when hitting the end of a line and also for tab-completion when there are either no or multiple possible completions."), // vala-lint=line-length
             hexpand = true
         };
+
         term_bell_switch = new Gtk.Switch () {
             valign = Gtk.Align.CENTER
         };
+
         var term_bell_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         term_bell_box.append (term_bell_label);
         term_bell_box.append (term_bell_switch);
@@ -79,14 +87,15 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         /*************************************************/
         /* Show Tabs                                     */
         /*************************************************/
+        var tab_bar_label = new Granite.HeaderLabel (_("Show Tabs")) {
+            hexpand = true
+        };
+
         tab_bar_list = new ListStore (typeof (StringIdObject));
         tab_bar_list.append (new StringIdObject ("Always Show Tabs", _("Always")));
         tab_bar_list.append (new StringIdObject ("Hide When Single Tab", _("Hide when single tab")));
         tab_bar_list.append (new StringIdObject ("Never Show Tabs", _("Never")));
 
-        var tab_bar_label = new Granite.HeaderLabel (_("Show Tabs")) {
-            hexpand = true
-        };
         tab_bar_dropdown = DropDownId.new (tab_bar_list);
 
         var tab_bar_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
@@ -99,10 +108,12 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         var term_font_label = new Granite.HeaderLabel (_("Terminal Font")) {
             hexpand = true
         };
+
         term_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
             valign = Gtk.Align.CENTER,
             use_font = true
         };
+
         var term_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         term_font_box.append (term_font_label);
         term_font_box.append (term_font_button);

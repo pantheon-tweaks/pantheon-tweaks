@@ -47,7 +47,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             ),
             hexpand = true
         };
+
         gtk_list = new Gtk.StringList (null);
+
         gtk_dropdown = new Gtk.DropDown (gtk_list, null) {
             valign = Gtk.Align.CENTER
         };
@@ -71,7 +73,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             ),
             hexpand = true
         };
+
         icon_list = new Gtk.StringList (null);
+
         icon_dropdown = new Gtk.DropDown (icon_list, null) {
             valign = Gtk.Align.CENTER
         };
@@ -95,7 +99,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             ),
             hexpand = true
         };
+
         cursor_list = new Gtk.StringList (null);
+
         cursor_dropdown = new Gtk.DropDown (cursor_list, null) {
             valign = Gtk.Align.CENTER
         };
@@ -119,7 +125,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             ),
             hexpand = true
         };
+
         sound_list = new Gtk.StringList (null);
+
         sound_dropdown = new Gtk.DropDown (sound_list, null) {
             valign = Gtk.Align.CENTER
         };
@@ -140,6 +148,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             secondary_text = _("Forces dark style on all apps, even if it's not supported. Requires restarting the application."), // vala-lint=line-length
             hexpand = true
         };
+
         dark_style_switch = new Gtk.Switch () {
             valign = Gtk.Align.CENTER
         };
@@ -185,6 +194,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             secondary_text = _("Whether to show GNOME menu in GNOME apps."),
             hexpand = true
         };
+
         gnome_menu_switch = new Gtk.Switch () {
             valign = Gtk.Align.CENTER
         };

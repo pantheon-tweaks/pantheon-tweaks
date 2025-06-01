@@ -23,9 +23,11 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
             secondary_text = _("Restore tabs from previous session when launched."),
             hexpand = true
         };
+
         restore_tabs_switch = new Gtk.Switch () {
             valign = Gtk.Align.CENTER
         };
+
         var restore_tabs_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         restore_tabs_box.append (restore_tabs_label);
         restore_tabs_box.append (restore_tabs_switch);
@@ -42,6 +44,7 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
             secondary_text = _("Date format used in the properties dialog or the list view."),
             hexpand = true
         };
+
         date_format_dropdown = DropDownId.new (date_format_list);
 
         var date_format_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
