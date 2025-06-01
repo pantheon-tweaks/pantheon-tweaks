@@ -4,7 +4,7 @@
  *                         Pantheon Tweaks Developers, 2020-2025
  */
 
-public class DropDownRow : Gtk.Box {
+public class PantheonTweaks.DropDownRow : Gtk.Box {
     public Gtk.Label label { get; set; }
 
     public DropDownRow () {

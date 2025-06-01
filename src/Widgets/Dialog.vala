@@ -4,7 +4,7 @@
  *                         Pantheon Tweaks Developers, 2020-2025
  */
 
-namespace Dialog {
+namespace PantheonTweaks.Dialog {
     private const string HELP_URL = "https://github.com/pantheon-tweaks/pantheon-tweaks/discussions";
 
     public void show_error_dialog (string title, string desc, string? details = null) {

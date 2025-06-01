@@ -4,7 +4,7 @@
  *                         Pantheon Tweaks Developers, 2020-2025
  */
 
-public class OpenButton : Gtk.Button {
+public class PantheonTweaks.OpenButton : Gtk.Button {
     public string path { get; construct; }
 
     public OpenButton (string path) {

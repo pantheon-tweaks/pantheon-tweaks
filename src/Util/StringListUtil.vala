@@ -4,7 +4,7 @@
  *                         Pantheon Tweaks Developers, 2020-2025
  */
 
-namespace StringListUtil {
+namespace PantheonTweaks.StringListUtil {
     // TODO: Remove in favor of Gtk.StringList.find() which is only available on GTK >= 4.18
     public static uint find (Gtk.StringList list, string str) {
         uint pos = uint.MAX;

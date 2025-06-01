@@ -4,7 +4,7 @@
  *                         Pantheon Tweaks Developers, 2020-2025
  */
 
-namespace StringIdListUtil {
+namespace PantheonTweaks.StringIdListUtil {
     public static uint find (ListStore list, string id) {
         assert (list.item_type == typeof (StringIdObject));
 
