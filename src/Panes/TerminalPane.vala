@@ -127,11 +127,11 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
     }
 
     public override bool load () {
-        if (!SchemaUtil.schema_exists (SchemaUtil.TERMINAL_SCHEMA)) {
-            warning ("Could not find settings schema %s", SchemaUtil.TERMINAL_SCHEMA);
+        if (!SettingsUtil.schema_exists (SettingsUtil.TERMINAL_SCHEMA)) {
+            warning ("Could not find settings schema %s", SettingsUtil.TERMINAL_SCHEMA);
             return false;
         }
-        settings = new Settings (SchemaUtil.TERMINAL_SCHEMA);
+        settings = new Settings (SettingsUtil.TERMINAL_SCHEMA);
 
         settings.bind ("follow-last-tab", follow_last_tab_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("unsafe-paste-alert", unsafe_paste_alert_switch, "active", SettingsBindFlags.DEFAULT);
@@ -141,15 +141,15 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         settings.bind_with_mapping ("tab-bar-behavior",
             tab_bar_dropdown, "selected",
             SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) DropDownId.settings_value_to_selected,
-            (SettingsBindSetMappingShared) DropDownId.selected_to_settings_value,
+            (SettingsBindGetMappingShared) SettingsUtil.Binding.to_dropdownid_selected,
+            (SettingsBindSetMappingShared) SettingsUtil.Binding.from_dropdownid_selected,
             tab_bar_list, null);
 
         settings.bind_with_mapping ("font",
             term_font_button, "font-desc",
             SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) font_button_bind_get,
-            (SettingsBindSetMappingShared) font_button_bind_set,
+            (SettingsBindGetMappingShared) SettingsUtil.Binding.to_fontbutton_fontdesc,
+            (SettingsBindSetMappingShared) SettingsUtil.Binding.from_fontbutton_fontdesc,
             null, null);
 
         is_load_success = true;

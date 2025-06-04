@@ -56,19 +56,19 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
     }
 
     public override bool load () {
-        if (!SchemaUtil.schema_exists (SchemaUtil.FILES_SCHEMA)) {
-            warning ("Could not find settings schema %s", SchemaUtil.FILES_SCHEMA);
+        if (!SettingsUtil.schema_exists (SettingsUtil.FILES_SCHEMA)) {
+            warning ("Could not find settings schema %s", SettingsUtil.FILES_SCHEMA);
             return false;
         }
-        settings = new Settings (SchemaUtil.FILES_SCHEMA);
+        settings = new Settings (SettingsUtil.FILES_SCHEMA);
 
         settings.bind ("restore-tabs", restore_tabs_switch, "active", SettingsBindFlags.DEFAULT);
 
         settings.bind_with_mapping ("date-format",
             date_format_dropdown, "selected",
             SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) DropDownId.settings_value_to_selected,
-            (SettingsBindSetMappingShared) DropDownId.selected_to_settings_value,
+            (SettingsBindGetMappingShared) SettingsUtil.Binding.to_dropdownid_selected,
+            (SettingsBindSetMappingShared) SettingsUtil.Binding.from_dropdownid_selected,
             date_format_list, null);
 
         is_load_success = true;

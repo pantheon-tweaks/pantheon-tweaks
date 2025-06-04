@@ -21,33 +21,6 @@ namespace PantheonTweaks.DropDownId {
         return dropdown;
     }
 
-    public static bool settings_value_to_selected (Value selected, Variant settings_value, void* user_data) {
-        string selected_id = settings_value.get_string ();
-        var list = (ListStore) user_data;
-
-        uint selected_pos = StringIdListUtil.find (list, selected_id);
-        if (selected_pos == Gtk.INVALID_LIST_POSITION) {
-            selected.set_uint (selected_pos);
-            // Never returns false because it causes intentional crash
-            return true;
-        }
-
-        selected.set_uint (selected_pos);
-        return true;
-    }
-
-    public static Variant selected_to_settings_value (Value selected, VariantType value_type, void* user_data) {
-        uint selected_pos = selected.get_uint ();
-        var list = (ListStore) user_data;
-
-        string? selected_id = StringIdListUtil.get_id (list, selected_pos);
-        if (selected_id == null) {
-            return new Variant.string ("");
-        }
-
-        return new Variant.string (selected_id);
-    }
-
     private static void list_factory_setup (Object object) {
         var item = object as Gtk.ListItem;
 

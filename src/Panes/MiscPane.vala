@@ -40,11 +40,11 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
     }
 
     public override bool load () {
-        if (!SchemaUtil.schema_exists (SchemaUtil.PANEL_SOUND_SCHEMA)) {
-            warning ("Could not find settings schema %s", SchemaUtil.PANEL_SOUND_SCHEMA);
+        if (!SettingsUtil.schema_exists (SettingsUtil.PANEL_SOUND_SCHEMA)) {
+            warning ("Could not find settings schema %s", SettingsUtil.PANEL_SOUND_SCHEMA);
             return false;
         }
-        sound_settings = new Settings (SchemaUtil.PANEL_SOUND_SCHEMA);
+        sound_settings = new Settings (SettingsUtil.PANEL_SOUND_SCHEMA);
 
         sound_settings.bind ("max-volume", max_volume_spinbutton, "value", SettingsBindFlags.DEFAULT);
 
