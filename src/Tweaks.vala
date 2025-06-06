@@ -29,8 +29,8 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
         Granite.init ();
 
         // Follow OS-wide dark preference
-        var granite_settings = Granite.Settings.get_default ();
-        var gtk_settings = Gtk.Settings.get_default ();
+        unowned var granite_settings = Granite.Settings.get_default ();
+        unowned var gtk_settings = Gtk.Settings.get_default ();
 
         granite_settings.bind_property ("prefers-color-scheme", gtk_settings, "gtk-application-prefer-dark-theme",
             BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
