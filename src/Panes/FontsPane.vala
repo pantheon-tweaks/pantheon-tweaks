@@ -92,44 +92,44 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
     }
 
     public override bool load () {
-        if (!SchemaUtil.schema_exists (SchemaUtil.INTERFACE_SCHEMA)) {
-            warning ("Could not find settings schema %s", SchemaUtil.INTERFACE_SCHEMA);
+        if (!SettingsUtil.schema_exists (SettingsUtil.INTERFACE_SCHEMA)) {
+            warning ("Could not find settings schema %s", SettingsUtil.INTERFACE_SCHEMA);
             return false;
         }
-        interface_settings = new Settings (SchemaUtil.INTERFACE_SCHEMA);
+        interface_settings = new Settings (SettingsUtil.INTERFACE_SCHEMA);
 
-        if (!SchemaUtil.schema_exists (SchemaUtil.GNOME_WM_SCHEMA)) {
-            warning ("Could not find settings schema %s", SchemaUtil.GNOME_WM_SCHEMA);
+        if (!SettingsUtil.schema_exists (SettingsUtil.GNOME_WM_SCHEMA)) {
+            warning ("Could not find settings schema %s", SettingsUtil.GNOME_WM_SCHEMA);
             return false;
         }
-        gnome_wm_settings = new Settings (SchemaUtil.GNOME_WM_SCHEMA);
+        gnome_wm_settings = new Settings (SettingsUtil.GNOME_WM_SCHEMA);
 
         interface_settings.bind_with_mapping ("font-name",
             default_font_button, "font-desc",
             SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) font_button_bind_get,
-            (SettingsBindSetMappingShared) font_button_bind_set,
+            (SettingsBindGetMappingShared) SettingsUtil.Binding.to_fontbutton_fontdesc,
+            (SettingsBindSetMappingShared) SettingsUtil.Binding.from_fontbutton_fontdesc,
             null, null);
 
         interface_settings.bind_with_mapping ("document-font-name",
             document_font_button, "font-desc",
             SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) font_button_bind_get,
-            (SettingsBindSetMappingShared) font_button_bind_set,
+            (SettingsBindGetMappingShared) SettingsUtil.Binding.to_fontbutton_fontdesc,
+            (SettingsBindSetMappingShared) SettingsUtil.Binding.from_fontbutton_fontdesc,
             null, null);
 
         interface_settings.bind_with_mapping ("monospace-font-name",
             mono_font_button, "font-desc",
             SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) font_button_bind_get,
-            (SettingsBindSetMappingShared) font_button_bind_set,
+            (SettingsBindGetMappingShared) SettingsUtil.Binding.to_fontbutton_fontdesc,
+            (SettingsBindSetMappingShared) SettingsUtil.Binding.from_fontbutton_fontdesc,
             null, null);
 
         gnome_wm_settings.bind_with_mapping ("titlebar-font",
             titlebar_font_button, "font-desc",
             SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) font_button_bind_get,
-            (SettingsBindSetMappingShared) font_button_bind_set,
+            (SettingsBindGetMappingShared) SettingsUtil.Binding.to_fontbutton_fontdesc,
+            (SettingsBindSetMappingShared) SettingsUtil.Binding.from_fontbutton_fontdesc,
             null, null);
 
         is_load_success = true;

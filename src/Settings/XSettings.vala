@@ -35,11 +35,11 @@ public class PantheonTweaks.XSettings {
     }
 
     public bool load () {
-        if (!SchemaUtil.schema_exists (SchemaUtil.XSETTINGS_SCHEMA)) {
-            warning ("Could not find settings schema %s", SchemaUtil.XSETTINGS_SCHEMA);
+        if (!SettingsUtil.schema_exists (SettingsUtil.XSETTINGS_SCHEMA)) {
+            warning ("Could not find settings schema %s", SettingsUtil.XSETTINGS_SCHEMA);
             return false;
         }
-        settings = new Settings (SchemaUtil.XSETTINGS_SCHEMA);
+        settings = new Settings (SettingsUtil.XSETTINGS_SCHEMA);
 
         return true;
     }

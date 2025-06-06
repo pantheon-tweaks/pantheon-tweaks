@@ -213,17 +213,17 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     }
 
     public override bool load () {
-        if (!SchemaUtil.schema_exists (SchemaUtil.INTERFACE_SCHEMA)) {
-            warning ("Could not find settings schema %s", SchemaUtil.INTERFACE_SCHEMA);
+        if (!SettingsUtil.schema_exists (SettingsUtil.INTERFACE_SCHEMA)) {
+            warning ("Could not find settings schema %s", SettingsUtil.INTERFACE_SCHEMA);
             return false;
         }
-        interface_settings = new Settings (SchemaUtil.INTERFACE_SCHEMA);
+        interface_settings = new Settings (SettingsUtil.INTERFACE_SCHEMA);
 
-        if (!SchemaUtil.schema_exists (SchemaUtil.SOUND_SCHEMA)) {
-            warning ("Could not find settings schema %s", SchemaUtil.SOUND_SCHEMA);
+        if (!SettingsUtil.schema_exists (SettingsUtil.SOUND_SCHEMA)) {
+            warning ("Could not find settings schema %s", SettingsUtil.SOUND_SCHEMA);
             return false;
         }
-        sound_settings = new Settings (SchemaUtil.SOUND_SCHEMA);
+        sound_settings = new Settings (SettingsUtil.SOUND_SCHEMA);
 
         bool ret = x_settings.load ();
         if (!ret) {
@@ -232,11 +232,11 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
         gtk_settings = new GtkSettings ();
 
-        if (!SchemaUtil.schema_exists (SchemaUtil.GNOME_WM_SCHEMA)) {
-            warning ("Could not find settings schema %s", SchemaUtil.GNOME_WM_SCHEMA);
+        if (!SettingsUtil.schema_exists (SettingsUtil.GNOME_WM_SCHEMA)) {
+            warning ("Could not find settings schema %s", SettingsUtil.GNOME_WM_SCHEMA);
             return false;
         }
-        gnome_wm_settings = new Settings (SchemaUtil.GNOME_WM_SCHEMA);
+        gnome_wm_settings = new Settings (SettingsUtil.GNOME_WM_SCHEMA);
 
         FDO.Accounts? accounts_service;
         try {
@@ -302,22 +302,22 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         interface_settings.bind_with_mapping ("icon-theme",
             icon_dropdown, "selected",
             SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) DropDownUtil.settings_value_to_selected,
-            (SettingsBindSetMappingShared) DropDownUtil.selected_to_settings_value,
+            (SettingsBindGetMappingShared) SettingsUtil.Binding.to_dropdown_selected,
+            (SettingsBindSetMappingShared) SettingsUtil.Binding.from_dropdown_selected,
             icon_list, null);
 
         interface_settings.bind_with_mapping ("cursor-theme",
             cursor_dropdown, "selected",
             SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) DropDownUtil.settings_value_to_selected,
-            (SettingsBindSetMappingShared) DropDownUtil.selected_to_settings_value,
+            (SettingsBindGetMappingShared) SettingsUtil.Binding.to_dropdown_selected,
+            (SettingsBindSetMappingShared) SettingsUtil.Binding.from_dropdown_selected,
             cursor_list, null);
 
         sound_settings.bind_with_mapping ("theme-name",
             sound_dropdown, "selected",
             SettingsBindFlags.DEFAULT,
-            (SettingsBindGetMappingShared) DropDownUtil.settings_value_to_selected,
-            (SettingsBindSetMappingShared) DropDownUtil.selected_to_settings_value,
+            (SettingsBindGetMappingShared) SettingsUtil.Binding.to_dropdown_selected,
+            (SettingsBindSetMappingShared) SettingsUtil.Binding.from_dropdown_selected,
             sound_list, null);
 
         gtk_settings.bind_property ("prefer-dark-theme",
