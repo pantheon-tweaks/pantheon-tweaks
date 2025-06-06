@@ -34,10 +34,7 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
 
         granite_settings.bind_property ("prefers-color-scheme", gtk_settings, "gtk-application-prefer-dark-theme",
             BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
-            ((binding, granite_prop, ref gtk_prop) => {
-                gtk_prop.set_boolean ((Granite.Settings.ColorScheme) granite_prop == Granite.Settings.ColorScheme.DARK);
-                return true;
-            })
+            (BindingTransformFunc) granite_color_scheme_to_gtk_dark_theme
         );
     }
 
@@ -73,6 +70,13 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
                 window.destroy ();
             }
         });
+    }
+
+    // FIXME: Using the closure causes MainWindow not being freed when it's destroyed.
+    // Maybe due to valac: https://gitlab.gnome.org/GNOME/vala/-/issues/957
+    private static bool granite_color_scheme_to_gtk_dark_theme (Binding binding, Value granite_prop, ref Value gtk_prop) {
+        gtk_prop.set_boolean ((Granite.Settings.ColorScheme) granite_prop == Granite.Settings.ColorScheme.DARK);
+        return true;
     }
 
     public static int main (string[] args) {
