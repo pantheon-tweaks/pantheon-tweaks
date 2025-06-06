@@ -22,34 +22,25 @@ namespace PantheonTweaks.SettingsUtil {
     }
 
     namespace Binding {
-        /**
-         * Convert string representation of font to Pango.FontDescription.
-         *
-         * Note: String format is described at https://docs.gtk.org/Pango/type_func.FontDescription.from_string.html
-         * @see SettingsBindGetMappingShared
-         */
-        public static bool to_fontbutton_fontdesc (Value value, Variant variant, void* user_data) {
-            string font = variant.get_string ();
+        // string value in Settings → Gtk.FontDialogButton.font_desc
+        public static bool to_fontbutton_fontdesc (Value font_desc, Variant settings_value, void* user_data) {
+            string font = settings_value.get_string ();
             var desc = Pango.FontDescription.from_string (font);
-            value.set_boxed (desc);
+            font_desc.set_boxed (desc);
             return true;
         }
 
-        /**
-         * Convert Pango.FontDescription to string representation of font.
-         *
-         * Note: String format is described at https://docs.gtk.org/Pango/type_func.FontDescription.from_string.html
-         * @see SettingsBindSetMappingShared
-         */
-        public static Variant from_fontbutton_fontdesc (Value value, VariantType expected_type, void* user_data) {
-            var desc = (Pango.FontDescription) value.get_boxed ();
+        // Gtk.FontDialogButton.font_desc → string value in Settings
+        public static Variant from_fontbutton_fontdesc (Value font_desc, VariantType expected_type, void* user_data) {
+            var desc = (Pango.FontDescription) font_desc.get_boxed ();
             string font = desc.to_string ();
             return new Variant.string (font);
         }
 
-        public static bool to_dropdown_selected (Value selected, Variant settings_value, void* user_data) {
+        // string value in Settings → Gtk.DropDown.selected
+        public static bool to_dropdown_selected (Value selected, Variant settings_value, void* str_list) {
             string selected_id = settings_value.get_string ();
-            var list = (Gtk.StringList) user_data;
+            var list = (Gtk.StringList) str_list;
 
             uint selected_pos = StringListUtil.find (list, selected_id);
             if (selected_pos == uint.MAX) {
@@ -62,9 +53,10 @@ namespace PantheonTweaks.SettingsUtil {
             return true;
         }
 
-        public static Variant from_dropdown_selected (Value selected, VariantType value_type, void* user_data) {
+        // Gtk.DropDown.selected → string value in Settings
+        public static Variant from_dropdown_selected (Value selected, VariantType expected_type, void* str_list) {
             uint selected_pos = selected.get_uint ();
-            var list = (Gtk.StringList) user_data;
+            var list = (Gtk.StringList) str_list;
 
             unowned string? selected_id = list.get_string (selected_pos);
             if (selected_id == null) {
@@ -74,9 +66,10 @@ namespace PantheonTweaks.SettingsUtil {
             return new Variant.string (selected_id);
         }
 
-        public static bool to_dropdownid_selected (Value selected, Variant settings_value, void* user_data) {
+        // string value in Settings → Gtk.DropDown.selected
+        public static bool to_dropdownid_selected (Value selected, Variant settings_value, void* str_id_list) {
             string selected_id = settings_value.get_string ();
-            var list = (ListStore) user_data;
+            var list = (ListStore) str_id_list;
 
             uint selected_pos = StringIdListUtil.find (list, selected_id);
             if (selected_pos == Gtk.INVALID_LIST_POSITION) {
@@ -89,9 +82,10 @@ namespace PantheonTweaks.SettingsUtil {
             return true;
         }
 
-        public static Variant from_dropdownid_selected (Value selected, VariantType value_type, void* user_data) {
+        // Gtk.DropDown.selected → string value in Settings
+        public static Variant from_dropdownid_selected (Value selected, VariantType expected_type, void* str_id_list) {
             uint selected_pos = selected.get_uint ();
-            var list = (ListStore) user_data;
+            var list = (ListStore) str_id_list;
 
             string? selected_id = StringIdListUtil.get_id (list, selected_pos);
             if (selected_id == null) {
