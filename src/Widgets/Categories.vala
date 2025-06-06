@@ -12,6 +12,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
 
     ~Categories () {
         for (unowned List<BasePane> pane = panes; pane != null; pane = panes.first ()) {
+            stack.remove (pane.data);
             panes.delete_link (pane);
         }
     }
@@ -25,7 +26,8 @@ public class PantheonTweaks.Categories : Gtk.Box {
         panes.append (new Panes.TerminalPane ());
 
         stack = new Gtk.Stack ();
-        var pane_list = new Switchboard.SettingsSidebar (stack) {
+
+        var side_bar = new Switchboard.SettingsSidebar (stack) {
             show_title_buttons = true
         };
 
@@ -37,13 +39,13 @@ public class PantheonTweaks.Categories : Gtk.Box {
         overlay.add_overlay (toast);
 
         var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL) {
-            hexpand = true
+            hexpand = true,
+            resize_start_child = false,
+            shrink_start_child = false,
+            shrink_end_child = false,
+            start_child = side_bar,
+            end_child = overlay
         };
-        paned.resize_start_child = false;
-        paned.shrink_start_child = false;
-        paned.shrink_end_child = false;
-        paned.set_start_child (pane_list);
-        paned.set_end_child (overlay);
 
         panes.foreach ((pane) => {
             pane.restored.connect (() => {
