@@ -73,7 +73,7 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
     }
 
     // FIXME: Using the closure causes MainWindow not being freed when it's destroyed.
-    // Maybe due to valac: https://gitlab.gnome.org/GNOME/vala/-/issues/957
+    // Maybe due to this issue in vala: https://gitlab.gnome.org/GNOME/vala/-/issues/957
     private static bool granite_color_scheme_to_gtk_dark_theme (Binding binding, Value granite_prop, ref Value gtk_prop) {
         gtk_prop.set_boolean ((Granite.Settings.ColorScheme) granite_prop == Granite.Settings.ColorScheme.DARK);
         return true;
