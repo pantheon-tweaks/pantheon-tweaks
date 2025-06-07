@@ -23,4 +23,4 @@ jobs:
           GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          args: --update --never-fork io.github.pantheon_tweaks.pantheon-tweaks.yml
+          args: --update --never-fork build-aux/io.github.pantheon_tweaks.pantheon-tweaks.yml

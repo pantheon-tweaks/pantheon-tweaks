@@ -87,7 +87,7 @@ modules:
       - -Dsystheme_rootdir=/var/run/host/usr/share
     sources:
       - type: dir
-        path: .
+        path: ../
       - type: file
         path: start-pantheon-tweaks.sh
     post-install:

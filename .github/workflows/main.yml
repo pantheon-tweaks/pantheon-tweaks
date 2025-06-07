@@ -28,7 +28,7 @@ jobs:
         uses: flatpak/flatpak-github-actions/flatpak-builder@v6.5
         with:
           bundle: pantheon-tweaks.flatpak
-          manifest-path: io.github.pantheon_tweaks.pantheon-tweaks.yml
+          manifest-path: build-aux/io.github.pantheon_tweaks.pantheon-tweaks.yml
           run-tests: true
           cache-key: "flatpak-builder-${{ github.sha }}"
           arch: ${{ matrix.arch }}
