@@ -13,13 +13,7 @@ public abstract class PantheonTweaks.BasePane : Switchboard.SettingsPage {
     protected bool is_load_success { get; protected set; }
     protected Gtk.Box content_area;
 
-    protected BasePane (string name, string title, string icon_name, string? description = null) {
-        Object (
-            name: name,
-            title: title,
-            icon: new ThemedIcon (icon_name),
-            description: description
-        );
+    protected BasePane () {
     }
 
     construct {

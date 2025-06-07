@@ -14,9 +14,11 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
     private Settings gnome_wm_settings;
 
     public FontsPane () {
-        base (
-            "fonts", _("Fonts"), "preferences-desktop-font",
-            _("Change the fonts used in your system and documents by default.")
+        Object (
+            name: "fonts",
+            title: _("Fonts"),
+            icon: new ThemedIcon ("preferences-desktop-font"),
+            description: _("Change the fonts used in your system and documents by default.")
         );
     }
 
