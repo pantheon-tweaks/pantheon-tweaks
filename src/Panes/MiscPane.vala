@@ -10,9 +10,11 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
     private Settings sound_settings;
 
     public MiscPane () {
-        base (
-            "misc", _("Miscellaneous"), "application-x-addon",
-            _("Configure some other hidden settings.")
+        Object (
+            name: "misc",
+            title: _("Miscellaneous"),
+            icon: new ThemedIcon ("application-x-addon"),
+            description: _("Configure some other hidden settings.")
         );
     }
 

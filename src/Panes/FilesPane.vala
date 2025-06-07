@@ -12,7 +12,12 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
     private ListStore date_format_list;
 
     public FilesPane () {
-        base ("files", _("Files"), "system-file-manager");
+        Object (
+            name: "files",
+            title: _("Files"),
+            icon: new ThemedIcon ("system-file-manager"),
+            header: _("Applications")
+        );
     }
 
     construct {

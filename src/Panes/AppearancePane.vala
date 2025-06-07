@@ -30,9 +30,12 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     private ListStore controls_list;
 
     public AppearancePane () {
-        base (
-            "appearance", _("Appearance"), "preferences-desktop",
-            _("Change the theme and button layout of windows. Changing theme may cause visibility issue.")
+        Object (
+            name: "appearance",
+            title: _("Appearance"),
+            icon: new ThemedIcon ("preferences-desktop"),
+            description: _("Change the theme and button layout of windows. Changing theme may cause visibility issue."),
+            header: _("General")
         );
     }
 
