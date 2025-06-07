@@ -16,7 +16,11 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
     private ListStore tab_bar_list;
 
     public TerminalPane () {
-        base ("terminal", _("Terminal"), "utilities-terminal");
+        Object (
+            name: "terminal",
+            title: _("Terminal"),
+            icon: new ThemedIcon ("utilities-terminal")
+        );
     }
 
     construct {
