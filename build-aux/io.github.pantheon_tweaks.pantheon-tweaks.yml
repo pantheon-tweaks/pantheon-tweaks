@@ -79,6 +79,8 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: '^([\d.]+)$'
+      - type: patch
+        path: fix-null-access-on-selection-cleared.patch
 
   - name: pantheon-tweaks
     buildsystem: meson

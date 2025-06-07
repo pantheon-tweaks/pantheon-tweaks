@@ -1,0 +1,15 @@
+diff --git a/lib/SettingsSidebar.vala b/lib/SettingsSidebar.vala
+index f12b19b9..dbc3c35c 100644
+--- a/lib/SettingsSidebar.vala
++++ b/lib/SettingsSidebar.vala
+@@ -97,6 +97,10 @@ public class Switchboard.SettingsSidebar : Gtk.Widget {
+         add_css_class (Granite.STYLE_CLASS_SIDEBAR);
+ 
+         listbox.row_selected.connect ((row) => {
++            if (row == null) {
++                return;
++            }
++
+             stack.visible_child = ((SettingsSidebarRow) row).page;
+         });
+ 
