@@ -34,7 +34,8 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             name: "appearance",
             title: _("Appearance"),
             icon: new ThemedIcon ("preferences-desktop"),
-            description: _("Change the theme and button layout of windows. Changing theme may cause visibility issue.")
+            description: _("Change the theme and button layout of windows. Changing theme may cause visibility issue."),
+            header: _("General")
         );
     }
 

@@ -15,7 +15,8 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
         Object (
             name: "files",
             title: _("Files"),
-            icon: new ThemedIcon ("system-file-manager")
+            icon: new ThemedIcon ("system-file-manager"),
+            header: _("Applications")
         );
     }
 
