@@ -10,10 +10,12 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
     private Gtk.Switch rem_tabs_switch;
     private Gtk.Switch term_bell_switch;
     private Gtk.DropDown tab_bar_dropdown;
+    private Gtk.DropDown cursor_shape_dropdown;
     private Gtk.FontDialogButton term_font_button;
 
     private Settings settings;
     private ListStore tab_bar_list;
+    private ListStore cursor_shape_list;
 
     public TerminalPane () {
         Object (
@@ -107,6 +109,24 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         tab_bar_box.append (tab_bar_dropdown);
 
         /*************************************************/
+        /*  Cursor Shape                                 */
+        /*************************************************/
+        var cursor_shape_label = new Granite.HeaderLabel (_("Cursor Shape")) {
+            hexpand = true
+        };
+
+        cursor_shape_list = new ListStore (typeof (StringIdObject));
+        cursor_shape_list.append (new StringIdObject ("Block", _("Block")));
+        cursor_shape_list.append (new StringIdObject ("I-Beam", _("I-Beam")));
+        cursor_shape_list.append (new StringIdObject ("Underline", _("Underline")));
+
+        cursor_shape_dropdown = DropDownId.new (cursor_shape_list);
+
+        var cursor_shape_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        cursor_shape_box.append (cursor_shape_label);
+        cursor_shape_box.append (cursor_shape_dropdown);
+
+        /*************************************************/
         /* Terminal Font                                 */
         /*************************************************/
         var term_font_label = new Granite.HeaderLabel (_("Terminal Font")) {
@@ -127,6 +147,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         content_area.append (rem_tabs_box);
         content_area.append (term_bell_box);
         content_area.append (tab_bar_box);
+        content_area.append (cursor_shape_box);
         content_area.append (term_font_box);
     }
 
@@ -149,6 +170,13 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
             (SettingsBindSetMappingShared) SettingsUtil.Binding.from_dropdownid_selected,
             tab_bar_list, null);
 
+        settings.bind_with_mapping ("cursor-shape",
+            cursor_shape_dropdown, "selected",
+            SettingsBindFlags.DEFAULT,
+            (SettingsBindGetMappingShared) SettingsUtil.Binding.to_dropdownid_selected,
+            (SettingsBindSetMappingShared) SettingsUtil.Binding.from_dropdownid_selected,
+            cursor_shape_list, null);
+
         settings.bind_with_mapping ("font",
             term_font_button, "font-desc",
             SettingsBindFlags.DEFAULT,
@@ -162,7 +190,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
 
     protected override void do_reset () {
         string[] keys = {"follow-last-tab", "unsafe-paste-alert", "remember-tabs",
-                         "audible-bell", "tab-bar-behavior", "font"};
+                         "audible-bell", "tab-bar-behavior", "cursor-shape", "font"};
 
         foreach (unowned var key in keys) {
             settings.reset (key);
