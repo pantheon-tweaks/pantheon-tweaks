@@ -22,7 +22,7 @@ If you would like to install Pantheon Tweaks from source code, clone this reposi
 ```
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install -y --user flathub org.flatpak.Builder
-flatpak run org.flatpak.Builder build --user --install --force-clean --install-deps-from=flathub io.github.pantheon_tweaks.pantheon-tweaks.yml
+flatpak run org.flatpak.Builder builddir --user --install --force-clean --install-deps-from=flathub build-aux/io.github.pantheon_tweaks.pantheon-tweaks.yml
 ```
 
 ## Supported Versions

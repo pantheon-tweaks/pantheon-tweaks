@@ -1,5 +1,6 @@
 # build dirs
-build*
+.flatpak-builder
+builddir*
 
 # translations and metainfo
 po

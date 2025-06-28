@@ -36,8 +36,8 @@ public class PantheonTweaks.GtkSettings : Object {
 
         try {
             keyfile.load_from_file (path, 0);
-        } catch (Error e) {
-            warning ("Error loading GTK+ Keyfile settings.ini: " + e.message);
+        } catch (Error err) {
+            warning ("Error loading keyfile from '%s': %s", path, err.message);
         }
     }
 
@@ -49,8 +49,8 @@ public class PantheonTweaks.GtkSettings : Object {
 
         try {
             key_int = keyfile.get_integer ("Settings", key);
-        } catch (Error e) {
-            warning ("Error getting GTK+ int setting: " + e.message);
+        } catch (Error err) {
+            warning ("Error getting value of %s from keyfile: %s", key, err.message);
         }
 
         return key_int;
@@ -72,8 +72,8 @@ public class PantheonTweaks.GtkSettings : Object {
         try {
             string data = keyfile.to_data ();
             FileUtils.set_contents (path, data);
-        } catch (FileError e) {
-            warning ("Error saving GTK+ Keyfile settings.ini: " + e.message);
+        } catch (FileError err) {
+            warning ("Error saving keyfile to '%s': %s", path, err.message);
         }
     }
 }

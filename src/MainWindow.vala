@@ -5,6 +5,9 @@
  */
 
 public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
+    private Gtk.HeaderBar headerbar;
+    private Categories categories;
+
     public MainWindow (Gtk.Application app) {
         Object (
             application: app
@@ -12,38 +15,41 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
-        var headerbar = new Gtk.HeaderBar () {
+        headerbar = new Gtk.HeaderBar () {
             show_title_buttons = true,
             title_widget = new Gtk.Label (_("Tweaks"))
         };
 
         set_titlebar (headerbar);
+    }
 
-        string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
-        // Prevent Tweaks from launching and breaking preferences on other DEs
-        if (desktop_environment != "Pantheon") {
-            var unsupported_view = new Granite.Placeholder (
-                _("Your Desktop Environment Is Not Supported")
-            ) {
-                description = _("Pantheon Tweaks is a customization tool for Pantheon. Your desktop environment \"%s\" is not supported.").printf (desktop_environment),
-                icon = new ThemedIcon ("dialog-warning")
-            };
-            child = unsupported_view;
+    public void load () {
+        unowned string desktop_environment = Environment.get_variable ("XDG_CURRENT_DESKTOP");
+        if (desktop_environment == "Pantheon") {
+            load_on_pantheon ();
         } else {
-            var categories = new Categories ();
-            child = categories;
-            // Hide the headerbar in favor of SettingsPage and SettingsSidebar
-            headerbar.visible = false;
+            // Prevent Tweaks from launching and breaking preferences on other DEs
+            load_on_other (desktop_environment);
         }
+    }
 
-        // Follow OS-wide dark preference
-        var granite_settings = Granite.Settings.get_default ();
-        var gtk_settings = Gtk.Settings.get_default ();
+    private void load_on_other (string desktop_environment) {
+        var unsupported_view = new Granite.Placeholder (
+            _("Your Desktop Environment Is Not Supported")
+        ) {
+            description = _("Pantheon Tweaks is a customization tool for Pantheon. Your desktop environment \"%s\" is not supported.").printf (desktop_environment), // vala-lint=line-length
+            icon = new ThemedIcon ("dialog-warning")
+        };
+        child = unsupported_view;
+    }
 
-        gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
+    private void load_on_pantheon () {
+        categories = new Categories ();
+        child = categories;
 
-        granite_settings.notify["prefers-color-scheme"].connect (() => {
-            gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
-        });
+        // Hide the headerbar in favor of SettingsPage and SettingsSidebar, otherwise duplicated headerbars are shown
+        headerbar.visible = false;
+
+        categories.load ();
     }
 }

@@ -62,32 +62,51 @@ public class PantheonTweaks.ThemeSettings {
         "Adwaita", "Emacs", "Default", "default", "gnome", "hicolor"
     };
 
-    public static Gee.ArrayList<string>? fetch_gtk_themes () {
-        return fetch_themes ("themes", "gtk-3.0");
+    /**
+     * Checks if #dir contains a valid theme.
+     */
+    private delegate bool ValidateThemeFunc (string dir);
+
+    public static bool fetch_gtk_themes (Gtk.StringList list) {
+        return fetch_themes (list, "themes", (found_dir) => {
+                                var path = File.new_for_path (Path.build_filename (found_dir, "gtk-3.0"));
+                                return path.query_exists ();
+                            });
     }
 
-    public static Gee.ArrayList<string>? fetch_icon_themes () {
-        return fetch_themes ("icons", "index.theme");
+    public static bool fetch_icon_themes (Gtk.StringList list) {
+        return fetch_themes (list, "icons", (found_dir) => {
+                                var path = File.new_for_path (Path.build_filename (found_dir, "index.theme"));
+                                return path.query_exists ();
+                            });
     }
 
-    public static Gee.ArrayList<string>? fetch_cursor_themes () {
-        return fetch_themes ("icons", "cursors");
+    public static bool fetch_cursor_themes (Gtk.StringList list) {
+        return fetch_themes (list, "icons", (found_dir) => {
+                                var path = File.new_for_path (Path.build_filename (found_dir, "cursors"));
+                                return path.query_exists ();
+                            });
     }
 
-    public static Gee.ArrayList<string>? fetch_sound_themes () {
-        return fetch_themes ("sounds", "index.theme");
+    public static bool fetch_sound_themes (Gtk.StringList list) {
+        return fetch_themes (list, "sounds", (found_dir) => {
+                                var path = File.new_for_path (Path.build_filename (found_dir, "index.theme"));
+                                return path.query_exists ();
+                            });
     }
 
-    private static Gee.ArrayList<string>? fetch_themes (string path, string condition) {
-        var themes = new Gee.ArrayList<string> ();
+    private static bool fetch_themes (Gtk.StringList list, string subdir, ValidateThemeFunc valid_func) {
+        var themes = new Gtk.StringList (null);
+        unowned string home_dir = Environment.get_home_dir ();
 
-        string[] dirs = {
-            Config.SYSTHEME_ROOTDIR + "/" + path + "/",
-            Environment.get_home_dir () + "/." + path + "/",
-            Environment.get_home_dir () + "/.local/share/" + path + "/"};
+        string[] theme_dirs = {
+            Path.build_filename (Config.SYSTHEME_ROOTDIR, subdir),
+            Path.build_filename (home_dir, ".%s".printf (subdir)),
+            Path.build_filename (home_dir, ".local", "share", subdir),
+        };
 
-        foreach (string dir in dirs) {
-            var file = File.new_for_path (dir);
+        foreach (unowned string theme_dir in theme_dirs) {
+            var file = File.new_for_path (theme_dir);
             if (!file.query_exists ()) {
                 continue;
             }
@@ -95,9 +114,9 @@ public class PantheonTweaks.ThemeSettings {
             FileEnumerator enumerator;
             try {
                 enumerator = file.enumerate_children (FileAttribute.STANDARD_NAME, 0);
-            } catch (Error e) {
-                warning (e.message);
-                return null;
+            } catch (Error err) {
+                warning ("Failed to enumerate children under '%s': %s", theme_dir, err.message);
+                return false;
             }
 
             // Search for directories until reaching end of enumerator
@@ -105,9 +124,9 @@ public class PantheonTweaks.ThemeSettings {
             while (file_info != null) {
                 try {
                     file_info = enumerator.next_file ();
-                } catch (Error e) {
-                    warning (e.message);
-                    return null;
+                } catch (Error err) {
+                    warning ("Failed to refer info of next file under '%s': %s", theme_dir, err.message);
+                    return false;
                 }
 
                 // End of enumerator
@@ -120,24 +139,23 @@ public class PantheonTweaks.ThemeSettings {
                     continue;
                 }
 
-                var checktheme = File.new_for_path (dir + name + "/" + condition);
-                var checkicons = File.new_for_path (dir + name + "/48x48/" + condition);
-                if (!checktheme.query_exists () && !checkicons.query_exists ()) {
+                bool ret = valid_func (Path.build_filename (theme_dir, name));
+                if (!ret) {
                     continue;
                 }
 
-                if (themes.contains (name)) {
-                    continue;
-                }
-
-                themes.add (name);
+                themes.append (name);
             }
         }
 
-        themes.sort ((a, b) => {
-            return a.collate (b);
-        });
+        while (list.n_items > 0) {
+            list.remove (0);
+        }
 
-        return themes;
+        for (int i = 0; i < themes.n_items; i++) {
+            list.append (themes.get_string (i));
+        }
+
+        return true;
     }
 }

@@ -5,44 +5,71 @@
  */
 
 public class PantheonTweaks.Categories : Gtk.Box {
-    private Gee.ArrayList<BasePane> panes;
+    private List<BasePane> panes;
+
+    private Gtk.Stack stack;
+    private Granite.Toast toast;
+
+    ~Categories () {
+        for (unowned List<BasePane> pane = panes; pane != null; pane = panes.first ()) {
+            stack.remove (pane.data);
+            panes.delete_link (pane);
+        }
+    }
 
     construct {
-        panes = new Gee.ArrayList<BasePane> ();
-        panes.add (new Panes.AppearancePane ());
-        panes.add (new Panes.FontsPane ());
-        panes.add (new Panes.MiscPane ());
-        panes.add (new Panes.FilesPane ());
-        panes.add (new Panes.TerminalPane ());
+        panes = new List<BasePane> ();
+        panes.append (new Panes.AppearancePane ());
+        panes.append (new Panes.FontsPane ());
+        panes.append (new Panes.MiscPane ());
+        panes.append (new Panes.FilesPane ());
+        panes.append (new Panes.TerminalPane ());
 
-        var stack = new Gtk.Stack ();
-        var pane_list = new Switchboard.SettingsSidebar (stack) {
+        stack = new Gtk.Stack ();
+
+        var side_bar = new Switchboard.SettingsSidebar (stack) {
             show_title_buttons = true
         };
 
-        var toast = new Granite.Toast (_("Reset settings successfully"));
+        toast = new Granite.Toast (_("Reset settings successfully"));
 
         var overlay = new Gtk.Overlay () {
             child = stack
         };
         overlay.add_overlay (toast);
 
-        foreach (var pane in panes) {
-            stack.add_titled (pane, pane.name, pane.title);
+        var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL) {
+            hexpand = true,
+            resize_start_child = false,
+            shrink_start_child = false,
+            shrink_end_child = false,
+            start_child = side_bar,
+            end_child = overlay
+        };
+
+        panes.foreach ((pane) => {
             pane.restored.connect (() => {
                 toast.send_notification ();
             });
-        }
 
-        var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL) {
-            hexpand = true
-        };
-        paned.resize_start_child = false;
-        paned.shrink_start_child = false;
-        paned.shrink_end_child = false;
-        paned.set_start_child (pane_list);
-        paned.set_end_child (overlay);
+            stack.add_titled (pane, pane.name, pane.title);
+        });
 
         append (paned);
+    }
+
+    public void load () {
+        panes.foreach ((pane) => {
+            bool ret = pane.load ();
+            if (!ret) {
+                Dialog.show_error_dialog (
+                    _("Failed to Load %s Preference").printf (pane.title),
+                    _("Make sure your Pantheon desktop installation is up to date and not incomplete.")
+                );
+
+                // continue to the next pane
+                return;
+            }
+        });
     }
 }

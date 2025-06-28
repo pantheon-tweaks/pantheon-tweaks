@@ -32,7 +32,16 @@ public class PantheonTweaks.XSettings {
     private Settings settings;
 
     public XSettings () {
-        settings = new Settings ("org.gnome.settings-daemon.plugins.xsettings");
+    }
+
+    public bool load () {
+        if (!SettingsUtil.schema_exists (SettingsUtil.XSETTINGS_SCHEMA)) {
+            warning ("Could not find settings schema %s", SettingsUtil.XSETTINGS_SCHEMA);
+            return false;
+        }
+        settings = new Settings (SettingsUtil.XSETTINGS_SCHEMA);
+
+        return true;
     }
 
     public void reset () {
@@ -45,11 +54,17 @@ public class PantheonTweaks.XSettings {
 
     public void set_gnome_menu (bool set, string new_layout) {
         if (set) {
-            decoration_layout = new_layout + ",menu";
-            if (decoration_layout.contains (":,")) {
-                decoration_layout = decoration_layout.replace (":,", ":");
-            } else if (!decoration_layout.contains (":")) {
-                decoration_layout = new_layout + ":menu";
+            if (new_layout.has_suffix (":")) {
+                // e.g. "close:" → "close:menu"
+                decoration_layout = new_layout + "menu";
+            } else {
+                if (new_layout.contains (":")) {
+                    // e.g. "close:maximize" → "close:menu,maximize"
+                    decoration_layout = new_layout.replace (":", ":menu,");
+                } else {
+                    // e.g. "close,minimize,maximize" → "close,minimize,maximize:menu"
+                    decoration_layout = new_layout + ":menu";
+                }
             }
         } else {
             decoration_layout = new_layout;

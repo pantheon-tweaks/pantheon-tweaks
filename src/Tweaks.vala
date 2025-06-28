@@ -15,7 +15,7 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
 
         Object (
             application_id: "io.github.pantheon_tweaks.pantheon-tweaks",
-            flags: ApplicationFlags.FLAGS_NONE
+            flags: ApplicationFlags.DEFAULT_FLAGS
         );
     }
 
@@ -27,6 +27,17 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
         base.startup ();
 
         Granite.init ();
+
+        // Follow OS-wide dark preference
+        unowned var granite_settings = Granite.Settings.get_default ();
+        unowned var gtk_settings = Gtk.Settings.get_default ();
+
+        granite_settings.bind_property ("prefers-color-scheme", gtk_settings, "gtk-application-prefer-dark-theme",
+            BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
+            // FIXME: Using the lambda expression here causes MainWindow not being freed when it's destroyed.
+            // Maybe due to this issue in vala: https://gitlab.gnome.org/GNOME/vala/-/issues/957
+            (BindingTransformFunc) granite_color_scheme_to_gtk_dark_theme
+        );
     }
 
     protected override void activate () {
@@ -38,6 +49,9 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
         window = new MainWindow (this);
         // The window seems to need showing before restoring its size in Gtk4
         window.present ();
+
+        // Load after present because this may show warning dialogs on top of main window
+        window.load ();
 
         settings.bind ("window-height", window, "default-height", SettingsBindFlags.DEFAULT);
         settings.bind ("window-width", window, "default-width", SettingsBindFlags.DEFAULT);
@@ -58,6 +72,11 @@ public class PantheonTweaks.Tweaks : Gtk.Application {
                 window.destroy ();
             }
         });
+    }
+
+    private static bool granite_color_scheme_to_gtk_dark_theme (Binding binding, Value granite_prop, ref Value gtk_prop) {
+        gtk_prop.set_boolean ((Granite.Settings.ColorScheme) granite_prop == Granite.Settings.ColorScheme.DARK);
+        return true;
     }
 
     public static int main (string[] args) {

@@ -5,21 +5,22 @@
  */
 
 public class PantheonTweaks.Panes.FilesPane : BasePane {
-    private const string FILES_SCHEMA = "io.elementary.files.preferences";
+    private Gtk.Switch restore_tabs_switch;
+    private Gtk.DropDown date_format_dropdown;
 
     private Settings settings;
+    private ListStore date_format_list;
 
     public FilesPane () {
-        base ("files", _("Files"), "system-file-manager");
+        Object (
+            name: "files",
+            title: _("Files"),
+            icon: new ThemedIcon ("system-file-manager"),
+            header: _("Applications")
+        );
     }
 
     construct {
-        if (!if_show_pane ({ FILES_SCHEMA })) {
-            return;
-        }
-
-        settings = new Settings (FILES_SCHEMA);
-
         /*************************************************/
         /* Restore Tabs                                  */
         /*************************************************/
@@ -27,9 +28,11 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
             secondary_text = _("Restore tabs from previous session when launched."),
             hexpand = true
         };
-        var restore_tabs_switch = new Gtk.Switch () {
+
+        restore_tabs_switch = new Gtk.Switch () {
             valign = Gtk.Align.CENTER
         };
+
         var restore_tabs_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         restore_tabs_box.append (restore_tabs_label);
         restore_tabs_box.append (restore_tabs_switch);
@@ -37,32 +40,50 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
         /*************************************************/
         /* Date Format                                   */
         /*************************************************/
-        var date_format_map = new Gee.HashMap<string, string> ();
-        date_format_map.set ("locale", _("Locale"));
-        date_format_map.set ("iso", _("ISO"));
-        date_format_map.set ("informal", _("Informal"));
+        date_format_list = new ListStore (typeof (StringIdObject));
+        date_format_list.append (new StringIdObject ("locale", _("Locale")));
+        date_format_list.append (new StringIdObject ("iso", _("ISO")));
+        date_format_list.append (new StringIdObject ("informal", _("Informal")));
 
         var date_format_label = new Granite.HeaderLabel (_("Date Format")) {
             secondary_text = _("Date format used in the properties dialog or the list view."),
             hexpand = true
         };
-        var date_format_combo = combobox_text_new (date_format_map);
+
+        date_format_dropdown = DropDownId.new (date_format_list);
 
         var date_format_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         date_format_box.append (date_format_label);
-        date_format_box.append (date_format_combo);
+        date_format_box.append (date_format_dropdown);
 
-        content_area.attach (restore_tabs_box, 0, 0, 1, 1);
-        content_area.attach (date_format_box, 0, 1, 1, 1);
+        content_area.append (restore_tabs_box);
+        content_area.append (date_format_box);
+    }
+
+    public override bool load () {
+        if (!SettingsUtil.schema_exists (SettingsUtil.FILES_SCHEMA)) {
+            warning ("Could not find settings schema %s", SettingsUtil.FILES_SCHEMA);
+            return false;
+        }
+        settings = new Settings (SettingsUtil.FILES_SCHEMA);
 
         settings.bind ("restore-tabs", restore_tabs_switch, "active", SettingsBindFlags.DEFAULT);
-        settings.bind ("date-format", date_format_combo, "active_id", SettingsBindFlags.DEFAULT);
+
+        settings.bind_with_mapping ("date-format",
+            date_format_dropdown, "selected",
+            SettingsBindFlags.DEFAULT,
+            (SettingsBindGetMappingShared) SettingsUtil.Binding.to_dropdownid_selected,
+            (SettingsBindSetMappingShared) SettingsUtil.Binding.from_dropdownid_selected,
+            date_format_list, null);
+
+        is_load_success = true;
+        return true;
     }
 
     protected override void do_reset () {
         string[] keys = {"restore-tabs", "date-format"};
 
-        foreach (var key in keys) {
+        foreach (unowned var key in keys) {
             settings.reset (key);
         }
     }

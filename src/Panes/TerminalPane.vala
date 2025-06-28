@@ -5,21 +5,27 @@
  */
 
 public class PantheonTweaks.Panes.TerminalPane : BasePane {
-    private const string TERMINAL_SCHEMA = "io.elementary.terminal.settings";
+    private Gtk.Switch follow_last_tab_switch;
+    private Gtk.Switch unsafe_paste_alert_switch;
+    private Gtk.Switch rem_tabs_switch;
+    private Gtk.Switch term_bell_switch;
+    private Gtk.DropDown tab_bar_dropdown;
+    private Gtk.DropDown cursor_shape_dropdown;
+    private Gtk.FontDialogButton term_font_button;
 
     private Settings settings;
+    private ListStore tab_bar_list;
+    private ListStore cursor_shape_list;
 
     public TerminalPane () {
-        base ("terminal", _("Terminal"), "utilities-terminal");
+        Object (
+            name: "terminal",
+            title: _("Terminal"),
+            icon: new ThemedIcon ("utilities-terminal")
+        );
     }
 
     construct {
-        if (!if_show_pane ({ TERMINAL_SCHEMA })) {
-            return;
-        }
-
-        settings = new Settings (TERMINAL_SCHEMA);
-
         /*************************************************/
         /* Follow Last Tab                               */
         /*************************************************/
@@ -27,9 +33,11 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
             secondary_text = _("Creating a new tab sets the working directory of the last opened tab."),
             hexpand = true
         };
-        var follow_last_tab_switch = new Gtk.Switch () {
+
+        follow_last_tab_switch = new Gtk.Switch () {
             valign = Gtk.Align.CENTER
         };
+
         var follow_last_tab_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         follow_last_tab_box.append (follow_last_tab_label);
         follow_last_tab_box.append (follow_last_tab_switch);
@@ -41,9 +49,11 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
             secondary_text = _("Warn when pasted text contains multiple or administrative commands."),
             hexpand = true
         };
-        var unsafe_paste_alert_switch = new Gtk.Switch () {
+
+        unsafe_paste_alert_switch = new Gtk.Switch () {
             valign = Gtk.Align.CENTER
         };
+
         var unsafe_paste_alert_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         unsafe_paste_alert_box.append (unsafe_paste_alert_label);
         unsafe_paste_alert_box.append (unsafe_paste_alert_switch);
@@ -55,9 +65,11 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
             secondary_text = _("If enabled, last opened tabs are restored on start."),
             hexpand = true
         };
-        var rem_tabs_switch = new Gtk.Switch () {
+
+        rem_tabs_switch = new Gtk.Switch () {
             valign = Gtk.Align.CENTER
         };
+
         var rem_tabs_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         rem_tabs_box.append (rem_tabs_label);
         rem_tabs_box.append (rem_tabs_switch);
@@ -69,9 +81,11 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
             secondary_text = _("Sound when hitting the end of a line and also for tab-completion when there are either no or multiple possible completions."), // vala-lint=line-length
             hexpand = true
         };
-        var term_bell_switch = new Gtk.Switch () {
+
+        term_bell_switch = new Gtk.Switch () {
             valign = Gtk.Align.CENTER
         };
+
         var term_bell_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         term_bell_box.append (term_bell_label);
         term_bell_box.append (term_bell_switch);
@@ -79,19 +93,38 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         /*************************************************/
         /* Show Tabs                                     */
         /*************************************************/
-        var tab_bar_map = new Gee.HashMap<string, string> ();
-        tab_bar_map.set ("Always Show Tabs", _("Always"));
-        tab_bar_map.set ("Hide When Single Tab", _("Hide when single tab"));
-        tab_bar_map.set ("Never Show Tabs", _("Never"));
-
         var tab_bar_label = new Granite.HeaderLabel (_("Show Tabs")) {
             hexpand = true
         };
-        var tab_bar_combo = combobox_text_new (tab_bar_map);
+
+        tab_bar_list = new ListStore (typeof (StringIdObject));
+        tab_bar_list.append (new StringIdObject ("Always Show Tabs", _("Always")));
+        tab_bar_list.append (new StringIdObject ("Hide When Single Tab", _("Hide when single tab")));
+        tab_bar_list.append (new StringIdObject ("Never Show Tabs", _("Never")));
+
+        tab_bar_dropdown = DropDownId.new (tab_bar_list);
 
         var tab_bar_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         tab_bar_box.append (tab_bar_label);
-        tab_bar_box.append (tab_bar_combo);
+        tab_bar_box.append (tab_bar_dropdown);
+
+        /*************************************************/
+        /*  Cursor Shape                                 */
+        /*************************************************/
+        var cursor_shape_label = new Granite.HeaderLabel (_("Cursor Shape")) {
+            hexpand = true
+        };
+
+        cursor_shape_list = new ListStore (typeof (StringIdObject));
+        cursor_shape_list.append (new StringIdObject ("Block", _("Block")));
+        cursor_shape_list.append (new StringIdObject ("I-Beam", _("I-Beam")));
+        cursor_shape_list.append (new StringIdObject ("Underline", _("Underline")));
+
+        cursor_shape_dropdown = DropDownId.new (cursor_shape_list);
+
+        var cursor_shape_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        cursor_shape_box.append (cursor_shape_label);
+        cursor_shape_box.append (cursor_shape_dropdown);
 
         /*************************************************/
         /* Terminal Font                                 */
@@ -99,35 +132,67 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         var term_font_label = new Granite.HeaderLabel (_("Terminal Font")) {
             hexpand = true
         };
-        var term_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
+
+        term_font_button = new Gtk.FontDialogButton (new Gtk.FontDialog ()) {
             valign = Gtk.Align.CENTER,
             use_font = true
         };
+
         var term_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         term_font_box.append (term_font_label);
         term_font_box.append (term_font_button);
 
-        content_area.attach (follow_last_tab_box, 0, 0, 1, 1);
-        content_area.attach (unsafe_paste_alert_box, 0, 1, 1, 1);
-        content_area.attach (rem_tabs_box, 0, 2, 1, 1);
-        content_area.attach (term_bell_box, 0, 3, 1, 1);
-        content_area.attach (tab_bar_box, 0, 4, 1, 1);
-        content_area.attach (term_font_box, 0, 5, 1, 1);
+        content_area.append (follow_last_tab_box);
+        content_area.append (unsafe_paste_alert_box);
+        content_area.append (rem_tabs_box);
+        content_area.append (term_bell_box);
+        content_area.append (tab_bar_box);
+        content_area.append (cursor_shape_box);
+        content_area.append (term_font_box);
+    }
+
+    public override bool load () {
+        if (!SettingsUtil.schema_exists (SettingsUtil.TERMINAL_SCHEMA)) {
+            warning ("Could not find settings schema %s", SettingsUtil.TERMINAL_SCHEMA);
+            return false;
+        }
+        settings = new Settings (SettingsUtil.TERMINAL_SCHEMA);
 
         settings.bind ("follow-last-tab", follow_last_tab_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("unsafe-paste-alert", unsafe_paste_alert_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("remember-tabs", rem_tabs_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("audible-bell", term_bell_switch, "active", SettingsBindFlags.DEFAULT);
-        settings.bind ("tab-bar-behavior", tab_bar_combo, "active_id", SettingsBindFlags.DEFAULT);
-        settings.bind_with_mapping ("font", term_font_button, "font-desc", SettingsBindFlags.DEFAULT,
-                                    font_button_bind_get, font_button_bind_set, null, null);
+
+        settings.bind_with_mapping ("tab-bar-behavior",
+            tab_bar_dropdown, "selected",
+            SettingsBindFlags.DEFAULT,
+            (SettingsBindGetMappingShared) SettingsUtil.Binding.to_dropdownid_selected,
+            (SettingsBindSetMappingShared) SettingsUtil.Binding.from_dropdownid_selected,
+            tab_bar_list, null);
+
+        settings.bind_with_mapping ("cursor-shape",
+            cursor_shape_dropdown, "selected",
+            SettingsBindFlags.DEFAULT,
+            (SettingsBindGetMappingShared) SettingsUtil.Binding.to_dropdownid_selected,
+            (SettingsBindSetMappingShared) SettingsUtil.Binding.from_dropdownid_selected,
+            cursor_shape_list, null);
+
+        settings.bind_with_mapping ("font",
+            term_font_button, "font-desc",
+            SettingsBindFlags.DEFAULT,
+            (SettingsBindGetMappingShared) SettingsUtil.Binding.to_fontbutton_fontdesc,
+            (SettingsBindSetMappingShared) SettingsUtil.Binding.from_fontbutton_fontdesc,
+            null, null);
+
+        is_load_success = true;
+        return true;
     }
 
     protected override void do_reset () {
         string[] keys = {"follow-last-tab", "unsafe-paste-alert", "remember-tabs",
-                         "audible-bell", "tab-bar-behavior", "font"};
+                         "audible-bell", "tab-bar-behavior", "cursor-shape", "font"};
 
-        foreach (string key in keys) {
+        foreach (unowned var key in keys) {
             settings.reset (key);
         }
     }
