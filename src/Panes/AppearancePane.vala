@@ -40,13 +40,17 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     }
 
     construct {
+        unowned string home_dir = Environment.get_home_dir ();
+
         /*************************************************/
         /* GTK Theme                                     */
         /*************************************************/
+        var gtk_rootdir = Path.build_filename (home_dir, ".local", "share", "themes");
+
         var gtk_label = new Granite.HeaderLabel (_("GTK Theme")) {
             /// TRANSLATORS: The "%s" represents the path where custom themes are installed
             secondary_text = _("To show custom themes here, put them in %s.").printf (
-                "~/.local/share/themes/\"%s\"/gtk-3.0".printf (_("theme-name"))
+                "%s/\"%s\"/gtk-3.0".printf (gtk_rootdir, _("theme-name"))
             ),
             hexpand = true
         };
@@ -57,9 +61,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             valign = Gtk.Align.CENTER
         };
 
-        var gtk_dir_button = new OpenButton (
-            Path.build_filename (Environment.get_home_dir (), ".local", "share", "themes")
-        );
+        var gtk_dir_button = new OpenButton (gtk_rootdir);
 
         var gtk_theme_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         gtk_theme_box.append (gtk_label);
@@ -69,10 +71,12 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         /*************************************************/
         /* Icon Theme                                    */
         /*************************************************/
+        var icon_rootdir = Path.build_filename (home_dir, ".icons");
+
         var icon_label = new Granite.HeaderLabel (_("Icon Theme")) {
             /// TRANSLATORS: The "%s" represents the path where custom icons are installed
             secondary_text = _("To show custom icons here, put them in %s.").printf (
-                "~/.icons/\"%s\"".printf (_("theme-name"))
+                "%s/\"%s\"".printf (icon_rootdir, _("theme-name"))
             ),
             hexpand = true
         };
@@ -83,9 +87,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             valign = Gtk.Align.CENTER
         };
 
-        var icon_dir_button = new OpenButton (
-            Path.build_filename (Environment.get_home_dir (), ".icons")
-        );
+        var icon_dir_button = new OpenButton (icon_rootdir);
 
         var icon_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         icon_box.append (icon_label);
@@ -95,10 +97,12 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         /*************************************************/
         /* Cursor Theme                                  */
         /*************************************************/
+        var cursor_rootdir = Path.build_filename (home_dir, ".icons");
+
         var cursor_label = new Granite.HeaderLabel (_("Cursor Theme")) {
             /// TRANSLATORS: The "%s" represents the path where custom cursors are installed
             secondary_text = _("To show custom cursors here, put them in %s.").printf (
-                "~/.icons/\"%s\"/cursors".printf (_("theme-name"))
+                "%s/\"%s\"/cursors".printf (cursor_rootdir, _("theme-name"))
             ),
             hexpand = true
         };
@@ -109,9 +113,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             valign = Gtk.Align.CENTER
         };
 
-        var cursor_dir_button = new OpenButton (
-            Path.build_filename (Environment.get_home_dir (), ".icons")
-        );
+        var cursor_dir_button = new OpenButton (cursor_rootdir);
 
         var cursor_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         cursor_box.append (cursor_label);
@@ -121,10 +123,12 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         /*************************************************/
         /* Sound Theme                                   */
         /*************************************************/
+        var sound_rootdir = Path.build_filename (home_dir, ".local", "share", "sounds");
+
         var sound_label = new Granite.HeaderLabel (_("Sound Theme")) {
             /// TRANSLATORS: The "%s" represents the path where custom sounds are installed
             secondary_text = _("To show custom sounds here, put them in %s.").printf (
-                "~/.local/share/sounds/\"%s\"".printf (_("theme-name"))
+                "%s/\"%s\"".printf (sound_rootdir, _("theme-name"))
             ),
             hexpand = true
         };
@@ -135,9 +139,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             valign = Gtk.Align.CENTER
         };
 
-        var sound_dir_button = new OpenButton (
-            Path.build_filename (Environment.get_home_dir (), ".local", "share", "sounds")
-        );
+        var sound_dir_button = new OpenButton (sound_rootdir);
 
         var sound_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
         sound_box.append (sound_label);
