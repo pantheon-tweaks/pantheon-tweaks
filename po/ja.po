@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-14 15:44+0900\n"
+"POT-Creation-Date: 2025-07-19 22:44+0900\n"
 "PO-Revision-Date: 2024-11-04 22:39+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -17,6 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:5
+#: src/MainWindow.vala:20
 msgid "Pantheon Tweaks"
 msgstr "Pantheon Tweaks"
 
@@ -43,14 +44,10 @@ msgstr ""
 "けのシステムカスタマイズアプリです。"
 
 #: data/pantheon-tweaks.metainfo.xml.in.in:206
-#, fuzzy
-msgid "Appearance pane in the light mode"
-msgstr "“外観”ペイン"
-
 #: data/pantheon-tweaks.metainfo.xml.in.in:210
 #, fuzzy
-msgid "Appearance pane in the dark mode"
-msgstr "“外観”ペイン"
+msgid "Appearance pane"
+msgstr "外観"
 
 #. developer_name has deprecated since AppStream 1.0
 #: data/pantheon-tweaks.metainfo.xml.in.in:216
@@ -58,19 +55,14 @@ msgstr "“外観”ペイン"
 msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon Tweaks の開発者"
 
-#: src/MainWindow.vala:20
-msgid "Tweaks"
-msgstr "Tweaks"
-
 #: src/MainWindow.vala:38
-msgid "Your Desktop Environment Is Not Supported"
+#, fuzzy, c-format
+msgid "Your Desktop Environment \"%s\" Is Not Supported"
 msgstr "お使いのデスクトップ環境には対応していません"
 
 #: src/MainWindow.vala:40
-#, c-format
-msgid ""
-"Pantheon Tweaks is a customization tool for Pantheon. Your desktop "
-"environment \"%s\" is not supported."
+#, fuzzy
+msgid "Pantheon Tweaks is a customization tool for Pantheon."
 msgstr ""
 "Pantheon Tweaks は、Pantheon 用のカスタマイズツールです。お使いのデスクトップ"
 "環境\"%s\"には対応していません。"
@@ -91,56 +83,56 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:46
+#: src/Panes/AppearancePane.vala:50
 msgid "GTK Theme"
 msgstr "GTK テーマ"
 
 #. TRANSLATORS: The "%s" represents the path where custom themes are installed
-#: src/Panes/AppearancePane.vala:48
+#: src/Panes/AppearancePane.vala:52
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr "カスタムテーマをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:49 src/Panes/AppearancePane.vala:75
-#: src/Panes/AppearancePane.vala:101 src/Panes/AppearancePane.vala:127
+#: src/Panes/AppearancePane.vala:53 src/Panes/AppearancePane.vala:79
+#: src/Panes/AppearancePane.vala:105 src/Panes/AppearancePane.vala:131
 msgid "theme-name"
 msgstr "テーマ名"
 
-#: src/Panes/AppearancePane.vala:72
+#: src/Panes/AppearancePane.vala:76
 msgid "Icon Theme"
 msgstr "アイコンテーマ"
 
 #. TRANSLATORS: The "%s" represents the path where custom icons are installed
-#: src/Panes/AppearancePane.vala:74
+#: src/Panes/AppearancePane.vala:78
 #, c-format
 msgid "To show custom icons here, put them in %s."
 msgstr "カスタムアイコンをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:98
+#: src/Panes/AppearancePane.vala:102
 msgid "Cursor Theme"
 msgstr "カーソルテーマ"
 
 #. TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:100
+#: src/Panes/AppearancePane.vala:104
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr "カスタムカーソルをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:124
+#: src/Panes/AppearancePane.vala:128
 msgid "Sound Theme"
 msgstr "サウンドテーマ"
 
 #. TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:126
+#: src/Panes/AppearancePane.vala:130
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr "カスタムサウンドをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:150
+#: src/Panes/AppearancePane.vala:152
 msgid "Force Dark Style"
 msgstr "ダークモードを強制する"
 
-#: src/Panes/AppearancePane.vala:151
+#: src/Panes/AppearancePane.vala:153
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
@@ -148,59 +140,59 @@ msgstr ""
 "対応していないアプリに対しても、ダークモードを強制します。アプリケーションの"
 "再起動が必要です。"
 
-#: src/Panes/AppearancePane.vala:166
+#: src/Panes/AppearancePane.vala:168
 msgid "Window Control Layout"
 msgstr "ウィンドウコントロールのレイアウト"
 
-#: src/Panes/AppearancePane.vala:167
+#: src/Panes/AppearancePane.vala:169
 msgid "Changes button layout of the window."
 msgstr "ウィンドウのボタンレイアウトを変更します。"
 
-#: src/Panes/AppearancePane.vala:172
+#: src/Panes/AppearancePane.vala:174
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:173
+#: src/Panes/AppearancePane.vala:175
 msgid "elementary Reversed"
 msgstr "elementary Reversed"
 
-#: src/Panes/AppearancePane.vala:174
+#: src/Panes/AppearancePane.vala:176
 msgid "Close Only Right"
 msgstr "閉じるボタンのみを右に表示"
 
-#: src/Panes/AppearancePane.vala:175
+#: src/Panes/AppearancePane.vala:177
 msgid "Close Only Left"
 msgstr "閉じるボタンのみを左に表示"
 
-#: src/Panes/AppearancePane.vala:176
+#: src/Panes/AppearancePane.vala:178
 msgid "Add Minimize Left"
 msgstr "最小化ボタンを左に追加"
 
-#: src/Panes/AppearancePane.vala:177
+#: src/Panes/AppearancePane.vala:179
 msgid "Add Minimize Right"
 msgstr "最小化ボタンを右に追加"
 
-#: src/Panes/AppearancePane.vala:178
+#: src/Panes/AppearancePane.vala:180
 msgid "Replace Maximize to Minimize"
 msgstr "最大化ボタンを最小化ボタンに置き換え"
 
-#: src/Panes/AppearancePane.vala:179
+#: src/Panes/AppearancePane.vala:181
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:180
+#: src/Panes/AppearancePane.vala:182
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:181
+#: src/Panes/AppearancePane.vala:183
 msgid "Windows Reversed"
 msgstr "Windows Reversed"
 
-#: src/Panes/AppearancePane.vala:196
+#: src/Panes/AppearancePane.vala:198
 msgid "Show GNOME Menu"
 msgstr "GNOME メニューを表示"
 
-#: src/Panes/AppearancePane.vala:197
+#: src/Panes/AppearancePane.vala:199
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "GNOME アプリで GNOME メニューを表示するかどうかを設定します。"
 
@@ -409,6 +401,17 @@ msgstr "\"%s\" を開けませんでした"
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr ""
+
+#, fuzzy
+#~ msgid "Appearance pane in the light mode"
+#~ msgstr "“外観”ペイン"
+
+#, fuzzy
+#~ msgid "Appearance pane in the dark mode"
+#~ msgstr "“外観”ペイン"
+
+#~ msgid "Tweaks"
+#~ msgstr "Tweaks"
 
 #~ msgid "Are you sure you want to reset personalization?"
 #~ msgstr "個人設定をリセットしてもよろしいですか?"

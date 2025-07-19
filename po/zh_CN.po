@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-14 15:44+0900\n"
+"POT-Creation-Date: 2025-07-19 22:44+0900\n"
 "PO-Revision-Date: 2022-02-09 15:09+0800\n"
 "Last-Translator: imgradeone <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -19,6 +19,7 @@ msgstr ""
 "X-Generator: Poedit 3.0\n"
 
 #: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:5
+#: src/MainWindow.vala:20
 msgid "Pantheon Tweaks"
 msgstr "Pantheon 优化"
 
@@ -42,14 +43,10 @@ msgid ""
 msgstr "专为 Pantheon 设计的系统设置面板，帮助您简便、安全地修改桌面外观。"
 
 #: data/pantheon-tweaks.metainfo.xml.in.in:206
-#, fuzzy
-msgid "Appearance pane in the light mode"
-msgstr "外观面板"
-
 #: data/pantheon-tweaks.metainfo.xml.in.in:210
 #, fuzzy
-msgid "Appearance pane in the dark mode"
-msgstr "外观面板"
+msgid "Appearance pane"
+msgstr "外观"
 
 #. developer_name has deprecated since AppStream 1.0
 #: data/pantheon-tweaks.metainfo.xml.in.in:216
@@ -58,19 +55,13 @@ msgstr "外观面板"
 msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon 优化"
 
-#: src/MainWindow.vala:20
-msgid "Tweaks"
-msgstr "优化"
-
 #: src/MainWindow.vala:38
-msgid "Your Desktop Environment Is Not Supported"
+#, c-format
+msgid "Your Desktop Environment \"%s\" Is Not Supported"
 msgstr ""
 
 #: src/MainWindow.vala:40
-#, c-format
-msgid ""
-"Pantheon Tweaks is a customization tool for Pantheon. Your desktop "
-"environment \"%s\" is not supported."
+msgid "Pantheon Tweaks is a customization tool for Pantheon."
 msgstr ""
 
 #: src/Panes/AppearancePane.vala:35
@@ -87,123 +78,123 @@ msgstr "修改主题和窗口布局。修改主题可能会出现视觉问题。
 msgid "General"
 msgstr "常规"
 
-#: src/Panes/AppearancePane.vala:46
+#: src/Panes/AppearancePane.vala:50
 #, fuzzy
 msgid "GTK Theme"
 msgstr "主题："
 
 #. TRANSLATORS: The "%s" represents the path where custom themes are installed
-#: src/Panes/AppearancePane.vala:48
+#: src/Panes/AppearancePane.vala:52
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr "如果您想在此显示自定义主题，请在 %s 下存放主题文件。"
 
-#: src/Panes/AppearancePane.vala:49 src/Panes/AppearancePane.vala:75
-#: src/Panes/AppearancePane.vala:101 src/Panes/AppearancePane.vala:127
+#: src/Panes/AppearancePane.vala:53 src/Panes/AppearancePane.vala:79
+#: src/Panes/AppearancePane.vala:105 src/Panes/AppearancePane.vala:131
 msgid "theme-name"
 msgstr "theme-name"
 
-#: src/Panes/AppearancePane.vala:72
+#: src/Panes/AppearancePane.vala:76
 #, fuzzy
 msgid "Icon Theme"
 msgstr "图标主题："
 
 #. TRANSLATORS: The "%s" represents the path where custom icons are installed
-#: src/Panes/AppearancePane.vala:74
+#: src/Panes/AppearancePane.vala:78
 #, c-format
 msgid "To show custom icons here, put them in %s."
 msgstr "如果您想在此显示自定义图标，请在 %s 下存放图标文件。"
 
-#: src/Panes/AppearancePane.vala:98
+#: src/Panes/AppearancePane.vala:102
 #, fuzzy
 msgid "Cursor Theme"
 msgstr "光标："
 
 #. TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:100
+#: src/Panes/AppearancePane.vala:104
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr "如果您想在此显示自定义光标，请在 %s 下存放光标文件。"
 
-#: src/Panes/AppearancePane.vala:124
+#: src/Panes/AppearancePane.vala:128
 #, fuzzy
 msgid "Sound Theme"
 msgstr "图标主题："
 
 #. TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:126
+#: src/Panes/AppearancePane.vala:130
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr "如果您想在此显示自定义音效，请在 %s 下存放音效文件。"
 
-#: src/Panes/AppearancePane.vala:150
+#: src/Panes/AppearancePane.vala:152
 #, fuzzy
 msgid "Force Dark Style"
 msgstr "强制使用暗色样式："
 
-#: src/Panes/AppearancePane.vala:151
+#: src/Panes/AppearancePane.vala:153
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
 msgstr ""
 "强制对应用使用暗色风格（即使应用程序不支持）。需要重新启动应用程序才能生效。"
 
-#: src/Panes/AppearancePane.vala:166
+#: src/Panes/AppearancePane.vala:168
 #, fuzzy
 msgid "Window Control Layout"
 msgstr "窗口控制"
 
-#: src/Panes/AppearancePane.vala:167
+#: src/Panes/AppearancePane.vala:169
 msgid "Changes button layout of the window."
 msgstr "修改窗口按钮布局。"
 
-#: src/Panes/AppearancePane.vala:172
+#: src/Panes/AppearancePane.vala:174
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:173
+#: src/Panes/AppearancePane.vala:175
 msgid "elementary Reversed"
 msgstr "elementary（反向）"
 
-#: src/Panes/AppearancePane.vala:174
+#: src/Panes/AppearancePane.vala:176
 msgid "Close Only Right"
 msgstr "仅右侧关闭按钮"
 
-#: src/Panes/AppearancePane.vala:175
+#: src/Panes/AppearancePane.vala:177
 msgid "Close Only Left"
 msgstr "仅左侧关闭按钮"
 
-#: src/Panes/AppearancePane.vala:176
+#: src/Panes/AppearancePane.vala:178
 msgid "Add Minimize Left"
 msgstr "在左侧添加最小化"
 
-#: src/Panes/AppearancePane.vala:177
+#: src/Panes/AppearancePane.vala:179
 msgid "Add Minimize Right"
 msgstr "在右侧添加最小化"
 
-#: src/Panes/AppearancePane.vala:178
+#: src/Panes/AppearancePane.vala:180
 msgid "Replace Maximize to Minimize"
 msgstr "将最大化替换为最小化"
 
-#: src/Panes/AppearancePane.vala:179
+#: src/Panes/AppearancePane.vala:181
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:180
+#: src/Panes/AppearancePane.vala:182
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:181
+#: src/Panes/AppearancePane.vala:183
 #, fuzzy
 msgid "Windows Reversed"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:196
+#: src/Panes/AppearancePane.vala:198
 #, fuzzy
 msgid "Show GNOME Menu"
 msgstr "显示 GNOME 菜单："
 
-#: src/Panes/AppearancePane.vala:197
+#: src/Panes/AppearancePane.vala:199
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "决定是否在 GNOME 应用程序中展示 GNOME 菜单。"
 
@@ -419,6 +410,17 @@ msgstr "打开目标文件夹"
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr ""
+
+#, fuzzy
+#~ msgid "Appearance pane in the light mode"
+#~ msgstr "外观面板"
+
+#, fuzzy
+#~ msgid "Appearance pane in the dark mode"
+#~ msgstr "外观面板"
+
+#~ msgid "Tweaks"
+#~ msgstr "优化"
 
 #~ msgid "Are you sure you want to reset personalization?"
 #~ msgstr "你确定要重置所有个性化选项吗？"
