@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-14 15:44+0900\n"
+"POT-Creation-Date: 2025-07-19 22:44+0900\n"
 "PO-Revision-Date: 2021-08-21 10:42+0200\n"
 "Last-Translator: Bartek <blogowanie.xyz@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -19,6 +19,7 @@ msgstr ""
 "X-Generator: Poedit 3.0\n"
 
 #: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:5
+#: src/MainWindow.vala:20
 msgid "Pantheon Tweaks"
 msgstr "Usprawnienia Pantheon"
 
@@ -44,13 +45,9 @@ msgstr ""
 "bezpiecznie dostosować wygląd pulpitu."
 
 #: data/pantheon-tweaks.metainfo.xml.in.in:206
-#, fuzzy
-msgid "Appearance pane in the light mode"
-msgstr "Wygląd"
-
 #: data/pantheon-tweaks.metainfo.xml.in.in:210
 #, fuzzy
-msgid "Appearance pane in the dark mode"
+msgid "Appearance pane"
 msgstr "Wygląd"
 
 #. developer_name has deprecated since AppStream 1.0
@@ -60,19 +57,13 @@ msgstr "Wygląd"
 msgid "Pantheon Tweaks Developers"
 msgstr "Usprawnienia Pantheon"
 
-#: src/MainWindow.vala:20
-msgid "Tweaks"
-msgstr "Usprawnienia"
-
 #: src/MainWindow.vala:38
-msgid "Your Desktop Environment Is Not Supported"
+#, c-format
+msgid "Your Desktop Environment \"%s\" Is Not Supported"
 msgstr ""
 
 #: src/MainWindow.vala:40
-#, c-format
-msgid ""
-"Pantheon Tweaks is a customization tool for Pantheon. Your desktop "
-"environment \"%s\" is not supported."
+msgid "Pantheon Tweaks is a customization tool for Pantheon."
 msgstr ""
 
 #: src/Panes/AppearancePane.vala:35
@@ -91,61 +82,61 @@ msgstr ""
 msgid "General"
 msgstr "Ogólne"
 
-#: src/Panes/AppearancePane.vala:46
+#: src/Panes/AppearancePane.vala:50
 #, fuzzy
 msgid "GTK Theme"
 msgstr "Skórka:"
 
 #. TRANSLATORS: The "%s" represents the path where custom themes are installed
-#: src/Panes/AppearancePane.vala:48
+#: src/Panes/AppearancePane.vala:52
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr "Aby wyświetlić tutaj motywy niestandardowe, umieść je w %s."
 
-#: src/Panes/AppearancePane.vala:49 src/Panes/AppearancePane.vala:75
-#: src/Panes/AppearancePane.vala:101 src/Panes/AppearancePane.vala:127
+#: src/Panes/AppearancePane.vala:53 src/Panes/AppearancePane.vala:79
+#: src/Panes/AppearancePane.vala:105 src/Panes/AppearancePane.vala:131
 msgid "theme-name"
 msgstr "nazwa-motywu"
 
-#: src/Panes/AppearancePane.vala:72
+#: src/Panes/AppearancePane.vala:76
 #, fuzzy
 msgid "Icon Theme"
 msgstr "Schemat ikon:"
 
 #. TRANSLATORS: The "%s" represents the path where custom icons are installed
-#: src/Panes/AppearancePane.vala:74
+#: src/Panes/AppearancePane.vala:78
 #, c-format
 msgid "To show custom icons here, put them in %s."
 msgstr "Aby wyświetlić tutaj niestandardowe ikony, umieść je w %s."
 
-#: src/Panes/AppearancePane.vala:98
+#: src/Panes/AppearancePane.vala:102
 #, fuzzy
 msgid "Cursor Theme"
 msgstr "Kursory:"
 
 #. TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:100
+#: src/Panes/AppearancePane.vala:104
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr "Aby wyświetlić tutaj niestandardowe kursory, umieść je w %s."
 
-#: src/Panes/AppearancePane.vala:124
+#: src/Panes/AppearancePane.vala:128
 #, fuzzy
 msgid "Sound Theme"
 msgstr "Schemat ikon:"
 
 #. TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:126
+#: src/Panes/AppearancePane.vala:130
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr "Aby wyświetlić tutaj niestandardowe dźwięki, umieść je w %s."
 
-#: src/Panes/AppearancePane.vala:150
+#: src/Panes/AppearancePane.vala:152
 #, fuzzy
 msgid "Force Dark Style"
 msgstr "Wymuś użycie ciemnego arkusza stylów:"
 
-#: src/Panes/AppearancePane.vala:151
+#: src/Panes/AppearancePane.vala:153
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
@@ -153,62 +144,62 @@ msgstr ""
 "Wymusza ciemny styl we wszystkich aplikacjach, nawet jeśli nie jest "
 "obsługiwany. Wymaga ponownego uruchomienia aplikacji."
 
-#: src/Panes/AppearancePane.vala:166
+#: src/Panes/AppearancePane.vala:168
 #, fuzzy
 msgid "Window Control Layout"
 msgstr "Kontrolki okien"
 
-#: src/Panes/AppearancePane.vala:167
+#: src/Panes/AppearancePane.vala:169
 msgid "Changes button layout of the window."
 msgstr "Zmienia układ przycisków okna."
 
-#: src/Panes/AppearancePane.vala:172
+#: src/Panes/AppearancePane.vala:174
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:173
+#: src/Panes/AppearancePane.vala:175
 msgid "elementary Reversed"
 msgstr "elementary Odwrócony"
 
-#: src/Panes/AppearancePane.vala:174
+#: src/Panes/AppearancePane.vala:176
 msgid "Close Only Right"
 msgstr "Tylko zamknij po prawej"
 
-#: src/Panes/AppearancePane.vala:175
+#: src/Panes/AppearancePane.vala:177
 msgid "Close Only Left"
 msgstr "Tylko zamknij po lewej"
 
-#: src/Panes/AppearancePane.vala:176
+#: src/Panes/AppearancePane.vala:178
 msgid "Add Minimize Left"
 msgstr "Dodaj Minimalizuj po lewej"
 
-#: src/Panes/AppearancePane.vala:177
+#: src/Panes/AppearancePane.vala:179
 msgid "Add Minimize Right"
 msgstr "Dodaj Minimalizuj po prawej"
 
-#: src/Panes/AppearancePane.vala:178
+#: src/Panes/AppearancePane.vala:180
 msgid "Replace Maximize to Minimize"
 msgstr "Zamień Maksymalizuj zamiast Mminimalizuj"
 
-#: src/Panes/AppearancePane.vala:179
+#: src/Panes/AppearancePane.vala:181
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:180
+#: src/Panes/AppearancePane.vala:182
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:181
+#: src/Panes/AppearancePane.vala:183
 #, fuzzy
 msgid "Windows Reversed"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:196
+#: src/Panes/AppearancePane.vala:198
 #, fuzzy
 msgid "Show GNOME Menu"
 msgstr "Pokaż menu GNOME:"
 
-#: src/Panes/AppearancePane.vala:197
+#: src/Panes/AppearancePane.vala:199
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "Czy menu GNOME ma być wyświetlane w aplikacjach GNOME."
 
@@ -430,6 +421,17 @@ msgstr ""
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr ""
+
+#, fuzzy
+#~ msgid "Appearance pane in the light mode"
+#~ msgstr "Wygląd"
+
+#, fuzzy
+#~ msgid "Appearance pane in the dark mode"
+#~ msgstr "Wygląd"
+
+#~ msgid "Tweaks"
+#~ msgstr "Usprawnienia"
 
 #, fuzzy
 #~ msgid ""

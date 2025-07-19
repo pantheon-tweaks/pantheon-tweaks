@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-tweaks-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-14 15:44+0900\n"
+"POT-Creation-Date: 2025-07-19 22:44+0900\n"
 "PO-Revision-Date: 2021-11-13 22:05+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -19,6 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:5
+#: src/MainWindow.vala:20
 msgid "Pantheon Tweaks"
 msgstr "Pantheon Tweaks"
 
@@ -44,14 +45,10 @@ msgstr ""
 "Erscheinung der Arbeitsumgebung sicher und einfach angepasst werden kann."
 
 #: data/pantheon-tweaks.metainfo.xml.in.in:206
-#, fuzzy
-msgid "Appearance pane in the light mode"
-msgstr "Modul »Erscheinungsbild«"
-
 #: data/pantheon-tweaks.metainfo.xml.in.in:210
 #, fuzzy
-msgid "Appearance pane in the dark mode"
-msgstr "Modul »Erscheinungsbild«"
+msgid "Appearance pane"
+msgstr "Erscheinungsbild"
 
 #. developer_name has deprecated since AppStream 1.0
 #: data/pantheon-tweaks.metainfo.xml.in.in:216
@@ -60,19 +57,13 @@ msgstr "Modul »Erscheinungsbild«"
 msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon Tweaks"
 
-#: src/MainWindow.vala:20
-msgid "Tweaks"
-msgstr "Tweaks"
-
 #: src/MainWindow.vala:38
-msgid "Your Desktop Environment Is Not Supported"
+#, c-format
+msgid "Your Desktop Environment \"%s\" Is Not Supported"
 msgstr ""
 
 #: src/MainWindow.vala:40
-#, c-format
-msgid ""
-"Pantheon Tweaks is a customization tool for Pantheon. Your desktop "
-"environment \"%s\" is not supported."
+msgid "Pantheon Tweaks is a customization tool for Pantheon."
 msgstr ""
 
 #: src/Panes/AppearancePane.vala:35
@@ -91,66 +82,66 @@ msgstr ""
 msgid "General"
 msgstr "Allgemein"
 
-#: src/Panes/AppearancePane.vala:46
+#: src/Panes/AppearancePane.vala:50
 msgid "GTK Theme"
 msgstr ""
 
 #. TRANSLATORS: The "%s" represents the path where custom themes are installed
-#: src/Panes/AppearancePane.vala:48
+#: src/Panes/AppearancePane.vala:52
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr ""
 "Eigene Themen, die hier angezeigt werden sollen, müssen in %s gespeichert "
 "werden."
 
-#: src/Panes/AppearancePane.vala:49 src/Panes/AppearancePane.vala:75
-#: src/Panes/AppearancePane.vala:101 src/Panes/AppearancePane.vala:127
+#: src/Panes/AppearancePane.vala:53 src/Panes/AppearancePane.vala:79
+#: src/Panes/AppearancePane.vala:105 src/Panes/AppearancePane.vala:131
 msgid "theme-name"
 msgstr "theme-name"
 
-#: src/Panes/AppearancePane.vala:72
+#: src/Panes/AppearancePane.vala:76
 msgid "Icon Theme"
 msgstr ""
 
 #. TRANSLATORS: The "%s" represents the path where custom icons are installed
-#: src/Panes/AppearancePane.vala:74
+#: src/Panes/AppearancePane.vala:78
 #, c-format
 msgid "To show custom icons here, put them in %s."
 msgstr ""
 "Eigene Symbole, die hier angezeigt werden sollen, müssen in %s gespeichert "
 "werden."
 
-#: src/Panes/AppearancePane.vala:98
+#: src/Panes/AppearancePane.vala:102
 #, fuzzy
 msgid "Cursor Theme"
 msgstr "Zeiger:"
 
 #. TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:100
+#: src/Panes/AppearancePane.vala:104
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr ""
 "Eigene Zeiger, die hier angezeigt werden sollen, müssen in %s gespeichert "
 "werden."
 
-#: src/Panes/AppearancePane.vala:124
+#: src/Panes/AppearancePane.vala:128
 msgid "Sound Theme"
 msgstr ""
 
 #. TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:126
+#: src/Panes/AppearancePane.vala:130
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr ""
 "Eigene Klänge, die hier angezeigt werden sollen, müssen in %s gespeichert "
 "werden."
 
-#: src/Panes/AppearancePane.vala:150
+#: src/Panes/AppearancePane.vala:152
 #, fuzzy
 msgid "Force Dark Style"
 msgstr "Dunklen Stil erzwingen:"
 
-#: src/Panes/AppearancePane.vala:151
+#: src/Panes/AppearancePane.vala:153
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
@@ -158,62 +149,62 @@ msgstr ""
 "Dunklen Stil in allen Anwendungen erzwingen, selbst, wenn diese das nicht "
 "unterstützen. Anwendungen dazu müssen neu gestartet werden."
 
-#: src/Panes/AppearancePane.vala:166
+#: src/Panes/AppearancePane.vala:168
 #, fuzzy
 msgid "Window Control Layout"
 msgstr "Fenstersteuerung"
 
-#: src/Panes/AppearancePane.vala:167
+#: src/Panes/AppearancePane.vala:169
 msgid "Changes button layout of the window."
 msgstr "Anordnung der Schaltflächen in Fensterleisten ändern."
 
-#: src/Panes/AppearancePane.vala:172
+#: src/Panes/AppearancePane.vala:174
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:173
+#: src/Panes/AppearancePane.vala:175
 msgid "elementary Reversed"
 msgstr "elementary umgekehrt"
 
-#: src/Panes/AppearancePane.vala:174
+#: src/Panes/AppearancePane.vala:176
 msgid "Close Only Right"
 msgstr "Nur Schließen rechts"
 
-#: src/Panes/AppearancePane.vala:175
+#: src/Panes/AppearancePane.vala:177
 msgid "Close Only Left"
 msgstr "Nur Schließen links"
 
-#: src/Panes/AppearancePane.vala:176
+#: src/Panes/AppearancePane.vala:178
 msgid "Add Minimize Left"
 msgstr "Minimieren links hinzufügen"
 
-#: src/Panes/AppearancePane.vala:177
+#: src/Panes/AppearancePane.vala:179
 msgid "Add Minimize Right"
 msgstr "Minimieren rechts hinzufügen"
 
-#: src/Panes/AppearancePane.vala:178
+#: src/Panes/AppearancePane.vala:180
 msgid "Replace Maximize to Minimize"
 msgstr "Maximieren durch Minimieren ersetzen"
 
-#: src/Panes/AppearancePane.vala:179
+#: src/Panes/AppearancePane.vala:181
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:180
+#: src/Panes/AppearancePane.vala:182
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:181
+#: src/Panes/AppearancePane.vala:183
 #, fuzzy
 msgid "Windows Reversed"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:196
+#: src/Panes/AppearancePane.vala:198
 #, fuzzy
 msgid "Show GNOME Menu"
 msgstr "GNOME-Menü anzeigen:"
 
-#: src/Panes/AppearancePane.vala:197
+#: src/Panes/AppearancePane.vala:199
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "Festlegen, ob das GNOME-Menü in GNOME-Anwendungen angezeigt wird."
 
@@ -440,6 +431,17 @@ msgstr ""
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr ""
+
+#, fuzzy
+#~ msgid "Appearance pane in the light mode"
+#~ msgstr "Modul »Erscheinungsbild«"
+
+#, fuzzy
+#~ msgid "Appearance pane in the dark mode"
+#~ msgstr "Modul »Erscheinungsbild«"
+
+#~ msgid "Tweaks"
+#~ msgstr "Tweaks"
 
 #~ msgid "Are you sure you want to reset personalization?"
 #~ msgstr "Möchten Sie die Personalisierung wirklich zurücksetzen?"

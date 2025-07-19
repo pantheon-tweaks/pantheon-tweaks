@@ -1,13 +1,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# ryonakano <ryonakaknock3@gmail.com>, 2018, 2020-2024.
+# ryonakano <ryonakaknock3@gmail.com>, 2018, 2020-2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-14 15:44+0900\n"
-"PO-Revision-Date: 2024-11-04 22:39+0900\n"
+"POT-Creation-Date: 2025-07-19 22:44+0900\n"
+"PO-Revision-Date: 2025-07-19 22:52+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:5
+#: src/MainWindow.vala:20
 msgid "Pantheon Tweaks"
 msgstr "Pantheon Tweaks"
 
@@ -43,13 +44,8 @@ msgstr ""
 "けのシステムカスタマイズアプリです。"
 
 #: data/pantheon-tweaks.metainfo.xml.in.in:206
-#, fuzzy
-msgid "Appearance pane in the light mode"
-msgstr "“外観”ペイン"
-
 #: data/pantheon-tweaks.metainfo.xml.in.in:210
-#, fuzzy
-msgid "Appearance pane in the dark mode"
+msgid "Appearance pane"
 msgstr "“外観”ペイン"
 
 #. developer_name has deprecated since AppStream 1.0
@@ -58,22 +54,14 @@ msgstr "“外観”ペイン"
 msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon Tweaks の開発者"
 
-#: src/MainWindow.vala:20
-msgid "Tweaks"
-msgstr "Tweaks"
-
 #: src/MainWindow.vala:38
-msgid "Your Desktop Environment Is Not Supported"
-msgstr "お使いのデスクトップ環境には対応していません"
+#, c-format
+msgid "Your Desktop Environment \"%s\" Is Not Supported"
+msgstr "お使いのデスクトップ環境 \"%s\" には対応していません"
 
 #: src/MainWindow.vala:40
-#, c-format
-msgid ""
-"Pantheon Tweaks is a customization tool for Pantheon. Your desktop "
-"environment \"%s\" is not supported."
-msgstr ""
-"Pantheon Tweaks は、Pantheon 用のカスタマイズツールです。お使いのデスクトップ"
-"環境\"%s\"には対応していません。"
+msgid "Pantheon Tweaks is a customization tool for Pantheon."
+msgstr "Pantheon Tweaks は、Pantheon 用のカスタマイズツールです。"
 
 #: src/Panes/AppearancePane.vala:35
 msgid "Appearance"
@@ -89,58 +77,58 @@ msgstr ""
 
 #: src/Panes/AppearancePane.vala:38
 msgid "General"
-msgstr ""
+msgstr "一般"
 
-#: src/Panes/AppearancePane.vala:46
+#: src/Panes/AppearancePane.vala:50
 msgid "GTK Theme"
 msgstr "GTK テーマ"
 
 #. TRANSLATORS: The "%s" represents the path where custom themes are installed
-#: src/Panes/AppearancePane.vala:48
+#: src/Panes/AppearancePane.vala:52
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr "カスタムテーマをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:49 src/Panes/AppearancePane.vala:75
-#: src/Panes/AppearancePane.vala:101 src/Panes/AppearancePane.vala:127
+#: src/Panes/AppearancePane.vala:53 src/Panes/AppearancePane.vala:79
+#: src/Panes/AppearancePane.vala:105 src/Panes/AppearancePane.vala:131
 msgid "theme-name"
 msgstr "テーマ名"
 
-#: src/Panes/AppearancePane.vala:72
+#: src/Panes/AppearancePane.vala:76
 msgid "Icon Theme"
 msgstr "アイコンテーマ"
 
 #. TRANSLATORS: The "%s" represents the path where custom icons are installed
-#: src/Panes/AppearancePane.vala:74
+#: src/Panes/AppearancePane.vala:78
 #, c-format
 msgid "To show custom icons here, put them in %s."
 msgstr "カスタムアイコンをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:98
+#: src/Panes/AppearancePane.vala:102
 msgid "Cursor Theme"
 msgstr "カーソルテーマ"
 
 #. TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:100
+#: src/Panes/AppearancePane.vala:104
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr "カスタムカーソルをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:124
+#: src/Panes/AppearancePane.vala:128
 msgid "Sound Theme"
 msgstr "サウンドテーマ"
 
 #. TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:126
+#: src/Panes/AppearancePane.vala:130
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr "カスタムサウンドをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:150
+#: src/Panes/AppearancePane.vala:152
 msgid "Force Dark Style"
 msgstr "ダークモードを強制する"
 
-#: src/Panes/AppearancePane.vala:151
+#: src/Panes/AppearancePane.vala:153
 msgid ""
 "Forces dark style on all apps, even if it's not supported. Requires "
 "restarting the application."
@@ -148,59 +136,59 @@ msgstr ""
 "対応していないアプリに対しても、ダークモードを強制します。アプリケーションの"
 "再起動が必要です。"
 
-#: src/Panes/AppearancePane.vala:166
+#: src/Panes/AppearancePane.vala:168
 msgid "Window Control Layout"
 msgstr "ウィンドウコントロールのレイアウト"
 
-#: src/Panes/AppearancePane.vala:167
+#: src/Panes/AppearancePane.vala:169
 msgid "Changes button layout of the window."
 msgstr "ウィンドウのボタンレイアウトを変更します。"
 
-#: src/Panes/AppearancePane.vala:172
+#: src/Panes/AppearancePane.vala:174
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:173
+#: src/Panes/AppearancePane.vala:175
 msgid "elementary Reversed"
 msgstr "elementary Reversed"
 
-#: src/Panes/AppearancePane.vala:174
+#: src/Panes/AppearancePane.vala:176
 msgid "Close Only Right"
 msgstr "閉じるボタンのみを右に表示"
 
-#: src/Panes/AppearancePane.vala:175
+#: src/Panes/AppearancePane.vala:177
 msgid "Close Only Left"
 msgstr "閉じるボタンのみを左に表示"
 
-#: src/Panes/AppearancePane.vala:176
+#: src/Panes/AppearancePane.vala:178
 msgid "Add Minimize Left"
 msgstr "最小化ボタンを左に追加"
 
-#: src/Panes/AppearancePane.vala:177
+#: src/Panes/AppearancePane.vala:179
 msgid "Add Minimize Right"
 msgstr "最小化ボタンを右に追加"
 
-#: src/Panes/AppearancePane.vala:178
+#: src/Panes/AppearancePane.vala:180
 msgid "Replace Maximize to Minimize"
 msgstr "最大化ボタンを最小化ボタンに置き換え"
 
-#: src/Panes/AppearancePane.vala:179
+#: src/Panes/AppearancePane.vala:181
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:180
+#: src/Panes/AppearancePane.vala:182
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:181
+#: src/Panes/AppearancePane.vala:183
 msgid "Windows Reversed"
 msgstr "Windows Reversed"
 
-#: src/Panes/AppearancePane.vala:196
+#: src/Panes/AppearancePane.vala:198
 msgid "Show GNOME Menu"
 msgstr "GNOME メニューを表示"
 
-#: src/Panes/AppearancePane.vala:197
+#: src/Panes/AppearancePane.vala:199
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "GNOME アプリで GNOME メニューを表示するかどうかを設定します。"
 
@@ -210,7 +198,7 @@ msgstr "ファイル"
 
 #: src/Panes/FilesPane.vala:19
 msgid "Applications"
-msgstr ""
+msgstr "アプリケーション"
 
 #: src/Panes/FilesPane.vala:27
 msgid "Restore Tabs"
@@ -336,21 +324,20 @@ msgid "Never"
 msgstr "表示しない"
 
 #: src/Panes/TerminalPane.vala:114
-#, fuzzy
 msgid "Cursor Shape"
-msgstr "カーソルテーマ"
+msgstr "カーソルの形状"
 
 #: src/Panes/TerminalPane.vala:119
 msgid "Block"
-msgstr ""
+msgstr "ブロック"
 
 #: src/Panes/TerminalPane.vala:120
 msgid "I-Beam"
-msgstr ""
+msgstr "垂直バー"
 
 #: src/Panes/TerminalPane.vala:121
 msgid "Underline"
-msgstr ""
+msgstr "下線"
 
 #: src/Panes/TerminalPane.vala:132
 msgid "Terminal Font"
@@ -361,9 +348,8 @@ msgid "Reset to Default"
 msgstr "デフォルトにリセット"
 
 #: src/Widgets/BasePane.vala:41
-#, fuzzy
 msgid "Reset to Default?"
-msgstr "デフォルトにリセット"
+msgstr "デフォルトにリセットしますか?"
 
 #: src/Widgets/BasePane.vala:42
 msgid ""
@@ -384,17 +370,18 @@ msgstr "設定を正常にリセットしました"
 #: src/Widgets/Categories.vala:66
 #, c-format
 msgid "Failed to Load %s Preference"
-msgstr ""
+msgstr "%s 設定の読み込みに失敗しました"
 
 #: src/Widgets/Categories.vala:67
 msgid ""
 "Make sure your Pantheon desktop installation is up to date and not "
 "incomplete."
 msgstr ""
+"お使いの Pantheon デスクトップが最新かつ不完全でないことを確認してください。"
 
 #: src/Widgets/Dialog.vala:18
 msgid "Get Support…"
-msgstr ""
+msgstr "サポートを受ける…"
 
 #: src/Widgets/OpenButton.vala:15
 #, c-format
@@ -402,44 +389,10 @@ msgid "Open \"%s\""
 msgstr "\"%s\" を開く"
 
 #: src/Widgets/OpenButton.vala:25
-#, fuzzy, c-format
+#, c-format
 msgid "Failed To Open \"%s\""
 msgstr "\"%s\" を開けませんでした"
 
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
-msgstr ""
-
-#~ msgid "Are you sure you want to reset personalization?"
-#~ msgstr "個人設定をリセットしてもよろしいですか?"
-
-#, c-format
-#~ msgid "Failed to create \"%s\""
-#~ msgstr "\"%s\" を作成できませんでした"
-
-#~ msgid ""
-#~ "The folder doesn't exist and tried to create new but failed. The "
-#~ "following error message might be helpful:"
-#~ msgstr ""
-#~ "フォルダーが存在せず新規作成しようとしましたが、失敗しました。以下のエラー"
-#~ "メッセージが役立つ可能性があります:"
-
-#~ msgid ""
-#~ "Tried to open the folder but failed. The following error message might be "
-#~ "helpful:"
-#~ msgstr ""
-#~ "フォルダーを開こうとしましたが、失敗しました。以下のエラーメッセージが役立"
-#~ "つ可能性があります:"
-
-#~ msgid ""
-#~ "Show a warning dialog when pasting a command with 'sudo' or multiple "
-#~ "lines."
-#~ msgstr ""
-#~ "'sudo' を含むコマンドや複数行のコマンドを貼り付けた場合に、警告ダイアログ"
-#~ "を表示します。"
-
-#~ msgid "Open destination folder"
-#~ msgstr "保存先を開く"
-
-#~ msgid "Failed to open the destination folder"
-#~ msgstr "保存先を開けませんでした"
+msgstr "ディレクトリを開く際または作成する際にエラーが発生しました。"

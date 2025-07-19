@@ -203,11 +203,11 @@
   </releases>
   <screenshots>
     <screenshot type="default" environment="pantheon">
-      <caption>Appearance pane in the light mode</caption>
+      <caption>Appearance pane</caption>
       <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/@VERSION@/data/screenshot.png</image>
     </screenshot>
     <screenshot environment="pantheon:dark">
-      <caption>Appearance pane in the dark mode</caption>
+      <caption>Appearance pane</caption>
       <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/@VERSION@/data/screenshot-dark.png</image>
     </screenshot>
   </screenshots>

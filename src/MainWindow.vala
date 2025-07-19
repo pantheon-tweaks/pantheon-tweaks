@@ -17,7 +17,7 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
     construct {
         headerbar = new Gtk.HeaderBar () {
             show_title_buttons = true,
-            title_widget = new Gtk.Label (_("Tweaks"))
+            title_widget = new Gtk.Label (_("Pantheon Tweaks"))
         };
 
         set_titlebar (headerbar);
@@ -35,9 +35,9 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
 
     private void load_on_other (string desktop_environment) {
         var unsupported_view = new Granite.Placeholder (
-            _("Your Desktop Environment Is Not Supported")
+            _("Your Desktop Environment \"%s\" Is Not Supported").printf (desktop_environment)
         ) {
-            description = _("Pantheon Tweaks is a customization tool for Pantheon. Your desktop environment \"%s\" is not supported.").printf (desktop_environment), // vala-lint=line-length
+            description = _("Pantheon Tweaks is a customization tool for Pantheon."),
             icon = new ThemedIcon ("dialog-warning")
         };
         child = unsupported_view;
