@@ -74,8 +74,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/elementary/switchboard.git
-        tag: 8.0.2
-        commit: efd9be85b539f7ff816d5f1e24f1e478b3593e1f
+        tag: 8.0.3
+        commit: 6714b3c8f6d0e6d386c3190e1c15b1d651faae2a
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
