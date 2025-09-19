@@ -3,7 +3,7 @@ id: io.github.pantheon_tweaks.pantheon-tweaks
 base: io.elementary.BaseApp
 base-version: circe-24.08
 runtime: org.gnome.Platform
-runtime-version: '48'
+runtime-version: '49'
 sdk: org.gnome.Sdk
 command: start-pantheon-tweaks
 finish-args:
