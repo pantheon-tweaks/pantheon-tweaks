@@ -9,7 +9,7 @@ A system customization app for the Pantheon Desktop that lets you easily and saf
 ### From Flathub (Recommended)
 You can download and install Pantheon Tweaks from Flathub:
 
-[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/io.github.pantheon_tweaks.pantheon-tweaks)
+[![Get it on Flathub](https://flathub.org/api/badge?locale=en)](https://flathub.org/apps/io.github.pantheon_tweaks.pantheon-tweaks)
 
 You can launch it from the app launcher after installation.
 
