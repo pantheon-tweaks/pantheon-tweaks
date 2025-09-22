@@ -179,8 +179,8 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         controls_list.append (new StringIdObject ("close:minimize,maximize", _("Add Minimize Right")));
         controls_list.append (new StringIdObject ("close:minimize", _("Replace Maximize to Minimize")));
         controls_list.append (new StringIdObject (":minimize,maximize,close", _("Windows")));
-        controls_list.append (new StringIdObject ("close,minimize,maximize", _("macOS")));
-        controls_list.append (new StringIdObject ("close,maximize,minimize", _("Windows Reversed")));
+        controls_list.append (new StringIdObject ("close,minimize,maximize:", _("macOS")));
+        controls_list.append (new StringIdObject ("close,maximize,minimize:", _("Windows Reversed")));
 
         controls_dropdown = DropDownId.new (controls_list);
 
