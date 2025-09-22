@@ -52,7 +52,6 @@ executable(
         dependency('pango'),
         # Version limitation for GTK4 ported version
         dependency('switchboard-3', version: '>= 8.0.0'),
-        meson.get_compiler('vala').find_library('posix')
     ],
     install: true
 )

@@ -1,9 +1,9 @@
 id: io.github.pantheon_tweaks.pantheon-tweaks
 # elementary SDK is not available on Flathub, so use the elementary BaseApp instead
 base: io.elementary.BaseApp
-base-version: 'circe-24.08'
+base-version: circe-24.08
 runtime: org.gnome.Platform
-runtime-version: '48'
+runtime-version: '49'
 sdk: org.gnome.Sdk
 command: start-pantheon-tweaks
 finish-args:
@@ -54,8 +54,8 @@ modules:
       - /share/dbus-1
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/dconf/0.40/dconf-0.40.0.tar.xz
-        sha256: cf7f22a4c9200421d8d3325c5c1b8b93a36843650c9f95d6451e20f0bcb24533
+        url: https://download.gnome.org/sources/dconf/0.49/dconf-0.49.0.tar.xz
+        sha256: 16a47e49a58156dbb96578e1708325299e4c19eea9be128d5bd12fd0963d6c36
         x-checker-data:
           type: gnome
           name: dconf
@@ -74,11 +74,11 @@ modules:
     sources:
       - type: git
         url: https://github.com/elementary/switchboard.git
-        tag: 8.0.2
-        commit: efd9be85b539f7ff816d5f1e24f1e478b3593e1f
+        tag: 8.0.3
+        commit: 6714b3c8f6d0e6d386c3190e1c15b1d651faae2a
         x-checker-data:
           type: git
-          tag-pattern: '^([\d.]+)$'
+          tag-pattern: ^([\d.]+)$
 
   - name: pantheon-tweaks
     buildsystem: meson
