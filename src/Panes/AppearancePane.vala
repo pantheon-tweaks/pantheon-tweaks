@@ -367,7 +367,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
     private void gtk_theme_settings_to_dropdown () {
         string selected_id = interface_settings.get_string ("gtk-theme");
-        uint selected_pos = StringListUtil.find (gtk_list, selected_id);
+        uint selected_pos = gtk_list.find (selected_id);
 
         if (selected_pos == uint.MAX) {
             // Unselect if the list does not contain the current theme
