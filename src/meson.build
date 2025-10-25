@@ -45,8 +45,8 @@ executable(
     dependencies: [
         # Version limitation for GLib.ApplicationFlags.DEFAULT_FLAGS
         dependency('glib-2.0', version: '>= 2.74'),
-        # Version limitation for automatic load of Application.css
-        dependency('granite-7', version: '>= 7.3.0'),
+        # Version limitation for Granite.CssClass
+        dependency('granite-7', version: '>= 7.7.0'),
         # Version limitation for Gtk.FontDialogButton
         dependency('gtk4', version: '>= 4.10'),
         dependency('pango'),
