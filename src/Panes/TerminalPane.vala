@@ -100,7 +100,6 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         tab_bar_list = new ListStore (typeof (StringIdObject));
         tab_bar_list.append (new StringIdObject ("Always Show Tabs", _("Always")));
         tab_bar_list.append (new StringIdObject ("Hide When Single Tab", _("Hide when single tab")));
-        tab_bar_list.append (new StringIdObject ("Never Show Tabs", _("Never")));
 
         tab_bar_dropdown = DropDownId.new (tab_bar_list);
 
