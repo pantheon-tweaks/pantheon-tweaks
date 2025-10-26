@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-26 11:19+0900\n"
-"PO-Revision-Date: 2025-07-19 22:52+0900\n"
+"PO-Revision-Date: 2025-10-26 11:21+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -221,14 +221,12 @@ msgid "Informal"
 msgstr "略式"
 
 #: src/Panes/FilesPane.vala:48
-#, fuzzy
 msgid "Date & Time Format"
-msgstr "日付の書式"
+msgstr "日付と時刻の書式"
 
 #: src/Panes/FilesPane.vala:49
-#, fuzzy
 msgid "Date and time format used in the properties dialog or the list view."
-msgstr "プロパティダイアログやリスト表示で使用される日付の書式です。"
+msgstr "プロパティダイアログやリスト表示で使用される日付と時刻の書式です。"
 
 #: src/Panes/FontsPane.vala:19
 msgid "Fonts"
