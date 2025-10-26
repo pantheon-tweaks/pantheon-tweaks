@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-19 22:44+0900\n"
+"POT-Creation-Date: 2025-10-26 11:19+0900\n"
 "PO-Revision-Date: 2025-07-19 22:52+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -16,20 +16,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:5
+#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in.in:5
 #: src/MainWindow.vala:20
 msgid "Pantheon Tweaks"
 msgstr "Pantheon Tweaks"
 
-#: data/pantheon-tweaks.desktop.in:3
+#: data/pantheon-tweaks.desktop.in:4
 msgid "Customization Tool"
 msgstr "カスタマイズツール"
 
-#: data/pantheon-tweaks.desktop.in:4 data/pantheon-tweaks.metainfo.xml.in.in:6
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:6
 msgid "Tweak Pantheon settings"
 msgstr "Pantheon の設定を微調整します"
 
-#: data/pantheon-tweaks.desktop.in:10
+#: data/pantheon-tweaks.desktop.in:11
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;高度;設定;フォント;"
@@ -43,14 +43,14 @@ msgstr ""
 "簡単かつ安全にデスクトップの外観をカスタマイズできる、Pantheon デスクトップ向"
 "けのシステムカスタマイズアプリです。"
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:206
-#: data/pantheon-tweaks.metainfo.xml.in.in:210
+#: data/pantheon-tweaks.metainfo.xml.in.in:218
+#: data/pantheon-tweaks.metainfo.xml.in.in:222
 msgid "Appearance pane"
 msgstr "“外観”ペイン"
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:216
-#: data/pantheon-tweaks.metainfo.xml.in.in:218
+#: data/pantheon-tweaks.metainfo.xml.in.in:228
+#: data/pantheon-tweaks.metainfo.xml.in.in:230
 msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon Tweaks の開発者"
 
@@ -221,11 +221,13 @@ msgid "Informal"
 msgstr "略式"
 
 #: src/Panes/FilesPane.vala:48
-msgid "Date Format"
+#, fuzzy
+msgid "Date & Time Format"
 msgstr "日付の書式"
 
 #: src/Panes/FilesPane.vala:49
-msgid "Date format used in the properties dialog or the list view."
+#, fuzzy
+msgid "Date and time format used in the properties dialog or the list view."
 msgstr "プロパティダイアログやリスト表示で使用される日付の書式です。"
 
 #: src/Panes/FontsPane.vala:19
@@ -319,27 +321,23 @@ msgstr "常に表示"
 msgid "Hide when single tab"
 msgstr "タブが 1 つの場合は表示しない"
 
-#: src/Panes/TerminalPane.vala:103
-msgid "Never"
-msgstr "表示しない"
-
-#: src/Panes/TerminalPane.vala:114
+#: src/Panes/TerminalPane.vala:113
 msgid "Cursor Shape"
 msgstr "カーソルの形状"
 
-#: src/Panes/TerminalPane.vala:119
+#: src/Panes/TerminalPane.vala:118
 msgid "Block"
 msgstr "ブロック"
 
-#: src/Panes/TerminalPane.vala:120
+#: src/Panes/TerminalPane.vala:119
 msgid "I-Beam"
 msgstr "垂直バー"
 
-#: src/Panes/TerminalPane.vala:121
+#: src/Panes/TerminalPane.vala:120
 msgid "Underline"
 msgstr "下線"
 
-#: src/Panes/TerminalPane.vala:132
+#: src/Panes/TerminalPane.vala:131
 msgid "Terminal Font"
 msgstr "ターミナルのフォント"
 
@@ -396,3 +394,6 @@ msgstr "\"%s\" を開けませんでした"
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr "ディレクトリを開く際または作成する際にエラーが発生しました。"
+
+#~ msgid "Never"
+#~ msgstr "表示しない"

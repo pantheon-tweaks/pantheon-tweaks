@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-19 22:44+0900\n"
+"POT-Creation-Date: 2025-10-26 11:19+0900\n"
 "PO-Revision-Date: 2014-11-23 16:14+0000\n"
 "Last-Translator: Zeljko Saric <saric.zeljko355@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,20 +13,20 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-11-24 06:39+0000\n"
 "X-Generator: Launchpad (build 17252)\n"
 
-#: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:5
+#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in.in:5
 #: src/MainWindow.vala:20
 msgid "Pantheon Tweaks"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:3
+#: data/pantheon-tweaks.desktop.in:4
 msgid "Customization Tool"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:4 data/pantheon-tweaks.metainfo.xml.in.in:6
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:6
 msgid "Tweak Pantheon settings"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:10
+#: data/pantheon-tweaks.desktop.in:11
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 
@@ -36,15 +36,15 @@ msgid ""
 "safely customise your desktop's appearance."
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:206
-#: data/pantheon-tweaks.metainfo.xml.in.in:210
+#: data/pantheon-tweaks.metainfo.xml.in.in:218
+#: data/pantheon-tweaks.metainfo.xml.in.in:222
 #, fuzzy
 msgid "Appearance pane"
 msgstr "Izgled"
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:216
-#: data/pantheon-tweaks.metainfo.xml.in.in:218
+#: data/pantheon-tweaks.metainfo.xml.in.in:228
+#: data/pantheon-tweaks.metainfo.xml.in.in:230
 msgid "Pantheon Tweaks Developers"
 msgstr ""
 
@@ -212,11 +212,11 @@ msgstr "Neformalno"
 
 #: src/Panes/FilesPane.vala:48
 #, fuzzy
-msgid "Date Format"
+msgid "Date & Time Format"
 msgstr "Format za datum:"
 
 #: src/Panes/FilesPane.vala:49
-msgid "Date format used in the properties dialog or the list view."
+msgid "Date and time format used in the properties dialog or the list view."
 msgstr ""
 
 #: src/Panes/FontsPane.vala:19
@@ -308,27 +308,23 @@ msgstr ""
 msgid "Hide when single tab"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:103
-msgid "Never"
-msgstr ""
-
-#: src/Panes/TerminalPane.vala:114
+#: src/Panes/TerminalPane.vala:113
 msgid "Cursor Shape"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:119
+#: src/Panes/TerminalPane.vala:118
 msgid "Block"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:120
+#: src/Panes/TerminalPane.vala:119
 msgid "I-Beam"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:121
+#: src/Panes/TerminalPane.vala:120
 msgid "Underline"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:132
+#: src/Panes/TerminalPane.vala:131
 #, fuzzy
 msgid "Terminal Font"
 msgstr "Terminal"
