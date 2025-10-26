@@ -11,6 +11,24 @@
   </description>
   <translation type="gettext">pantheon-tweaks</translation>
   <releases>
+    <release version="2.5.0" date="2025-10-26" urgency="medium">
+      <description translatable="no" translate="no">
+        <p>
+          Improvements:
+        </p>
+        <ul>
+          <li>FilesPane: Explicit Date & Time format to match with the message used in the upstream Files app</li>
+          <li>TerminalPane: Remove 'Never Show Tabs' option that does nothing</li>
+          <li>Update translations</li>
+        </ul>
+        <p>
+          Fixes:
+        </p>
+        <ul>
+          <li>Avoid duplicated window controls in the both side of titlebar on Wayland</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.4.0" date="2025-07-26" urgency="medium">
       <description translatable="no" translate="no">
         <ul>
