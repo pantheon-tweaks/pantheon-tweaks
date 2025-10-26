@@ -17,7 +17,7 @@
           Improvements:
         </p>
         <ul>
-          <li>FilesPane: Explicit Date & Time format to match with the message used in the upstream Files app</li>
+          <li>FilesPane: Explicit Date &amp; Time format to match with the message used in the upstream Files app</li>
           <li>TerminalPane: Remove 'Never Show Tabs' option that does nothing</li>
           <li>Update translations</li>
         </ul>
