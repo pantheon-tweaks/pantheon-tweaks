@@ -1,9 +1,9 @@
-# Files in data/styles/* are modification of switchboard 8.0.0 (LGPL-2.1-or-later).
+# Files in data/styles/* are modification of System Settings 8.0.0 (LGPL-2.1-or-later).
 #
-# Switchboard uses their own custom css in the library widgets like
+# System Settings uses their own custom css in the library widgets like
 # SettingsPage. However, the stylesheet resource is not included in the library
-# and included in the switchboard app itself instead, which causes broken
-# styles if we use libswitchboard widgets from outside the switchboard app.
+# and included in the System Settings app itself instead, which causes broken
+# styles if we use libswitchboard widgets from outside the System Settings app.
 sassc = find_program('sassc')
 
 sassc_opts = [ '-a', '-M', '-t', 'compact' ]
