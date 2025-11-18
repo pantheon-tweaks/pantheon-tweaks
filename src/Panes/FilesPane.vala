@@ -38,15 +38,15 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
         restore_tabs_box.append (restore_tabs_switch);
 
         /*************************************************/
-        /* Date Format                                   */
+        /* Date & Time Format                            */
         /*************************************************/
         date_format_list = new ListStore (typeof (StringIdObject));
         date_format_list.append (new StringIdObject ("locale", _("Locale")));
         date_format_list.append (new StringIdObject ("iso", _("ISO")));
         date_format_list.append (new StringIdObject ("informal", _("Informal")));
 
-        var date_format_label = new Granite.HeaderLabel (_("Date Format")) {
-            secondary_text = _("Date format used in the properties dialog or the list view."),
+        var date_format_label = new Granite.HeaderLabel (_("Date & Time Format")) {
+            secondary_text = _("Date and time format used in the properties dialog or the list view."),
             hexpand = true
         };
 

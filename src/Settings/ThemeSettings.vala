@@ -4,7 +4,7 @@
  *                         Pantheon Tweaks Developers, 2020-2025
  *
  * Some code borrowed from:
- * elementary/switchboard-plug-pantheon-shell, src/Views/Appearance.vala
+ * elementary/settings-desktop, src/Views/Appearance.vala
  */
 
 public class PantheonTweaks.ThemeSettings {

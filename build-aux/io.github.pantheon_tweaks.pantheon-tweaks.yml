@@ -1,7 +1,7 @@
 id: io.github.pantheon_tweaks.pantheon-tweaks
 # elementary SDK is not available on Flathub, so use the elementary BaseApp instead
 base: io.elementary.BaseApp
-base-version: circe-24.08
+base-version: circe-25.08
 runtime: org.gnome.Platform
 runtime-version: '49'
 sdk: org.gnome.Sdk
@@ -62,10 +62,10 @@ modules:
       - type: patch
         path: dconf-override.patch
 
-  - name: switchboard
+  - name: system-settings
     buildsystem: meson
     cleanup:
-      # We use switchboard as a widget library; cleanup the unnecessary system settings app
+      # We use System Settings as a widget library; cleanup the unnecessary System Settings app
       - /share/applications
       - /share/metainfo
       - /bin
@@ -73,7 +73,7 @@ modules:
       - /share/icons
     sources:
       - type: git
-        url: https://github.com/elementary/switchboard.git
+        url: https://github.com/elementary/settings.git
         tag: 8.0.3
         commit: 6714b3c8f6d0e6d386c3190e1c15b1d651faae2a
         x-checker-data:

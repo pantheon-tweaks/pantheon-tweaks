@@ -46,7 +46,7 @@ public abstract class PantheonTweaks.BasePane : Switchboard.SettingsPage {
             transient_for = (Gtk.Window) get_root ()
         };
         var reset_button = reset_confirm_dialog.add_button (_("Reset"), Gtk.ResponseType.ACCEPT);
-        reset_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
+        reset_button.add_css_class (Granite.CssClass.DESTRUCTIVE);
         reset_confirm_dialog.response.connect ((response_id) => {
             if (response_id != Gtk.ResponseType.ACCEPT) {
                 reset_confirm_dialog.destroy ();
