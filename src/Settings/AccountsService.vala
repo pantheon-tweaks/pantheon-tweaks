@@ -4,7 +4,7 @@
  *                         Pantheon Tweaks Developers, 2020-2025
  *
  * Borrowed from:
- * elementary/switchboard-plug-pantheon-shell, src/PantheonAccountsServicePlugin.vala
+ * elementary/settings-desktop, src/PantheonAccountsServicePlugin.vala
  */
 
 [DBus (name = "io.elementary.pantheon.AccountsService")]
