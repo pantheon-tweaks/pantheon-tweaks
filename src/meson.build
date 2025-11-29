@@ -20,6 +20,7 @@ source_files = files(
     'Panes/AppearancePane.vala',
     'Panes/FilesPane.vala',
     'Panes/FontsPane.vala',
+    'Panes/KeyboardPane.vala',
     'Panes/MiscPane.vala',
     'Panes/TerminalPane.vala',
     'Settings/AccountsService.vala',
