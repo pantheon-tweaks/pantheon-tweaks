@@ -16,6 +16,8 @@ finalize()
   rmdir "$bridge_dir"
 }
 
+# $XDG_DATA_DIRS is meant to be expanded in the sh launched by flatpak-spawn instead of by this script
+# shellcheck disable=SC2016
 IFS=: read -ra host_data_dirs < <(flatpak-spawn --host sh -c 'echo "$XDG_DATA_DIRS"')
 
 # To avoid potentially muddying up $XDG_DATA_DIRS too much, we link the schema paths
