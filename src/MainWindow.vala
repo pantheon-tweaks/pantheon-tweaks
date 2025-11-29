@@ -15,6 +15,8 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
+        title = _("Pantheon Tweaks");
+
         headerbar = new Gtk.HeaderBar () {
             show_title_buttons = true,
             title_widget = new Gtk.Label (_("Pantheon Tweaks"))
