@@ -2,8 +2,6 @@
 # Wrapper script to get/set GSettings from the host in the sandboxed Pantheon Tweaks.
 # Originally from https://github.com/flathub/ca.desrt.dconf-editor/blob/master/start-dconf-editor.sh
 
-trap "finalize; exit 1" SIGINT
-
 # Cleanup temporary symlinks and directories this script created.
 finalize()
 {
@@ -26,6 +24,8 @@ bridge_dir="$XDG_RUNTIME_DIR/dconf-bridge"
 mkdir -p "$bridge_dir"
 
 HOST_XDG_DATA_DIRS=""
+
+trap "finalize; exit 1" SIGINT
 
 for dir in "${host_data_dirs[@]}"; do
   if [[ "$dir" == /usr/* ]]; then
