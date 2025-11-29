@@ -7,10 +7,10 @@ trap "finalize; exit 1" SIGINT
 # Cleanup temporary symlinks and directories this script created.
 finalize()
 {
-  for dir in "${HOST_XDG_DATA_DIRS//:/ }"; do
-    unlink $dir/glib-2.0/schemas
-    rmdir $dir/glib-2.0
-    rmdir $dir
+  for dir in ${HOST_XDG_DATA_DIRS//:/ }; do
+    unlink "$dir/glib-2.0/schemas"
+    rmdir "$dir/glib-2.0"
+    rmdir "$dir"
   done
 
   rmdir "$bridge_dir"
@@ -42,7 +42,7 @@ done
 # We MUST prepend the host's data dirs BEFORE the Flatpak environment's own dirs,
 # otherwise data (such as default values) load in the wrong order and would then
 # incorrectly prefer the Flatpak's internal defaults instead of the host's defaults!
-if [[ ! -z "${HOST_XDG_DATA_DIRS}" ]]; then
+if [[ -n "${HOST_XDG_DATA_DIRS}" ]]; then
   XDG_DATA_DIRS="${HOST_XDG_DATA_DIRS:1}:${XDG_DATA_DIRS}"
 fi
 
