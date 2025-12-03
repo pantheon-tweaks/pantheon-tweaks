@@ -4,9 +4,12 @@
  */
 
 public class PantheonTweaks.Panes.KeyboardPane : BasePane {
-    private const string SCREENSHOT_ACCEL = "<Super><Shift>3";
-    private const string AREA_SCREENSHOT_ACCEL = "<Super><Shift>4";
-    private const string WINDOW_SCREENSHOT_ACCEL = "<Super><Shift>6";
+    private const string SCREENSHOT_ACCEL_WHOLE = "<Super><Shift>3";
+    private const string SCREENSHOT_ACCEL_WHOLE_CLIP = "<Super><Alt><Shift>3";
+    private const string SCREENSHOT_ACCEL_AREA = "<Super><Shift>4";
+    private const string SCREENSHOT_ACCEL_AREA_CLIP = "<Super><Alt><Shift>4";
+    private const string SCREENSHOT_ACCEL_WINDOW = "<Super><Shift>6";
+    private const string SCREENSHOT_ACCEL_WINDOW_CLIP = "<Super><Alt><Shift>6";
 
     private GLib.Settings keybindings_settings;
     private ListStore altwin_items;
@@ -64,20 +67,38 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
             valign = Gtk.Align.CENTER
         };
 
-        var scr_accel = new Granite.AccelLabel (
-            _("Grab the whole screen"), SCREENSHOT_ACCEL
+        var scr_accel_whole = new Granite.AccelLabel (
+            _("Grab the whole screen"), SCREENSHOT_ACCEL_WHOLE
         ) {
             halign = Gtk.Align.START
         };
 
-        var area_scr_accel = new Granite.AccelLabel (
-            _("Select an area to grab"), AREA_SCREENSHOT_ACCEL
+        var scr_accel_whole_clip = new Granite.AccelLabel (
+            _("Copy the whole screen to clipboard"), SCREENSHOT_ACCEL_WHOLE_CLIP
         ) {
             halign = Gtk.Align.START
         };
 
-        var window_scr_accel = new Granite.AccelLabel (
-            _("Grab the current window"), WINDOW_SCREENSHOT_ACCEL
+        var scr_accel_area = new Granite.AccelLabel (
+            _("Select an area to grab"), SCREENSHOT_ACCEL_AREA
+        ) {
+            halign = Gtk.Align.START
+        };
+
+        var scr_accel_area_clip = new Granite.AccelLabel (
+            _("Copy an area to clipboard"), SCREENSHOT_ACCEL_AREA_CLIP
+        ) {
+            halign = Gtk.Align.START
+        };
+
+        var scr_accel_window = new Granite.AccelLabel (
+            _("Grab the current window"), SCREENSHOT_ACCEL_WINDOW
+        ) {
+            halign = Gtk.Align.START
+        };
+
+        var scr_accel_window_clip = new Granite.AccelLabel (
+            _("Copy the current window to clipboard"), SCREENSHOT_ACCEL_WINDOW_CLIP
         ) {
             halign = Gtk.Align.START
         };
@@ -88,9 +109,12 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
         };
         altscr_grid.attach (altscr_label, 0, 0, 1, 1);
         altscr_grid.attach (altscr_switch, 1, 0, 1, 1);
-        altscr_grid.attach (scr_accel, 0, 1, 2, 1);
-        altscr_grid.attach (area_scr_accel, 0, 2, 2, 1);
-        altscr_grid.attach (window_scr_accel, 0, 3, 2, 1);
+        altscr_grid.attach (scr_accel_whole, 0, 1, 2, 1);
+        altscr_grid.attach (scr_accel_whole_clip, 0, 2, 2, 1);
+        altscr_grid.attach (scr_accel_area, 0, 3, 2, 1);
+        altscr_grid.attach (scr_accel_area_clip, 0, 4, 2, 1);
+        altscr_grid.attach (scr_accel_window, 0, 5, 2, 1);
+        altscr_grid.attach (scr_accel_window_clip, 0, 6, 2, 1);
 
         content_area.append (altwin_box);
         content_area.append (altscr_grid);
@@ -114,9 +138,12 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
         altscr_switch.notify["active"].connect ((obj, pspec) => {
             var switch = (Gtk.Switch) obj;
             if (switch.active) {
-                keybindings_settings.set_strv ("screenshot", { SCREENSHOT_ACCEL });
-                keybindings_settings.set_strv ("area-screenshot", { AREA_SCREENSHOT_ACCEL });
-                keybindings_settings.set_strv ("window-screenshot", { WINDOW_SCREENSHOT_ACCEL });
+                keybindings_settings.set_strv ("screenshot", { SCREENSHOT_ACCEL_WHOLE });
+                keybindings_settings.set_strv ("screenshot-clip", { SCREENSHOT_ACCEL_WHOLE_CLIP });
+                keybindings_settings.set_strv ("area-screenshot", { SCREENSHOT_ACCEL_AREA });
+                keybindings_settings.set_strv ("area-screenshot-clip", { SCREENSHOT_ACCEL_AREA_CLIP });
+                keybindings_settings.set_strv ("window-screenshot", { SCREENSHOT_ACCEL_WINDOW });
+                keybindings_settings.set_strv ("window-screenshot-clip", { SCREENSHOT_ACCEL_WINDOW_CLIP });
             } else {
                 reset_keybindings_settings ();
             }
@@ -131,7 +158,14 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
     }
 
     private void reset_keybindings_settings () {
-        string[] keys = {"screenshot", "area-screenshot", "window-screenshot"};
+        string[] keys = {
+            "screenshot",
+            "screenshot-clip",
+            "area-screenshot",
+            "area-screenshot-clip",
+            "window-screenshot",
+            "window-screenshot-clip",
+        };
 
         foreach (unowned var key in keys) {
             keybindings_settings.reset (key);
