@@ -21,6 +21,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
         panes = new List<BasePane> ();
         panes.append (new Panes.AppearancePane ());
         panes.append (new Panes.FontsPane ());
+        panes.append (new Panes.KeyboardPane ());
         panes.append (new Panes.MiscPane ());
         panes.append (new Panes.FilesPane ());
         panes.append (new Panes.TerminalPane ());
