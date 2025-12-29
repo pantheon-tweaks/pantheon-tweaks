@@ -72,13 +72,15 @@ modules:
       - /share/glib-2.0/schemas/io.elementary.settings.gschema.xml
       - /share/icons
     sources:
-      - type: git
-        url: https://github.com/elementary/settings.git
-        tag: 8.0.3
-        commit: 6714b3c8f6d0e6d386c3190e1c15b1d651faae2a
+      - type: archive
+        url: https://github.com/elementary/settings/archive/8.0.3.tar.gz
+        sha256: cc41024b918cfcd0bd89b3c72e079ff12804cebefbaf34d5adb84191531ee7d1
         x-checker-data:
-          type: git
-          tag-pattern: ^([\d.]+)$
+          type: json
+          url: https://api.github.com/repos/elementary/settings/releases/latest
+          version-query: .tag_name
+          url-query: '"https://github.com/elementary/settings/archive/" + .tag_name + ".tar.gz"'
+          timestamp-query: .published_at
 
   - name: pantheon-tweaks
     buildsystem: meson
