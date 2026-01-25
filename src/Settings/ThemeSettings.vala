@@ -8,10 +8,14 @@
  */
 
 public class PantheonTweaks.ThemeSettings {
-    public const string ELEMENTARY_STYLESHEET_PREFIX = "io.elementary.stylesheet.";
+    private const string ELEMENTARY_STYLESHEET_PREFIX = "io.elementary.stylesheet.";
 
     public enum AccentColor {
-        NO_PREFERENCE,
+        // Workaround for Settings Daemon overwrites gtk-theme on startup
+        // if a valid value of AccentColor is set to Pantheon.AccountsService.prefers_accent_color
+        CUSTOM = -1,
+
+        NO_PREFERENCE = 0,
         RED,
         ORANGE,
         YELLOW,
@@ -26,6 +30,10 @@ public class PantheonTweaks.ThemeSettings {
     }
 
     public static AccentColor parse_accent_color (string full_style_name) {
+        if (!full_style_name.has_prefix (ThemeSettings.ELEMENTARY_STYLESHEET_PREFIX)) {
+            return AccentColor.CUSTOM;
+        }
+
         string variant_name = full_style_name.substring (ELEMENTARY_STYLESHEET_PREFIX.length);
         switch (variant_name) {
             case "strawberry":
