@@ -11,6 +11,23 @@
   </description>
   <translation type="gettext">pantheon-tweaks</translation>
   <releases>
+    <release version="2.5.1" date="2026-01-27" urgency="medium">
+      <description translatable="no" translate="no">
+        <p>
+          Improvements:
+        </p>
+        <ul>
+          <li>Appearance: Add support for Latte elementary stylesheet</li>
+        </ul>
+        <p>
+          Fixes:
+        </p>
+        <ul>
+          <li>Fix window title in Multitasking View fallbacks to the app id instead of app name</li>
+          <li>Appearance: Prevet gtk-theme from being reset on reboot</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.5.0" date="2025-10-26" urgency="medium">
       <description translatable="no" translate="no">
         <p>
