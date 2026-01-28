@@ -11,7 +11,7 @@
   </description>
   <translation type="gettext">pantheon-tweaks</translation>
   <releases>
-    <release version="2.5.1" date="2026-01-27" urgency="medium">
+    <release version="2.5.1" date="2026-01-28" urgency="medium">
       <description translatable="no" translate="no">
         <p>
           Improvements:
