@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: pantheon-tweaks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-26 11:19+0900\n"
-"PO-Revision-Date: 2025-12-31 02:56+0700\n"
+"PO-Revision-Date: 2026-02-13 19:15+0700\n"
 "Last-Translator: Loc Huynh <https://github.com/hthienloc>\n"
 "Language-Team: \n"
 "Language: vi\n"
@@ -15,7 +15,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.8\n"
 
-#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in.in:5 src/MainWindow.vala:20
+#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in.in:5
+#: src/MainWindow.vala:20
 msgid "Pantheon Tweaks"
 msgstr "Pantheon Tweaks"
 
@@ -25,23 +26,24 @@ msgstr "Công cụ tùy chỉnh"
 
 #: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:6
 msgid "Tweak Pantheon settings"
-msgstr "Cài đặt Tweak Pantheon"
+msgstr "Chỉnh sửa cài đặt Pantheon"
 
 #: data/pantheon-tweaks.desktop.in:11
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
-msgstr "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;Nâng cao;Tuỳ chỉnh;Phông chữ;Chủ đề;Âm lượng;Tệp;Tùy chọn;"
+msgstr "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 
 #: data/pantheon-tweaks.metainfo.xml.in.in:8
 msgid "A system customization app for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance."
-msgstr ""
-"Một ứng dụng tùy chỉnh hệ thống dành cho Pantheon Desktop cho phép bạn tùy chỉnh giao diện màn hình của mình một cách dễ dàng và an toàn."
+msgstr "Một ứng dụng tùy chỉnh hệ thống dành cho Pantheon Desktop cho phép bạn tùy chỉnh giao diện màn hình của mình một cách dễ dàng và an toàn."
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:218 data/pantheon-tweaks.metainfo.xml.in.in:222
+#: data/pantheon-tweaks.metainfo.xml.in.in:218
+#: data/pantheon-tweaks.metainfo.xml.in.in:222
 msgid "Appearance pane"
 msgstr "Khung giao diện"
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:228 data/pantheon-tweaks.metainfo.xml.in.in:230
+#: data/pantheon-tweaks.metainfo.xml.in.in:228
+#: data/pantheon-tweaks.metainfo.xml.in.in:230
 msgid "Pantheon Tweaks Developers"
 msgstr "Nhà phát triển Pantheon Tweaks"
 
@@ -64,7 +66,7 @@ msgstr "Thay đổi chủ đề và cách bố trí nút của cửa sổ. Thay 
 
 #: src/Panes/AppearancePane.vala:38
 msgid "General"
-msgstr "Chung"
+msgstr "Tổng quan"
 
 #: src/Panes/AppearancePane.vala:50
 msgid "GTK Theme"
@@ -76,7 +78,8 @@ msgstr "Chủ đề GTK"
 msgid "To show custom themes here, put them in %s."
 msgstr "Để hiển thị các chủ đề tùy chỉnh ở đây, hãy đặt chúng vào %s."
 
-#: src/Panes/AppearancePane.vala:53 src/Panes/AppearancePane.vala:79 src/Panes/AppearancePane.vala:105 src/Panes/AppearancePane.vala:131
+#: src/Panes/AppearancePane.vala:53 src/Panes/AppearancePane.vala:79
+#: src/Panes/AppearancePane.vala:105 src/Panes/AppearancePane.vala:131
 msgid "theme-name"
 msgstr "theme-name"
 
@@ -132,7 +135,7 @@ msgstr "elementary"
 
 #: src/Panes/AppearancePane.vala:175
 msgid "elementary Reversed"
-msgstr "elementary đảo ngược"
+msgstr "elementary Reversed"
 
 #: src/Panes/AppearancePane.vala:176
 msgid "Close Only Right"
@@ -148,11 +151,11 @@ msgstr "Thêm thu nhỏ bên trái"
 
 #: src/Panes/AppearancePane.vala:179
 msgid "Add Minimize Right"
-msgstr "Thêm thu nhỏ quyền"
+msgstr "Thêm thu nhỏ bên phải"
 
 #: src/Panes/AppearancePane.vala:180
 msgid "Replace Maximize to Minimize"
-msgstr "Thay thế Tối đa hóa thành Tối thiểu hoá"
+msgstr "Thay thế Phóng to thành Thu nhỏ"
 
 #: src/Panes/AppearancePane.vala:181
 msgid "Windows"
@@ -164,11 +167,11 @@ msgstr "macOS"
 
 #: src/Panes/AppearancePane.vala:183
 msgid "Windows Reversed"
-msgstr "Windows đảo ngược"
+msgstr "Windows Reversed"
 
 #: src/Panes/AppearancePane.vala:198
 msgid "Show GNOME Menu"
-msgstr "Hiển thị Menu Gnome"
+msgstr "Hiện menu Gnome"
 
 #: src/Panes/AppearancePane.vala:199
 msgid "Whether to show GNOME menu in GNOME apps."
@@ -236,7 +239,7 @@ msgstr "Phông chữ thanh tiêu đề"
 
 #: src/Panes/MiscPane.vala:15
 msgid "Miscellaneous"
-msgstr "Linh tinh"
+msgstr "Khác"
 
 #: src/Panes/MiscPane.vala:17
 msgid "Configure some other hidden settings."
@@ -248,7 +251,7 @@ msgstr "Âm lượng tối đa"
 
 #: src/Panes/TerminalPane.vala:23
 msgid "Terminal"
-msgstr "Thiết bị đầu cuối"
+msgstr "Terminal"
 
 #: src/Panes/TerminalPane.vala:32
 msgid "Follow Last Tab"
@@ -276,7 +279,7 @@ msgstr "Nếu đã bật, các tab đã mở gần đây nhất sẽ được kh
 
 #: src/Panes/TerminalPane.vala:80
 msgid "Terminal Bell"
-msgstr "Chuông nhà ga"
+msgstr "Terminal Bell"
 
 #: src/Panes/TerminalPane.vala:81
 msgid "Sound when hitting the end of a line and also for tab-completion when there are either no or multiple possible completions."
@@ -341,7 +344,7 @@ msgstr "Không thể tải tùy chọn %s"
 
 #: src/Widgets/Categories.vala:67
 msgid "Make sure your Pantheon desktop installation is up to date and not incomplete."
-msgstr "Đảm bảo cài đặt máy tính để bàn Pantheon của bạn được cập nhật và không đầy đủ."
+msgstr "Đảm bảo cài đặt Pantheon desktop của bạn được cập nhật và không thiếu."
 
 #: src/Widgets/Dialog.vala:18
 msgid "Get Support…"
