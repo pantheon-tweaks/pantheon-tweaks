@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-tweaks-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-26 11:19+0900\n"
+"POT-Creation-Date: 2026-01-27 22:21+0900\n"
 "PO-Revision-Date: 2023-01-18 19:37+0900\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in.in:5
-#: src/MainWindow.vala:20
+#: src/MainWindow.vala:18 src/MainWindow.vala:22
 msgid "Pantheon Tweaks"
 msgstr "Pantheon Tweaks"
 
@@ -45,25 +45,25 @@ msgstr ""
 "Панель параметров для Pantheon, которая позволяет вам просто и безопасно "
 "кастомизировать ваш рабочий стол."
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:218
-#: data/pantheon-tweaks.metainfo.xml.in.in:222
+#: data/pantheon-tweaks.metainfo.xml.in.in:236
+#: data/pantheon-tweaks.metainfo.xml.in.in:240
 #, fuzzy
 msgid "Appearance pane"
 msgstr "Оформление"
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:228
-#: data/pantheon-tweaks.metainfo.xml.in.in:230
+#: data/pantheon-tweaks.metainfo.xml.in.in:246
+#: data/pantheon-tweaks.metainfo.xml.in.in:248
 #, fuzzy
 msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon Tweaks"
 
-#: src/MainWindow.vala:38
+#: src/MainWindow.vala:40
 #, c-format
 msgid "Your Desktop Environment \"%s\" Is Not Supported"
 msgstr ""
 
-#: src/MainWindow.vala:40
+#: src/MainWindow.vala:42
 msgid "Pantheon Tweaks is a customization tool for Pantheon."
 msgstr ""
 

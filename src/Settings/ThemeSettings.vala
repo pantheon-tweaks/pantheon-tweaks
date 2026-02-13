@@ -1,17 +1,22 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText: elementary Tweaks Developers, 2014-2020
- *                         Pantheon Tweaks Developers, 2020-2025
+ *                         Pantheon Tweaks Developers, 2020-2026
  *
  * Some code borrowed from:
  * elementary/settings-desktop, src/Views/Appearance.vala
  */
 
 public class PantheonTweaks.ThemeSettings {
-    public const string ELEMENTARY_STYLESHEET_PREFIX = "io.elementary.stylesheet.";
+    private const string ELEMENTARY_STYLESHEET_PREFIX = "io.elementary.stylesheet.";
 
     public enum AccentColor {
-        NO_PREFERENCE,
+        /**
+         * Valid preferences
+         *
+         * See also: https://github.com/elementary/default-settings/blob/e91cdb0f4ba80cb09d823fbfa5556e3473c76997/accountsservice/io.elementary.pantheon.AccountsService.xml#L19-L42
+         */
+        NO_PREFERENCE = 0,
         RED,
         ORANGE,
         YELLOW,
@@ -23,9 +28,24 @@ public class PantheonTweaks.ThemeSettings {
         BROWN,
         GRAY,
         BEIGE,
+
+        /**
+         * Invalid preference; workaround for Settings Daemon
+         *
+         * @see parse_accent_color
+         */
+        CUSTOM = -1;
     }
 
     public static AccentColor parse_accent_color (string full_style_name) {
+        if (!full_style_name.has_prefix (ThemeSettings.ELEMENTARY_STYLESHEET_PREFIX)) {
+            // Settings Daemon overwrites gtk-theme on startup according to a selected accent color,
+            // which results forcing either of the elementary stylesheet variants.
+            // Selecting out-of-range value as an accent color works as a workaround.
+            // See also: https://github.com/elementary/settings-daemon/blob/f04fcb39c198bcfdbcdb0928be0b5e4af30c6f66/src/Backends/AccentColorManager.vala#L85-L103
+            return AccentColor.CUSTOM;
+        }
+
         string variant_name = full_style_name.substring (ELEMENTARY_STYLESHEET_PREFIX.length);
         switch (variant_name) {
             case "strawberry":
