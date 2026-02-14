@@ -1,0 +1,365 @@
+# Vietnamese translation by Vietnam Linux L10n <https://github.com/linux-l10n-vi>
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the pantheon-tweaks package.
+msgid ""
+msgstr ""
+"Project-Id-Version: pantheon-tweaks\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-26 11:19+0900\n"
+"PO-Revision-Date: 2026-02-13 19:15+0700\n"
+"Last-Translator: Loc Huynh <https://github.com/hthienloc>\n"
+"Language-Team: \n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in.in:5
+#: src/MainWindow.vala:20
+msgid "Pantheon Tweaks"
+msgstr "Pantheon Tweaks"
+
+#: data/pantheon-tweaks.desktop.in:4
+msgid "Customization Tool"
+msgstr "Công cụ tùy chỉnh"
+
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:6
+msgid "Tweak Pantheon settings"
+msgstr "Chỉnh sửa cài đặt Pantheon"
+
+#: data/pantheon-tweaks.desktop.in:11
+msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
+msgstr "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
+
+#: data/pantheon-tweaks.metainfo.xml.in.in:8
+msgid "A system customization app for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance."
+msgstr "Một ứng dụng tùy chỉnh hệ thống dành cho Pantheon Desktop cho phép bạn tùy chỉnh giao diện màn hình của mình một cách dễ dàng và an toàn."
+
+#: data/pantheon-tweaks.metainfo.xml.in.in:218
+#: data/pantheon-tweaks.metainfo.xml.in.in:222
+msgid "Appearance pane"
+msgstr "Khung giao diện"
+
+#. developer_name has deprecated since AppStream 1.0
+#: data/pantheon-tweaks.metainfo.xml.in.in:228
+#: data/pantheon-tweaks.metainfo.xml.in.in:230
+msgid "Pantheon Tweaks Developers"
+msgstr "Nhà phát triển Pantheon Tweaks"
+
+#: src/MainWindow.vala:38
+#, c-format
+msgid "Your Desktop Environment \"%s\" Is Not Supported"
+msgstr "Môi trường máy tính của bạn \"%s\" không được hỗ trợ"
+
+#: src/MainWindow.vala:40
+msgid "Pantheon Tweaks is a customization tool for Pantheon."
+msgstr "Pantheon Tweaks là một công cụ tùy biến dành cho Pantheon."
+
+#: src/Panes/AppearancePane.vala:35
+msgid "Appearance"
+msgstr "Giao diện"
+
+#: src/Panes/AppearancePane.vala:37
+msgid "Change the theme and button layout of windows. Changing theme may cause visibility issue."
+msgstr "Thay đổi chủ đề và cách bố trí nút của cửa sổ. Thay đổi chủ đề có thể gây ra vấn đề về khả năng hiển thị."
+
+#: src/Panes/AppearancePane.vala:38
+msgid "General"
+msgstr "Tổng quan"
+
+#: src/Panes/AppearancePane.vala:50
+msgid "GTK Theme"
+msgstr "Chủ đề GTK"
+
+#. TRANSLATORS: The "%s" represents the path where custom themes are installed
+#: src/Panes/AppearancePane.vala:52
+#, c-format
+msgid "To show custom themes here, put them in %s."
+msgstr "Để hiển thị các chủ đề tùy chỉnh ở đây, hãy đặt chúng vào %s."
+
+#: src/Panes/AppearancePane.vala:53 src/Panes/AppearancePane.vala:79
+#: src/Panes/AppearancePane.vala:105 src/Panes/AppearancePane.vala:131
+msgid "theme-name"
+msgstr "theme-name"
+
+#: src/Panes/AppearancePane.vala:76
+msgid "Icon Theme"
+msgstr "Chủ đề biểu tượng"
+
+#. TRANSLATORS: The "%s" represents the path where custom icons are installed
+#: src/Panes/AppearancePane.vala:78
+#, c-format
+msgid "To show custom icons here, put them in %s."
+msgstr "Để hiển thị các biểu tượng tùy chỉnh ở đây, hãy đặt chúng vào %s."
+
+#: src/Panes/AppearancePane.vala:102
+msgid "Cursor Theme"
+msgstr "Chủ đề con trỏ"
+
+#. TRANSLATORS: The "%s" represents the path where custom cursors are installed
+#: src/Panes/AppearancePane.vala:104
+#, c-format
+msgid "To show custom cursors here, put them in %s."
+msgstr "Để hiển thị con trỏ tùy chỉnh ở đây, hãy đặt chúng vào %s."
+
+#: src/Panes/AppearancePane.vala:128
+msgid "Sound Theme"
+msgstr "Chủ đề âm thanh"
+
+#. TRANSLATORS: The "%s" represents the path where custom sounds are installed
+#: src/Panes/AppearancePane.vala:130
+#, c-format
+msgid "To show custom sounds here, put them in %s."
+msgstr "Để hiển thị âm thanh tùy chỉnh ở đây, hãy đặt chúng vào %s."
+
+#: src/Panes/AppearancePane.vala:152
+msgid "Force Dark Style"
+msgstr "Buộc phong cách tối"
+
+#: src/Panes/AppearancePane.vala:153
+msgid "Forces dark style on all apps, even if it's not supported. Requires restarting the application."
+msgstr "Buộc phong cách tối trên tất cả ứng dụng, ngay cả khi nó không được hỗ trợ. Yêu cầu khởi động lại ứng dụng."
+
+#: src/Panes/AppearancePane.vala:168
+msgid "Window Control Layout"
+msgstr "Bố cục điều khiển cửa sổ"
+
+#: src/Panes/AppearancePane.vala:169
+msgid "Changes button layout of the window."
+msgstr "Thay đổi bố cục nút của cửa sổ."
+
+#: src/Panes/AppearancePane.vala:174
+msgid "elementary"
+msgstr "elementary"
+
+#: src/Panes/AppearancePane.vala:175
+msgid "elementary Reversed"
+msgstr "elementary Reversed"
+
+#: src/Panes/AppearancePane.vala:176
+msgid "Close Only Right"
+msgstr "Chỉ đóng bên phải"
+
+#: src/Panes/AppearancePane.vala:177
+msgid "Close Only Left"
+msgstr "Chỉ đóng bên trái"
+
+#: src/Panes/AppearancePane.vala:178
+msgid "Add Minimize Left"
+msgstr "Thêm thu nhỏ bên trái"
+
+#: src/Panes/AppearancePane.vala:179
+msgid "Add Minimize Right"
+msgstr "Thêm thu nhỏ bên phải"
+
+#: src/Panes/AppearancePane.vala:180
+msgid "Replace Maximize to Minimize"
+msgstr "Thay thế Phóng to thành Thu nhỏ"
+
+#: src/Panes/AppearancePane.vala:181
+msgid "Windows"
+msgstr "Windows"
+
+#: src/Panes/AppearancePane.vala:182
+msgid "macOS"
+msgstr "macOS"
+
+#: src/Panes/AppearancePane.vala:183
+msgid "Windows Reversed"
+msgstr "Windows Reversed"
+
+#: src/Panes/AppearancePane.vala:198
+msgid "Show GNOME Menu"
+msgstr "Hiện menu Gnome"
+
+#: src/Panes/AppearancePane.vala:199
+msgid "Whether to show GNOME menu in GNOME apps."
+msgstr "Có hiển thị menu Gnome trong ứng dụng Gnome hay không."
+
+#: src/Panes/FilesPane.vala:17
+msgid "Files"
+msgstr "Tệp"
+
+#: src/Panes/FilesPane.vala:19
+msgid "Applications"
+msgstr "Ứng dụng"
+
+#: src/Panes/FilesPane.vala:27
+msgid "Restore Tabs"
+msgstr "Khôi phục tab"
+
+#: src/Panes/FilesPane.vala:28
+msgid "Restore tabs from previous session when launched."
+msgstr "Khôi phục các tab từ phiên trước khi khởi chạy."
+
+#: src/Panes/FilesPane.vala:44
+msgid "Locale"
+msgstr "Ngôn ngữ"
+
+#: src/Panes/FilesPane.vala:45
+msgid "ISO"
+msgstr "ISO"
+
+#: src/Panes/FilesPane.vala:46
+msgid "Informal"
+msgstr "Không chính thức"
+
+#: src/Panes/FilesPane.vala:48
+msgid "Date & Time Format"
+msgstr "Định dạng ngày và giờ"
+
+#: src/Panes/FilesPane.vala:49
+msgid "Date and time format used in the properties dialog or the list view."
+msgstr "Định dạng ngày và giờ được sử dụng trong hộp thoại thuộc tính hoặc xem danh sách."
+
+#: src/Panes/FontsPane.vala:19
+msgid "Fonts"
+msgstr "Phông chữ"
+
+#: src/Panes/FontsPane.vala:21
+msgid "Change the fonts used in your system and documents by default."
+msgstr "Thay đổi phông chữ được sử dụng trong hệ thống và tài liệu của bạn theo mặc định."
+
+#: src/Panes/FontsPane.vala:29
+msgid "Default Font"
+msgstr "Phông chữ mặc định"
+
+#: src/Panes/FontsPane.vala:45
+msgid "Document Font"
+msgstr "Phông chữ tài liệu"
+
+#: src/Panes/FontsPane.vala:61
+msgid "Monospace Font"
+msgstr "Phông chữ đơn cách"
+
+#: src/Panes/FontsPane.vala:77
+msgid "Titlebar Font"
+msgstr "Phông chữ thanh tiêu đề"
+
+#: src/Panes/MiscPane.vala:15
+msgid "Miscellaneous"
+msgstr "Khác"
+
+#: src/Panes/MiscPane.vala:17
+msgid "Configure some other hidden settings."
+msgstr "Cài đặt một số cài đặt ẩn khác."
+
+#: src/Panes/MiscPane.vala:22
+msgid "Max Volume"
+msgstr "Âm lượng tối đa"
+
+#: src/Panes/TerminalPane.vala:23
+msgid "Terminal"
+msgstr "Terminal"
+
+#: src/Panes/TerminalPane.vala:32
+msgid "Follow Last Tab"
+msgstr "Theo dõi tab cuối cùng"
+
+#: src/Panes/TerminalPane.vala:33
+msgid "Creating a new tab sets the working directory of the last opened tab."
+msgstr "Tạo một tab mới sẽ đặt thư mục làm việc của tab được mở cuối cùng."
+
+#: src/Panes/TerminalPane.vala:48
+msgid "Unsafe Paste Alert"
+msgstr "Cảnh báo dán không an toàn"
+
+#: src/Panes/TerminalPane.vala:49
+msgid "Warn when pasted text contains multiple or administrative commands."
+msgstr "Cảnh báo khi văn bản được dán chứa nhiều lệnh quản trị."
+
+#: src/Panes/TerminalPane.vala:64
+msgid "Remember Tabs"
+msgstr "Ghi nhớ tab"
+
+#: src/Panes/TerminalPane.vala:65
+msgid "If enabled, last opened tabs are restored on start."
+msgstr "Nếu đã bật, các tab đã mở gần đây nhất sẽ được khôi phục khi bắt đầu."
+
+#: src/Panes/TerminalPane.vala:80
+msgid "Terminal Bell"
+msgstr "Terminal Bell"
+
+#: src/Panes/TerminalPane.vala:81
+msgid "Sound when hitting the end of a line and also for tab-completion when there are either no or multiple possible completions."
+msgstr "Âm thanh khi chạm vào cuối dòng và cả khi hoàn thành tab khi không hoặc có nhiều lần hoàn thành có thể."
+
+#: src/Panes/TerminalPane.vala:96
+msgid "Show Tabs"
+msgstr "Hiển thị tab"
+
+#: src/Panes/TerminalPane.vala:101
+msgid "Always"
+msgstr "Luôn"
+
+#: src/Panes/TerminalPane.vala:102
+msgid "Hide when single tab"
+msgstr "Ẩn khi tab đơn"
+
+#: src/Panes/TerminalPane.vala:113
+msgid "Cursor Shape"
+msgstr "Hình dạng con trỏ"
+
+#: src/Panes/TerminalPane.vala:118
+msgid "Block"
+msgstr "Khối"
+
+#: src/Panes/TerminalPane.vala:119
+msgid "I-Beam"
+msgstr "I-Beam"
+
+#: src/Panes/TerminalPane.vala:120
+msgid "Underline"
+msgstr "Gạch chân"
+
+#: src/Panes/TerminalPane.vala:131
+msgid "Terminal Font"
+msgstr "Phông chữ đầu cuối"
+
+#: src/Widgets/BasePane.vala:30
+msgid "Reset to Default"
+msgstr "Đặt lại về mặc định"
+
+#: src/Widgets/BasePane.vala:41
+msgid "Reset to Default?"
+msgstr "Đặt lại về mặc định?"
+
+#: src/Widgets/BasePane.vala:42
+msgid "All settings in this pane will be restored to the factory defaults. This action can't be undone."
+msgstr "Tất cả các cài đặt trong khung này sẽ được khôi phục về mặc định của nhà sản xuất. Không thể hoàn tác hành động này."
+
+#: src/Widgets/BasePane.vala:48
+msgid "Reset"
+msgstr "Đặt lại"
+
+#: src/Widgets/Categories.vala:34
+msgid "Reset settings successfully"
+msgstr "Đặt lại cài đặt thành công"
+
+#: src/Widgets/Categories.vala:66
+#, c-format
+msgid "Failed to Load %s Preference"
+msgstr "Không thể tải tùy chọn %s"
+
+#: src/Widgets/Categories.vala:67
+msgid "Make sure your Pantheon desktop installation is up to date and not incomplete."
+msgstr "Đảm bảo cài đặt Pantheon desktop của bạn được cập nhật và không thiếu."
+
+#: src/Widgets/Dialog.vala:18
+msgid "Get Support…"
+msgstr "Nhận hỗ trợ…"
+
+#: src/Widgets/OpenButton.vala:15
+#, c-format
+msgid "Open \"%s\""
+msgstr "Mở \"%s\""
+
+#: src/Widgets/OpenButton.vala:25
+#, c-format
+msgid "Failed To Open \"%s\""
+msgstr "Không mở được \"%s\""
+
+#: src/Widgets/OpenButton.vala:26
+msgid "There was an error when opening the directory or creating it."
+msgstr "Đã xảy ra lỗi khi mở hoặc tạo thư mục."
