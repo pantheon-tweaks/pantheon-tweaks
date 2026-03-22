@@ -39,6 +39,11 @@
     <name>Pantheon Tweaks Developers</name>
   </developer>
 
+  <!--
+    We intentionally don't support translation for the descriptions in release notes
+    because only a few past release notes would be often shown in the app store
+    even if translators translated all of them, which is not worthy.
+  -->
   <releases>
     <release version="2.5.1" date="2026-01-28" urgency="medium">
       <description translate="no">
