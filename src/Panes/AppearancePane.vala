@@ -147,10 +147,10 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         sound_box.append (sound_dir_button);
 
         /*************************************************/
-        /* Force Dark Style                              */
+        /* Legacy Dark Style                             */
         /*************************************************/
-        var dark_style_label = new Granite.HeaderLabel (_("Force Dark Style")) {
-            secondary_text = _("Forces dark style on all apps, even if it's not supported. Requires restarting the application."), // vala-lint=line-length
+        var dark_style_label = new Granite.HeaderLabel (_("Legacy Dark Style")) {
+            secondary_text = _("Attempts to force dark style on apps that don't support it. Requires restart of the apps."), // vala-lint=line-length
             hexpand = true
         };
 
