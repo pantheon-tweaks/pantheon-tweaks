@@ -44,8 +44,10 @@ cleanup:
   - /lib/pkgconfig
   - /share/gir-1.0
   - /share/vala
-# Cleanup development-related files inherited from BaseApp. They're shipped with BaseApp to build the app using
-# them but they became unnecessary after the app is built
+# Use "cleanup-commands" to remove development-related files inherited from BaseApp.
+# ("cleanup" can only remove files installed within this manifest)
+# These files are shipped with BaseApp to build the app using them
+# but they become unnecessary after the app is built.
 cleanup-commands:
   - rm -rfv /app/include
   - rm -rfv /app/lib/girepository-1.0
