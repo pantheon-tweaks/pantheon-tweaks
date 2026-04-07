@@ -38,6 +38,22 @@ build-options:
   # Explicit libdir because some dependency libraries are installed under /app/lib64 on some amd64 build environments
   # and we can't detect them when building our apps
   libdir: /app/lib
+cleanup:
+  - /include
+  - /lib/girepository-1.0
+  - /lib/pkgconfig
+  - /share/gir-1.0
+  - /share/vala
+# Cleanup development-related files inherited from BaseApp. They're shipped with BaseApp to build the app using
+# them but they became unnecessary after the app is built
+cleanup-commands:
+  - rm -rfv /app/include
+  - rm -rfv /app/lib/girepository-1.0
+  - rm -rfv /app/lib/pkgconfig
+  - rm -rfv /app/share/gir-1.0
+  - rm -rfv /app/share/vala
+  - rm -rfv /app/lib/libgee*
+  - rm -rfv /app/lib/libsass*
 modules:
   # Patch dconf to read/write GSettings of the host
   - name: dconf
