@@ -38,6 +38,14 @@ build-options:
   # Explicit libdir because some dependency libraries are installed under /app/lib64 on some amd64 build environments
   # and we can't detect them when building our apps
   libdir: /app/lib
+cleanup:
+  - /include
+  - /lib/girepository-1.0
+  - /lib/pkgconfig
+  - /share/gir-1.0
+  - /share/vala
+cleanup-commands:
+  - /app/cleanup-BaseApp.sh
 modules:
   # Patch dconf to read/write GSettings of the host
   - name: dconf
