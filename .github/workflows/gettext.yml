@@ -27,6 +27,8 @@ jobs:
       uses: elementary/actions/gettext-flatpak@main
       with:
         manifest-path: build-aux/io.github.pantheon_tweaks.pantheon-tweaks.yml
+        repository-url: 'https://flathub.org/repo/flathub.flatpakrepo'
+        repository-name: 'flathub'
       env:
         GIT_USER_NAME: "github-actions[bot]"
         GIT_USER_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
