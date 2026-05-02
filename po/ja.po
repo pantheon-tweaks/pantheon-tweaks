@@ -1,13 +1,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# ryonakano <ryonakaknock3@gmail.com>, 2018, 2020-2025.
+# ryonakano <ryonakaknock3@gmail.com>, 2018-2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-27 22:21+0900\n"
-"PO-Revision-Date: 2025-10-26 11:21+0900\n"
+"POT-Creation-Date: 2026-05-02 16:18+0000\n"
+"PO-Revision-Date: 2026-05-03 01:37+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -16,26 +16,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in.in:5
+#: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:9
 #: src/MainWindow.vala:18 src/MainWindow.vala:22
 msgid "Pantheon Tweaks"
 msgstr "Pantheon Tweaks"
 
-#: data/pantheon-tweaks.desktop.in:4
+#: data/pantheon-tweaks.desktop.in:3
 msgid "Customization Tool"
 msgstr "カスタマイズツール"
 
-#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:6
+#: data/pantheon-tweaks.desktop.in:4 data/pantheon-tweaks.metainfo.xml.in.in:10
 msgid "Tweak Pantheon settings"
 msgstr "Pantheon の設定を微調整します"
 
-#: data/pantheon-tweaks.desktop.in:11
+#: data/pantheon-tweaks.desktop.in:10
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;高度;設定;フォント;"
 "テーマ;音量;ファイル;ターミナル;端末;"
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:8
+#: data/pantheon-tweaks.metainfo.xml.in.in:12
 msgid ""
 "A system customization app for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
@@ -43,14 +43,14 @@ msgstr ""
 "簡単かつ安全にデスクトップの外観をカスタマイズできる、Pantheon デスクトップ向"
 "けのシステムカスタマイズアプリです。"
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:236
-#: data/pantheon-tweaks.metainfo.xml.in.in:240
+#: data/pantheon-tweaks.metainfo.xml.in.in:19
+#: data/pantheon-tweaks.metainfo.xml.in.in:23
 msgid "Appearance pane"
 msgstr "“外観”ペイン"
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:246
-#: data/pantheon-tweaks.metainfo.xml.in.in:248
+#: data/pantheon-tweaks.metainfo.xml.in.in:37
+#: data/pantheon-tweaks.metainfo.xml.in.in:39
 msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon Tweaks の開発者"
 
@@ -125,16 +125,16 @@ msgid "To show custom sounds here, put them in %s."
 msgstr "カスタムサウンドをここに表示させるには、%s 以下に配置してください。"
 
 #: src/Panes/AppearancePane.vala:152
-msgid "Force Dark Style"
-msgstr "ダークモードを強制する"
+msgid "Legacy Dark Style"
+msgstr "レガシーなダークモード"
 
 #: src/Panes/AppearancePane.vala:153
 msgid ""
-"Forces dark style on all apps, even if it's not supported. Requires "
-"restarting the application."
+"Attempts to force dark style on apps that don't support it. Requires restart "
+"of the apps."
 msgstr ""
-"対応していないアプリに対しても、ダークモードを強制します。アプリケーションの"
-"再起動が必要です。"
+"対応していないアプリに対しても、ダークモードを強制しようとします。アプリの再"
+"起動が必要です。"
 
 #: src/Panes/AppearancePane.vala:168
 msgid "Window Control Layout"
@@ -375,10 +375,6 @@ msgid ""
 msgstr ""
 "お使いの Pantheon デスクトップが最新かつ不完全でないことを確認してください。"
 
-#: src/Widgets/Dialog.vala:18
-msgid "Get Support…"
-msgstr "サポートを受ける…"
-
 #: src/Widgets/OpenButton.vala:15
 #, c-format
 msgid "Open \"%s\""
@@ -392,6 +388,3 @@ msgstr "\"%s\" を開けませんでした"
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr "ディレクトリを開く際または作成する際にエラーが発生しました。"
-
-#~ msgid "Never"
-#~ msgstr "表示しない"
