@@ -45,6 +45,25 @@
     even if translators translated all of them, which is not worthy.
   -->
   <releases>
+    <release version="2.5.2" date="2026-05-03" urgency="low">
+      <description translate="no">
+        <p>
+          Improvements:
+        </p>
+        <ul>
+          <li>Appearance: Rename "Force Dark Style" to "Legacy Dark Style" to explicitly say the dark style preference set by Tweaks is for legacy apps built without modern libraries that support native dark style preference</li>
+          <li>Drop useless support URL from the error dialog</li>
+        </ul>
+        <p>
+          Translation updates:
+        </p>
+        <ul>
+          <li>Update Vietnamese translation (thanks to @hthienloc)</li>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="2.5.1" date="2026-01-28" urgency="medium">
       <description translate="no">
         <p>
@@ -62,6 +81,7 @@
         </ul>
       </description>
     </release>
+
     <release version="2.5.0" date="2025-10-26" urgency="medium">
       <description translate="no">
         <p>
@@ -80,6 +100,7 @@
         </ul>
       </description>
     </release>
+
     <release version="2.4.0" date="2025-07-26" urgency="medium">
       <description translate="no">
         <ul>
@@ -92,6 +113,7 @@
         </ul>
       </description>
     </release>
+
     <release version="2.3.0" date="2025-05-14" urgency="low">
       <description translate="no">
         <ul>
@@ -101,6 +123,7 @@
         </ul>
       </description>
     </release>
+
     <release version="2.2.1" date="2025-04-28" urgency="low">
       <description translate="no">
         <ul>
@@ -108,6 +131,7 @@
         </ul>
       </description>
     </release>
+
     <release version="2.2.0" date="2025-02-22" urgency="medium">
       <description translate="no">
         <p>
@@ -119,6 +143,7 @@
         </ul>
       </description>
     </release>
+
     <release version="2.1.0" date="2024-09-26" urgency="medium">
       <description translate="no">
         <p>
@@ -142,6 +167,7 @@
         </ul>
       </description>
     </release>
+
     <release version="2.0.2" date="2024-05-23" urgency="low">
       <description translate="no">
         <ul>
@@ -149,6 +175,7 @@
         </ul>
       </description>
     </release>
+
     <release version="2.0.1" date="2024-05-22" urgency="low">
       <description translate="no">
         <ul>
@@ -157,6 +184,7 @@
         </ul>
       </description>
     </release>
+
     <release version="2.0.0" date="2024-05-19" urgency="medium">
       <description translate="no">
         <ul>
@@ -168,6 +196,7 @@
         </ul>
       </description>
     </release>
+
     <release version="1.1.2" date="2024-01-07" urgency="low">
       <description translate="no">
         <ul>
@@ -175,6 +204,7 @@
         </ul>
       </description>
     </release>
+
     <release version="1.1.1" date="2023-10-26" urgency="low">
       <description translate="no">
         <ul>
@@ -192,6 +222,7 @@
         </ul>
       </description>
     </release>
+
     <release version="1.1.0" date="2023-02-01" urgency="medium">
       <description translate="no">
         <ul>
@@ -207,6 +238,7 @@
         </ul>
       </description>
     </release>
+
     <release version="1.0.4" date="2022-05-23" urgency="low">
       <description translate="no">
         <ul>
@@ -223,6 +255,7 @@
         </ul>
       </description>
     </release>
+
     <release version="1.0.3" date="2021-12-06" urgency="low">
       <description translate="no">
         <ul>
@@ -240,6 +273,7 @@
         </ul>
       </description>
     </release>
+
     <release version="1.0.2" date="2021-11-02" urgency="medium">
       <description translate="no">
         <ul>
@@ -257,6 +291,7 @@
         </ul>
       </description>
     </release>
+
     <release version="1.0.1" date="2021-08-24" urgency="low">
       <description translate="no">
         <ul>
@@ -267,6 +302,7 @@
         </ul>
       </description>
     </release>
+
     <release version="1.0.0" date="2021-08-05" urgency="medium">
       <description translate="no">
         <p>elementary Tweaks is now renamed to Pantheon Tweaks and get some new features and fixes:</p>
@@ -281,5 +317,6 @@
         </ul>
       </description>
     </release>
+
   </releases>
 </component>
