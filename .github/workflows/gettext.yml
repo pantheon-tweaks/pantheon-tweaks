@@ -14,9 +14,9 @@ jobs:
       options: --privileged
 
     steps:
-    - name: Install python3-git
+    - name: Install GitPython
       run: |
-        pip3 install GitPython
+        python3 -m pip install GitPython
 
     - name: Clone repository
       uses: actions/checkout@v6
