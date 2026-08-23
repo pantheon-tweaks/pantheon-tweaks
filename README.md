@@ -35,6 +35,7 @@ Pantheon Tweaks supports the following versions of elementary OS:
   6 Odin / 6.1 Jólnir   | ⚠️ Yes, but not tested | Known issue: some icons shown as missing due to older version of icon theme |
   7 / 7.1 Horus         | ⚠️ Yes, but not tested |                                                                             |
   8 / 8.1 Circe         | ✅ Yes                |                                                                             |
+  9 Tanit               | ✅ Yes                |                                                                             |
 
 For users on elementary OS Hera or below, please use [elementary Tweaks](https://github.com/elementary-tweaks/elementary-tweaks) instead.
 
