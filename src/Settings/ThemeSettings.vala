@@ -79,7 +79,14 @@ public class PantheonTweaks.ThemeSettings {
     }
 
     private const string[] IGNORE_LIST = {
-        "Adwaita", "Emacs", "Default", "default", "gnome", "hicolor"
+        "Adwaita",
+        "Adwaita-dark",
+        "Default",
+        "Emacs",
+        "HighContrast",
+        "default",
+        "gnome",
+        "hicolor",
     };
 
     /**
