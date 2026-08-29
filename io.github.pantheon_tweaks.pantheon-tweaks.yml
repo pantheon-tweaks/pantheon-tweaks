@@ -53,6 +53,7 @@ modules:
     config-opts:
       - -Dbash_completion=false
       - -Dman=false
+      - -Dvapi=false
     cleanup:
       - /bin
       - /include
