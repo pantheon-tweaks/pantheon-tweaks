@@ -5,6 +5,16 @@ project(
   meson_version: '>= 0.57.0',
 )
 
+valac = meson.get_compiler('vala')
+
+# Gtk.StringList.find() is not in gtk4.vapi of valac < 0.56.19
+valac_ver_min = '0.56.19'
+valac_ver = valac.version()
+
+if valac_ver.version_compare('< @0@'.format(valac_ver_min))
+    error('Found valac @0@ but need: \'>= @1@\''.format(valac_ver_min, valac_ver))
+endif
+
 gettext_name = meson.project_name()
 # Use this when reverse-DNS format is required
 application_id = 'io.github.pantheon_tweaks.' + meson.project_name()

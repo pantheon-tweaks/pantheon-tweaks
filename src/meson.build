@@ -28,7 +28,6 @@ source_files = files(
   'Settings/XSettings.vala',
   'Util/SettingsUtil.vala',
   'Util/StringIdListUtil.vala',
-  'Util/StringListUtil.vala',
   'Widgets/BasePane.vala',
   'Widgets/Categories.vala',
   'Widgets/Dialog.vala',
@@ -42,8 +41,8 @@ dependencies = [
   dependency('glib-2.0', version: '>= 2.74'),
   # Version limitation for Granite.CssClass
   dependency('granite-7', version: '>= 7.7.0'),
-  # Version limitation for Gtk.FontDialogButton
-  dependency('gtk4', version: '>= 4.10'),
+  # Version limitation for Gtk.StringList.find()
+  dependency('gtk4', version: '>= 4.18'),
   dependency('pango'),
   # Version limitation for GTK4 ported version
   dependency('switchboard-3', version: '>= 8.0.0'),
