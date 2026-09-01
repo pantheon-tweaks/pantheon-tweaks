@@ -1,7 +1,7 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText: elementary Tweaks Developers, 2014-2020
- *                         Pantheon Tweaks Developers, 2020-2025
+ *                         Pantheon Tweaks Developers, 2020-2026
  */
 
 public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
@@ -15,6 +15,8 @@ public class PantheonTweaks.MainWindow : Gtk.ApplicationWindow {
     }
 
     construct {
+        title = _("Pantheon Tweaks");
+
         headerbar = new Gtk.HeaderBar () {
             show_title_buttons = true,
             title_widget = new Gtk.Label (_("Pantheon Tweaks"))

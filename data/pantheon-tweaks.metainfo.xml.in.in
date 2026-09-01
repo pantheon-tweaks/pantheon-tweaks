@@ -2,6 +2,10 @@
 <component type="desktop-application">
   <id>io.github.pantheon_tweaks.pantheon-tweaks</id>
   <launchable type="desktop-id">io.github.pantheon_tweaks.pantheon-tweaks.desktop</launchable>
+  <translation type="gettext">pantheon-tweaks</translation>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
   <name>Pantheon Tweaks</name>
   <summary>Tweak Pantheon settings</summary>
   <description>
@@ -9,10 +13,96 @@
       A system customization app for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance.
     </p>
   </description>
-  <translation type="gettext">pantheon-tweaks</translation>
+
+  <screenshots>
+    <screenshot type="default" environment="pantheon">
+      <caption>Appearance pane</caption>
+      <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/@VERSION@/data/screenshot.png</image>
+    </screenshot>
+    <screenshot environment="pantheon:dark">
+      <caption>Appearance pane</caption>
+      <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/@VERSION@/data/screenshot-dark.png</image>
+    </screenshot>
+  </screenshots>
+
+  <content_rating type="oars-1.1" />
+
+  <url type="homepage">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
+  <url type="bugtracker">https://github.com/pantheon-tweaks/pantheon-tweaks/issues</url>
+  <url type="help">https://github.com/pantheon-tweaks/pantheon-tweaks/discussions</url>
+  <url type="vcs-browser">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
+  <url type="translate">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
+
+  <!-- developer_name has deprecated since AppStream 1.0 -->
+  <developer_name>Pantheon Tweaks Developers</developer_name>
+  <developer id="io.github.pantheon_tweaks">
+    <name>Pantheon Tweaks Developers</name>
+  </developer>
+
+  <!--
+    We intentionally don't support translation for the descriptions in release notes
+    because only a few past release notes would be often shown in the app store
+    even if translators translated all of them, which is not worthy.
+  -->
   <releases>
+    <release version="2.5.2" date="2026-05-03" urgency="low">
+      <description translate="no">
+        <p>
+          Improvements:
+        </p>
+        <ul>
+          <li>Appearance: Rename "Force Dark Style" to "Legacy Dark Style" to explicitly say the dark style preference set by Tweaks is for legacy apps built without modern libraries that support native dark style preference</li>
+          <li>Drop useless support URL from the error dialog</li>
+        </ul>
+        <p>
+          Translation updates:
+        </p>
+        <ul>
+          <li>Add Vietnamese translation (thanks to @hthienloc)</li>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="2.5.1" date="2026-01-28" urgency="medium">
+      <description translate="no">
+        <p>
+          Improvements:
+        </p>
+        <ul>
+          <li>Appearance: Add support for Latte elementary stylesheet</li>
+        </ul>
+        <p>
+          Fixes:
+        </p>
+        <ul>
+          <li>Fix window title in Multitasking View fallbacks to the app id instead of app name</li>
+          <li>Appearance: Prevet gtk-theme from being reset on reboot</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="2.5.0" date="2025-10-26" urgency="medium">
+      <description translate="no">
+        <p>
+          Improvements:
+        </p>
+        <ul>
+          <li>FilesPane: Explicit Date &amp; Time format to match with the message used in the upstream Files app</li>
+          <li>TerminalPane: Remove 'Never Show Tabs' option that does nothing</li>
+          <li>Update translations</li>
+        </ul>
+        <p>
+          Fixes:
+        </p>
+        <ul>
+          <li>Avoid duplicated window controls in the both side of titlebar on Wayland</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="2.4.0" date="2025-07-26" urgency="medium">
-      <description translatable="no" translate="no">
+      <description translate="no">
         <ul>
           <li>Show a warning dialog instead of hiding the pane silently if loading preferences is failed in a pane on startup</li>
           <li>Terminal: Add cursor-shape preference</li>
@@ -23,8 +113,9 @@
         </ul>
       </description>
     </release>
+
     <release version="2.3.0" date="2025-05-14" urgency="low">
-      <description translatable="no" translate="no">
+      <description translate="no">
         <ul>
           <li>Appearance: Fix the GNOME menu is always appended to all of window controls. It's now prepended to the right half of window controls</li>
           <li>Add app icons in variety sizes</li>
@@ -32,15 +123,17 @@
         </ul>
       </description>
     </release>
+
     <release version="2.2.1" date="2025-04-28" urgency="low">
-      <description translatable="no" translate="no">
+      <description translate="no">
         <ul>
           <li>Flatpak: Update GNOME runtime to 48</li>
         </ul>
       </description>
     </release>
+
     <release version="2.2.0" date="2025-02-22" urgency="medium">
-      <description translatable="no" translate="no">
+      <description translate="no">
         <p>
           Improvements:
         </p>
@@ -50,8 +143,9 @@
         </ul>
       </description>
     </release>
+
     <release version="2.1.0" date="2024-09-26" urgency="medium">
-      <description translatable="no" translate="no">
+      <description translate="no">
         <p>
           Improvements:
         </p>
@@ -73,23 +167,26 @@
         </ul>
       </description>
     </release>
+
     <release version="2.0.2" date="2024-05-23" urgency="low">
-      <description translatable="no" translate="no">
+      <description translate="no">
         <ul>
           <li>Show an alert view if launched on unsupported desktop environments</li>
         </ul>
       </description>
     </release>
+
     <release version="2.0.1" date="2024-05-22" urgency="low">
-      <description translatable="no" translate="no">
+      <description translate="no">
         <ul>
           <li>Apply suggested changes from Flathub maintainers</li>
           <li>Appearance: Fix double error dialogs when clicking buttons to open theme directories and directory creation failed</li>
         </ul>
       </description>
     </release>
+
     <release version="2.0.0" date="2024-05-19" urgency="medium">
-      <description translatable="no" translate="no">
+      <description translate="no">
         <ul>
           <li>Pantheon Tweaks is now an independent desktop app instead of a plug in System Settings</li>
         </ul>
@@ -99,15 +196,17 @@
         </ul>
       </description>
     </release>
+
     <release version="1.1.2" date="2024-01-07" urgency="low">
-      <description translatable="no" translate="no">
+      <description translate="no">
         <ul>
           <li>Add an infobar about migration to an independent dekstop app</li>
         </ul>
       </description>
     </release>
+
     <release version="1.1.1" date="2023-10-26" urgency="low">
-      <description translatable="no" translate="no">
+      <description translate="no">
         <ul>
           <li>Efficiently find and match pane name</li>
           <li>TerminalPane: Allow font configuration</li>
@@ -123,8 +222,9 @@
         </ul>
       </description>
     </release>
+
     <release version="1.1.0" date="2023-02-01" urgency="medium">
-      <description translatable="no" translate="no">
+      <description translate="no">
         <ul>
           <li>TerminalPane: Remove background color preference which no longer take effect due to changes on Terminal side</li>
         </ul>
@@ -138,8 +238,9 @@
         </ul>
       </description>
     </release>
+
     <release version="1.0.4" date="2022-05-23" urgency="low">
-      <description translatable="no" translate="no">
+      <description translate="no">
         <ul>
           <li>Remove AnimationsPane which no longer take effect due to the removal of tweaking animations functions on Gala side</li>
           <li>DestinationButton: Show an error dialog when creating/opening the destination folder being failed</li>
@@ -154,8 +255,9 @@
         </ul>
       </description>
     </release>
+
     <release version="1.0.3" date="2021-12-06" urgency="low">
-      <description translatable="no" translate="no">
+      <description translate="no">
         <ul>
           <li>FontsPane: Fix icon missing with the latest icons update</li>
           <li>Make sure dimming feature that is introduced in the latest version of Gala work for the reset dialog</li>
@@ -171,8 +273,9 @@
         </ul>
       </description>
     </release>
+
     <release version="1.0.2" date="2021-11-02" urgency="medium">
-      <description translatable="no" translate="no">
+      <description translate="no">
         <ul>
           <li>Sync selected elementary stylesheet variant with Desktop Plug</li>
           <li>Improves reliability of restoring visually</li>
@@ -188,8 +291,9 @@
         </ul>
       </description>
     </release>
+
     <release version="1.0.1" date="2021-08-24" urgency="low">
-      <description translatable="no" translate="no">
+      <description translate="no">
         <ul>
           <li>Exclude Adwaita/gnome/hicolor themes from theme selections</li>
           <li>Support accessing to panes with settings paths</li>
@@ -198,8 +302,9 @@
         </ul>
       </description>
     </release>
+
     <release version="1.0.0" date="2021-08-05" urgency="medium">
-      <description translatable="no" translate="no">
+      <description translate="no">
         <p>elementary Tweaks is now renamed to Pantheon Tweaks and get some new features and fixes:</p>
         <ul>
           <li>Remove preferences now supported in Pantheon officially</li>
@@ -212,28 +317,6 @@
         </ul>
       </description>
     </release>
+
   </releases>
-  <screenshots>
-    <screenshot type="default" environment="pantheon">
-      <caption>Appearance pane</caption>
-      <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/@VERSION@/data/screenshot.png</image>
-    </screenshot>
-    <screenshot environment="pantheon:dark">
-      <caption>Appearance pane</caption>
-      <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/@VERSION@/data/screenshot-dark.png</image>
-    </screenshot>
-  </screenshots>
-  <content_rating type="oars-1.1" />
-  <!-- developer_name has deprecated since AppStream 1.0 -->
-  <developer_name>Pantheon Tweaks Developers</developer_name>
-  <developer id="io.github.pantheon_tweaks">
-    <name>Pantheon Tweaks Developers</name>
-  </developer>
-  <url type="homepage">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
-  <url type="bugtracker">https://github.com/pantheon-tweaks/pantheon-tweaks/issues</url>
-  <url type="help">https://github.com/pantheon-tweaks/pantheon-tweaks/discussions</url>
-  <url type="vcs-browser">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
-  <url type="translate">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
-  <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-3.0-or-later</project_license>
 </component>

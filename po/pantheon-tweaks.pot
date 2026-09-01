@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-tweaks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-19 22:44+0900\n"
+"POT-Creation-Date: 2026-05-02 16:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:5
-#: src/MainWindow.vala:20
+#: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:9
+#: src/MainWindow.vala:18 src/MainWindow.vala:22
 msgid "Pantheon Tweaks"
 msgstr ""
 
@@ -26,7 +26,7 @@ msgstr ""
 msgid "Customization Tool"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:4 data/pantheon-tweaks.metainfo.xml.in.in:6
+#: data/pantheon-tweaks.desktop.in:4 data/pantheon-tweaks.metainfo.xml.in.in:10
 msgid "Tweak Pantheon settings"
 msgstr ""
 
@@ -34,29 +34,29 @@ msgstr ""
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:8
+#: data/pantheon-tweaks.metainfo.xml.in.in:12
 msgid ""
 "A system customization app for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:206
-#: data/pantheon-tweaks.metainfo.xml.in.in:210
+#: data/pantheon-tweaks.metainfo.xml.in.in:19
+#: data/pantheon-tweaks.metainfo.xml.in.in:23
 msgid "Appearance pane"
 msgstr ""
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:216
-#: data/pantheon-tweaks.metainfo.xml.in.in:218
+#: data/pantheon-tweaks.metainfo.xml.in.in:37
+#: data/pantheon-tweaks.metainfo.xml.in.in:39
 msgid "Pantheon Tweaks Developers"
 msgstr ""
 
-#: src/MainWindow.vala:38
+#: src/MainWindow.vala:40
 #, c-format
 msgid "Your Desktop Environment \"%s\" Is Not Supported"
 msgstr ""
 
-#: src/MainWindow.vala:40
+#: src/MainWindow.vala:42
 msgid "Pantheon Tweaks is a customization tool for Pantheon."
 msgstr ""
 
@@ -120,13 +120,13 @@ msgid "To show custom sounds here, put them in %s."
 msgstr ""
 
 #: src/Panes/AppearancePane.vala:152
-msgid "Force Dark Style"
+msgid "Legacy Dark Style"
 msgstr ""
 
 #: src/Panes/AppearancePane.vala:153
 msgid ""
-"Forces dark style on all apps, even if it's not supported. Requires "
-"restarting the application."
+"Attempts to force dark style on apps that don't support it. Requires restart "
+"of the apps."
 msgstr ""
 
 #: src/Panes/AppearancePane.vala:168
@@ -214,11 +214,11 @@ msgid "Informal"
 msgstr ""
 
 #: src/Panes/FilesPane.vala:48
-msgid "Date Format"
+msgid "Date & Time Format"
 msgstr ""
 
 #: src/Panes/FilesPane.vala:49
-msgid "Date format used in the properties dialog or the list view."
+msgid "Date and time format used in the properties dialog or the list view."
 msgstr ""
 
 #: src/Panes/FontsPane.vala:19
@@ -307,27 +307,23 @@ msgstr ""
 msgid "Hide when single tab"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:103
-msgid "Never"
-msgstr ""
-
-#: src/Panes/TerminalPane.vala:114
+#: src/Panes/TerminalPane.vala:113
 msgid "Cursor Shape"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:119
+#: src/Panes/TerminalPane.vala:118
 msgid "Block"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:120
+#: src/Panes/TerminalPane.vala:119
 msgid "I-Beam"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:121
+#: src/Panes/TerminalPane.vala:120
 msgid "Underline"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:132
+#: src/Panes/TerminalPane.vala:131
 msgid "Terminal Font"
 msgstr ""
 
@@ -362,10 +358,6 @@ msgstr ""
 msgid ""
 "Make sure your Pantheon desktop installation is up to date and not "
 "incomplete."
-msgstr ""
-
-#: src/Widgets/Dialog.vala:18
-msgid "Get Support…"
 msgstr ""
 
 #: src/Widgets/OpenButton.vala:15

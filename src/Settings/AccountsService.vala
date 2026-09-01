@@ -1,10 +1,10 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText: elementary Tweaks Developers, 2016-2020
- *                         Pantheon Tweaks Developers, 2020-2025
+ *                         Pantheon Tweaks Developers, 2020-2026
  *
  * Borrowed from:
- * elementary/switchboard-plug-pantheon-shell, src/PantheonAccountsServicePlugin.vala
+ * elementary/settings-desktop, src/PantheonAccountsServicePlugin.vala
  */
 
 [DBus (name = "io.elementary.pantheon.AccountsService")]

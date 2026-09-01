@@ -9,7 +9,7 @@ A system customization app for the Pantheon Desktop that lets you easily and saf
 ### From Flathub (Recommended)
 You can download and install Pantheon Tweaks from Flathub:
 
-[<img src="https://flathub.org/assets/badges/flathub-badge-en.svg" width="160" alt="Download on Flathub">](https://flathub.org/apps/io.github.pantheon_tweaks.pantheon-tweaks)
+[![Get it on Flathub](https://flathub.org/api/badge?locale=en)](https://flathub.org/apps/io.github.pantheon_tweaks.pantheon-tweaks)
 
 You can launch it from the app launcher after installation.
 
@@ -22,21 +22,20 @@ If you would like to install Pantheon Tweaks from source code, clone this reposi
 ```
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install -y --user flathub org.flatpak.Builder
-flatpak run org.flatpak.Builder builddir --user --install --force-clean --install-deps-from=flathub build-aux/io.github.pantheon_tweaks.pantheon-tweaks.yml
+flatpak run org.flatpak.Builder builddir --user --install --force-clean --install-deps-from=flathub io.github.pantheon_tweaks.pantheon-tweaks.yml
 ```
 
 ## Supported Versions
 Pantheon Tweaks supports the following versions of elementary OS:
 
-  elementary OS Version | Supported?      |
-  --------------------- | --------------- |
-  0.4 Loki              | ❌
-  5 Juno                | ❌
-  5.1 Hera              | ❌
-  6 Odin                | ✅
-  6.1 Jólnir            | ✅
-  7.0 / 7.1 Horus       | ✅
-  8 Circe               | ✅
+  elementary OS Version | Supported?            | Note                                                                        |
+  --------------------- | --------------------- | --------------------------------------------------------------------------- |
+  0.4 Loki              | ❌ No                 |                                                                             |
+  5 Juno / 5.1 Hera     | ❌ No                 |                                                                             |
+  6 Odin / 6.1 Jólnir   | ⚠️ Yes, but not tested | Known issue: some icons shown as missing due to older version of icon theme |
+  7 / 7.1 Horus         | ⚠️ Yes, but not tested |                                                                             |
+  8 / 8.1 Circe         | ✅ Yes                |                                                                             |
+  9 Tanit               | ✅ Yes                |                                                                             |
 
 For users on elementary OS Hera or below, please use [elementary Tweaks](https://github.com/elementary-tweaks/elementary-tweaks) instead.
 

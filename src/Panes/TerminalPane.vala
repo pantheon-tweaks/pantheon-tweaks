@@ -1,7 +1,7 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText: elementary Tweaks Developers, 2016-2020
- *                         Pantheon Tweaks Developers, 2020-2025
+ *                         Pantheon Tweaks Developers, 2020-2026
  */
 
 public class PantheonTweaks.Panes.TerminalPane : BasePane {
@@ -100,7 +100,6 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
         tab_bar_list = new ListStore (typeof (StringIdObject));
         tab_bar_list.append (new StringIdObject ("Always Show Tabs", _("Always")));
         tab_bar_list.append (new StringIdObject ("Hide When Single Tab", _("Hide when single tab")));
-        tab_bar_list.append (new StringIdObject ("Never Show Tabs", _("Never")));
 
         tab_bar_dropdown = DropDownId.new (tab_bar_list);
 

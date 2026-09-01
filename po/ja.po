@@ -1,13 +1,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# ryonakano <ryonakaknock3@gmail.com>, 2018, 2020-2025.
+# ryonakano <ryonakaknock3@gmail.com>, 2018-2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-19 22:44+0900\n"
-"PO-Revision-Date: 2025-07-19 22:52+0900\n"
+"POT-Creation-Date: 2026-05-02 16:18+0000\n"
+"PO-Revision-Date: 2026-05-03 01:37+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:5
-#: src/MainWindow.vala:20
+#: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:9
+#: src/MainWindow.vala:18 src/MainWindow.vala:22
 msgid "Pantheon Tweaks"
 msgstr "Pantheon Tweaks"
 
@@ -25,7 +25,7 @@ msgstr "Pantheon Tweaks"
 msgid "Customization Tool"
 msgstr "カスタマイズツール"
 
-#: data/pantheon-tweaks.desktop.in:4 data/pantheon-tweaks.metainfo.xml.in.in:6
+#: data/pantheon-tweaks.desktop.in:4 data/pantheon-tweaks.metainfo.xml.in.in:10
 msgid "Tweak Pantheon settings"
 msgstr "Pantheon の設定を微調整します"
 
@@ -35,7 +35,7 @@ msgstr ""
 "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;高度;設定;フォント;"
 "テーマ;音量;ファイル;ターミナル;端末;"
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:8
+#: data/pantheon-tweaks.metainfo.xml.in.in:12
 msgid ""
 "A system customization app for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
@@ -43,23 +43,23 @@ msgstr ""
 "簡単かつ安全にデスクトップの外観をカスタマイズできる、Pantheon デスクトップ向"
 "けのシステムカスタマイズアプリです。"
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:206
-#: data/pantheon-tweaks.metainfo.xml.in.in:210
+#: data/pantheon-tweaks.metainfo.xml.in.in:19
+#: data/pantheon-tweaks.metainfo.xml.in.in:23
 msgid "Appearance pane"
 msgstr "“外観”ペイン"
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:216
-#: data/pantheon-tweaks.metainfo.xml.in.in:218
+#: data/pantheon-tweaks.metainfo.xml.in.in:37
+#: data/pantheon-tweaks.metainfo.xml.in.in:39
 msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon Tweaks の開発者"
 
-#: src/MainWindow.vala:38
+#: src/MainWindow.vala:40
 #, c-format
 msgid "Your Desktop Environment \"%s\" Is Not Supported"
 msgstr "お使いのデスクトップ環境 \"%s\" には対応していません"
 
-#: src/MainWindow.vala:40
+#: src/MainWindow.vala:42
 msgid "Pantheon Tweaks is a customization tool for Pantheon."
 msgstr "Pantheon Tweaks は、Pantheon 用のカスタマイズツールです。"
 
@@ -125,16 +125,16 @@ msgid "To show custom sounds here, put them in %s."
 msgstr "カスタムサウンドをここに表示させるには、%s 以下に配置してください。"
 
 #: src/Panes/AppearancePane.vala:152
-msgid "Force Dark Style"
-msgstr "ダークモードを強制する"
+msgid "Legacy Dark Style"
+msgstr "レガシーなダークモード"
 
 #: src/Panes/AppearancePane.vala:153
 msgid ""
-"Forces dark style on all apps, even if it's not supported. Requires "
-"restarting the application."
+"Attempts to force dark style on apps that don't support it. Requires restart "
+"of the apps."
 msgstr ""
-"対応していないアプリに対しても、ダークモードを強制します。アプリケーションの"
-"再起動が必要です。"
+"対応していないアプリに対しても、ダークモードを強制しようとします。アプリの再"
+"起動が必要です。"
 
 #: src/Panes/AppearancePane.vala:168
 msgid "Window Control Layout"
@@ -221,12 +221,12 @@ msgid "Informal"
 msgstr "略式"
 
 #: src/Panes/FilesPane.vala:48
-msgid "Date Format"
-msgstr "日付の書式"
+msgid "Date & Time Format"
+msgstr "日付と時刻の書式"
 
 #: src/Panes/FilesPane.vala:49
-msgid "Date format used in the properties dialog or the list view."
-msgstr "プロパティダイアログやリスト表示で使用される日付の書式です。"
+msgid "Date and time format used in the properties dialog or the list view."
+msgstr "プロパティダイアログやリスト表示で使用される日付と時刻の書式です。"
 
 #: src/Panes/FontsPane.vala:19
 msgid "Fonts"
@@ -319,27 +319,23 @@ msgstr "常に表示"
 msgid "Hide when single tab"
 msgstr "タブが 1 つの場合は表示しない"
 
-#: src/Panes/TerminalPane.vala:103
-msgid "Never"
-msgstr "表示しない"
-
-#: src/Panes/TerminalPane.vala:114
+#: src/Panes/TerminalPane.vala:113
 msgid "Cursor Shape"
 msgstr "カーソルの形状"
 
-#: src/Panes/TerminalPane.vala:119
+#: src/Panes/TerminalPane.vala:118
 msgid "Block"
 msgstr "ブロック"
 
-#: src/Panes/TerminalPane.vala:120
+#: src/Panes/TerminalPane.vala:119
 msgid "I-Beam"
 msgstr "垂直バー"
 
-#: src/Panes/TerminalPane.vala:121
+#: src/Panes/TerminalPane.vala:120
 msgid "Underline"
 msgstr "下線"
 
-#: src/Panes/TerminalPane.vala:132
+#: src/Panes/TerminalPane.vala:131
 msgid "Terminal Font"
 msgstr "ターミナルのフォント"
 
@@ -378,10 +374,6 @@ msgid ""
 "incomplete."
 msgstr ""
 "お使いの Pantheon デスクトップが最新かつ不完全でないことを確認してください。"
-
-#: src/Widgets/Dialog.vala:18
-msgid "Get Support…"
-msgstr "サポートを受ける…"
 
 #: src/Widgets/OpenButton.vala:15
 #, c-format
