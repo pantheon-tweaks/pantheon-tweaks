@@ -1,7 +1,7 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText: elementary Tweaks Developers, 2016-2020
- *                         Pantheon Tweaks Developers, 2020-2025
+ *                         Pantheon Tweaks Developers, 2020-2026
  */
 
 namespace PantheonTweaks.SettingsUtil {
@@ -45,7 +45,7 @@ namespace PantheonTweaks.SettingsUtil {
             string selected_id = settings_value.get_string ();
             var list = (Gtk.StringList) str_list;
 
-            uint selected_pos = StringListUtil.find (list, selected_id);
+            uint selected_pos = list.find (selected_id);
             if (selected_pos == uint.MAX) {
                 selected.set_uint (Gtk.INVALID_LIST_POSITION);
                 // Never returns false because it causes intentional crash

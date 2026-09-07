@@ -1,7 +1,7 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText: elementary Tweaks Developers, 2016-2020
- *                         Pantheon Tweaks Developers, 2020-2025
+ *                         Pantheon Tweaks Developers, 2020-2026
  *
  * Some code borrowed from:
  * elementary/settings-desktop, src/Views/Appearance.vala
@@ -147,10 +147,10 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         sound_box.append (sound_dir_button);
 
         /*************************************************/
-        /* Force Dark Style                              */
+        /* Legacy Dark Style                             */
         /*************************************************/
-        var dark_style_label = new Granite.HeaderLabel (_("Force Dark Style")) {
-            secondary_text = _("Forces dark style on all apps, even if it's not supported. Requires restarting the application."), // vala-lint=line-length
+        var dark_style_label = new Granite.HeaderLabel (_("Legacy Dark Style")) {
+            secondary_text = _("Attempts to force dark style on apps that don't support it. Requires restart of the apps."), // vala-lint=line-length
             hexpand = true
         };
 
@@ -367,7 +367,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
     private void gtk_theme_settings_to_dropdown () {
         string selected_id = interface_settings.get_string ("gtk-theme");
-        uint selected_pos = StringListUtil.find (gtk_list, selected_id);
+        uint selected_pos = gtk_list.find (selected_id);
 
         if (selected_pos == uint.MAX) {
             // Unselect if the list does not contain the current theme
@@ -387,12 +387,11 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
         interface_settings.set_string ("gtk-theme", selected_id);
 
-        if (selected_id.has_prefix (ThemeSettings.ELEMENTARY_STYLESHEET_PREFIX)) {
-            ThemeSettings.AccentColor color = ThemeSettings.parse_accent_color (selected_id);
-            if (((DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") != null) {
-                pantheon_act.prefers_accent_color = color;
-            }
+        if (((DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") == null) {
+            return;
         }
+
+        pantheon_act.prefers_accent_color = (int) ThemeSettings.parse_accent_color (selected_id);
     }
 
     private void controls_settings_to_dropdown () {

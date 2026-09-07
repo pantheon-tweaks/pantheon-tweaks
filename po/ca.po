@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-26 11:19+0900\n"
+"POT-Creation-Date: 2026-01-27 22:21+0900\n"
 "PO-Revision-Date: 2014-09-01 10:06+0000\n"
 "Last-Translator: JoanColl <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Launchpad (build 17192)\n"
 
 #: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in.in:5
-#: src/MainWindow.vala:20
+#: src/MainWindow.vala:18 src/MainWindow.vala:22
 msgid "Pantheon Tweaks"
 msgstr ""
 
@@ -41,24 +41,24 @@ msgid ""
 "safely customise your desktop's appearance."
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:218
-#: data/pantheon-tweaks.metainfo.xml.in.in:222
+#: data/pantheon-tweaks.metainfo.xml.in.in:236
+#: data/pantheon-tweaks.metainfo.xml.in.in:240
 #, fuzzy
 msgid "Appearance pane"
 msgstr "Aparença"
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:228
-#: data/pantheon-tweaks.metainfo.xml.in.in:230
+#: data/pantheon-tweaks.metainfo.xml.in.in:246
+#: data/pantheon-tweaks.metainfo.xml.in.in:248
 msgid "Pantheon Tweaks Developers"
 msgstr ""
 
-#: src/MainWindow.vala:38
+#: src/MainWindow.vala:40
 #, c-format
 msgid "Your Desktop Environment \"%s\" Is Not Supported"
 msgstr ""
 
-#: src/MainWindow.vala:40
+#: src/MainWindow.vala:42
 msgid "Pantheon Tweaks is a customization tool for Pantheon."
 msgstr ""
 
