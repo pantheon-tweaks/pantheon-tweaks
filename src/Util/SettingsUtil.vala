@@ -11,6 +11,9 @@ namespace PantheonTweaks.SettingsUtil {
 
     public const string FILES_SCHEMA = "io.elementary.files.preferences";
 
+    public const string INPUT_SCHEMA = "org.gnome.desktop.input-sources";
+    public const string KEYBINDING_SCHEMA = "io.elementary.desktop.wm.keybindings";
+
     public const string PANEL_SOUND_SCHEMA = "io.elementary.desktop.wingpanel.sound";
 
     public const string TERMINAL_SCHEMA = "io.elementary.terminal.settings";
