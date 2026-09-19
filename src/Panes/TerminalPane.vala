@@ -38,7 +38,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
             valign = Gtk.Align.CENTER
         };
 
-        var follow_last_tab_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var follow_last_tab_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         follow_last_tab_box.append (follow_last_tab_label);
         follow_last_tab_box.append (follow_last_tab_switch);
 
@@ -54,7 +54,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
             valign = Gtk.Align.CENTER
         };
 
-        var unsafe_paste_alert_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var unsafe_paste_alert_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         unsafe_paste_alert_box.append (unsafe_paste_alert_label);
         unsafe_paste_alert_box.append (unsafe_paste_alert_switch);
 
@@ -70,7 +70,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
             valign = Gtk.Align.CENTER
         };
 
-        var rem_tabs_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var rem_tabs_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         rem_tabs_box.append (rem_tabs_label);
         rem_tabs_box.append (rem_tabs_switch);
 
@@ -86,7 +86,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
             valign = Gtk.Align.CENTER
         };
 
-        var term_bell_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var term_bell_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         term_bell_box.append (term_bell_label);
         term_bell_box.append (term_bell_switch);
 
@@ -103,7 +103,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
 
         tab_bar_dropdown = DropDownId.new (tab_bar_list);
 
-        var tab_bar_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var tab_bar_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         tab_bar_box.append (tab_bar_label);
         tab_bar_box.append (tab_bar_dropdown);
 
@@ -121,7 +121,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
 
         cursor_shape_dropdown = DropDownId.new (cursor_shape_list);
 
-        var cursor_shape_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var cursor_shape_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         cursor_shape_box.append (cursor_shape_label);
         cursor_shape_box.append (cursor_shape_dropdown);
 
@@ -137,7 +137,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
             use_font = true
         };
 
-        var term_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var term_font_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         term_font_box.append (term_font_label);
         term_font_box.append (term_font_button);
 
