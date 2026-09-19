@@ -11,7 +11,7 @@ public abstract class PantheonTweaks.BasePane : Switchboard.SettingsPage {
     protected abstract void do_reset ();
 
     protected bool is_load_success { get; protected set; }
-    protected Gtk.Box content_area;
+    protected Granite.Box content_area;
 
     protected BasePane () {
     }
@@ -21,7 +21,7 @@ public abstract class PantheonTweaks.BasePane : Switchboard.SettingsPage {
 
         is_load_success = false;
 
-        content_area = new Gtk.Box (Gtk.Orientation.VERTICAL, 18) {
+        content_area = new Granite.Box (Gtk.Orientation.VERTICAL) {
             vexpand = true,
             hexpand = true
         };
