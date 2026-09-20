@@ -33,7 +33,7 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
             valign = Gtk.Align.CENTER
         };
 
-        var max_volume_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var max_volume_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         max_volume_box.append (max_volume_scale);
         max_volume_box.append (max_volume_spinbutton);
 

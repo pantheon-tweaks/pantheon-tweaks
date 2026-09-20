@@ -63,7 +63,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
         var gtk_dir_button = new OpenButton (gtk_rootdir);
 
-        var gtk_theme_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var gtk_theme_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         gtk_theme_box.append (gtk_label);
         gtk_theme_box.append (gtk_dropdown);
         gtk_theme_box.append (gtk_dir_button);
@@ -89,7 +89,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
         var icon_dir_button = new OpenButton (icon_rootdir);
 
-        var icon_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var icon_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         icon_box.append (icon_label);
         icon_box.append (icon_dropdown);
         icon_box.append (icon_dir_button);
@@ -115,7 +115,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
         var cursor_dir_button = new OpenButton (cursor_rootdir);
 
-        var cursor_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var cursor_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         cursor_box.append (cursor_label);
         cursor_box.append (cursor_dropdown);
         cursor_box.append (cursor_dir_button);
@@ -141,7 +141,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
         var sound_dir_button = new OpenButton (sound_rootdir);
 
-        var sound_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var sound_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         sound_box.append (sound_label);
         sound_box.append (sound_dropdown);
         sound_box.append (sound_dir_button);
@@ -158,7 +158,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             valign = Gtk.Align.CENTER
         };
 
-        var dark_style_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var dark_style_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         dark_style_box.append (dark_style_label);
         dark_style_box.append (dark_style_switch);
 
@@ -184,7 +184,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
         controls_dropdown = DropDownId.new (controls_list);
 
-        var controls_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12) {
+        var controls_box = new Granite.Box (Gtk.Orientation.HORIZONTAL) {
             margin_top = 24
         };
         controls_box.append (controls_label);
@@ -204,7 +204,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             valign = Gtk.Align.CENTER
         };
 
-        var gnome_menu_switch_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var gnome_menu_switch_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         gnome_menu_switch_box.append (gnome_menu_switch_label);
         gnome_menu_switch_box.append (gnome_menu_switch);
 
