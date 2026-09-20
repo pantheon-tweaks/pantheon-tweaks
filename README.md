@@ -28,14 +28,14 @@ flatpak run org.flatpak.Builder builddir --user --install --force-clean --instal
 ## Supported Versions
 Pantheon Tweaks supports the following versions of elementary OS:
 
-  elementary OS Version | Supported?            | Note                                                                        |
-  --------------------- | --------------------- | --------------------------------------------------------------------------- |
-  0.4 Loki              | ❌ No                 |                                                                             |
-  5 Juno / 5.1 Hera     | ❌ No                 |                                                                             |
-  6 Odin / 6.1 Jólnir   | ⚠️ Yes, but not tested | Known issue: some icons shown as missing due to older version of icon theme |
-  7 / 7.1 Horus         | ⚠️ Yes, but not tested |                                                                             |
-  8 / 8.1 Circe         | ✅ Yes                |                                                                             |
-  9 Tanit               | ✅ Yes                |                                                                             |
+| elementary OS Version | Supported?                 | Note                                                                        |
+| :-------------------- | :------------------------- | :-------------------------------------------------------------------------- |
+| 0.4 Loki              | ❌ No                      |                                                                             |
+| 5 Juno / 5.1 Hera     | ❌ No                      |                                                                             |
+| 6 Odin / 6.1 Jólnir   | ⚠️ Yes, but not well tested | Known issue: some icons shown as missing due to older version of icon theme |
+| 7 / 7.1 Horus         | ⚠️ Yes, but not well tested |                                                                             |
+| 8 / 8.1 Circe         | ✅ Yes                     |                                                                             |
+| 9 Tanit               | ✅ Yes                     |                                                                             |
 
 For users on elementary OS Hera or below, please use [elementary Tweaks](https://github.com/elementary-tweaks/elementary-tweaks) instead.
 
