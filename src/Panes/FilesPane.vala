@@ -33,7 +33,7 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
             valign = Gtk.Align.CENTER
         };
 
-        var restore_tabs_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var restore_tabs_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         restore_tabs_box.append (restore_tabs_label);
         restore_tabs_box.append (restore_tabs_switch);
 
@@ -52,7 +52,7 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
 
         date_format_dropdown = DropDownId.new (date_format_list);
 
-        var date_format_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var date_format_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         date_format_box.append (date_format_label);
         date_format_box.append (date_format_dropdown);
 

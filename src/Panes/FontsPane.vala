@@ -35,7 +35,7 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
             use_font = true
         };
 
-        var default_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var default_font_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         default_font_box.append (default_font_label);
         default_font_box.append (default_font_button);
 
@@ -51,7 +51,7 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
             use_font = true
         };
 
-        var document_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var document_font_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         document_font_box.append (document_font_label);
         document_font_box.append (document_font_button);
 
@@ -67,7 +67,7 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
             use_font = true,
         };
 
-        var mono_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var mono_font_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         mono_font_box.append (mono_font_label);
         mono_font_box.append (mono_font_button);
 
@@ -83,7 +83,7 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
             use_font = true
         };
 
-        var titlebar_font_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var titlebar_font_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         titlebar_font_box.append (titlebar_font_label);
         titlebar_font_box.append (titlebar_font_button);
 
