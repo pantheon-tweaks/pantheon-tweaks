@@ -51,7 +51,7 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
 
         var altwin_dropdown = DropDownId.new (altwin_items);
 
-        var altwin_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
+        var altwin_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         altwin_box.append (altwin_label);
         altwin_box.append (altwin_dropdown);
 
