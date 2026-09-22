@@ -18,6 +18,7 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
     private GLib.Settings input_sources_settings;
     private GLib.Settings keybindings_settings;
     private ListStore altwin_list;
+    private Gtk.DropDown altwin_dropdown;
     private Gtk.Button altscr_button;
 
     public KeyboardPane () {
@@ -84,7 +85,7 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
             hexpand = true
         };
 
-        var altwin_dropdown = DropDownId.new (altwin_list);
+        altwin_dropdown = DropDownId.new (altwin_list);
 
         var altwin_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         altwin_box.append (altwin_label);
