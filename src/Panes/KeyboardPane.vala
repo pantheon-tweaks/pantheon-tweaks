@@ -11,7 +11,7 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
     private const string SCREENSHOT_ACCEL_WINDOW = "<Super><Shift>6";
     private const string SCREENSHOT_ACCEL_WINDOW_CLIP = "<Super><Alt><Shift>6";
 
-    private inline static string xkeyboard_config_(string msgid) {
+    private static inline string xkeyboard_config_(string msgid) {
         return dgettext ("xkeyboard-config", msgid);
     }
 
