@@ -32,7 +32,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
             show_title_buttons = true
         };
 
-        toast = new Granite.Toast (null);
+        toast = new Granite.Toast ("");
 
         var overlay = new Gtk.Overlay () {
             child = stack
