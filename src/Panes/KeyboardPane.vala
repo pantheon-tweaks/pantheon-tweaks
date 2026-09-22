@@ -145,7 +145,7 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
             keybindings_settings.set_strv ("window-screenshot", { SCREENSHOT_ACCEL_WINDOW });
             keybindings_settings.set_strv ("window-screenshot-clip", { SCREENSHOT_ACCEL_WINDOW_CLIP });
 
-            show_toast (C_("Enabled alternative screenshot shortcut keys successfully"));
+            show_toast (N_("Enabled alternative screenshot shortcut keys successfully"));
         });
 
         is_load_success = true;

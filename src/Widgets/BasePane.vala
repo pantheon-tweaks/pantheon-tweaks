@@ -55,7 +55,7 @@ public abstract class PantheonTweaks.BasePane : Switchboard.SettingsPage {
 
             do_reset ();
             reset_confirm_dialog.destroy ();
-            show_toast (C_("Reset settings successfully"));
+            show_toast (N_("Reset settings successfully"));
         });
         reset_confirm_dialog.present ();
     }
