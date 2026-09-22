@@ -11,6 +11,10 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
     private const string SCREENSHOT_ACCEL_WINDOW = "<Super><Shift>6";
     private const string SCREENSHOT_ACCEL_WINDOW_CLIP = "<Super><Alt><Shift>6";
 
+    private inline static string xkeyboard_config_(string msgid) {
+        dgettext ("xkeyboard-config", msgid);
+    }
+
     private GLib.Settings keybindings_settings;
     private ListStore altwin_items;
     private Gtk.Button altscr_button;
@@ -29,21 +33,21 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
         /* Alt and Win Behavior                          */
         /*************************************************/
         altwin_items = new ListStore (typeof (StringIdObject));
-        altwin_items.append (new StringIdObject ("default", _("Default")));
-        altwin_items.append (new StringIdObject ("altwin:menu", _("Add the standard behavior to Menu key")));
-        altwin_items.append (new StringIdObject ("altwin:menu_win", _("Menu is mapped to Win")));
-        altwin_items.append (new StringIdObject ("altwin:meta_alt", _("Alt and Meta are on Alt")));
-        altwin_items.append (new StringIdObject ("altwin:alt_win", _("Alt is mapped to Win and the usual Alt")));
-        altwin_items.append (new StringIdObject ("altwin:ctrl_win", _("Ctrl is mapped to Win and the usual Ctrl")));
-        altwin_items.append (new StringIdObject ("altwin:ctrl_rwin", _("Ctrl is mapped to Right Win and the usual Ctrl")));
-        altwin_items.append (new StringIdObject ("altwin:ctrl_alt_win", _("Ctrl is mapped to Alt, Alt to Win")));
-        altwin_items.append (new StringIdObject ("altwin:meta_win", _("Meta is mapped to Win")));
-        altwin_items.append (new StringIdObject ("altwin:left_meta_win", _("Meta is mapped to Left Win")));
-        altwin_items.append (new StringIdObject ("altwin:hyper_win", _("Hyper is mapped to Win")));
-        altwin_items.append (new StringIdObject ("altwin:alt_super_win", _("Alt is mapped to Right Win, Super to Menu")));
-        altwin_items.append (new StringIdObject ("altwin:swap_lalt_lwin", _("Left Alt is swapped with Left Win")));
-        altwin_items.append (new StringIdObject ("altwin:swap_alt_win", _("Alt is swapped with Win")));
-        altwin_items.append (new StringIdObject ("altwin:prtsc_rwin", _("Win is mapped to PrtSc and the usual Win")));
+        altwin_items.append (new StringIdObject ("default", xkeyboard_config_("Default")));
+        altwin_items.append (new StringIdObject ("altwin:menu", xkeyboard_config_("Add the standard behavior to Menu key")));
+        altwin_items.append (new StringIdObject ("altwin:menu_win", xkeyboard_config_("Menu is mapped to Win")));
+        altwin_items.append (new StringIdObject ("altwin:meta_alt", xkeyboard_config_("Alt and Meta are on Alt")));
+        altwin_items.append (new StringIdObject ("altwin:alt_win", xkeyboard_config_("Alt is mapped to Win and the usual Alt")));
+        altwin_items.append (new StringIdObject ("altwin:ctrl_win", xkeyboard_config_("Ctrl is mapped to Win and the usual Ctrl")));
+        altwin_items.append (new StringIdObject ("altwin:ctrl_rwin", xkeyboard_config_("Ctrl is mapped to Right Win and the usual Ctrl")));
+        altwin_items.append (new StringIdObject ("altwin:ctrl_alt_win", xkeyboard_config_("Ctrl is mapped to Alt, Alt to Win")));
+        altwin_items.append (new StringIdObject ("altwin:meta_win", xkeyboard_config_("Meta is mapped to Win")));
+        altwin_items.append (new StringIdObject ("altwin:left_meta_win", xkeyboard_config_("Meta is mapped to Left Win")));
+        altwin_items.append (new StringIdObject ("altwin:hyper_win", xkeyboard_config_("Hyper is mapped to Win")));
+        altwin_items.append (new StringIdObject ("altwin:alt_super_win", xkeyboard_config_("Alt is mapped to Right Win, Super to Menu")));
+        altwin_items.append (new StringIdObject ("altwin:swap_lalt_lwin", xkeyboard_config_("Left Alt is swapped with Left Win")));
+        altwin_items.append (new StringIdObject ("altwin:swap_alt_win", xkeyboard_config_("Alt is swapped with Win")));
+        altwin_items.append (new StringIdObject ("altwin:prtsc_rwin", xkeyboard_config_("Win is mapped to PrtSc and the usual Win")));
 
         var altwin_label = new Granite.HeaderLabel (_("Alt and Win Behavior")) {
             hexpand = true
