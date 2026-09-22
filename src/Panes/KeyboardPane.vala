@@ -135,13 +135,17 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
 
         // TODO bind to xkb-options settings
 
-        altscr_button.clicked.connect ((obj, pspec) => {
+        altscr_button.clicked.connect (() => {
             keybindings_settings.set_strv ("screenshot", { SCREENSHOT_ACCEL_WHOLE });
             keybindings_settings.set_strv ("screenshot-clip", { SCREENSHOT_ACCEL_WHOLE_CLIP });
+
             keybindings_settings.set_strv ("area-screenshot", { SCREENSHOT_ACCEL_AREA });
             keybindings_settings.set_strv ("area-screenshot-clip", { SCREENSHOT_ACCEL_AREA_CLIP });
+
             keybindings_settings.set_strv ("window-screenshot", { SCREENSHOT_ACCEL_WINDOW });
             keybindings_settings.set_strv ("window-screenshot-clip", { SCREENSHOT_ACCEL_WINDOW_CLIP });
+
+            show_toast (C_("Enabled alternative screenshot shortcut keys successfully"));
         });
 
         is_load_success = true;

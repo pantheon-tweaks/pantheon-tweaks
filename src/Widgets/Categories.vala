@@ -32,7 +32,7 @@ public class PantheonTweaks.Categories : Gtk.Box {
             show_title_buttons = true
         };
 
-        toast = new Granite.Toast (_("Reset settings successfully"));
+        toast = new Granite.Toast (null);
 
         var overlay = new Gtk.Overlay () {
             child = stack
@@ -49,7 +49,8 @@ public class PantheonTweaks.Categories : Gtk.Box {
         };
 
         panes.foreach ((pane) => {
-            pane.restored.connect (() => {
+            pane.show_toast.connect ((message) => {
+                toast.title = _(message);
                 toast.send_notification ();
             });
 
