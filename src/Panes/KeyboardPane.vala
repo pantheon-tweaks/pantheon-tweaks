@@ -15,8 +15,9 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
         return dgettext ("xkeyboard-config", msgid);
     }
 
+    private GLib.Settings input_sources_settings;
     private GLib.Settings keybindings_settings;
-    private ListStore altwin_items;
+    private ListStore altwin_list;
     private Gtk.Button altscr_button;
 
     public KeyboardPane () {
@@ -32,50 +33,50 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
         /*************************************************/
         /* Alt and Win Behavior                          */
         /*************************************************/
-        altwin_items = new ListStore (typeof (StringIdObject));
-        altwin_items.append (
+        altwin_list = new ListStore (typeof (StringIdObject));
+        altwin_list.append (
             new StringIdObject ("default", xkeyboard_config_("Default"))
         );
-        altwin_items.append (
+        altwin_list.append (
             new StringIdObject ("altwin:menu", xkeyboard_config_("Add the standard behavior to Menu key"))
         );
-        altwin_items.append (
+        altwin_list.append (
             new StringIdObject ("altwin:menu_win", xkeyboard_config_("Menu is mapped to Win"))
         );
-        altwin_items.append (
+        altwin_list.append (
             new StringIdObject ("altwin:meta_alt", xkeyboard_config_("Alt and Meta are on Alt"))
         );
-        altwin_items.append (
+        altwin_list.append (
             new StringIdObject ("altwin:alt_win", xkeyboard_config_("Alt is mapped to Win and the usual Alt"))
         );
-        altwin_items.append (
+        altwin_list.append (
             new StringIdObject ("altwin:ctrl_win", xkeyboard_config_("Ctrl is mapped to Win and the usual Ctrl"))
         );
-        altwin_items.append (
+        altwin_list.append (
             new StringIdObject ("altwin:ctrl_rwin", xkeyboard_config_("Ctrl is mapped to Right Win and the usual Ctrl"))
         );
-        altwin_items.append (
+        altwin_list.append (
             new StringIdObject ("altwin:ctrl_alt_win", xkeyboard_config_("Ctrl is mapped to Alt, Alt to Win"))
         );
-        altwin_items.append (
+        altwin_list.append (
             new StringIdObject ("altwin:meta_win", xkeyboard_config_("Meta is mapped to Win"))
         );
-        altwin_items.append (
+        altwin_list.append (
             new StringIdObject ("altwin:left_meta_win", xkeyboard_config_("Meta is mapped to Left Win"))
         );
-        altwin_items.append (
+        altwin_list.append (
             new StringIdObject ("altwin:hyper_win", xkeyboard_config_("Hyper is mapped to Win"))
         );
-        altwin_items.append (
+        altwin_list.append (
             new StringIdObject ("altwin:alt_super_win", xkeyboard_config_("Alt is mapped to Right Win, Super to Menu"))
         );
-        altwin_items.append (
+        altwin_list.append (
             new StringIdObject ("altwin:swap_lalt_lwin", xkeyboard_config_("Left Alt is swapped with Left Win"))
         );
-        altwin_items.append (
+        altwin_list.append (
             new StringIdObject ("altwin:swap_alt_win", xkeyboard_config_("Alt is swapped with Win"))
         );
-        altwin_items.append (
+        altwin_list.append (
             new StringIdObject ("altwin:prtsc_rwin", xkeyboard_config_("Win is mapped to PrtSc and the usual Win"))
         );
 
@@ -83,7 +84,7 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
             hexpand = true
         };
 
-        var altwin_dropdown = DropDownId.new (altwin_items);
+        var altwin_dropdown = DropDownId.new (altwin_list);
 
         var altwin_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         altwin_box.append (altwin_label);
@@ -159,7 +160,7 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
             warning ("Could not find settings schema %s", SettingsUtil.INPUT_SCHEMA);
             return false;
         }
-        var input_sources_settings = new GLib.Settings (SettingsUtil.INPUT_SCHEMA);
+        input_sources_settings = new GLib.Settings (SettingsUtil.INPUT_SCHEMA);
 
         if (!SettingsUtil.schema_exists (SettingsUtil.KEYBINDING_SCHEMA)) {
             warning ("Could not find settings schema %s", SettingsUtil.KEYBINDING_SCHEMA);
@@ -167,7 +168,8 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
         }
         keybindings_settings = new GLib.Settings (SettingsUtil.KEYBINDING_SCHEMA);
 
-        // TODO bind to xkb-options settings
+        input_sources_settings.changed["xkb-options"].connect (xkb_options_settings_to_dropdown);
+        altwin_dropdown.notify["selected"].connect (xkb_options_dropdown_to_settings);
 
         altscr_button.clicked.connect (() => {
             keybindings_settings.set_strv ("screenshot", { SCREENSHOT_ACCEL_WHOLE });
@@ -203,5 +205,44 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
         foreach (unowned var key in keys) {
             keybindings_settings.reset (key);
         }
+    }
+
+    private void xkb_options_settings_to_dropdown () {
+        unowned string selected_id = "default";
+
+        string[] xkb_options = input_sources_settings.get_strv ("xkb-options");
+        foreach (unowned string xkb_option in xkb_options) {
+            if (xkb_option.has_prefix ("altwin:")) {
+                selected_id = xkb_option;
+                break;
+            }
+        }
+
+        uint selected_pos = StringIdListUtil.find (altwin_list, selected_id);
+
+        if (altwin_dropdown.selected == selected_pos) {
+            return;
+        }
+
+        altwin_dropdown.selected = selected_pos;
+    }
+
+    private void xkb_options_dropdown_to_settings () {
+        uint selected_pos = altwin_dropdown.selected;
+        string? selected_id = StringIdListUtil.get_id (altwin_list, selected_pos);
+
+        if (selected_id == null) {
+            return;
+        }
+
+        string[] xkb_options = input_sources_settings.get_strv ("xkb-options");
+        foreach (unowned string xkb_option in xkb_options) {
+            if (xkb_option.has_prefix ("altwin:")) {
+                //xkb_options.remove (selected_id);
+                break;
+            }
+        }
+
+        input_sources_settings.set_strv ("xkb-options", xkb_options);
     }
 }
