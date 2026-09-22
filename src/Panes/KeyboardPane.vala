@@ -13,7 +13,7 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
 
     private GLib.Settings keybindings_settings;
     private ListStore altwin_items;
-    private Gtk.Switch altscr_switch;
+    private Gtk.Button altscr_button;
 
     public KeyboardPane () {
         Object (
@@ -63,7 +63,7 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
             secondary_text = _("Useful if your keyboard has no PrtSc key. If enabled, the following shortcut keys are assigned.")
         };
 
-        altscr_switch = new Gtk.Switch () {
+        altscr_button = new Gtk.Button.with_label (_("Enable")) {
             valign = Gtk.Align.CENTER
         };
 
@@ -108,7 +108,7 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
             row_spacing = 12
         };
         altscr_grid.attach (altscr_label, 0, 0, 1, 1);
-        altscr_grid.attach (altscr_switch, 1, 0, 1, 1);
+        altscr_grid.attach (altscr_button, 1, 0, 1, 1);
         altscr_grid.attach (scr_accel_whole, 0, 1, 2, 1);
         altscr_grid.attach (scr_accel_whole_clip, 0, 2, 2, 1);
         altscr_grid.attach (scr_accel_area, 0, 3, 2, 1);
@@ -135,18 +135,13 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
 
         // TODO bind to xkb-options settings
 
-        altscr_switch.notify["active"].connect ((obj, pspec) => {
-            var switch = (Gtk.Switch) obj;
-            if (switch.active) {
-                keybindings_settings.set_strv ("screenshot", { SCREENSHOT_ACCEL_WHOLE });
-                keybindings_settings.set_strv ("screenshot-clip", { SCREENSHOT_ACCEL_WHOLE_CLIP });
-                keybindings_settings.set_strv ("area-screenshot", { SCREENSHOT_ACCEL_AREA });
-                keybindings_settings.set_strv ("area-screenshot-clip", { SCREENSHOT_ACCEL_AREA_CLIP });
-                keybindings_settings.set_strv ("window-screenshot", { SCREENSHOT_ACCEL_WINDOW });
-                keybindings_settings.set_strv ("window-screenshot-clip", { SCREENSHOT_ACCEL_WINDOW_CLIP });
-            } else {
-                reset_keybindings_settings ();
-            }
+        altscr_button.clicked.connect ((obj, pspec) => {
+            keybindings_settings.set_strv ("screenshot", { SCREENSHOT_ACCEL_WHOLE });
+            keybindings_settings.set_strv ("screenshot-clip", { SCREENSHOT_ACCEL_WHOLE_CLIP });
+            keybindings_settings.set_strv ("area-screenshot", { SCREENSHOT_ACCEL_AREA });
+            keybindings_settings.set_strv ("area-screenshot-clip", { SCREENSHOT_ACCEL_AREA_CLIP });
+            keybindings_settings.set_strv ("window-screenshot", { SCREENSHOT_ACCEL_WINDOW });
+            keybindings_settings.set_strv ("window-screenshot-clip", { SCREENSHOT_ACCEL_WINDOW_CLIP });
         });
 
         is_load_success = true;
@@ -170,7 +165,5 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
         foreach (unowned var key in keys) {
             keybindings_settings.reset (key);
         }
-
-        altscr_switch.active = false;
     }
 }
