@@ -50,7 +50,6 @@ public class PantheonTweaks.Categories : Gtk.Box {
 
         panes.foreach ((pane) => {
             pane.show_toast.connect ((message) => {
-                toast.withdraw ();
                 toast.title = _(message);
                 toast.send_notification ();
             });
