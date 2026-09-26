@@ -102,19 +102,12 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
             transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN,
         };
 
-        check_alive_timeout_spinbutton.input.connect ((obj, out new_value) => {
+        check_alive_timeout_spinbutton.value_changed.connect ((obj) => {
             var spin_button = (Gtk.SpinButton) obj;
-            string text = spin_button.get_text ();
 
-            uint cur_value;
-            if (!uint.try_parse (text, out cur_value)) {
-                warning ("Failed to parse input text. text=\"%s\"", text);
-                return Gtk.INPUT_ERROR;
-            }
-
-            if (cur_value >= CHECK_ALIVE_TIMEOUT_SANE_MIN || cur_value == CHECK_ALIVE_TIMEOUT_DISABLED) {
+            if (spin_button.value >= CHECK_ALIVE_TIMEOUT_SANE_MIN || spin_button.value == CHECK_ALIVE_TIMEOUT_DISABLED) {
                 // NOP
-                return (int) false;
+                return;
             }
 
             // An uint variable in gschema keys can have any values between uint.MIN and uint.MAX of course,
@@ -122,8 +115,7 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
             // Setting extremely short period of time results the window manager presents
             // the not responding dialog so frequently and can cause the entire desktop slow down.
             // So, we clamp to a sane min value.
-            new_value = CHECK_ALIVE_TIMEOUT_SANE_MIN;
-            return (int) true;
+            spin_button.value = CHECK_ALIVE_TIMEOUT_SANE_MIN;
         });
 
         content_area.append (indicator_sound_label);
