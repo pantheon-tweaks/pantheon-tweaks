@@ -122,7 +122,7 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
         content_area.append (max_volume_box);
         content_area.append (check_alive_box);
         content_area.append (check_alive_timeout_label);
-        content_area.append (check_alive_timeout_spinbutton);
+        content_area.append (check_alive_timeout_revealer);
     }
 
     public override bool load () {
