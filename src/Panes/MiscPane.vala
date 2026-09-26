@@ -88,7 +88,7 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
             valign = Gtk.Align.CENTER,
         };
 
-        var check_alive_timeout_box = new Granite.Box (Gtk.Orientation.VERTICAL);
+        var check_alive_timeout_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
         check_alive_timeout_box.append (check_alive_timeout_label);
         check_alive_timeout_box.append (check_alive_timeout_spinbutton);
 
@@ -121,7 +121,6 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
         content_area.append (indicator_sound_label);
         content_area.append (max_volume_box);
         content_area.append (check_alive_box);
-        content_area.append (check_alive_timeout_label);
         content_area.append (check_alive_timeout_revealer);
     }
 
