@@ -9,13 +9,10 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
     private const string SCHEMA_KEY_CHECK_ALIVE_TIMEOUT = "check-alive-timeout";
 
     private const uint CHECK_ALIVE_TIMEOUT_DEFAULT = 5000;
-    // An uint variable in a gschema key can have any values between uint.MIN and uint.MAX of course,
-    // but here its unit is milliseconds.
-    // Setting extremely short period of time results the window manager presents the not responding dialog
-    // so frequently and can cause the entire desktop slow down. So, we limit to a sane min value.
-    private const uint CHECK_ALIVE_TIMEOUT_MIN = 100;
+    private const uint CHECK_ALIVE_TIMEOUT_MIN = uint.MIN;
+    private const uint CHECK_ALIVE_TIMEOUT_SANE_MIN = 100;
     private const uint CHECK_ALIVE_TIMEOUT_MAX = uint.MAX;
-    private const uint CHECK_ALIVE_TIMEOUT_DISABLED = uint.MIN;
+    private const uint CHECK_ALIVE_TIMEOUT_DISABLED = CHECK_ALIVE_TIMEOUT_MIN;
     // We Limit to a sane increment step because no one would like to tweak this by 1 milliseconds
     private const uint CHECK_ALIVE_TIMEOUT_STEP_INCREMENT = 100;
     private const uint CHECK_ALIVE_TIMEOUT_PAGE_INCREMENT = 10;
@@ -126,7 +123,25 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
 
         sound_settings.bind ("max-volume", max_volume_spinbutton, "value", SettingsBindFlags.DEFAULT);
 
-        mutter_settings.bind (SCHEMA_KEY_CHECK_ALIVE_TIMEOUT, check_alive_timeout_spinbutton, "value", SettingsBindFlags.DEFAULT);
+        mutter_settings.bind_with_mapping (SCHEMA_KEY_CHECK_ALIVE_TIMEOUT,
+                check_alive_timeout_spinbutton, "value",
+                SettingsBindFlags.DEFAULT,
+                (SettingsBindGetMappingShared ?) null,
+                (_value) => {
+                    uint value = _value.get_uint ();
+
+                    if (value > CHECK_ALIVE_TIMEOUT_SANE_MIN) {
+                        // An uint variable in gschema keys can have any values between uint.MIN and uint.MAX of course,
+                        // but here Mutter uses it to store a value in milliseconds.
+                        // Setting extremely short period of time results the window manager presents
+                        // the not responding dialog so frequently and can cause the entire desktop slow down.
+                        // So, we clamp to a sane min value.
+                        value = CHECK_ALIVE_TIMEOUT_SANE_MIN;
+                    }
+
+                    return new Variant.uint32 (value);
+                },
+                null, null);
 
         check_alive_switch.bind_property ("active", check_alive_timeout_revealer, "reveal_child", BindingFlags.DEFAULT);
 
