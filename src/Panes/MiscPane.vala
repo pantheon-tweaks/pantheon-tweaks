@@ -9,15 +9,14 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
     private const string SCHEMA_KEY_CHECK_ALIVE_TIMEOUT = "check-alive-timeout";
 
     private const uint CHECK_ALIVE_TIMEOUT_DEFAULT = 5000;
-    private const uint CHECK_ALIVE_TIMEOUT_MIN = uint.MIN;
+    // An uint variable in a gschema key can have any values between uint.MIN and uint.MAX of course,
+    // but here its unit is milliseconds.
+    // Setting extremely short period of time results the window manager presents the not responding dialog
+    // so frequently and can cause the entire desktop slow down. So, we limit to a sane min value.
+    private const uint CHECK_ALIVE_TIMEOUT_MIN = 100;
     private const uint CHECK_ALIVE_TIMEOUT_MAX = uint.MAX;
-    private const uint CHECK_ALIVE_TIMEOUT_DISABLED = CHECK_ALIVE_TIMEOUT_MIN;
-    /*
-     * An uint value in a gschema key can step up/down by 1 but here its unit is milliseconds.
-     * Setting such short period of time results the window manager presents
-     * the not responding dialog so frequently and can cause the entire desktop slow down.
-     * So, we limit to a sane increment step.
-     */
+    private const uint CHECK_ALIVE_TIMEOUT_DISABLED = uint.MIN;
+    // We Limit to a sane increment step because no one would like to tweak this by 1 milliseconds
     private const uint CHECK_ALIVE_TIMEOUT_STEP_INCREMENT = 100;
     private const uint CHECK_ALIVE_TIMEOUT_PAGE_INCREMENT = 10;
     private const uint CHECK_ALIVE_TIMEOUT_PAGE_SIZE = 10;
