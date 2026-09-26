@@ -20,6 +20,7 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
     private Gtk.SpinButton max_volume_spinbutton;
     private Gtk.Switch check_alive_switch;
     private Gtk.SpinButton check_alive_timeout_spinbutton;
+    private Gtk.Revealer check_alive_timeout_revealer;
 
     private Settings sound_settings;
     private Settings mutter_settings;
@@ -92,31 +93,10 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
         check_alive_timeout_box.append (check_alive_timeout_label);
         check_alive_timeout_box.append (check_alive_timeout_spinbutton);
 
-        var check_alive_timeout_revealer = new Gtk.Revealer () {
+        check_alive_timeout_revealer = new Gtk.Revealer () {
             child = check_alive_timeout_box,
             transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN,
         };
-
-        check_alive_timeout_spinbutton.bind_property ("value",
-                check_alive_switch, "active",
-                BindingFlags.BIDIRECTIONAL,
-                (_, _value, ref _active) => {
-                    _active.set_boolean (_value.get_double () != CHECK_ALIVE_TIMEOUT_DISABLED);
-                    return true;
-                },
-                (_, _active, ref _value) => {
-                    uint timeout = CHECK_ALIVE_TIMEOUT_DISABLED;
-
-                    if (_active.get_boolean ()) {
-                        timeout = CHECK_ALIVE_TIMEOUT_DEFAULT;
-                    }
-
-                    _value.set_double (timeout);
-                    return true;
-                }
-        );
-
-        check_alive_switch.bind_property ("active", check_alive_timeout_revealer, "reveal_child", BindingFlags.DEFAULT);
 
         content_area.append (indicator_sound_label);
         content_area.append (max_volume_box);
@@ -140,6 +120,27 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
         mutter_settings = new Settings (SCHEMA_ID_MUTTER);
 
         mutter_settings.bind (SCHEMA_KEY_CHECK_ALIVE_TIMEOUT, check_alive_timeout_spinbutton, "value", SettingsBindFlags.DEFAULT);
+
+        check_alive_switch.bind_property ("active", check_alive_timeout_revealer, "reveal_child", BindingFlags.DEFAULT);
+
+        check_alive_timeout_spinbutton.bind_property ("value",
+                check_alive_switch, "active",
+                BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
+                (_, _value, ref _active) => {
+                    _active.set_boolean (_value.get_double () != CHECK_ALIVE_TIMEOUT_DISABLED);
+                    return true;
+                },
+                (_, _active, ref _value) => {
+                    uint timeout = CHECK_ALIVE_TIMEOUT_DISABLED;
+
+                    if (_active.get_boolean ()) {
+                        timeout = CHECK_ALIVE_TIMEOUT_DEFAULT;
+                    }
+
+                    _value.set_double (timeout);
+                    return true;
+                }
+        );
 
         is_load_success = true;
         return true;
