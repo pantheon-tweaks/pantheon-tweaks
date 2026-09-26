@@ -113,13 +113,13 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
         }
         sound_settings = new Settings (SettingsUtil.PANEL_SOUND_SCHEMA);
 
-        sound_settings.bind ("max-volume", max_volume_spinbutton, "value", SettingsBindFlags.DEFAULT);
-
         if (!SettingsUtil.schema_exists (SCHEMA_ID_MUTTER)) {
             warning ("Could not find settings schema %s", SCHEMA_ID_MUTTER);
             return false;
         }
         mutter_settings = new Settings (SCHEMA_ID_MUTTER);
+
+        sound_settings.bind ("max-volume", max_volume_spinbutton, "value", SettingsBindFlags.DEFAULT);
 
         mutter_settings.bind (SCHEMA_KEY_CHECK_ALIVE_TIMEOUT, check_alive_timeout_spinbutton, "value", SettingsBindFlags.DEFAULT);
 
