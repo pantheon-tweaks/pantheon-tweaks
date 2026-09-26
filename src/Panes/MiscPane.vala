@@ -86,6 +86,8 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
                                                           SPIN_BUTTON_PAGE_SIZE);
 
         check_alive_timeout_spinbutton = new Gtk.SpinButton (check_alive_timeout_adj, SPIN_BUTTON_STEP_INCREMENT, 0) {
+            halign = Gtk.Align.END,
+            hexpand = true,
             valign = Gtk.Align.CENTER,
         };
 
