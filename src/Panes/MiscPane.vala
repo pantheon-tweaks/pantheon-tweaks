@@ -104,9 +104,15 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
 
         check_alive_timeout_spinbutton.input.connect ((obj, out new_value) => {
             var spin_button = (Gtk.SpinButton) obj;
-            var value = (uint) spin_button.get_value ();
+            string text = spin_button.get_text ();
 
-            if (value > CHECK_ALIVE_TIMEOUT_SANE_MIN || value == CHECK_ALIVE_TIMEOUT_DISABLED) {
+            double cur_value;
+            if (!double.try_parse (text, out cur_value)) {
+                warning ("Failed to parse input text. text=\"%s\"", text);
+                return Gtk.INPUT_ERROR;
+            }
+
+            if (cur_value > CHECK_ALIVE_TIMEOUT_SANE_MIN || cur_value == CHECK_ALIVE_TIMEOUT_DISABLED) {
                 // NOP
                 return (int) false;
             }
