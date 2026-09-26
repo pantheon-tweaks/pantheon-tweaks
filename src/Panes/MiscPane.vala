@@ -12,9 +12,9 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
     private const string SCHEMA_ID_MUTTER = "org.gnome.mutter";
     private const string SCHEMA_KEY_CHECK_ALIVE_TIMEOUT = "check-alive-timeout";
 
-    private const int CHECK_ALIVE_TIMEOUT_DEFAULT = 5000;
-    private const int CHECK_ALIVE_TIMEOUT_MIN = uint.MIN;
-    private const int CHECK_ALIVE_TIMEOUT_MAX = uint.MAX;
+    private const uint CHECK_ALIVE_TIMEOUT_DEFAULT = 5000;
+    private const uint CHECK_ALIVE_TIMEOUT_MIN = uint.MIN;
+    private const uint CHECK_ALIVE_TIMEOUT_MAX = uint.MAX;
 
     private Gtk.SpinButton max_volume_spinbutton;
     private Gtk.SpinButton check_alive_timeout_spinbutton;
