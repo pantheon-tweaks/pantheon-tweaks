@@ -112,7 +112,7 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
                 return Gtk.INPUT_ERROR;
             }
 
-            if (cur_value > CHECK_ALIVE_TIMEOUT_SANE_MIN || cur_value == CHECK_ALIVE_TIMEOUT_DISABLED) {
+            if (cur_value >= CHECK_ALIVE_TIMEOUT_SANE_MIN || cur_value == CHECK_ALIVE_TIMEOUT_DISABLED) {
                 // NOP
                 return (int) false;
             }
