@@ -85,7 +85,7 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
 
         content_area.append (indicator_sound_label);
         content_area.append (max_volume_box);
-        content_area.append (check_alive_timeout_labeli);
+        content_area.append (check_alive_timeout_label);
         content_area.append (check_alive_timeout_box);
     }
 
