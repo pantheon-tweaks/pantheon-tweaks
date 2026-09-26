@@ -127,22 +127,6 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
 
         check_alive_switch.bind_property ("active", check_alive_timeout_revealer, "reveal_child", BindingFlags.DEFAULT);
 
-        check_alive_timeout_spinbutton.value_changed.connect ((obj) => {
-            var spin_button = (Gtk.SpinButton) obj;
-
-            if (spin_button.value >= CHECK_ALIVE_TIMEOUT_SANE_MIN || spin_button.value == CHECK_ALIVE_TIMEOUT_DISABLED) {
-                // NOP
-                return;
-            }
-
-            // An uint variable in gschema keys can have any values between uint.MIN and uint.MAX of course,
-            // but here Mutter uses it to store a value in milliseconds.
-            // Setting extremely short period of time results the window manager presents
-            // the not responding dialog so frequently and can cause the entire desktop slow down.
-            // So, we clamp to a sane min value.
-            spin_button.value = CHECK_ALIVE_TIMEOUT_SANE_MIN;
-        });
-
         check_alive_timeout_spinbutton.bind_property ("value",
                 check_alive_switch, "active",
                 BindingFlags.BIDIRECTIONAL | BindingFlags.SYNC_CREATE,
@@ -163,6 +147,22 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
                     return true;
                 }
         );
+
+        check_alive_timeout_spinbutton.value_changed.connect ((obj) => {
+            var spin_button = (Gtk.SpinButton) obj;
+
+            if (spin_button.value >= CHECK_ALIVE_TIMEOUT_SANE_MIN || spin_button.value == CHECK_ALIVE_TIMEOUT_DISABLED) {
+                // NOP
+                return;
+            }
+
+            // An uint variable in gschema keys can have any values between uint.MIN and uint.MAX of course,
+            // but here Mutter uses it to store a value in milliseconds.
+            // Setting extremely short period of time results the window manager presents
+            // the not responding dialog so frequently and can cause the entire desktop slow down.
+            // So, we clamp to a sane min value.
+            spin_button.value = CHECK_ALIVE_TIMEOUT_SANE_MIN;
+        });
 
         is_load_success = true;
         return true;
