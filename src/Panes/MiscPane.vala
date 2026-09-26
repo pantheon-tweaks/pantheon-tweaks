@@ -10,7 +10,7 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
 
     private const uint CHECK_ALIVE_TIMEOUT_DEFAULT = 5000;
     private const uint CHECK_ALIVE_TIMEOUT_MIN = uint.MIN;
-    private const uint CHECK_ALIVE_TIMEOUT_SANE_MIN = 100;
+    private const uint CHECK_ALIVE_TIMEOUT_SANE_MIN = 1000;
     private const uint CHECK_ALIVE_TIMEOUT_MAX = uint.MAX;
     private const uint CHECK_ALIVE_TIMEOUT_DISABLED = CHECK_ALIVE_TIMEOUT_MIN;
     // We Limit to a sane increment step because no one would like to tweak this by 1 milliseconds
