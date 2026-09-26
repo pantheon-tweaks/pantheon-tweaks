@@ -4,6 +4,7 @@ src/MainWindow.vala
 src/Panes/AppearancePane.vala
 src/Panes/FilesPane.vala
 src/Panes/FontsPane.vala
+src/Panes/KeyboardPane.vala
 src/Panes/MiscPane.vala
 src/Panes/TerminalPane.vala
 src/Widgets/BasePane.vala
