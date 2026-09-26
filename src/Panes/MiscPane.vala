@@ -101,22 +101,22 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
                 check_alive_switch, "active",
                 BindingFlags.BIDIRECTIONAL,
                 (_, _value, ref _active) => {
-                    _active.set_boolean (_value.get_uint64 () != CHECK_ALIVE_TIMEOUT_DISABLED);
+                    _active.set_boolean (_value.get_uint () != CHECK_ALIVE_TIMEOUT_DISABLED);
                     return true;
                 },
                 (_, _active, ref _value) => {
-                    uint64 timeout = CHECK_ALIVE_TIMEOUT_DISABLED;
+                    uint timeout = CHECK_ALIVE_TIMEOUT_DISABLED;
 
                     if (_active.get_boolean ()) {
                         timeout = CHECK_ALIVE_TIMEOUT_DEFAULT;
                     }
 
-                    _value.set_uint64 (timeout);
+                    _value.set_uint (timeout);
                     return true;
                 }
         );
 
-        check_alive_switch.bind_property ("active", check_alive_timeout_revealer, "child_revealed", BindingFlags.DEFAULT);
+        check_alive_switch.bind_property ("active", check_alive_timeout_revealer, "reveal_child", BindingFlags.DEFAULT);
 
         content_area.append (indicator_sound_label);
         content_area.append (max_volume_box);
