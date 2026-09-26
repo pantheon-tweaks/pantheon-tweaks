@@ -15,8 +15,10 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
     private const uint CHECK_ALIVE_TIMEOUT_DEFAULT = 5000;
     private const uint CHECK_ALIVE_TIMEOUT_MIN = uint.MIN;
     private const uint CHECK_ALIVE_TIMEOUT_MAX = uint.MAX;
+    private const uint CHECK_ALIVE_TIMEOUT_DISABLED = CHECK_ALIVE_TIMEOUT_MIN;
 
     private Gtk.SpinButton max_volume_spinbutton;
+    private Gtk.Switch check_alive_switch;
     private Gtk.SpinButton check_alive_timeout_spinbutton;
 
     private Settings sound_settings;
@@ -54,10 +56,25 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
         max_volume_box.append (max_volume_spinbutton);
 
         /*************************************************/
+        /* Check Alive                                   */
+        /*************************************************/
+        var check_alive_label = new Granite.HeaderLabel (_("Check Alive")) {
+            secondary_text = _("If enabled, an app has to respond to cyclic ping requests from Mutter. If it doesn't, “Application is not responding” dialog appears where allows you to choose force quit it or wait."),
+        };
+
+        check_alive_switch = new Gtk.Switch () {
+            valign = Gtk.Align.CENTER,
+        };
+
+        var check_alive_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
+        check_alive_box.append (check_alive_label);
+        check_alive_box.append (check_alive_switch);
+
+        /*************************************************/
         /* Check Alive Timeout                           */
         /*************************************************/
         var check_alive_timeout_label = new Granite.HeaderLabel (_("Check Alive Timeout")) {
-            secondary_text = _("Number of milliseconds an app has to respond to a ping request from Mutter. If it doesn't, “Application is not responding” dialog appears. Setting to 0 disables this feature."),
+            secondary_text = _("Number of milliseconds an app has to respond to a ping request from Mutter."),
         };
 
         var check_alive_timeout_adj = new Gtk.Adjustment (CHECK_ALIVE_TIMEOUT_DEFAULT,
@@ -67,25 +84,45 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
                                                           SPIN_BUTTON_PAGE_INCREMENT,
                                                           SPIN_BUTTON_PAGE_SIZE);
 
-        var check_alive_timeout_scale = new Gtk.Scale (Gtk.Orientation.HORIZONTAL, check_alive_timeout_adj) {
-            hexpand = true,
-            valign = Gtk.Align.CENTER
-        };
-        check_alive_timeout_scale.add_mark (CHECK_ALIVE_TIMEOUT_MIN, Gtk.PositionType.BOTTOM, _("Disabled"));
-        check_alive_timeout_scale.add_mark (CHECK_ALIVE_TIMEOUT_MAX, Gtk.PositionType.BOTTOM, _("Max"));
-
         check_alive_timeout_spinbutton = new Gtk.SpinButton (check_alive_timeout_adj, SPIN_BUTTON_STEP_INCREMENT, 0) {
-            valign = Gtk.Align.CENTER
+            valign = Gtk.Align.CENTER,
         };
 
-        var check_alive_timeout_box = new Granite.Box (Gtk.Orientation.HORIZONTAL);
-        check_alive_timeout_box.append (check_alive_timeout_scale);
+        var check_alive_timeout_box = new Granite.Box (Gtk.Orientation.VERTICAL);
+        check_alive_timeout_box.append (check_alive_timeout_label);
         check_alive_timeout_box.append (check_alive_timeout_spinbutton);
+
+        var check_alive_timeout_revealer = new Gtk.Revealer () {
+            child = check_alive_timeout_box,
+            transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN,
+        };
+
+        check_alive_timeout_spinbutton.bind_property ("value",
+                check_alive_switch, "active",
+                BindingFlags.BIDIRECTIONAL,
+                (_, _value, ref _active) => {
+                    _active.set_boolean (_value.get_uint64 () != CHECK_ALIVE_TIMEOUT_DISABLED);
+                    return true;
+                },
+                (_, _active, ref _value) => {
+                    uint64 timeout = CHECK_ALIVE_TIMEOUT_DISABLED;
+
+                    if (_active.get_boolean ()) {
+                        timeout = CHECK_ALIVE_TIMEOUT_DEFAULT;
+                    }
+
+                    _value.set_uint64 (timeout);
+                    return true;
+                }
+        );
+
+        check_alive_switch.bind_property ("active", check_alive_timeout_revealer, "child_revealed", BindingFlags.DEFAULT);
 
         content_area.append (indicator_sound_label);
         content_area.append (max_volume_box);
+        content_area.append (check_alive_box);
         content_area.append (check_alive_timeout_label);
-        content_area.append (check_alive_timeout_box);
+        content_area.append (check_alive_timeout_spinbutton);
     }
 
     public override bool load () {
