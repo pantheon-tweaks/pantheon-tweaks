@@ -130,7 +130,7 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
                 (_value) => {
                     double value = _value.get_double ();
 
-                    if (value > CHECK_ALIVE_TIMEOUT_SANE_MIN) {
+                    if (value < CHECK_ALIVE_TIMEOUT_SANE_MIN && value > CHECK_ALIVE_TIMEOUT_MIN) {
                         // An uint variable in gschema keys can have any values between uint.MIN and uint.MAX of course,
                         // but here Mutter uses it to store a value in milliseconds.
                         // Setting extremely short period of time results the window manager presents
