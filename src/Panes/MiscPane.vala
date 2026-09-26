@@ -135,6 +135,8 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
                 (_, _active, ref _value) => {
                     uint timeout = CHECK_ALIVE_TIMEOUT_DISABLED;
 
+                    // Set back to the default timeout when the switch is truned on,
+                    // CHECK_ALIVE_TIMEOUT_DISABLED otherwise
                     if (_active.get_boolean ()) {
                         timeout = CHECK_ALIVE_TIMEOUT_DEFAULT;
                     }
