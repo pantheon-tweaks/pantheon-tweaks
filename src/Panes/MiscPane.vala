@@ -102,22 +102,6 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
             transition_type = Gtk.RevealerTransitionType.SLIDE_DOWN,
         };
 
-        check_alive_timeout_spinbutton.value_changed.connect ((obj) => {
-            var spin_button = (Gtk.SpinButton) obj;
-
-            if (spin_button.value >= CHECK_ALIVE_TIMEOUT_SANE_MIN || spin_button.value == CHECK_ALIVE_TIMEOUT_DISABLED) {
-                // NOP
-                return;
-            }
-
-            // An uint variable in gschema keys can have any values between uint.MIN and uint.MAX of course,
-            // but here Mutter uses it to store a value in milliseconds.
-            // Setting extremely short period of time results the window manager presents
-            // the not responding dialog so frequently and can cause the entire desktop slow down.
-            // So, we clamp to a sane min value.
-            spin_button.value = CHECK_ALIVE_TIMEOUT_SANE_MIN;
-        });
-
         content_area.append (indicator_sound_label);
         content_area.append (max_volume_box);
         content_area.append (check_alive_box);
@@ -142,6 +126,22 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
         mutter_settings.bind (SCHEMA_KEY_CHECK_ALIVE_TIMEOUT, check_alive_timeout_spinbutton, "value", SettingsBindFlags.DEFAULT);
 
         check_alive_switch.bind_property ("active", check_alive_timeout_revealer, "reveal_child", BindingFlags.DEFAULT);
+
+        check_alive_timeout_spinbutton.value_changed.connect ((obj) => {
+            var spin_button = (Gtk.SpinButton) obj;
+
+            if (spin_button.value >= CHECK_ALIVE_TIMEOUT_SANE_MIN || spin_button.value == CHECK_ALIVE_TIMEOUT_DISABLED) {
+                // NOP
+                return;
+            }
+
+            // An uint variable in gschema keys can have any values between uint.MIN and uint.MAX of course,
+            // but here Mutter uses it to store a value in milliseconds.
+            // Setting extremely short period of time results the window manager presents
+            // the not responding dialog so frequently and can cause the entire desktop slow down.
+            // So, we clamp to a sane min value.
+            spin_button.value = CHECK_ALIVE_TIMEOUT_SANE_MIN;
+        });
 
         check_alive_timeout_spinbutton.bind_property ("value",
                 check_alive_switch, "active",
