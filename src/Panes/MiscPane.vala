@@ -106,8 +106,8 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
             var spin_button = (Gtk.SpinButton) obj;
             string text = spin_button.get_text ();
 
-            double cur_value;
-            if (!double.try_parse (text, out cur_value)) {
+            uint cur_value;
+            if (!uint.try_parse (text, out cur_value)) {
                 warning ("Failed to parse input text. text=\"%s\"", text);
                 return Gtk.INPUT_ERROR;
             }
