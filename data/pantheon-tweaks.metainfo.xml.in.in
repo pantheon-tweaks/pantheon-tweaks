@@ -45,6 +45,24 @@
     even if translators translated all of them, which is not worthy.
   -->
   <releases>
+    <release version="2.6.0" date="2026-09-26" urgency="medium">
+      <description translate="no">
+        <p>
+          Improvements:
+        </p>
+        <ul>
+          <li>Appearance: Update ignore list of themes for in-development OS Early Access</li>
+          <li>Misc: Add switch and spin button to configure timeout for the “Application is not responding” dialog or disable it completely</li>
+        </ul>
+        <p>
+          Translation updates:
+        </p>
+        <ul>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="2.5.2" date="2026-05-03" urgency="low">
       <description translate="no">
         <p>
