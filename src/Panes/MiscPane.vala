@@ -72,7 +72,6 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
             valign = Gtk.Align.CENTER
         };
         check_alive_timeout_scale.add_mark (CHECK_ALIVE_TIMEOUT_MIN, Gtk.PositionType.BOTTOM, _("Disabled"));
-        check_alive_timeout_scale.add_mark (CHECK_ALIVE_TIMEOUT_DEFAULT, Gtk.PositionType.BOTTOM, _("Default"));
         check_alive_timeout_scale.add_mark (CHECK_ALIVE_TIMEOUT_MAX, Gtk.PositionType.BOTTOM, _("Max"));
 
         check_alive_timeout_spinbutton = new Gtk.SpinButton (check_alive_timeout_adj, SPIN_BUTTON_STEP_INCREMENT, 0) {
