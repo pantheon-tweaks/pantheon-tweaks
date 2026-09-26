@@ -128,7 +128,7 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
                 SettingsBindFlags.DEFAULT,
                 (SettingsBindGetMappingShared ?) null,
                 (_value) => {
-                    uint value = _value.get_uint ();
+                    double value = _value.get_double ();
 
                     if (value > CHECK_ALIVE_TIMEOUT_SANE_MIN) {
                         // An uint variable in gschema keys can have any values between uint.MIN and uint.MAX of course,
@@ -139,7 +139,7 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
                         value = CHECK_ALIVE_TIMEOUT_SANE_MIN;
                     }
 
-                    return new Variant.uint32 (value);
+                    return new Variant.uint32 ((uint) value);
                 },
                 null, null);
 
