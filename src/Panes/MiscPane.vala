@@ -101,7 +101,7 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
                 check_alive_switch, "active",
                 BindingFlags.BIDIRECTIONAL,
                 (_, _value, ref _active) => {
-                    _active.set_boolean (_value.get_uint () != CHECK_ALIVE_TIMEOUT_DISABLED);
+                    _active.set_boolean (_value.get_double () != CHECK_ALIVE_TIMEOUT_DISABLED);
                     return true;
                 },
                 (_, _active, ref _value) => {
@@ -111,7 +111,7 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
                         timeout = CHECK_ALIVE_TIMEOUT_DEFAULT;
                     }
 
-                    _value.set_uint (timeout);
+                    _value.set_double (timeout);
                     return true;
                 }
         );
