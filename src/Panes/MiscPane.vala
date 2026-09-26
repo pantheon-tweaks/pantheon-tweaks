@@ -5,10 +5,6 @@
  */
 
 public class PantheonTweaks.Panes.MiscPane : BasePane {
-    private const int SPIN_BUTTON_STEP_INCREMENT = 1;
-    private const int SPIN_BUTTON_PAGE_INCREMENT = 10;
-    private const int SPIN_BUTTON_PAGE_SIZE = 10;
-
     private const string SCHEMA_ID_MUTTER = "org.gnome.mutter";
     private const string SCHEMA_KEY_CHECK_ALIVE_TIMEOUT = "check-alive-timeout";
 
@@ -16,6 +12,16 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
     private const uint CHECK_ALIVE_TIMEOUT_MIN = uint.MIN;
     private const uint CHECK_ALIVE_TIMEOUT_MAX = uint.MAX;
     private const uint CHECK_ALIVE_TIMEOUT_DISABLED = CHECK_ALIVE_TIMEOUT_MIN;
+    /*
+     * An uint value in a gschema key can step up/down by 1 but here its unit is milliseconds.
+     * Setting such short period of time results the window manager presents
+     * the not responding dialog so frequently and can cause the entire desktop slow down.
+     * So, we limit to a sane increment step.
+     */
+    private const uint CHECK_ALIVE_TIMEOUT_STEP_INCREMENT = 100;
+    private const uint CHECK_ALIVE_TIMEOUT_PAGE_INCREMENT = 10;
+    private const uint CHECK_ALIVE_TIMEOUT_PAGE_SIZE = 10;
+
 
     private Gtk.SpinButton max_volume_spinbutton;
     private Gtk.Switch check_alive_switch;
@@ -81,11 +87,11 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
         var check_alive_timeout_adj = new Gtk.Adjustment (CHECK_ALIVE_TIMEOUT_DEFAULT,
                                                           CHECK_ALIVE_TIMEOUT_MIN,
                                                           CHECK_ALIVE_TIMEOUT_MAX,
-                                                          SPIN_BUTTON_STEP_INCREMENT,
-                                                          SPIN_BUTTON_PAGE_INCREMENT,
-                                                          SPIN_BUTTON_PAGE_SIZE);
+                                                          CHECK_ALIVE_TIMEOUT_STEP_INCREMENT,
+                                                          CHECK_ALIVE_TIMEOUT_PAGE_INCREMENT,
+                                                          CHECK_ALIVE_TIMEOUT_PAGE_SIZE);
 
-        check_alive_timeout_spinbutton = new Gtk.SpinButton (check_alive_timeout_adj, SPIN_BUTTON_STEP_INCREMENT, 0) {
+        check_alive_timeout_spinbutton = new Gtk.SpinButton (check_alive_timeout_adj, CHECK_ALIVE_TIMEOUT_STEP_INCREMENT, 0) {
             halign = Gtk.Align.END,
             hexpand = true,
             valign = Gtk.Align.CENTER,
