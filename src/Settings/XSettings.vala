@@ -7,12 +7,12 @@
 public class PantheonTweaks.XSettings {
     private const string SCHEMA_ID_XSETTINGS = "org.gnome.settings-daemon.plugins.xsettings";
     private const string SCHEMA_KEY_OVERRIDES = "overrides";
-    private const string OVERRIDES_KEY_DECORAT = "Gtk/DecorationLayout";
+    private const string OVERRIDES_KEY_LAYOUT = "Gtk/DecorationLayout";
 
     public string decoration_layout {
         get {
             var overrides = settings.get_value (SCHEMA_KEY_OVERRIDES);
-            var layout = overrides.lookup_value (OVERRIDES_KEY_DECORAT, VariantType.STRING);
+            var layout = overrides.lookup_value (OVERRIDES_KEY_LAYOUT, VariantType.STRING);
 
             if (layout != null) {
                 return layout.get_string ();
@@ -28,7 +28,7 @@ public class PantheonTweaks.XSettings {
             var overrides = settings.get_value (SCHEMA_KEY_OVERRIDES);
             var dict = new VariantDict (overrides);
 
-            dict.insert_value (OVERRIDES_KEY_DECORAT, new Variant.string (value));
+            dict.insert_value (OVERRIDES_KEY_LAYOUT, new Variant.string (value));
             settings.set_value (SCHEMA_KEY_OVERRIDES, dict.end ());
         }
     }
