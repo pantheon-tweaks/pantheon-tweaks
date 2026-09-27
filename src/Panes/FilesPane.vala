@@ -5,6 +5,8 @@
  */
 
 public class PantheonTweaks.Panes.FilesPane : BasePane {
+    private const string SCHEMA_ID_FILES = "io.elementary.files.preferences";
+
     private Gtk.Switch restore_tabs_switch;
     private Gtk.DropDown date_format_dropdown;
 
@@ -61,11 +63,11 @@ public class PantheonTweaks.Panes.FilesPane : BasePane {
     }
 
     public override bool load () {
-        if (!SettingsUtil.schema_exists (SettingsUtil.FILES_SCHEMA)) {
-            warning ("Could not find settings schema %s", SettingsUtil.FILES_SCHEMA);
+        if (!SettingsUtil.schema_exists (SCHEMA_ID_FILES)) {
+            warning ("Could not find settings schema %s", SCHEMA_ID_FILES);
             return false;
         }
-        settings = new Settings (SettingsUtil.FILES_SCHEMA);
+        settings = new Settings (SCHEMA_ID_FILES);
 
         settings.bind ("restore-tabs", restore_tabs_switch, "active", SettingsBindFlags.DEFAULT);
 

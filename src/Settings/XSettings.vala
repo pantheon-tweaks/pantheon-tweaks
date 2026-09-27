@@ -5,6 +5,8 @@
  */
 
 public class PantheonTweaks.XSettings {
+    private const string SCHEMA_ID_XSETTINGS = "org.gnome.settings-daemon.plugins.xsettings";
+
     public string decoration_layout {
         get {
             var overrides = settings.get_value ("overrides");
@@ -35,11 +37,11 @@ public class PantheonTweaks.XSettings {
     }
 
     public bool load () {
-        if (!SettingsUtil.schema_exists (SettingsUtil.XSETTINGS_SCHEMA)) {
-            warning ("Could not find settings schema %s", SettingsUtil.XSETTINGS_SCHEMA);
+        if (!SettingsUtil.schema_exists (SCHEMA_ID_XSETTINGS)) {
+            warning ("Could not find settings schema %s", SCHEMA_ID_XSETTINGS);
             return false;
         }
-        settings = new Settings (SettingsUtil.XSETTINGS_SCHEMA);
+        settings = new Settings (SCHEMA_ID_XSETTINGS);
 
         return true;
     }

@@ -5,6 +5,8 @@
  */
 
 public class PantheonTweaks.Panes.TerminalPane : BasePane {
+    private const string SCHEMA_ID_TERMINAL = "io.elementary.terminal.settings";
+
     private Gtk.Switch follow_last_tab_switch;
     private Gtk.Switch unsafe_paste_alert_switch;
     private Gtk.Switch rem_tabs_switch;
@@ -151,11 +153,11 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
     }
 
     public override bool load () {
-        if (!SettingsUtil.schema_exists (SettingsUtil.TERMINAL_SCHEMA)) {
-            warning ("Could not find settings schema %s", SettingsUtil.TERMINAL_SCHEMA);
+        if (!SettingsUtil.schema_exists (SCHEMA_ID_TERMINAL)) {
+            warning ("Could not find settings schema %s", SCHEMA_ID_TERMINAL);
             return false;
         }
-        settings = new Settings (SettingsUtil.TERMINAL_SCHEMA);
+        settings = new Settings (SCHEMA_ID_TERMINAL);
 
         settings.bind ("follow-last-tab", follow_last_tab_switch, "active", SettingsBindFlags.DEFAULT);
         settings.bind ("unsafe-paste-alert", unsafe_paste_alert_switch, "active", SettingsBindFlags.DEFAULT);

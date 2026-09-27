@@ -8,6 +8,12 @@
  */
 
 public class PantheonTweaks.Panes.AppearancePane : BasePane {
+    private const string SCHEMA_ID_WM = "org.gnome.desktop.wm.preferences";
+
+    private const string SCHEMA_ID_SOUND = "org.gnome.desktop.sound";
+
+    private const string SCHEMA_ID_INTERFACE = "org.gnome.desktop.interface";
+
     private Gtk.DropDown gtk_dropdown;
     private Gtk.DropDown icon_dropdown;
     private Gtk.DropDown cursor_dropdown;
@@ -218,17 +224,17 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     }
 
     public override bool load () {
-        if (!SettingsUtil.schema_exists (SettingsUtil.INTERFACE_SCHEMA)) {
-            warning ("Could not find settings schema %s", SettingsUtil.INTERFACE_SCHEMA);
+        if (!SettingsUtil.schema_exists (SCHEMA_ID_INTERFACE)) {
+            warning ("Could not find settings schema %s", SCHEMA_ID_INTERFACE);
             return false;
         }
-        interface_settings = new Settings (SettingsUtil.INTERFACE_SCHEMA);
+        interface_settings = new Settings (SCHEMA_ID_INTERFACE);
 
-        if (!SettingsUtil.schema_exists (SettingsUtil.SOUND_SCHEMA)) {
-            warning ("Could not find settings schema %s", SettingsUtil.SOUND_SCHEMA);
+        if (!SettingsUtil.schema_exists (SCHEMA_ID_SOUND)) {
+            warning ("Could not find settings schema %s", SCHEMA_ID_SOUND);
             return false;
         }
-        sound_settings = new Settings (SettingsUtil.SOUND_SCHEMA);
+        sound_settings = new Settings (SCHEMA_ID_SOUND);
 
         bool ret = x_settings.load ();
         if (!ret) {
@@ -237,11 +243,11 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
         gtk_settings = new GtkSettings ();
 
-        if (!SettingsUtil.schema_exists (SettingsUtil.GNOME_WM_SCHEMA)) {
-            warning ("Could not find settings schema %s", SettingsUtil.GNOME_WM_SCHEMA);
+        if (!SettingsUtil.schema_exists (SCHEMA_ID_WM)) {
+            warning ("Could not find settings schema %s", SCHEMA_ID_WM);
             return false;
         }
-        gnome_wm_settings = new Settings (SettingsUtil.GNOME_WM_SCHEMA);
+        gnome_wm_settings = new Settings (SCHEMA_ID_WM);
 
         FDO.Accounts? accounts_service;
         try {
