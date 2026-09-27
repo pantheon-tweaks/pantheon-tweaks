@@ -6,11 +6,13 @@
 
 public class PantheonTweaks.XSettings {
     private const string SCHEMA_ID_XSETTINGS = "org.gnome.settings-daemon.plugins.xsettings";
+    private const string SCHEMA_KEY_OVERRIDES = "overrides";
+    private const string OVERRIDES_KEY_DECORAT = "Gtk/DecorationLayout";
 
     public string decoration_layout {
         get {
-            var overrides = settings.get_value ("overrides");
-            var layout = overrides.lookup_value ("Gtk/DecorationLayout", VariantType.STRING);
+            var overrides = settings.get_value (SCHEMA_KEY_OVERRIDES);
+            var layout = overrides.lookup_value (OVERRIDES_KEY_DECORAT, VariantType.STRING);
 
             if (layout != null) {
                 return layout.get_string ();
@@ -23,11 +25,11 @@ public class PantheonTweaks.XSettings {
                 return;
             }
 
-            var overrides = settings.get_value ("overrides");
+            var overrides = settings.get_value (SCHEMA_KEY_OVERRIDES);
             var dict = new VariantDict (overrides);
 
-            dict.insert_value ("Gtk/DecorationLayout", new Variant.string (value));
-            settings.set_value ("overrides", dict.end ());
+            dict.insert_value (OVERRIDES_KEY_DECORAT, new Variant.string (value));
+            settings.set_value (SCHEMA_KEY_OVERRIDES, dict.end ());
         }
     }
 
@@ -47,7 +49,7 @@ public class PantheonTweaks.XSettings {
     }
 
     public void reset () {
-        settings.reset ("overrides");
+        settings.reset (SCHEMA_KEY_OVERRIDES);
     }
 
     public bool has_gnome_menu () {

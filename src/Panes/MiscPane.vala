@@ -5,10 +5,11 @@
  */
 
 public class PantheonTweaks.Panes.MiscPane : BasePane {
+    private const string SCHEMA_ID_PANEL_SOUND = "io.elementary.desktop.wingpanel.sound";
+    private const string SCHEMA_KEY_MAX_VOLUME = "max-volume";
+
     private const string SCHEMA_ID_MUTTER = "org.gnome.mutter";
     private const string SCHEMA_KEY_CHECK_ALIVE_TIMEOUT = "check-alive-timeout";
-
-    private const string SCHEMA_ID_PANEL_SOUND = "io.elementary.desktop.wingpanel.sound";
 
     private const uint CHECK_ALIVE_TIMEOUT_DEFAULT = 5000;
     private const uint CHECK_ALIVE_TIMEOUT_MIN = uint.MIN;
@@ -19,7 +20,6 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
     private const uint CHECK_ALIVE_TIMEOUT_STEP_INCREMENT = 100;
     private const uint CHECK_ALIVE_TIMEOUT_PAGE_INCREMENT = 10;
     private const uint CHECK_ALIVE_TIMEOUT_PAGE_SIZE = 10;
-
 
     private Gtk.SpinButton max_volume_spinbutton;
     private Gtk.Switch check_alive_switch;
@@ -123,7 +123,7 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
         }
         mutter_settings = new Settings (SCHEMA_ID_MUTTER);
 
-        sound_settings.bind ("max-volume", max_volume_spinbutton, "value", SettingsBindFlags.DEFAULT);
+        sound_settings.bind (SCHEMA_KEY_MAX_VOLUME, max_volume_spinbutton, "value", SettingsBindFlags.DEFAULT);
 
         check_alive_timeout_spinbutton.value_changed.connect ((obj) => {
             var spin_button = (Gtk.SpinButton) obj;
@@ -171,7 +171,7 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
     }
 
     protected override void do_reset () {
-        sound_settings.reset ("max-volume");
+        sound_settings.reset (SCHEMA_KEY_MAX_VOLUME);
 
         mutter_settings.reset (SCHEMA_KEY_CHECK_ALIVE_TIMEOUT);
     }
