@@ -4,6 +4,17 @@
  */
 
 public class PantheonTweaks.Panes.KeyboardPane : BasePane {
+    private const string SCHEMA_ID_INPUT_SOURCES = "org.gnome.desktop.input-sources";
+    private const string SCHEMA_KEY_XKB_OPTIONS = "xkb-options";
+
+    private const string SCHEMA_ID_KEYBINDINGS = "io.elementary.desktop.wm.keybindings";
+    private const string SCHEMA_KEY_SCREENSHOT = "screenshot";
+    private const string SCHEMA_KEY_SCREENSHOT_CLIP = "screenshot-clip";
+    private const string SCHEMA_KEY_AREA_SCREENSHOT = "area-screenshot";
+    private const string SCHEMA_KEY_AREA_SCREENSHOT_CLIP = "area-screenshot-clip";
+    private const string SCHEMA_KEY_WINDOW_SCREENSHOT = "window-screenshot";
+    private const string SCHEMA_KEY_WINDOW_SCREENSHOT_CLIP = "window-screenshot-clip";
+
     private const string SCREENSHOT_ACCEL_WHOLE = "<Super><Shift>3";
     private const string SCREENSHOT_ACCEL_WHOLE_CLIP = "<Super><Alt><Shift>3";
     private const string SCREENSHOT_ACCEL_AREA = "<Super><Shift>4";
@@ -157,30 +168,30 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
     }
 
     public override bool load () {
-        if (!SettingsUtil.schema_exists (SettingsUtil.INPUT_SCHEMA)) {
-            warning ("Could not find settings schema %s", SettingsUtil.INPUT_SCHEMA);
+        if (!SettingsUtil.schema_exists (SCHEMA_ID_INPUT_SOURCES)) {
+            warning ("Could not find settings schema %s", SCHEMA_ID_INPUT_SOURCES);
             return false;
         }
-        input_sources_settings = new GLib.Settings (SettingsUtil.INPUT_SCHEMA);
+        input_sources_settings = new GLib.Settings (SCHEMA_ID_INPUT_SOURCES);
 
-        if (!SettingsUtil.schema_exists (SettingsUtil.KEYBINDING_SCHEMA)) {
-            warning ("Could not find settings schema %s", SettingsUtil.KEYBINDING_SCHEMA);
+        if (!SettingsUtil.schema_exists (SCHEMA_ID_KEYBINDINGS)) {
+            warning ("Could not find settings schema %s", SCHEMA_ID_KEYBINDINGS);
             return false;
         }
-        keybindings_settings = new GLib.Settings (SettingsUtil.KEYBINDING_SCHEMA);
+        keybindings_settings = new GLib.Settings (SCHEMA_ID_KEYBINDINGS);
 
-        input_sources_settings.changed["xkb-options"].connect (xkb_options_settings_to_dropdown);
+        input_sources_settings.changed[SCHEMA_KEY_XKB_OPTIONS].connect (xkb_options_settings_to_dropdown);
         altwin_dropdown.notify["selected"].connect (xkb_options_dropdown_to_settings);
 
         altscr_button.clicked.connect (() => {
-            keybindings_settings.set_strv ("screenshot", { SCREENSHOT_ACCEL_WHOLE });
-            keybindings_settings.set_strv ("screenshot-clip", { SCREENSHOT_ACCEL_WHOLE_CLIP });
+            keybindings_settings.set_strv (SCHEMA_KEY_SCREENSHOT, { SCREENSHOT_ACCEL_WHOLE });
+            keybindings_settings.set_strv (SCHEMA_KEY_SCREENSHOT_CLIP, { SCREENSHOT_ACCEL_WHOLE_CLIP });
 
-            keybindings_settings.set_strv ("area-screenshot", { SCREENSHOT_ACCEL_AREA });
-            keybindings_settings.set_strv ("area-screenshot-clip", { SCREENSHOT_ACCEL_AREA_CLIP });
+            keybindings_settings.set_strv (SCHEMA_KEY_AREA_SCREENSHOT, { SCREENSHOT_ACCEL_AREA });
+            keybindings_settings.set_strv (SCHEMA_KEY_AREA_SCREENSHOT_CLIP, { SCREENSHOT_ACCEL_AREA_CLIP });
 
-            keybindings_settings.set_strv ("window-screenshot", { SCREENSHOT_ACCEL_WINDOW });
-            keybindings_settings.set_strv ("window-screenshot-clip", { SCREENSHOT_ACCEL_WINDOW_CLIP });
+            keybindings_settings.set_strv (SCHEMA_KEY_WINDOW_SCREENSHOT, { SCREENSHOT_ACCEL_WINDOW });
+            keybindings_settings.set_strv (SCHEMA_KEY_WINDOW_SCREENSHOT_CLIP, { SCREENSHOT_ACCEL_WINDOW_CLIP });
 
             show_toast (N_("Enabled alternative screenshot shortcut keys successfully"));
         });
@@ -195,12 +206,12 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
 
     private void reset_keybindings_settings () {
         string[] keys = {
-            "screenshot",
-            "screenshot-clip",
-            "area-screenshot",
-            "area-screenshot-clip",
-            "window-screenshot",
-            "window-screenshot-clip",
+            SCHEMA_KEY_SCREENSHOT,
+            SCHEMA_KEY_SCREENSHOT_CLIP,
+            SCHEMA_KEY_AREA_SCREENSHOT,
+            SCHEMA_KEY_AREA_SCREENSHOT_CLIP,
+            SCHEMA_KEY_WINDOW_SCREENSHOT,
+            SCHEMA_KEY_WINDOW_SCREENSHOT_CLIP,
         };
 
         foreach (unowned var key in keys) {
@@ -211,7 +222,7 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
     private void xkb_options_settings_to_dropdown () {
         unowned string selected_id = "default";
 
-        string[] xkb_options = input_sources_settings.get_strv ("xkb-options");
+        string[] xkb_options = input_sources_settings.get_strv (SCHEMA_KEY_XKB_OPTIONS);
         foreach (unowned string xkb_option in xkb_options) {
             if (xkb_option.has_prefix ("altwin:")) {
                 selected_id = xkb_option;
@@ -236,7 +247,7 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
             return;
         }
 
-        string[] xkb_options = input_sources_settings.get_strv ("xkb-options");
+        string[] xkb_options = input_sources_settings.get_strv (SCHEMA_KEY_XKB_OPTIONS);
         foreach (unowned string xkb_option in xkb_options) {
             if (xkb_option.has_prefix ("altwin:")) {
                 //xkb_options.remove (selected_id);
@@ -244,6 +255,6 @@ public class PantheonTweaks.Panes.KeyboardPane : BasePane {
             }
         }
 
-        input_sources_settings.set_strv ("xkb-options", xkb_options);
+        input_sources_settings.set_strv (SCHEMA_KEY_XKB_OPTIONS, xkb_options);
     }
 }

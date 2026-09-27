@@ -96,7 +96,13 @@ public class PantheonTweaks.ThemeSettings {
 
     public static bool fetch_gtk_themes (Gtk.StringList list) {
         return fetch_themes (list, "themes", (found_dir) => {
-                                var path = File.new_for_path (Path.build_filename (found_dir, "gtk-3.0"));
+                                var path = File.new_for_path (Path.build_filename (found_dir, "gtk-4.0"));
+                                if (path.query_exists ()) {
+                                    return true;
+                                }
+
+                                // Handle old themes that only provides stylesheets for GTK 3
+                                path = File.new_for_path (Path.build_filename (found_dir, "gtk-3.0"));
                                 return path.query_exists ();
                             });
     }

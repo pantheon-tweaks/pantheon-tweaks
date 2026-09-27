@@ -5,6 +5,14 @@
  */
 
 public class PantheonTweaks.Panes.FontsPane : BasePane {
+    private const string SCHEMA_ID_INTERFACE = "org.gnome.desktop.interface";
+    private const string SCHEMA_KEY_DEFAULT_FONT = "font-name";
+    private const string SCHEMA_KEY_DOCUMENT_FONT = "document-font-name";
+    private const string SCHEMA_KEY_MONO_FONT = "monospace-font-name";
+
+    private const string SCHEMA_ID_GNOME_WM = "org.gnome.desktop.wm.preferences";
+    private const string SCHEMA_KEY_TITLEBAR_FONT = "titlebar-font";
+
     private Gtk.FontDialogButton default_font_button;
     private Gtk.FontDialogButton document_font_button;
     private Gtk.FontDialogButton mono_font_button;
@@ -94,40 +102,40 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
     }
 
     public override bool load () {
-        if (!SettingsUtil.schema_exists (SettingsUtil.INTERFACE_SCHEMA)) {
-            warning ("Could not find settings schema %s", SettingsUtil.INTERFACE_SCHEMA);
+        if (!SettingsUtil.schema_exists (SCHEMA_ID_INTERFACE)) {
+            warning ("Could not find settings schema %s", SCHEMA_ID_INTERFACE);
             return false;
         }
-        interface_settings = new Settings (SettingsUtil.INTERFACE_SCHEMA);
+        interface_settings = new Settings (SCHEMA_ID_INTERFACE);
 
-        if (!SettingsUtil.schema_exists (SettingsUtil.GNOME_WM_SCHEMA)) {
-            warning ("Could not find settings schema %s", SettingsUtil.GNOME_WM_SCHEMA);
+        if (!SettingsUtil.schema_exists (SCHEMA_ID_GNOME_WM)) {
+            warning ("Could not find settings schema %s", SCHEMA_ID_GNOME_WM);
             return false;
         }
-        gnome_wm_settings = new Settings (SettingsUtil.GNOME_WM_SCHEMA);
+        gnome_wm_settings = new Settings (SCHEMA_ID_GNOME_WM);
 
-        interface_settings.bind_with_mapping ("font-name",
+        interface_settings.bind_with_mapping (SCHEMA_KEY_DEFAULT_FONT,
             default_font_button, "font-desc",
             SettingsBindFlags.DEFAULT,
             (SettingsBindGetMappingShared) SettingsUtil.Binding.to_fontbutton_fontdesc,
             (SettingsBindSetMappingShared) SettingsUtil.Binding.from_fontbutton_fontdesc,
             null, null);
 
-        interface_settings.bind_with_mapping ("document-font-name",
+        interface_settings.bind_with_mapping (SCHEMA_KEY_DOCUMENT_FONT,
             document_font_button, "font-desc",
             SettingsBindFlags.DEFAULT,
             (SettingsBindGetMappingShared) SettingsUtil.Binding.to_fontbutton_fontdesc,
             (SettingsBindSetMappingShared) SettingsUtil.Binding.from_fontbutton_fontdesc,
             null, null);
 
-        interface_settings.bind_with_mapping ("monospace-font-name",
+        interface_settings.bind_with_mapping (SCHEMA_KEY_MONO_FONT,
             mono_font_button, "font-desc",
             SettingsBindFlags.DEFAULT,
             (SettingsBindGetMappingShared) SettingsUtil.Binding.to_fontbutton_fontdesc,
             (SettingsBindSetMappingShared) SettingsUtil.Binding.from_fontbutton_fontdesc,
             null, null);
 
-        gnome_wm_settings.bind_with_mapping ("titlebar-font",
+        gnome_wm_settings.bind_with_mapping (SCHEMA_KEY_TITLEBAR_FONT,
             titlebar_font_button, "font-desc",
             SettingsBindFlags.DEFAULT,
             (SettingsBindGetMappingShared) SettingsUtil.Binding.to_fontbutton_fontdesc,
@@ -139,12 +147,12 @@ public class PantheonTweaks.Panes.FontsPane : BasePane {
     }
 
     protected override void do_reset () {
-        string[] keys = {"font-name", "document-font-name", "monospace-font-name"};
+        string[] keys = {SCHEMA_KEY_DEFAULT_FONT, SCHEMA_KEY_DOCUMENT_FONT, SCHEMA_KEY_MONO_FONT};
 
         foreach (unowned var key in keys) {
             interface_settings.reset (key);
         }
 
-        gnome_wm_settings.reset ("titlebar-font");
+        gnome_wm_settings.reset (SCHEMA_KEY_TITLEBAR_FONT);
     }
 }
