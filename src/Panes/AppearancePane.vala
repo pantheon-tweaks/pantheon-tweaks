@@ -16,7 +16,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     private const string SCHEMA_ID_SOUND = "org.gnome.desktop.sound";
     private const string SCHEMA_KEY_SOUND_THEME = "theme-name";
 
-    private const string SCHEMA_ID_WM = "org.gnome.desktop.wm.preferences";
+    private const string SCHEMA_ID_GNOME_WM = "org.gnome.desktop.wm.preferences";
     private const string SCHEMA_KEY_BUTTON_LAYOUT = "button-layout";
 
     private Gtk.DropDown gtk_dropdown;
@@ -248,11 +248,11 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
         gtk_settings = new GtkSettings ();
 
-        if (!SettingsUtil.schema_exists (SCHEMA_ID_WM)) {
-            warning ("Could not find settings schema %s", SCHEMA_ID_WM);
+        if (!SettingsUtil.schema_exists (SCHEMA_ID_GNOME_WM)) {
+            warning ("Could not find settings schema %s", SCHEMA_ID_GNOME_WM);
             return false;
         }
-        gnome_wm_settings = new Settings (SCHEMA_ID_WM);
+        gnome_wm_settings = new Settings (SCHEMA_ID_GNOME_WM);
 
         FDO.Accounts? accounts_service;
         try {
