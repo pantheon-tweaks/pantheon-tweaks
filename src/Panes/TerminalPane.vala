@@ -199,7 +199,7 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
 
     protected override void do_reset () {
         string[] keys = {SCHEMA_KEY_FOLLOW_LAST_TAB, SCHEMA_KEY_UNSAFE_PASTE_ALERT, SCHEMA_KEY_REMEMBER_TABS,
-                        SCHEMA_KEY_AUDIBLE_BELL, SCHEMA_KEY_TAB_BAR_BEHAVIOR, SCHEMA_KEY_CURSOR_SHAPE, SCHEMA_KEY_FONT};
+                         SCHEMA_KEY_AUDIBLE_BELL, SCHEMA_KEY_TAB_BAR_BEHAVIOR, SCHEMA_KEY_CURSOR_SHAPE, SCHEMA_KEY_FONT};
 
         foreach (unowned var key in keys) {
             settings.reset (key);
