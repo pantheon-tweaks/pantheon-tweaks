@@ -5,7 +5,7 @@
  */
 
 public abstract class PantheonTweaks.BasePane : Switchboard.SettingsPage {
-    public signal void restored ();
+    public signal void show_toast (string message);
 
     public abstract bool load ();
     protected abstract void do_reset ();
@@ -55,7 +55,7 @@ public abstract class PantheonTweaks.BasePane : Switchboard.SettingsPage {
 
             do_reset ();
             reset_confirm_dialog.destroy ();
-            restored ();
+            show_toast (N_("Reset settings successfully"));
         });
         reset_confirm_dialog.present ();
     }
