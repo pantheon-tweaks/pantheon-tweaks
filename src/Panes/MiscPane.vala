@@ -8,6 +8,8 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
     private const string SCHEMA_ID_MUTTER = "org.gnome.mutter";
     private const string SCHEMA_KEY_CHECK_ALIVE_TIMEOUT = "check-alive-timeout";
 
+    private const string SCHEMA_ID_PANEL_SOUND = "io.elementary.desktop.wingpanel.sound";
+
     private const uint CHECK_ALIVE_TIMEOUT_DEFAULT = 5000;
     private const uint CHECK_ALIVE_TIMEOUT_MIN = uint.MIN;
     private const uint CHECK_ALIVE_TIMEOUT_SANE_MIN = 1000;
@@ -109,11 +111,11 @@ public class PantheonTweaks.Panes.MiscPane : BasePane {
     }
 
     public override bool load () {
-        if (!SettingsUtil.schema_exists (SettingsUtil.PANEL_SOUND_SCHEMA)) {
-            warning ("Could not find settings schema %s", SettingsUtil.PANEL_SOUND_SCHEMA);
+        if (!SettingsUtil.schema_exists (SCHEMA_ID_PANEL_SOUND)) {
+            warning ("Could not find settings schema %s", SCHEMA_ID_PANEL_SOUND);
             return false;
         }
-        sound_settings = new Settings (SettingsUtil.PANEL_SOUND_SCHEMA);
+        sound_settings = new Settings (SCHEMA_ID_PANEL_SOUND);
 
         if (!SettingsUtil.schema_exists (SCHEMA_ID_MUTTER)) {
             warning ("Could not find settings schema %s", SCHEMA_ID_MUTTER);
