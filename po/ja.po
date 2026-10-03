@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-02 16:18+0000\n"
+"POT-Creation-Date: 2026-10-03 10:23+0900\n"
 "PO-Revision-Date: 2026-05-03 01:37+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
@@ -55,19 +55,19 @@ msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon Tweaks の開発者"
 
 #: src/MainWindow.vala:40
-#, c-format
-msgid "Your Desktop Environment \"%s\" Is Not Supported"
+#, fuzzy, c-format
+msgid "Your Desktop Environment “%s” Is Not Supported"
 msgstr "お使いのデスクトップ環境 \"%s\" には対応していません"
 
 #: src/MainWindow.vala:42
 msgid "Pantheon Tweaks is a customization tool for Pantheon."
 msgstr "Pantheon Tweaks は、Pantheon 用のカスタマイズツールです。"
 
-#: src/Panes/AppearancePane.vala:35
+#: src/Panes/AppearancePane.vala:46
 msgid "Appearance"
 msgstr "外観"
 
-#: src/Panes/AppearancePane.vala:37
+#: src/Panes/AppearancePane.vala:48
 msgid ""
 "Change the theme and button layout of windows. Changing theme may cause "
 "visibility issue."
@@ -75,60 +75,60 @@ msgstr ""
 "ウィンドウのテーマとボタンレイアウトを変更します。テーマを変更すると、視覚的"
 "な不具合が生じる可能性があります。"
 
-#: src/Panes/AppearancePane.vala:38
+#: src/Panes/AppearancePane.vala:49
 msgid "General"
 msgstr "一般"
 
-#: src/Panes/AppearancePane.vala:50
+#: src/Panes/AppearancePane.vala:61
 msgid "GTK Theme"
 msgstr "GTK テーマ"
 
-#. TRANSLATORS: The "%s" represents the path where custom themes are installed
-#: src/Panes/AppearancePane.vala:52
+#. TRANSLATORS: The “%s” represents the path where custom themes are installed
+#: src/Panes/AppearancePane.vala:63
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr "カスタムテーマをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:53 src/Panes/AppearancePane.vala:79
-#: src/Panes/AppearancePane.vala:105 src/Panes/AppearancePane.vala:131
+#: src/Panes/AppearancePane.vala:64 src/Panes/AppearancePane.vala:90
+#: src/Panes/AppearancePane.vala:116 src/Panes/AppearancePane.vala:142
 msgid "theme-name"
 msgstr "テーマ名"
 
-#: src/Panes/AppearancePane.vala:76
+#: src/Panes/AppearancePane.vala:87
 msgid "Icon Theme"
 msgstr "アイコンテーマ"
 
-#. TRANSLATORS: The "%s" represents the path where custom icons are installed
-#: src/Panes/AppearancePane.vala:78
+#. TRANSLATORS: The “%s” represents the path where custom icons are installed
+#: src/Panes/AppearancePane.vala:89
 #, c-format
 msgid "To show custom icons here, put them in %s."
 msgstr "カスタムアイコンをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:102
+#: src/Panes/AppearancePane.vala:113
 msgid "Cursor Theme"
 msgstr "カーソルテーマ"
 
-#. TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:104
+#. TRANSLATORS: The “%s” represents the path where custom cursors are installed
+#: src/Panes/AppearancePane.vala:115
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr "カスタムカーソルをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:128
+#: src/Panes/AppearancePane.vala:139
 msgid "Sound Theme"
 msgstr "サウンドテーマ"
 
-#. TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:130
+#. TRANSLATORS: The “%s” represents the path where custom sounds are installed
+#: src/Panes/AppearancePane.vala:141
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr "カスタムサウンドをここに表示させるには、%s 以下に配置してください。"
 
-#: src/Panes/AppearancePane.vala:152
+#: src/Panes/AppearancePane.vala:163
 msgid "Legacy Dark Style"
 msgstr "レガシーなダークモード"
 
-#: src/Panes/AppearancePane.vala:153
+#: src/Panes/AppearancePane.vala:164
 msgid ""
 "Attempts to force dark style on apps that don't support it. Requires restart "
 "of the apps."
@@ -136,170 +136,190 @@ msgstr ""
 "対応していないアプリに対しても、ダークモードを強制しようとします。アプリの再"
 "起動が必要です。"
 
-#: src/Panes/AppearancePane.vala:168
+#: src/Panes/AppearancePane.vala:179
 msgid "Window Control Layout"
 msgstr "ウィンドウコントロールのレイアウト"
 
-#: src/Panes/AppearancePane.vala:169
+#: src/Panes/AppearancePane.vala:180
 msgid "Changes button layout of the window."
 msgstr "ウィンドウのボタンレイアウトを変更します。"
 
-#: src/Panes/AppearancePane.vala:174
+#: src/Panes/AppearancePane.vala:185
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:175
+#: src/Panes/AppearancePane.vala:186
 msgid "elementary Reversed"
 msgstr "elementary Reversed"
 
-#: src/Panes/AppearancePane.vala:176
+#: src/Panes/AppearancePane.vala:187
 msgid "Close Only Right"
 msgstr "閉じるボタンのみを右に表示"
 
-#: src/Panes/AppearancePane.vala:177
+#: src/Panes/AppearancePane.vala:188
 msgid "Close Only Left"
 msgstr "閉じるボタンのみを左に表示"
 
-#: src/Panes/AppearancePane.vala:178
+#: src/Panes/AppearancePane.vala:189
 msgid "Add Minimize Left"
 msgstr "最小化ボタンを左に追加"
 
-#: src/Panes/AppearancePane.vala:179
+#: src/Panes/AppearancePane.vala:190
 msgid "Add Minimize Right"
 msgstr "最小化ボタンを右に追加"
 
-#: src/Panes/AppearancePane.vala:180
+#: src/Panes/AppearancePane.vala:191
 msgid "Replace Maximize to Minimize"
 msgstr "最大化ボタンを最小化ボタンに置き換え"
 
-#: src/Panes/AppearancePane.vala:181
+#: src/Panes/AppearancePane.vala:192
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:182
+#: src/Panes/AppearancePane.vala:193
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:183
+#: src/Panes/AppearancePane.vala:194
 msgid "Windows Reversed"
 msgstr "Windows Reversed"
 
-#: src/Panes/AppearancePane.vala:198
+#: src/Panes/AppearancePane.vala:209
 msgid "Show GNOME Menu"
 msgstr "GNOME メニューを表示"
 
-#: src/Panes/AppearancePane.vala:199
+#: src/Panes/AppearancePane.vala:210
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "GNOME アプリで GNOME メニューを表示するかどうかを設定します。"
 
-#: src/Panes/FilesPane.vala:17
+#: src/Panes/FilesPane.vala:21
 msgid "Files"
 msgstr "ファイル"
 
-#: src/Panes/FilesPane.vala:19
+#: src/Panes/FilesPane.vala:23
 msgid "Applications"
 msgstr "アプリケーション"
 
-#: src/Panes/FilesPane.vala:27
+#: src/Panes/FilesPane.vala:31
 msgid "Restore Tabs"
 msgstr "タブを復元"
 
-#: src/Panes/FilesPane.vala:28
+#: src/Panes/FilesPane.vala:32
 msgid "Restore tabs from previous session when launched."
 msgstr "起動時に以前のセッションのタブを復元します。"
 
-#: src/Panes/FilesPane.vala:44
+#: src/Panes/FilesPane.vala:48
 msgid "Locale"
 msgstr "ロケール"
 
-#: src/Panes/FilesPane.vala:45
+#: src/Panes/FilesPane.vala:49
 msgid "ISO"
 msgstr "ISO"
 
-#: src/Panes/FilesPane.vala:46
+#: src/Panes/FilesPane.vala:50
 msgid "Informal"
 msgstr "略式"
 
-#: src/Panes/FilesPane.vala:48
+#: src/Panes/FilesPane.vala:52
 msgid "Date & Time Format"
 msgstr "日付と時刻の書式"
 
-#: src/Panes/FilesPane.vala:49
+#: src/Panes/FilesPane.vala:53
 msgid "Date and time format used in the properties dialog or the list view."
 msgstr "プロパティダイアログやリスト表示で使用される日付と時刻の書式です。"
 
-#: src/Panes/FontsPane.vala:19
+#: src/Panes/FontsPane.vala:27
 msgid "Fonts"
 msgstr "フォント"
 
-#: src/Panes/FontsPane.vala:21
+#: src/Panes/FontsPane.vala:29
 msgid "Change the fonts used in your system and documents by default."
 msgstr "システムやドキュメントで使用されるデフォルトのフォントを変更します。"
 
-#: src/Panes/FontsPane.vala:29
+#: src/Panes/FontsPane.vala:37
 msgid "Default Font"
 msgstr "デフォルトのフォント"
 
-#: src/Panes/FontsPane.vala:45
+#: src/Panes/FontsPane.vala:53
 msgid "Document Font"
 msgstr "ドキュメントのフォント"
 
-#: src/Panes/FontsPane.vala:61
+#: src/Panes/FontsPane.vala:69
 msgid "Monospace Font"
 msgstr "等幅フォント"
 
-#: src/Panes/FontsPane.vala:77
+#: src/Panes/FontsPane.vala:85
 msgid "Titlebar Font"
 msgstr "タイトルバーのフォント"
 
-#: src/Panes/MiscPane.vala:15
+#: src/Panes/MiscPane.vala:35
 msgid "Miscellaneous"
 msgstr "そのほか"
 
-#: src/Panes/MiscPane.vala:17
+#: src/Panes/MiscPane.vala:37
 msgid "Configure some other hidden settings."
 msgstr "そのほかの隠し設定項目を変更します。"
 
-#: src/Panes/MiscPane.vala:22
+#: src/Panes/MiscPane.vala:45
 msgid "Max Volume"
 msgstr "最大音量"
 
-#: src/Panes/TerminalPane.vala:23
+#: src/Panes/MiscPane.vala:66
+msgid "Check Alive"
+msgstr ""
+
+#: src/Panes/MiscPane.vala:67
+msgid ""
+"If enabled, an app has to respond to cyclic ping requests from Mutter. If it "
+"doesn't, “Application is not responding” dialog appears where allows you to "
+"choose force quit it or wait."
+msgstr ""
+
+#: src/Panes/MiscPane.vala:81
+msgid "Check Alive Timeout"
+msgstr ""
+
+#: src/Panes/MiscPane.vala:82
+msgid ""
+"Number of milliseconds an app has to respond to a ping request from Mutter."
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:33
 msgid "Terminal"
 msgstr "ターミナル"
 
-#: src/Panes/TerminalPane.vala:32
+#: src/Panes/TerminalPane.vala:42
 msgid "Follow Last Tab"
 msgstr "最後のタブに従う"
 
-#: src/Panes/TerminalPane.vala:33
+#: src/Panes/TerminalPane.vala:43
 msgid "Creating a new tab sets the working directory of the last opened tab."
 msgstr ""
 "新しいタブのカレントディレクトリを、最後に開いたタブのカレントディレクトリに"
 "設定します。"
 
-#: src/Panes/TerminalPane.vala:48
+#: src/Panes/TerminalPane.vala:58
 msgid "Unsafe Paste Alert"
 msgstr "安全でない貼り付けを警告"
 
-#: src/Panes/TerminalPane.vala:49
+#: src/Panes/TerminalPane.vala:59
 msgid "Warn when pasted text contains multiple or administrative commands."
 msgstr ""
 "複数行または管理者権限が必要なコマンドを貼り付けた場合に警告を表示します。"
 
-#: src/Panes/TerminalPane.vala:64
+#: src/Panes/TerminalPane.vala:74
 msgid "Remember Tabs"
 msgstr "タブを保存"
 
-#: src/Panes/TerminalPane.vala:65
+#: src/Panes/TerminalPane.vala:75
 msgid "If enabled, last opened tabs are restored on start."
 msgstr "有効にすると、最後に開いたタブが起動時に復元されます。"
 
-#: src/Panes/TerminalPane.vala:80
+#: src/Panes/TerminalPane.vala:90
 msgid "Terminal Bell"
 msgstr "ターミナルの通知音"
 
-#: src/Panes/TerminalPane.vala:81
+#: src/Panes/TerminalPane.vala:91
 msgid ""
 "Sound when hitting the end of a line and also for tab-completion when there "
 "are either no or multiple possible completions."
@@ -307,35 +327,35 @@ msgstr ""
 "行の最後に到達した場合や、入力補完の候補がない、または 1 つしかない場合に、音"
 "を鳴らします。"
 
-#: src/Panes/TerminalPane.vala:96
+#: src/Panes/TerminalPane.vala:106
 msgid "Show Tabs"
 msgstr "タブを表示"
 
-#: src/Panes/TerminalPane.vala:101
+#: src/Panes/TerminalPane.vala:111
 msgid "Always"
 msgstr "常に表示"
 
-#: src/Panes/TerminalPane.vala:102
+#: src/Panes/TerminalPane.vala:112
 msgid "Hide when single tab"
 msgstr "タブが 1 つの場合は表示しない"
 
-#: src/Panes/TerminalPane.vala:113
+#: src/Panes/TerminalPane.vala:123
 msgid "Cursor Shape"
 msgstr "カーソルの形状"
 
-#: src/Panes/TerminalPane.vala:118
+#: src/Panes/TerminalPane.vala:128
 msgid "Block"
 msgstr "ブロック"
 
-#: src/Panes/TerminalPane.vala:119
+#: src/Panes/TerminalPane.vala:129
 msgid "I-Beam"
 msgstr "垂直バー"
 
-#: src/Panes/TerminalPane.vala:120
+#: src/Panes/TerminalPane.vala:130
 msgid "Underline"
 msgstr "下線"
 
-#: src/Panes/TerminalPane.vala:131
+#: src/Panes/TerminalPane.vala:141
 msgid "Terminal Font"
 msgstr "ターミナルのフォント"
 
@@ -359,16 +379,16 @@ msgstr ""
 msgid "Reset"
 msgstr "リセット"
 
-#: src/Widgets/Categories.vala:34
+#: src/Widgets/BasePane.vala:58
 msgid "Reset settings successfully"
 msgstr "設定を正常にリセットしました"
 
-#: src/Widgets/Categories.vala:66
+#: src/Widgets/Categories.vala:67
 #, c-format
 msgid "Failed to Load %s Preference"
 msgstr "%s 設定の読み込みに失敗しました"
 
-#: src/Widgets/Categories.vala:67
+#: src/Widgets/Categories.vala:68
 msgid ""
 "Make sure your Pantheon desktop installation is up to date and not "
 "incomplete."
@@ -376,13 +396,13 @@ msgstr ""
 "お使いの Pantheon デスクトップが最新かつ不完全でないことを確認してください。"
 
 #: src/Widgets/OpenButton.vala:15
-#, c-format
-msgid "Open \"%s\""
+#, fuzzy, c-format
+msgid "Open “%s”"
 msgstr "\"%s\" を開く"
 
 #: src/Widgets/OpenButton.vala:25
-#, c-format
-msgid "Failed To Open \"%s\""
+#, fuzzy, c-format
+msgid "Failed To Open “%s”"
 msgstr "\"%s\" を開けませんでした"
 
 #: src/Widgets/OpenButton.vala:26

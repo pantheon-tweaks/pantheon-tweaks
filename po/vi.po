@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-tweaks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-26 11:19+0900\n"
+"POT-Creation-Date: 2026-10-03 10:23+0900\n"
 "PO-Revision-Date: 2026-02-13 19:15+0700\n"
 "Last-Translator: Loc Huynh <https://github.com/hthienloc>\n"
 "Language-Team: \n"
@@ -15,305 +15,347 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.8\n"
 
-#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in.in:5
-#: src/MainWindow.vala:20
+#: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:9
+#: src/MainWindow.vala:18 src/MainWindow.vala:22
 msgid "Pantheon Tweaks"
 msgstr "Pantheon Tweaks"
 
-#: data/pantheon-tweaks.desktop.in:4
+#: data/pantheon-tweaks.desktop.in:3
 msgid "Customization Tool"
 msgstr "Công cụ tùy chỉnh"
 
-#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:6
+#: data/pantheon-tweaks.desktop.in:4 data/pantheon-tweaks.metainfo.xml.in.in:10
 msgid "Tweak Pantheon settings"
 msgstr "Chỉnh sửa cài đặt Pantheon"
 
-#: data/pantheon-tweaks.desktop.in:11
+#: data/pantheon-tweaks.desktop.in:10
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:8
-msgid "A system customization app for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance."
-msgstr "Một ứng dụng tùy chỉnh hệ thống dành cho Pantheon Desktop cho phép bạn tùy chỉnh giao diện màn hình của mình một cách dễ dàng và an toàn."
+#: data/pantheon-tweaks.metainfo.xml.in.in:12
+msgid ""
+"A system customization app for the Pantheon Desktop that lets you easily and "
+"safely customise your desktop's appearance."
+msgstr ""
+"Một ứng dụng tùy chỉnh hệ thống dành cho Pantheon Desktop cho phép bạn tùy "
+"chỉnh giao diện màn hình của mình một cách dễ dàng và an toàn."
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:218
-#: data/pantheon-tweaks.metainfo.xml.in.in:222
+#: data/pantheon-tweaks.metainfo.xml.in.in:19
+#: data/pantheon-tweaks.metainfo.xml.in.in:23
 msgid "Appearance pane"
 msgstr "Khung giao diện"
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:228
-#: data/pantheon-tweaks.metainfo.xml.in.in:230
+#: data/pantheon-tweaks.metainfo.xml.in.in:37
+#: data/pantheon-tweaks.metainfo.xml.in.in:39
 msgid "Pantheon Tweaks Developers"
 msgstr "Nhà phát triển Pantheon Tweaks"
 
-#: src/MainWindow.vala:38
-#, c-format
-msgid "Your Desktop Environment \"%s\" Is Not Supported"
+#: src/MainWindow.vala:40
+#, fuzzy, c-format
+msgid "Your Desktop Environment “%s” Is Not Supported"
 msgstr "Môi trường máy tính của bạn \"%s\" không được hỗ trợ"
 
-#: src/MainWindow.vala:40
+#: src/MainWindow.vala:42
 msgid "Pantheon Tweaks is a customization tool for Pantheon."
 msgstr "Pantheon Tweaks là một công cụ tùy biến dành cho Pantheon."
 
-#: src/Panes/AppearancePane.vala:35
+#: src/Panes/AppearancePane.vala:46
 msgid "Appearance"
 msgstr "Giao diện"
 
-#: src/Panes/AppearancePane.vala:37
-msgid "Change the theme and button layout of windows. Changing theme may cause visibility issue."
-msgstr "Thay đổi chủ đề và cách bố trí nút của cửa sổ. Thay đổi chủ đề có thể gây ra vấn đề về khả năng hiển thị."
+#: src/Panes/AppearancePane.vala:48
+msgid ""
+"Change the theme and button layout of windows. Changing theme may cause "
+"visibility issue."
+msgstr ""
+"Thay đổi chủ đề và cách bố trí nút của cửa sổ. Thay đổi chủ đề có thể gây ra "
+"vấn đề về khả năng hiển thị."
 
-#: src/Panes/AppearancePane.vala:38
+#: src/Panes/AppearancePane.vala:49
 msgid "General"
 msgstr "Tổng quan"
 
-#: src/Panes/AppearancePane.vala:50
+#: src/Panes/AppearancePane.vala:61
 msgid "GTK Theme"
 msgstr "Chủ đề GTK"
 
-#. TRANSLATORS: The "%s" represents the path where custom themes are installed
-#: src/Panes/AppearancePane.vala:52
+#. TRANSLATORS: The “%s” represents the path where custom themes are installed
+#: src/Panes/AppearancePane.vala:63
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr "Để hiển thị các chủ đề tùy chỉnh ở đây, hãy đặt chúng vào %s."
 
-#: src/Panes/AppearancePane.vala:53 src/Panes/AppearancePane.vala:79
-#: src/Panes/AppearancePane.vala:105 src/Panes/AppearancePane.vala:131
+#: src/Panes/AppearancePane.vala:64 src/Panes/AppearancePane.vala:90
+#: src/Panes/AppearancePane.vala:116 src/Panes/AppearancePane.vala:142
 msgid "theme-name"
 msgstr "theme-name"
 
-#: src/Panes/AppearancePane.vala:76
+#: src/Panes/AppearancePane.vala:87
 msgid "Icon Theme"
 msgstr "Chủ đề biểu tượng"
 
-#. TRANSLATORS: The "%s" represents the path where custom icons are installed
-#: src/Panes/AppearancePane.vala:78
+#. TRANSLATORS: The “%s” represents the path where custom icons are installed
+#: src/Panes/AppearancePane.vala:89
 #, c-format
 msgid "To show custom icons here, put them in %s."
 msgstr "Để hiển thị các biểu tượng tùy chỉnh ở đây, hãy đặt chúng vào %s."
 
-#: src/Panes/AppearancePane.vala:102
+#: src/Panes/AppearancePane.vala:113
 msgid "Cursor Theme"
 msgstr "Chủ đề con trỏ"
 
-#. TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:104
+#. TRANSLATORS: The “%s” represents the path where custom cursors are installed
+#: src/Panes/AppearancePane.vala:115
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr "Để hiển thị con trỏ tùy chỉnh ở đây, hãy đặt chúng vào %s."
 
-#: src/Panes/AppearancePane.vala:128
+#: src/Panes/AppearancePane.vala:139
 msgid "Sound Theme"
 msgstr "Chủ đề âm thanh"
 
-#. TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:130
+#. TRANSLATORS: The “%s” represents the path where custom sounds are installed
+#: src/Panes/AppearancePane.vala:141
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr "Để hiển thị âm thanh tùy chỉnh ở đây, hãy đặt chúng vào %s."
 
-#: src/Panes/AppearancePane.vala:152
-msgid "Force Dark Style"
+#: src/Panes/AppearancePane.vala:163
+#, fuzzy
+msgid "Legacy Dark Style"
 msgstr "Buộc phong cách tối"
 
-#: src/Panes/AppearancePane.vala:153
-msgid "Forces dark style on all apps, even if it's not supported. Requires restarting the application."
-msgstr "Buộc phong cách tối trên tất cả ứng dụng, ngay cả khi nó không được hỗ trợ. Yêu cầu khởi động lại ứng dụng."
+#: src/Panes/AppearancePane.vala:164
+#, fuzzy
+msgid ""
+"Attempts to force dark style on apps that don't support it. Requires restart "
+"of the apps."
+msgstr ""
+"Buộc phong cách tối trên tất cả ứng dụng, ngay cả khi nó không được hỗ trợ. "
+"Yêu cầu khởi động lại ứng dụng."
 
-#: src/Panes/AppearancePane.vala:168
+#: src/Panes/AppearancePane.vala:179
 msgid "Window Control Layout"
 msgstr "Bố cục điều khiển cửa sổ"
 
-#: src/Panes/AppearancePane.vala:169
+#: src/Panes/AppearancePane.vala:180
 msgid "Changes button layout of the window."
 msgstr "Thay đổi bố cục nút của cửa sổ."
 
-#: src/Panes/AppearancePane.vala:174
+#: src/Panes/AppearancePane.vala:185
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:175
+#: src/Panes/AppearancePane.vala:186
 msgid "elementary Reversed"
 msgstr "elementary Reversed"
 
-#: src/Panes/AppearancePane.vala:176
+#: src/Panes/AppearancePane.vala:187
 msgid "Close Only Right"
 msgstr "Chỉ đóng bên phải"
 
-#: src/Panes/AppearancePane.vala:177
+#: src/Panes/AppearancePane.vala:188
 msgid "Close Only Left"
 msgstr "Chỉ đóng bên trái"
 
-#: src/Panes/AppearancePane.vala:178
+#: src/Panes/AppearancePane.vala:189
 msgid "Add Minimize Left"
 msgstr "Thêm thu nhỏ bên trái"
 
-#: src/Panes/AppearancePane.vala:179
+#: src/Panes/AppearancePane.vala:190
 msgid "Add Minimize Right"
 msgstr "Thêm thu nhỏ bên phải"
 
-#: src/Panes/AppearancePane.vala:180
+#: src/Panes/AppearancePane.vala:191
 msgid "Replace Maximize to Minimize"
 msgstr "Thay thế Phóng to thành Thu nhỏ"
 
-#: src/Panes/AppearancePane.vala:181
+#: src/Panes/AppearancePane.vala:192
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:182
+#: src/Panes/AppearancePane.vala:193
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:183
+#: src/Panes/AppearancePane.vala:194
 msgid "Windows Reversed"
 msgstr "Windows Reversed"
 
-#: src/Panes/AppearancePane.vala:198
+#: src/Panes/AppearancePane.vala:209
 msgid "Show GNOME Menu"
 msgstr "Hiện menu Gnome"
 
-#: src/Panes/AppearancePane.vala:199
+#: src/Panes/AppearancePane.vala:210
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "Có hiển thị menu Gnome trong ứng dụng Gnome hay không."
 
-#: src/Panes/FilesPane.vala:17
+#: src/Panes/FilesPane.vala:21
 msgid "Files"
 msgstr "Tệp"
 
-#: src/Panes/FilesPane.vala:19
+#: src/Panes/FilesPane.vala:23
 msgid "Applications"
 msgstr "Ứng dụng"
 
-#: src/Panes/FilesPane.vala:27
+#: src/Panes/FilesPane.vala:31
 msgid "Restore Tabs"
 msgstr "Khôi phục tab"
 
-#: src/Panes/FilesPane.vala:28
+#: src/Panes/FilesPane.vala:32
 msgid "Restore tabs from previous session when launched."
 msgstr "Khôi phục các tab từ phiên trước khi khởi chạy."
 
-#: src/Panes/FilesPane.vala:44
+#: src/Panes/FilesPane.vala:48
 msgid "Locale"
 msgstr "Ngôn ngữ"
 
-#: src/Panes/FilesPane.vala:45
+#: src/Panes/FilesPane.vala:49
 msgid "ISO"
 msgstr "ISO"
 
-#: src/Panes/FilesPane.vala:46
+#: src/Panes/FilesPane.vala:50
 msgid "Informal"
 msgstr "Không chính thức"
 
-#: src/Panes/FilesPane.vala:48
+#: src/Panes/FilesPane.vala:52
 msgid "Date & Time Format"
 msgstr "Định dạng ngày và giờ"
 
-#: src/Panes/FilesPane.vala:49
+#: src/Panes/FilesPane.vala:53
 msgid "Date and time format used in the properties dialog or the list view."
-msgstr "Định dạng ngày và giờ được sử dụng trong hộp thoại thuộc tính hoặc xem danh sách."
+msgstr ""
+"Định dạng ngày và giờ được sử dụng trong hộp thoại thuộc tính hoặc xem danh "
+"sách."
 
-#: src/Panes/FontsPane.vala:19
+#: src/Panes/FontsPane.vala:27
 msgid "Fonts"
 msgstr "Phông chữ"
 
-#: src/Panes/FontsPane.vala:21
-msgid "Change the fonts used in your system and documents by default."
-msgstr "Thay đổi phông chữ được sử dụng trong hệ thống và tài liệu của bạn theo mặc định."
-
 #: src/Panes/FontsPane.vala:29
+msgid "Change the fonts used in your system and documents by default."
+msgstr ""
+"Thay đổi phông chữ được sử dụng trong hệ thống và tài liệu của bạn theo mặc "
+"định."
+
+#: src/Panes/FontsPane.vala:37
 msgid "Default Font"
 msgstr "Phông chữ mặc định"
 
-#: src/Panes/FontsPane.vala:45
+#: src/Panes/FontsPane.vala:53
 msgid "Document Font"
 msgstr "Phông chữ tài liệu"
 
-#: src/Panes/FontsPane.vala:61
+#: src/Panes/FontsPane.vala:69
 msgid "Monospace Font"
 msgstr "Phông chữ đơn cách"
 
-#: src/Panes/FontsPane.vala:77
+#: src/Panes/FontsPane.vala:85
 msgid "Titlebar Font"
 msgstr "Phông chữ thanh tiêu đề"
 
-#: src/Panes/MiscPane.vala:15
+#: src/Panes/MiscPane.vala:35
 msgid "Miscellaneous"
 msgstr "Khác"
 
-#: src/Panes/MiscPane.vala:17
+#: src/Panes/MiscPane.vala:37
 msgid "Configure some other hidden settings."
 msgstr "Cài đặt một số cài đặt ẩn khác."
 
-#: src/Panes/MiscPane.vala:22
+#: src/Panes/MiscPane.vala:45
 msgid "Max Volume"
 msgstr "Âm lượng tối đa"
 
-#: src/Panes/TerminalPane.vala:23
+#: src/Panes/MiscPane.vala:66
+msgid "Check Alive"
+msgstr ""
+
+#: src/Panes/MiscPane.vala:67
+msgid ""
+"If enabled, an app has to respond to cyclic ping requests from Mutter. If it "
+"doesn't, “Application is not responding” dialog appears where allows you to "
+"choose force quit it or wait."
+msgstr ""
+
+#: src/Panes/MiscPane.vala:81
+msgid "Check Alive Timeout"
+msgstr ""
+
+#: src/Panes/MiscPane.vala:82
+msgid ""
+"Number of milliseconds an app has to respond to a ping request from Mutter."
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:33
 msgid "Terminal"
 msgstr "Terminal"
 
-#: src/Panes/TerminalPane.vala:32
+#: src/Panes/TerminalPane.vala:42
 msgid "Follow Last Tab"
 msgstr "Theo dõi tab cuối cùng"
 
-#: src/Panes/TerminalPane.vala:33
+#: src/Panes/TerminalPane.vala:43
 msgid "Creating a new tab sets the working directory of the last opened tab."
 msgstr "Tạo một tab mới sẽ đặt thư mục làm việc của tab được mở cuối cùng."
 
-#: src/Panes/TerminalPane.vala:48
+#: src/Panes/TerminalPane.vala:58
 msgid "Unsafe Paste Alert"
 msgstr "Cảnh báo dán không an toàn"
 
-#: src/Panes/TerminalPane.vala:49
+#: src/Panes/TerminalPane.vala:59
 msgid "Warn when pasted text contains multiple or administrative commands."
 msgstr "Cảnh báo khi văn bản được dán chứa nhiều lệnh quản trị."
 
-#: src/Panes/TerminalPane.vala:64
+#: src/Panes/TerminalPane.vala:74
 msgid "Remember Tabs"
 msgstr "Ghi nhớ tab"
 
-#: src/Panes/TerminalPane.vala:65
+#: src/Panes/TerminalPane.vala:75
 msgid "If enabled, last opened tabs are restored on start."
 msgstr "Nếu đã bật, các tab đã mở gần đây nhất sẽ được khôi phục khi bắt đầu."
 
-#: src/Panes/TerminalPane.vala:80
+#: src/Panes/TerminalPane.vala:90
 msgid "Terminal Bell"
 msgstr "Terminal Bell"
 
-#: src/Panes/TerminalPane.vala:81
-msgid "Sound when hitting the end of a line and also for tab-completion when there are either no or multiple possible completions."
-msgstr "Âm thanh khi chạm vào cuối dòng và cả khi hoàn thành tab khi không hoặc có nhiều lần hoàn thành có thể."
+#: src/Panes/TerminalPane.vala:91
+msgid ""
+"Sound when hitting the end of a line and also for tab-completion when there "
+"are either no or multiple possible completions."
+msgstr ""
+"Âm thanh khi chạm vào cuối dòng và cả khi hoàn thành tab khi không hoặc có "
+"nhiều lần hoàn thành có thể."
 
-#: src/Panes/TerminalPane.vala:96
+#: src/Panes/TerminalPane.vala:106
 msgid "Show Tabs"
 msgstr "Hiển thị tab"
 
-#: src/Panes/TerminalPane.vala:101
+#: src/Panes/TerminalPane.vala:111
 msgid "Always"
 msgstr "Luôn"
 
-#: src/Panes/TerminalPane.vala:102
+#: src/Panes/TerminalPane.vala:112
 msgid "Hide when single tab"
 msgstr "Ẩn khi tab đơn"
 
-#: src/Panes/TerminalPane.vala:113
+#: src/Panes/TerminalPane.vala:123
 msgid "Cursor Shape"
 msgstr "Hình dạng con trỏ"
 
-#: src/Panes/TerminalPane.vala:118
+#: src/Panes/TerminalPane.vala:128
 msgid "Block"
 msgstr "Khối"
 
-#: src/Panes/TerminalPane.vala:119
+#: src/Panes/TerminalPane.vala:129
 msgid "I-Beam"
 msgstr "I-Beam"
 
-#: src/Panes/TerminalPane.vala:120
+#: src/Panes/TerminalPane.vala:130
 msgid "Underline"
 msgstr "Gạch chân"
 
-#: src/Panes/TerminalPane.vala:131
+#: src/Panes/TerminalPane.vala:141
 msgid "Terminal Font"
 msgstr "Phông chữ đầu cuối"
 
@@ -326,40 +368,45 @@ msgid "Reset to Default?"
 msgstr "Đặt lại về mặc định?"
 
 #: src/Widgets/BasePane.vala:42
-msgid "All settings in this pane will be restored to the factory defaults. This action can't be undone."
-msgstr "Tất cả các cài đặt trong khung này sẽ được khôi phục về mặc định của nhà sản xuất. Không thể hoàn tác hành động này."
+msgid ""
+"All settings in this pane will be restored to the factory defaults. This "
+"action can't be undone."
+msgstr ""
+"Tất cả các cài đặt trong khung này sẽ được khôi phục về mặc định của nhà sản "
+"xuất. Không thể hoàn tác hành động này."
 
 #: src/Widgets/BasePane.vala:48
 msgid "Reset"
 msgstr "Đặt lại"
 
-#: src/Widgets/Categories.vala:34
+#: src/Widgets/BasePane.vala:58
 msgid "Reset settings successfully"
 msgstr "Đặt lại cài đặt thành công"
 
-#: src/Widgets/Categories.vala:66
+#: src/Widgets/Categories.vala:67
 #, c-format
 msgid "Failed to Load %s Preference"
 msgstr "Không thể tải tùy chọn %s"
 
-#: src/Widgets/Categories.vala:67
-msgid "Make sure your Pantheon desktop installation is up to date and not incomplete."
+#: src/Widgets/Categories.vala:68
+msgid ""
+"Make sure your Pantheon desktop installation is up to date and not "
+"incomplete."
 msgstr "Đảm bảo cài đặt Pantheon desktop của bạn được cập nhật và không thiếu."
 
-#: src/Widgets/Dialog.vala:18
-msgid "Get Support…"
-msgstr "Nhận hỗ trợ…"
-
 #: src/Widgets/OpenButton.vala:15
-#, c-format
-msgid "Open \"%s\""
+#, fuzzy, c-format
+msgid "Open “%s”"
 msgstr "Mở \"%s\""
 
 #: src/Widgets/OpenButton.vala:25
-#, c-format
-msgid "Failed To Open \"%s\""
+#, fuzzy, c-format
+msgid "Failed To Open “%s”"
 msgstr "Không mở được \"%s\""
 
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr "Đã xảy ra lỗi khi mở hoặc tạo thư mục."
+
+#~ msgid "Get Support…"
+#~ msgstr "Nhận hỗ trợ…"

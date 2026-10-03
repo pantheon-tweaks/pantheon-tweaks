@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-27 22:21+0900\n"
+"POT-Creation-Date: 2026-10-03 10:23+0900\n"
 "PO-Revision-Date: 2022-02-09 15:09+0800\n"
 "Last-Translator: imgradeone <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -18,338 +18,359 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-08-30 08:42+0000\n"
 "X-Generator: Poedit 3.0\n"
 
-#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in.in:5
+#: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:9
 #: src/MainWindow.vala:18 src/MainWindow.vala:22
 msgid "Pantheon Tweaks"
 msgstr "Pantheon 优化"
 
-#: data/pantheon-tweaks.desktop.in:4
+#: data/pantheon-tweaks.desktop.in:3
 msgid "Customization Tool"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:6
+#: data/pantheon-tweaks.desktop.in:4 data/pantheon-tweaks.metainfo.xml.in.in:10
 msgid "Tweak Pantheon settings"
 msgstr "修改 Pantheon 桌面环境设置"
 
-#: data/pantheon-tweaks.desktop.in:11
+#: data/pantheon-tweaks.desktop.in:10
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:8
+#: data/pantheon-tweaks.metainfo.xml.in.in:12
 #, fuzzy
 msgid ""
 "A system customization app for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr "专为 Pantheon 设计的系统设置面板，帮助您简便、安全地修改桌面外观。"
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:236
-#: data/pantheon-tweaks.metainfo.xml.in.in:240
+#: data/pantheon-tweaks.metainfo.xml.in.in:19
+#: data/pantheon-tweaks.metainfo.xml.in.in:23
 #, fuzzy
 msgid "Appearance pane"
 msgstr "外观"
 
 #. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:246
-#: data/pantheon-tweaks.metainfo.xml.in.in:248
+#: data/pantheon-tweaks.metainfo.xml.in.in:37
+#: data/pantheon-tweaks.metainfo.xml.in.in:39
 #, fuzzy
 msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon 优化"
 
 #: src/MainWindow.vala:40
 #, c-format
-msgid "Your Desktop Environment \"%s\" Is Not Supported"
+msgid "Your Desktop Environment “%s” Is Not Supported"
 msgstr ""
 
 #: src/MainWindow.vala:42
 msgid "Pantheon Tweaks is a customization tool for Pantheon."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:35
+#: src/Panes/AppearancePane.vala:46
 msgid "Appearance"
 msgstr "外观"
 
-#: src/Panes/AppearancePane.vala:37
+#: src/Panes/AppearancePane.vala:48
 msgid ""
 "Change the theme and button layout of windows. Changing theme may cause "
 "visibility issue."
 msgstr "修改主题和窗口布局。修改主题可能会出现视觉问题。"
 
-#: src/Panes/AppearancePane.vala:38
+#: src/Panes/AppearancePane.vala:49
 msgid "General"
 msgstr "常规"
 
-#: src/Panes/AppearancePane.vala:50
+#: src/Panes/AppearancePane.vala:61
 #, fuzzy
 msgid "GTK Theme"
 msgstr "主题："
 
-#. TRANSLATORS: The "%s" represents the path where custom themes are installed
-#: src/Panes/AppearancePane.vala:52
+#. TRANSLATORS: The “%s” represents the path where custom themes are installed
+#: src/Panes/AppearancePane.vala:63
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr "如果您想在此显示自定义主题，请在 %s 下存放主题文件。"
 
-#: src/Panes/AppearancePane.vala:53 src/Panes/AppearancePane.vala:79
-#: src/Panes/AppearancePane.vala:105 src/Panes/AppearancePane.vala:131
+#: src/Panes/AppearancePane.vala:64 src/Panes/AppearancePane.vala:90
+#: src/Panes/AppearancePane.vala:116 src/Panes/AppearancePane.vala:142
 msgid "theme-name"
 msgstr "theme-name"
 
-#: src/Panes/AppearancePane.vala:76
+#: src/Panes/AppearancePane.vala:87
 #, fuzzy
 msgid "Icon Theme"
 msgstr "图标主题："
 
-#. TRANSLATORS: The "%s" represents the path where custom icons are installed
-#: src/Panes/AppearancePane.vala:78
+#. TRANSLATORS: The “%s” represents the path where custom icons are installed
+#: src/Panes/AppearancePane.vala:89
 #, c-format
 msgid "To show custom icons here, put them in %s."
 msgstr "如果您想在此显示自定义图标，请在 %s 下存放图标文件。"
 
-#: src/Panes/AppearancePane.vala:102
+#: src/Panes/AppearancePane.vala:113
 #, fuzzy
 msgid "Cursor Theme"
 msgstr "光标："
 
-#. TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:104
+#. TRANSLATORS: The “%s” represents the path where custom cursors are installed
+#: src/Panes/AppearancePane.vala:115
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr "如果您想在此显示自定义光标，请在 %s 下存放光标文件。"
 
-#: src/Panes/AppearancePane.vala:128
+#: src/Panes/AppearancePane.vala:139
 #, fuzzy
 msgid "Sound Theme"
 msgstr "图标主题："
 
-#. TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:130
+#. TRANSLATORS: The “%s” represents the path where custom sounds are installed
+#: src/Panes/AppearancePane.vala:141
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr "如果您想在此显示自定义音效，请在 %s 下存放音效文件。"
 
-#: src/Panes/AppearancePane.vala:152
+#: src/Panes/AppearancePane.vala:163
 #, fuzzy
-msgid "Force Dark Style"
+msgid "Legacy Dark Style"
 msgstr "强制使用暗色样式："
 
-#: src/Panes/AppearancePane.vala:153
+#: src/Panes/AppearancePane.vala:164
+#, fuzzy
 msgid ""
-"Forces dark style on all apps, even if it's not supported. Requires "
-"restarting the application."
+"Attempts to force dark style on apps that don't support it. Requires restart "
+"of the apps."
 msgstr ""
 "强制对应用使用暗色风格（即使应用程序不支持）。需要重新启动应用程序才能生效。"
 
-#: src/Panes/AppearancePane.vala:168
+#: src/Panes/AppearancePane.vala:179
 #, fuzzy
 msgid "Window Control Layout"
 msgstr "窗口控制"
 
-#: src/Panes/AppearancePane.vala:169
+#: src/Panes/AppearancePane.vala:180
 msgid "Changes button layout of the window."
 msgstr "修改窗口按钮布局。"
 
-#: src/Panes/AppearancePane.vala:174
+#: src/Panes/AppearancePane.vala:185
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:175
+#: src/Panes/AppearancePane.vala:186
 msgid "elementary Reversed"
 msgstr "elementary（反向）"
 
-#: src/Panes/AppearancePane.vala:176
+#: src/Panes/AppearancePane.vala:187
 msgid "Close Only Right"
 msgstr "仅右侧关闭按钮"
 
-#: src/Panes/AppearancePane.vala:177
+#: src/Panes/AppearancePane.vala:188
 msgid "Close Only Left"
 msgstr "仅左侧关闭按钮"
 
-#: src/Panes/AppearancePane.vala:178
+#: src/Panes/AppearancePane.vala:189
 msgid "Add Minimize Left"
 msgstr "在左侧添加最小化"
 
-#: src/Panes/AppearancePane.vala:179
+#: src/Panes/AppearancePane.vala:190
 msgid "Add Minimize Right"
 msgstr "在右侧添加最小化"
 
-#: src/Panes/AppearancePane.vala:180
+#: src/Panes/AppearancePane.vala:191
 msgid "Replace Maximize to Minimize"
 msgstr "将最大化替换为最小化"
 
-#: src/Panes/AppearancePane.vala:181
+#: src/Panes/AppearancePane.vala:192
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:182
+#: src/Panes/AppearancePane.vala:193
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:183
+#: src/Panes/AppearancePane.vala:194
 #, fuzzy
 msgid "Windows Reversed"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:198
+#: src/Panes/AppearancePane.vala:209
 #, fuzzy
 msgid "Show GNOME Menu"
 msgstr "显示 GNOME 菜单："
 
-#: src/Panes/AppearancePane.vala:199
+#: src/Panes/AppearancePane.vala:210
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "决定是否在 GNOME 应用程序中展示 GNOME 菜单。"
 
-#: src/Panes/FilesPane.vala:17
+#: src/Panes/FilesPane.vala:21
 msgid "Files"
 msgstr "文件"
 
-#: src/Panes/FilesPane.vala:19
+#: src/Panes/FilesPane.vala:23
 msgid "Applications"
 msgstr "应用程序"
 
-#: src/Panes/FilesPane.vala:27
+#: src/Panes/FilesPane.vala:31
 #, fuzzy
 msgid "Restore Tabs"
 msgstr "恢复标签："
 
-#: src/Panes/FilesPane.vala:28
+#: src/Panes/FilesPane.vala:32
 msgid "Restore tabs from previous session when launched."
 msgstr ""
 
-#: src/Panes/FilesPane.vala:44
+#: src/Panes/FilesPane.vala:48
 msgid "Locale"
 msgstr "区域"
 
-#: src/Panes/FilesPane.vala:45
+#: src/Panes/FilesPane.vala:49
 msgid "ISO"
 msgstr "ISO"
 
-#: src/Panes/FilesPane.vala:46
+#: src/Panes/FilesPane.vala:50
 msgid "Informal"
 msgstr "非正式"
 
-#: src/Panes/FilesPane.vala:48
+#: src/Panes/FilesPane.vala:52
 #, fuzzy
 msgid "Date & Time Format"
 msgstr "日期格式："
 
-#: src/Panes/FilesPane.vala:49
+#: src/Panes/FilesPane.vala:53
 msgid "Date and time format used in the properties dialog or the list view."
 msgstr ""
 
-#: src/Panes/FontsPane.vala:19
+#: src/Panes/FontsPane.vala:27
 msgid "Fonts"
 msgstr "字体"
 
-#: src/Panes/FontsPane.vala:21
+#: src/Panes/FontsPane.vala:29
 msgid "Change the fonts used in your system and documents by default."
 msgstr "修改系统和文档的默认字体。"
 
-#: src/Panes/FontsPane.vala:29
+#: src/Panes/FontsPane.vala:37
 #, fuzzy
 msgid "Default Font"
 msgstr "默认字体："
 
-#: src/Panes/FontsPane.vala:45
+#: src/Panes/FontsPane.vala:53
 #, fuzzy
 msgid "Document Font"
 msgstr "文档字体："
 
-#: src/Panes/FontsPane.vala:61
+#: src/Panes/FontsPane.vala:69
 #, fuzzy
 msgid "Monospace Font"
 msgstr "等宽字体："
 
-#: src/Panes/FontsPane.vala:77
+#: src/Panes/FontsPane.vala:85
 #, fuzzy
 msgid "Titlebar Font"
 msgstr "标题栏字体："
 
-#: src/Panes/MiscPane.vala:15
+#: src/Panes/MiscPane.vala:35
 msgid "Miscellaneous"
 msgstr "杂项"
 
-#: src/Panes/MiscPane.vala:17
+#: src/Panes/MiscPane.vala:37
 msgid "Configure some other hidden settings."
 msgstr "配置其他隐藏选项。"
 
-#: src/Panes/MiscPane.vala:22
+#: src/Panes/MiscPane.vala:45
 #, fuzzy
 msgid "Max Volume"
 msgstr "最大音量："
 
-#: src/Panes/TerminalPane.vala:23
+#: src/Panes/MiscPane.vala:66
+msgid "Check Alive"
+msgstr ""
+
+#: src/Panes/MiscPane.vala:67
+msgid ""
+"If enabled, an app has to respond to cyclic ping requests from Mutter. If it "
+"doesn't, “Application is not responding” dialog appears where allows you to "
+"choose force quit it or wait."
+msgstr ""
+
+#: src/Panes/MiscPane.vala:81
+msgid "Check Alive Timeout"
+msgstr ""
+
+#: src/Panes/MiscPane.vala:82
+msgid ""
+"Number of milliseconds an app has to respond to a ping request from Mutter."
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:33
 msgid "Terminal"
 msgstr "终端"
 
-#: src/Panes/TerminalPane.vala:32
+#: src/Panes/TerminalPane.vala:42
 #, fuzzy
 msgid "Follow Last Tab"
 msgstr "跟随上一个标签："
 
-#: src/Panes/TerminalPane.vala:33
+#: src/Panes/TerminalPane.vala:43
 msgid "Creating a new tab sets the working directory of the last opened tab."
 msgstr "新建标签时，将工作目录自动设为与上一个标签一致的目录。"
 
-#: src/Panes/TerminalPane.vala:48
+#: src/Panes/TerminalPane.vala:58
 #, fuzzy
 msgid "Unsafe Paste Alert"
 msgstr "危险粘贴警告："
 
-#: src/Panes/TerminalPane.vala:49
+#: src/Panes/TerminalPane.vala:59
 msgid "Warn when pasted text contains multiple or administrative commands."
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:64
+#: src/Panes/TerminalPane.vala:74
 #, fuzzy
 msgid "Remember Tabs"
 msgstr "保留标签："
 
-#: src/Panes/TerminalPane.vala:65
+#: src/Panes/TerminalPane.vala:75
 msgid "If enabled, last opened tabs are restored on start."
 msgstr "启用后，打开终端将自动恢复上次的标签。"
 
-#: src/Panes/TerminalPane.vala:80
+#: src/Panes/TerminalPane.vala:90
 #, fuzzy
 msgid "Terminal Bell"
 msgstr "终端提示音："
 
-#: src/Panes/TerminalPane.vala:81
+#: src/Panes/TerminalPane.vala:91
 msgid ""
 "Sound when hitting the end of a line and also for tab-completion when there "
 "are either no or multiple possible completions."
 msgstr "触发行尾或在 Tab 自动填充提示时没有可行填充的提示音效。"
 
-#: src/Panes/TerminalPane.vala:96
+#: src/Panes/TerminalPane.vala:106
 #, fuzzy
 msgid "Show Tabs"
 msgstr "显示标签栏："
 
-#: src/Panes/TerminalPane.vala:101
+#: src/Panes/TerminalPane.vala:111
 msgid "Always"
 msgstr "一直显示"
 
-#: src/Panes/TerminalPane.vala:102
+#: src/Panes/TerminalPane.vala:112
 msgid "Hide when single tab"
 msgstr "只有单个标签时隐藏"
 
-#: src/Panes/TerminalPane.vala:113
+#: src/Panes/TerminalPane.vala:123
 #, fuzzy
 msgid "Cursor Shape"
 msgstr "光标："
 
-#: src/Panes/TerminalPane.vala:118
+#: src/Panes/TerminalPane.vala:128
 msgid "Block"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:119
+#: src/Panes/TerminalPane.vala:129
 msgid "I-Beam"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:120
+#: src/Panes/TerminalPane.vala:130
 msgid "Underline"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:131
+#: src/Panes/TerminalPane.vala:141
 #, fuzzy
 msgid "Terminal Font"
 msgstr "终端"
@@ -374,33 +395,29 @@ msgstr "本页面中的所有设置将被恢复为出厂默认值。该操作无
 msgid "Reset"
 msgstr "重置"
 
-#: src/Widgets/Categories.vala:34
+#: src/Widgets/BasePane.vala:58
 msgid "Reset settings successfully"
 msgstr "设置重置成功"
 
-#: src/Widgets/Categories.vala:66
+#: src/Widgets/Categories.vala:67
 #, c-format
 msgid "Failed to Load %s Preference"
 msgstr ""
 
-#: src/Widgets/Categories.vala:67
+#: src/Widgets/Categories.vala:68
 msgid ""
 "Make sure your Pantheon desktop installation is up to date and not "
 "incomplete."
 msgstr ""
 
-#: src/Widgets/Dialog.vala:18
-msgid "Get Support…"
-msgstr ""
-
 #: src/Widgets/OpenButton.vala:15
 #, c-format
-msgid "Open \"%s\""
+msgid "Open “%s”"
 msgstr ""
 
 #: src/Widgets/OpenButton.vala:25
 #, fuzzy, c-format
-msgid "Failed To Open \"%s\""
+msgid "Failed To Open “%s”"
 msgstr "打开目标文件夹"
 
 #: src/Widgets/OpenButton.vala:26
