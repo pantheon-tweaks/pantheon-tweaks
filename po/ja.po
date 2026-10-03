@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-03 10:23+0900\n"
-"PO-Revision-Date: 2026-05-03 01:37+0900\n"
+"PO-Revision-Date: 2026-10-03 10:24+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -55,9 +55,9 @@ msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon Tweaks の開発者"
 
 #: src/MainWindow.vala:40
-#, fuzzy, c-format
+#, c-format
 msgid "Your Desktop Environment “%s” Is Not Supported"
-msgstr "お使いのデスクトップ環境 \"%s\" には対応していません"
+msgstr "お使いのデスクトップ環境 “%s” には対応していません"
 
 #: src/MainWindow.vala:42
 msgid "Pantheon Tweaks is a customization tool for Pantheon."
@@ -266,7 +266,7 @@ msgstr "最大音量"
 
 #: src/Panes/MiscPane.vala:66
 msgid "Check Alive"
-msgstr ""
+msgstr "死活監視"
 
 #: src/Panes/MiscPane.vala:67
 msgid ""
@@ -274,15 +274,19 @@ msgid ""
 "doesn't, “Application is not responding” dialog appears where allows you to "
 "choose force quit it or wait."
 msgstr ""
+"有効にすると、アプリケーションは Mutter からの定期的な ping 要求に応答する必"
+"要があります。応答がない場合、“アプリケーションの応答がありません”というダイ"
+"アログが表示され、強制終了するか待機するかを選択できます。"
 
 #: src/Panes/MiscPane.vala:81
 msgid "Check Alive Timeout"
-msgstr ""
+msgstr "死活監視のタイムアウト"
 
 #: src/Panes/MiscPane.vala:82
 msgid ""
 "Number of milliseconds an app has to respond to a ping request from Mutter."
 msgstr ""
+"アプリケーションが Mutter からの ping 要求に応答するまでの時間 (ミリ秒)。"
 
 #: src/Panes/TerminalPane.vala:33
 msgid "Terminal"
@@ -396,14 +400,14 @@ msgstr ""
 "お使いの Pantheon デスクトップが最新かつ不完全でないことを確認してください。"
 
 #: src/Widgets/OpenButton.vala:15
-#, fuzzy, c-format
+#, c-format
 msgid "Open “%s”"
-msgstr "\"%s\" を開く"
+msgstr "“%s” を開く"
 
 #: src/Widgets/OpenButton.vala:25
-#, fuzzy, c-format
+#, c-format
 msgid "Failed To Open “%s”"
-msgstr "\"%s\" を開けませんでした"
+msgstr "“%s” を開けませんでした"
 
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
