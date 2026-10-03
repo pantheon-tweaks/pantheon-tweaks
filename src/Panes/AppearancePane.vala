@@ -59,9 +59,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         var gtk_rootdir = Path.build_filename (home_dir, ".local", "share", "themes");
 
         var gtk_label = new Granite.HeaderLabel (_("GTK Theme")) {
-            /// TRANSLATORS: The "%s" represents the path where custom themes are installed
+            /// TRANSLATORS: The “%s” represents the path where custom themes are installed
             secondary_text = _("To show custom themes here, put them in %s.").printf (
-                "%s/\"%s\"/gtk-3.0".printf (gtk_rootdir, _("theme-name"))
+                "%s/“%s”/gtk-3.0".printf (gtk_rootdir, _("theme-name"))
             ),
             hexpand = true
         };
@@ -85,9 +85,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         var icon_rootdir = Path.build_filename (home_dir, ".icons");
 
         var icon_label = new Granite.HeaderLabel (_("Icon Theme")) {
-            /// TRANSLATORS: The "%s" represents the path where custom icons are installed
+            /// TRANSLATORS: The “%s” represents the path where custom icons are installed
             secondary_text = _("To show custom icons here, put them in %s.").printf (
-                "%s/\"%s\"".printf (icon_rootdir, _("theme-name"))
+                "%s/“%s”".printf (icon_rootdir, _("theme-name"))
             ),
             hexpand = true
         };
@@ -111,9 +111,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         var cursor_rootdir = Path.build_filename (home_dir, ".icons");
 
         var cursor_label = new Granite.HeaderLabel (_("Cursor Theme")) {
-            /// TRANSLATORS: The "%s" represents the path where custom cursors are installed
+            /// TRANSLATORS: The “%s” represents the path where custom cursors are installed
             secondary_text = _("To show custom cursors here, put them in %s.").printf (
-                "%s/\"%s\"/cursors".printf (cursor_rootdir, _("theme-name"))
+                "%s/“%s”/cursors".printf (cursor_rootdir, _("theme-name"))
             ),
             hexpand = true
         };
@@ -137,9 +137,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         var sound_rootdir = Path.build_filename (home_dir, ".local", "share", "sounds");
 
         var sound_label = new Granite.HeaderLabel (_("Sound Theme")) {
-            /// TRANSLATORS: The "%s" represents the path where custom sounds are installed
+            /// TRANSLATORS: The “%s” represents the path where custom sounds are installed
             secondary_text = _("To show custom sounds here, put them in %s.").printf (
-                "%s/\"%s\"".printf (sound_rootdir, _("theme-name"))
+                "%s/“%s”".printf (sound_rootdir, _("theme-name"))
             ),
             hexpand = true
         };

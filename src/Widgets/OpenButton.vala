@@ -12,7 +12,7 @@ public class PantheonTweaks.OpenButton : Gtk.Button {
             icon_name: "folder-open",
             path: path,
             valign: Gtk.Align.CENTER,
-            tooltip_text: _("Open \"%s\"").printf (path)
+            tooltip_text: _("Open “%s”").printf (path)
         );
     }
 
@@ -22,7 +22,7 @@ public class PantheonTweaks.OpenButton : Gtk.Button {
                 open ();
             } catch (Error err) {
                 Dialog.show_error_dialog (
-                    _("Failed To Open \"%s\"").printf (path),
+                    _("Failed To Open “%s”").printf (path),
                     _("There was an error when opening the directory or creating it."),
                     err.message
                 );
