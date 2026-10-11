@@ -401,9 +401,3 @@ msgstr "Không mở được \"%s\""
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr "Đã xảy ra lỗi khi mở hoặc tạo thư mục."
-
-#~ msgid "Customization Tool"
-#~ msgstr "Công cụ tùy chỉnh"
-
-#~ msgid "Get Support…"
-#~ msgstr "Nhận hỗ trợ…"
