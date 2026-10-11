@@ -101,7 +101,7 @@ public class PantheonTweaks.ThemeSettings {
                                     return true;
                                 }
 
-                                // Handle old themes that only provides stylesheets for GTK 3
+                                // Handle old themes that only provide stylesheets for GTK 3
                                 path = File.new_for_path (Path.build_filename (found_dir, "gtk-3.0"));
                                 return path.query_exists ();
                             });
