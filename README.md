@@ -16,6 +16,11 @@ You can launch it from the app launcher after installation.
 > [!TIP]
 > Pantheon Tweaks (and its ancestor, elementary Tweaks) was a plug of System Setting and has been provided through PPA for a long time, but it's an independent Flatpak app since 2.0.0.
 
+### From Community Packages
+Community packages maintained by volunteers are also available on some distributions:
+
+[![Packaging status](https://repology.org/badge/vertical-allrepos/pantheon-tweaks.svg)](https://repology.org/project/pantheon-tweaks/versions)
+
 ### From Source Code
 If you would like to install Pantheon Tweaks from source code, clone this repository and then run the following commands:
 
