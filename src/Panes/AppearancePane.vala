@@ -8,6 +8,17 @@
  */
 
 public class PantheonTweaks.Panes.AppearancePane : BasePane {
+    private const string SCHEMA_ID_INTERFACE = "org.gnome.desktop.interface";
+    private const string SCHEMA_KEY_GTK_THEME = "gtk-theme";
+    private const string SCHEMA_KEY_ICON_THEME = "icon-theme";
+    private const string SCHEMA_KEY_CURSOR_THEME = "cursor-theme";
+
+    private const string SCHEMA_ID_SOUND = "org.gnome.desktop.sound";
+    private const string SCHEMA_KEY_SOUND_THEME = "theme-name";
+
+    private const string SCHEMA_ID_GNOME_WM = "org.gnome.desktop.wm.preferences";
+    private const string SCHEMA_KEY_BUTTON_LAYOUT = "button-layout";
+
     private Gtk.DropDown gtk_dropdown;
     private Gtk.DropDown icon_dropdown;
     private Gtk.DropDown cursor_dropdown;
@@ -48,9 +59,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         var gtk_rootdir = Path.build_filename (home_dir, ".local", "share", "themes");
 
         var gtk_label = new Granite.HeaderLabel (_("GTK Theme")) {
-            /// TRANSLATORS: The "%s" represents the path where custom themes are installed
+            /// TRANSLATORS: The “%s” represents the path where custom themes are installed
             secondary_text = _("To show custom themes here, put them in %s.").printf (
-                "%s/\"%s\"/gtk-3.0".printf (gtk_rootdir, _("theme-name"))
+                "%s/“%s”/gtk-3.0".printf (gtk_rootdir, _("theme-name"))
             ),
             hexpand = true
         };
@@ -74,9 +85,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         var icon_rootdir = Path.build_filename (home_dir, ".icons");
 
         var icon_label = new Granite.HeaderLabel (_("Icon Theme")) {
-            /// TRANSLATORS: The "%s" represents the path where custom icons are installed
+            /// TRANSLATORS: The “%s” represents the path where custom icons are installed
             secondary_text = _("To show custom icons here, put them in %s.").printf (
-                "%s/\"%s\"".printf (icon_rootdir, _("theme-name"))
+                "%s/“%s”".printf (icon_rootdir, _("theme-name"))
             ),
             hexpand = true
         };
@@ -100,9 +111,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         var cursor_rootdir = Path.build_filename (home_dir, ".icons");
 
         var cursor_label = new Granite.HeaderLabel (_("Cursor Theme")) {
-            /// TRANSLATORS: The "%s" represents the path where custom cursors are installed
+            /// TRANSLATORS: The “%s” represents the path where custom cursors are installed
             secondary_text = _("To show custom cursors here, put them in %s.").printf (
-                "%s/\"%s\"/cursors".printf (cursor_rootdir, _("theme-name"))
+                "%s/“%s”/cursors".printf (cursor_rootdir, _("theme-name"))
             ),
             hexpand = true
         };
@@ -126,9 +137,9 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         var sound_rootdir = Path.build_filename (home_dir, ".local", "share", "sounds");
 
         var sound_label = new Granite.HeaderLabel (_("Sound Theme")) {
-            /// TRANSLATORS: The "%s" represents the path where custom sounds are installed
+            /// TRANSLATORS: The “%s” represents the path where custom sounds are installed
             secondary_text = _("To show custom sounds here, put them in %s.").printf (
-                "%s/\"%s\"".printf (sound_rootdir, _("theme-name"))
+                "%s/“%s”".printf (sound_rootdir, _("theme-name"))
             ),
             hexpand = true
         };
@@ -218,17 +229,17 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     }
 
     public override bool load () {
-        if (!SettingsUtil.schema_exists (SettingsUtil.INTERFACE_SCHEMA)) {
-            warning ("Could not find settings schema %s", SettingsUtil.INTERFACE_SCHEMA);
+        if (!SettingsUtil.schema_exists (SCHEMA_ID_INTERFACE)) {
+            warning ("Could not find settings schema %s", SCHEMA_ID_INTERFACE);
             return false;
         }
-        interface_settings = new Settings (SettingsUtil.INTERFACE_SCHEMA);
+        interface_settings = new Settings (SCHEMA_ID_INTERFACE);
 
-        if (!SettingsUtil.schema_exists (SettingsUtil.SOUND_SCHEMA)) {
-            warning ("Could not find settings schema %s", SettingsUtil.SOUND_SCHEMA);
+        if (!SettingsUtil.schema_exists (SCHEMA_ID_SOUND)) {
+            warning ("Could not find settings schema %s", SCHEMA_ID_SOUND);
             return false;
         }
-        sound_settings = new Settings (SettingsUtil.SOUND_SCHEMA);
+        sound_settings = new Settings (SCHEMA_ID_SOUND);
 
         bool ret = x_settings.load ();
         if (!ret) {
@@ -237,11 +248,11 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
 
         gtk_settings = new GtkSettings ();
 
-        if (!SettingsUtil.schema_exists (SettingsUtil.GNOME_WM_SCHEMA)) {
-            warning ("Could not find settings schema %s", SettingsUtil.GNOME_WM_SCHEMA);
+        if (!SettingsUtil.schema_exists (SCHEMA_ID_GNOME_WM)) {
+            warning ("Could not find settings schema %s", SCHEMA_ID_GNOME_WM);
             return false;
         }
-        gnome_wm_settings = new Settings (SettingsUtil.GNOME_WM_SCHEMA);
+        gnome_wm_settings = new Settings (SCHEMA_ID_GNOME_WM);
 
         FDO.Accounts? accounts_service;
         try {
@@ -304,21 +315,21 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         controls_settings_to_dropdown ();
         gnome_menu_switch.active = x_settings.has_gnome_menu ();
 
-        interface_settings.bind_with_mapping ("icon-theme",
+        interface_settings.bind_with_mapping (SCHEMA_KEY_ICON_THEME,
             icon_dropdown, "selected",
             SettingsBindFlags.DEFAULT,
             (SettingsBindGetMappingShared) SettingsUtil.Binding.to_dropdown_selected,
             (SettingsBindSetMappingShared) SettingsUtil.Binding.from_dropdown_selected,
             icon_list, null);
 
-        interface_settings.bind_with_mapping ("cursor-theme",
+        interface_settings.bind_with_mapping (SCHEMA_KEY_CURSOR_THEME,
             cursor_dropdown, "selected",
             SettingsBindFlags.DEFAULT,
             (SettingsBindGetMappingShared) SettingsUtil.Binding.to_dropdown_selected,
             (SettingsBindSetMappingShared) SettingsUtil.Binding.from_dropdown_selected,
             cursor_list, null);
 
-        sound_settings.bind_with_mapping ("theme-name",
+        sound_settings.bind_with_mapping (SCHEMA_KEY_SOUND_THEME,
             sound_dropdown, "selected",
             SettingsBindFlags.DEFAULT,
             (SettingsBindGetMappingShared) SettingsUtil.Binding.to_dropdown_selected,
@@ -335,10 +346,10 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             });
         }
 
-        interface_settings.changed["gtk-theme"].connect (gtk_theme_settings_to_dropdown);
+        interface_settings.changed[SCHEMA_KEY_GTK_THEME].connect (gtk_theme_settings_to_dropdown);
         gtk_dropdown.notify["selected-item"].connect (gtk_theme_dropdown_to_settings);
 
-        gnome_wm_settings.changed["button-layout"].connect (controls_settings_to_dropdown);
+        gnome_wm_settings.changed[SCHEMA_KEY_BUTTON_LAYOUT].connect (controls_settings_to_dropdown);
         controls_dropdown.notify["selected"].connect (controls_dropdown_to_settings);
         gnome_menu_switch.notify["active"].connect (controls_dropdown_to_settings);
 
@@ -347,7 +358,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     }
 
     protected override void do_reset () {
-        string[] keys = {"gtk-theme", "icon-theme", "cursor-theme"};
+        string[] keys = {SCHEMA_KEY_GTK_THEME, SCHEMA_KEY_ICON_THEME, SCHEMA_KEY_CURSOR_THEME};
 
         foreach (unowned var key in keys) {
             interface_settings.reset (key);
@@ -357,8 +368,8 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             pantheon_act.prefers_accent_color = ThemeSettings.AccentColor.BLUE;
         }
 
-        sound_settings.reset ("theme-name");
-        gnome_wm_settings.reset ("button-layout");
+        sound_settings.reset (SCHEMA_KEY_SOUND_THEME);
+        gnome_wm_settings.reset (SCHEMA_KEY_BUTTON_LAYOUT);
         x_settings.reset ();
 
         gtk_settings.prefer_dark_theme = false;
@@ -366,7 +377,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     }
 
     private void gtk_theme_settings_to_dropdown () {
-        string selected_id = interface_settings.get_string ("gtk-theme");
+        string selected_id = interface_settings.get_string (SCHEMA_KEY_GTK_THEME);
         uint selected_pos = gtk_list.find (selected_id);
 
         if (selected_pos == uint.MAX) {
@@ -385,7 +396,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
         var selected_item = (Gtk.StringObject) gtk_dropdown.selected_item;
         string selected_id = selected_item.string;
 
-        interface_settings.set_string ("gtk-theme", selected_id);
+        interface_settings.set_string (SCHEMA_KEY_GTK_THEME, selected_id);
 
         if (((DBusProxy) pantheon_act).get_cached_property ("PrefersAccentColor") == null) {
             return;
@@ -395,7 +406,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
     }
 
     private void controls_settings_to_dropdown () {
-        string selected_id = gnome_wm_settings.get_string ("button-layout");
+        string selected_id = gnome_wm_settings.get_string (SCHEMA_KEY_BUTTON_LAYOUT);
         uint selected_pos = StringIdListUtil.find (controls_list, selected_id);
 
         if (controls_dropdown.selected == selected_pos) {
@@ -413,7 +424,7 @@ public class PantheonTweaks.Panes.AppearancePane : BasePane {
             return;
         }
 
-        gnome_wm_settings.set_string ("button-layout", selected_id);
+        gnome_wm_settings.set_string (SCHEMA_KEY_BUTTON_LAYOUT, selected_id);
         x_settings.set_gnome_menu (gnome_menu_switch.active, selected_id);
     }
 }

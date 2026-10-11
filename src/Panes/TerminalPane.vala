@@ -5,6 +5,16 @@
  */
 
 public class PantheonTweaks.Panes.TerminalPane : BasePane {
+    private const string SCHEMA_ID_TERMINAL = "io.elementary.terminal.settings";
+
+    private const string SCHEMA_KEY_FOLLOW_LAST_TAB = "follow-last-tab";
+    private const string SCHEMA_KEY_UNSAFE_PASTE_ALERT = "unsafe-paste-alert";
+    private const string SCHEMA_KEY_REMEMBER_TABS = "remember-tabs";
+    private const string SCHEMA_KEY_AUDIBLE_BELL = "audible-bell";
+    private const string SCHEMA_KEY_TAB_BAR_BEHAVIOR = "tab-bar-behavior";
+    private const string SCHEMA_KEY_CURSOR_SHAPE = "cursor-shape";
+    private const string SCHEMA_KEY_FONT = "font";
+
     private Gtk.Switch follow_last_tab_switch;
     private Gtk.Switch unsafe_paste_alert_switch;
     private Gtk.Switch rem_tabs_switch;
@@ -151,32 +161,32 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
     }
 
     public override bool load () {
-        if (!SettingsUtil.schema_exists (SettingsUtil.TERMINAL_SCHEMA)) {
-            warning ("Could not find settings schema %s", SettingsUtil.TERMINAL_SCHEMA);
+        if (!SettingsUtil.schema_exists (SCHEMA_ID_TERMINAL)) {
+            warning ("Could not find settings schema %s", SCHEMA_ID_TERMINAL);
             return false;
         }
-        settings = new Settings (SettingsUtil.TERMINAL_SCHEMA);
+        settings = new Settings (SCHEMA_ID_TERMINAL);
 
-        settings.bind ("follow-last-tab", follow_last_tab_switch, "active", SettingsBindFlags.DEFAULT);
-        settings.bind ("unsafe-paste-alert", unsafe_paste_alert_switch, "active", SettingsBindFlags.DEFAULT);
-        settings.bind ("remember-tabs", rem_tabs_switch, "active", SettingsBindFlags.DEFAULT);
-        settings.bind ("audible-bell", term_bell_switch, "active", SettingsBindFlags.DEFAULT);
+        settings.bind (SCHEMA_KEY_FOLLOW_LAST_TAB, follow_last_tab_switch, "active", SettingsBindFlags.DEFAULT);
+        settings.bind (SCHEMA_KEY_UNSAFE_PASTE_ALERT, unsafe_paste_alert_switch, "active", SettingsBindFlags.DEFAULT);
+        settings.bind (SCHEMA_KEY_REMEMBER_TABS, rem_tabs_switch, "active", SettingsBindFlags.DEFAULT);
+        settings.bind (SCHEMA_KEY_AUDIBLE_BELL, term_bell_switch, "active", SettingsBindFlags.DEFAULT);
 
-        settings.bind_with_mapping ("tab-bar-behavior",
+        settings.bind_with_mapping (SCHEMA_KEY_TAB_BAR_BEHAVIOR,
             tab_bar_dropdown, "selected",
             SettingsBindFlags.DEFAULT,
             (SettingsBindGetMappingShared) SettingsUtil.Binding.to_dropdownid_selected,
             (SettingsBindSetMappingShared) SettingsUtil.Binding.from_dropdownid_selected,
             tab_bar_list, null);
 
-        settings.bind_with_mapping ("cursor-shape",
+        settings.bind_with_mapping (SCHEMA_KEY_CURSOR_SHAPE,
             cursor_shape_dropdown, "selected",
             SettingsBindFlags.DEFAULT,
             (SettingsBindGetMappingShared) SettingsUtil.Binding.to_dropdownid_selected,
             (SettingsBindSetMappingShared) SettingsUtil.Binding.from_dropdownid_selected,
             cursor_shape_list, null);
 
-        settings.bind_with_mapping ("font",
+        settings.bind_with_mapping (SCHEMA_KEY_FONT,
             term_font_button, "font-desc",
             SettingsBindFlags.DEFAULT,
             (SettingsBindGetMappingShared) SettingsUtil.Binding.to_fontbutton_fontdesc,
@@ -188,8 +198,8 @@ public class PantheonTweaks.Panes.TerminalPane : BasePane {
     }
 
     protected override void do_reset () {
-        string[] keys = {"follow-last-tab", "unsafe-paste-alert", "remember-tabs",
-                         "audible-bell", "tab-bar-behavior", "cursor-shape", "font"};
+        string[] keys = {SCHEMA_KEY_FOLLOW_LAST_TAB, SCHEMA_KEY_UNSAFE_PASTE_ALERT, SCHEMA_KEY_REMEMBER_TABS,
+                         SCHEMA_KEY_AUDIBLE_BELL, SCHEMA_KEY_TAB_BAR_BEHAVIOR, SCHEMA_KEY_CURSOR_SHAPE, SCHEMA_KEY_FONT};
 
         foreach (unowned var key in keys) {
             settings.reset (key);
