@@ -45,7 +45,7 @@
     even if translators translated all of them, which is not worthy.
   -->
   <releases>
-    <release version="2.6.0" date="2026-09-26" urgency="medium">
+    <release version="2.6.0" date="2026-10-11" urgency="medium">
       <description translate="no">
         <p>
           Improvements:
