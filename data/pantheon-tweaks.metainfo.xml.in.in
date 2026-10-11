@@ -33,8 +33,6 @@
   <url type="vcs-browser">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
   <url type="translate">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
 
-  <!-- developer_name has deprecated since AppStream 1.0 -->
-  <developer_name>Pantheon Tweaks Developers</developer_name>
   <developer id="io.github.pantheon_tweaks">
     <name>Pantheon Tweaks Developers</name>
   </developer>
