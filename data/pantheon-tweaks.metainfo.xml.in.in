@@ -49,7 +49,8 @@
           Improvements:
         </p>
         <ul>
-          <li>Appearance: Update ignore list of themes for in-development OS Early Access</li>
+          <li>Appearance: Update ignore list of themes to improve support for in-development elementary OS Early Access</li>
+          <li>Appearance: Add support for modern themes with only GTK 4 stylesheets</li>
           <li>Misc: Add switch and spin button to configure timeout for the “Application is not responding” dialog or disable it completely</li>
         </ul>
         <p>
