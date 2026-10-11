@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-tweaks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-03 10:23+0900\n"
+"POT-Creation-Date: 2026-10-11 16:28+0900\n"
 "PO-Revision-Date: 2026-02-13 19:15+0700\n"
 "Last-Translator: Loc Huynh <https://github.com/hthienloc>\n"
 "Language-Team: \n"
@@ -15,20 +15,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.8\n"
 
-#: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:9
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:5
 #: src/MainWindow.vala:18 src/MainWindow.vala:22
 msgid "Pantheon Tweaks"
 msgstr "Pantheon Tweaks"
 
-#: data/pantheon-tweaks.desktop.in:3
-msgid "Customization Tool"
-msgstr "Công cụ tùy chỉnh"
-
-#: data/pantheon-tweaks.desktop.in:4 data/pantheon-tweaks.metainfo.xml.in.in:10
+#: data/pantheon-tweaks.desktop.in:6 data/pantheon-tweaks.metainfo.xml.in.in:6
 msgid "Tweak Pantheon settings"
 msgstr "Chỉnh sửa cài đặt Pantheon"
 
-#: data/pantheon-tweaks.desktop.in:10
+#: data/pantheon-tweaks.desktop.in:8
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 
@@ -40,16 +36,14 @@ msgstr ""
 "Một ứng dụng tùy chỉnh hệ thống dành cho Pantheon Desktop cho phép bạn tùy "
 "chỉnh giao diện màn hình của mình một cách dễ dàng và an toàn."
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:19
-#: data/pantheon-tweaks.metainfo.xml.in.in:23
-msgid "Appearance pane"
-msgstr "Khung giao diện"
-
-#. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:37
-#: data/pantheon-tweaks.metainfo.xml.in.in:39
+#: data/pantheon-tweaks.metainfo.xml.in.in:20
 msgid "Pantheon Tweaks Developers"
 msgstr "Nhà phát triển Pantheon Tweaks"
+
+#: data/pantheon-tweaks.metainfo.xml.in.in:33
+#: data/pantheon-tweaks.metainfo.xml.in.in:37
+msgid "Appearance pane"
+msgstr "Khung giao diện"
 
 #: src/MainWindow.vala:40
 #, fuzzy, c-format
@@ -407,6 +401,9 @@ msgstr "Không mở được \"%s\""
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr "Đã xảy ra lỗi khi mở hoặc tạo thư mục."
+
+#~ msgid "Customization Tool"
+#~ msgstr "Công cụ tùy chỉnh"
 
 #~ msgid "Get Support…"
 #~ msgstr "Nhận hỗ trợ…"
