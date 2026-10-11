@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-03 10:23+0900\n"
+"POT-Creation-Date: 2026-10-11 16:28+0900\n"
 "PO-Revision-Date: 2021-12-17 19:37+0200\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -18,20 +18,16 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-08-30 08:41+0000\n"
 "X-Generator: Launchpad (build 17176)\n"
 
-#: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:9
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:5
 #: src/MainWindow.vala:18 src/MainWindow.vala:22
 msgid "Pantheon Tweaks"
 msgstr "Pantheon trükkök"
 
-#: data/pantheon-tweaks.desktop.in:3
-msgid "Customization Tool"
-msgstr ""
-
-#: data/pantheon-tweaks.desktop.in:4 data/pantheon-tweaks.metainfo.xml.in.in:10
+#: data/pantheon-tweaks.desktop.in:6 data/pantheon-tweaks.metainfo.xml.in.in:6
 msgid "Tweak Pantheon settings"
 msgstr "Pantheon-beállítások módosítása"
 
-#: data/pantheon-tweaks.desktop.in:10
+#: data/pantheon-tweaks.desktop.in:8
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 
@@ -44,18 +40,16 @@ msgstr ""
 "Egy rendszerbeállítások-komponens a Pantheon számára, amivel egyszerűen és "
 "biztonságosan testreszabhatja az asztali felület megjelenését."
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:19
-#: data/pantheon-tweaks.metainfo.xml.in.in:23
-#, fuzzy
-msgid "Appearance pane"
-msgstr "Megjelenés"
-
-#. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:37
-#: data/pantheon-tweaks.metainfo.xml.in.in:39
+#: data/pantheon-tweaks.metainfo.xml.in.in:20
 #, fuzzy
 msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon trükkök"
+
+#: data/pantheon-tweaks.metainfo.xml.in.in:33
+#: data/pantheon-tweaks.metainfo.xml.in.in:37
+#, fuzzy
+msgid "Appearance pane"
+msgstr "Megjelenés"
 
 #: src/MainWindow.vala:40
 #, c-format
@@ -434,350 +428,3 @@ msgstr "Célmappa megnyitása"
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr ""
-
-#~ msgid "Never"
-#~ msgstr "Soha"
-
-#, fuzzy
-#~ msgid "Appearance pane in the light mode"
-#~ msgstr "Megjelenés"
-
-#, fuzzy
-#~ msgid "Appearance pane in the dark mode"
-#~ msgstr "Megjelenés"
-
-#~ msgid "Tweaks"
-#~ msgstr "Trükkök"
-
-#~ msgid "Are you sure you want to reset personalization?"
-#~ msgstr ""
-#~ "Biztosan vissza szeretné állítani a személyre szabott beállításokat?"
-
-#, fuzzy
-#~ msgid ""
-#~ "Show a warning dialog when pasting a command with 'sudo' or multiple "
-#~ "lines."
-#~ msgstr "Figyelmeztetés, ha 'sudo'-t tartalmaz a beillesztendő szöveg."
-
-#~ msgid "Open destination folder"
-#~ msgstr "Célmappa megnyitása"
-
-#, fuzzy
-#~ msgid "Failed to open the destination folder"
-#~ msgstr "Célmappa megnyitása"
-
-#~ msgid "Theme Settings"
-#~ msgstr "Témabeállítások"
-
-#~ msgid "GTK:"
-#~ msgstr "GTK:"
-
-#~ msgid "Icons:"
-#~ msgstr "Ikonok:"
-
-#~ msgid "Sound:"
-#~ msgstr "Hang:"
-
-#~ msgid "Layout:"
-#~ msgstr "Elrendezés:"
-
-#~ msgid "Ubuntu"
-#~ msgstr "Ubuntu"
-
-#~ msgid "Sound Indicator"
-#~ msgstr "Hangindikátor"
-
-#~ msgid "Translation updates:"
-#~ msgstr "Frissített fordítások:"
-
-#~ msgid "Update Portuguese translation (thanks to @hugok79)"
-#~ msgstr "Portugál fordítás frissítve (köszönet @hugok79)"
-
-#, fuzzy
-#~ msgid "Update German translation (thanks to @skalski)"
-#~ msgstr "Német fordítás frissítve (köszönet @uwe-ss)"
-
-#, fuzzy
-#~ msgid "Update Italian translation (thanks to @albanobattistella)"
-#~ msgstr "Orosz fordítás frissítve (köszönet @camellan)"
-
-#, fuzzy
-#~ msgid "Update Russian translation (thanks to @lenemter)"
-#~ msgstr "Orosz fordítás frissítve (köszönet @camellan)"
-
-#~ msgid "Update Japanese translation"
-#~ msgstr "Japán fordítás frissítve"
-
-#~ msgid "Update German translation (thanks to @uwe-ss)"
-#~ msgstr "Német fordítás frissítve (köszönet @uwe-ss)"
-
-#, fuzzy
-#~ msgid "Update Hungarian translation (thanks to @TomiOhl)"
-#~ msgstr "Orosz fordítás frissítve (köszönet @camellan)"
-
-#~ msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
-#~ msgstr "Egyszerűsített kínai fordítás frissítve (köszönet @imgradeone)"
-
-#~ msgid "FontsPane: Fix icon missing with the latest icons update"
-#~ msgstr "Betűtípusok: A legutóbbi frissítés óta hiányzó ikon javítva"
-
-#~ msgid ""
-#~ "Make sure dimming feature that is introduced in the latest version of "
-#~ "Gala work for the reset dialog"
-#~ msgstr ""
-#~ "A Gala legújabb frissítésében bevezetett elhalványítás működésének "
-#~ "biztosítása az alaphelyzetbe állítás párbeszédablakon"
-
-#, fuzzy
-#~ msgid "AppearancePane: Sort theme names alphabetically"
-#~ msgstr "Megjelenés: témanevek rendezése ábécésorrendben"
-
-#~ msgid "TerminalPane: Support changing tab bar behavior"
-#~ msgstr "Terminál: Tab viselkedésének megváltoztatása"
-
-#~ msgid "AppearancePane: Add buttons to open the theme locations"
-#~ msgstr "Megjelenés: Gombok a témák helyeinek megnyitásához"
-
-#~ msgid "Sync selected elementary stylesheet variant with Desktop Plug"
-#~ msgstr ""
-#~ "A kiválasztott elementary stíluslap szinkronban tartása az Asztal "
-#~ "beállításszekcióval"
-
-#~ msgid "Improves reliability of restoring visually"
-#~ msgstr "Visszaállítás megbízhatóságának javítása"
-
-#~ msgid ""
-#~ "Prevent System Settings from crashing due to the removal of preferences "
-#~ "in upstream Videos"
-#~ msgstr "A Videók beállításainak eltávolítása okozta összeomlás megelőzése"
-
-#~ msgid "Correct cursor and icon theme dir copies"
-#~ msgstr "Helyes kurzor- és ikontéma mappák"
-
-#~ msgid "Update French translation (thanks to @roxfr)"
-#~ msgstr "Francia fordítás frissítve (köszönet @roxfr)"
-
-#~ msgid "Update Russian translation (thanks to @camellan)"
-#~ msgstr "Orosz fordítás frissítve (köszönet @camellan)"
-
-#~ msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
-#~ msgstr "Adwaita/gnome/hicolor témák kizárása a témaválasztóból"
-
-#~ msgid "Support accessing to panes with settings paths"
-#~ msgstr "Az albeállítások elérhetők beállítások-útvonalakkal"
-
-#~ msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
-#~ msgstr "Működés biztosítása NixOS-en (köszönet @bobby285271)"
-
-#~ msgid "Update translations"
-#~ msgstr "Frissített fordítások"
-
-#~ msgid ""
-#~ "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
-#~ "features and fixes:"
-#~ msgstr ""
-#~ "Az elementary Tweaks át lett nevezve Pantheon trükkökre és kapott pár új "
-#~ "funkciót és javítást:"
-
-#~ msgid "Remove preferences now supported in Pantheon officially"
-#~ msgstr "A Pantheon által már támogatott beállítások eltávolítva"
-
-#~ msgid "Remove preferences causing the plug crash"
-#~ msgstr "Az összeomlást okozó beállítások eltávolítva"
-
-#~ msgid "Fully redesigned plug"
-#~ msgstr "Teljes redizájn"
-
-#~ msgid "Support changing sound theme (thanks to @pongloongyeat)"
-#~ msgstr "Hangtéma változtatásának támogatása (köszönet @pongloongyeat)"
-
-#~ msgid "Add new window controls layout"
-#~ msgstr "Új ablakvezérlő-elrendezések"
-
-#~ msgid "Fix deprecations"
-#~ msgstr "Elavulások javítva"
-
-#~ msgid "Background color:"
-#~ msgstr "Háttérszín"
-
-#~ msgid "Animations"
-#~ msgstr "Animációk"
-
-#~ msgid ""
-#~ "Adjust the animation length used for window management or multitasking."
-#~ msgstr ""
-#~ "Az ablakkezelés vagy többfeladatos nézet animációinak finomhangolása."
-
-#~ msgid "Open:"
-#~ msgstr "Megnyitás:"
-
-#~ msgid "Close:"
-#~ msgstr "Bezárás:"
-
-#~ msgid "Snap:"
-#~ msgstr "Felosztás:"
-
-#~ msgid "Minimize:"
-#~ msgstr "Lekicsinyítés:"
-
-#~ msgid "Workspace switch:"
-#~ msgstr "Munkaterület váltása:"
-
-#~ msgid "Videos"
-#~ msgstr "Videók"
-
-#~ msgid "Stay on top while playing:"
-#~ msgstr "Felülmaradás lejátszás közben:"
-
-#~ msgid "Move window from video canvas:"
-#~ msgstr "Az ablak mozgatása a videóvászonról:"
-
-#~ msgid "If enabled, the window can be dragged by clicking anywhere on it."
-#~ msgstr "Az ablak elmozgatható lesz, akárhol is kattint rá és ragadja meg."
-
-#~ msgid "Don't instantly start video playback:"
-#~ msgstr "Ne induljon el azonnal a videólejátszás:"
-
-#~ msgid "If enabled, opening a video will not auto play it."
-#~ msgstr "A videók nem fognak automatikusan elindulni megnyitás után."
-
-#~ msgid "Shadows"
-#~ msgstr "Árnyékok"
-
-#~ msgid "Disabled"
-#~ msgstr "Letiltva"
-
-#~ msgid "Watched Processes"
-#~ msgstr "Megfigyelt folyamatok"
-
-#~ msgid "Add..."
-#~ msgstr "Hozzáadás…"
-
-#~ msgid "Remove"
-#~ msgstr "Törlés"
-
-#~ msgid "Animations:"
-#~ msgstr "Animációk:"
-
-#~ msgid "Open Duration:"
-#~ msgstr "Megnyitás időtartama:"
-
-#~ msgid "Close Duration:"
-#~ msgstr "Bezárás időtartama:"
-
-#~ msgid "Minimize Duration:"
-#~ msgstr "Lekicsinyítés időtartama:"
-
-#~ msgid "Single Click:"
-#~ msgstr "Szimpla klikk:"
-
-#~ msgid "Smallest"
-#~ msgstr "Legkisebb"
-
-#~ msgid "Smaller"
-#~ msgstr "Kisebb"
-
-#~ msgid "Small"
-#~ msgstr "Kicsi"
-
-#~ msgid "Normal"
-#~ msgstr "Normál"
-
-#~ msgid "Large"
-#~ msgstr "Nagy"
-
-#~ msgid "Larger"
-#~ msgstr "Nagyobb"
-
-#~ msgid "Largest"
-#~ msgstr "Legnagyobb"
-
-#~ msgid "Sidebar Icon Size:"
-#~ msgstr "Oldalsáv ikon mérete:"
-
-#~ msgid "Rows:"
-#~ msgstr "Sorok:"
-
-#~ msgid "Columns:"
-#~ msgstr "Oszlopok:"
-
-#~ msgid "Don't hide"
-#~ msgstr "Ne rejtse el"
-
-#~ msgid "Intelligent hide"
-#~ msgstr "Intelligens elrejtés"
-
-#~ msgid "Auto hide"
-#~ msgstr "Automatikus elrejtés"
-
-#~ msgid "Hide on maximize"
-#~ msgstr "Elrejtés teljes méret esetén"
-
-#~ msgid "Hide Mode:"
-#~ msgstr "Elrejtési mód:"
-
-#~ msgid "Primary Monitor"
-#~ msgstr "Elsődleges monitor"
-
-#~ msgid "Monitor %d"
-#~ msgstr "%d. monitor"
-
-#~ msgid "Monitor:"
-#~ msgstr "Monitor:"
-
-#~ msgid "Left"
-#~ msgstr "Bal"
-
-#~ msgid "Right"
-#~ msgstr "Jobb"
-
-#~ msgid "Top"
-#~ msgstr "Fent"
-
-#~ msgid "Bottom"
-#~ msgstr "Lent"
-
-#~ msgid "Panel"
-#~ msgstr "Panel"
-
-#~ msgid "Alignment:"
-#~ msgstr "Igazítás:"
-
-#~ msgid "Custom"
-#~ msgstr "Egyéni"
-
-#~ msgid "Opacity:"
-#~ msgstr "Átlátszatlanság:"
-
-#~ msgid "Audible Bell:"
-#~ msgstr "Hangjelzés:"
-
-#~ msgid "Focused Windows:"
-#~ msgstr "Előtérben lévő ablakok:"
-
-#~ msgid "Unfocused Windows:"
-#~ msgstr "Háttérben lévő ablakok:"
-
-#~ msgid "Name"
-#~ msgstr "Név"
-
-#~ msgid "Shortcut"
-#~ msgstr "Gyorsbillentyű"
-
-#~ msgid "Command"
-#~ msgstr "Parancs"
-
-#~ msgid "Every field must be filled!"
-#~ msgstr "Minden mezőt ki kell tölteni!"
-
-#~ msgid "Name:"
-#~ msgstr "Név:"
-
-#~ msgid "Shortcut:"
-#~ msgstr "Gyorsbillentyű:"
-
-#~ msgid "Command:"
-#~ msgstr "Parancs:"
-
-#~ msgid "OS X"
-#~ msgstr "OS X"

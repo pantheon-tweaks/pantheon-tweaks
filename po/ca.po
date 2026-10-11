@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-03 10:23+0900\n"
+"POT-Creation-Date: 2026-10-11 16:28+0900\n"
 "PO-Revision-Date: 2014-09-01 10:06+0000\n"
 "Last-Translator: JoanColl <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
@@ -18,20 +18,16 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-09-02 07:35+0000\n"
 "X-Generator: Launchpad (build 17192)\n"
 
-#: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:9
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:5
 #: src/MainWindow.vala:18 src/MainWindow.vala:22
 msgid "Pantheon Tweaks"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:3
-msgid "Customization Tool"
-msgstr ""
-
-#: data/pantheon-tweaks.desktop.in:4 data/pantheon-tweaks.metainfo.xml.in.in:10
+#: data/pantheon-tweaks.desktop.in:6 data/pantheon-tweaks.metainfo.xml.in.in:6
 msgid "Tweak Pantheon settings"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:10
+#: data/pantheon-tweaks.desktop.in:8
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 
@@ -41,17 +37,15 @@ msgid ""
 "safely customise your desktop's appearance."
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:19
-#: data/pantheon-tweaks.metainfo.xml.in.in:23
+#: data/pantheon-tweaks.metainfo.xml.in.in:20
+msgid "Pantheon Tweaks Developers"
+msgstr ""
+
+#: data/pantheon-tweaks.metainfo.xml.in.in:33
+#: data/pantheon-tweaks.metainfo.xml.in.in:37
 #, fuzzy
 msgid "Appearance pane"
 msgstr "Aparença"
-
-#. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:37
-#: data/pantheon-tweaks.metainfo.xml.in.in:39
-msgid "Pantheon Tweaks Developers"
-msgstr ""
 
 #: src/MainWindow.vala:40
 #, c-format
@@ -414,193 +408,3 @@ msgstr ""
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr ""
-
-#, fuzzy
-#~ msgid "Appearance pane in the light mode"
-#~ msgstr "Aparença"
-
-#, fuzzy
-#~ msgid "Appearance pane in the dark mode"
-#~ msgstr "Aparença"
-
-#, fuzzy
-#~ msgid "Icons:"
-#~ msgstr "Mida de les icones:"
-
-#, fuzzy
-#~ msgid "Layout:"
-#~ msgstr "Distribució personalitzada:"
-
-#~ msgid "Animations"
-#~ msgstr "Animacions"
-
-#, fuzzy
-#~ msgid "Close:"
-#~ msgstr "Només «Tanca»"
-
-#, fuzzy
-#~ msgid "Minimize:"
-#~ msgstr "Minimitza a l'esquerra"
-
-#, fuzzy
-#~ msgid "Workspace switch:"
-#~ msgstr "Durada del canvi d'àrees de treball:"
-
-#~ msgid "Shadows"
-#~ msgstr "Ombres"
-
-#~ msgid "Plank"
-#~ msgstr "Plank"
-
-#~ msgid "Slingshot"
-#~ msgstr "Slingshot"
-
-#~ msgid "Cerbere"
-#~ msgstr "Cerbere"
-
-#~ msgid "Disabled"
-#~ msgstr "Desactivat"
-
-#~ msgid "Watched Processes"
-#~ msgstr "Processos vigilats"
-
-#~ msgid "Add..."
-#~ msgstr "Afegeix…"
-
-#~ msgid "Remove"
-#~ msgstr "Suprimeix"
-
-#~ msgid "Animations:"
-#~ msgstr "Animacions:"
-
-#~ msgid "Open Duration:"
-#~ msgstr "Durada de l'obertura:"
-
-#~ msgid "Close Duration:"
-#~ msgstr "Durada del tancament:"
-
-#~ msgid "Snap Duration:"
-#~ msgstr "Durada de l'ajust:"
-
-#~ msgid "Minimize Duration:"
-#~ msgstr "Durada de la minimització:"
-
-#~ msgid "Single Click:"
-#~ msgstr "Un sol clic:"
-
-#~ msgid "Smallest"
-#~ msgstr "El més petit"
-
-#~ msgid "Smaller"
-#~ msgstr "Més petit"
-
-#~ msgid "Small"
-#~ msgstr "Petit"
-
-#~ msgid "Normal"
-#~ msgstr "Normal"
-
-#~ msgid "Large"
-#~ msgstr "Gran"
-
-#~ msgid "Larger"
-#~ msgstr "Més gran"
-
-#~ msgid "Largest"
-#~ msgstr "El més gran"
-
-#~ msgid "Sidebar Icon Size:"
-#~ msgstr "Mida de les icones de la barra lateral:"
-
-#~ msgid "Rows:"
-#~ msgstr "Files:"
-
-#~ msgid "Columns:"
-#~ msgstr "Columnes:"
-
-#~ msgid "Don't hide"
-#~ msgstr "No l'amagis"
-
-#~ msgid "Intelligent hide"
-#~ msgstr "Ocultació intel·ligent"
-
-#~ msgid "Auto hide"
-#~ msgstr "Ocultació automàtica"
-
-#~ msgid "Hide on maximize"
-#~ msgstr "Oculta en maximitzar"
-
-#~ msgid "Hide Mode:"
-#~ msgstr "Mode d'ocultació:"
-
-#~ msgid "Primary Monitor"
-#~ msgstr "Monitor principal"
-
-#~ msgid "Monitor %d"
-#~ msgstr "Monitor %d"
-
-#~ msgid "Monitor:"
-#~ msgstr "Monitor:"
-
-#~ msgid "Left"
-#~ msgstr "Esquerra"
-
-#~ msgid "Right"
-#~ msgstr "Dreta"
-
-#~ msgid "Top"
-#~ msgstr "Dalt"
-
-#~ msgid "Bottom"
-#~ msgstr "Baix"
-
-#~ msgid "Panel"
-#~ msgstr "Tauler"
-
-#~ msgid "Alignment:"
-#~ msgstr "Alineació:"
-
-#~ msgid "Item Alignment:"
-#~ msgstr "Alineació dels elements:"
-
-#~ msgid "Offset:"
-#~ msgstr "Desplaçament:"
-
-#~ msgid "Custom"
-#~ msgstr "Personalitzat"
-
-#~ msgid "Opacity:"
-#~ msgstr "Opacitat:"
-
-#~ msgid "Audible Bell:"
-#~ msgstr "Sons del teclat:"
-
-#~ msgid "Focused Windows:"
-#~ msgstr "Finestres actives:"
-
-#~ msgid "Unfocused Windows:"
-#~ msgstr "Finestres inactives:"
-
-#~ msgid "Name"
-#~ msgstr "Nom"
-
-#~ msgid "Shortcut"
-#~ msgstr "Drecera"
-
-#~ msgid "Command"
-#~ msgstr "Ordre"
-
-#~ msgid "Every field must be filled!"
-#~ msgstr "S'han d'omplir tots els camps"
-
-#~ msgid "Name:"
-#~ msgstr "Nom:"
-
-#~ msgid "Shortcut:"
-#~ msgstr "Drecera:"
-
-#~ msgid "Command:"
-#~ msgstr "Ordre:"
-
-#~ msgid "OS X"
-#~ msgstr "OS X"

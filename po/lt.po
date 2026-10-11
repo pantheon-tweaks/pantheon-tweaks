@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-03 10:23+0900\n"
+"POT-Creation-Date: 2026-10-11 16:28+0900\n"
 "PO-Revision-Date: 2017-07-24 17:58+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: \n"
@@ -15,21 +15,17 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "(n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:9
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:5
 #: src/MainWindow.vala:18 src/MainWindow.vala:22
 msgid "Pantheon Tweaks"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:3
-msgid "Customization Tool"
-msgstr ""
-
-#: data/pantheon-tweaks.desktop.in:4 data/pantheon-tweaks.metainfo.xml.in.in:10
+#: data/pantheon-tweaks.desktop.in:6 data/pantheon-tweaks.metainfo.xml.in.in:6
 #, fuzzy
 msgid "Tweak Pantheon settings"
 msgstr "Derinti elementary OS nustatymus"
 
-#: data/pantheon-tweaks.desktop.in:10
+#: data/pantheon-tweaks.desktop.in:8
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 
@@ -39,17 +35,15 @@ msgid ""
 "safely customise your desktop's appearance."
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:19
-#: data/pantheon-tweaks.metainfo.xml.in.in:23
+#: data/pantheon-tweaks.metainfo.xml.in.in:20
+msgid "Pantheon Tweaks Developers"
+msgstr ""
+
+#: data/pantheon-tweaks.metainfo.xml.in.in:33
+#: data/pantheon-tweaks.metainfo.xml.in.in:37
 #, fuzzy
 msgid "Appearance pane"
 msgstr "Išvaizda"
-
-#. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:37
-#: data/pantheon-tweaks.metainfo.xml.in.in:39
-msgid "Pantheon Tweaks Developers"
-msgstr ""
 
 #: src/MainWindow.vala:40
 #, c-format
@@ -414,370 +408,3 @@ msgstr ""
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr ""
-
-#, fuzzy
-#~ msgid "Appearance pane in the light mode"
-#~ msgstr "Išvaizda"
-
-#, fuzzy
-#~ msgid "Appearance pane in the dark mode"
-#~ msgstr "Išvaizda"
-
-#~ msgid "Tweaks"
-#~ msgstr "Papildomi nustatymai"
-
-#, fuzzy
-#~ msgid "Theme Settings"
-#~ msgstr "Derinti elementary OS nustatymus"
-
-#, fuzzy
-#~ msgid "Icons:"
-#~ msgstr "Piktogramų dydis:"
-
-#, fuzzy
-#~ msgid "Layout:"
-#~ msgstr "Tinkintas išdėstymas:"
-
-#, fuzzy
-#~ msgid "Add new window controls layout"
-#~ msgstr "Tinkintas langų valdiklių išdėstymas"
-
-#~ msgid "Animations"
-#~ msgstr "Animacijos"
-
-#, fuzzy
-#~ msgid "Close:"
-#~ msgstr "Tik užverti"
-
-#, fuzzy
-#~ msgid "Minimize:"
-#~ msgstr "Suskleisti kairėje"
-
-#, fuzzy
-#~ msgid "Workspace switch:"
-#~ msgstr "Darbo srities perjungimo trukmė:"
-
-#~ msgid "Shadows"
-#~ msgstr "Šešėliai"
-
-#~ msgid "Plank"
-#~ msgstr "Apatinis skydelis"
-
-#~ msgid "Slingshot"
-#~ msgstr "Leistukas"
-
-#~ msgid "Cerbere"
-#~ msgstr "Cerbere"
-
-#~ msgid "Disabled"
-#~ msgstr "Išjungta"
-
-#~ msgid "Watched Processes"
-#~ msgstr "Stebimi procesai"
-
-#~ msgid "Add..."
-#~ msgstr "Pridėti..."
-
-#~ msgid "Remove"
-#~ msgstr "Šalinti"
-
-#~ msgid "Animations:"
-#~ msgstr "Animacijos:"
-
-#~ msgid "If the animations play at all"
-#~ msgstr "Ar animacijos iš viso bus rodomos"
-
-#~ msgid "Open Duration:"
-#~ msgstr "Atvėrimo trukmė:"
-
-#~ msgid "Plays when an application is opened"
-#~ msgstr "Rodoma, kai programa yra atveriama"
-
-#~ msgid "Close Duration:"
-#~ msgstr "Užvėrimo trukmė"
-
-#~ msgid "Plays when an application is closed"
-#~ msgstr "Rodoma, kai programa yra užveriama"
-
-#~ msgid "Snap Duration:"
-#~ msgstr "Pritraukimo trukmė:"
-
-#~ msgid "Plays when an application is snapped to the side"
-#~ msgstr "Rodoma, kai programa yra pritraukiama prie šono"
-
-#~ msgid "Minimize Duration:"
-#~ msgstr "Suskleidimo trukmė:"
-
-#~ msgid "Plays when an application is minimized"
-#~ msgstr "Rodoma, kai programa yra suskleidžiama"
-
-#~ msgid "Plays when a workspace switch is initiated"
-#~ msgstr "Rodoma, kai yra inicijuojamas darbo srities perjungimas"
-
-#~ msgid "Single Click:"
-#~ msgstr "Vienkartis spustelėjimas:"
-
-#~ msgid "If set off, files will use 'normal' double-click behavior"
-#~ msgstr ""
-#~ "Jeigu išjungta, failai naudos \"normalią\" dvikarčio spustelėjimo elgseną"
-
-#~ msgid "For date accessed, modified, etc."
-#~ msgstr "Prieigos, keitimo ir kt. datoms"
-
-#~ msgid "Smallest"
-#~ msgstr "Mažiausias"
-
-#~ msgid "Smaller"
-#~ msgstr "Mažesnis"
-
-#~ msgid "Small"
-#~ msgstr "Mažas"
-
-#~ msgid "Normal"
-#~ msgstr "Normalus"
-
-#~ msgid "Large"
-#~ msgstr "Didelis"
-
-#~ msgid "Larger"
-#~ msgstr "Didesnis"
-
-#~ msgid "Largest"
-#~ msgstr "Didžiausias"
-
-#~ msgid "Sidebar Icon Size:"
-#~ msgstr "Šoninės juostos piktogramų dydis:"
-
-#~ msgid "Size of the icons in the sidebar"
-#~ msgstr "Šoninėje juostoje esančių piktogramų dydis"
-
-#~ msgid "Used by default by most applications"
-#~ msgstr "Pagal numatymą naudojamas daugumos programų"
-
-#~ msgid "Used when displaying documents, if no other font was chosen"
-#~ msgstr ""
-#~ "Rodomas, atvaizduojant dokumentus, jei nepasirinktas joks kitas šriftas"
-
-#~ msgid "Used in the terminal, for code, and sometimes for plain text"
-#~ msgstr "Naudojamas kodui terminale ir, kartais, grynajam tekstui"
-
-#~ msgid "Used to display window titles"
-#~ msgstr "Naudojamas atvaizduoti langų pavadinimus"
-
-#~ msgid "Rows:"
-#~ msgstr "Eilutės:"
-
-#~ msgid "The number of rows displayed in Slingshot"
-#~ msgstr "Leistuke rodomų eilučių skaičius"
-
-#~ msgid "Columns:"
-#~ msgstr "Stulpeliai:"
-
-#~ msgid "The number of columns displayed in Slingshot"
-#~ msgstr "Leistuke rodomų stulpelių skaičius"
-
-#~ msgid "Current Workspace Only"
-#~ msgstr "Tik esama darbo sritis"
-
-#~ msgid "Show only windows on the current workspace"
-#~ msgstr "Rodyti tik esamos darbo srities langus"
-
-#~ msgid "Will still show pinned items on different workspaces"
-#~ msgstr "Vis tik rodys prisegtus elementus įvairiose darbo srityse"
-
-#~ msgid "Lock Items:"
-#~ msgstr "Užrakinti elementus:"
-
-#~ msgid "Whether to prevent drag'n'drop actions and lock items on the dock"
-#~ msgstr "Ar neleisti vilkimo veiksmų ir užrakinti doke esančius elementus"
-
-#~ msgid "The size of each icon in the plank"
-#~ msgstr "Kiekvienos apatinio skydelio piktogramos dydis"
-
-#~ msgid "Don't hide"
-#~ msgstr "Neslėpti"
-
-#~ msgid "Intelligent hide"
-#~ msgstr "Išmaniai slėpti"
-
-#~ msgid "Auto hide"
-#~ msgstr "Automatiškai slėpti"
-
-#~ msgid "Hide on maximize"
-#~ msgstr "Slėpti išskleidus langą"
-
-#~ msgid "Hide Mode:"
-#~ msgstr "Slėpimo veiksena:"
-
-#~ msgid "Plank's hide mode"
-#~ msgstr "Apatinio skydelio slėpimo veiksena"
-
-#~ msgid "Hide Delay (ms):"
-#~ msgstr "Slėpimo delsa (ms):"
-
-#~ msgid "Time to wait before unhiding the dock"
-#~ msgstr "Kiek laiko laukti prieš nustojant slėpti skydelį"
-
-#~ msgid "Theme:"
-#~ msgstr "Tema:"
-
-#~ msgid "Plank's theme for the dock"
-#~ msgstr "Apatinio skydelio doko tema"
-
-#~ msgid "Primary Monitor"
-#~ msgstr "Pirminis monitorius"
-
-#~ msgid "Monitor %d"
-#~ msgstr "Monitorius %d"
-
-#~ msgid "Monitor:"
-#~ msgstr "Monitorius:"
-
-#~ msgid "The monitor that Plank is displayed on"
-#~ msgstr "Monitorius, kuriame yra rodomas apatinis skydelis"
-
-#~ msgid "Left"
-#~ msgstr "Kairėje"
-
-#~ msgid "Right"
-#~ msgstr "Dešinėje"
-
-#~ msgid "Top"
-#~ msgstr "Viršuje"
-
-#~ msgid "Bottom"
-#~ msgstr "Apačioje"
-
-#~ msgid "Screen Position:"
-#~ msgstr "Vieta ekrane:"
-
-#~ msgid "Where on the screen Plank is displayed"
-#~ msgstr "Kur ekrane yra rodomas apatinis skydelis"
-
-#~ msgid "Panel"
-#~ msgstr "Skydelis"
-
-#~ msgid "Centered"
-#~ msgstr "Centruotas"
-
-#~ msgid "Alignment:"
-#~ msgstr "Lygiavimas:"
-
-#~ msgid "The alignment for the dock on the monitor's edge"
-#~ msgstr "Doko lygiavimas monitoriaus krašte"
-
-#~ msgid "Item Alignment:"
-#~ msgstr "Elementų lygiavimas:"
-
-#~ msgid "The alignment of the items in this dock if panel-mode is used"
-#~ msgstr ""
-#~ "Šiame doke esančių elementų lygiavimas, jei yra naudojama skydelio "
-#~ "veiksena"
-
-#~ msgid "Offset:"
-#~ msgstr "Poslinkis:"
-
-#~ msgid "The offset (in percent) from the alignment point to shift Plank"
-#~ msgstr ""
-#~ "Apatinio skydelio sutraukimo poslinkis (procentine dalimi) nuo lygiavimo "
-#~ "taško"
-
-#~ msgid "Custom"
-#~ msgstr "Tinkintas"
-
-#~ msgid "Opacity:"
-#~ msgstr "Nepermatomumas:"
-
-#~ msgid "How transparent the background of the terminal is"
-#~ msgstr "Kiek bus permatomas terminalo fonas"
-
-#~ msgid "A set of settings for terminal palette and background color"
-#~ msgstr "Terminalo paletės ir fono spalvos nustatymų rinkinys"
-
-#~ msgid "Prefer Dark Theme:"
-#~ msgstr "Teikti pirmenybę tamsiai temai:"
-
-#~ msgid "GTK+ windows will now prefer the dark GTK+ theme"
-#~ msgstr "Dabar, GTK+ langai teiks pirmenybę tamsiai GTK+ temai"
-
-#~ msgid ""
-#~ "Some applications will not react well with this enabled and can look "
-#~ "terrible"
-#~ msgstr ""
-#~ "Kai kurios programos nereaguos į tai tinkamai ir gali atrodyti siaubingai"
-
-#~ msgid "Metacity Theme:"
-#~ msgstr "Metacity tema:"
-
-#~ msgid "Used to render windows that do not use GTK+"
-#~ msgstr "Naudojama atvaizduoti langus, kurie nenaudoja GTK+"
-
-#~ msgid "Used to render GTK+ windows like Switchboard"
-#~ msgstr "Naudojama atvaizduoti GTK+ langus, tokius kaip Switchboard"
-
-#~ msgid "Used to theme the icon set, including application icons"
-#~ msgstr ""
-#~ "Naudojama piktogramų rinkinio apipavidalinimui, įskaitant programų "
-#~ "piktogramas"
-
-#~ msgid "Used to theme the cursor"
-#~ msgstr "Naudojama žymeklio apipavidalinimui"
-
-#~ msgid ""
-#~ "Controls located at the top of the window for close, minimize, and "
-#~ "maximize"
-#~ msgstr ""
-#~ "Lango viršuje esantys užvėrimo, suskleidimo ir išskleidimo valdikliai"
-
-#~ msgid "May break window controls! May stop working with updates to system!"
-#~ msgstr ""
-#~ "Gali sugadinti langų valdiklius! Gali nustoti veikti po sistemos "
-#~ "atnaujinimo!"
-
-#~ msgid "Audible Bell:"
-#~ msgstr "Garsinis signalas"
-
-#~ msgid "Sound that plays when an error has been made"
-#~ msgstr "Garsas, kuris bus grojamas padarius klaidą"
-
-#~ msgid "Focused Windows:"
-#~ msgstr "Fokusuoti langai:"
-
-#~ msgid "Shadow beneath windows that you have currently selected"
-#~ msgstr "Šešėliai po esamu metu pasirinktais langais"
-
-#~ msgid "This may not actually do anything"
-#~ msgstr "Tai, iš tikrųjų, gali nieko nedaryti"
-
-#~ msgid "Unfocused Windows:"
-#~ msgstr "Nefokusuoti langai:"
-
-#~ msgid "Shadow beneath windows that you do not have selected"
-#~ msgstr "Šešėliai po langais, kurių nesate pasirinkę"
-
-#~ msgid "Name"
-#~ msgstr "Pavadinimas"
-
-#~ msgid "Shortcut"
-#~ msgstr "Susiejimas"
-
-#~ msgid "Command"
-#~ msgstr "Komanda"
-
-#~ msgid "Every field must be filled!"
-#~ msgstr "Visi laukai privalo būti užpildyti!"
-
-#~ msgid "Name:"
-#~ msgstr "Pavadinimas:"
-
-#~ msgid "Shortcut:"
-#~ msgstr "Susiejimas:"
-
-#~ msgid "Command:"
-#~ msgstr "Komanda:"
-
-#~ msgid "OS X"
-#~ msgstr "OS X"
-
-#~ msgid "Revert to default setting"
-#~ msgstr "Sugrąžinti į numatytąjį nustatymą"

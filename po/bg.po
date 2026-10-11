@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-03 10:23+0900\n"
+"POT-Creation-Date: 2026-10-11 16:28+0900\n"
 "PO-Revision-Date: 2014-12-12 15:30+0000\n"
 "Last-Translator: ITPROJECTS <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -18,21 +18,17 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-12-13 08:17+0000\n"
 "X-Generator: Launchpad (build 17286)\n"
 
-#: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:9
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:5
 #: src/MainWindow.vala:18 src/MainWindow.vala:22
 msgid "Pantheon Tweaks"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:3
-msgid "Customization Tool"
-msgstr ""
-
-#: data/pantheon-tweaks.desktop.in:4 data/pantheon-tweaks.metainfo.xml.in.in:10
+#: data/pantheon-tweaks.desktop.in:6 data/pantheon-tweaks.metainfo.xml.in.in:6
 #, fuzzy
 msgid "Tweak Pantheon settings"
 msgstr "Подобри настройките на Елементаи ОС"
 
-#: data/pantheon-tweaks.desktop.in:10
+#: data/pantheon-tweaks.desktop.in:8
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 
@@ -42,17 +38,15 @@ msgid ""
 "safely customise your desktop's appearance."
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:19
-#: data/pantheon-tweaks.metainfo.xml.in.in:23
+#: data/pantheon-tweaks.metainfo.xml.in.in:20
+msgid "Pantheon Tweaks Developers"
+msgstr ""
+
+#: data/pantheon-tweaks.metainfo.xml.in.in:33
+#: data/pantheon-tweaks.metainfo.xml.in.in:37
 #, fuzzy
 msgid "Appearance pane"
 msgstr "Външен вид"
-
-#. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:37
-#: data/pantheon-tweaks.metainfo.xml.in.in:39
-msgid "Pantheon Tweaks Developers"
-msgstr ""
 
 #: src/MainWindow.vala:40
 #, c-format
@@ -417,371 +411,3 @@ msgstr ""
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr ""
-
-#, fuzzy
-#~ msgid "Appearance pane in the light mode"
-#~ msgstr "Външен вид"
-
-#, fuzzy
-#~ msgid "Appearance pane in the dark mode"
-#~ msgstr "Външен вид"
-
-#~ msgid "Tweaks"
-#~ msgstr "Подобрения"
-
-#, fuzzy
-#~ msgid "Theme Settings"
-#~ msgstr "Подобри настройките на Елементаи ОС"
-
-#, fuzzy
-#~ msgid "Icons:"
-#~ msgstr "Размер на иконите:"
-
-#, fuzzy
-#~ msgid "Layout:"
-#~ msgstr "Персонализирано разполагане"
-
-#, fuzzy
-#~ msgid "Add new window controls layout"
-#~ msgstr "Лично прозречно-оформлително управление"
-
-#~ msgid "Animations"
-#~ msgstr "Анимации"
-
-#, fuzzy
-#~ msgid "Close:"
-#~ msgstr "Само Затвори"
-
-#, fuzzy
-#~ msgid "Minimize:"
-#~ msgstr "Минимизиране вляво"
-
-#, fuzzy
-#~ msgid "Workspace switch:"
-#~ msgstr "Продължителност на смяна на работен плот:"
-
-#~ msgid "Shadows"
-#~ msgstr "Сенки"
-
-#~ msgid "Plank"
-#~ msgstr "Планк"
-
-#~ msgid "Slingshot"
-#~ msgstr "Слингшот"
-
-#~ msgid "Cerbere"
-#~ msgstr "Цербер"
-
-#~ msgid "Disabled"
-#~ msgstr "Изключен"
-
-#~ msgid "Watched Processes"
-#~ msgstr "Наблюдавани Процеси"
-
-#~ msgid "Add..."
-#~ msgstr "Добавяне..."
-
-#~ msgid "Remove"
-#~ msgstr "Премахване"
-
-#~ msgid "Animations:"
-#~ msgstr "Анимации:"
-
-#~ msgid "If the animations play at all"
-#~ msgstr "Ако въобще анимациите действат"
-
-#~ msgid "Open Duration:"
-#~ msgstr "Продължителност на отваряне:"
-
-#~ msgid "Plays when an application is opened"
-#~ msgstr "Изпълнява се когато се отвори приложението"
-
-#~ msgid "Close Duration:"
-#~ msgstr "Продължителност на затваряне:"
-
-#~ msgid "Plays when an application is closed"
-#~ msgstr "Изпълнява се когато се затвори приложението"
-
-#~ msgid "Snap Duration:"
-#~ msgstr "Продължителност на преоразмеряване:"
-
-#~ msgid "Plays when an application is snapped to the side"
-#~ msgstr "Изпълнява се когато приложението е отделено настрана"
-
-#~ msgid "Minimize Duration:"
-#~ msgstr "Продължителност на минимизиране:"
-
-#~ msgid "Plays when an application is minimized"
-#~ msgstr "Изпълнява се когато приложението е намалено"
-
-#~ msgid "Plays when a workspace switch is initiated"
-#~ msgstr "Изпълнява се когато работният плот е подменен"
-
-#~ msgid "Single Click:"
-#~ msgstr "Отваряне при едно натискане:"
-
-#~ msgid "If set off, files will use 'normal' double-click behavior"
-#~ msgstr ""
-#~ "Ако е изключено, файловете ще ползват \"обикновенното\" поведение при "
-#~ "двойно щракване"
-
-#~ msgid "For date accessed, modified, etc."
-#~ msgstr "За дата ползван, променен ил др."
-
-#~ msgid "Smallest"
-#~ msgstr "Най-малък"
-
-#~ msgid "Smaller"
-#~ msgstr "По-малък"
-
-#~ msgid "Small"
-#~ msgstr "Малък"
-
-#~ msgid "Normal"
-#~ msgstr "Нормален"
-
-#~ msgid "Large"
-#~ msgstr "Голям"
-
-#~ msgid "Larger"
-#~ msgstr "По-голям"
-
-#~ msgid "Largest"
-#~ msgstr "Най-голям"
-
-#~ msgid "Sidebar Icon Size:"
-#~ msgstr "Размер на иконите в страничното поле:"
-
-#~ msgid "Size of the icons in the sidebar"
-#~ msgstr "Размер на иконите н страничната лента"
-
-#~ msgid "Used by default by most applications"
-#~ msgstr "Ползвано по подразбиране от повечето приложения"
-
-#~ msgid "Used when displaying documents, if no other font was chosen"
-#~ msgstr "Ползвано когато се показват документи, ако няма друг избран шрифт"
-
-#~ msgid "Used in the terminal, for code, and sometimes for plain text"
-#~ msgstr "Ползвано в терминала, за код, и понякога за прост текст"
-
-#~ msgid "Used to display window titles"
-#~ msgstr "Ползвано при показването на прозоречни заглавия"
-
-#~ msgid "Rows:"
-#~ msgstr "Брой редове:"
-
-#~ msgid "The number of rows displayed in Slingshot"
-#~ msgstr "Броят на редовете показвани в Слингшот"
-
-#~ msgid "Columns:"
-#~ msgstr "Брой колони:"
-
-#~ msgid "The number of columns displayed in Slingshot"
-#~ msgstr "Броят на колонките показвани в Слингшот"
-
-#~ msgid "Current Workspace Only"
-#~ msgstr "Само Сегашният Плот"
-
-#~ msgid "Show only windows on the current workspace"
-#~ msgstr "Покажи само прозорци на сегашния работен плот"
-
-#~ msgid "Will still show pinned items on different workspaces"
-#~ msgstr "Все още ще показва заковани елементи на различните работни плотове"
-
-#~ msgid "Lock Items:"
-#~ msgstr "Заключени Части:"
-
-#~ msgid "Whether to prevent drag'n'drop actions and lock items on the dock"
-#~ msgstr ""
-#~ "Дали да се предотвратят придърпващите действия и заключвани елементи в "
-#~ "панела"
-
-#~ msgid "The size of each icon in the plank"
-#~ msgstr "Размера на всяка икона в панела"
-
-#~ msgid "Don't hide"
-#~ msgstr "Да не се скрива"
-
-#~ msgid "Intelligent hide"
-#~ msgstr "Интелигентно скриване"
-
-#~ msgid "Auto hide"
-#~ msgstr "Автоматично скриване"
-
-#~ msgid "Hide on maximize"
-#~ msgstr "Скриване при цял екран"
-
-#~ msgid "Hide Mode:"
-#~ msgstr "Режим на скриване:"
-
-#~ msgid "Plank's hide mode"
-#~ msgstr "Скрития режим на Планк"
-
-#~ msgid "Hide Delay (ms):"
-#~ msgstr "Забавяне при криенето (милисек.):"
-
-#~ msgid "Time to wait before unhiding the dock"
-#~ msgstr "Време за чакане преди да се покаже панела"
-
-#~ msgid "Theme:"
-#~ msgstr "Тема:"
-
-#~ msgid "Plank's theme for the dock"
-#~ msgstr "Темата на Планк за панела"
-
-#~ msgid "Primary Monitor"
-#~ msgstr "Главен монитор"
-
-#~ msgid "Monitor %d"
-#~ msgstr "Монитор %d"
-
-#~ msgid "Monitor:"
-#~ msgstr "Монитор:"
-
-#~ msgid "The monitor that Plank is displayed on"
-#~ msgstr "Екрана на който планк да се вижда"
-
-#~ msgid "Left"
-#~ msgstr "Отляво"
-
-#~ msgid "Right"
-#~ msgstr "Отдясно"
-
-#~ msgid "Top"
-#~ msgstr "Отгоре"
-
-#~ msgid "Bottom"
-#~ msgstr "Отдолу"
-
-#~ msgid "Screen Position:"
-#~ msgstr "Екранно Положение:"
-
-#~ msgid "Where on the screen Plank is displayed"
-#~ msgstr "Къде на екрана Планк ще се вижда"
-
-#~ msgid "Panel"
-#~ msgstr "Панел"
-
-#~ msgid "Centered"
-#~ msgstr "По средата"
-
-#~ msgid "Alignment:"
-#~ msgstr "Подравняване:"
-
-#~ msgid "The alignment for the dock on the monitor's edge"
-#~ msgstr "Подравняването на панела до ръба на монитора"
-
-#~ msgid "Item Alignment:"
-#~ msgstr "Подредба на елементите:"
-
-#~ msgid "The alignment of the items in this dock if panel-mode is used"
-#~ msgstr ""
-#~ "Подравняването на елементи в този док ако панеления режим е в действие"
-
-#~ msgid "Offset:"
-#~ msgstr "Отместване:"
-
-#~ msgid "The offset (in percent) from the alignment point to shift Plank"
-#~ msgstr ""
-#~ "Отместването (в стотни/проценти) от подравняващата точка за преместване "
-#~ "на Планк"
-
-#~ msgid "Custom"
-#~ msgstr "Персонализиран"
-
-#~ msgid "Opacity:"
-#~ msgstr "Прозрачност"
-
-#~ msgid "How transparent the background of the terminal is"
-#~ msgstr "Колко да е прозрачен фона на терминала"
-
-#~ msgid "A set of settings for terminal palette and background color"
-#~ msgstr "Набор настройки за терминалната палитра и фонов цвят"
-
-#~ msgid "Prefer Dark Theme:"
-#~ msgstr "Чисто Тъмна Тема:"
-
-#~ msgid "GTK+ windows will now prefer the dark GTK+ theme"
-#~ msgstr "ГТК+ прозорци отсега ще предпочитат черната ГТК+ тема"
-
-#~ msgid ""
-#~ "Some applications will not react well with this enabled and can look "
-#~ "terrible"
-#~ msgstr ""
-#~ "Някои приложения нама да отвърнат добре с тази настройка в действие и ще "
-#~ "изглеждат ужасно"
-
-#~ msgid "Metacity Theme:"
-#~ msgstr "Тема за Метасити:"
-
-#~ msgid "Used to render windows that do not use GTK+"
-#~ msgstr "Ползвано при начертаването на прозорци които не използват ГТК+"
-
-#~ msgid "Used to render GTK+ windows like Switchboard"
-#~ msgstr "Ползвано при начертаването на прозорци като Суичбоард"
-
-#~ msgid "Used to theme the icon set, including application icons"
-#~ msgstr "Ползвано при оцветяването на иконите, включая програмните икони"
-
-#~ msgid "Used to theme the cursor"
-#~ msgstr "Ползвано при оцветяването на паказателя"
-
-#~ msgid ""
-#~ "Controls located at the top of the window for close, minimize, and "
-#~ "maximize"
-#~ msgstr ""
-#~ "Управни копчета, намиращи се най-отгоре на прозореца за затваряне, "
-#~ "намаляне или увеличаване"
-
-#~ msgid "May break window controls! May stop working with updates to system!"
-#~ msgstr ""
-#~ "Може да съсипе управните копчета! Може да спре да работи пи обновление на "
-#~ "системата!"
-
-#~ msgid "Audible Bell:"
-#~ msgstr "Чуваем Звън:"
-
-#~ msgid "Sound that plays when an error has been made"
-#~ msgstr "Звук, който се чува при грешка"
-
-#~ msgid "Focused Windows:"
-#~ msgstr "Съсредоточен Прозорец:"
-
-#~ msgid "Shadow beneath windows that you have currently selected"
-#~ msgstr "Сянката под текущо избраният прозорец"
-
-#~ msgid "This may not actually do anything"
-#~ msgstr "Това може и нищо да не направи"
-
-#~ msgid "Unfocused Windows:"
-#~ msgstr "Несъсредоточен Прозорец:"
-
-#~ msgid "Shadow beneath windows that you do not have selected"
-#~ msgstr "Сянката под прозорец, който не е избран"
-
-#~ msgid "Name"
-#~ msgstr "Име"
-
-#~ msgid "Shortcut"
-#~ msgstr "Бърз клавиш"
-
-#~ msgid "Command"
-#~ msgstr "Команда"
-
-#~ msgid "Every field must be filled!"
-#~ msgstr "Всички полета трябва да са попълнени!"
-
-#~ msgid "Name:"
-#~ msgstr "Име:"
-
-#~ msgid "Shortcut:"
-#~ msgstr "Бърз клавиш:"
-
-#~ msgid "Command:"
-#~ msgstr "Команда:"
-
-#~ msgid "OS X"
-#~ msgstr "ОС Х"
-
-#~ msgid "Revert to default setting"
-#~ msgstr "Върни настройката по подразбиране"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pantheon-tweaks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-03 10:23+0900\n"
+"POT-Creation-Date: 2026-10-11 16:28+0900\n"
 "PO-Revision-Date: 2015-10-24 12:37+0000\n"
 "Last-Translator: Eltikin <eltikinuyghur@hotmail.com>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -18,20 +18,16 @@ msgstr ""
 "X-Launchpad-Export-Date: 2015-10-25 05:45+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
 
-#: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:9
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:5
 #: src/MainWindow.vala:18 src/MainWindow.vala:22
 msgid "Pantheon Tweaks"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:3
-msgid "Customization Tool"
-msgstr ""
-
-#: data/pantheon-tweaks.desktop.in:4 data/pantheon-tweaks.metainfo.xml.in.in:10
+#: data/pantheon-tweaks.desktop.in:6 data/pantheon-tweaks.metainfo.xml.in.in:6
 msgid "Tweak Pantheon settings"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:10
+#: data/pantheon-tweaks.desktop.in:8
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 
@@ -41,17 +37,15 @@ msgid ""
 "safely customise your desktop's appearance."
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:19
-#: data/pantheon-tweaks.metainfo.xml.in.in:23
+#: data/pantheon-tweaks.metainfo.xml.in.in:20
+msgid "Pantheon Tweaks Developers"
+msgstr ""
+
+#: data/pantheon-tweaks.metainfo.xml.in.in:33
+#: data/pantheon-tweaks.metainfo.xml.in.in:37
 #, fuzzy
 msgid "Appearance pane"
 msgstr "قىياپىتى"
-
-#. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:37
-#: data/pantheon-tweaks.metainfo.xml.in.in:39
-msgid "Pantheon Tweaks Developers"
-msgstr ""
 
 #: src/MainWindow.vala:40
 #, c-format
@@ -403,104 +397,3 @@ msgstr ""
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr ""
-
-#, fuzzy
-#~ msgid "Appearance pane in the light mode"
-#~ msgstr "قىياپىتى"
-
-#, fuzzy
-#~ msgid "Appearance pane in the dark mode"
-#~ msgstr "قىياپىتى"
-
-#~ msgid "Animations"
-#~ msgstr "جانلاندۇرۇم"
-
-#~ msgid "Shadows"
-#~ msgstr "سايە"
-
-#~ msgid "Slingshot"
-#~ msgstr "Slingshot"
-
-#~ msgid "Disabled"
-#~ msgstr "چەكلەنگەن"
-
-#~ msgid "Add..."
-#~ msgstr "قوش…"
-
-#~ msgid "Remove"
-#~ msgstr "ئۆچۈر"
-
-#~ msgid "Smallest"
-#~ msgstr "ئەڭ كىچىك"
-
-#~ msgid "Smaller"
-#~ msgstr "كىچىكرەك"
-
-#~ msgid "Small"
-#~ msgstr "كىچىك"
-
-#~ msgid "Normal"
-#~ msgstr "نورمال"
-
-#~ msgid "Large"
-#~ msgstr "چوڭ"
-
-#~ msgid "Larger"
-#~ msgstr "چوڭراق"
-
-#~ msgid "Rows:"
-#~ msgstr "قۇر:"
-
-#~ msgid "Columns:"
-#~ msgstr "ئىستون:"
-
-#~ msgid "Auto hide"
-#~ msgstr "ئۆزلۈكىدىن يوشۇر"
-
-#~ msgid "Left"
-#~ msgstr "سول"
-
-#~ msgid "Right"
-#~ msgstr "ئوڭ"
-
-#~ msgid "Top"
-#~ msgstr "ئۈستى"
-
-#~ msgid "Bottom"
-#~ msgstr "ئاستى"
-
-#~ msgid "Panel"
-#~ msgstr "تاختا"
-
-#~ msgid "Centered"
-#~ msgstr "ئوتتۇرىدا"
-
-#~ msgid "Alignment:"
-#~ msgstr "توغرىلاش:"
-
-#~ msgid "Offset:"
-#~ msgstr "ئېغىش:"
-
-#~ msgid "Custom"
-#~ msgstr "ئىختىيارى…"
-
-#~ msgid "Opacity:"
-#~ msgstr "غۇۋالىقى:"
-
-#~ msgid "Name"
-#~ msgstr "ئاتى"
-
-#~ msgid "Shortcut"
-#~ msgstr "تېزلەتمە"
-
-#~ msgid "Command"
-#~ msgstr "بۇيرۇق"
-
-#~ msgid "Name:"
-#~ msgstr "ئاتى:"
-
-#~ msgid "Shortcut:"
-#~ msgstr "تېزلەتمە:"
-
-#~ msgid "Command:"
-#~ msgstr "بۇيرۇق:"

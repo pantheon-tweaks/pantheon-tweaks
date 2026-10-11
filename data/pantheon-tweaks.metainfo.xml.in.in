@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>io.github.pantheon_tweaks.pantheon-tweaks</id>
-  <launchable type="desktop-id">io.github.pantheon_tweaks.pantheon-tweaks.desktop</launchable>
-  <translation type="gettext">pantheon-tweaks</translation>
-  <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-3.0-or-later</project_license>
 
   <name>Pantheon Tweaks</name>
   <summary>Tweak Pantheon settings</summary>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
   <description>
     <p>
-      A system customization app for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance.
+      A system customization app for the Pantheon Desktop that lets you easily and safely customise your desktop&apos;s appearance.
     </p>
   </description>
 
+  <content_rating type="oars-1.1" />
+
+  <developer id="io.github.pantheon_tweaks">
+    <name>Pantheon Tweaks Developers</name>
+  </developer>
+
+  <url type="homepage">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
+  <url type="bugtracker">https://github.com/pantheon-tweaks/pantheon-tweaks/issues</url>
+  <url type="help">https://github.com/pantheon-tweaks/pantheon-tweaks/discussions</url>
+  <url type="vcs-browser">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
+  <url type="translate">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
+
+  <launchable type="desktop-id">io.github.pantheon_tweaks.pantheon-tweaks.desktop</launchable>
+  <translation type="gettext">pantheon-tweaks</translation>
   <screenshots>
     <screenshot type="default" environment="pantheon">
       <caption>Appearance pane</caption>
@@ -24,18 +38,6 @@
       <image>https://raw.githubusercontent.com/pantheon-tweaks/pantheon-tweaks/@VERSION@/data/screenshot-dark.png</image>
     </screenshot>
   </screenshots>
-
-  <content_rating type="oars-1.1" />
-
-  <url type="homepage">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
-  <url type="bugtracker">https://github.com/pantheon-tweaks/pantheon-tweaks/issues</url>
-  <url type="help">https://github.com/pantheon-tweaks/pantheon-tweaks/discussions</url>
-  <url type="vcs-browser">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
-  <url type="translate">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
-
-  <developer id="io.github.pantheon_tweaks">
-    <name>Pantheon Tweaks Developers</name>
-  </developer>
 
   <!--
     We intentionally don't support translation for the descriptions in release notes
@@ -334,6 +336,5 @@
         </ul>
       </description>
     </release>
-
   </releases>
 </component>

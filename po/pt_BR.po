@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-03 10:23+0900\n"
+"POT-Creation-Date: 2026-10-11 16:28+0900\n"
 "PO-Revision-Date: 2018-10-14 23:20-0300\n"
 "Last-Translator: Helder Bertoldo <helder.bertoldo@gmail.com>\n"
 "Language-Team: Portuguese Brazilian <LL@li.org>\n"
@@ -17,21 +17,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:9
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:5
 #: src/MainWindow.vala:18 src/MainWindow.vala:22
 msgid "Pantheon Tweaks"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:3
-msgid "Customization Tool"
-msgstr ""
-
-#: data/pantheon-tweaks.desktop.in:4 data/pantheon-tweaks.metainfo.xml.in.in:10
+#: data/pantheon-tweaks.desktop.in:6 data/pantheon-tweaks.metainfo.xml.in.in:6
 #, fuzzy
 msgid "Tweak Pantheon settings"
 msgstr "Ajuste as configurações do elementary OS"
 
-#: data/pantheon-tweaks.desktop.in:10
+#: data/pantheon-tweaks.desktop.in:8
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 
@@ -41,17 +37,15 @@ msgid ""
 "safely customise your desktop's appearance."
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:19
-#: data/pantheon-tweaks.metainfo.xml.in.in:23
+#: data/pantheon-tweaks.metainfo.xml.in.in:20
+msgid "Pantheon Tweaks Developers"
+msgstr ""
+
+#: data/pantheon-tweaks.metainfo.xml.in.in:33
+#: data/pantheon-tweaks.metainfo.xml.in.in:37
 #, fuzzy
 msgid "Appearance pane"
 msgstr "Aparência"
-
-#. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:37
-#: data/pantheon-tweaks.metainfo.xml.in.in:39
-msgid "Pantheon Tweaks Developers"
-msgstr ""
 
 #: src/MainWindow.vala:40
 #, c-format
@@ -421,205 +415,3 @@ msgstr ""
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr ""
-
-#, fuzzy
-#~ msgid "Appearance pane in the light mode"
-#~ msgstr "Aparência"
-
-#, fuzzy
-#~ msgid "Appearance pane in the dark mode"
-#~ msgstr "Aparência"
-
-#~ msgid "Tweaks"
-#~ msgstr "Ajustes"
-
-#~ msgid "Theme Settings"
-#~ msgstr "Configurações de Tema"
-
-#, fuzzy
-#~ msgid "Icons:"
-#~ msgstr "Ícones"
-
-#, fuzzy
-#~ msgid "Layout:"
-#~ msgstr "Layout"
-
-#~ msgid "Sound Indicator"
-#~ msgstr "Indicador de Som"
-
-#, fuzzy
-#~ msgid "Update German translation (thanks to @skalski)"
-#~ msgstr "Habilitar animações"
-
-#, fuzzy
-#~ msgid "Update Italian translation (thanks to @albanobattistella)"
-#~ msgstr "Habilitar animações"
-
-#, fuzzy
-#~ msgid "Update Russian translation (thanks to @lenemter)"
-#~ msgstr "Habilitar animações"
-
-#, fuzzy
-#~ msgid "Update Japanese translation"
-#~ msgstr "Habilitar animações"
-
-#, fuzzy
-#~ msgid "Update German translation (thanks to @uwe-ss)"
-#~ msgstr "Habilitar animações"
-
-#, fuzzy
-#~ msgid "Update Hungarian translation (thanks to @TomiOhl)"
-#~ msgstr "Habilitar animações"
-
-#, fuzzy
-#~ msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
-#~ msgstr "Habilitar animações"
-
-#, fuzzy
-#~ msgid "Update French translation (thanks to @roxfr)"
-#~ msgstr "Habilitar animações"
-
-#, fuzzy
-#~ msgid "Update translations"
-#~ msgstr "Habilitar animações"
-
-#, fuzzy
-#~ msgid "Background color:"
-#~ msgstr "Cor de fundo"
-
-#~ msgid "Animations"
-#~ msgstr "Animações"
-
-#, fuzzy
-#~ msgid "Open:"
-#~ msgstr "Abrir"
-
-#, fuzzy
-#~ msgid "Close:"
-#~ msgstr "Fechar"
-
-#, fuzzy
-#~ msgid "Snap:"
-#~ msgstr "Encaixar"
-
-#, fuzzy
-#~ msgid "Minimize:"
-#~ msgstr "Minimizar"
-
-#, fuzzy
-#~ msgid "Workspace switch:"
-#~ msgstr "Alternar o Espaço de Trabalho"
-
-#~ msgid "Videos"
-#~ msgstr "Vídeos"
-
-#, fuzzy
-#~ msgid "Stay on top while playing:"
-#~ msgstr "Ficar no topo enquanto reproduz"
-
-#, fuzzy
-#~ msgid "Move window from video canvas:"
-#~ msgstr "Mover janela da tela de vídeo"
-
-#, fuzzy
-#~ msgid "Don't instantly start video playback:"
-#~ msgstr "Não inicie instantaneamente a reprodução de vídeo"
-
-#~ msgid "OS X"
-#~ msgstr "OS X"
-
-#~ msgid "Custom"
-#~ msgstr "Personalizado"
-
-#~ msgid "Disabled"
-#~ msgstr "Desabilitar"
-
-#~ msgid "Duration"
-#~ msgstr "Duração"
-
-#~ msgid "Launcher"
-#~ msgstr "Lançador"
-
-#~ msgid "Rows"
-#~ msgstr "Linhas"
-
-#~ msgid "Columns"
-#~ msgstr "Colunas"
-
-#~ msgid "Show category switch"
-#~ msgstr "Exibir alternador de categoria"
-
-#~ msgid "Show category view by default"
-#~ msgstr "Exibir modo Visualizar por Categoria por padrão"
-
-#~ msgid "Font Settings"
-#~ msgstr "Configurações de Fonte"
-
-#~ msgid "Dock"
-#~ msgstr "Doca"
-
-#~ msgid "Behavior"
-#~ msgstr "Comportamento"
-
-#~ msgid "Lock items"
-#~ msgstr "Bloquear itens"
-
-#~ msgid "Show Unpinned"
-#~ msgstr "Exibir Não-Fixados"
-
-#~ msgid "Restrict to Workspace"
-#~ msgstr "Restringir ao Espaço de Trabalho"
-
-#~ msgid "Hide mode"
-#~ msgstr "Modo Ocultar"
-
-#~ msgid "Hide delay"
-#~ msgstr "Atraso ao Ocultar"
-
-#~ msgid "Icon size"
-#~ msgstr "Tamanho do ícone"
-
-#~ msgid "Monitor"
-#~ msgstr "Monitor"
-
-#~ msgid "Screen position"
-#~ msgstr "Posição da Tela"
-
-#~ msgid "Alignment"
-#~ msgstr "Alinhamento"
-
-#~ msgid "Item alignment"
-#~ msgstr "Alinhamento do ítem"
-
-#~ msgid "Offset"
-#~ msgstr "Deslocamento"
-
-#~ msgid "GTK+"
-#~ msgstr "GTK+"
-
-#~ msgid "Prefer dark variant"
-#~ msgstr "Preferir variante escura"
-
-#~ msgid "Cerbere"
-#~ msgstr "Cerbere"
-
-#~ msgid "Custom command"
-#~ msgstr "Comando Personalizado"
-
-#~ msgid "Keep these applications open:"
-#~ msgstr "Manter estas aplicações abertas:"
-
-#~ msgid "Add watched app…"
-#~ msgstr "Adicionar aplicação observada…"
-
-#~ msgid "Remove selected app"
-#~ msgstr "Remover a aplicação selecionada"
-
-#~ msgid "Search Applications"
-#~ msgstr "Pesquisar Aplicações"
-
-#~ msgid "Single click"
-#~ msgstr "Clique Único"
-
-#~ msgid "Natural copy paste"
-#~ msgstr "Copiar e Colar natural"

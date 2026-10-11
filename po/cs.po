@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-03 10:23+0900\n"
+"POT-Creation-Date: 2026-10-11 16:28+0900\n"
 "PO-Revision-Date: 2014-08-19 07:12+0000\n"
 "Last-Translator: Tomas Kral <kralutomas@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -18,20 +18,16 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-08-30 08:41+0000\n"
 "X-Generator: Launchpad (build 17176)\n"
 
-#: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:9
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:5
 #: src/MainWindow.vala:18 src/MainWindow.vala:22
 msgid "Pantheon Tweaks"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:3
-msgid "Customization Tool"
-msgstr ""
-
-#: data/pantheon-tweaks.desktop.in:4 data/pantheon-tweaks.metainfo.xml.in.in:10
+#: data/pantheon-tweaks.desktop.in:6 data/pantheon-tweaks.metainfo.xml.in.in:6
 msgid "Tweak Pantheon settings"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:10
+#: data/pantheon-tweaks.desktop.in:8
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 
@@ -41,17 +37,15 @@ msgid ""
 "safely customise your desktop's appearance."
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:19
-#: data/pantheon-tweaks.metainfo.xml.in.in:23
+#: data/pantheon-tweaks.metainfo.xml.in.in:20
+msgid "Pantheon Tweaks Developers"
+msgstr ""
+
+#: data/pantheon-tweaks.metainfo.xml.in.in:33
+#: data/pantheon-tweaks.metainfo.xml.in.in:37
 #, fuzzy
 msgid "Appearance pane"
 msgstr "Vzhled"
-
-#. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:37
-#: data/pantheon-tweaks.metainfo.xml.in.in:39
-msgid "Pantheon Tweaks Developers"
-msgstr ""
 
 #: src/MainWindow.vala:40
 #, c-format
@@ -405,135 +399,3 @@ msgstr ""
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr ""
-
-#, fuzzy
-#~ msgid "Appearance pane in the light mode"
-#~ msgstr "Vzhled"
-
-#, fuzzy
-#~ msgid "Appearance pane in the dark mode"
-#~ msgstr "Vzhled"
-
-#, fuzzy
-#~ msgid "Icons:"
-#~ msgstr "Velikost ikon:"
-
-#~ msgid "Animations"
-#~ msgstr "Animace"
-
-#~ msgid "Shadows"
-#~ msgstr "Stíny"
-
-#~ msgid "Watched Processes"
-#~ msgstr "Sledované procesy"
-
-#~ msgid "Add..."
-#~ msgstr "Přidat..."
-
-#~ msgid "Remove"
-#~ msgstr "Odebrat"
-
-#~ msgid "Animations:"
-#~ msgstr "Animace:"
-
-#~ msgid "Single Click:"
-#~ msgstr "Jedno kliknutí:"
-
-#~ msgid "Smallest"
-#~ msgstr "Nejmenší"
-
-#~ msgid "Smaller"
-#~ msgstr "Menší"
-
-#~ msgid "Small"
-#~ msgstr "Malé"
-
-#~ msgid "Normal"
-#~ msgstr "Normální"
-
-#~ msgid "Large"
-#~ msgstr "Velké"
-
-#~ msgid "Larger"
-#~ msgstr "Větší"
-
-#~ msgid "Largest"
-#~ msgstr "Největší"
-
-#~ msgid "Sidebar Icon Size:"
-#~ msgstr "Velikost ikon postranní lišty:"
-
-#~ msgid "Rows:"
-#~ msgstr "Řádků:"
-
-#~ msgid "Columns:"
-#~ msgstr "Sloupců:"
-
-#~ msgid "Don't hide"
-#~ msgstr "Neskrývat"
-
-#~ msgid "Intelligent hide"
-#~ msgstr "Chytré skrývání"
-
-#~ msgid "Auto hide"
-#~ msgstr "Automaticky skrývat"
-
-#~ msgid "Hide on maximize"
-#~ msgstr "Skrýt při maximalizaci"
-
-#~ msgid "Hide Mode:"
-#~ msgstr "Režim skrývání:"
-
-#~ msgid "Primary Monitor"
-#~ msgstr "Hlavní monitor"
-
-#~ msgid "Left"
-#~ msgstr "Vlevo"
-
-#~ msgid "Right"
-#~ msgstr "Vpravo"
-
-#~ msgid "Top"
-#~ msgstr "Nahoru"
-
-#~ msgid "Bottom"
-#~ msgstr "Dolů"
-
-#~ msgid "Panel"
-#~ msgstr "Panel"
-
-#~ msgid "Alignment:"
-#~ msgstr "Zarovnání:"
-
-#~ msgid "Item Alignment:"
-#~ msgstr "Zarovnání položek:"
-
-#~ msgid "Custom"
-#~ msgstr "Vlastní"
-
-#~ msgid "Focused Windows:"
-#~ msgstr "Aktivní okna:"
-
-#~ msgid "Unfocused Windows:"
-#~ msgstr "Neaktivní okna:"
-
-#~ msgid "Shortcut"
-#~ msgstr "Zkratka"
-
-#~ msgid "Command"
-#~ msgstr "Příkaz"
-
-#~ msgid "Every field must be filled!"
-#~ msgstr "Všechna pole musí být vyplněná"
-
-#~ msgid "Name:"
-#~ msgstr "Název:"
-
-#~ msgid "Shortcut:"
-#~ msgstr "Zkratka:"
-
-#~ msgid "Command:"
-#~ msgstr "Příkaz:"
-
-#~ msgid "OS X"
-#~ msgstr "OS X"

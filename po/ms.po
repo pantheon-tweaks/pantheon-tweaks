@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-03 10:23+0900\n"
+"POT-Creation-Date: 2026-10-11 16:28+0900\n"
 "PO-Revision-Date: 2014-10-11 07:55+0000\n"
 "Last-Translator: abuyop <Unknown>\n"
 "Language-Team: Malay <ms@li.org>\n"
@@ -18,21 +18,17 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-10-12 07:22+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
-#: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:9
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:5
 #: src/MainWindow.vala:18 src/MainWindow.vala:22
 msgid "Pantheon Tweaks"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:3
-msgid "Customization Tool"
-msgstr ""
-
-#: data/pantheon-tweaks.desktop.in:4 data/pantheon-tweaks.metainfo.xml.in.in:10
+#: data/pantheon-tweaks.desktop.in:6 data/pantheon-tweaks.metainfo.xml.in.in:6
 #, fuzzy
 msgid "Tweak Pantheon settings"
 msgstr "Tetapan Tweak OS elementary"
 
-#: data/pantheon-tweaks.desktop.in:10
+#: data/pantheon-tweaks.desktop.in:8
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 
@@ -42,17 +38,15 @@ msgid ""
 "safely customise your desktop's appearance."
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:19
-#: data/pantheon-tweaks.metainfo.xml.in.in:23
+#: data/pantheon-tweaks.metainfo.xml.in.in:20
+msgid "Pantheon Tweaks Developers"
+msgstr ""
+
+#: data/pantheon-tweaks.metainfo.xml.in.in:33
+#: data/pantheon-tweaks.metainfo.xml.in.in:37
 #, fuzzy
 msgid "Appearance pane"
 msgstr "Penampilan"
-
-#. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:37
-#: data/pantheon-tweaks.metainfo.xml.in.in:39
-msgid "Pantheon Tweaks Developers"
-msgstr ""
 
 #: src/MainWindow.vala:40
 #, c-format
@@ -417,366 +411,3 @@ msgstr ""
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr ""
-
-#, fuzzy
-#~ msgid "Appearance pane in the light mode"
-#~ msgstr "Penampilan"
-
-#, fuzzy
-#~ msgid "Appearance pane in the dark mode"
-#~ msgstr "Penampilan"
-
-#~ msgid "Tweaks"
-#~ msgstr "Tweak"
-
-#, fuzzy
-#~ msgid "Theme Settings"
-#~ msgstr "Tetapan Tweak OS elementary"
-
-#, fuzzy
-#~ msgid "Icons:"
-#~ msgstr "Saiz Ikon:"
-
-#, fuzzy
-#~ msgid "Layout:"
-#~ msgstr "Bentangan Suai:"
-
-#, fuzzy
-#~ msgid "Add new window controls layout"
-#~ msgstr "Bentangan kawalan tetingkap suai"
-
-#~ msgid "Animations"
-#~ msgstr "Animasi"
-
-#, fuzzy
-#~ msgid "Close:"
-#~ msgstr "Tutup Sahaja"
-
-#, fuzzy
-#~ msgid "Minimize:"
-#~ msgstr "Minimum Ke Kiri"
-
-#, fuzzy
-#~ msgid "Workspace switch:"
-#~ msgstr "Tempoh Tukar Ruang Kerja:"
-
-#~ msgid "Shadows"
-#~ msgstr "Bayang"
-
-#~ msgid "Plank"
-#~ msgstr "Plank"
-
-#~ msgid "Slingshot"
-#~ msgstr "Slingshot"
-
-#~ msgid "Cerbere"
-#~ msgstr "Cerbere"
-
-#~ msgid "Disabled"
-#~ msgstr "Dilumpuhkan"
-
-#~ msgid "Watched Processes"
-#~ msgstr "Proses Dipantau"
-
-#~ msgid "Add..."
-#~ msgstr "Tambah..."
-
-#~ msgid "Remove"
-#~ msgstr "Buang"
-
-#~ msgid "Animations:"
-#~ msgstr "Animasi:"
-
-#~ msgid "If the animations play at all"
-#~ msgstr "Jika animasi mainkan"
-
-#~ msgid "Open Duration:"
-#~ msgstr "Tempoh Buka:"
-
-#~ msgid "Plays when an application is opened"
-#~ msgstr "Main bila aplikasi dibuka"
-
-#~ msgid "Close Duration:"
-#~ msgstr "Tempoh Tutup:"
-
-#~ msgid "Plays when an application is closed"
-#~ msgstr "Main bila aplikasi ditutup"
-
-#~ msgid "Snap Duration:"
-#~ msgstr "Tempoh Lekap:"
-
-#~ msgid "Plays when an application is snapped to the side"
-#~ msgstr "Main bila aplikasi dilekap ke sisi"
-
-#~ msgid "Minimize Duration:"
-#~ msgstr "Tempoh Minimum:"
-
-#~ msgid "Plays when an application is minimized"
-#~ msgstr "Main bila aplikasi diminimumkan"
-
-#~ msgid "Plays when a workspace switch is initiated"
-#~ msgstr "Main bila ruang kerja bertukar dimulakan"
-
-#~ msgid "Single Click:"
-#~ msgstr "Klik Tunggal:"
-
-#~ msgid "If set off, files will use 'normal' double-click behavior"
-#~ msgstr "Jika dimatikan, fail akan guna kelakuan dwi-klik biasa"
-
-#~ msgid "For date accessed, modified, etc."
-#~ msgstr "Untuk tarikh dicapai, diubahsuai, dll."
-
-#~ msgid "Smallest"
-#~ msgstr "Terkecil"
-
-#~ msgid "Smaller"
-#~ msgstr "Lebih kecil"
-
-#~ msgid "Small"
-#~ msgstr "Kecil"
-
-#~ msgid "Normal"
-#~ msgstr "Biasa"
-
-#~ msgid "Large"
-#~ msgstr "Besar"
-
-#~ msgid "Larger"
-#~ msgstr "Lebih Besar"
-
-#~ msgid "Largest"
-#~ msgstr "Terbesar"
-
-#~ msgid "Sidebar Icon Size:"
-#~ msgstr "Saiz Ikon Palang Sisi:"
-
-#~ msgid "Size of the icons in the sidebar"
-#~ msgstr "Saiz ikon dalam palang sisi"
-
-#~ msgid "Used by default by most applications"
-#~ msgstr "Digunakan secara lalai oleh kebanyakan aplikasi"
-
-#~ msgid "Used when displaying documents, if no other font was chosen"
-#~ msgstr "Digunakan bila memaparkan dokumen, jika tiada fon lain dipilih"
-
-#~ msgid "Used in the terminal, for code, and sometimes for plain text"
-#~ msgstr ""
-#~ "Digunakan dalam terminal, untuk kod, dan kadangkala untuk teks biasa"
-
-#~ msgid "Used to display window titles"
-#~ msgstr "Digunakan untuk papar tajuk tetingkap"
-
-#~ msgid "Rows:"
-#~ msgstr "Baris:"
-
-#~ msgid "The number of rows displayed in Slingshot"
-#~ msgstr "Bilangan baris yang dipapar dalam Slingshot"
-
-#~ msgid "Columns:"
-#~ msgstr "Lajur:"
-
-#~ msgid "The number of columns displayed in Slingshot"
-#~ msgstr "Bilangan lajur yang dipapar dalam Slingshot"
-
-#~ msgid "Current Workspace Only"
-#~ msgstr "Ruang Kerja Semasa Sahaja"
-
-#~ msgid "Show only windows on the current workspace"
-#~ msgstr "Hanya tunjuk tetingkap pada ruang kerja semasa"
-
-#~ msgid "Will still show pinned items on different workspaces"
-#~ msgstr "Masih tunjukkan item dicemat pada ruang kerja yang berbeza"
-
-#~ msgid "Lock Items:"
-#~ msgstr "Item Dikunci:"
-
-#~ msgid "Whether to prevent drag'n'drop actions and lock items on the dock"
-#~ msgstr ""
-#~ "Sama ada hendak halang tindakan seret-dan-lepas dan kunci item pada labuh"
-
-#~ msgid "The size of each icon in the plank"
-#~ msgstr "Saiz bagi setiap ikon dalam plank"
-
-#~ msgid "Don't hide"
-#~ msgstr "Jangan sembunyi"
-
-#~ msgid "Intelligent hide"
-#~ msgstr "Sembunyi pintar"
-
-#~ msgid "Auto hide"
-#~ msgstr "Sembunyi sendiri"
-
-#~ msgid "Hide on maximize"
-#~ msgstr "Sembunyi bila dimaksimumkan"
-
-#~ msgid "Hide Mode:"
-#~ msgstr "Mod Sembunyi:"
-
-#~ msgid "Plank's hide mode"
-#~ msgstr "Mod sembunyi Plank"
-
-#~ msgid "Hide Delay (ms):"
-#~ msgstr "Lengah Sembunyi (ms):"
-
-#~ msgid "Time to wait before unhiding the dock"
-#~ msgstr "Masa menunggu sebelum memunculkan labuh"
-
-#~ msgid "Theme:"
-#~ msgstr "Tema:"
-
-#~ msgid "Plank's theme for the dock"
-#~ msgstr "Tema Plank untuk labuh"
-
-#~ msgid "Primary Monitor"
-#~ msgstr "Monitor Utama"
-
-#~ msgid "Monitor %d"
-#~ msgstr "Monitor %d"
-
-#~ msgid "Monitor:"
-#~ msgstr "Monitor:"
-
-#~ msgid "The monitor that Plank is displayed on"
-#~ msgstr "Monitor yang mana Plank dipaparkan"
-
-#~ msgid "Left"
-#~ msgstr "Kiri"
-
-#~ msgid "Right"
-#~ msgstr "Kanan"
-
-#~ msgid "Top"
-#~ msgstr "Atas"
-
-#~ msgid "Bottom"
-#~ msgstr "Bawah"
-
-#~ msgid "Screen Position:"
-#~ msgstr "Kedudukan Skrin:"
-
-#~ msgid "Where on the screen Plank is displayed"
-#~ msgstr "Lokasi Plank skrin dipaparkan"
-
-#~ msgid "Panel"
-#~ msgstr "Panel"
-
-#~ msgid "Centered"
-#~ msgstr "Ditengahkan"
-
-#~ msgid "Alignment:"
-#~ msgstr "Jajaran:"
-
-#~ msgid "The alignment for the dock on the monitor's edge"
-#~ msgstr "Jajaran pada llabuh di pinggir monitor"
-
-#~ msgid "Item Alignment:"
-#~ msgstr "Jajaran Item:"
-
-#~ msgid "The alignment of the items in this dock if panel-mode is used"
-#~ msgstr "Jajaran item dalam labuh ini jika mod-panel digunakan"
-
-#~ msgid "Offset:"
-#~ msgstr "Ofset:"
-
-#~ msgid "The offset (in percent) from the alignment point to shift Plank"
-#~ msgstr "Ofset (dalam peratus) dari titik jajaran ke shift Plank"
-
-#~ msgid "Custom"
-#~ msgstr "Suai"
-
-#~ msgid "Opacity:"
-#~ msgstr "Kelegapan:"
-
-#~ msgid "How transparent the background of the terminal is"
-#~ msgstr "Bagaimana kelutsinaran latar belakang terminal"
-
-#~ msgid "A set of settings for terminal palette and background color"
-#~ msgstr "Satu set tetapan untuk palet terminal dan warna latar belakang"
-
-#~ msgid "Prefer Dark Theme:"
-#~ msgstr "Utamakan Tema Gelap:"
-
-#~ msgid "GTK+ windows will now prefer the dark GTK+ theme"
-#~ msgstr "Tetingkap GTK+ kini akan utamakan tema GTK+ gelap"
-
-#~ msgid ""
-#~ "Some applications will not react well with this enabled and can look "
-#~ "terrible"
-#~ msgstr ""
-#~ "Sesetengah aplikasi tidak akan bertindakbalas dengan baik jika dibenarkan "
-#~ "dan kelihatan teruk"
-
-#~ msgid "Metacity Theme:"
-#~ msgstr "Tema Metacity:"
-
-#~ msgid "Used to render windows that do not use GTK+"
-#~ msgstr "Digunakan untuk terap tetingkap yang tidak guna GTK+"
-
-#~ msgid "Used to render GTK+ windows like Switchboard"
-#~ msgstr "Digunakan untuk terap tetingkap GTK+ seperti Switchboard"
-
-#~ msgid "Used to theme the icon set, including application icons"
-#~ msgstr "Digunakan untuk temakan set ikon, termasuklah ikon aplikasi"
-
-#~ msgid "Used to theme the cursor"
-#~ msgstr "Digunakan untuk temakan kursor"
-
-#~ msgid ""
-#~ "Controls located at the top of the window for close, minimize, and "
-#~ "maximize"
-#~ msgstr ""
-#~ "Kawalan berada di bahagian atas tetingkap untuk tutup, minimum, dan "
-#~ "maksimum"
-
-#~ msgid "May break window controls! May stop working with updates to system!"
-#~ msgstr ""
-#~ "Boleh rosakkan kawalan tetingkap! Mungkin berhenti berfungsi dengan "
-#~ "kemaskini sistem!"
-
-#~ msgid "Audible Bell:"
-#~ msgstr "Loceng Boleh Dengar:"
-
-#~ msgid "Sound that plays when an error has been made"
-#~ msgstr "Bunyi yang dimainkan bila ralat telah berlaku"
-
-#~ msgid "Focused Windows:"
-#~ msgstr "Tetingkap Difokus:"
-
-#~ msgid "Shadow beneath windows that you have currently selected"
-#~ msgstr "Bayang di bawah tetingkap yang anda pilih buat masa ini"
-
-#~ msgid "This may not actually do anything"
-#~ msgstr "Ia mungkin tidak membuat apa-apa"
-
-#~ msgid "Unfocused Windows:"
-#~ msgstr "Tetingkap Tidak Difokus:"
-
-#~ msgid "Shadow beneath windows that you do not have selected"
-#~ msgstr "Bayang di bawah tetingkap yang anda tidak pilih"
-
-#~ msgid "Name"
-#~ msgstr "Nama"
-
-#~ msgid "Shortcut"
-#~ msgstr "Pintasan"
-
-#~ msgid "Command"
-#~ msgstr "Perintah"
-
-#~ msgid "Every field must be filled!"
-#~ msgstr "Setiap medan mestilah diisi!"
-
-#~ msgid "Name:"
-#~ msgstr "Nama:"
-
-#~ msgid "Shortcut:"
-#~ msgstr "Pintasan:"
-
-#~ msgid "Command:"
-#~ msgstr "Perintah:"
-
-#~ msgid "OS X"
-#~ msgstr "OS X"
-
-#~ msgid "Revert to default setting"
-#~ msgstr "Kembali ke tetapan lalai"

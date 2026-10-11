@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-03 10:23+0900\n"
+"POT-Creation-Date: 2026-10-11 16:28+0900\n"
 "PO-Revision-Date: 2022-02-09 15:09+0800\n"
 "Last-Translator: imgradeone <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -18,20 +18,16 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-08-30 08:42+0000\n"
 "X-Generator: Poedit 3.0\n"
 
-#: data/pantheon-tweaks.desktop.in:2 data/pantheon-tweaks.metainfo.xml.in.in:9
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:5
 #: src/MainWindow.vala:18 src/MainWindow.vala:22
 msgid "Pantheon Tweaks"
 msgstr "Pantheon 优化"
 
-#: data/pantheon-tweaks.desktop.in:3
-msgid "Customization Tool"
-msgstr ""
-
-#: data/pantheon-tweaks.desktop.in:4 data/pantheon-tweaks.metainfo.xml.in.in:10
+#: data/pantheon-tweaks.desktop.in:6 data/pantheon-tweaks.metainfo.xml.in.in:6
 msgid "Tweak Pantheon settings"
 msgstr "修改 Pantheon 桌面环境设置"
 
-#: data/pantheon-tweaks.desktop.in:10
+#: data/pantheon-tweaks.desktop.in:8
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 
@@ -42,18 +38,16 @@ msgid ""
 "safely customise your desktop's appearance."
 msgstr "专为 Pantheon 设计的系统设置面板，帮助您简便、安全地修改桌面外观。"
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:19
-#: data/pantheon-tweaks.metainfo.xml.in.in:23
-#, fuzzy
-msgid "Appearance pane"
-msgstr "外观"
-
-#. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:37
-#: data/pantheon-tweaks.metainfo.xml.in.in:39
+#: data/pantheon-tweaks.metainfo.xml.in.in:20
 #, fuzzy
 msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon 优化"
+
+#: data/pantheon-tweaks.metainfo.xml.in.in:33
+#: data/pantheon-tweaks.metainfo.xml.in.in:37
+#, fuzzy
+msgid "Appearance pane"
+msgstr "外观"
 
 #: src/MainWindow.vala:40
 #, c-format
@@ -423,360 +417,3 @@ msgstr "打开目标文件夹"
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr ""
-
-#~ msgid "Never"
-#~ msgstr "不显示"
-
-#, fuzzy
-#~ msgid "Appearance pane in the light mode"
-#~ msgstr "外观面板"
-
-#, fuzzy
-#~ msgid "Appearance pane in the dark mode"
-#~ msgstr "外观面板"
-
-#~ msgid "Tweaks"
-#~ msgstr "优化"
-
-#~ msgid "Are you sure you want to reset personalization?"
-#~ msgstr "你确定要重置所有个性化选项吗？"
-
-#, fuzzy
-#~ msgid ""
-#~ "Show a warning dialog when pasting a command with 'sudo' or multiple "
-#~ "lines."
-#~ msgstr "粘贴的命令包含“sudo”时显示警告。"
-
-#~ msgid "Open destination folder"
-#~ msgstr "打开目标文件夹"
-
-#, fuzzy
-#~ msgid "Failed to open the destination folder"
-#~ msgstr "打开目标文件夹"
-
-#~ msgid "Theme Settings"
-#~ msgstr "主题设置"
-
-#~ msgid "GTK:"
-#~ msgstr "GTK："
-
-#~ msgid "Icons:"
-#~ msgstr "图标："
-
-#~ msgid "Sound:"
-#~ msgstr "音效："
-
-#~ msgid "Layout:"
-#~ msgstr "布局："
-
-#~ msgid "Ubuntu"
-#~ msgstr "Ubuntu"
-
-#~ msgid "Sound Indicator"
-#~ msgstr "声音托盘图标"
-
-#~ msgid "Translation updates:"
-#~ msgstr "翻译更新："
-
-#~ msgid "Update Portuguese translation (thanks to @hugok79)"
-#~ msgstr "更新葡萄牙语翻译（由 @hugok79 贡献）"
-
-#, fuzzy
-#~ msgid "Update German translation (thanks to @skalski)"
-#~ msgstr "更新德语翻译（由 @uwe-ss 贡献）"
-
-#, fuzzy
-#~ msgid "Update Italian translation (thanks to @albanobattistella)"
-#~ msgstr "更新俄罗斯语翻译（由 @camellan 贡献）"
-
-#, fuzzy
-#~ msgid "Update Russian translation (thanks to @lenemter)"
-#~ msgstr "更新俄罗斯语翻译（由 @camellan 贡献）"
-
-#~ msgid "Update Japanese translation"
-#~ msgstr "更新日语翻译"
-
-#~ msgid "Update German translation (thanks to @uwe-ss)"
-#~ msgstr "更新德语翻译（由 @uwe-ss 贡献）"
-
-#, fuzzy
-#~ msgid "Update Hungarian translation (thanks to @TomiOhl)"
-#~ msgstr "更新俄罗斯语翻译（由 @camellan 贡献）"
-
-#~ msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
-#~ msgstr "更新简体中文翻译（由 @imgradeone 贡献）"
-
-#~ msgid "FontsPane: Fix icon missing with the latest icons update"
-#~ msgstr "字体面板：修复图标包更新导致图标缺失的问题"
-
-#~ msgid ""
-#~ "Make sure dimming feature that is introduced in the latest version of "
-#~ "Gala work for the reset dialog"
-#~ msgstr "在 Gala 最新版本引入的主窗口变暗效果现在已对重置对话框生效"
-
-#~ msgid "AppearancePane: Sort theme names alphabetically"
-#~ msgstr "外观面板：按字母顺序排序主题"
-
-#~ msgid "TerminalPane: Support changing tab bar behavior"
-#~ msgstr "终端面板：支持修改标签行为"
-
-#~ msgid "AppearancePane: Add buttons to open the theme locations"
-#~ msgstr "外观面板：增加打开主题目录的按钮"
-
-#~ msgid "Sync selected elementary stylesheet variant with Desktop Plug"
-#~ msgstr "同步桌面插件中选择的 elementary 样式"
-
-#~ msgid "Improves reliability of restoring visually"
-#~ msgstr "改进恢复功能的可用性"
-
-#~ msgid ""
-#~ "Prevent System Settings from crashing due to the removal of preferences "
-#~ "in upstream Videos"
-#~ msgstr "防止系统设置因上游视频中的首选项被删除而崩溃"
-
-#~ msgid "Correct cursor and icon theme dir copies"
-#~ msgstr "修正光标和图标主题文件夹地址的复制"
-
-#~ msgid "Update French translation (thanks to @roxfr)"
-#~ msgstr "更新法语翻译（由 @roxfr 贡献）"
-
-#~ msgid "Update Russian translation (thanks to @camellan)"
-#~ msgstr "更新俄罗斯语翻译（由 @camellan 贡献）"
-
-#~ msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
-#~ msgstr "在主题选项中排除 Adwaita/gnome/hicolor 主题"
-
-#~ msgid "Support accessing to panes with settings paths"
-#~ msgstr "支持通过设置路径访问面板"
-
-#~ msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
-#~ msgstr "修复插件以在 NixOS 上正常运行（由 @bobby285271 贡献）"
-
-#~ msgid "Update translations"
-#~ msgstr "翻译更新"
-
-#~ msgid ""
-#~ "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
-#~ "features and fixes:"
-#~ msgstr ""
-#~ "elementary 优化现已更名为 Pantheon 优化，同时也获得了一些新功能和修复："
-
-#~ msgid "Remove preferences now supported in Pantheon officially"
-#~ msgstr "删除 Pantheon 目前官方支持的设置项"
-
-#~ msgid "Remove preferences causing the plug crash"
-#~ msgstr "删除导致插件崩溃的设置项"
-
-#~ msgid "Fully redesigned plug"
-#~ msgstr "完全重新设计的插件"
-
-#~ msgid "Support changing sound theme (thanks to @pongloongyeat)"
-#~ msgstr "支持修改音效主题（特别感谢 @pongloongyeat）"
-
-#~ msgid "Add new window controls layout"
-#~ msgstr "增加新的窗口控制布局"
-
-#~ msgid "Fix deprecations"
-#~ msgstr "弃用修正"
-
-#~ msgid "Background color:"
-#~ msgstr "背景色："
-
-#~ msgid "Animations"
-#~ msgstr "动画"
-
-#~ msgid ""
-#~ "Adjust the animation length used for window management or multitasking."
-#~ msgstr "修改窗口管理器 / 多任务视图的动画长度。"
-
-#~ msgid "Open:"
-#~ msgstr "打开："
-
-#~ msgid "Close:"
-#~ msgstr "关闭："
-
-#~ msgid "Snap:"
-#~ msgstr "分屏："
-
-#~ msgid "Minimize:"
-#~ msgstr "最小化："
-
-#~ msgid "Workspace switch:"
-#~ msgstr "切换工作区："
-
-#~ msgid "Videos"
-#~ msgstr "视频"
-
-#~ msgid "Stay on top while playing:"
-#~ msgstr "播放时置顶："
-
-#~ msgid "Move window from video canvas:"
-#~ msgstr "在视频区域移动窗口："
-
-#~ msgid "If enabled, the window can be dragged by clicking anywhere on it."
-#~ msgstr "启用后，您点击窗口的任何地方都将可以拖动窗口。"
-
-#~ msgid "Don't instantly start video playback:"
-#~ msgstr "不立即播放视频："
-
-#~ msgid "If enabled, opening a video will not auto play it."
-#~ msgstr "启用后，打开视频将不会自动播放。"
-
-#~ msgid "Shadows"
-#~ msgstr "阴影"
-
-#~ msgid "Plank"
-#~ msgstr "Plank"
-
-#~ msgid "Slingshot"
-#~ msgstr "Slingshot"
-
-#~ msgid "Cerbere"
-#~ msgstr "Cerbere"
-
-#~ msgid "Disabled"
-#~ msgstr "禁用"
-
-#~ msgid "Watched Processes"
-#~ msgstr "监视进程"
-
-#~ msgid "Add..."
-#~ msgstr "添加..."
-
-#~ msgid "Remove"
-#~ msgstr "移除"
-
-#~ msgid "Animations:"
-#~ msgstr "动画："
-
-#~ msgid "Open Duration:"
-#~ msgstr "打开时长："
-
-#~ msgid "Close Duration:"
-#~ msgstr "关闭时长："
-
-#~ msgid "Snap Duration:"
-#~ msgstr "Snap 时长："
-
-#~ msgid "Minimize Duration:"
-#~ msgstr "最小化时长："
-
-#~ msgid "Single Click:"
-#~ msgstr "单击："
-
-#~ msgid "Smallest"
-#~ msgstr "最小"
-
-#~ msgid "Smaller"
-#~ msgstr "较小"
-
-#~ msgid "Small"
-#~ msgstr "小"
-
-#~ msgid "Normal"
-#~ msgstr "一般"
-
-#~ msgid "Large"
-#~ msgstr "大"
-
-#~ msgid "Larger"
-#~ msgstr "更大"
-
-#~ msgid "Largest"
-#~ msgstr "最大"
-
-#~ msgid "Sidebar Icon Size:"
-#~ msgstr "侧边栏图标大小："
-
-#~ msgid "Rows:"
-#~ msgstr "行："
-
-#~ msgid "Columns:"
-#~ msgstr "列："
-
-#~ msgid "Lock Items:"
-#~ msgstr "锁定项目："
-
-#~ msgid "Don't hide"
-#~ msgstr "不隐藏"
-
-#~ msgid "Intelligent hide"
-#~ msgstr "智能隐藏"
-
-#~ msgid "Auto hide"
-#~ msgstr "自动隐藏"
-
-#~ msgid "Hide on maximize"
-#~ msgstr "最大化时隐藏"
-
-#~ msgid "Hide Mode:"
-#~ msgstr "隐藏模式："
-
-#~ msgid "Primary Monitor"
-#~ msgstr "主显示屏"
-
-#~ msgid "Monitor %d"
-#~ msgstr "显示器 %d"
-
-#~ msgid "Monitor:"
-#~ msgstr "显示器："
-
-#~ msgid "Left"
-#~ msgstr "左侧"
-
-#~ msgid "Right"
-#~ msgstr "右侧"
-
-#~ msgid "Top"
-#~ msgstr "顶部"
-
-#~ msgid "Bottom"
-#~ msgstr "底部"
-
-#~ msgid "Panel"
-#~ msgstr "面板"
-
-#~ msgid "Alignment:"
-#~ msgstr "对齐："
-
-#~ msgid "Item Alignment:"
-#~ msgstr "条目对齐："
-
-#~ msgid "Custom"
-#~ msgstr "自定义"
-
-#~ msgid "Opacity:"
-#~ msgstr "透明度："
-
-#~ msgid "Audible Bell:"
-#~ msgstr "响铃："
-
-#~ msgid "Focused Windows:"
-#~ msgstr "焦点窗口："
-
-#~ msgid "Unfocused Windows:"
-#~ msgstr "非焦点窗口："
-
-#~ msgid "Name"
-#~ msgstr "名称"
-
-#~ msgid "Shortcut"
-#~ msgstr "快捷键"
-
-#~ msgid "Command"
-#~ msgstr "命令"
-
-#~ msgid "Every field must be filled!"
-#~ msgstr "每个字段必须填写！"
-
-#~ msgid "Name:"
-#~ msgstr "名称："
-
-#~ msgid "Shortcut:"
-#~ msgstr "快捷键："
-
-#~ msgid "Command:"
-#~ msgstr "命令："
-
-#~ msgid "OS X"
-#~ msgstr "OS X"
