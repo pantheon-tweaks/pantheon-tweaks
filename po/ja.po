@@ -406,6 +406,3 @@ msgstr "“%s” を開けませんでした"
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr "ディレクトリを開く際または作成する際にエラーが発生しました。"
-
-#~ msgid "Customization Tool"
-#~ msgstr "カスタマイズツール"
