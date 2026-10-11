@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-27 22:21+0900\n"
+"POT-Creation-Date: 2026-10-11 16:28+0900\n"
 "PO-Revision-Date: 2014-10-11 07:55+0000\n"
 "Last-Translator: abuyop <Unknown>\n"
 "Language-Team: Malay <ms@li.org>\n"
@@ -18,333 +18,347 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-10-12 07:22+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
-#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in.in:5
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:5
 #: src/MainWindow.vala:18 src/MainWindow.vala:22
 msgid "Pantheon Tweaks"
 msgstr ""
 
-#: data/pantheon-tweaks.desktop.in:4
-msgid "Customization Tool"
-msgstr ""
-
-#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:6
+#: data/pantheon-tweaks.desktop.in:6 data/pantheon-tweaks.metainfo.xml.in.in:6
 #, fuzzy
 msgid "Tweak Pantheon settings"
 msgstr "Tetapan Tweak OS elementary"
 
-#: data/pantheon-tweaks.desktop.in:11
+#: data/pantheon-tweaks.desktop.in:8
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:8
+#: data/pantheon-tweaks.metainfo.xml.in.in:12
 msgid ""
 "A system customization app for the Pantheon Desktop that lets you easily and "
 "safely customise your desktop's appearance."
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:236
-#: data/pantheon-tweaks.metainfo.xml.in.in:240
+#: data/pantheon-tweaks.metainfo.xml.in.in:20
+msgid "Pantheon Tweaks Developers"
+msgstr ""
+
+#: data/pantheon-tweaks.metainfo.xml.in.in:33
+#: data/pantheon-tweaks.metainfo.xml.in.in:37
 #, fuzzy
 msgid "Appearance pane"
 msgstr "Penampilan"
 
-#. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:246
-#: data/pantheon-tweaks.metainfo.xml.in.in:248
-msgid "Pantheon Tweaks Developers"
-msgstr ""
-
 #: src/MainWindow.vala:40
 #, c-format
-msgid "Your Desktop Environment \"%s\" Is Not Supported"
+msgid "Your Desktop Environment “%s” Is Not Supported"
 msgstr ""
 
 #: src/MainWindow.vala:42
 msgid "Pantheon Tweaks is a customization tool for Pantheon."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:35
+#: src/Panes/AppearancePane.vala:46
 msgid "Appearance"
 msgstr "Penampilan"
 
-#: src/Panes/AppearancePane.vala:37
+#: src/Panes/AppearancePane.vala:48
 msgid ""
 "Change the theme and button layout of windows. Changing theme may cause "
 "visibility issue."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:38
+#: src/Panes/AppearancePane.vala:49
 msgid "General"
 msgstr "Am"
 
-#: src/Panes/AppearancePane.vala:50
+#: src/Panes/AppearancePane.vala:61
 #, fuzzy
 msgid "GTK Theme"
 msgstr "Tema GTK+:"
 
-#. TRANSLATORS: The "%s" represents the path where custom themes are installed
-#: src/Panes/AppearancePane.vala:52
+#. TRANSLATORS: The “%s” represents the path where custom themes are installed
+#: src/Panes/AppearancePane.vala:63
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:53 src/Panes/AppearancePane.vala:79
-#: src/Panes/AppearancePane.vala:105 src/Panes/AppearancePane.vala:131
+#: src/Panes/AppearancePane.vala:64 src/Panes/AppearancePane.vala:90
+#: src/Panes/AppearancePane.vala:116 src/Panes/AppearancePane.vala:142
 msgid "theme-name"
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:76
+#: src/Panes/AppearancePane.vala:87
 #, fuzzy
 msgid "Icon Theme"
 msgstr "Tema Ikon:"
 
-#. TRANSLATORS: The "%s" represents the path where custom icons are installed
-#: src/Panes/AppearancePane.vala:78
+#. TRANSLATORS: The “%s” represents the path where custom icons are installed
+#: src/Panes/AppearancePane.vala:89
 #, c-format
 msgid "To show custom icons here, put them in %s."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:102
+#: src/Panes/AppearancePane.vala:113
 #, fuzzy
 msgid "Cursor Theme"
 msgstr "Tema Kursor:"
 
-#. TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:104
+#. TRANSLATORS: The “%s” represents the path where custom cursors are installed
+#: src/Panes/AppearancePane.vala:115
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:128
+#: src/Panes/AppearancePane.vala:139
 #, fuzzy
 msgid "Sound Theme"
 msgstr "Tema Ikon:"
 
-#. TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:130
+#. TRANSLATORS: The “%s” represents the path where custom sounds are installed
+#: src/Panes/AppearancePane.vala:141
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:152
-msgid "Force Dark Style"
+#: src/Panes/AppearancePane.vala:163
+msgid "Legacy Dark Style"
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:153
+#: src/Panes/AppearancePane.vala:164
 msgid ""
-"Forces dark style on all apps, even if it's not supported. Requires "
-"restarting the application."
+"Attempts to force dark style on apps that don't support it. Requires restart "
+"of the apps."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:168
+#: src/Panes/AppearancePane.vala:179
 #, fuzzy
 msgid "Window Control Layout"
 msgstr "Kawalan Tetingkap:"
 
-#: src/Panes/AppearancePane.vala:169
+#: src/Panes/AppearancePane.vala:180
 msgid "Changes button layout of the window."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:174
+#: src/Panes/AppearancePane.vala:185
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:175
+#: src/Panes/AppearancePane.vala:186
 #, fuzzy
 msgid "elementary Reversed"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:176
+#: src/Panes/AppearancePane.vala:187
 #, fuzzy
 msgid "Close Only Right"
 msgstr "Tutup Sahaja"
 
-#: src/Panes/AppearancePane.vala:177
+#: src/Panes/AppearancePane.vala:188
 #, fuzzy
 msgid "Close Only Left"
 msgstr "Tutup Sahaja"
 
-#: src/Panes/AppearancePane.vala:178
+#: src/Panes/AppearancePane.vala:189
 #, fuzzy
 msgid "Add Minimize Left"
 msgstr "Minimum Ke Kiri"
 
-#: src/Panes/AppearancePane.vala:179
+#: src/Panes/AppearancePane.vala:190
 #, fuzzy
 msgid "Add Minimize Right"
 msgstr "Minimum Ke Kanan"
 
-#: src/Panes/AppearancePane.vala:180
+#: src/Panes/AppearancePane.vala:191
 msgid "Replace Maximize to Minimize"
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:181
+#: src/Panes/AppearancePane.vala:192
 msgid "Windows"
 msgstr "Tetingkap"
 
-#: src/Panes/AppearancePane.vala:182
+#: src/Panes/AppearancePane.vala:193
 msgid "macOS"
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:183
+#: src/Panes/AppearancePane.vala:194
 #, fuzzy
 msgid "Windows Reversed"
 msgstr "Tetingkap"
 
-#: src/Panes/AppearancePane.vala:198
+#: src/Panes/AppearancePane.vala:209
 msgid "Show GNOME Menu"
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:199
+#: src/Panes/AppearancePane.vala:210
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr ""
 
-#: src/Panes/FilesPane.vala:17
+#: src/Panes/FilesPane.vala:21
 msgid "Files"
 msgstr "Fail"
 
-#: src/Panes/FilesPane.vala:19
+#: src/Panes/FilesPane.vala:23
 msgid "Applications"
 msgstr "Aplikasi"
 
-#: src/Panes/FilesPane.vala:27
+#: src/Panes/FilesPane.vala:31
 msgid "Restore Tabs"
 msgstr ""
 
-#: src/Panes/FilesPane.vala:28
+#: src/Panes/FilesPane.vala:32
 msgid "Restore tabs from previous session when launched."
 msgstr ""
 
-#: src/Panes/FilesPane.vala:44
+#: src/Panes/FilesPane.vala:48
 msgid "Locale"
 msgstr "Setempat"
 
-#: src/Panes/FilesPane.vala:45
+#: src/Panes/FilesPane.vala:49
 msgid "ISO"
 msgstr "ISO"
 
-#: src/Panes/FilesPane.vala:46
+#: src/Panes/FilesPane.vala:50
 msgid "Informal"
 msgstr "Tak-formal"
 
-#: src/Panes/FilesPane.vala:48
+#: src/Panes/FilesPane.vala:52
 #, fuzzy
 msgid "Date & Time Format"
 msgstr "Format Tarikh:"
 
-#: src/Panes/FilesPane.vala:49
+#: src/Panes/FilesPane.vala:53
 msgid "Date and time format used in the properties dialog or the list view."
 msgstr ""
 
-#: src/Panes/FontsPane.vala:19
+#: src/Panes/FontsPane.vala:27
 msgid "Fonts"
 msgstr "Fon"
 
-#: src/Panes/FontsPane.vala:21
+#: src/Panes/FontsPane.vala:29
 msgid "Change the fonts used in your system and documents by default."
 msgstr ""
 
-#: src/Panes/FontsPane.vala:29
+#: src/Panes/FontsPane.vala:37
 #, fuzzy
 msgid "Default Font"
 msgstr "Fon Lalai:"
 
-#: src/Panes/FontsPane.vala:45
+#: src/Panes/FontsPane.vala:53
 #, fuzzy
 msgid "Document Font"
 msgstr "Fon Dokumen:"
 
-#: src/Panes/FontsPane.vala:61
+#: src/Panes/FontsPane.vala:69
 #, fuzzy
 msgid "Monospace Font"
 msgstr "Fon Monospace:"
 
-#: src/Panes/FontsPane.vala:77
+#: src/Panes/FontsPane.vala:85
 #, fuzzy
 msgid "Titlebar Font"
 msgstr "Fon Palang Tajuk:"
 
-#: src/Panes/MiscPane.vala:15
+#: src/Panes/MiscPane.vala:35
 msgid "Miscellaneous"
 msgstr "Pelbagai"
 
-#: src/Panes/MiscPane.vala:17
+#: src/Panes/MiscPane.vala:37
 msgid "Configure some other hidden settings."
 msgstr ""
 
-#: src/Panes/MiscPane.vala:22
+#: src/Panes/MiscPane.vala:45
 msgid "Max Volume"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:23
-msgid "Terminal"
-msgstr "Terminal"
+#: src/Panes/MiscPane.vala:66
+msgid "Check Alive"
+msgstr ""
 
-#: src/Panes/TerminalPane.vala:32
-msgid "Follow Last Tab"
+#: src/Panes/MiscPane.vala:67
+msgid ""
+"If enabled, an app has to respond to cyclic ping requests from Mutter. If it "
+"doesn't, “Application is not responding” dialog appears where allows you to "
+"choose force quit it or wait."
+msgstr ""
+
+#: src/Panes/MiscPane.vala:81
+msgid "Check Alive Timeout"
+msgstr ""
+
+#: src/Panes/MiscPane.vala:82
+msgid ""
+"Number of milliseconds an app has to respond to a ping request from Mutter."
 msgstr ""
 
 #: src/Panes/TerminalPane.vala:33
+msgid "Terminal"
+msgstr "Terminal"
+
+#: src/Panes/TerminalPane.vala:42
+msgid "Follow Last Tab"
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:43
 msgid "Creating a new tab sets the working directory of the last opened tab."
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:48
+#: src/Panes/TerminalPane.vala:58
 msgid "Unsafe Paste Alert"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:49
+#: src/Panes/TerminalPane.vala:59
 msgid "Warn when pasted text contains multiple or administrative commands."
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:64
+#: src/Panes/TerminalPane.vala:74
 msgid "Remember Tabs"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:65
+#: src/Panes/TerminalPane.vala:75
 msgid "If enabled, last opened tabs are restored on start."
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:80
+#: src/Panes/TerminalPane.vala:90
 #, fuzzy
 msgid "Terminal Bell"
 msgstr "Terminal"
 
-#: src/Panes/TerminalPane.vala:81
+#: src/Panes/TerminalPane.vala:91
 msgid ""
 "Sound when hitting the end of a line and also for tab-completion when there "
 "are either no or multiple possible completions."
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:96
+#: src/Panes/TerminalPane.vala:106
 msgid "Show Tabs"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:101
+#: src/Panes/TerminalPane.vala:111
 msgid "Always"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:102
+#: src/Panes/TerminalPane.vala:112
 msgid "Hide when single tab"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:113
+#: src/Panes/TerminalPane.vala:123
 #, fuzzy
 msgid "Cursor Shape"
 msgstr "Tema Kursor:"
 
-#: src/Panes/TerminalPane.vala:118
+#: src/Panes/TerminalPane.vala:128
 msgid "Block"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:119
+#: src/Panes/TerminalPane.vala:129
 msgid "I-Beam"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:120
+#: src/Panes/TerminalPane.vala:130
 msgid "Underline"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:131
+#: src/Panes/TerminalPane.vala:141
 #, fuzzy
 msgid "Terminal Font"
 msgstr "Terminal"
@@ -369,398 +383,31 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: src/Widgets/Categories.vala:34
+#: src/Widgets/BasePane.vala:58
 msgid "Reset settings successfully"
 msgstr ""
 
-#: src/Widgets/Categories.vala:66
+#: src/Widgets/Categories.vala:67
 #, c-format
 msgid "Failed to Load %s Preference"
 msgstr ""
 
-#: src/Widgets/Categories.vala:67
+#: src/Widgets/Categories.vala:68
 msgid ""
 "Make sure your Pantheon desktop installation is up to date and not "
 "incomplete."
 msgstr ""
 
-#: src/Widgets/Dialog.vala:18
-msgid "Get Support…"
-msgstr ""
-
 #: src/Widgets/OpenButton.vala:15
 #, c-format
-msgid "Open \"%s\""
+msgid "Open “%s”"
 msgstr ""
 
 #: src/Widgets/OpenButton.vala:25
 #, c-format
-msgid "Failed To Open \"%s\""
+msgid "Failed To Open “%s”"
 msgstr ""
 
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr ""
-
-#, fuzzy
-#~ msgid "Appearance pane in the light mode"
-#~ msgstr "Penampilan"
-
-#, fuzzy
-#~ msgid "Appearance pane in the dark mode"
-#~ msgstr "Penampilan"
-
-#~ msgid "Tweaks"
-#~ msgstr "Tweak"
-
-#, fuzzy
-#~ msgid "Theme Settings"
-#~ msgstr "Tetapan Tweak OS elementary"
-
-#, fuzzy
-#~ msgid "Icons:"
-#~ msgstr "Saiz Ikon:"
-
-#, fuzzy
-#~ msgid "Layout:"
-#~ msgstr "Bentangan Suai:"
-
-#, fuzzy
-#~ msgid "Add new window controls layout"
-#~ msgstr "Bentangan kawalan tetingkap suai"
-
-#~ msgid "Animations"
-#~ msgstr "Animasi"
-
-#, fuzzy
-#~ msgid "Close:"
-#~ msgstr "Tutup Sahaja"
-
-#, fuzzy
-#~ msgid "Minimize:"
-#~ msgstr "Minimum Ke Kiri"
-
-#, fuzzy
-#~ msgid "Workspace switch:"
-#~ msgstr "Tempoh Tukar Ruang Kerja:"
-
-#~ msgid "Shadows"
-#~ msgstr "Bayang"
-
-#~ msgid "Plank"
-#~ msgstr "Plank"
-
-#~ msgid "Slingshot"
-#~ msgstr "Slingshot"
-
-#~ msgid "Cerbere"
-#~ msgstr "Cerbere"
-
-#~ msgid "Disabled"
-#~ msgstr "Dilumpuhkan"
-
-#~ msgid "Watched Processes"
-#~ msgstr "Proses Dipantau"
-
-#~ msgid "Add..."
-#~ msgstr "Tambah..."
-
-#~ msgid "Remove"
-#~ msgstr "Buang"
-
-#~ msgid "Animations:"
-#~ msgstr "Animasi:"
-
-#~ msgid "If the animations play at all"
-#~ msgstr "Jika animasi mainkan"
-
-#~ msgid "Open Duration:"
-#~ msgstr "Tempoh Buka:"
-
-#~ msgid "Plays when an application is opened"
-#~ msgstr "Main bila aplikasi dibuka"
-
-#~ msgid "Close Duration:"
-#~ msgstr "Tempoh Tutup:"
-
-#~ msgid "Plays when an application is closed"
-#~ msgstr "Main bila aplikasi ditutup"
-
-#~ msgid "Snap Duration:"
-#~ msgstr "Tempoh Lekap:"
-
-#~ msgid "Plays when an application is snapped to the side"
-#~ msgstr "Main bila aplikasi dilekap ke sisi"
-
-#~ msgid "Minimize Duration:"
-#~ msgstr "Tempoh Minimum:"
-
-#~ msgid "Plays when an application is minimized"
-#~ msgstr "Main bila aplikasi diminimumkan"
-
-#~ msgid "Plays when a workspace switch is initiated"
-#~ msgstr "Main bila ruang kerja bertukar dimulakan"
-
-#~ msgid "Single Click:"
-#~ msgstr "Klik Tunggal:"
-
-#~ msgid "If set off, files will use 'normal' double-click behavior"
-#~ msgstr "Jika dimatikan, fail akan guna kelakuan dwi-klik biasa"
-
-#~ msgid "For date accessed, modified, etc."
-#~ msgstr "Untuk tarikh dicapai, diubahsuai, dll."
-
-#~ msgid "Smallest"
-#~ msgstr "Terkecil"
-
-#~ msgid "Smaller"
-#~ msgstr "Lebih kecil"
-
-#~ msgid "Small"
-#~ msgstr "Kecil"
-
-#~ msgid "Normal"
-#~ msgstr "Biasa"
-
-#~ msgid "Large"
-#~ msgstr "Besar"
-
-#~ msgid "Larger"
-#~ msgstr "Lebih Besar"
-
-#~ msgid "Largest"
-#~ msgstr "Terbesar"
-
-#~ msgid "Sidebar Icon Size:"
-#~ msgstr "Saiz Ikon Palang Sisi:"
-
-#~ msgid "Size of the icons in the sidebar"
-#~ msgstr "Saiz ikon dalam palang sisi"
-
-#~ msgid "Used by default by most applications"
-#~ msgstr "Digunakan secara lalai oleh kebanyakan aplikasi"
-
-#~ msgid "Used when displaying documents, if no other font was chosen"
-#~ msgstr "Digunakan bila memaparkan dokumen, jika tiada fon lain dipilih"
-
-#~ msgid "Used in the terminal, for code, and sometimes for plain text"
-#~ msgstr ""
-#~ "Digunakan dalam terminal, untuk kod, dan kadangkala untuk teks biasa"
-
-#~ msgid "Used to display window titles"
-#~ msgstr "Digunakan untuk papar tajuk tetingkap"
-
-#~ msgid "Rows:"
-#~ msgstr "Baris:"
-
-#~ msgid "The number of rows displayed in Slingshot"
-#~ msgstr "Bilangan baris yang dipapar dalam Slingshot"
-
-#~ msgid "Columns:"
-#~ msgstr "Lajur:"
-
-#~ msgid "The number of columns displayed in Slingshot"
-#~ msgstr "Bilangan lajur yang dipapar dalam Slingshot"
-
-#~ msgid "Current Workspace Only"
-#~ msgstr "Ruang Kerja Semasa Sahaja"
-
-#~ msgid "Show only windows on the current workspace"
-#~ msgstr "Hanya tunjuk tetingkap pada ruang kerja semasa"
-
-#~ msgid "Will still show pinned items on different workspaces"
-#~ msgstr "Masih tunjukkan item dicemat pada ruang kerja yang berbeza"
-
-#~ msgid "Lock Items:"
-#~ msgstr "Item Dikunci:"
-
-#~ msgid "Whether to prevent drag'n'drop actions and lock items on the dock"
-#~ msgstr ""
-#~ "Sama ada hendak halang tindakan seret-dan-lepas dan kunci item pada labuh"
-
-#~ msgid "The size of each icon in the plank"
-#~ msgstr "Saiz bagi setiap ikon dalam plank"
-
-#~ msgid "Don't hide"
-#~ msgstr "Jangan sembunyi"
-
-#~ msgid "Intelligent hide"
-#~ msgstr "Sembunyi pintar"
-
-#~ msgid "Auto hide"
-#~ msgstr "Sembunyi sendiri"
-
-#~ msgid "Hide on maximize"
-#~ msgstr "Sembunyi bila dimaksimumkan"
-
-#~ msgid "Hide Mode:"
-#~ msgstr "Mod Sembunyi:"
-
-#~ msgid "Plank's hide mode"
-#~ msgstr "Mod sembunyi Plank"
-
-#~ msgid "Hide Delay (ms):"
-#~ msgstr "Lengah Sembunyi (ms):"
-
-#~ msgid "Time to wait before unhiding the dock"
-#~ msgstr "Masa menunggu sebelum memunculkan labuh"
-
-#~ msgid "Theme:"
-#~ msgstr "Tema:"
-
-#~ msgid "Plank's theme for the dock"
-#~ msgstr "Tema Plank untuk labuh"
-
-#~ msgid "Primary Monitor"
-#~ msgstr "Monitor Utama"
-
-#~ msgid "Monitor %d"
-#~ msgstr "Monitor %d"
-
-#~ msgid "Monitor:"
-#~ msgstr "Monitor:"
-
-#~ msgid "The monitor that Plank is displayed on"
-#~ msgstr "Monitor yang mana Plank dipaparkan"
-
-#~ msgid "Left"
-#~ msgstr "Kiri"
-
-#~ msgid "Right"
-#~ msgstr "Kanan"
-
-#~ msgid "Top"
-#~ msgstr "Atas"
-
-#~ msgid "Bottom"
-#~ msgstr "Bawah"
-
-#~ msgid "Screen Position:"
-#~ msgstr "Kedudukan Skrin:"
-
-#~ msgid "Where on the screen Plank is displayed"
-#~ msgstr "Lokasi Plank skrin dipaparkan"
-
-#~ msgid "Panel"
-#~ msgstr "Panel"
-
-#~ msgid "Centered"
-#~ msgstr "Ditengahkan"
-
-#~ msgid "Alignment:"
-#~ msgstr "Jajaran:"
-
-#~ msgid "The alignment for the dock on the monitor's edge"
-#~ msgstr "Jajaran pada llabuh di pinggir monitor"
-
-#~ msgid "Item Alignment:"
-#~ msgstr "Jajaran Item:"
-
-#~ msgid "The alignment of the items in this dock if panel-mode is used"
-#~ msgstr "Jajaran item dalam labuh ini jika mod-panel digunakan"
-
-#~ msgid "Offset:"
-#~ msgstr "Ofset:"
-
-#~ msgid "The offset (in percent) from the alignment point to shift Plank"
-#~ msgstr "Ofset (dalam peratus) dari titik jajaran ke shift Plank"
-
-#~ msgid "Custom"
-#~ msgstr "Suai"
-
-#~ msgid "Opacity:"
-#~ msgstr "Kelegapan:"
-
-#~ msgid "How transparent the background of the terminal is"
-#~ msgstr "Bagaimana kelutsinaran latar belakang terminal"
-
-#~ msgid "A set of settings for terminal palette and background color"
-#~ msgstr "Satu set tetapan untuk palet terminal dan warna latar belakang"
-
-#~ msgid "Prefer Dark Theme:"
-#~ msgstr "Utamakan Tema Gelap:"
-
-#~ msgid "GTK+ windows will now prefer the dark GTK+ theme"
-#~ msgstr "Tetingkap GTK+ kini akan utamakan tema GTK+ gelap"
-
-#~ msgid ""
-#~ "Some applications will not react well with this enabled and can look "
-#~ "terrible"
-#~ msgstr ""
-#~ "Sesetengah aplikasi tidak akan bertindakbalas dengan baik jika dibenarkan "
-#~ "dan kelihatan teruk"
-
-#~ msgid "Metacity Theme:"
-#~ msgstr "Tema Metacity:"
-
-#~ msgid "Used to render windows that do not use GTK+"
-#~ msgstr "Digunakan untuk terap tetingkap yang tidak guna GTK+"
-
-#~ msgid "Used to render GTK+ windows like Switchboard"
-#~ msgstr "Digunakan untuk terap tetingkap GTK+ seperti Switchboard"
-
-#~ msgid "Used to theme the icon set, including application icons"
-#~ msgstr "Digunakan untuk temakan set ikon, termasuklah ikon aplikasi"
-
-#~ msgid "Used to theme the cursor"
-#~ msgstr "Digunakan untuk temakan kursor"
-
-#~ msgid ""
-#~ "Controls located at the top of the window for close, minimize, and "
-#~ "maximize"
-#~ msgstr ""
-#~ "Kawalan berada di bahagian atas tetingkap untuk tutup, minimum, dan "
-#~ "maksimum"
-
-#~ msgid "May break window controls! May stop working with updates to system!"
-#~ msgstr ""
-#~ "Boleh rosakkan kawalan tetingkap! Mungkin berhenti berfungsi dengan "
-#~ "kemaskini sistem!"
-
-#~ msgid "Audible Bell:"
-#~ msgstr "Loceng Boleh Dengar:"
-
-#~ msgid "Sound that plays when an error has been made"
-#~ msgstr "Bunyi yang dimainkan bila ralat telah berlaku"
-
-#~ msgid "Focused Windows:"
-#~ msgstr "Tetingkap Difokus:"
-
-#~ msgid "Shadow beneath windows that you have currently selected"
-#~ msgstr "Bayang di bawah tetingkap yang anda pilih buat masa ini"
-
-#~ msgid "This may not actually do anything"
-#~ msgstr "Ia mungkin tidak membuat apa-apa"
-
-#~ msgid "Unfocused Windows:"
-#~ msgstr "Tetingkap Tidak Difokus:"
-
-#~ msgid "Shadow beneath windows that you do not have selected"
-#~ msgstr "Bayang di bawah tetingkap yang anda tidak pilih"
-
-#~ msgid "Name"
-#~ msgstr "Nama"
-
-#~ msgid "Shortcut"
-#~ msgstr "Pintasan"
-
-#~ msgid "Command"
-#~ msgstr "Perintah"
-
-#~ msgid "Every field must be filled!"
-#~ msgstr "Setiap medan mestilah diisi!"
-
-#~ msgid "Name:"
-#~ msgstr "Nama:"
-
-#~ msgid "Shortcut:"
-#~ msgstr "Pintasan:"
-
-#~ msgid "Command:"
-#~ msgstr "Perintah:"
-
-#~ msgid "OS X"
-#~ msgstr "OS X"
-
-#~ msgid "Revert to default setting"
-#~ msgstr "Kembali ke tetapan lalai"

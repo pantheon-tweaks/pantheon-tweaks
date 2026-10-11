@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>io.github.pantheon_tweaks.pantheon-tweaks</id>
-  <launchable type="desktop-id">io.github.pantheon_tweaks.pantheon-tweaks.desktop</launchable>
-  <translation type="gettext">pantheon-tweaks</translation>
-  <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-3.0-or-later</project_license>
 
   <name>Pantheon Tweaks</name>
   <summary>Tweak Pantheon settings</summary>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
   <description>
     <p>
-      A system customization app for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance.
+      A system customization app for the Pantheon Desktop that lets you easily and safely customise your desktop&apos;s appearance.
     </p>
   </description>
 
+  <content_rating type="oars-1.1" />
+
+  <developer id="io.github.pantheon_tweaks">
+    <name>Pantheon Tweaks Developers</name>
+  </developer>
+
+  <url type="homepage">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
+  <url type="bugtracker">https://github.com/pantheon-tweaks/pantheon-tweaks/issues</url>
+  <url type="help">https://github.com/pantheon-tweaks/pantheon-tweaks/discussions</url>
+  <url type="vcs-browser">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
+  <url type="translate">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
+
+  <launchable type="desktop-id">io.github.pantheon_tweaks.pantheon-tweaks.desktop</launchable>
+  <translation type="gettext">pantheon-tweaks</translation>
   <screenshots>
     <screenshot type="default" environment="pantheon">
       <caption>Appearance pane</caption>
@@ -25,26 +39,31 @@
     </screenshot>
   </screenshots>
 
-  <content_rating type="oars-1.1" />
-
-  <url type="homepage">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
-  <url type="bugtracker">https://github.com/pantheon-tweaks/pantheon-tweaks/issues</url>
-  <url type="help">https://github.com/pantheon-tweaks/pantheon-tweaks/discussions</url>
-  <url type="vcs-browser">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
-  <url type="translate">https://github.com/pantheon-tweaks/pantheon-tweaks</url>
-
-  <!-- developer_name has deprecated since AppStream 1.0 -->
-  <developer_name>Pantheon Tweaks Developers</developer_name>
-  <developer id="io.github.pantheon_tweaks">
-    <name>Pantheon Tweaks Developers</name>
-  </developer>
-
   <!--
     We intentionally don't support translation for the descriptions in release notes
     because only a few past release notes would be often shown in the app store
     even if translators translated all of them, which is not worthy.
   -->
   <releases>
+    <release version="2.6.0" date="2026-10-11" urgency="medium">
+      <description translate="no">
+        <p>
+          Improvements:
+        </p>
+        <ul>
+          <li>Appearance: Update ignore list of themes to improve support for in-development elementary OS Early Access</li>
+          <li>Appearance: Add support for modern themes with only GTK 4 stylesheets</li>
+          <li>Misc: Add switch and spin button to configure timeout for the “Application is not responding” dialog or disable it completely</li>
+        </ul>
+        <p>
+          Translation updates:
+        </p>
+        <ul>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="2.5.2" date="2026-05-03" urgency="low">
       <description translate="no">
         <p>
@@ -317,6 +336,5 @@
         </ul>
       </description>
     </release>
-
   </releases>
 </component>

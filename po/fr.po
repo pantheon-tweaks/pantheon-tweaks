@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: elementary-community\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-27 22:21+0900\n"
+"POT-Creation-Date: 2026-10-11 16:28+0900\n"
 "PO-Revision-Date: 2021-08-26 19:05+0200\n"
 "Last-Translator: Roxfr <roxfr@outlook.fr>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -18,24 +18,20 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-09-14 08:34+0000\n"
 "X-Generator: Poedit 3.0\n"
 
-#: data/pantheon-tweaks.desktop.in:3 data/pantheon-tweaks.metainfo.xml.in.in:5
+#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:5
 #: src/MainWindow.vala:18 src/MainWindow.vala:22
 msgid "Pantheon Tweaks"
 msgstr "Pantheon Tweaks"
 
-#: data/pantheon-tweaks.desktop.in:4
-msgid "Customization Tool"
-msgstr ""
-
-#: data/pantheon-tweaks.desktop.in:5 data/pantheon-tweaks.metainfo.xml.in.in:6
+#: data/pantheon-tweaks.desktop.in:6 data/pantheon-tweaks.metainfo.xml.in.in:6
 msgid "Tweak Pantheon settings"
 msgstr "Ajuster les paramètres de Pantheon"
 
-#: data/pantheon-tweaks.desktop.in:11
+#: data/pantheon-tweaks.desktop.in:8
 msgid "Advanced;Preferences;Fonts;Theme;Volume;Files;Terminal;"
 msgstr ""
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:8
+#: data/pantheon-tweaks.metainfo.xml.in.in:12
 #, fuzzy
 msgid ""
 "A system customization app for the Pantheon Desktop that lets you easily and "
@@ -44,33 +40,31 @@ msgstr ""
 "Un panneau de configuration système pour le bureau Pantheon qui vous permet "
 "de personnaliser facilement et en toute sécurité l’apparence de votre bureau."
 
-#: data/pantheon-tweaks.metainfo.xml.in.in:236
-#: data/pantheon-tweaks.metainfo.xml.in.in:240
-#, fuzzy
-msgid "Appearance pane"
-msgstr "Apparence"
-
-#. developer_name has deprecated since AppStream 1.0
-#: data/pantheon-tweaks.metainfo.xml.in.in:246
-#: data/pantheon-tweaks.metainfo.xml.in.in:248
+#: data/pantheon-tweaks.metainfo.xml.in.in:20
 #, fuzzy
 msgid "Pantheon Tweaks Developers"
 msgstr "Pantheon Tweaks"
 
+#: data/pantheon-tweaks.metainfo.xml.in.in:33
+#: data/pantheon-tweaks.metainfo.xml.in.in:37
+#, fuzzy
+msgid "Appearance pane"
+msgstr "Apparence"
+
 #: src/MainWindow.vala:40
 #, c-format
-msgid "Your Desktop Environment \"%s\" Is Not Supported"
+msgid "Your Desktop Environment “%s” Is Not Supported"
 msgstr ""
 
 #: src/MainWindow.vala:42
 msgid "Pantheon Tweaks is a customization tool for Pantheon."
 msgstr ""
 
-#: src/Panes/AppearancePane.vala:35
+#: src/Panes/AppearancePane.vala:46
 msgid "Appearance"
 msgstr "Apparence"
 
-#: src/Panes/AppearancePane.vala:37
+#: src/Panes/AppearancePane.vala:48
 msgid ""
 "Change the theme and button layout of windows. Changing theme may cause "
 "visibility issue."
@@ -78,251 +72,272 @@ msgstr ""
 "Modifier le thème et la disposition des boutons des fenêtres. Le changement "
 "de thème peut entraîner desproblèmes de visibilité."
 
-#: src/Panes/AppearancePane.vala:38
+#: src/Panes/AppearancePane.vala:49
 msgid "General"
 msgstr "Général"
 
-#: src/Panes/AppearancePane.vala:50
+#: src/Panes/AppearancePane.vala:61
 #, fuzzy
 msgid "GTK Theme"
 msgstr "Thème GTK+ :"
 
-#. TRANSLATORS: The "%s" represents the path where custom themes are installed
-#: src/Panes/AppearancePane.vala:52
+#. TRANSLATORS: The “%s” represents the path where custom themes are installed
+#: src/Panes/AppearancePane.vala:63
 #, c-format
 msgid "To show custom themes here, put them in %s."
 msgstr "Pour afficher les thèmes personnalisés ici, placez-les dans %s."
 
-#: src/Panes/AppearancePane.vala:53 src/Panes/AppearancePane.vala:79
-#: src/Panes/AppearancePane.vala:105 src/Panes/AppearancePane.vala:131
+#: src/Panes/AppearancePane.vala:64 src/Panes/AppearancePane.vala:90
+#: src/Panes/AppearancePane.vala:116 src/Panes/AppearancePane.vala:142
 msgid "theme-name"
 msgstr "nom-thème"
 
-#: src/Panes/AppearancePane.vala:76
+#: src/Panes/AppearancePane.vala:87
 #, fuzzy
 msgid "Icon Theme"
 msgstr "Thème des icônes :"
 
-#. TRANSLATORS: The "%s" represents the path where custom icons are installed
-#: src/Panes/AppearancePane.vala:78
+#. TRANSLATORS: The “%s” represents the path where custom icons are installed
+#: src/Panes/AppearancePane.vala:89
 #, c-format
 msgid "To show custom icons here, put them in %s."
 msgstr "Pour afficher les icônes personnalisées ici, placez-les dans %s."
 
-#: src/Panes/AppearancePane.vala:102
+#: src/Panes/AppearancePane.vala:113
 #, fuzzy
 msgid "Cursor Theme"
 msgstr "Curseur :"
 
-#. TRANSLATORS: The "%s" represents the path where custom cursors are installed
-#: src/Panes/AppearancePane.vala:104
+#. TRANSLATORS: The “%s” represents the path where custom cursors are installed
+#: src/Panes/AppearancePane.vala:115
 #, c-format
 msgid "To show custom cursors here, put them in %s."
 msgstr "Pour afficher les curseurs personnalisés ici, placez-les dans %s."
 
-#: src/Panes/AppearancePane.vala:128
+#: src/Panes/AppearancePane.vala:139
 #, fuzzy
 msgid "Sound Theme"
 msgstr "Thème des icônes :"
 
-#. TRANSLATORS: The "%s" represents the path where custom sounds are installed
-#: src/Panes/AppearancePane.vala:130
+#. TRANSLATORS: The “%s” represents the path where custom sounds are installed
+#: src/Panes/AppearancePane.vala:141
 #, c-format
 msgid "To show custom sounds here, put them in %s."
 msgstr "Pour afficher les sons personnalisés ici, placez-les dans %s."
 
-#: src/Panes/AppearancePane.vala:152
+#: src/Panes/AppearancePane.vala:163
 #, fuzzy
-msgid "Force Dark Style"
+msgid "Legacy Dark Style"
 msgstr "Forcer l'utilisation d'une feuille de style sombre :"
 
-#: src/Panes/AppearancePane.vala:153
+#: src/Panes/AppearancePane.vala:164
+#, fuzzy
 msgid ""
-"Forces dark style on all apps, even if it's not supported. Requires "
-"restarting the application."
+"Attempts to force dark style on apps that don't support it. Requires restart "
+"of the apps."
 msgstr ""
 "Force le style sombre sur toutes les applications, même s'il n'est pas pris "
 "en charge. Nécessite le redémarrage de l'application."
 
-#: src/Panes/AppearancePane.vala:168
+#: src/Panes/AppearancePane.vala:179
 #, fuzzy
 msgid "Window Control Layout"
 msgstr "Contrôles de fenêtre"
 
-#: src/Panes/AppearancePane.vala:169
+#: src/Panes/AppearancePane.vala:180
 msgid "Changes button layout of the window."
 msgstr "Modifie la disposition des boutons de la fenêtre."
 
-#: src/Panes/AppearancePane.vala:174
+#: src/Panes/AppearancePane.vala:185
 msgid "elementary"
 msgstr "elementary"
 
-#: src/Panes/AppearancePane.vala:175
+#: src/Panes/AppearancePane.vala:186
 msgid "elementary Reversed"
 msgstr "Inversé elementary"
 
-#: src/Panes/AppearancePane.vala:176
+#: src/Panes/AppearancePane.vala:187
 msgid "Close Only Right"
 msgstr "Fermer uniquement à droite"
 
-#: src/Panes/AppearancePane.vala:177
+#: src/Panes/AppearancePane.vala:188
 msgid "Close Only Left"
 msgstr "Fermer uniquement à gauche"
 
-#: src/Panes/AppearancePane.vala:178
+#: src/Panes/AppearancePane.vala:189
 msgid "Add Minimize Left"
 msgstr "Ajouter réduire à gauche"
 
-#: src/Panes/AppearancePane.vala:179
+#: src/Panes/AppearancePane.vala:190
 msgid "Add Minimize Right"
 msgstr "Ajouter réduire à droite"
 
-#: src/Panes/AppearancePane.vala:180
+#: src/Panes/AppearancePane.vala:191
 msgid "Replace Maximize to Minimize"
 msgstr "Remplacer agrandir par réduire"
 
-#: src/Panes/AppearancePane.vala:181
+#: src/Panes/AppearancePane.vala:192
 msgid "Windows"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:182
+#: src/Panes/AppearancePane.vala:193
 msgid "macOS"
 msgstr "macOS"
 
-#: src/Panes/AppearancePane.vala:183
+#: src/Panes/AppearancePane.vala:194
 #, fuzzy
 msgid "Windows Reversed"
 msgstr "Windows"
 
-#: src/Panes/AppearancePane.vala:198
+#: src/Panes/AppearancePane.vala:209
 #, fuzzy
 msgid "Show GNOME Menu"
 msgstr "Afficher le menu GNOME :"
 
-#: src/Panes/AppearancePane.vala:199
+#: src/Panes/AppearancePane.vala:210
 msgid "Whether to show GNOME menu in GNOME apps."
 msgstr "S'il faut afficher le menu GNOME dans les applications GNOME."
 
-#: src/Panes/FilesPane.vala:17
+#: src/Panes/FilesPane.vala:21
 msgid "Files"
 msgstr "Fichiers"
 
-#: src/Panes/FilesPane.vala:19
+#: src/Panes/FilesPane.vala:23
 msgid "Applications"
 msgstr "Applications"
 
-#: src/Panes/FilesPane.vala:27
+#: src/Panes/FilesPane.vala:31
 #, fuzzy
 msgid "Restore Tabs"
 msgstr "Onglets de restauration :"
 
-#: src/Panes/FilesPane.vala:28
+#: src/Panes/FilesPane.vala:32
 msgid "Restore tabs from previous session when launched."
 msgstr ""
 
-#: src/Panes/FilesPane.vala:44
+#: src/Panes/FilesPane.vala:48
 msgid "Locale"
 msgstr "Langage"
 
-#: src/Panes/FilesPane.vala:45
+#: src/Panes/FilesPane.vala:49
 msgid "ISO"
 msgstr "ISO"
 
-#: src/Panes/FilesPane.vala:46
+#: src/Panes/FilesPane.vala:50
 msgid "Informal"
 msgstr "Informel"
 
-#: src/Panes/FilesPane.vala:48
+#: src/Panes/FilesPane.vala:52
 #, fuzzy
 msgid "Date & Time Format"
 msgstr "Format de date :"
 
-#: src/Panes/FilesPane.vala:49
+#: src/Panes/FilesPane.vala:53
 msgid "Date and time format used in the properties dialog or the list view."
 msgstr ""
 
-#: src/Panes/FontsPane.vala:19
+#: src/Panes/FontsPane.vala:27
 msgid "Fonts"
 msgstr "Polices"
 
-#: src/Panes/FontsPane.vala:21
+#: src/Panes/FontsPane.vala:29
 msgid "Change the fonts used in your system and documents by default."
 msgstr ""
 "Modifier les polices utilisées dans votre système et vos documents par "
 "défaut."
 
-#: src/Panes/FontsPane.vala:29
+#: src/Panes/FontsPane.vala:37
 #, fuzzy
 msgid "Default Font"
 msgstr "Police par défaut :"
 
-#: src/Panes/FontsPane.vala:45
+#: src/Panes/FontsPane.vala:53
 #, fuzzy
 msgid "Document Font"
 msgstr "Police des documents :"
 
-#: src/Panes/FontsPane.vala:61
+#: src/Panes/FontsPane.vala:69
 #, fuzzy
 msgid "Monospace Font"
 msgstr "Police à taille fixe :"
 
-#: src/Panes/FontsPane.vala:77
+#: src/Panes/FontsPane.vala:85
 #, fuzzy
 msgid "Titlebar Font"
 msgstr "Police de la barre de titre :"
 
-#: src/Panes/MiscPane.vala:15
+#: src/Panes/MiscPane.vala:35
 msgid "Miscellaneous"
 msgstr "Divers"
 
-#: src/Panes/MiscPane.vala:17
+#: src/Panes/MiscPane.vala:37
 msgid "Configure some other hidden settings."
 msgstr "Configurer d'autres paramètres cachés."
 
-#: src/Panes/MiscPane.vala:22
+#: src/Panes/MiscPane.vala:45
 #, fuzzy
 msgid "Max Volume"
 msgstr "Volume maximum :"
 
-#: src/Panes/TerminalPane.vala:23
+#: src/Panes/MiscPane.vala:66
+msgid "Check Alive"
+msgstr ""
+
+#: src/Panes/MiscPane.vala:67
+msgid ""
+"If enabled, an app has to respond to cyclic ping requests from Mutter. If it "
+"doesn't, “Application is not responding” dialog appears where allows you to "
+"choose force quit it or wait."
+msgstr ""
+
+#: src/Panes/MiscPane.vala:81
+msgid "Check Alive Timeout"
+msgstr ""
+
+#: src/Panes/MiscPane.vala:82
+msgid ""
+"Number of milliseconds an app has to respond to a ping request from Mutter."
+msgstr ""
+
+#: src/Panes/TerminalPane.vala:33
 msgid "Terminal"
 msgstr "Terminal"
 
-#: src/Panes/TerminalPane.vala:32
+#: src/Panes/TerminalPane.vala:42
 #, fuzzy
 msgid "Follow Last Tab"
 msgstr "Suivre le dernier onglet :"
 
-#: src/Panes/TerminalPane.vala:33
+#: src/Panes/TerminalPane.vala:43
 msgid "Creating a new tab sets the working directory of the last opened tab."
 msgstr ""
 "La création d'un nouvel onglet définit le répertoire de travail du dernier "
 "onglet ouvert."
 
-#: src/Panes/TerminalPane.vala:48
+#: src/Panes/TerminalPane.vala:58
 #, fuzzy
 msgid "Unsafe Paste Alert"
 msgstr "Alerte de collage dangereux :"
 
-#: src/Panes/TerminalPane.vala:49
+#: src/Panes/TerminalPane.vala:59
 msgid "Warn when pasted text contains multiple or administrative commands."
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:64
+#: src/Panes/TerminalPane.vala:74
 #, fuzzy
 msgid "Remember Tabs"
 msgstr "Se souvenir des onglets :"
 
-#: src/Panes/TerminalPane.vala:65
+#: src/Panes/TerminalPane.vala:75
 msgid "If enabled, last opened tabs are restored on start."
 msgstr "Si activé, les derniers onglets ouverts sont restaurés au démarrage."
 
-#: src/Panes/TerminalPane.vala:80
+#: src/Panes/TerminalPane.vala:90
 #, fuzzy
 msgid "Terminal Bell"
 msgstr "Sonnerie du terminal :"
 
-#: src/Panes/TerminalPane.vala:81
+#: src/Panes/TerminalPane.vala:91
 msgid ""
 "Sound when hitting the end of a line and also for tab-completion when there "
 "are either no or multiple possible completions."
@@ -330,37 +345,37 @@ msgstr ""
 "Son lorsque vous frappez la fin d’une ligne et également pour la complétion "
 "par tabulation lorsqu’il n’y a pas ou plusieurs achèvements possibles."
 
-#: src/Panes/TerminalPane.vala:96
+#: src/Panes/TerminalPane.vala:106
 #, fuzzy
 msgid "Show Tabs"
 msgstr "Onglets de restauration :"
 
-#: src/Panes/TerminalPane.vala:101
+#: src/Panes/TerminalPane.vala:111
 msgid "Always"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:102
+#: src/Panes/TerminalPane.vala:112
 msgid "Hide when single tab"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:113
+#: src/Panes/TerminalPane.vala:123
 #, fuzzy
 msgid "Cursor Shape"
 msgstr "Curseur :"
 
-#: src/Panes/TerminalPane.vala:118
+#: src/Panes/TerminalPane.vala:128
 msgid "Block"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:119
+#: src/Panes/TerminalPane.vala:129
 msgid "I-Beam"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:120
+#: src/Panes/TerminalPane.vala:130
 msgid "Underline"
 msgstr ""
 
-#: src/Panes/TerminalPane.vala:131
+#: src/Panes/TerminalPane.vala:141
 #, fuzzy
 msgid "Terminal Font"
 msgstr "Terminal"
@@ -385,486 +400,31 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: src/Widgets/Categories.vala:34
+#: src/Widgets/BasePane.vala:58
 msgid "Reset settings successfully"
 msgstr ""
 
-#: src/Widgets/Categories.vala:66
+#: src/Widgets/Categories.vala:67
 #, c-format
 msgid "Failed to Load %s Preference"
 msgstr ""
 
-#: src/Widgets/Categories.vala:67
+#: src/Widgets/Categories.vala:68
 msgid ""
 "Make sure your Pantheon desktop installation is up to date and not "
 "incomplete."
 msgstr ""
 
-#: src/Widgets/Dialog.vala:18
-msgid "Get Support…"
-msgstr ""
-
 #: src/Widgets/OpenButton.vala:15
 #, c-format
-msgid "Open \"%s\""
+msgid "Open “%s”"
 msgstr ""
 
 #: src/Widgets/OpenButton.vala:25
 #, c-format
-msgid "Failed To Open \"%s\""
+msgid "Failed To Open “%s”"
 msgstr ""
 
 #: src/Widgets/OpenButton.vala:26
 msgid "There was an error when opening the directory or creating it."
 msgstr ""
-
-#, fuzzy
-#~ msgid "Appearance pane in the light mode"
-#~ msgstr "Volet d'apparence"
-
-#, fuzzy
-#~ msgid "Appearance pane in the dark mode"
-#~ msgstr "Volet d'apparence"
-
-#~ msgid "Tweaks"
-#~ msgstr "Ajustements"
-
-#, fuzzy
-#~ msgid ""
-#~ "Show a warning dialog when pasting a command with 'sudo' or multiple "
-#~ "lines."
-#~ msgstr ""
-#~ "Afficher une boîte de dialogue d'avertissement lorsqu'une commande collée "
-#~ "contient 'sudo'."
-
-#~ msgid "Theme Settings"
-#~ msgstr "Réglage des thèmes"
-
-#~ msgid "GTK:"
-#~ msgstr "GTK :"
-
-#~ msgid "Icons:"
-#~ msgstr "Icônes :"
-
-#~ msgid "Sound:"
-#~ msgstr "Son :"
-
-#~ msgid "Layout:"
-#~ msgstr "Disposition :"
-
-#~ msgid "Ubuntu"
-#~ msgstr "Ubuntu"
-
-#~ msgid "Sound Indicator"
-#~ msgstr "Indicateur sonore"
-
-#, fuzzy
-#~ msgid "Update German translation (thanks to @skalski)"
-#~ msgstr "Mettre à jour les traductions"
-
-#, fuzzy
-#~ msgid "Update Italian translation (thanks to @albanobattistella)"
-#~ msgstr "Mettre à jour les traductions"
-
-#, fuzzy
-#~ msgid "Update Russian translation (thanks to @lenemter)"
-#~ msgstr "Mettre à jour les traductions"
-
-#, fuzzy
-#~ msgid "Update Japanese translation"
-#~ msgstr "Mettre à jour les traductions"
-
-#, fuzzy
-#~ msgid "Update German translation (thanks to @uwe-ss)"
-#~ msgstr "Mettre à jour les traductions"
-
-#, fuzzy
-#~ msgid "Update Hungarian translation (thanks to @TomiOhl)"
-#~ msgstr "Mettre à jour les traductions"
-
-#, fuzzy
-#~ msgid "Update Chinese Simplified translation (thanks to @imgradeone)"
-#~ msgstr "Mettre à jour les traductions"
-
-#, fuzzy
-#~ msgid "Update French translation (thanks to @roxfr)"
-#~ msgstr "Mettre à jour les traductions"
-
-#~ msgid "Exclude Adwaita/gnome/hicolor themes from theme selections"
-#~ msgstr "Exclure les thèmes Adwaita/gnome/hicolor des sélections de thèmes"
-
-#~ msgid "Support accessing to panes with settings paths"
-#~ msgstr ""
-#~ "Prise en charge de l'accès aux volets avec les chemins de paramètres"
-
-#~ msgid "Make sure the plug works on NixOS (thanks to @bobby285271)"
-#~ msgstr ""
-#~ "Assurez-vous que le programme fonctionne sur NixOS (merci à @bobby285271)"
-
-#~ msgid "Update translations"
-#~ msgstr "Mettre à jour les traductions"
-
-#~ msgid ""
-#~ "elementary Tweaks is now renamed to Pantheon Tweaks and get some new "
-#~ "features and fixes:"
-#~ msgstr ""
-#~ "Elementary Tweaks est désormais renommé Pantheon Tweaks et bénéficie de "
-#~ "nouvelles fonctionnalités et correctifs :"
-
-#~ msgid "Remove preferences now supported in Pantheon officially"
-#~ msgstr ""
-#~ "Supprimer les préférences désormais prises en charge dans Pantheon "
-#~ "officiellement"
-
-#~ msgid "Remove preferences causing the plug crash"
-#~ msgstr "Supprimer les préférences à l’origine du blocage de la fiche"
-
-#~ msgid "Fully redesigned plug"
-#~ msgstr "Fiche entièrement redessinée"
-
-#~ msgid "Support changing sound theme (thanks to @pongloongyeat)"
-#~ msgstr ""
-#~ "Prise en charge du changement de thème sonore (grâce à @pongloongyeat)"
-
-#~ msgid "Add new window controls layout"
-#~ msgstr "Ajouter une nouvelle disposition des contrôles de fenêtre"
-
-#~ msgid "Fix deprecations"
-#~ msgstr "Corriger les dépréciations"
-
-#~ msgid "Background color:"
-#~ msgstr "Couleur de l'arrière plan :"
-
-#~ msgid "Animations"
-#~ msgstr "Animations"
-
-#~ msgid ""
-#~ "Adjust the animation length used for window management or multitasking."
-#~ msgstr ""
-#~ "Ajuster la durée de l'animation utilisée pour la gestion des fenêtres ou "
-#~ "le multitâche."
-
-#~ msgid "Open:"
-#~ msgstr "Ouvrir :"
-
-#~ msgid "Close:"
-#~ msgstr "Fermer :"
-
-#~ msgid "Snap:"
-#~ msgstr "Accrocher :"
-
-#~ msgid "Minimize:"
-#~ msgstr "Réduire :"
-
-#~ msgid "Workspace switch:"
-#~ msgstr "Commutateur d'espace de travail :"
-
-#~ msgid "Videos"
-#~ msgstr "Vidéos"
-
-#~ msgid "Stay on top while playing:"
-#~ msgstr "Rester en haut tout en jouant :"
-
-#~ msgid "Move window from video canvas:"
-#~ msgstr "Déplacer la fenêtre du canevas vidéo :"
-
-#~ msgid "If enabled, the window can be dragged by clicking anywhere on it."
-#~ msgstr ""
-#~ "Si activé, la fenêtre peut être déplacée en cliquant n'importe où dessus."
-
-#~ msgid "Don't instantly start video playback:"
-#~ msgstr "Ne pas démarrer instantanément la lecture vidéo :"
-
-#~ msgid "If enabled, opening a video will not auto play it."
-#~ msgstr "Si activé, l'ouverture d'une vidéo ne la lira pas automatiquement."
-
-#~ msgid "Shadows"
-#~ msgstr "Ombres"
-
-#~ msgid "Plank"
-#~ msgstr "Plank"
-
-#~ msgid "Slingshot"
-#~ msgstr "Slingshot"
-
-#~ msgid "Cerbere"
-#~ msgstr "Cerbere"
-
-#~ msgid "Disabled"
-#~ msgstr "Désactivé"
-
-#~ msgid "Watched Processes"
-#~ msgstr "Processus monitorés"
-
-#~ msgid "Add..."
-#~ msgstr "Ajouter…"
-
-#~ msgid "Remove"
-#~ msgstr "Supprimer"
-
-#~ msgid "Animations:"
-#~ msgstr "Animations :"
-
-#~ msgid "Open Duration:"
-#~ msgstr "Durée d'ouverture :"
-
-#~ msgid "Plays when an application is opened"
-#~ msgstr "Joue quand une application est ouverte"
-
-#~ msgid "Close Duration:"
-#~ msgstr "Durée de fermeture :"
-
-#~ msgid "Plays when an application is closed"
-#~ msgstr "Joue quand une application est fermée"
-
-#~ msgid "Snap Duration:"
-#~ msgstr "Durée des transitions :"
-
-#~ msgid "Minimize Duration:"
-#~ msgstr "Durée de réduction :"
-
-#~ msgid "Plays when an application is minimized"
-#~ msgstr "Joue quand une application est réduite"
-
-#~ msgid "Single Click:"
-#~ msgstr "Simple clic :"
-
-#~ msgid "Smallest"
-#~ msgstr "La plus petite"
-
-#~ msgid "Smaller"
-#~ msgstr "Plus petite"
-
-#~ msgid "Small"
-#~ msgstr "Petite"
-
-#~ msgid "Normal"
-#~ msgstr "Normale"
-
-#~ msgid "Large"
-#~ msgstr "Grande"
-
-#~ msgid "Larger"
-#~ msgstr "Plus grande"
-
-#~ msgid "Largest"
-#~ msgstr "La plus grande"
-
-#~ msgid "Sidebar Icon Size:"
-#~ msgstr "Taille des icônes de la barre latérale :"
-
-#~ msgid "Size of the icons in the sidebar"
-#~ msgstr "Taille des icônes dans la barre latérale"
-
-#~ msgid "Used by default by most applications"
-#~ msgstr "Utilisé pas défaut par la plupart des applications"
-
-#~ msgid "Used when displaying documents, if no other font was chosen"
-#~ msgstr ""
-#~ "Utilisée lors de l'affichage des documents si aucune autre police n'a été "
-#~ "choisie"
-
-#~ msgid "Used in the terminal, for code, and sometimes for plain text"
-#~ msgstr ""
-#~ "Utilisé dans le terminal pour le code, et parfois pour le texte brut"
-
-#~ msgid "Used to display window titles"
-#~ msgstr "Utilisée pour afficher les titres des fenêtres"
-
-#~ msgid "Rows:"
-#~ msgstr "Lignes :"
-
-#~ msgid "The number of rows displayed in Slingshot"
-#~ msgstr "Le nombre de lignes affichée dans Slingshot"
-
-#~ msgid "Columns:"
-#~ msgstr "Colonnes :"
-
-#~ msgid "The number of columns displayed in Slingshot"
-#~ msgstr "Le nombre de colonnes affichée dans Slingshot"
-
-#~ msgid "Current Workspace Only"
-#~ msgstr "Espace de travail actuel seulement"
-
-#~ msgid "Show only windows on the current workspace"
-#~ msgstr "Afficher les fenêtres dans l'espace de travail actuel seulement"
-
-#~ msgid "Will still show pinned items on different workspaces"
-#~ msgstr ""
-#~ "Affichera les éléments épinglés sur les différents espaces de travail"
-
-#~ msgid "Lock Items:"
-#~ msgstr "Itèmes verouillés :"
-
-#~ msgid "Whether to prevent drag'n'drop actions and lock items on the dock"
-#~ msgstr ""
-#~ "Empêche les actions de glisser-déposer et verrouille les éléments sur la "
-#~ "barre des tâches"
-
-#~ msgid "Don't hide"
-#~ msgstr "Ne pas masquer"
-
-#~ msgid "Intelligent hide"
-#~ msgstr "Masquer intelligemment"
-
-#~ msgid "Auto hide"
-#~ msgstr "Masquer automatiquement"
-
-#~ msgid "Hide on maximize"
-#~ msgstr "Masquer si maximisé"
-
-#~ msgid "Hide Mode:"
-#~ msgstr "Comportement :"
-
-#~ msgid "Plank's hide mode"
-#~ msgstr "mode masquer de Plank"
-
-#~ msgid "Hide Delay (ms):"
-#~ msgstr "Délai avant de masquer (en ms) :"
-
-#~ msgid "Time to wait before unhiding the dock"
-#~ msgstr "Temps d'attente avant l'affichage de la barre des tâches"
-
-#~ msgid "Theme:"
-#~ msgstr "Thème :"
-
-#~ msgid "Plank's theme for the dock"
-#~ msgstr "Thème Plank pour la barre des tâches"
-
-#~ msgid "Primary Monitor"
-#~ msgstr "Écran principal"
-
-#~ msgid "Monitor %d"
-#~ msgstr "Écran %d"
-
-#~ msgid "Monitor:"
-#~ msgstr "Écran :"
-
-#~ msgid "The monitor that Plank is displayed on"
-#~ msgstr "L'écran sur lequel est affiché Plank"
-
-#~ msgid "Left"
-#~ msgstr "À gauche"
-
-#~ msgid "Right"
-#~ msgstr "À droite"
-
-#~ msgid "Top"
-#~ msgstr "En haut"
-
-#~ msgid "Bottom"
-#~ msgstr "En bas"
-
-#~ msgid "Screen Position:"
-#~ msgstr "Position de l'écran :"
-
-#~ msgid "Where on the screen Plank is displayed"
-#~ msgstr "L'endroit de l'écran où est affiché Plank"
-
-#~ msgid "Panel"
-#~ msgstr "Barre de menu"
-
-#~ msgid "Centered"
-#~ msgstr "Centrée"
-
-#~ msgid "Alignment:"
-#~ msgstr "Alignement :"
-
-#~ msgid "The alignment for the dock on the monitor's edge"
-#~ msgstr "Alignement de la barre des tâches sur le bord de l'écran"
-
-#~ msgid "Item Alignment:"
-#~ msgstr "Alignement des éléments"
-
-#~ msgid "The alignment of the items in this dock if panel-mode is used"
-#~ msgstr ""
-#~ "Alignement des itèmes sur la barre des tâches si le mode panneau est "
-#~ "utilisé"
-
-#~ msgid "Offset:"
-#~ msgstr "Décallage :"
-
-#~ msgid "The offset (in percent) from the alignment point to shift Plank"
-#~ msgstr ""
-#~ "Le décalage (en pourcents) pour déplacer Plank à partir du point "
-#~ "d'alignement"
-
-#~ msgid "Custom"
-#~ msgstr "Personnalisé"
-
-#~ msgid "Opacity:"
-#~ msgstr "Opacité :"
-
-#~ msgid "How transparent the background of the terminal is"
-#~ msgstr "Transparence de l'arrière-plan du terminal"
-
-#~ msgid "Prefer Dark Theme:"
-#~ msgstr "Préférer le thème sombre :"
-
-#~ msgid "GTK+ windows will now prefer the dark GTK+ theme"
-#~ msgstr "Les fenêtres GTK+ préfèreront à présent le thème GTK+ sombre"
-
-#~ msgid "Metacity Theme:"
-#~ msgstr "Thème Metacity :"
-
-#~ msgid "Used to render windows that do not use GTK+"
-#~ msgstr "Utilisé pour améliorer le rendu des fenêtres n'utilisant pas GTK+"
-
-#~ msgid "Used to render GTK+ windows like Switchboard"
-#~ msgstr "Utiliser pour rendre les fenêtres GTK+ comme Standart"
-
-#~ msgid "Used to theme the icon set, including application icons"
-#~ msgstr ""
-#~ "Utilisé pour le thème de l'ensemble d'icônes, incuant les icônes "
-#~ "d'aplications"
-
-#~ msgid "Used to theme the cursor"
-#~ msgstr "Utilisé pour le thème du curseur"
-
-#~ msgid ""
-#~ "Controls located at the top of the window for close, minimize, and "
-#~ "maximize"
-#~ msgstr ""
-#~ "Contrôles situés en haut de la fenêtre pour la fermer, la réduire et "
-#~ "l'agrandir"
-
-#~ msgid "May break window controls! May stop working with updates to system!"
-#~ msgstr ""
-#~ "Peut rompre les contrôles de la fenêtre! Peut arrêter de fonctionner avec "
-#~ "les mises à jour du système!"
-
-#~ msgid "Audible Bell:"
-#~ msgstr "Notifications sonores"
-
-#~ msgid "Sound that plays when an error has been made"
-#~ msgstr "Son joué quand une erreur a été commise"
-
-#~ msgid "Focused Windows:"
-#~ msgstr "Fenêtres actives :"
-
-#~ msgid "Unfocused Windows:"
-#~ msgstr "Fenêtres inactives :"
-
-#~ msgid "Name"
-#~ msgstr "Nom"
-
-#~ msgid "Shortcut"
-#~ msgstr "Raccourci"
-
-#~ msgid "Command"
-#~ msgstr "Commande"
-
-#~ msgid "Every field must be filled!"
-#~ msgstr "Tous les champs doivent être remplis !"
-
-#~ msgid "Name:"
-#~ msgstr "Nom :"
-
-#~ msgid "Shortcut:"
-#~ msgstr "Raccourci :"
-
-#~ msgid "Command:"
-#~ msgstr "Commande :"
-
-#~ msgid "OS X"
-#~ msgstr "OS X"

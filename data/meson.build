@@ -25,7 +25,7 @@ metainfo_conf_file = configure_file(
   configuration: metainfo_conf_data,
 )
 
-i18n.merge_file(
+metainfo_file = i18n.merge_file(
   input: metainfo_conf_file,
   output: application_id + '.metainfo.xml',
   po_dir: meson.project_source_root () / 'po',
@@ -37,5 +37,16 @@ install_data(
   'pantheon-tweaks.gschema.xml',
   install_dir: get_option('datadir') / 'glib-2.0' / 'schemas',
 )
+
+ascli_exe = find_program('appstreamcli', required: false)
+if ascli_exe.found()
+  test('validate metainfo file',
+        ascli_exe,
+        args: ['validate',
+               '--no-net',
+               '--pedantic',
+               metainfo_file]
+  )
+endif
 
 subdir('styles')
